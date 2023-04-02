@@ -2,6 +2,8 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import BigBranch from '../../../assets/big-branch.svg';
 import Colli from '../../../assets/colli.svg';
+import FastActions from '../../molecules/FastActions';
+import Flower from '../../atoms/Flower';
 
 const Index = () => {
   return (
@@ -14,7 +16,14 @@ const Index = () => {
           <br />3 GIORNI DI INNOVAZIONE TECNOLOGICA E SOCIALE
         </h1>
         <Colli width="1440" height="185" className={styles.colli} />
+        <div className={styles.flowers}>
+          <Flower color="var(--nt-orange)" />
+          <Flower color="var(--nt-orange)" />
+          <Flower color="var(--nt-orange)" />
+          <Flower color="var(--nt-orange)" />
+        </div>
       </div>
+      <FastActions />
     </div>
   );
 };

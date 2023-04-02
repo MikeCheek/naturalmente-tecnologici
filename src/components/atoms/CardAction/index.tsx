@@ -1,0 +1,24 @@
+import React from 'react';
+import { FastActionProps } from './index.types';
+import { Link } from 'gatsby';
+import * as styles from './index.module.scss';
+
+const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external' }: FastActionProps) => {
+  return (
+    <div className={styles.wrap}>
+      {icon}
+      <p>{text}</p>
+      {linkType == 'external' ? (
+        <a className={styles.button} href={buttonHref}>
+          {buttonText}
+        </a>
+      ) : (
+        <Link className={styles.button} to={buttonHref}>
+          {buttonText}
+        </Link>
+      )}
+    </div>
+  );
+};
+
+export default Index;

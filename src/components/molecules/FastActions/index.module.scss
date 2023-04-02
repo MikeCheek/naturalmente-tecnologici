@@ -1,0 +1,20 @@
+.wrap {
+  width: 100%;
+  background-color: var(--nt-white);
+  display: flex;
+  flex-direction: column;
+  color: var(--nt-green);
+  align-items: center;
+  justify-content: space-evenly;
+  @media screen and (min-width: '768px') {
+    flex-direction: row;
+  }
+}
+
+.icon {
+  width: 50px;
+  height: auto;
+  @media screen and (min-width: '768px') {
+    width: 70px;
+  }
+}

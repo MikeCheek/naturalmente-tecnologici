@@ -1,6 +1,7 @@
 .wrap {
   display: flex;
   overflow-x: hidden;
+  flex-direction: column;
 }
 
 .headWrap {
@@ -17,11 +18,23 @@
 }
 
 .colli {
-  width: 100vw;
-  height: auto;
   position: absolute;
   left: 0;
   bottom: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 1;
+}
+
+.flowers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
 }
 
 .date {
