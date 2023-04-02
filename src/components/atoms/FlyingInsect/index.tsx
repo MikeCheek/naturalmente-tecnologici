@@ -4,17 +4,23 @@ import { InsectProps } from './index.types';
 import * as styles from './insect.module.scss';
 
 const Index = ({ top = 0, onClick }: InsectProps) => {
-  const [key, setKey] = useState<number>(0);
+  const [on, setOn] = useState<boolean>(false);
 
   const handleClick = () => {
     if (onClick) onClick();
-    if (key == 0) setKey(1);
-    else setKey(0);
+    setOn(true);
+    setTimeout(() => setOn(false), 10000);
   };
 
   return (
-    <span key={key} style={{ top: top + '%', animationDelay: top / 5 + 's' }} className={styles.insect}>
-      <Insect onClick={handleClick} width={88} style={{ transform: 'rotate(132.04deg)' }} />
+    <span style={{ top: top + '%', animationDelay: top / 5 + 's' }} className={styles.insect}>
+      <Insect
+        onClick={handleClick}
+        width={88}
+        fill={on ? 'var(--nt-orange)' : 'var(--nt-dark-green)'}
+        style={{ transform: 'rotate(132.04deg)', animationDelay: top / 4 + 's' }}
+        className={on ? '' : styles.svg}
+      />
     </span>
   );
 };

@@ -5,9 +5,27 @@
   fill: var(--nt-dark-green);
   svg {
     width: 50px;
+    will-change: fill;
+    transition: fill 800ms cubic-bezier(0.12, -0.96, 0.96, 1.97);
     @media screen and (min-width: '768px') {
       width: 88px;
     }
+  }
+}
+
+.svg {
+  animation: light 11s infinite alternate ease-in-out;
+}
+
+@keyframes light {
+  0% {
+    stroke: var(--nt-dark-green);
+  }
+  90% {
+    stroke: var(--nt-dark-green);
+  }
+  100% {
+    stroke: var(--nt-orange);
   }
 }
 
@@ -16,15 +34,15 @@
     transform: translate(-120%, 30%);
   }
   25% {
-    transform: translate(480%, -20%);
+    transform: translate(25vw, -20%);
   }
   50% {
-    transform: translate(1000%, 100%);
+    transform: translate(50vw, 100%);
   }
   75% {
-    transform: translate(1750%, -50%);
+    transform: translate(75vw, -40%);
   }
   100% {
-    transform: translate(2200%, 50%);
+    transform: translate(110vw, 50%);
   }
 }
