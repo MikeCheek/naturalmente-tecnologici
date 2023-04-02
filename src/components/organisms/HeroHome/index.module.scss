@@ -1,0 +1,58 @@
+.wrap {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.headWrap {
+  margin-left: 8%;
+  margin-top: 75px;
+
+  height: calc(100vh - 75px - 60px);
+  @media screen and (min-width: '768px') {
+    height: calc(100vh - 75px - 79.5px);
+  }
+  @media screen and (min-width: '992px') {
+    height: calc(100vh - 75px - 86px);
+  }
+}
+
+.colli {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.date {
+  font-weight: 600;
+  color: var(--nt-orange);
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.heading {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 120%;
+  margin: 0;
+  max-width: 300px;
+  @media screen and (min-width: '768px') {
+    font-size: 50px;
+    max-width: 700px;
+  }
+}
+
+.bigBranch {
+  position: absolute;
+  top: 320px;
+  right: -65px;
+  width: 358px;
+  height: auto;
+  z-index: -1;
+  @media screen and (min-width: '768px') {
+    top: 135px;
+    width: 620px;
+  }
+}

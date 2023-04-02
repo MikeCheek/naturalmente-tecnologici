@@ -1,0 +1,27 @@
+/* width */
+
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: var(--nt-white);
+  mix-blend-mode: difference;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nt-green);
+  mix-blend-mode: difference;
+}

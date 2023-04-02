@@ -1,0 +1,76 @@
+@use 'src/styles/styled';
+
+.wrapMobile {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  background-color: var(--nt-white);
+  will-change: transform;
+  transition: transform 200ms ease-in-out;
+
+  @media screen and (min-width: '768px') {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--nt-green);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.wrapDesktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 25px;
+
+  @media screen and (max-width: '767px') {
+    display: none;
+  }
+
+  @media screen and (min-width: '992px') {
+    margin-right: 35px;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--nt-white);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.linksMobile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 70px;
+  > * {
+    margin: 20px 10px;
+  }
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: -30px;
+}
+
+.buttonMobile {
+  @include styled.button;
+}
+
+.button {
+  @include styled.button;
+  margin-top: -30px;
+}

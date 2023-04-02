@@ -1,0 +1,18 @@
+@mixin button {
+  background-color: var(--nt-orange);
+  color: var(--nt-green);
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 800;
+  font-size: inherit;
+  @media screen and (min-width: '768px') {
+    border-radius: 10px;
+    padding: 10px 25px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

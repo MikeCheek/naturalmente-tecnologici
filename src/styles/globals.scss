@@ -1,0 +1,32 @@
+@import 'scrollbar';
+:root {
+  --nt-green: #025300;
+  --nt-dark-green: #014900;
+  --nt-light-green: #0a5908;
+  --nt-orange: #e98a15;
+  --nt-white: #fdfdff;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--nt-green);
+  color: var(--nt-white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  @media screen and (min-width: '768px') {
+    font-size: 18px;
+  }
+  @media screen and (min-width: '992px') {
+    font-size: 20px;
+  }
+}
