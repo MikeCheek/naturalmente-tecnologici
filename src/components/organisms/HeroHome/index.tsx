@@ -24,8 +24,8 @@ const Index = () => {
   };
 
   useEffect(() => {
-    if (typeof window != undefined) {
-      window.addEventListener('resize', setHeight);
+    window.addEventListener('resize', setHeight);
+    if (typeof window !== 'undefined') {
       setHeight();
     }
 
@@ -37,7 +37,7 @@ const Index = () => {
   return (
     <div className={styles.wrap}>
       <BigBranch width="555" height="282" className={styles.bigBranch} />
-      {/* <FlyingInsects /> */}
+      <FlyingInsects />
       <div ref={headRef} className={styles.headWrap}>
         <p className={styles.date}>11-13 Agosto 2023</p>
         <h1 className={styles.heading}>
@@ -45,6 +45,7 @@ const Index = () => {
           <br />3 GIORNI DI INNOVAZIONE TECNOLOGICA E SOCIALE
         </h1>
         <Colli width="1440" height="185" className={styles.colli} />
+        <div className={styles.white}></div>
         <div className={styles.flowers}>
           <Flower color="var(--nt-orange)" />
           <Flower color="var(--nt-orange)" />
