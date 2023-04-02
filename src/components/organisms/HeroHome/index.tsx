@@ -9,7 +9,7 @@ import FlyingInsects from '../../molecules/FlyingInsects';
 const Index = () => {
   return (
     <div className={styles.wrap}>
-      <BigBranch width="620" height="285" className={styles.bigBranch} />
+      <BigBranch width="555" height="282" className={styles.bigBranch} />
       <FlyingInsects />
       <div className={styles.headWrap}>
         <p className={styles.date}>11-13 Agosto 2023</p>
