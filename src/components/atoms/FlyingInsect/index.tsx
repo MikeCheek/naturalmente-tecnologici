@@ -8,7 +8,8 @@ const Index = ({ top = 0, onClick }: InsectProps) => {
 
   const handleClick = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
     if (onClick) onClick();
-    setKey((old) => old + (1 % 2));
+    if (key == 0) setKey(1);
+    else setKey(0);
   };
 
   return (
