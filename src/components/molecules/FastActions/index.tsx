@@ -22,7 +22,7 @@ const Index = () => {
       />
       <CardAction
         icon={<Heart className={styles.icon} width={70} />}
-        text="Supporta il nostro lavoro"
+        text="Supporta l'evento"
         buttonText="DONA"
         buttonHref=""
       />

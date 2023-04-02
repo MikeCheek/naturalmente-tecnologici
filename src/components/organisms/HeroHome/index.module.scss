@@ -24,6 +24,7 @@
   width: 100vw;
   height: auto;
   z-index: 1;
+  filter: drop-shadow(-58px 5px 5px rgba(0, 0, 0, 0.25));
 }
 
 .flowers {
@@ -35,6 +36,13 @@
   left: 0;
   bottom: 0;
   width: 100vw;
+
+  :nth-child(2) {
+    margin-bottom: -30px;
+  }
+  :nth-child(4) {
+    margin-top: -70px;
+  }
 }
 
 .date {
@@ -58,6 +66,22 @@
   @media screen and (min-width: '768px') {
     font-size: 50px;
     max-width: 700px;
+  }
+
+  &:before {
+    content: ' ';
+    background-color: var(--nt-orange);
+    left: -5px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 5px;
+    transform: rotate(-3deg);
+    height: 35px;
+    width: 45px;
+    @media screen and (min-width: '768px') {
+      height: 60px;
+      width: 70px;
+    }
   }
 }
 
