@@ -12,7 +12,15 @@ const Index = ({ opened }: NavigationProps) => {
           <Link to="/">Programma</Link>
           <Link to="/">Unisciti</Link>
           <Link to="/">Contattaci</Link>
-          <button className={styles.buttonMobile}>ISCRIVITI</button>
+          <a
+            title="Iscriviti a NT 2023"
+            href=""
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.buttonMobile}
+          >
+            ISCRIVITI
+          </a>
         </div>
       </div>
       <div className={styles.wrapDesktop}>
@@ -22,7 +30,9 @@ const Index = ({ opened }: NavigationProps) => {
           <Link to="/">Unisciti</Link>
           <Link to="/">Contattaci</Link>
         </div>
-        <button className={styles.button}>ISCRIVITI</button>
+        <a title="Iscriviti a NT 2023" href="" rel="noopener noreferrer" target="_blank" className={styles.button}>
+          ISCRIVITI
+        </a>
       </div>
     </>
   );

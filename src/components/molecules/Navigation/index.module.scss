@@ -68,9 +68,11 @@
 
 .buttonMobile {
   @include styled.button;
+  color: var(--nt-green) !important;
 }
 
 .button {
   @include styled.button;
   margin-top: -30px;
+  color: var(--nt-green) !important;
 }

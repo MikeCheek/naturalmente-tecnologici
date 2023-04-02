@@ -9,7 +9,7 @@ const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external' }: Fa
       {icon}
       <p>{text}</p>
       {linkType == 'external' ? (
-        <a className={styles.button} href={buttonHref}>
+        <a className={styles.button} href={buttonHref} title={buttonText} rel="noopener noreferrer" target="_blank">
           {buttonText}
         </a>
       ) : (
