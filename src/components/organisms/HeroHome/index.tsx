@@ -20,7 +20,7 @@ const Index = () => {
     } else {
       amount = 86;
     }
-    if (headRef.current) headRef.current.style.minHeight = window.innerHeight * 1 - amount - 75 + 'px';
+    if (headRef.current) headRef.current.style.minHeight = `${window.innerHeight - amount - 75}px`;
   };
 
   useEffect(() => {
