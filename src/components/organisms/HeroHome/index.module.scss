@@ -38,16 +38,28 @@
   bottom: 0;
   width: 100vw;
 
-  :nth-child(2) {
-    margin-bottom: -20px;
+  :nth-child(1) {
+    transform: translateY(-5px);
     @media screen and (min-width: '768px') {
-      margin-bottom: -30px;
+      transform: translateY(-10px);
+    }
+  }
+  :nth-child(2) {
+    transform: translateY(15px);
+    @media screen and (min-width: '768px') {
+      transform: translateY(30px);
     }
   }
   :nth-child(4) {
-    margin-top: -10px;
+    transform: translateY(-10px);
     @media screen and (min-width: '768px') {
-      margin-top: -70px;
+      transform: translateY(-20px);
+    }
+  }
+
+  svg {
+    > * {
+      transform: none !important;
     }
   }
 }
