@@ -6,7 +6,10 @@ import { NavigationProps } from './index.types';
 const Index = ({ opened }: NavigationProps) => {
   return (
     <>
-      <div className={styles.wrapMobile} style={opened ? {} : { transform: 'translate(0, -100%)' }}>
+      <div
+        className={styles.wrapMobile}
+        style={opened ? { opacity: 0 } : { transform: 'translate(0, -100%)', opacity: 1 }}
+      >
         <div className={styles.linksMobile}>
           <Link to="/chi-siamo">Chi siamo</Link>
           <Link to="/">Programma</Link>
