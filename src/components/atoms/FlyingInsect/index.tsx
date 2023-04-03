@@ -14,13 +14,15 @@ const Index = ({ top = 0, onClick }: InsectProps) => {
 
   return (
     <span style={{ top: top + '%', animationDelay: top / 5 + 's' }} className={styles.insect}>
-      <Insect
-        onClick={handleClick}
-        width={88}
-        fill={on ? 'var(--nt-orange)' : 'var(--nt-dark-green)'}
-        style={{ transform: 'rotate(132.04deg)', animationDelay: top / 4 + 's' }}
-        className={on ? '' : styles.svg}
-      />
+      <div className={styles.svgWrap} style={{ animationDelay: top / 5 + 's' }}>
+        <Insect
+          onClick={handleClick}
+          width={88}
+          fill={on ? 'var(--nt-orange)' : 'var(--nt-dark-green)'}
+          style={{ transform: 'rotate(132.04deg)', animationDelay: top / 4 + 's' }}
+          className={on ? '' : styles.svg}
+        />
+      </div>
     </span>
   );
 };

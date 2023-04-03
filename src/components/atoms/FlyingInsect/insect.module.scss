@@ -1,10 +1,10 @@
 .insect {
   transform: translate(-120%, 0);
   position: absolute;
-  animation: fly 7s infinite linear;
+  animation: fly 7s infinite linear alternate;
   fill: var(--nt-dark-green);
   @media screen and (min-width: '768px') {
-    animation: fly 11s infinite linear;
+    animation: fly 11s infinite linear alternate;
   }
   svg {
     width: 50px;
@@ -16,8 +16,30 @@
   }
 }
 
+.svgWrap {
+  animation: flip 14s infinite linear;
+  @media screen and (min-width: '768px') {
+    animation: flip 22s infinite linear;
+  }
+}
+
 .svg {
   animation: light 11s infinite alternate ease-in-out;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  51% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
 
 @keyframes light {
@@ -34,10 +56,10 @@
 
 @keyframes fly {
   0% {
-    transform: translate(-120%, 30%);
+    transform: translate(-120%, 50%);
   }
   25% {
-    transform: translate(25vw, -20%);
+    transform: translate(25vw, -50%);
   }
   50% {
     transform: translate(50vw, 100%);

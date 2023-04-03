@@ -99,12 +99,14 @@
 
 .green {
   width: 100vw;
-  height: 100px;
+  height: 40px;
   z-index: 2;
   position: relative;
   background-color: var(--nt-green);
   margin-top: -9.5px;
-  margin-bottom: -95px;
+  @media screen and (min-width: '768px') {
+    height: 80px;
+  }
 }
 
 .greenFlowers {
