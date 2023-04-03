@@ -31,11 +31,14 @@
 .white {
   position: absolute;
   left: 0;
-  bottom: -80px;
+  bottom: -99.4px;
   width: 100vw;
-  height: 80px;
+  height: 100px;
   z-index: 1;
   background-color: var(--nt-white);
+  @media screen and (min-width: '768px') {
+    bottom: -100px;
+  }
 }
 
 .flowers {
@@ -124,7 +127,7 @@
   height: auto;
   z-index: -1;
   @media screen and (min-width: '768px') {
-    top: 135px;
+    top: 30%;
     width: 555px;
   }
 }

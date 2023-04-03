@@ -9,7 +9,7 @@
   will-change: transform;
   transition: transform 200ms ease-in-out;
 
-  @media screen and (min-width: '768px') {
+  @media screen and (min-width: '992px') {
     display: none;
   }
 
@@ -27,14 +27,10 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-right: 25px;
+  margin-right: 35px;
 
-  @media screen and (max-width: '767px') {
+  @media screen and (max-width: '991px') {
     display: none;
-  }
-
-  @media screen and (min-width: '992px') {
-    margin-right: 35px;
   }
 
   a {

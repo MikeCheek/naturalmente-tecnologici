@@ -1,8 +1,11 @@
 .insect {
   transform: translate(-120%, 0);
   position: absolute;
-  animation: fly 10s infinite linear;
+  animation: fly 7s infinite linear;
   fill: var(--nt-dark-green);
+  @media screen and (min-width: '768px') {
+    animation: fly 11s infinite linear;
+  }
   svg {
     width: 50px;
     will-change: fill;
