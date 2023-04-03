@@ -8,7 +8,7 @@ const Index = ({ opened }: NavigationProps) => {
     <>
       <div
         className={styles.wrapMobile}
-        style={opened ? { opacity: 0 } : { transform: 'translate(0, -100%)', opacity: 1 }}
+        style={opened ? { opacity: 1 } : { transform: 'translate(0, -100%)', opacity: 0 }}
       >
         <div className={styles.linksMobile}>
           <Link to="/chi-siamo">Chi siamo</Link>
