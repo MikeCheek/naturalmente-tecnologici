@@ -1,0 +1,102 @@
+@import 'src/styles/animations';
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  position: relative;
+  width: 100%;
+  filter: drop-shadow(-5px 5px 4px rgba(0, 0, 0, 0.25));
+  gap: 20px;
+  @media screen and (min-width: '768px') {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+
+.svg {
+  width: 40%;
+  display: block;
+  height: auto;
+  will-change: fill;
+  transition: fill 800ms cubic-bezier(0.12, -0.96, 0.96, 1.97);
+  @media screen and (min-width: '768px') {
+    width: auto;
+    min-width: 150px;
+    margin-right: 150px;
+  }
+}
+
+.svgAnimate {
+  animation: lightFromLight 11s infinite alternate ease-in-out;
+}
+
+.svgReversed {
+  @extend .svg;
+  @media screen and (min-width: '768px') {
+    margin-left: 100px;
+    margin-right: 0;
+  }
+}
+
+.wrapReversed {
+  @extend .wrap;
+  @media screen and (min-width: '768px') {
+    flex-direction: row-reverse;
+  }
+}
+
+.connectionLeft {
+  transform: rotate(180deg);
+  position: absolute;
+  display: none;
+  @media screen and (min-width: '768px') {
+    display: block;
+    bottom: -205px;
+    left: -135px;
+  }
+}
+.connectionRight {
+  transform: rotate(180deg);
+  position: absolute;
+  display: none;
+  @media screen and (min-width: '768px') {
+    display: block;
+    bottom: -205px;
+    right: -145px;
+  }
+}
+
+.text {
+  background-color: var(--nt-light-green);
+  border-radius: 50px 15px 50px 15px;
+  padding: 15px 25px;
+  max-width: 60vw;
+  text-align: center;
+  h3 {
+    color: var(--nt-orange);
+    text-transform: uppercase;
+  }
+  p {
+    color: var(--nt-white);
+  }
+  @media screen and (min-width: '768px') {
+    text-align: left;
+    margin-left: 130px;
+    max-width: 40vw;
+    padding: 30px 50px;
+    border-radius: 100px 15px 100px 15px;
+  }
+}
+
+.textReversed {
+  @extend .text;
+  border-radius: 15px 50px 15px 50px;
+  @media screen and (min-width: '768px') {
+    text-align: right;
+    margin-right: 130px;
+    margin-left: 0;
+    border-radius: 15px 100px 15px 100px;
+  }
+}

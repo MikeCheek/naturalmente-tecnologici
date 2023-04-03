@@ -1,0 +1,23 @@
+@keyframes light {
+  0% {
+    stroke: var(--nt-dark-green);
+  }
+  90% {
+    stroke: var(--nt-dark-green);
+  }
+  100% {
+    stroke: var(--nt-transparent-orange);
+  }
+}
+
+@keyframes lightFromLight {
+  0% {
+    stroke: var(--nt-light-green);
+  }
+  90% {
+    stroke: var(--nt-light-green);
+  }
+  100% {
+    stroke: var(--nt-transparent-orange);
+  }
+}

@@ -6,7 +6,7 @@ import FastActions from '../../molecules/FastActions';
 import Flower from '../../atoms/Flower';
 import FlyingInsects from '../../molecules/FlyingInsects';
 import Collina from '../../../assets/collina.svg';
-import NaturalmenteTecnologici from '../../molecules/NaturalmenteTecnologici';
+import NaturalmenteTecnologici from '../NaturalmenteTecnologici';
 
 const Index = () => {
   return (

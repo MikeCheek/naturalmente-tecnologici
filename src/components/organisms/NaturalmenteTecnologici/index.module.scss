@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 500px;
+  gap: 70px;
 }
 
 .headingWrap {
@@ -27,8 +29,12 @@
   font-family: 'Cairo', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 45px;
+  font-size: 23px;
   line-height: 115%;
   color: var(--nt-green);
-  margin: 10px 0;
+  margin: 10px 10px;
+  text-transform: uppercase;
+  @media screen and (min-width: '768px') {
+    font-size: 45px;
+  }
 }
