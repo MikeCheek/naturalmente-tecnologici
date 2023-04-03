@@ -4,14 +4,25 @@
   background-color: var(--nt-white);
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   color: var(--nt-green);
-  align-items: center;
-  justify-content: space-evenly;
   position: relative;
   z-index: 1;
   @media screen and (min-width: '768px') {
     padding: 100px 0;
+  }
+}
+
+.cards {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media screen and (min-width: '768px') {
+    margin: 0 25px;
   }
 }
 
