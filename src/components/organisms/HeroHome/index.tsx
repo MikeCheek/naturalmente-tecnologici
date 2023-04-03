@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import * as styles from './index.module.scss';
 import BigBranch from '../../../assets/big-branch.svg';
 import Colli from '../../../assets/colli.svg';
 import FastActions from '../../molecules/FastActions';
 import Flower from '../../atoms/Flower';
 import FlyingInsects from '../../molecules/FlyingInsects';
+import Collina from '../../../assets/collina.svg';
+import NaturalmenteTecnologici from '../../molecules/NaturalmenteTecnologici';
 
 const Index = () => {
   return (
@@ -17,16 +19,26 @@ const Index = () => {
           RI-PRENDIAMOCI IL FUTURO
           <br />3 GIORNI DI INNOVAZIONE TECNOLOGICA E SOCIALE
         </h1>
-        <Colli width="1440" height="185" className={styles.colli} />
-        <div className={styles.white}></div>
-        <div className={styles.flowers}>
+        <div className={styles.orangeFlowers}>
           <Flower color="var(--nt-orange)" />
           <Flower color="var(--nt-orange)" />
           <Flower color="var(--nt-orange)" />
           <Flower color="var(--nt-orange)" />
         </div>
+        <Colli width="1440" height="185" className={styles.colli} />
+        <div className={styles.white}></div>
       </div>
       <FastActions />
+      <div className={styles.wrapHill}>
+        <div className={styles.greenFlowers}>
+          <Flower color="var(--nt-green)" />
+          <Flower color="var(--nt-green)" />
+          <Flower color="var(--nt-green)" />
+        </div>
+        <Collina width="1440" height="64" className={styles.collina} />
+        <div className={styles.green}></div>
+      </div>
+      <NaturalmenteTecnologici />
     </div>
   );
 };
