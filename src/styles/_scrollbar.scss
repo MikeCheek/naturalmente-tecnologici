@@ -15,7 +15,6 @@
 
 ::-webkit-scrollbar-thumb {
   background: var(--nt-white);
-  mix-blend-mode: difference;
   border-radius: 10px;
 }
 
@@ -23,5 +22,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--nt-green);
-  mix-blend-mode: difference;
 }
