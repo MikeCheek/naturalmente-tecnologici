@@ -3,7 +3,9 @@ import type { GatsbyConfig } from 'gatsby';
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Naturalmente Tecnologici`,
-    siteUrl: `https://nt.syskrack.org/`,
+    siteUrl: `https://nt2023.gatsbyjs.io/`,
+    description: `L'evento si propone di essere occasione di ritrovo della community di Syskrack nonché strumento di disseminazione culturale sul territorio.`,
+    image: `/logo-og.jpg`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

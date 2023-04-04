@@ -1,8 +1,10 @@
 // Types
-export type SEOProps = {
+export type SeoProps = {
   description?: string;
   lang?: string;
   title: string;
+  children?: React.ReactElement;
+  pathname?: string;
 };
 
 export type Meta = ConcatArray<PropertyMetaObj | NameMetaObj>;

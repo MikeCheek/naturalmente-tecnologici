@@ -7,7 +7,7 @@ const Index = ({ children }: LayoutProps) => {
   return (
     <div>
       <NavBar />
-      <main className={styles.wrap}>{children} </main>
+      <main className={styles.wrap}>{children}</main>
     </div>
   );
 };
