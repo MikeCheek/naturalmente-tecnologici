@@ -2,7 +2,7 @@ import React from 'react';
 import { SEOProps } from './index.types';
 
 const Head = ({ description = '', lang = 'it', title }: SEOProps): JSX.Element => {
-  const image = '/logo-og.jpeg';
+  const image = '/logo-og.jpg';
   const fullTitle = title + ' - Naturalmente Tecnologici';
 
   return (
@@ -13,7 +13,7 @@ const Head = ({ description = '', lang = 'it', title }: SEOProps): JSX.Element =
       <meta property="og:title" content={fullTitle} />
       <meta property="og:locale" content={'it_IT'} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:type" content={'image/jpeg'} />
+      <meta property="og:image:type" content={'image/jpg'} />
       <meta property="og:image:alt" content={fullTitle} />
       <meta property="og:image:secure_url" content={image} />
       <meta property="og:image:width" content={'1200'} />
