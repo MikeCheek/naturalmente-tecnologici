@@ -6,7 +6,6 @@ import FastActions from '../../molecules/FastActions';
 import Flower from '../../atoms/Flower';
 import FlyingInsects from '../../molecules/FlyingInsects';
 import Collina from '../../../assets/collina.svg';
-import NaturalmenteTecnologici from '../NaturalmenteTecnologici';
 
 const Index = () => {
   return (
@@ -38,7 +37,6 @@ const Index = () => {
         <Collina width="1440" height="64" className={styles.collina} />
         <div className={styles.green}></div>
       </div>
-      <NaturalmenteTecnologici />
     </div>
   );
 };

@@ -1,0 +1,21 @@
+.cloud {
+  background-color: var(--nt-light-green);
+  border-radius: 50px 15px 50px 15px;
+  padding: 15px 25px;
+  max-width: 60vw;
+  text-align: center;
+  filter: drop-shadow(-5px 5px 4px rgba(0, 0, 0, 0.25));
+
+  margin: 50px 0;
+
+  em {
+    color: var(--nt-white);
+  }
+  @media screen and (min-width: '768px') {
+    text-align: left;
+    margin-left: 130px;
+    max-width: 40vw;
+    padding: 30px 50px;
+    border-radius: 100px 15px 100px 15px;
+  }
+}

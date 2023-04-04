@@ -1,0 +1,23 @@
+.wrap {
+  border: 3px solid var(--nt-orange);
+  color: var(--nt-orange);
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+
+  @media screen and (min-width: '768px') {
+    width: 60%;
+  }
+
+  h2 {
+    font-weight: 800;
+    font-size: 22px;
+    margin: 10px;
+    @media screen and (min-width: '768px') {
+      font-size: 30px;
+    }
+    @media screen and (min-width: '992px') {
+      font-size: 40px;
+    }
+  }
+}
