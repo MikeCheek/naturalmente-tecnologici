@@ -1,12 +1,17 @@
+.wrap {
+  position: relative;
+  margin: 50px 0;
+}
+
 .cloud {
   background-color: var(--nt-light-green);
-  border-radius: 50px 15px 50px 15px;
+  border-radius: 15px 50px 15px 50px;
   padding: 15px 25px;
   max-width: 60vw;
   text-align: center;
   filter: drop-shadow(-5px 5px 4px rgba(0, 0, 0, 0.25));
-
-  margin: 50px 0;
+  position: relative;
+  z-index: 1;
 
   em {
     color: var(--nt-white);
@@ -16,6 +21,43 @@
     margin-left: 130px;
     max-width: 40vw;
     padding: 30px 50px;
-    border-radius: 100px 15px 100px 15px;
+    border-radius: 15px 100px 15px 100px;
+  }
+}
+
+.smallOne {
+  position: absolute;
+  z-index: -2;
+  bottom: -25px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 70px;
+  height: 40px;
+  border-radius: 15px 100px 15px 100px;
+  background-color: var(--nt-light-green);
+  filter: drop-shadow(-5px 5px 4px rgba(0, 0, 0, 0.25));
+  @media screen and (min-width: '768px') {
+    width: 140px;
+    height: 80px;
+    bottom: -20px;
+    right: -40px;
+    transform: none;
+  }
+}
+
+.smallTwo {
+  @extend .smallOne;
+  bottom: -45px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: -3;
+  width: 45px;
+  height: 25px;
+  @media screen and (min-width: '768px') {
+    width: 90px;
+    height: 50px;
+    bottom: -30px;
+    right: -80px;
+    transform: none;
   }
 }
