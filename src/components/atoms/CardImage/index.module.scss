@@ -1,0 +1,21 @@
+.wrap {
+  position: relative;
+  margin: 20px;
+}
+
+.image {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.orange {
+  border-radius: 15px;
+  background-color: var(--nt-orange);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-10deg);
+}
