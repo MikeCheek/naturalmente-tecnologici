@@ -2,13 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Seo from '../components/atoms/Seo';
 import Layout from '../components/organisms/Layout';
-import FlyingInsects from '../components/molecules/FlyingInsects';
 import * as styles from '../styles/NotFound.module.scss';
 
 const NotFoundPage = () => {
   return (
     <Layout>
-      <FlyingInsects />
       <div className={styles.wrap}>
         <h1>
           404
