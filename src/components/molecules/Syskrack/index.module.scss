@@ -5,11 +5,11 @@
   align-items: center;
   justify-content: space-around;
   gap: 40px;
-  margin: 80px 10% 200px 10%;
+  margin: 40px 10% 50px 10%;
   z-index: 9;
   @media screen and (min-width: '768px') {
     flex-direction: row;
-    margin: 80px 5% 200px 5%;
+    margin: 80px 5% 50px 5%;
   }
 }
 
