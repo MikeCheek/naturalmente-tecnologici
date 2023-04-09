@@ -8,14 +8,10 @@ const NotFoundPage = () => {
   return (
     <Layout>
       <div className={styles.wrap}>
-        <h1>
-          404
-          <br />
-          Syskrack not found
-        </h1>
-        <p>We couldn't find what you were looking for.</p>
+        <h1>Syskrack not found</h1>
+        <p>Mi sa che sei fuori rotta!</p>
         <Link className={styles.button} to="/">
-          Go home
+          Torna alla home
         </Link>
       </div>
     </Layout>

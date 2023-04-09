@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
 import LogoNT from '../../../assets/logo-nt.svg';
 import Hamburger from '../../../assets/hamburger.svg';
@@ -8,9 +8,29 @@ import { Link } from 'gatsby';
 
 const Index = () => {
   const [opened, setOpened] = useState<boolean>(false);
+  const [show, setShow] = useState<boolean>(true);
+
+  let prev = 0;
+
+  const handleScroll = () => {
+    const current = window.scrollY;
+
+    console.log(current, prev);
+
+    if (current < 50) setShow(true);
+    else if (current < prev) setShow(true);
+    else if (current >= prev) setShow(false);
+
+    prev = current;
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return window.removeEventListener('scroll', () => {});
+  }, []);
 
   return (
-    <div className={styles.wrap}>
+    <div className={`${styles.wrap} ${show ? styles.show : styles.hide}`}>
       <Link to="/" className={styles.logoNT}>
         <LogoNT width="195" height="64.45" style={opened ? { fill: 'var(--nt-green)' } : { fill: 'var(--nt-white)' }} />
       </Link>

@@ -13,7 +13,7 @@ const Index = () => {
     <div className={styles.wrap}>
       <Separator />
       <div>
-        <Link to="/">
+        <Link className={styles.logo} to="/">
           <LogoNT width="266" height="87.92" style={{ fill: 'var(--nt-orange)' }} />
         </Link>
         <p>11-13 Agosto 2023</p>
