@@ -9,17 +9,23 @@ import { Link } from 'gatsby';
 const Index = () => {
   const [opened, setOpened] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(true);
+  const [shadow, setShadow] = useState<boolean>(false);
 
   let prev = 0;
 
   const handleScroll = () => {
     const current = window.scrollY;
 
-    console.log(current, prev);
-
-    if (current < 50) setShow(true);
-    else if (current < prev) setShow(true);
-    else if (current >= prev) setShow(false);
+    if (current < 50) {
+      setShow(true);
+      setShadow(false);
+    } else if (current < prev) {
+      setShow(true);
+      setShadow(true);
+    } else if (current >= prev) {
+      setShow(false);
+      setShadow(true);
+    }
 
     prev = current;
   };
@@ -30,7 +36,10 @@ const Index = () => {
   }, []);
 
   return (
-    <div className={`${styles.wrap} ${show ? styles.show : styles.hide}`}>
+    <div
+      className={`${styles.wrap} ${show ? styles.show : styles.hide}`}
+      style={shadow ? { boxShadow: '0 0 20px 0 rgb(0, 0, 0, 0.25)' } : {}}
+    >
       <Link to="/" className={styles.logoNT}>
         <LogoNT width="195" height="64.45" style={opened ? { fill: 'var(--nt-green)' } : { fill: 'var(--nt-white)' }} />
       </Link>
