@@ -19,10 +19,20 @@ const Index = () => {
         <p>11-13 Agosto 2023</p>
       </div>
       <div className={styles.socialIcons}>
-        <a href="" rel="noopener noreferrer" title="Visita la nostra pagina Instagram" target="_blank">
+        <a
+          href="https://www.instagram.com/syskrack_giuseppeporsia/"
+          rel="noopener noreferrer"
+          title="Visita la nostra pagina Instagram"
+          target="_blank"
+        >
           <Instagram width={50} height={50} fill="var(--nt-white)" />
         </a>
-        <a href="" rel="noopener noreferrer" title="Vai al canale Telegram" target="_blank">
+        <a
+          href="https://t.me/+AYplGqMtentlOTE0"
+          rel="noopener noreferrer"
+          title="Vai al canale Telegram delle News"
+          target="_blank"
+        >
           <Telegram width={50} height={50} fill="var(--nt-white)" />
         </a>
         <a
