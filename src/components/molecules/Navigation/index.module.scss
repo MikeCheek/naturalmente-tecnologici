@@ -43,6 +43,26 @@
   }
 }
 
+.link {
+  position: relative;
+  &::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: var(--nt-orange);
+    transition: width 200ms ease;
+  }
+  &:hover {
+    &::before {
+      content: ' ';
+      width: 100%;
+    }
+  }
+}
+
 .linksMobile {
   width: 100%;
   display: flex;

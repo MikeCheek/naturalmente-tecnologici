@@ -3,15 +3,29 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import { NavigationProps } from './index.types';
 
+const links = [
+  { name: 'Home', to: '/' },
+  { name: 'Chi siamo', to: '/chi-siamo' },
+  { name: 'Programma', to: '/_' },
+  { name: 'Contattaci', to: '/_' },
+];
+
 const Index = ({ opened }: NavigationProps) => {
-  const links = (
-    <>
-      <Link to="/">Home</Link>
-      <Link to="/chi-siamo">Chi siamo</Link>
-      <Link to="/">Programma</Link>
-      <Link to="/">Contattaci</Link>
-    </>
-  );
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+  const removeSlashes = (text: string) => text.replace(/\//g, '');
+
+  const linkElements = links.map((link, key) => {
+    return (
+      <Link
+        key={key}
+        className={styles.link}
+        style={removeSlashes(pathname) === removeSlashes(link.to) ? { color: 'var(--nt-orange)' } : {}}
+        to={link.to}
+      >
+        {link.name}
+      </Link>
+    );
+  });
 
   return (
     <>
@@ -20,7 +34,7 @@ const Index = ({ opened }: NavigationProps) => {
         style={opened ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(0, -100%)', opacity: 0 }}
       >
         <div className={styles.linksMobile}>
-          {links}
+          {linkElements}
           <a
             title="Iscriviti a NT 2023"
             href=""
@@ -33,7 +47,7 @@ const Index = ({ opened }: NavigationProps) => {
         </div>
       </div>
       <div className={styles.wrapDesktop}>
-        <div className={styles.links}>{links}</div>
+        <div className={styles.links}>{linkElements}</div>
         <a title="Iscriviti a NT 2023" href="" rel="noopener noreferrer" target="_blank" className={styles.button}>
           ISCRIVITI
         </a>
