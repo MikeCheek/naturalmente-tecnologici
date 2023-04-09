@@ -1,0 +1,30 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+  gap: 20px;
+  color: var(--nt-orange);
+  text-align: center;
+}
+
+.socialIcons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  @media screen and (min-width: '768px') {
+    gap: 40px;
+  }
+
+  svg {
+    fill: var(--nt-white);
+    transition: fill 200ms ease;
+    cursor: pointer;
+    &:hover {
+      fill: var(--nt-orange);
+      transform: scale(1.05);
+    }
+  }
+}

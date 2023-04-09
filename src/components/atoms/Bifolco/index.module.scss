@@ -17,11 +17,17 @@
   }
 
   :nth-child(1) {
-    font-size: 96px;
+    font-size: 60px;
+    @media screen and (min-width: '768px') {
+      font-size: 96px;
+    }
   }
 
   :nth-child(2) {
-    font-size: 50px;
+    font-size: 40px;
+    @media screen and (min-width: '768px') {
+      font-size: 50px;
+    }
   }
 
   @media screen and (min-width: '768px') {
