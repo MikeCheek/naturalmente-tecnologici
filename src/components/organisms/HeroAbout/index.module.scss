@@ -27,14 +27,19 @@
   }
 }
 
-.image {
-  width: 200px;
+.logoWrap {
   margin-top: 20px;
   margin-left: auto;
   margin-right: 8%;
   @media screen and (min-width: '768px') {
     margin-bottom: 0;
     margin-top: -2%;
+  }
+}
+
+.logo {
+  width: 200px;
+  @media screen and (min-width: '768px') {
     width: 300px;
   }
 }

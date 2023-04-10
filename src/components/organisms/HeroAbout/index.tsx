@@ -14,13 +14,19 @@ const Index = () => {
           <br />
           LA COMMUNITY GLOBALE CHE AGISCE LOCALMENTE
         </h1>
-        <a href="https://syskrack.org" rel="noopener noreferrer" target="_blank" title="Syskrack">
+        <a
+          className={styles.logoWrap}
+          href="https://syskrack.org"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Syskrack"
+        >
           <StaticImage
             alt="Logo Syskrack"
             src="../../../images/syskrack-logo.png"
             layout="constrained"
             width={300}
-            className={styles.image}
+            className={styles.logo}
           />
         </a>
         <div className={styles.colliWrap}>
