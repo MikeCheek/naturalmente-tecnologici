@@ -13,7 +13,7 @@ const Index = () => {
           icon={<Phone className={styles.icon} width={70} />}
           text="Vuoi saperne di più?"
           buttonText="CONTATTACI"
-          buttonHref=""
+          buttonHref="#footer"
         />
         <CardAction
           icon={<Location className={styles.icon} width={70} />}
