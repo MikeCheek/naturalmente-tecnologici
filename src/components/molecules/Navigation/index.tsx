@@ -7,7 +7,7 @@ const links = [
   { name: 'Home', to: '/' },
   { name: 'Chi siamo', to: '/chi-siamo' },
   { name: 'Programma', to: '/_' },
-  { name: 'Contattaci', to: '/_' },
+  { name: 'Contattaci', to: '/#footer' },
 ];
 
 const Index = ({ opened }: NavigationProps) => {

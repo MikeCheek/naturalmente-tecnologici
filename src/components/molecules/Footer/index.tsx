@@ -10,7 +10,7 @@ import Linkedin from '../../../assets/social/linkedin.svg';
 
 const Index = () => {
   return (
-    <div className={styles.wrap}>
+    <div className={styles.wrap} id="footer">
       <Separator />
       <div>
         <Link className={styles.logo} to="/">
