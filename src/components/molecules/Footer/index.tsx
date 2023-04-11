@@ -7,6 +7,7 @@ import Instagram from '../../../assets/social/instagram.svg';
 import Facebook from '../../../assets/social/facebook.svg';
 import Telegram from '../../../assets/social/telegram.svg';
 import Linkedin from '../../../assets/social/linkedin.svg';
+import Mail from '../../../assets/social/mail.svg';
 
 const Index = () => {
   return (
@@ -34,6 +35,9 @@ const Index = () => {
           target="_blank"
         >
           <Telegram width={50} height={50} fill="var(--nt-white)" />
+        </a>
+        <a href="mailto:direttivo@syskrack.org" rel="noopener noreferrer" title="Scrivici una Email" target="_blank">
+          <Mail width={50} height={50} fill="var(--nt-white)" />
         </a>
         <a
           href="https://www.facebook.com/syskrackgiuseppeporsia/"
