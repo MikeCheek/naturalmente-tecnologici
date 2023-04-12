@@ -19,10 +19,9 @@ const Index = () => {
     if (opened) {
       setShow(true);
       setShadow(true);
-      return;
     }
 
-    if (!opened)
+    if (!opened) {
       if (current < 50) {
         setShow(true);
         setShadow(false);
@@ -33,6 +32,7 @@ const Index = () => {
         setShow(false);
         setShadow(true);
       }
+    }
 
     prev = current;
   };
