@@ -5,9 +5,9 @@ import { NavigationProps } from './index.types';
 
 const links = [
   { name: 'Home', to: '/' },
-  { name: 'Chi siamo', to: '/chi-siamo' },
   { name: 'Programma', to: '/_' },
-  { name: 'Contattaci', to: '/#footer' },
+  { name: 'Contattaci', to: '#footer' },
+  { name: 'Chi siamo', to: '/chi-siamo' },
 ];
 
 const Index = ({ opened }: NavigationProps) => {
