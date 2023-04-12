@@ -10,7 +10,7 @@ const links = [
   { name: 'Chi siamo', to: '/chi-siamo' },
 ];
 
-const Index = ({ opened }: NavigationProps) => {
+const Index = ({ opened, onClick }: NavigationProps) => {
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
   const removeSlashes = (text: string) => text.replace(/\//g, '');
 
@@ -21,6 +21,7 @@ const Index = ({ opened }: NavigationProps) => {
         className={styles.link}
         style={removeSlashes(pathname) === removeSlashes(link.to) ? { color: 'var(--nt-orange)' } : {}}
         to={link.to}
+        onClick={onClick}
       >
         {link.name}
       </Link>

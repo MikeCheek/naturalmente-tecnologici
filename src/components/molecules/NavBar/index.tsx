@@ -16,16 +16,23 @@ const Index = () => {
   const handleScroll = () => {
     const current = window.scrollY;
 
-    if (current < 50) {
-      setShow(true);
-      setShadow(false);
-    } else if (current < prev) {
+    if (opened) {
       setShow(true);
       setShadow(true);
-    } else if (current >= prev) {
-      setShow(false);
-      setShadow(true);
+      return;
     }
+
+    if (!opened)
+      if (current < 50) {
+        setShow(true);
+        setShadow(false);
+      } else if (current < prev) {
+        setShow(true);
+        setShadow(true);
+      } else if (current >= prev) {
+        setShow(false);
+        setShadow(true);
+      }
 
     prev = current;
   };
@@ -43,7 +50,7 @@ const Index = () => {
       <Link to="/" className={styles.logoNT}>
         <LogoNT width="195" height="64.45" style={opened ? { fill: 'var(--nt-green)' } : { fill: 'var(--nt-white)' }} />
       </Link>
-      <Navigation opened={opened} />
+      <Navigation opened={opened} onClick={() => setOpened(false)} />
       {opened ? (
         <span onClick={() => setOpened(false)} className={styles.menuIcon}>
           <X width="25" height="25" />

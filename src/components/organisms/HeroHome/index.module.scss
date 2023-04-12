@@ -50,9 +50,9 @@
   width: 100vw;
 
   :nth-child(1) {
-    transform: translateY(-5px);
+    transform: translateY(10px);
     @media screen and (min-width: '768px') {
-      transform: translateY(-10px);
+      transform: translateY(20px);
     }
   }
   :nth-child(2) {
