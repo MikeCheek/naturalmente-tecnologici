@@ -7,7 +7,17 @@
 
 .headWrap {
   margin-left: 8%;
+  margin-right: 8%;
   margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: first baseline;
+
+  @media screen and (min-width: '768px') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   height: calc(100vh - 75px - 60px);
   @media screen and (min-width: '768px') {

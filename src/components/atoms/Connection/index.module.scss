@@ -1,13 +1,12 @@
-$bg-color: var(--nt-blue);
 .connection {
-    background-color: $bg-color;
-    width: 32px;
-    height: 5px;
-    margin-left: -10px;
-    margin-right: -10px;
-    z-index: 10;
-    @media screen and (min-width: 768px) {
-        height: 10px;
-        width: 40px;
-    }
+  background-color: var(--nt-light-green);
+  width: 32px;
+  height: 5px;
+  margin-left: -10px;
+  margin-right: -10px;
+  z-index: 10;
+  @media screen and (min-width: 768px) {
+    height: 10px;
+    width: 40px;
+  }
 }

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import * as styles from './timer.module.scss';
+import * as styles from './index.module.scss';
 import Circle from '../../atoms/Circle';
 import Connection from '../../atoms/Connection';
 import randInt from '../../../hooks/randInt';
+import { TimerProps } from './index.types';
 
-const Index = ({ shutOffTimer }: { shutOffTimer: any }) => {
+const Index = ({ shutOffTimer }: TimerProps) => {
   const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(0);
@@ -41,66 +42,66 @@ const Index = ({ shutOffTimer }: { shutOffTimer: any }) => {
       }
     }, 1000);
 
-    return clearInterval(timeRemaining);
+    return clearInterval(undefined);
   }, []);
   return (
     <>
       <div className={styles.timerDesktop}>
-        <Circle value={3.5} />
-        <Connection value={3.5} />
+        {/* <Circle value={3.5} />
+        <Connection value={3.5} /> */}
         <div className={styles.timeWrap}>
           <p className={styles.time}>{days}</p>
-          <p>Days</p>
+          <p>Giorni</p>
         </div>
-        <Connection value={1.5} />
+        {/* <Connection value={1.5} /> */}
         <div className={styles.timeWrap}>
           <p className={styles.time}>{hours}</p>
-          <p>Hours</p>
+          <p>Ore</p>
         </div>
-        <Connection value={3} />
+        {/* <Connection value={3} /> */}
         <div className={styles.timeWrap}>
           <p className={styles.time}>{minutes}</p>
-          <p>Minutes</p>
+          <p>Minuti</p>
         </div>
-        <Connection value={2} />
+        {/* <Connection value={2} /> */}
         <div className={styles.timeWrap}>
           <p className={styles.time}>{seconds}</p>
-          <p>Seconds</p>
+          <p>Secondi</p>
         </div>
-        <Connection value={1} />
-        <Circle value={1} />
+        {/* <Connection value={1} />
+        <Circle value={1} /> */}
       </div>
       <div className={styles.timerMobile}>
         <div className={styles.timerRow}>
-          <Circle value={3.5} />
-          <Connection value={3.5} />
+          {/* <Circle value={3.5} />
+          <Connection value={3.5} /> */}
           <div className={styles.timeWrap}>
             <p className={styles.time}>{days}</p>
             <p>Days</p>
           </div>
-          <Connection value={1.5} />
+          {/* <Connection value={1.5} /> */}
           <div className={styles.timeWrap}>
             <p className={styles.time}>{hours}</p>
             <p>Hours</p>
           </div>
-          <Connection value={3} />
-          <Circle value={3} />
+          {/* <Connection value={3} />
+          <Circle value={3} /> */}
         </div>
 
         <div className={styles.timerRow}>
-          <Circle value={3} />
-          <Connection value={3} />
+          {/* <Circle value={3} />
+          <Connection value={3} /> */}
           <div className={styles.timeWrap}>
             <p className={styles.time}>{minutes}</p>
             <p>Minutes</p>
           </div>
-          <Connection value={2} />
+          {/* <Connection value={2} /> */}
           <div className={styles.timeWrap}>
             <p className={styles.time}>{seconds}</p>
             <p>Seconds</p>
           </div>
-          <Connection value={1} />
-          <Circle value={1} />
+          {/* <Connection value={1} />
+          <Circle value={1} /> */}
         </div>
       </div>
     </>
