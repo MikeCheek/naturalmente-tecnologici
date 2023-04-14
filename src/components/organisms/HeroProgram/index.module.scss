@@ -1,0 +1,131 @@
+.wrap {
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.headWrap {
+  margin-left: 8%;
+  margin-top: 75px;
+
+  height: calc(100vh - 75px - 60px);
+  @media screen and (min-width: '768px') {
+    height: calc(100vh - 75px - 79.5px);
+  }
+  @media screen and (min-width: '992px') {
+    height: calc(100vh - 75px - 86px);
+  }
+}
+
+.collina {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 1;
+  filter: drop-shadow(-58px 5px 5px rgba(0, 0, 0, 0.25));
+  fill: var(--nt-white);
+}
+
+.white {
+  position: absolute;
+  left: 0;
+  bottom: -99px;
+  width: 100vw;
+  height: 100px;
+  z-index: 1;
+  background-color: var(--nt-white);
+}
+
+.orangeFlowers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+
+  :nth-child(1) {
+    transform: translateY(10px);
+    @media screen and (min-width: '768px') {
+      transform: translateY(20px);
+    }
+  }
+  :nth-child(2) {
+    transform: translateY(15px);
+    @media screen and (min-width: '768px') {
+      transform: translateY(30px);
+    }
+  }
+  :nth-child(4) {
+    transform: translateY(-10px);
+    @media screen and (min-width: '768px') {
+      transform: translateY(-20px);
+    }
+  }
+
+  svg {
+    > * {
+      transform: none !important;
+    }
+  }
+}
+
+.date {
+  font-weight: 600;
+  color: var(--nt-orange);
+  margin: 0;
+  margin-bottom: 5px;
+  z-index: 1;
+  position: relative;
+  width: fit-content;
+}
+
+.heading {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 120%;
+  margin: 0;
+  width: fit-content;
+  max-width: 300px;
+  z-index: 1;
+  position: relative;
+  @media screen and (min-width: '768px') {
+    font-size: 50px;
+    max-width: 700px;
+  }
+
+  &:before {
+    content: ' ';
+    background-color: var(--nt-orange);
+    left: -5px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 5px;
+    transform: rotate(-2deg);
+    height: 35px;
+    width: 190px;
+    @media screen and (min-width: '768px') {
+      height: 60px;
+      width: 315px;
+    }
+  }
+}
+
+.bigBranch {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 320px;
+  height: auto;
+  z-index: -1;
+  @media screen and (min-width: '768px') {
+    top: 30%;
+    width: 555px;
+  }
+}

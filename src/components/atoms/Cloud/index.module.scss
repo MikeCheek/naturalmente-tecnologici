@@ -18,10 +18,9 @@
   }
   @media screen and (min-width: '768px') {
     text-align: left;
-    margin-left: 130px;
     max-width: 40vw;
     padding: 30px 50px;
-    border-radius: 15px 100px 15px 100px;
+    border-radius: 100px 15px 100px 15px;
   }
 }
 
@@ -33,13 +32,14 @@
   transform: translateX(50%);
   width: 70px;
   height: 40px;
-  border-radius: 15px 100px 15px 100px;
+  border-radius: 100px 15px 100px 15px;
   background-color: var(--nt-light-green);
   filter: drop-shadow(-5px 5px 4px rgba(0, 0, 0, 0.25));
   @media screen and (min-width: '768px') {
     width: 140px;
     height: 80px;
-    bottom: -20px;
+    top: 20px;
+    bottom: auto;
     right: -40px;
     transform: none;
   }
@@ -56,7 +56,8 @@
   @media screen and (min-width: '768px') {
     width: 90px;
     height: 50px;
-    bottom: -30px;
+    top: 30px;
+    bottom: auto;
     right: -80px;
     transform: none;
   }

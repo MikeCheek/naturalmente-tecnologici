@@ -1,5 +1,4 @@
 import * as React from 'react';
-import type { PageProps } from 'gatsby';
 import Layout from '../components/organisms/Layout';
 import HeroHome from '../components/organisms/HeroHome';
 import './../styles/globals.scss';
@@ -7,7 +6,7 @@ import Seo from '../components/atoms/Seo';
 import NaturalmenteTecnologici from '../components/organisms/NaturalmenteTecnologici';
 import Theme from '../components/organisms/Theme';
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage = () => {
   return (
     <Layout>
       <HeroHome />

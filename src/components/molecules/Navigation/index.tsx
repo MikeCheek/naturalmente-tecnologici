@@ -5,7 +5,7 @@ import { NavigationProps } from './index.types';
 
 const links = [
   { name: 'Home', to: '/' },
-  { name: 'Programma', to: '/_' },
+  { name: 'Programma', to: '/programma' },
   { name: 'Contattaci', to: '#footer' },
   { name: 'Chi siamo', to: '/chi-siamo' },
 ];
@@ -22,6 +22,7 @@ const Index = ({ opened, onClick }: NavigationProps) => {
         style={removeSlashes(pathname) === removeSlashes(link.to) ? { color: 'var(--nt-orange)' } : {}}
         to={link.to}
         onClick={onClick}
+        title={link.name}
       >
         {link.name}
       </Link>
