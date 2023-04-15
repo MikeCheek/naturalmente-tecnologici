@@ -15,7 +15,11 @@ const Index = () => {
           <h1 className={styles.heading}>
             PROGRAMMA
             <br />
-            RESIDENZA ARTISTICA, CONFERENZE E WORKSHOPS
+            RESIDENZA ARTISTICA,
+            <br />
+            CONFERENZE E
+            <br />
+            WORKSHOPS
           </h1>
         </span>{' '}
         {showTimer ? <Timer shutOffTimer={() => setShowTimer(false)} /> : <></>}

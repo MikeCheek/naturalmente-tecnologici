@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
 import { NavigationProps } from './index.types';
 
@@ -11,8 +11,12 @@ const links = [
 ];
 
 const Index = ({ opened, onClick }: NavigationProps) => {
-  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
-  const removeSlashes = (text: string) => text.replace(/\//g, '');
+  const [pathname, setPathname] = useState<string>();
+  const removeSlashes = (text?: string) => (text ? text.replace(/\//g, '') : '');
+
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
 
   const linkElements = links.map((link, key) => {
     return (
