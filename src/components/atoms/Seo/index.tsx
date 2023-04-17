@@ -17,13 +17,13 @@ const Index = ({ lang, title, description, pathname, children }: SeoProps) => {
       <html lang={lang} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image.images.fallback.src} />
+      <meta name="image" content={metadata.siteUrl + seo.image.images.fallback.src} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:locale" content={'it_IT'} />
-      <meta property="og:image" content={seo.image.images.fallback.src} />
+      <meta property="og:image" content={metadata.siteUrl + seo.image.images.fallback.src} />
       <meta property="og:image:type" content={'image/jpg'} />
       <meta property="og:image:alt" content={seo.title} />
-      <meta property="og:image:secure_url" content={seo.image.images.fallback.src} />
+      <meta property="og:image:secure_url" content={metadata.siteUrl + seo.image.images.fallback.src} />
       <meta property="og:image:width" content={`${seo.image.width ?? '1200'}`} />
       <meta property="og:image:height" content={`${seo.image.height ?? '630'}`} />
       <meta property="og:url" content={seo.url} />
@@ -34,7 +34,7 @@ const Index = ({ lang, title, description, pathname, children }: SeoProps) => {
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.image.images.fallback.src} />
+      <meta name="twitter:image" content={metadata.siteUrl + seo.image.images.fallback.src} />
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
       {children}
     </>
