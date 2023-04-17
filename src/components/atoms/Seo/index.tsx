@@ -2,7 +2,7 @@ import React from 'react';
 import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../hooks/useSiteMetadata';
 
-const Index = ({ lang, title, description, pathname, children }: SeoProps) => {
+const Index = ({ lang = 'en', title, description, pathname, children }: SeoProps) => {
   const { metadata, featuredImage } = useSiteMetadata();
 
   const seo = {

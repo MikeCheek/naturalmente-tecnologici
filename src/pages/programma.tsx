@@ -17,7 +17,7 @@ export const Head = () => (
   <Seo
     title="Programma"
     pathname="/programma/"
-    description="Dai un'occhiata al programma dell'evento, si prospettano giornate intense e produttive"
+    description="Dai un'occhiata al programma dell'evento! L'evento si terrà in data 11-13 Agosto 2023 e si prevedono giornate intense e produttive"
   />
 );
 
