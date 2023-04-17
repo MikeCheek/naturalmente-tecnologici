@@ -7,7 +7,7 @@ import Footer from '../../molecules/Footer';
 
 const Index = ({ children, insects = true }: LayoutProps) => {
   return (
-    <div>
+    <div id="top">
       <NavBar />
       {insects ? <FlyingInsects /> : <></>}
       <main className={styles.wrap}>{children}</main>
