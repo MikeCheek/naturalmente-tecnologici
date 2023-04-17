@@ -1,7 +1,7 @@
 import React from 'react';
-import Hand from '../../../assets/hand.svg';
 import * as styles from './index.module.scss';
-import Separator from '../Separator';
+import Separator from '../../atoms/Separator';
+import Banner from '../../atoms/Banner';
 
 const explanation = [
   {
@@ -22,11 +22,7 @@ const explanation = [
 const Index = () => {
   return (
     <div>
-      <div className={styles.banner}>
-        <h2>ALT!</h2>
-        <h2>LO SAI COSA SIGNIFICA ESSERE BIFOLCO?</h2>
-        <Hand width={160} height={218} />
-      </div>
+      <Banner text="LO SAI COSA SIGNIFICA ESSERE BIFOLCO?" />
       <div className={styles.paragraphs}>
         {explanation.map((item, key) => {
           return (
