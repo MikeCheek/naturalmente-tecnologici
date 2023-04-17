@@ -19,6 +19,7 @@ const IndexPage = () => {
 export const Head = () => (
   <Seo
     title="Home"
+    pathname="/"
     description="L'evento si propone di essere occasione di ritrovo della community di Syskrack nonché strumento di disseminazione culturale sul territorio."
   />
 );

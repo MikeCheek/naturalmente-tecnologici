@@ -4,6 +4,7 @@ import useSiteMetadata from '../../../hooks/useSiteMetadata';
 
 const Index = ({ lang, title, description, pathname, children }: SeoProps) => {
   const { metadata, featuredImage } = useSiteMetadata();
+
   const seo = {
     title: title ? title + ' | ' + metadata.title : metadata.title,
     description: description || metadata.description,

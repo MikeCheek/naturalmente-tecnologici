@@ -16,6 +16,7 @@ const Programma = () => {
 export const Head = () => (
   <Seo
     title="Programma"
+    pathname="/programma/"
     description="Dai un'occhiata al programma dell'evento, si prospettano giornate intense e produttive"
   />
 );
