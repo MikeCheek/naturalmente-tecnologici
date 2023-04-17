@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 
 const Index = ({ title, text, Svg, reversed = false, svgStyle }: SectionProps) => {
   const [on, setOn] = useState<boolean>(false);
-  const [ref, inView, _entry] = useInView({ threshold: 0, rootMargin: '-20% 0px -20% 0px', fallbackInView: true });
+  const [ref, inView, _entry] = useInView({ threshold: 0, rootMargin: '10% 0px -20% 0px', fallbackInView: true });
 
   const handleClick = () => {
     setOn(true);
