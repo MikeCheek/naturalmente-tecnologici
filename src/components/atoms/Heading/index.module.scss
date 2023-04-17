@@ -1,0 +1,32 @@
+.headingWrap {
+  position: relative;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.orange {
+  top: 0;
+  left: 0;
+  background-color: var(--nt-orange);
+  position: absolute;
+  border-radius: 5px;
+  transform: rotate(-2deg);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heading {
+  font-family: 'Cairo', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 23px;
+  line-height: 115%;
+  color: var(--nt-green);
+  margin: 10px 10px;
+  text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: '768px') {
+    font-size: 45px;
+  }
+}

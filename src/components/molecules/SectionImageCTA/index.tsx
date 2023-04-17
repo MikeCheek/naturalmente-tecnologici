@@ -13,7 +13,7 @@ const Index = ({ image, text, title, buttonHref, buttonText, reversed = false }:
           {buttonText}
         </a>
       </div>
-      <CardImage>{image}</CardImage>
+      <CardImage reversed={reversed}>{image}</CardImage>
     </div>
   );
 };

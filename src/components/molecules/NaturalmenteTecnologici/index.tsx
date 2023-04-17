@@ -4,6 +4,7 @@ import Section from '../Section';
 import Bug from '../../../assets/bug.svg';
 import Insects from '../../../assets/insects.svg';
 import { SectionProps } from '../Section/index.types';
+import Heading from '../../atoms/Heading';
 
 const info: SectionProps[] = [
   {
@@ -30,10 +31,7 @@ Crediamo fortemente nella concreta possibilità di cambiare il territorio cambia
 const Index = () => {
   return (
     <div className={styles.wrap}>
-      <div className={styles.headingWrap}>
-        <div className={styles.orange}></div>
-        <h2 className={styles.heading}>Naturalmente Tecnologici</h2>
-      </div>
+      <Heading text="Naturalmente Tecnologici" />
       {info.map((item, key) => {
         return (
           <Section
