@@ -13,7 +13,7 @@ const Index = ({ top = 0, onClick }: InsectProps) => {
   };
 
   return (
-    <span style={{ top: top + '%', animationDelay: top / 5 + 's' }} className={styles.insect}>
+    <div style={{ top: top + '%', animationDelay: top / 5 + 's' }} className={styles.insect}>
       <div className={styles.svgWrap} style={{ animationDelay: top / 5 + 's' }}>
         <Insect
           onClick={handleClick}
@@ -23,7 +23,7 @@ const Index = ({ top = 0, onClick }: InsectProps) => {
           className={on ? '' : styles.svg}
         />
       </div>
-    </span>
+    </div>
   );
 };
 
