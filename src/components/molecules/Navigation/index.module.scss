@@ -81,7 +81,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: -30px;
+  margin-top: -10px;
 }
 
 .buttonMobile {
@@ -91,6 +91,6 @@
 
 .button {
   @include styled.button;
-  margin-top: -30px;
+  margin-top: -10px;
   color: var(--nt-green) !important;
 }

@@ -29,7 +29,9 @@
 }
 
 .svgAnimate {
-  animation: lightFromLight 11s infinite alternate ease-in-out;
+  animation: lightFromLight 11s infinite alternate cubic-bezier(0.43, 0, 0.09, 2.42);
+  transition: opacity 1.5s ease-in-out;
+  will-change: opacity;
 }
 
 .svgReversed {
@@ -45,6 +47,11 @@
   @media screen and (min-width: '768px') {
     flex-direction: row-reverse;
   }
+}
+
+.leave {
+  transition: transform 1s cubic-bezier(0, 0, 0.09, 1.42);
+  will-change: transition;
 }
 
 .connectionLeft {

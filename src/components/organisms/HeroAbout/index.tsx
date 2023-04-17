@@ -30,16 +30,16 @@ const Index = () => {
           />
         </a>
         <div className={styles.colliWrap}>
-          <Colli width="1440" height="185" className={styles.colli} />
+          <Colli width="1440" height="185" className={styles.colli} fill="var(--nt-white)" />
           <div className={styles.white}></div>
         </div>
-        <Collina width="1440" height="129" className={styles.collina} />
         <div className={styles.greenFlowers}>
           <Flower color="var(--nt-green)" />
           <Flower color="var(--nt-green)" />
           <Flower color="var(--nt-green)" />
           <Flower color="var(--nt-green)" />
         </div>
+        <Collina width="1440" height="129" className={styles.collina} fill="var(--nt-green)" />
         <div className={styles.green}></div>
       </div>
     </div>
