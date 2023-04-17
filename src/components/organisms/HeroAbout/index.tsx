@@ -34,13 +34,13 @@ const Index = () => {
           <div className={styles.white}></div>
         </div>
         <Collina width="1440" height="129" className={styles.collina} />
-        <div className={styles.green}></div>
         <div className={styles.greenFlowers}>
           <Flower color="var(--nt-green)" />
           <Flower color="var(--nt-green)" />
           <Flower color="var(--nt-green)" />
           <Flower color="var(--nt-green)" />
         </div>
+        <div className={styles.green}></div>
       </div>
     </div>
   );
