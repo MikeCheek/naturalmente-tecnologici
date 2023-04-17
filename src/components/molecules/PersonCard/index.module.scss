@@ -16,3 +16,12 @@
   margin-top: -10px !important;
   margin-bottom: 20px !important;
 }
+
+.name {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  @media screen and (min-width: '768px') {
+    font-size: 1.4rem;
+  }
+}

@@ -7,7 +7,7 @@ const Index = ({ image, name, role, reversed = false }: PersonCardProps) => {
   return (
     <div className={styles.wrap}>
       <CardImage reversed={reversed}>{image}</CardImage>
-      <p>{name}</p>
+      <p className={styles.name}>{name}</p>
       <p className={styles.role}>{role}</p>
     </div>
   );

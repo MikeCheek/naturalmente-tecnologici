@@ -30,11 +30,9 @@ const Index = () => {
         className={styles.carousel}
         interval={5000}
         ariaLabel={'Organizzatori'}
-        //@ts-ignore
-        renderThumbs={() => null}
         autoPlay
         showArrows
-        showThumbs
+        showThumbs={false}
         showIndicators
         emulateTouch
         showStatus={false}
