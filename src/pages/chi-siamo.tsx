@@ -18,7 +18,7 @@ const ChiSiamo = () => {
 export const Head = () => (
   <Seo
     title="Chi siamo"
-    description="Naturalmente Tecnologici è un evento 3Days organizzato dall'associazione Syskrack Giuseppe Porsia in Grassano (MT)"
+    description="Naturalmente Tecnologici è un evento organizzato dall'associazione Syskrack Giuseppe Porsia in quel di Grassano (Matera)"
   />
 );
 

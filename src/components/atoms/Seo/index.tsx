@@ -27,7 +27,7 @@ const Index = ({ lang, title, description, pathname, children }: SeoProps) => {
       <meta property="og:image:secure_url" content={image} />
       <meta property="og:image:width" content={'1200'} />
       <meta property="og:image:height" content={'630'} />
-      <meta property="og:url" content={`https://nt22.syskrack.org`} />
+      <meta property="og:url" content={seo.url} />
       <meta property="og:site_name" content={seo.title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={'website'} />
