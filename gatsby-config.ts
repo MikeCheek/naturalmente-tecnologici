@@ -41,7 +41,7 @@ const config: GatsbyConfig = {
       options: {
         host: url,
         policy: [{ userAgent: '*', allow: '/' }],
-        sitemap: url + 'sitemap-index.xml',
+        sitemap: url + '/sitemap-index.xml',
       },
     },
     {
