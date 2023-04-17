@@ -9,7 +9,7 @@ const Index = () => {
       alt="Logo Syskrack"
       src="../../../images/camp.jpg"
       layout="constrained"
-      width={400}
+      width={350}
       className={styles.image}
     />
   );
