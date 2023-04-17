@@ -1,0 +1,57 @@
+@use 'src/styles/styled';
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  margin: 40px 10% 40px 10%;
+  z-index: 9;
+  @media screen and (min-width: '768px') {
+    flex-direction: row;
+    margin: 50px 5% 50px 5%;
+  }
+}
+
+.wrapReversed {
+  @extend .wrap;
+  @media screen and (min-width: '768px') {
+    flex-direction: row-reverse;
+  }
+}
+
+.text {
+  text-align: center;
+  h2 {
+    color: var(--nt-orange);
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: '768px') {
+    max-width: 40%;
+    text-align: left;
+  }
+}
+
+.textReversed {
+  @extend .text;
+  @media screen and (min-width: '768px') {
+    text-align: right;
+  }
+}
+
+.image {
+  width: auto;
+  @media screen and (min-width: '768px') {
+    min-width: 40vw;
+    max-width: 50vw;
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+}
+
+.button {
+  @include styled.button;
+}
