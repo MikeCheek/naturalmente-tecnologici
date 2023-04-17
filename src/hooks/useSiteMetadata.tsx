@@ -7,14 +7,18 @@ const useSiteMetadata = () => {
         siteMetadata {
           title
           description
-          image
           siteUrl
+        }
+      }
+      featuredImage: file(absolutePath: { glob: "**/src/images/logo-og.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FIXED, width: 1200)
         }
       }
     }
   `);
 
-  return data.site.siteMetadata;
+  return { metadata: data.site.siteMetadata, featuredImage: data.featuredImage };
 };
 
 export default useSiteMetadata;
