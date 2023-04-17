@@ -1,9 +1,11 @@
 import type { GatsbyConfig } from 'gatsby';
 
+const url = `https://nt2023.gatsbyjs.io`;
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Naturalmente Tecnologici - NT`,
-    siteUrl: `https://nt2023.gatsbyjs.io/`,
+    siteUrl: url,
     description: `L'evento si propone di essere occasione di ritrovo della community di Syskrack nonché strumento di disseminazione culturale sul territorio.`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -34,6 +36,14 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: url,
+        policy: [{ userAgent: '*', allow: '/' }],
+        sitemap: url + 'sitemap-index.xml',
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
