@@ -4,12 +4,25 @@ import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../SectionImageCTA';
 
 const Index = () => {
-  const image = (
+  const image0 = (
     <StaticImage
-      alt="Logo Syskrack"
-      src="../../../images/camp.jpg"
+      quality={80}
+      alt="Syskrack foto 1"
+      src="../../../images/camp0.jpg"
       layout="constrained"
-      width={350}
+      width={700}
+      height={500}
+      className={styles.image}
+    />
+  );
+  const image1 = (
+    <StaticImage
+      quality={80}
+      alt="Syskrack foto 2"
+      src="../../../images/camp1.jpg"
+      layout="constrained"
+      width={700}
+      height={500}
       className={styles.image}
     />
   );
@@ -26,7 +39,7 @@ const Index = () => {
           possibilità si potevano raggiungere grandi obbiettivi.`}
         buttonHref="https://syskrack.org"
         buttonText="SCOPRI L'ASSOCIAZIONE"
-        image={image}
+        image={image0}
       />
       <SectionImageCTA
         title="LA NOSTRA FILOSOFIA"
@@ -38,7 +51,7 @@ const Index = () => {
         Syskrack è una community glocale, connessa tramite internet, tramite che agisce localmente attraverso luoghi fisici, i laboratori.`}
         buttonHref="https://syskrack.org"
         buttonText="SCOPRI L'ASSOCIAZIONE"
-        image={image}
+        image={image1}
         reversed
       />
     </>
