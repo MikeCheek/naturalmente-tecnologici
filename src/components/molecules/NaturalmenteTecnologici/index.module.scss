@@ -5,9 +5,12 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
-  gap: 70px;
+  margin-top: -20px;
+  z-index: 5;
+  gap: 20px;
   @media screen and (min-width: '768px') {
     margin-bottom: 150px;
+    margin-top: -70px;
   }
 }
 
@@ -37,6 +40,7 @@
   color: var(--nt-green);
   margin: 10px 10px;
   text-transform: uppercase;
+  text-align: center;
   @media screen and (min-width: '768px') {
     font-size: 45px;
   }

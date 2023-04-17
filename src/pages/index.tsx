@@ -3,7 +3,7 @@ import Layout from '../components/organisms/Layout';
 import HeroHome from '../components/organisms/HeroHome';
 import './../styles/globals.scss';
 import Seo from '../components/atoms/Seo';
-import NaturalmenteTecnologici from '../components/organisms/NaturalmenteTecnologici';
+import NaturalmenteTecnologici from '../components/molecules/NaturalmenteTecnologici';
 import Theme from '../components/organisms/Theme';
 
 const IndexPage = () => {

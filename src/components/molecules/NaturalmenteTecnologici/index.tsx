@@ -1,9 +1,9 @@
 import React from 'react';
 import * as styles from './index.module.scss';
-import Section from '../../molecules/Section';
+import Section from '../Section';
 import Bug from '../../../assets/bug.svg';
 import Insects from '../../../assets/insects.svg';
-import { SectionProps } from '../../molecules/Section/index.types';
+import { SectionProps } from '../Section/index.types';
 
 const info: SectionProps[] = [
   {
