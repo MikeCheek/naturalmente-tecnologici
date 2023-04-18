@@ -53,10 +53,19 @@ const config: GatsbyConfig = {
       __key: 'images',
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: './src/assets/',
+      },
+      __key: 'assets',
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /assets/,
+          omitKeys: ['xmlnsDc', 'xmlnsCc', 'xmlnsRdf', 'xmlnsSvg', 'xmlnsSodipodi', 'xmlnsInkscape', 'id'],
         },
       },
     },
@@ -64,4 +73,3 @@ const config: GatsbyConfig = {
 };
 
 export default config;
-
