@@ -8,7 +8,7 @@ const Index = ({ text }: BannerProps) => {
     <div className={styles.banner}>
       <h2>ALT!</h2>
       <h2>{text}</h2>
-      <Hand width={160} height={218} />
+      <Hand width={160} height={218} strokeWidth={10} />
     </div>
   );
 };
