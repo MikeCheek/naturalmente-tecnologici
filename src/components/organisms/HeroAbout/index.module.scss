@@ -76,10 +76,15 @@
   }
 }
 
-.colliWrap {
+.svgWrap {
   position: absolute;
   left: 0;
   bottom: 0;
+  width: 100vw;
+  height: auto;
+}
+
+.colliWrap {
   width: 100vw;
   height: auto;
   z-index: 1;
@@ -114,7 +119,6 @@
   height: auto;
   z-index: 5;
   filter: drop-shadow(-58px 5px 5px rgba(0, 0, 0, 0.25));
-  transform: rotateX(15deg);
   fill: var(--nt-green);
 }
 
