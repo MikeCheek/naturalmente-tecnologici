@@ -1,3 +1,5 @@
+@import 'src/styles/animations';
+
 .wrap {
   display: flex;
   overflow-x: hidden;
@@ -48,6 +50,10 @@
   left: 0;
   bottom: 0;
   width: 100vw;
+
+  svg {
+    animation: 1s grow ease-out;
+  }
 
   :nth-child(1) {
     transform: translateY(10px);

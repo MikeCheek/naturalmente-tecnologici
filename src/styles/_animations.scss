@@ -21,3 +21,12 @@
     stroke: var(--nt-transparent-orange);
   }
 }
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+  }
+}
