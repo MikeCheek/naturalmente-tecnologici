@@ -50,8 +50,8 @@
 }
 
 .leave {
-  transition: transform 1s cubic-bezier(0, 0, 0.09, 1.42);
-  will-change: transition;
+  transition: transform 1s cubic-bezier(0, 0, 0.09, 1.42), opacity 0.8s ease-in;
+  will-change: transition, opacity;
 }
 
 .connectionLeft {

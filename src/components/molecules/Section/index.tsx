@@ -17,8 +17,8 @@ const Index = ({ title, text, Svg, reversed = false, svgStyle }: SectionProps) =
   const conditionalStyle: React.CSSProperties = inView
     ? {}
     : reversed
-    ? { transform: 'translateX(100%) rotate(45deg)' }
-    : { transform: 'translateX(-100%) rotate(-45deg)' };
+    ? { transform: 'translateX(70%) rotate(45deg)', opacity: 0 }
+    : { transform: 'translateX(-70%) rotate(-45deg)', opacity: 0 };
 
   return (
     <div className={reversed ? styles.wrapReversed : styles.wrap}>
