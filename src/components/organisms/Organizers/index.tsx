@@ -1,17 +1,10 @@
 import React from 'react';
-import * as styles from './index.module.scss';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { StaticImage } from 'gatsby-plugin-image';
 import { Carousel } from 'react-responsive-carousel';
+import { StaticImage } from 'gatsby-plugin-image';
+import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
-import PersonCard from '../../molecules/PersonCard';
-
-const organizers = [
-  { name: 'Giuseppe Becci', role: 'Organizer' },
-  { name: 'Michele Pulvirenti', role: 'Developer' },
-  { name: 'Giuseppe Liuzzi', role: 'Mbare' },
-  { name: 'Saro Calamaro', role: 'Mbarissimo' },
-];
+import CardPerson from '../../molecules/CardPerson';
+import { organizers } from '../../../hooks/useInfo';
 
 const Index = () => {
   const image = (
@@ -43,7 +36,7 @@ const Index = () => {
       >
         {organizers.map((item, key) => {
           return (
-            <PersonCard
+            <CardPerson
               key={key}
               name={item.name}
               role={item.role}

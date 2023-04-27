@@ -3,13 +3,13 @@ import * as styles from './index.module.scss';
 import randInt from '../../../hooks/randInt';
 import { TimerProps } from './index.types';
 
-const Index = ({ shutOffTimer }: TimerProps) => {
+const Index = ({ shutOffTimer, date }: TimerProps) => {
   const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(0);
 
-  const countDownDate = new Date('August 11, 2023 00:00:00').getTime();
+  const countDownDate = date.getTime();
 
   useEffect(() => {
     const interval = setInterval(() => {

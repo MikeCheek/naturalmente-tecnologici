@@ -7,7 +7,7 @@ const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external' }: Fa
   return (
     <div className={styles.wrap}>
       {icon}
-      <p>{text}</p>
+      <p dangerouslySetInnerHTML={{ __html: text }}></p>
       {linkType == 'external' ? (
         <a className={styles.button} href={buttonHref} title={buttonText} rel="noopener noreferrer" target="_blank">
           {buttonText}

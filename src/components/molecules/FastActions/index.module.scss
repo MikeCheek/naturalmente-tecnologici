@@ -1,18 +1,25 @@
 .wrap {
   width: 100%;
-  padding: 80px 0 160px 0;
+  padding: 40px 0 80px 0;
   margin-bottom: 1px;
   background-color: var(--nt-white);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: var(--nt-green);
   position: relative;
   z-index: 1;
+  text-align: center;
   @media screen and (min-width: '768px') {
-    padding: 100px 0 250px 0;
+    padding: 80px 0 150px 0;
   }
   @media screen and (min-width: '1024px') {
-    padding: 100px 0 350px 0;
+    padding: 80px 0 250px 0;
+  }
+
+  h2 {
+    margin-top: 0;
   }
 }
 
@@ -33,6 +40,7 @@
 .icon {
   height: 40px;
   width: auto;
+  fill: var(--nt-green);
   @media screen and (min-width: '768px') {
     height: 70px;
   }

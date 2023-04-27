@@ -2,9 +2,9 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import BigBranch from '../../../assets/big-branch.svg';
 import Colli from '../../../assets/colli.svg';
-import FastActions from '../../molecules/FastActions';
-import Flower from '../../atoms/Flower';
 import Collina from '../../../assets/collina.svg';
+import Flower from '../../atoms/Flower';
+import FastActions from '../../molecules/FastActions';
 
 const Index = () => {
   return (

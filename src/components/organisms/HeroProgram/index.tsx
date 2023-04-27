@@ -18,7 +18,11 @@ const Index = () => {
             FESTIVAL MUSICALE, CONFERENZE, WORKSHOP, CAMPING
           </h1>
         </span>
-        {showTimer ? <Timer shutOffTimer={() => setShowTimer(false)} /> : <></>}
+        {showTimer ? (
+          <Timer date={new Date('August 11, 2023 00:00:00')} shutOffTimer={() => setShowTimer(false)} />
+        ) : (
+          <></>
+        )}
       </div>
       <div className={styles.orangeFlowers}>
         <Flower color="var(--nt-orange)" />

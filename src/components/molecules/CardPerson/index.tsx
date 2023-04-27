@@ -1,9 +1,9 @@
 import React from 'react';
 import * as styles from './index.module.scss';
-import { PersonCardProps } from './index.types';
 import CardImage from '../../atoms/CardImage';
+import { CardPersonProps } from './index.types';
 
-const Index = ({ image, name, role, reversed = false }: PersonCardProps) => {
+const Index = ({ image, name, role, reversed = false }: CardPersonProps) => {
   return (
     <div className={styles.wrap}>
       <CardImage reversed={reversed}>{image}</CardImage>
