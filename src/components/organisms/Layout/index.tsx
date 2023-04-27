@@ -10,7 +10,7 @@ const Index = ({ children, insects = true }: LayoutProps) => {
   const handleAcceptCookie = () => {};
 
   const handleDeclineCookie = () => {
-    // Cookies.remove('_ga');
+    Cookies.remove('_ga');
     // Cookies.remove('_gat');
     // Cookies.remove('_gid');
   };
