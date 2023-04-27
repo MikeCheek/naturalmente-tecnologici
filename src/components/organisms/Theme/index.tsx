@@ -15,7 +15,10 @@ const Index = () => {
         </h2>
       </div>
       <div className={styles.theme}>
-        <Cloud text="Ciao sono Giuseppe Becci, l' organizzatore dell'evento Naturalmente Tecnologici. Il tema di quest'anno mi è venuto in mente leggendo ..." />
+        <Cloud
+          text="Ciao sono Giuseppe Becci, l'organizzatore dell'evento Naturalmente Tecnologici.<br/><br/>Se l'innovazione non è anche sociale, allora è speculazione sull'ignoranza degli altri.<br/>
+Abbiamo scelto questo tema perché crediamo che lo sviluppo tecnologico necessiti di un ragionamento sulla direzione in cui lo si sta spingendo. Vogliamo che le persone possano assumere una posizione cosciente, per questo investiamo molte risorse nella formazione."
+        />
         <CardImage>
           <StaticImage
             src="../../../images/crew/becci.jpg"

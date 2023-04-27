@@ -15,13 +15,9 @@ const Index = () => {
           <h1 className={styles.heading}>
             PROGRAMMA
             <br />
-            RESIDENZA ARTISTICA,
-            <br />
-            CONFERENZE E
-            <br />
-            WORKSHOPS
+            FESTIVAL MUSICALE, CONFERENZE, WORKSHOP, CAMPING
           </h1>
-        </span>{' '}
+        </span>
         {showTimer ? <Timer shutOffTimer={() => setShowTimer(false)} /> : <></>}
       </div>
       <div className={styles.orangeFlowers}>

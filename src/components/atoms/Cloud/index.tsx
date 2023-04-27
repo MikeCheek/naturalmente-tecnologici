@@ -6,7 +6,7 @@ const Index = ({ text }: CloudProps) => {
   return (
     <div className={styles.wrap}>
       <div className={styles.cloud}>
-        <em>"{text}"</em>
+        <em dangerouslySetInnerHTML={{ __html: `"${text}"` }}></em>
       </div>
       <div className={styles.smallOne}></div>
       <div className={styles.smallTwo}></div>
