@@ -77,17 +77,8 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         id: process.env.GTAG_ID,
-        // Include GTM in development.
-        //
-        // Defaults to false meaning GTM will only be loaded in production.
         includeInDevelopment: false,
-
-        // Name of the event that is triggered
-        // on every Gatsby route change.
-        //
-        // Defaults to gatsby-route-change
         routeChangeEventName: 'ROUTE_CHANGE_EVENT',
-        // Defaults to false
         enableWebVitalsTracking: true,
       },
     },
