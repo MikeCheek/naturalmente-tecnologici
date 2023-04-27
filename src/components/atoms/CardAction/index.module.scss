@@ -16,6 +16,8 @@
   height: 100%;
   text-align: center;
   margin: 10px;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  will-change: transform, opacity;
   @media screen and (min-width: '768px') {
     padding: 30px 15px;
     margin: 25px;
@@ -34,6 +36,12 @@
       margin: 32px 0;
     }
   }
+}
+
+.wrapHidden {
+  @extend .wrap;
+  opacity: 0;
+  transform: scale(0.5) rotateX(90deg);
 }
 
 .button {
