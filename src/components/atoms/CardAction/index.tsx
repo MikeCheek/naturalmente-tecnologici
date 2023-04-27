@@ -9,7 +9,7 @@ const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external' }: Fa
     threshold: 0,
     rootMargin: '5% 0px -20% 0px',
     fallbackInView: true,
-    // triggerOnce: true,
+    triggerOnce: true,
   });
 
   return (
