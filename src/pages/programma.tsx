@@ -17,7 +17,7 @@ export const Head = () => (
   <Seo
     title="Programma"
     pathname="/programma/"
-    description="Dai un'occhiata al programma dell'evento! L'evento si terrà in data 11-13 Agosto 2023 e si prevedono giornate intense e produttive"
+    description="Dall' 11 al 13 Agosto 2023 immersi in una location mozzafiato, in mezzo alle colline materane, tra camping, laboratori, conferenze, e festival musicali"
   />
 );
 

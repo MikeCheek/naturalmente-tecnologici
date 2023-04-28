@@ -19,7 +19,7 @@ export const Head = () => (
   <Seo
     title="Home"
     pathname="/"
-    description="L'evento si propone di essere occasione di ritrovo della community di Syskrack nonché strumento di disseminazione culturale sul territorio."
+    description=" I partecipanti, gli abitanti del luogo e le community si scambieranno idee, visioni ed esperienze. L'obiettivo è indagare nuovi orizzonti dello sviluppo tecnologico etici e sostenibili dal punto di vista sociale ed ambientale."
   />
 );
 
