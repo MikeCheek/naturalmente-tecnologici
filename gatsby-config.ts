@@ -44,7 +44,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: url,
-        policy: [{ userAgent: '*', allow: '/' }],
+        policy: [{ userAgent: '*', disallow: '/' }],
         sitemap: url + '/sitemap-index.xml',
       },
     },
