@@ -35,7 +35,11 @@ const Index = ({ lang = 'it', title, description, pathname, children }: SeoProps
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={metadata.siteUrl + seo.image.images.fallback.src} />
+
+      {/* TODO: LEVARE IL NOINDEX QUANDO SI CAMBIA DOMINIO */}
       <meta name="robots" content="noindex" />
+      <meta name="google-site-verification" content="6CEt2yawsIZqWfyMh9IkmQa2U75Qu41kO92hyIV0R0M" />
+
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
       {children}
     </>

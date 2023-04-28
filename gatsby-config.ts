@@ -44,6 +44,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: url,
+        // TODO: METTERE allow AL POSTO DI disallow QUANDO SI CAMBIA DOMINIO
         policy: [{ userAgent: '*', disallow: '/' }],
         sitemap: url + '/sitemap-index.xml',
       },
