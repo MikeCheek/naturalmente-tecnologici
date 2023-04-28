@@ -2,7 +2,7 @@ import React from 'react';
 import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../hooks/useSiteMetadata';
 
-const Index = ({ lang = 'it', title, description, pathname, children }: SeoProps) => {
+const Index = ({ lang = 'it', title, description, pathname, children, structuredData = false }: SeoProps) => {
   const { metadata, featuredImage } = useSiteMetadata();
 
   const seo = {
@@ -10,6 +10,35 @@ const Index = ({ lang = 'it', title, description, pathname, children }: SeoProps
     description: description || metadata.description,
     url: `${metadata.siteUrl}${pathname || ``}`,
     image: featuredImage?.childImageSharp?.gatsbyImageData as unknown as ImageDataType,
+  };
+
+  const microData = {
+    '@context': 'https://www.schema.org',
+    '@type': 'Event',
+    name: metadata.title,
+    url: seo.url,
+    description: seo.description,
+    startDate: '11/04/2023 09:00AM',
+    endDate: '13/04/2023 23:59PM',
+    location: {
+      '@type': 'Place',
+      name: 'Grassano',
+      sameAs: seo.url,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Confino',
+        addressLocality: 'Grassano',
+        addressRegion: 'MT',
+        postalCode: '75014',
+        addressCountry: 'ITA',
+      },
+    },
+    offers: {
+      '@type': 'Offer',
+      description: '3 giorni di evento + Camping',
+      url: seo.url,
+      price: '€119.99',
+    },
   };
 
   return (
@@ -39,6 +68,8 @@ const Index = ({ lang = 'it', title, description, pathname, children }: SeoProps
       {/* TODO: LEVARE QUESTI DUE TAG QUANDO SI CAMBIA DOMINIO */}
       <meta name="robots" content="noindex" />
       <meta name="google-site-verification" content="6CEt2yawsIZqWfyMh9IkmQa2U75Qu41kO92hyIV0R0M" />
+
+      {structuredData ? <script type="application/ld+json">{JSON.stringify(microData)}</script> : <></>}
 
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
       {children}
