@@ -35,6 +35,7 @@ const Index = ({ lang = 'it', title, description, pathname, children }: SeoProps
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={metadata.siteUrl + seo.image.images.fallback.src} />
+      <meta name="robots" content="noindex" />
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
       {children}
     </>
