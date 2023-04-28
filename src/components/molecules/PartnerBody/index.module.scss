@@ -1,0 +1,18 @@
+.wrap {
+  background-color: var(--nt-white);
+  width: 100vw;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--nt-green);
+  text-align: center;
+
+  h4 {
+    margin: 0 10%;
+    @media screen and (min-width: '768px') {
+      margin: 0 15%;
+    }
+  }
+}

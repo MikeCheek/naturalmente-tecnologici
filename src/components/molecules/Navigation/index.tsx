@@ -7,6 +7,7 @@ const links = [
   { name: 'Home', to: '/' },
   { name: 'Programma', to: '/programma' },
   { name: 'Contattaci', to: '/contattaci' },
+  { name: 'Partner', to: '/partner' },
   { name: 'Chi siamo', to: '/chi-siamo' },
 ];
 
