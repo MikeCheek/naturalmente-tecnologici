@@ -20,6 +20,8 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
     description: seo.description,
     startDate: '11/04/2023 09:00AM',
     endDate: '13/04/2023 23:59PM',
+    image: seo.image,
+    logo: metadata.siteUrl + '/favicon.ico',
     location: {
       '@type': 'Place',
       name: 'Grassano',
