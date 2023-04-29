@@ -67,8 +67,7 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={metadata.siteUrl + seo.image.images.fallback.src} />
 
-      {/* TODO: LEVARE QUESTI DUE TAG QUANDO SI CAMBIA DOMINIO */}
-      <meta name="robots" content="noindex" />
+      {/* TODO: LEVARE QUESTO TAG QUANDO SI CAMBIA DOMINIO */}
       <meta name="google-site-verification" content="6CEt2yawsIZqWfyMh9IkmQa2U75Qu41kO92hyIV0R0M" />
 
       {structuredData ? <script type="application/ld+json">{JSON.stringify(microData)}</script> : <></>}
