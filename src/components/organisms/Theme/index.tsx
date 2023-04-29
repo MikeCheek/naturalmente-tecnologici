@@ -25,6 +25,7 @@ Abbiamo scelto questo tema perché crediamo che lo sviluppo tecnologico necessit
         <CardPerson
           name={organizer.name}
           role={organizer.role}
+          noMargin
           image={
             <StaticImage
               src="../../../images/crew/becci.jpg"

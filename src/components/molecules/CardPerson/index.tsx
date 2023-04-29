@@ -5,9 +5,9 @@ import { CardPersonProps } from './index.types';
 import Linkedin from '../../../assets/social/linkedin.svg';
 import Website from '../../../assets/social/internet.svg';
 
-const Index = ({ image, name, role, reversed = false, website, linkedin }: CardPersonProps) => {
+const Index = ({ image, name, role, reversed = false, website, linkedin, noMargin = false }: CardPersonProps) => {
   return (
-    <div className={styles.wrap}>
+    <div className={styles.wrap} style={noMargin ? { marginLeft: 0, marginRight: 0 } : {}}>
       {website || linkedin ? (
         <div className={styles.links}>
           {linkedin ? (

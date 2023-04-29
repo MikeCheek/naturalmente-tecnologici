@@ -5,4 +5,5 @@ export interface CardPersonProps {
   reversed?: boolean;
   website?: string;
   linkedin?: string;
+  noMargin?: boolean;
 }
