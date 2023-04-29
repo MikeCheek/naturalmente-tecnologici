@@ -40,6 +40,8 @@ const Index = () => {
               key={key}
               name={item.name}
               role={item.role}
+              website={item.website}
+              linkedin={item.linkedin}
               image={image}
               reversed={key % 2 == 0 ? true : false}
             />

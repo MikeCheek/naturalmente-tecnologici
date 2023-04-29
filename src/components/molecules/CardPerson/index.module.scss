@@ -3,10 +3,41 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 40px 0;
+  margin: 40px auto;
+  width: fit-content;
+  position: relative;
+  transition: filter 200ms ease;
+  will-change: filter;
 
   p {
     margin: 10px 0;
+  }
+
+  &:hover {
+    filter: brightness(0.9);
+
+    .links {
+      opacity: 1;
+    }
+  }
+}
+
+.links {
+  opacity: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+
+  transition: opacity 200ms ease;
+  will-change: opacity;
+
+  svg {
+    border-radius: 5px;
+    fill: var(--nt-dark-green);
   }
 }
 

@@ -3,4 +3,6 @@ export interface CardPersonProps {
   name: string;
   role: string;
   reversed?: boolean;
+  website?: string;
+  linkedin?: string;
 }
