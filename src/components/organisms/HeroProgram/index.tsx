@@ -13,8 +13,7 @@ const Index = () => {
         <span>
           <p className={styles.date}>11-13 Agosto 2023</p>
           <h1 className={styles.heading}>
-            PROGRAMMA
-            <br />
+            PROGRAMMA <br />
             FESTIVAL MUSICALE, CONFERENZE, WORKSHOP <br /> E CAMPING
           </h1>
         </span>

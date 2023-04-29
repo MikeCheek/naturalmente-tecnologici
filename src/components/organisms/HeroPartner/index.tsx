@@ -9,8 +9,7 @@ const Index = () => {
       <div className={styles.headWrap}>
         <span>
           <h1 className={styles.heading}>
-            PARTNER
-            <br />
+            PARTNER <br />
             CHE HANNO RESO POSSIBILE TUTTO CIÒ
           </h1>
         </span>

@@ -13,8 +13,7 @@ const Index = () => {
       <div className={styles.headWrap}>
         <p className={styles.date}>11-13 Agosto 2023</p>
         <h1 className={styles.heading}>
-          RI-PRENDIAMOCI IL FUTURO
-          <br />3 GIORNI DI ARTE, INNOVAZIONE TECNOLOGICA E SOCIALE
+          RI-PRENDIAMOCI IL FUTURO <br />3 GIORNI DI ARTE, INNOVAZIONE TECNOLOGICA E SOCIALE
         </h1>
         <div className={styles.orangeFlowers}>
           <Flower color="var(--nt-orange)" />

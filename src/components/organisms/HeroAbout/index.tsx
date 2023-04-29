@@ -10,8 +10,7 @@ const Index = () => {
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
         <h1 className={styles.heading}>
-          SYSKRACK
-          <br />
+          SYSKRACK <br />
           LA COMMUNITY GLOBALE CHE AGISCE LOCALMENTE
         </h1>
         <a
