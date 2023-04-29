@@ -14,18 +14,21 @@ const Index = () => {
         <CardAction
           icon={<Ticket className={styles.icon} width={70} />}
           text="<span class='cuttedText'>80€</span><br/>70€"
+          description="1 giorno"
           buttonText="ACQUISTA"
           buttonHref="#footer"
         />
         <CardAction
           icon={<Tickets className={styles.icon} width={70} />}
           text="<span class='cuttedText'>100€</span><br/>90€"
+          description="2 giorni"
           buttonText="ACQUISTA"
           buttonHref=""
         />
         <CardAction
           icon={<Vip className={styles.icon} width={70} />}
           text="<span class='cuttedText'>120€</span><br/>110€"
+          description="3 giorni + camping"
           buttonText="ACQUISTA"
           buttonHref=""
         />

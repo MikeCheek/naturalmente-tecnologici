@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import * as styles from './index.module.scss';
 import { useInView } from 'react-intersection-observer';
 
-const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external' }: FastActionProps) => {
+const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external', description }: FastActionProps) => {
   const [ref, inView, _entry] = useInView({
     threshold: 0,
     rootMargin: '5% 0px -20% 0px',
@@ -15,7 +15,8 @@ const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external' }: Fa
   return (
     <div className={inView ? styles.wrap : styles.wrapHidden} ref={ref}>
       {icon}
-      <p dangerouslySetInnerHTML={{ __html: text }}></p>
+      <p className={styles.bigText} dangerouslySetInnerHTML={{ __html: text }}></p>
+      {description ? <p dangerouslySetInnerHTML={{ __html: description }}></p> : <></>}
       {linkType == 'external' ? (
         <a className={styles.button} href={buttonHref} title={buttonText} rel="noopener noreferrer" target="_blank">
           {buttonText}

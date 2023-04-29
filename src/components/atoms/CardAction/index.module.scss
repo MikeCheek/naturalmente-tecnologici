@@ -3,6 +3,7 @@
 .wrap {
   border-radius: 10px;
   border: 3px solid var(--nt-green);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -11,7 +12,8 @@
   align-items: center;
   justify-content: space-between;
   width: 30vw;
-  max-width: 130px;
+  max-width: 160px;
+  min-width: 140px;
   min-height: 180px;
   height: 100%;
   text-align: center;
@@ -19,22 +21,25 @@
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   will-change: transform, opacity;
   @media screen and (min-width: '768px') {
+    border-width: 4px;
     padding: 30px 15px;
     margin: 25px;
     width: 250px;
     max-width: 250px;
-    height: 280px;
   }
 
   p {
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 10px 0;
-    @media screen and (min-width: '768px') {
-      font-size: 32px;
-      margin: 32px 0;
-    }
+    margin-top: 0;
+  }
+}
+
+.bigText {
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 10px 0 !important;
+  @media screen and (min-width: '768px') {
+    font-size: 29px;
   }
 }
 

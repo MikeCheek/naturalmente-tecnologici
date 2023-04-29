@@ -4,4 +4,5 @@ export interface FastActionProps {
   buttonText: string;
   buttonHref: string;
   linkType?: LinkType;
+  description?: string;
 }
