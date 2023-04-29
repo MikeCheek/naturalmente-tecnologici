@@ -13,19 +13,19 @@ const Index = () => {
       <div className={styles.cards}>
         <CardAction
           icon={<Ticket className={styles.icon} width={70} />}
-          text="<s>80€</s><br/>70€"
+          text="<span class='cuttedText'>80€</span><br/>70€"
           buttonText="ACQUISTA"
           buttonHref="#footer"
         />
         <CardAction
           icon={<Tickets className={styles.icon} width={70} />}
-          text="<s>100€</s><br/>90€"
+          text="<span class='cuttedText'>100€</span><br/>90€"
           buttonText="ACQUISTA"
           buttonHref=""
         />
         <CardAction
           icon={<Vip className={styles.icon} width={70} />}
-          text="<s>120€</s><br/>110€"
+          text="<span class='cuttedText'>120€</span><br/>110€"
           buttonText="ACQUISTA"
           buttonHref=""
         />
