@@ -17,10 +17,11 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
     '@type': 'Event',
     name: metadata.title,
     url: seo.url,
+    organizer: 'Syskrack Giuseppe Porsia',
     description: seo.description,
     startDate: '11/04/2023 09:00AM',
     endDate: '13/04/2023 23:59PM',
-    image: seo.image,
+    image: seo.image.images.fallback.src,
     logo: metadata.siteUrl + '/favicon.ico',
     location: {
       '@type': 'Place',
