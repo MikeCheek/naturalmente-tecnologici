@@ -15,7 +15,7 @@ const Index = () => {
           <h1 className={styles.heading}>
             PROGRAMMA
             <br />
-            FESTIVAL MUSICALE, CONFERENZE, WORKSHOP, CAMPING
+            FESTIVAL MUSICALE, CONFERENZE, WORKSHOP <br /> E CAMPING
           </h1>
         </span>
         {showTimer ? (

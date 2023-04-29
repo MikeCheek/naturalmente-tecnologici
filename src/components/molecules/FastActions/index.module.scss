@@ -45,3 +45,13 @@
     height: 80px;
   }
 }
+
+.timerWrap {
+  border-radius: 15px;
+  padding: 0 20px;
+  color: var(--nt-green);
+
+  h3 {
+    text-transform: uppercase;
+  }
+}

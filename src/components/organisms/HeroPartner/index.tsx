@@ -8,7 +8,6 @@ const Index = () => {
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
         <span>
-          <p className={styles.date}>11-13 Agosto 2023</p>
           <h1 className={styles.heading}>
             PARTNER
             <br />

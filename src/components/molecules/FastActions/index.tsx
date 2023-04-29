@@ -5,11 +5,12 @@ import Ticket from '../../../assets/ticket-1.svg';
 import Tickets from '../../../assets/ticket-2.svg';
 import Vip from '../../../assets/vip.svg';
 import Timer from '../Timer';
+import Heading from '../../atoms/Heading';
 
 const Index = () => {
   return (
     <div className={styles.wrap}>
-      <h2>ACQUISTA IL TUO BIGLIETTO PER L'EVENTO</h2>
+      <Heading text="ACQUISTA IL TUO BIGLIETTO<br/> PER L'EVENTO" />
       <div className={styles.cards}>
         <CardAction
           icon={<Ticket className={styles.icon} width={70} />}
@@ -33,8 +34,10 @@ const Index = () => {
           buttonHref=""
         />
       </div>
-      <h3>Affrettati! L'offerta scade tra</h3>
-      <Timer date={new Date('May 11, 2023 00:00:00')} shutOffTimer={() => {}} />
+      <div className={styles.timerWrap}>
+        <h3>Affrettati! L'offerta scade tra</h3>
+        <Timer date={new Date('May 11, 2023 00:00:00')} shutOffTimer={() => {}} />
+      </div>
     </div>
   );
 };
