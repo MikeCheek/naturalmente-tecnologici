@@ -6,7 +6,7 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
   const { metadata, featuredImage } = useSiteMetadata();
 
   const seo = {
-    title: title ? title + ' | ' + metadata.title : metadata.title,
+    title: title && pathname != '/' ? title + ' | ' + metadata.title : metadata.title,
     description: description || metadata.description,
     url: `${metadata.siteUrl}${pathname || ``}`,
     image: featuredImage?.childImageSharp?.gatsbyImageData as unknown as ImageDataType,
