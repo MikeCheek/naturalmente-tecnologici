@@ -11,6 +11,7 @@
   justify-content: space-evenly;
   position: fixed;
   width: 100%;
+  font-weight: 100;
   gap: 10px;
   z-index: 9999;
   padding: 30px 0;
@@ -64,6 +65,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 
 .options {
@@ -145,8 +147,9 @@
 
 .down {
   fill: var(--nt-orange);
-  transition: transform 200ms ease-in;
+  transition: transform 150ms ease-in;
   will-change: transform;
+  cursor: pointer;
 }
 
 .info {
