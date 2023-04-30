@@ -20,7 +20,14 @@
 .content {
   margin: 10px 40px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and (min-width: '768px') {
+    font-size: 0.8rem;
+  }
 }
 
 .buttons {
@@ -49,7 +56,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .close {
@@ -64,13 +71,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  padding-top: 20px;
+  width: 80%;
+  max-height: 50vh;
+  overflow-y: scroll;
+  @media screen and (min-width: '768px') {
+    width: 50%;
+  }
 }
 
 .option {
   display: flex;
   flex-direction: row;
-  min-width: 60%;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
@@ -86,6 +99,7 @@
   border-radius: 5px;
   font-weight: 800;
   cursor: pointer;
+  display: block;
 }
 
 .checkboxChecked {
@@ -105,7 +119,7 @@
 .functional {
   display: flex;
   flex-direction: row;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -120,5 +134,25 @@
     @media screen and (min-width: '768px') {
       width: fit-content;
     }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.down {
+  fill: var(--nt-orange);
+  transition: transform 200ms ease-in;
+  will-change: transform;
+}
+
+.info {
+  font-size: 0.7rem;
+  opacity: 0.9;
+  @media screen and (min-width: '768px') {
+    font-size: 0.8rem;
   }
 }
