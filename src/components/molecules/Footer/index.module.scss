@@ -9,44 +9,6 @@
   text-align: center;
 }
 
-.socialIcons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-  @media screen and (min-width: '768px') {
-    gap: 40px;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: auto;
-    @media screen and (min-width: '768px') {
-      width: 50px;
-    }
-  }
-
-  svg {
-    width: 30px;
-    height: auto;
-    @media screen and (min-width: '768px') {
-      width: 50px;
-    }
-
-    fill: var(--nt-white);
-    transition: fill 200ms ease;
-    cursor: pointer;
-
-    &:hover {
-      fill: var(--nt-orange);
-      transform: scale(1.05);
-    }
-  }
-}
-
 .logo {
   display: flex;
   height: auto;

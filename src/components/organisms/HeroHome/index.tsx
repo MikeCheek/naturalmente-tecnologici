@@ -5,6 +5,8 @@ import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina.svg';
 import Flower from '../../atoms/Flower';
 import FastActions from '../../molecules/FastActions';
+import Banner from '../../atoms/Banner';
+import SocialLinks from '../../molecules/SocialLinks';
 
 const Index = () => {
   return (
@@ -24,7 +26,13 @@ const Index = () => {
         <Colli width="1440" height="185" className={styles.colli} />
         <div className={styles.white}></div>
       </div>
-      <FastActions />
+      {/* <FastActions /> */}
+      <div className={styles.notReleased}>
+        <h2>I biglietti non sono ancora stati rilasciati</h2>
+        <h3>Seguici sui social per rimanere aggiornato</h3>
+        <SocialLinks green />
+        <p></p>
+      </div>
       <div className={styles.wrapHill}>
         <div className={styles.greenFlowers}>
           <Flower color="var(--nt-green)" />
