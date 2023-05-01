@@ -6,7 +6,12 @@ import CookieBannerProps from './index.types';
 import Down from '../../../assets/down.svg';
 
 const expires = 150;
-const cookieConsentName = 'cmplz_consented_services';
+
+const CookiesNames = {
+  functional: 'cmplz_functional',
+  statistics: 'cmplz_statistics',
+  marketing: 'cmplz_marketing',
+};
 
 const Index = ({ close }: CookieBannerProps) => {
   const options = { expires: expires, secure: true, sameSite: 'Lax' };
@@ -16,24 +21,14 @@ const Index = ({ close }: CookieBannerProps) => {
   const [statistics, setStatistics] = useState<string>('allow');
   const [info, setInfo] = useState<number>();
 
-  const baseSettings = () => {
-    Cookies.set('cmplz_banner-status', 'dismissed', options);
-    Cookies.set('cmplz_preferences', 'allow', options);
-    Cookies.set('cmplz_functional', 'allow', options);
-  };
-
-  const handleCloseBanner = () => {
-    baseSettings();
-    Cookies.set('cmplz_statistics', statistics, options);
-    Cookies.set('cmplz_marketing', marketing, options);
-    Cookies.set(cookieConsentName, 'allow', options);
-    close();
-  };
-
-  const handleAcceptCookie = () => {
-    baseSettings();
-    Cookies.set('cmplz_statistics', statistics, options);
-    Cookies.set('cmplz_marketing', marketing, options);
+  const handleAcceptCookie = (close: boolean = false) => {
+    Cookies.set(CookiesNames.functional, 'allow', options);
+    Cookies.set(CookiesNames.statistics, statistics, options);
+    Cookies.set(CookiesNames.marketing, marketing, options);
+    window.dataLayer.push({'event': 'update-consent'});
+    if (close === true) {
+      close();
+    }
   };
 
   useEffect(() => {
@@ -60,7 +55,7 @@ const Index = ({ close }: CookieBannerProps) => {
       onAccept={handleAcceptCookie}
       location="bottom"
       buttonText={showOptions ? 'Salva preferenze' : 'Accetta tutti'}
-      cookieName={cookieConsentName}
+      cookieName={CookiesNames.functional}
       expires={expires}
       disableStyles
       cookieSecurity={true}
@@ -70,7 +65,7 @@ const Index = ({ close }: CookieBannerProps) => {
       contentClasses={styles.content}
       overlay
     >
-      <X className={styles.close} width={20} height={20} onClick={handleCloseBanner} />
+      <X className={styles.close} width={20} height={20} onClick={() => handleAcceptCookie(true)} />
       Questo sito utilizza cookie tecnici per il proprio funzionamento e per l'erogazione dei relativi servizi; per tali
       cookie non è richiesto il tuo consenso. Potrebbero, inoltre, essere installati cookie analitici (propri e di terza
       parte) per comprendere meglio il tuo utilizzo di questo sito e cookie di profilazione (propri e di terze parti)

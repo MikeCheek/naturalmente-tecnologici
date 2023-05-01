@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    commit-message:
+      include: scope
+    directory: /    
+    reviewers:
+      - "bernardoforcillo"
+      - "MikeCheek"
+    schedule:
+      interval: daily
