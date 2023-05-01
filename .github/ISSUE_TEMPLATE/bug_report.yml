@@ -1,0 +1,35 @@
+name: 🐛 - Modulo segnalazione di bug
+description: Il seguente modulo è stato sviluppato per la segnalazione di un bug. Prima di compilare questo modulo ti invitiamo a controllare se il bug che stai per segnalare è gia stato invitato.
+title: "[BUG]: "
+labels: ["bug"]
+assignees: ["bernardoforcillo", "MikeCheek"]
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Descrizione del bug
+      description: Diteci quale bug avete riscontrato e cosa sarebbe dovuto accadere.
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Passaggi per la riproduzione del bug
+      description: Passi per riprodurre il comportamento. Scrivere i passaggi in forma di elenco, per poterci aiutare a replicare il bug. 
+      placeholder: Scrivere i passaggi in forma di elenco... 
+    validations:
+      required: true
+  - type: dropdown
+    id: versions
+    attributes:
+      label: Quale browser stai utilizzando?
+      multiple: false
+      options:
+       - Chrome
+       - Firefox
+       - Safari
+       - Opera
+       - Edge
+       - Browser basato su Chromium
+    validations:
+      required: true
