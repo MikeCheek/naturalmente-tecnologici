@@ -32,6 +32,8 @@ const Index = ({ close }: CookieBannerProps) => {
 
   const handleAcceptCookie = () => {
     baseSettings();
+
+    window.dataLayer.push({'event': 'update-consent'});
     Cookies.set('cmplz_statistics', statistics, options);
     Cookies.set('cmplz_marketing', marketing, options);
   };
