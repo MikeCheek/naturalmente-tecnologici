@@ -1,5 +1,6 @@
 import React from 'react';
 import * as styles from './index.module.scss';
+import Partners from '../../atoms/Partners';
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
         <br />
         Vogliamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
       </h4>
+      <Partners />
     </div>
   );
 };
