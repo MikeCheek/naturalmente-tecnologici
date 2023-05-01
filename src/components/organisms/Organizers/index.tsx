@@ -1,21 +1,32 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { StaticImage } from 'gatsby-plugin-image';
 import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
 import CardPerson from '../../molecules/CardPerson';
 import { organizers } from '../../../hooks/useInfo';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const Index = () => {
-  const image = (
-    <StaticImage
-      src="../../../images/crew/becci.jpg"
-      width={200}
-      height={250}
-      alt="Giuseppe Becci"
-      layout="constrained"
-    />
-  );
+  const data: Data = useStaticQuery(graphql`
+    query AssetsPhotos {
+      allFile(
+        filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, dir: { regex: "src/images/crew/" } }
+        sort: { name: ASC }
+      ) {
+        edges {
+          node {
+            id
+            name
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, height: 500, quality: 100)
+            }
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className={styles.wrap}>
       <Heading text="Comitato organizzativo" />
@@ -42,7 +53,18 @@ const Index = () => {
               role={item.role}
               website={item.website}
               linkedin={item.linkedin}
-              image={image}
+              image={
+                <GatsbyImage
+                  alt={item.name}
+                  image={data.allFile!.edges[item.image ?? 0].node.childImageSharp.gatsbyImageData}
+                  // width={200}
+
+                  loading="lazy"
+                  style={{ width: 200, height: 250 }}
+                  // height={250}
+                  objectPosition={'center top'}
+                />
+              }
               reversed={key % 2 == 0 ? true : false}
             />
           );

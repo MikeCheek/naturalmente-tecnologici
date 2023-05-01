@@ -28,11 +28,12 @@ Abbiamo scelto questo tema perché crediamo che lo sviluppo tecnologico necessit
           noMargin
           image={
             <StaticImage
-              src="../../../images/crew/becci.jpg"
+              src="../../../images/crew/0.jpg"
               width={200}
-              height={250}
+              height={250} 
+              placeholder="blurred"
               className={styles.becci}
-              alt="Giuseppe Becci"
+              alt="Giuseppe Becci" 
               layout="constrained"
             />
           }
