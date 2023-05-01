@@ -46,6 +46,7 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
     organizer: {
       '@type': 'Organization',
       name: 'Syskrack Giuseppe Porsia',
+      url: "https://www.syskrack.org/",
       sameAs: [
         "https://www.wikidata.org/wiki/Q116907424",
         "https://syskrack.org/",
@@ -53,8 +54,8 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
     },
     offers: { // TODO: Modificare ticket boilerplate
       "@type": "AggregateOffer",
-      "highPrice": "€119.99",
-      "lowPrice": "€119.99",
+      "highPrice": "119.99",
+      "lowPrice": "119.99",
       "offerCount": "2",
       "priceCurrency": "EUR",
       "offer": [
