@@ -33,7 +33,7 @@ const Index = ({ close }: CookieBannerProps) => {
   const handleAcceptCookie = () => {
     baseSettings();
 
-    window.dataLayer.push({'event': 'update-consent'});
+    window.dataLayer.push({'event': 'update-consent', "cmplz_marketing": marketing, "cmplz_statistics": statistics});
     Cookies.set('cmplz_statistics', statistics, options);
     Cookies.set('cmplz_marketing', marketing, options);
   };
