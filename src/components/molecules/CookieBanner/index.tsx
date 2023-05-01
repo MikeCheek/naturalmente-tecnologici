@@ -6,7 +6,12 @@ import CookieBannerProps from './index.types';
 import Down from '../../../assets/down.svg';
 
 const expires = 150;
-const cookieConsentName = 'cmplz_consented_services';
+
+const CookiesNames = {
+  functional: 'cmplz_functional',
+  statistics: 'cmplz_statistics',
+  marketing: 'cmplz_marketing',
+};
 
 const Index = ({ close }: CookieBannerProps) => {
   const options = { expires: expires, secure: true, sameSite: 'Lax' };
@@ -17,23 +22,21 @@ const Index = ({ close }: CookieBannerProps) => {
   const [info, setInfo] = useState<number>();
 
   const baseSettings = () => {
-    Cookies.set('cmplz_banner-status', 'dismissed', options);
-    Cookies.set('cmplz_preferences', 'allow', options);
-    Cookies.set('cmplz_functional', 'allow', options);
+    Cookies.set(CookiesNames.functional, 'allow', options);
   };
 
   const handleCloseBanner = () => {
     baseSettings();
-    Cookies.set('cmplz_statistics', statistics, options);
-    Cookies.set('cmplz_marketing', marketing, options);
-    Cookies.set(cookieConsentName, 'allow', options);
+    Cookies.set(CookiesNames.statistics, statistics, options);
+    Cookies.set(CookiesNames.marketing, marketing, options);
+    window.dataLayer.push({'event': 'update-consent'});
     close();
   };
 
   const handleAcceptCookie = () => {
     baseSettings();
-    Cookies.set('cmplz_statistics', statistics, options);
-    Cookies.set('cmplz_marketing', marketing, options);
+    Cookies.set(CookiesNames.statistics, statistics, options);
+    Cookies.set(CookiesNames.marketing, marketing, options);
     window.dataLayer.push({'event': 'update-consent'});
   };
 
@@ -61,7 +64,7 @@ const Index = ({ close }: CookieBannerProps) => {
       onAccept={handleAcceptCookie}
       location="bottom"
       buttonText={showOptions ? 'Salva preferenze' : 'Accetta tutti'}
-      cookieName={cookieConsentName}
+      cookieName={CookiesNames.functional}
       expires={expires}
       disableStyles
       cookieSecurity={true}
