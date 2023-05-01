@@ -21,23 +21,14 @@ const Index = ({ close }: CookieBannerProps) => {
   const [statistics, setStatistics] = useState<string>('allow');
   const [info, setInfo] = useState<number>();
 
-  const baseSettings = () => {
+  const handleAcceptCookie = (close: boolean = false) => {
     Cookies.set(CookiesNames.functional, 'allow', options);
-  };
-
-  const handleCloseBanner = () => {
-    baseSettings();
     Cookies.set(CookiesNames.statistics, statistics, options);
     Cookies.set(CookiesNames.marketing, marketing, options);
     window.dataLayer.push({'event': 'update-consent'});
-    close();
-  };
-
-  const handleAcceptCookie = () => {
-    baseSettings();
-    Cookies.set(CookiesNames.statistics, statistics, options);
-    Cookies.set(CookiesNames.marketing, marketing, options);
-    window.dataLayer.push({'event': 'update-consent'});
+    if (close === true) {
+      close();
+    }
   };
 
   useEffect(() => {
@@ -74,7 +65,7 @@ const Index = ({ close }: CookieBannerProps) => {
       contentClasses={styles.content}
       overlay
     >
-      <X className={styles.close} width={20} height={20} onClick={handleCloseBanner} />
+      <X className={styles.close} width={20} height={20} onClick={() => handleAcceptCookie(true)} />
       Questo sito utilizza cookie tecnici per il proprio funzionamento e per l'erogazione dei relativi servizi; per tali
       cookie non è richiesto il tuo consenso. Potrebbero, inoltre, essere installati cookie analitici (propri e di terza
       parte) per comprendere meglio il tuo utilizzo di questo sito e cookie di profilazione (propri e di terze parti)
