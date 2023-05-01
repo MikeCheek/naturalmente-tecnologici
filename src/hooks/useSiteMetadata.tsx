@@ -8,6 +8,7 @@ const useSiteMetadata = () => {
           title
           description
           siteUrl
+          keywords
         }
       }
       featuredImage: file(absolutePath: { glob: "**/src/images/logo-og.jpg" }) {

@@ -6,6 +6,7 @@ export type SeoProps = {
   children?: React.ReactElement;
   pathname?: string;
   structuredData?: boolean;
+  keywords?: string;
 };
 
 export type Meta = ConcatArray<PropertyMetaObj | NameMetaObj>;

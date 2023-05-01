@@ -7,7 +7,7 @@ import SocialLinks from '../SocialLinks';
 
 const Index = () => {
   return (
-    <div className={styles.wrap} id="footer">
+    <footer className={styles.wrap} id="footer">
       <Separator />
       <div>
         <Link className={styles.logo} to="#top">
@@ -16,7 +16,7 @@ const Index = () => {
         <p>11-13 Agosto 2023</p>
       </div>
       <SocialLinks />
-    </div>
+    </footer>
   );
 };
 

@@ -8,9 +8,10 @@ const url = `https://nt2023.gatsbyjs.io`;
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Naturalmente Tecnologici - NT`,
+    title: `Naturalmente Tecnologici 2023 - NT`,
     siteUrl: url,
     description: `L'evento si propone di essere occasione di ritrovo della community di Syskrack nonché strumento di disseminazione culturale sul territorio.`,
+    keywords: 'naturalmente, tecnologici, evento, futuro',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -46,6 +47,12 @@ const config: GatsbyConfig = {
         host: url,
         policy: [{ userAgent: '*', allow: '/' }],
         sitemap: url + '/sitemap-index.xml',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: url,
       },
     },
     {
