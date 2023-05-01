@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import CookieConsent, { Cookies, getCookieConsentValue } from 'react-cookie-consent';
+import React, { useState } from 'react';
+import CookieConsent, { Cookies } from 'react-cookie-consent';
 import * as styles from './index.module.scss';
 import X from '../../../assets/x.svg';
 import CookieBannerProps from './index.types';
@@ -21,31 +21,22 @@ const Index = ({ close }: CookieBannerProps) => {
   const [statistics, setStatistics] = useState<string>('allow');
   const [info, setInfo] = useState<number>();
 
-  const baseSettings = () => {
+  const handleAcceptCookie = (close?: () => void) => {
     Cookies.set(CookiesNames.functional, 'allow', options);
-  };
-
-  const handleCloseBanner = () => {
-    baseSettings();
-    Cookies.set(CookiesNames.statistics, statistics, options);
-    Cookies.set(CookiesNames.marketing, marketing, options);
-    window.dataLayer.push({'event': 'update-consent'});
-    close();
-  };
-
-  const handleAcceptCookie = () => {
-    baseSettings();
-    Cookies.set(CookiesNames.statistics, statistics, options);
-    Cookies.set(CookiesNames.marketing, marketing, options);
-    window.dataLayer.push({'event': 'update-consent'});
-  };
-
-  useEffect(() => {
-    const isConsent = getCookieConsentValue();
-    if (isConsent === 'true') {
-      handleAcceptCookie();
+    if (close) {
+      Cookies.set(CookiesNames.statistics, 'deny', options);
+      Cookies.set(CookiesNames.marketing, 'deny', options);
+    } else {
+      Cookies.set(CookiesNames.statistics, statistics, options);
+      Cookies.set(CookiesNames.marketing, marketing, options);
     }
-  }, []);
+    //@ts-ignore
+    window.dataLayer.push({ event: 'update-consent' });
+
+    if (close) {
+      close();
+    }
+  };
 
   const openOptions = () => {
     setMarketing('deny');
@@ -61,7 +52,7 @@ const Index = ({ close }: CookieBannerProps) => {
 
   return (
     <CookieConsent
-      onAccept={handleAcceptCookie}
+      onAccept={() => handleAcceptCookie()}
       location="bottom"
       buttonText={showOptions ? 'Salva preferenze' : 'Accetta tutti'}
       cookieName={CookiesNames.functional}
@@ -74,7 +65,7 @@ const Index = ({ close }: CookieBannerProps) => {
       contentClasses={styles.content}
       overlay
     >
-      <X className={styles.close} width={20} height={20} onClick={handleCloseBanner} />
+      <X className={styles.close} width={20} height={20} onClick={() => handleAcceptCookie(close)} />
       Questo sito utilizza cookie tecnici per il proprio funzionamento e per l'erogazione dei relativi servizi; per tali
       cookie non è richiesto il tuo consenso. Potrebbero, inoltre, essere installati cookie analitici (propri e di terza
       parte) per comprendere meglio il tuo utilizzo di questo sito e cookie di profilazione (propri e di terze parti)
