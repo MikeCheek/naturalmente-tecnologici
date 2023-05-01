@@ -2,17 +2,17 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import Collina from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
+import Handshake from '../../../assets/handshake.svg';
 
 const Index = () => {
   return (
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
-        <span>
-          <h1 className={styles.heading}>
-            PARTNER <br />
-            CHE HANNO RESO POSSIBILE TUTTO CIÒ
-          </h1>
-        </span>
+        <h1 className={styles.heading}>
+          PARTNER <br />
+          CHE HANNO RESO POSSIBILE TUTTO CIÒ
+        </h1>
+        <Handshake width={600} className={styles.svg} fill="var(--nt-dark-green)" />
       </div>
       <div className={styles.orangeFlowers}>
         <Flower color="var(--nt-orange)" />
