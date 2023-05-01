@@ -38,13 +38,13 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
     },
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    offers: tickets.map((ticket) => ({
-      '@type': 'Offer',
-      description: ticket.name,
-      url: seo.url,
-      price: ticket.price,
-      priceCurrency: 'EUR',
-    })),
+    // offers: tickets.map((ticket) => ({
+    //   '@type': 'Offer',
+    //   description: ticket.name,
+    //   url: seo.url,
+    //   price: ticket.price,
+    //   priceCurrency: 'EUR',
+    // })),
   };
 
   return (
