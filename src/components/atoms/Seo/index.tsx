@@ -1,6 +1,7 @@
 import React from 'react';
 import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../hooks/useSiteMetadata';
+import { tickets } from '../../../hooks/useInfo';
 
 const Index = ({ lang = 'it', title, description, pathname, children, structuredData = false }: SeoProps) => {
   const { metadata, featuredImage } = useSiteMetadata();
@@ -17,12 +18,11 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
     '@type': 'Event',
     name: metadata.title,
     url: seo.url,
-    organizer: 'Syskrack Giuseppe Porsia',
+    organizer: { name: 'Syskrack Giuseppe Porsia', '@type': 'Organization', url: 'https://www.syskrack.org' },
     description: seo.description,
-    startDate: '11/04/2023 09:00AM',
-    endDate: '13/04/2023 23:59PM',
+    startDate: '2023-04-11T09:00:00',
+    endDate: '2023-04-13T23:59:59',
     image: seo.image.images.fallback.src,
-    logo: metadata.siteUrl + '/favicon.ico',
     location: {
       '@type': 'Place',
       name: 'Grassano',
@@ -36,12 +36,15 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
         addressCountry: 'ITA',
       },
     },
-    offers: {
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    offers: tickets.map((ticket) => ({
       '@type': 'Offer',
-      description: '3 giorni di evento + Camping',
+      description: ticket.name,
       url: seo.url,
-      price: '€119.99',
-    },
+      price: ticket.price,
+      priceCurrency: 'EUR',
+    })),
   };
 
   return (
