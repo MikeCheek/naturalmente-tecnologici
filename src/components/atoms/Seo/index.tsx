@@ -1,8 +1,9 @@
 import React from 'react';
 import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../hooks/useSiteMetadata';
+import { tickets } from '../../../hooks/useInfo';
 
-const Index = ({ lang = 'it', title, description, pathname, children, structuredData = false }: SeoProps) => {
+const Index = ({ lang = 'it', title, description, pathname, children, structuredData = false, keywords }: SeoProps) => {
   const { metadata, featuredImage } = useSiteMetadata();
 
   const seo = {
@@ -10,6 +11,7 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
     description: description || metadata.description,
     url: `${metadata.siteUrl}${pathname || ``}`,
     image: featuredImage?.childImageSharp?.gatsbyImageData as unknown as ImageDataType,
+    keywords: keywords || metadata.keywords,
   };
 
   const microData = {
@@ -105,6 +107,7 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
       <html lang={lang} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
+      <meta name="keywords" content={seo.keywords} />
       <meta name="image" content={metadata.siteUrl + seo.image.images.fallback.src} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:locale" content={'it_IT'} />
