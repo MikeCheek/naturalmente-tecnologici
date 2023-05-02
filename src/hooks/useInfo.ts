@@ -10,7 +10,7 @@ export const organizers = [
     website: 'https://mbare.comm',
     image: 0,
   },
-  { name: 'Giuseppe Liuzzi', role: 'Mbare', website: 'https://mbare.comm' },
+  { name: 'Giuseppe Liuzzi', role: 'Mbare', website: 'https://mbare.comm', image: 1 },
   { name: 'Michele Pulvirenti', role: 'Developer', linkedin: 'https://www.linkedin.com', image: 2 },
   { name: 'Saro Calamaro', role: 'Mbarissimo' },
 ];

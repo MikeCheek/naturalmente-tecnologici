@@ -19,7 +19,7 @@ const Index = () => {
             id
             name
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, height: 500, quality: 100)
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 300, quality: 100)
             }
           }
         }
@@ -57,11 +57,8 @@ const Index = () => {
                 <GatsbyImage
                   alt={item.name}
                   image={data.allFile!.edges[item.image ?? 0].node.childImageSharp.gatsbyImageData}
-                  // width={200}
-
                   loading="lazy"
                   style={{ width: 200, height: 250 }}
-                  // height={250}
                   objectPosition={'center top'}
                 />
               }
