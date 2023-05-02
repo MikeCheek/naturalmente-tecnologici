@@ -1,17 +1,20 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Layout from '../components/organisms/Layout';
 import HeroAbout from '../components/organisms/HeroAbout';
-import Organizers from '../components/organisms/Organizers';
+import Loading from '../components/molecules/Loading';
 import Seo from '../components/atoms/Seo';
 import Syskrack from '../components/molecules/Syskrack';
 
 const ChiSiamo = () => {
+  const Organizers = lazy(() => import('../components/organisms/Organizers'));
   return (
     <Layout>
       <HeroAbout />
       <Syskrack />
-      <Organizers />
+      <Suspense fallback={<Loading />}>
+        <Organizers />
+      </Suspense>
     </Layout>
   );
 };

@@ -1,15 +1,19 @@
 import * as React from 'react';
 import Layout from '../components/organisms/Layout';
 import HeroHome from '../components/organisms/HeroHome';
+import Loading from '../components/molecules/Loading';
 import Seo from '../components/atoms/Seo';
-import NaturalmenteTecnologici from '../components/molecules/NaturalmenteTecnologici';
 import Theme from '../components/organisms/Theme';
+import { Suspense, lazy } from 'react';
 
 const IndexPage = () => {
+  const NaturalmenteTecnologici = lazy(() => import('../components/molecules/NaturalmenteTecnologici'));
   return (
     <Layout>
       <HeroHome />
-      <NaturalmenteTecnologici />
+      <Suspense fallback={<Loading />}>
+        <NaturalmenteTecnologici />
+      </Suspense>
       <Theme />
     </Layout>
   );
