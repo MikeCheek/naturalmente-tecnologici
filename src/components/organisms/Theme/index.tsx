@@ -30,7 +30,7 @@ Abbiamo scelto questo tema perché crediamo che lo sviluppo tecnologico necessit
           noMargin
           image={
             <StaticImage
-              src="../../../images/crew/0.jpg"
+              src="../../../images/crew/1.jpg"
               width={200}
               height={250}
               quality={80}
