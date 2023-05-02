@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px 40px;
+  margin-bottom: 40px;
   @media screen and (min-width: 768px) {
     flex: 1 1 180px;
   }
@@ -26,4 +27,13 @@
 .logo {
   height: fit-content;
   border-radius: 2px;
+  height: 130px;
+  width: auto;
+  img {
+    object-fit: contain !important;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 180px;
+  }
 }

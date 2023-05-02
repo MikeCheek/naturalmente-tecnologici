@@ -1,7 +1,7 @@
 .wrap {
   background-color: var(--nt-white);
   width: 100vw;
-  padding: 100px 0;
+  padding: 100px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,4 +15,12 @@
       margin: 0 15%;
     }
   }
+}
+
+.collina {
+  fill: var(--nt-green);
+  margin-top: 50px;
+  margin-bottom: -1px;
+  width: 100vw;
+  height: auto;
 }

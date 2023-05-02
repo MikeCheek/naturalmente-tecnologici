@@ -1,6 +1,7 @@
 import React from 'react';
 import * as styles from './index.module.scss';
 import Partners from '../../atoms/Partners';
+import Collina from '../../../assets/collina.svg';
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
         Vogliamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
       </h4>
       <Partners />
+      <Collina width="1440" className={styles.collina} />
     </div>
   );
 };

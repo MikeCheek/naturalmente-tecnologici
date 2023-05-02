@@ -1,9 +1,9 @@
 import React from 'react';
 import * as styles from './index.module.scss';
-import { StaticImage } from 'gatsby-plugin-image';
 import Flower from '../../atoms/Flower';
 import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina-lato.svg';
+import Syskrack from '../../../assets/syskrack.svg';
 
 const Index = () => {
   return (
@@ -20,13 +20,7 @@ const Index = () => {
           target="_blank"
           title="Syskrack"
         >
-          <StaticImage
-            alt="Logo Syskrack"
-            src="../../../images/syskrack-logo.png"
-            layout="constrained"
-            width={300}
-            className={styles.logo}
-          />
+          <Syskrack width={300} className={styles.logo} />
         </a>
         <div className={styles.svgWrap}>
           <div className={styles.colliWrap}>
