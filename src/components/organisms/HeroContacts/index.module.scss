@@ -112,7 +112,7 @@
   background-color: var(--nt-white);
   margin-top: -1px;
   @media screen and (min-width: '768px') {
-    height: 130px;
+    height: 160px;
   }
 }
 
@@ -157,9 +157,9 @@
     }
   }
   :nth-child(4) {
-    transform: translateY(-10px);
+    transform: translateY(10px);
     @media screen and (min-width: '768px') {
-      transform: translateY(-20px);
+      transform: translateY(30px);
     }
   }
 

@@ -10,7 +10,7 @@ const Index = () => {
       <div className={styles.headWrap}>
         <h1 className={styles.heading}>
           PARTNER <br />
-          CHE HANNO RESO POSSIBILE TUTTO CIÒ
+          CHE HANNO VOGLIA DI INVESTIRE NELLA CULTURA E NELLO SVILUPPO DELLE PERSONE
         </h1>
         <Handshake width={600} className={styles.svg} fill="var(--nt-dark-green)" />
       </div>

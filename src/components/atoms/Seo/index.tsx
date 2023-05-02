@@ -3,7 +3,16 @@ import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../hooks/useSiteMetadata';
 import { tickets } from '../../../hooks/useInfo';
 
-const Index = ({ lang = 'it', title, description, pathname, children, structuredData = false, keywords }: SeoProps) => {
+const Index = ({
+  lang = 'it',
+  title,
+  description,
+  pathname,
+  children,
+  structuredData = false,
+  keywords,
+  noIndex,
+}: SeoProps) => {
   const { metadata, featuredImage } = useSiteMetadata();
 
   const seo = {
@@ -114,6 +123,7 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
       <meta name="google-site-verification" content="6CEt2yawsIZqWfyMh9IkmQa2U75Qu41kO92hyIV0R0M" />
 
       {structuredData ? <script type="application/ld+json">{JSON.stringify(microData)}</script> : <></>}
+      {noIndex ? <meta name="robots" content="noindex,nofollow" /> : <></>}
 
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
       {children}

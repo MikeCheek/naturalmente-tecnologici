@@ -2,7 +2,7 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import Flower from '../../atoms/Flower';
 import Colli from '../../../assets/colli.svg';
-import Collina from '../../../assets/collina-lato.svg';
+import Collina from '../../../assets/collina.svg';
 import Speaking from '../../../assets/speaking.svg';
 
 const Index = () => {
@@ -16,7 +16,7 @@ const Index = () => {
         <Speaking width={600} className={styles.speaking} fill="var(--nt-dark-green)" />
         <div className={styles.svgWrap}>
           <div className={styles.collinaWrap}>
-            <Collina width="1440" height="129" className={styles.collina} fill="var(--nt-white)" />
+            <Collina width="1440" className={styles.collina} fill="var(--nt-white)" />
             <div className={styles.white}></div>
           </div>
 

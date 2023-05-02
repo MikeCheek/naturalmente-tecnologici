@@ -4,15 +4,32 @@ import Vip from '../assets/vip.svg';
 
 export const organizers = [
   {
-    name: 'Giuseppe Becci',
-    role: 'Organizer',
-    linkedin: 'https://www.linkedin.com',
-    website: 'https://mbare.comm',
+    name: 'Davide Saladino',
+    role: 'President',
     image: 0,
   },
-  { name: 'Giuseppe Liuzzi', role: 'Mbare', website: 'https://mbare.comm', image: 1 },
-  { name: 'Michele Pulvirenti', role: 'Developer', linkedin: 'https://www.linkedin.com', image: 2 },
-  { name: 'Saro Calamaro', role: 'Mbarissimo' },
+  {
+    name: 'Giuseppe Becci',
+    role: 'Project Manager',
+    image: 1,
+  },
+  // { name: 'Giuseppe Liuzzi', role: 'Community Manager e CTO' },
+  {
+    name: 'Michele Pulvirenti',
+    role: 'Developer',
+    linkedin: 'https://www.linkedin.com/in/michele-pulvirenti/',
+    website: 'https://michelepulvirenti.vercel.app',
+    image: 3,
+  },
+  // {
+  //   name: 'Bernardo Forcillo',
+  //   role: 'Developer',
+  //   linkedin: 'https://www.linkedin.com/in/bernardoforcillo/',
+  //   website: 'https://bernardoforcillo.com/',
+  // },
+  // { name: 'Teodosio Santagata', role: 'Stage Manager' },
+  // { name: 'Giovanni Restaino', role: 'Stage Manager' },
+  // { name: 'Marouan Elkoura', role: 'Sponsor Specialist' },
 ];
 
 export const tickets = [

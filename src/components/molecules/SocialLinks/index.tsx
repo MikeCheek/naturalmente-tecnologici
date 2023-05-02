@@ -11,7 +11,7 @@ const Index = ({ green }: SocialLinksProps) => {
   return (
     <div className={`${styles.socialIcons} ${green ? styles.wrapGreen : ''}`}>
       <a
-        href="https://www.instagram.com/syskrack_giuseppeporsia/"
+        href="https://www.instagram.com/naturalmente_tecnologici/"
         rel="noopener noreferrer"
         title="Visita la nostra pagina Instagram"
         target="_blank"

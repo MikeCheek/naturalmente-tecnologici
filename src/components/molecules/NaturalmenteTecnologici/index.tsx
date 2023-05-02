@@ -8,21 +8,26 @@ import Heading from '../../atoms/Heading';
 
 const info: SectionProps[] = [
   {
-    title: "Che cos'è?",
-    text: `Naturalmente Tecnologici è un evento che si propone di essere occasione di ritrovo della community di Syskrack nonché strumento di disseminazione culturale sul territorio.<br/>
-Crediamo fortemente nella concreta possibilità di cambiare il territorio cambiando le menti delle persone, sempre con particolare attenzione rivolta a quelle più giovani.`,
+    title: "Cos'è?",
+    text: `Un festival, un evento di 3 giorni, un momento di incontro e di contaminazione della sempre crescente community di Syskrack (e non solo).`,
     Svg: Bug,
     svgStyle: { transform: 'rotate(4.72deg)' },
   },
   {
     title: "Come è strutturato l'evento?",
-    text: `Tre giorni di campeggio, conferenze, laboratori, formazione informale ed esperienze di autocoscienza e musica.<br/>
-  Persone di tutte le età si incontreranno a Grassano (MT) per immaginare nuovi orizzonti per uno sviluppo tecnologico etico e sostenibile dal punto di vista sociale ed ambientale.`,
+    text: `3 giorni immersi in una location mozzafiato, selvaggia, tra le colline materane tra camping, laboratori, conferenze, esperienze, festival e incontro tra persone di ogni dove.
+    <br/><br/>
+    I partecipanti, gli abitanti del luogo e le community si scambieranno idee, visioni ed esperienze.`,
     Svg: Insects,
   },
   {
     title: 'Perchè lo facciamo?',
-    text: `Per noi è particolarmente importante questo evento perché riponiamo in esso la speranza di riuscire a creare qualcosa che possa lasciare il segno, soprattutto a livello territoriale, cercando di catalizzare le energie di tanti ragazzi e ragazze che si sono sparse in tutta Italia rifiutando la filosofia secondo cui “le cose giù sono più difficili e non si può fare niente”.`,
+    text: `Crediamo nel potenziale della nostra terra.<br/>
+    Vogliamo invertire il trend che la vede spopolarsi giorno dopo giorno e creare un circolo virtuoso per attrarre menti innovatrici e portare nuova linfa ad un territorio spesso considerato dormiente.
+    <br/><br/>
+    Vogliamo offrire opportunità ai nomadi digitali e agli aspiranti tali promuovendo un approccio di “south-working” consapevole, equilibrato e socialmente innovativo.
+    <br/><br/>    
+    L'obiettivo è indagare nuovi orizzonti dello sviluppo tecnologico etici e sostenibili dal punto di vista sociale ed ambientale.`,
     Svg: Bug,
     svgStyle: { transform: 'rotate(94.72deg)' },
   },

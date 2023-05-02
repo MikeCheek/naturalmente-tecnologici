@@ -6,7 +6,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { organizers } from '../../../hooks/useInfo';
 
 const Index = () => {
-  const organizer = organizers[0];
+  const organizer = organizers[1];
 
   return (
     <>

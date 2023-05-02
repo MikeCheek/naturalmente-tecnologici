@@ -43,8 +43,8 @@ const Index = ({ opened, onClick }: NavigationProps) => {
         <nav className={styles.linksMobile}>
           {linkElements}
           <a
-            title="Iscriviti a NT 2023"
-            href=""
+            title="Iscriviti alla Newsletter dell'associazione"
+            href="https://static.mailerlite.com/webforms/submit/m7k6g6"
             rel="noopener noreferrer"
             target="_blank"
             className={styles.buttonMobile}
@@ -55,7 +55,13 @@ const Index = ({ opened, onClick }: NavigationProps) => {
       </div>
       <div className={styles.wrapDesktop}>
         <nav className={styles.links}>{linkElements}</nav>
-        <a title="Iscriviti a NT 2023" href="" rel="noopener noreferrer" target="_blank" className={styles.button}>
+        <a
+          title="Iscriviti alla Newsletter dell'associazione"
+          href="https://static.mailerlite.com/webforms/submit/m7k6g6"
+          rel="noopener noreferrer"
+          target="_blank"
+          className={styles.button}
+        >
           ISCRIVITI
         </a>
       </div>

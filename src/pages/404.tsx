@@ -18,6 +18,6 @@ const NotFoundPage = () => {
   );
 };
 
-export const Head = () => <Seo title="404" description="Error 404, Syskrack not found" />;
+export const Head = () => <Seo title="404" description="Error 404, Syskrack not found" noIndex />;
 
 export default NotFoundPage;

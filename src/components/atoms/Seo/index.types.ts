@@ -7,6 +7,7 @@ export type SeoProps = {
   pathname?: string;
   structuredData?: boolean;
   keywords?: string;
+  noIndex?: boolean;
 };
 
 export type Meta = ConcatArray<PropertyMetaObj | NameMetaObj>;
