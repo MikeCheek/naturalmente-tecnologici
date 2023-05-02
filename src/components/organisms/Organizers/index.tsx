@@ -19,7 +19,7 @@ const Index = () => {
             id
             name
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 300, quality: 100)
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 300, quality: 80)
             }
           }
         }

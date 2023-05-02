@@ -33,6 +33,7 @@ Abbiamo scelto questo tema perché crediamo che lo sviluppo tecnologico necessit
               src="../../../images/crew/0.jpg"
               width={200}
               height={250}
+              quality={80}
               placeholder="blurred"
               className={styles.becci}
               alt="Giuseppe Becci"
