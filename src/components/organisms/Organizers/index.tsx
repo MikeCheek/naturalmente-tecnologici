@@ -58,7 +58,7 @@ const Index = () => {
                   alt={item.name}
                   image={data.allFile!.edges[item.image ?? 0].node.childImageSharp.gatsbyImageData}
                   loading="lazy"
-                  style={{ width: 200, height: 250 }}
+                  className={styles.image}
                   objectPosition={'center top'}
                 />
               }

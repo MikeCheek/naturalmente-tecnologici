@@ -38,6 +38,12 @@
   svg {
     border-radius: 5px;
     fill: var(--nt-dark-green);
+    width: 20px;
+    height: 20px;
+    @media screen and (min-width: '768px') {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
