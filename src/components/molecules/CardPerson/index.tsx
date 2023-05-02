@@ -9,7 +9,7 @@ const Index = ({ image, name, role, reversed = false, website, linkedin, noMargi
   return (
     <div className={styles.wrap} style={noMargin ? { marginLeft: 0, marginRight: 0 } : {}}>
       {website || linkedin ? (
-        <div className={styles.links}>
+        <div className={reversed ? styles.linksReversed : styles.links}>
           {linkedin ? (
             <a title={'Profilo Linkedin ' + name} href={linkedin} target="_blank">
               <Linkedin width={30} height={30} />

@@ -8,12 +8,17 @@ const Index = ({ image, text, title, buttonHref, buttonText, reversed = false }:
     <div className={reversed ? styles.wrapReversed : styles.wrap}>
       <div className={reversed ? styles.textReversed : styles.text}>
         <h2>{title}</h2>
+        <CardImage onlyMobile reversed={reversed}>
+          {image}
+        </CardImage>
         <p dangerouslySetInnerHTML={{ __html: text }}></p>
         <a href={buttonHref} title={buttonText} className={styles.button}>
           {buttonText}
         </a>
       </div>
-      <CardImage reversed={reversed}>{image}</CardImage>
+      <CardImage onlyDesktop reversed={reversed}>
+        {image}
+      </CardImage>
     </div>
   );
 };

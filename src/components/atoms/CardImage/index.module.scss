@@ -25,3 +25,16 @@
   @extend .orange;
   transform: rotate(10deg);
 }
+
+.onlyMobile {
+  margin: 10%;
+  @media screen and (min-width: '768px') {
+    display: none;
+  }
+}
+
+.onlyDesktop {
+  @media screen and (max-width: '767px') {
+    display: none;
+  }
+}
