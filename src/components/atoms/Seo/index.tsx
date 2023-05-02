@@ -15,37 +15,91 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
   };
 
   const microData = {
-    '@context': 'https://www.schema.org',
-    '@type': 'Event',
-    name: metadata.title,
-    url: seo.url,
-    organizer: { name: 'Syskrack Giuseppe Porsia', '@type': 'Organization', url: 'https://www.syskrack.org' },
-    description: seo.description,
-    startDate: '2023-04-11T09:00:00+02:00',
-    endDate: '2023-04-13T23:59:59+02:00',
-    image: seo.image.images.fallback.src,
-    location: {
-      '@type': 'Place',
-      name: 'Grassano',
-      sameAs: seo.url,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Confino',
-        addressLocality: 'Grassano',
-        addressRegion: 'MT',
-        postalCode: '75014',
-        addressCountry: 'ITA',
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        url: seo.url,
+        name: seo.title,
+        description: seo.description,
+        image: [seo.image.images.fallback.src],
       },
-    },
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    // offers: tickets.map((ticket) => ({
-    //   '@type': 'Offer',
-    //   description: ticket.name,
-    //   url: seo.url,
-    //   price: ticket.price,
-    //   priceCurrency: 'EUR',
-    // })),
+      {
+        '@context': 'https://www.schema.org',
+        '@type': 'Event',
+        name: "Naturalmente Tecnologici",
+        url: "https://nt.syskrack.org/",
+        description: "(Ri)-prendiamoci il futuro. Ragionamenti complessi sull'accelerazione dei nostri tempi.",
+        startDate: '2023-08-11T09:00:00.000Z',
+        endDate: '2023-08-13T23:59:59.999Z',
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        isAccessibleForFree: false,
+        inLanguage: 'IT',
+        logo: metadata.siteUrl + '/favicon.ico',
+        location: {
+          '@type': 'Place',
+          name: 'Tenute Bronzino',
+          url: "https://www.tenutabronzino.it/",
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Contrada, Via S. Donato',
+            addressLocality: 'Grottole',
+            addressRegion: 'MT',
+            postalCode: '75010',
+            addressCountry: 'Italy',
+          },
+          sameAs: [
+            "http://www.tenutabronzino.it/",
+            "https://goo.gl/maps/rs5PWEJgcMtwMRBNA"
+          ],
+        },
+        organizer: {
+          '@type': 'Organization',
+          name: 'Syskrack Giuseppe Porsia',
+          url: "https://www.syskrack.org/",
+          sameAs: [
+            "https://www.wikidata.org/wiki/Q116907424",
+            "https://syskrack.org/",
+          ],
+        },
+        offers: { // TODO: Modificare ticket boilerplate
+          "@type": "AggregateOffer",
+          "highPrice": "119.99",
+          "lowPrice": "119.99",
+          "offerCount": "2",
+          "priceCurrency": "EUR",
+          "offer": [
+            { 
+              "@type": "Offer",
+              "url": "https://nt.syskrack.org/", // link landing acquisto o form
+              "priceCurrency": "EUR",
+              "price": "119.90",
+              "availability": "https://schema.org/PreOrder", 
+              "validFrom": "2023-08-11T09:00:00.000Z",
+              "validThrough": "2023-08-13T23:59:59.999Z",
+              "name": "3 giorni di evento + Camping",
+              "description": "3 giorni di evento + Camping",
+            },
+            { 
+              "@type": "Offer",
+              "url": "https://nt.syskrack.org/",
+              "priceCurrency": "EUR",
+              "price": "119.90",
+              "availability": "https://schema.org/PreOrder",
+              "validFrom": "2023-08-11T09:00:00.000Z",
+              "validThrough": "2023-08-13T23:59:59.999Z",
+              "name": "3 giorni di evento + Camping",
+              "description": "3 giorni di evento + Camping",
+            } 
+          ],
+        },
+        sameAs: [
+          "https://www.wikidata.org/wiki/Q117883453", // INFO: (Link evento [2023] aggiunto su Wikidata)
+          "https://www.wikidata.org/wiki/Q117881465", // INFO: (Link evento aggiunto su Wikidata)
+        ]
+      }
+    ],
   };
 
   return (
