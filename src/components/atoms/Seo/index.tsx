@@ -18,7 +18,7 @@ const Index = ({ lang = 'it', title, description, pathname, children, structured
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'WebPage',
+        '@type': 'WebSite',
         url: seo.url,
         name: seo.title,
         description: seo.description,
