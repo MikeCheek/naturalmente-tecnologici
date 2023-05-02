@@ -40,7 +40,7 @@ const Index = ({ opened, onClick }: NavigationProps) => {
         className={styles.wrapMobile}
         style={opened ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(0, -100%)', opacity: 0 }}
       >
-        <div className={styles.linksMobile}>
+        <nav className={styles.linksMobile}>
           {linkElements}
           <a
             title="Iscriviti a NT 2023"
@@ -51,10 +51,10 @@ const Index = ({ opened, onClick }: NavigationProps) => {
           >
             ISCRIVITI
           </a>
-        </div>
+        </nav>
       </div>
       <div className={styles.wrapDesktop}>
-        <div className={styles.links}>{linkElements}</div>
+        <nav className={styles.links}>{linkElements}</nav>
         <a title="Iscriviti a NT 2023" href="" rel="noopener noreferrer" target="_blank" className={styles.button}>
           ISCRIVITI
         </a>

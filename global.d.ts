@@ -1,5 +1,3 @@
-declare module '*.scss';
-
 declare module '*.svg' {
   import React from 'react';
 
@@ -21,3 +19,13 @@ declare type ImageDataType = {
   width: number;
   height: number;
 };
+
+declare type Edge = {
+  node: { childImageSharp: { gatsbyImageData: IGatsbyImageData } };
+};
+
+declare type Data = {
+  allFile?: { edges: Edge[] };
+};
+
+declare module '*.scss';

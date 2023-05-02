@@ -43,7 +43,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div
+    <header
       className={`${styles.wrap} ${show ? styles.show : styles.hide}`}
       style={shadow ? { boxShadow: '0 0 20px 0 rgb(0, 0, 0, 0.25)' } : {}}
     >
@@ -60,7 +60,7 @@ const Index = () => {
           <Hamburger width="28" height="20" />
         </span>
       )}
-    </div>
+    </header>
   );
 };
 
