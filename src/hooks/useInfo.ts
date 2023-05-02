@@ -20,17 +20,20 @@ export const tickets = [
     icon: Ticket,
     name: 'Biglietto giornaliero',
     price: 25,
+    url: 'https://syskrack.org',
   },
 
   {
     icon: Tickets,
     name: 'Biglietto 3 giorni',
     price: 70,
+    url: 'https://syskrack.org',
   },
   {
     icon: Vip,
     name: 'Biglietto Super Show',
     price: 30,
+    url: 'https://syskrack.org',
   },
 ];
 
