@@ -18,7 +18,7 @@ const Index = () => {
               text={`<span class='cuttedText'>${ticket.price}€</span><br/>${ticket.price - discount}€`}
               description={ticket.name}
               buttonText="ACQUISTA"
-              buttonHref=""
+              buttonHref={ticket.url}
             />
           );
         })}
