@@ -8,6 +8,7 @@ export type SeoProps = {
   structuredData?: boolean;
   keywords?: string;
   noIndex?: boolean;
+  images?: string[];
 };
 
 export type Meta = ConcatArray<PropertyMetaObj | NameMetaObj>;

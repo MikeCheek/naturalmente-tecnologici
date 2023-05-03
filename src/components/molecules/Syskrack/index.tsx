@@ -8,7 +8,7 @@ const Index = () => {
     <StaticImage
       quality={80}
       alt="Syskrack foto 1"
-      src="../../../images/camp0.jpg"
+      src="../../../images/syskrack/camp0.jpg"
       layout="constrained"
       width={700}
       height={500}
@@ -19,7 +19,7 @@ const Index = () => {
     <StaticImage
       quality={80}
       alt="Syskrack foto 2"
-      src="../../../images/camp1.jpg"
+      src="../../../images/syskrack/camp1.jpg"
       layout="constrained"
       width={700}
       height={500}

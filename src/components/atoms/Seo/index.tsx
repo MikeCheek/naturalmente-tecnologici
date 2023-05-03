@@ -12,6 +12,7 @@ const Index = ({
   structuredData = false,
   keywords,
   noIndex,
+  images = [],
 }: SeoProps) => {
   const { metadata, featuredImage } = useSiteMetadata();
 
@@ -31,7 +32,8 @@ const Index = ({
         url: seo.url,
         name: seo.title,
         description: seo.description,
-        image: [seo.image.images.fallback.src],
+        image: [metadata.siteUrl + seo.image.images.fallback.src, ...images.map((image) => metadata.siteUrl + image)],
+        inLanguage: 'IT',
       },
       {
         '@context': 'https://www.schema.org',
