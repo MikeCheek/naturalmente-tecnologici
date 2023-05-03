@@ -53,7 +53,7 @@ const Index = () => {
       <Navigation opened={opened} onClick={() => setOpened(false)} />
       {opened ? (
         <span onClick={() => setOpened(false)} className={styles.menuIcon}>
-          <X width="25" height="25" />
+          <X width="25" height="25" fill="var(--nt-green)" />
         </span>
       ) : (
         <span onClick={() => setOpened(true)} className={styles.menuIcon}>
