@@ -3,23 +3,23 @@ import * as styles from './index.module.scss';
 import CardImage from '../../atoms/CardImage';
 import { CardPersonProps } from './index.types';
 import Linkedin from '../../../assets/social/linkedin.svg';
-import Website from '../../../assets/social/internet.svg';
+import Website from '../../../assets/link.svg';
 
 const Index = ({ image, name, role, reversed = false, website, linkedin, noMargin = false }: CardPersonProps) => {
   return (
     <div className={styles.wrap} style={noMargin ? { marginLeft: 0, marginRight: 0 } : {}}>
       {website || linkedin ? (
         <div className={styles.links}>
-          {linkedin ? (
-            <a title={'Profilo Linkedin ' + name} href={linkedin} target="_blank">
-              <Linkedin width={30} height={30} />
+          {website ? (
+            <a title={'Sito web ' + name} href={website} target="_blank">
+              <Website width={30} height={30} />
             </a>
           ) : (
             <></>
           )}
-          {website ? (
-            <a title={'Sito web ' + name} href={website} target="_blank">
-              <Website width={30} height={30} />
+          {linkedin ? (
+            <a title={'Profilo Linkedin ' + name} href={linkedin} target="_blank">
+              <Linkedin width={30} height={30} />
             </a>
           ) : (
             <></>
