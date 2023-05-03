@@ -8,10 +8,10 @@ const Index = () => {
     <div className={styles.wrap}>
       <Heading text="Loading" />
       <div className={styles.insects}>
-        <Insect width={40} height={40} style={{ top: 0, left: '50%', transform: 'translateX(-50%) rotate(130deg)' }} />
+        <Insect width={60} height={60} style={{ top: 0, left: '50%', transform: 'translateX(-50%) rotate(130deg)' }} />
         <Insect
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           style={{ bottom: 0, left: '50%', transform: 'translateX(-50%) rotate(310deg)' }}
         />
       </div>

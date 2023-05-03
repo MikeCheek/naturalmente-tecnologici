@@ -4,18 +4,20 @@ import Cloud from '../../atoms/Cloud';
 import CardPerson from '../../molecules/CardPerson';
 import { StaticImage } from 'gatsby-plugin-image';
 import { organizers } from '../../../hooks/useInfo';
+import Heading from '../../atoms/Heading';
 
 const Index = () => {
   const organizer = organizers[1];
 
   return (
     <>
+      <Heading text="Tema" />
       <div className={styles.wrap}>
-        <h2>
+        <h3>
           RIPRENDIAMOCI IL FUTURO.
           <br />
           RAGIONAMENTI COMPLESSI SULL'ACCELERAZIONE DEI NOSTRI TEMPI
-        </h2>
+        </h3>
       </div>
       <div className={styles.theme}>
         <Cloud
@@ -30,7 +32,7 @@ Abbiamo scelto questo tema perché crediamo che lo sviluppo tecnologico necessit
           noMargin
           image={
             <StaticImage
-              src="../../../images/crew/1.jpg"
+              src="../../../images/crew/becci.jpg"
               width={200}
               height={250}
               quality={80}

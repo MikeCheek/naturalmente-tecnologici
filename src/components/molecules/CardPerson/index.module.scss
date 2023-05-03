@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   margin: 40px auto;
-  width: fit-content;
+  width: min-content;
   position: relative;
   transition: filter 200ms ease;
   will-change: filter;
@@ -26,7 +26,7 @@
   opacity: 0.2;
   position: absolute;
   top: 30px;
-  right: 35px;
+  right: 30px;
   z-index: 5;
   display: flex;
   flex-direction: row;
@@ -34,10 +34,6 @@
 
   transition: opacity 200ms ease;
   will-change: opacity;
-
-  @media screen and (min-width: '768px') {
-    right: 30px;
-  }
 
   svg {
     border-radius: 5px;
@@ -48,14 +44,6 @@
       width: 30px;
       height: 30px;
     }
-  }
-}
-
-.linksReversed {
-  @extend .links;
-  right: 40px;
-  @media screen and (min-width: '768px') {
-    right: 30px;
   }
 }
 
@@ -72,5 +60,6 @@
   font-size: 1.2rem;
   @media screen and (min-width: '768px') {
     font-size: 1.4rem;
+    width: max-content;
   }
 }

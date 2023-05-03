@@ -9,7 +9,7 @@ const Index = ({ image, name, role, reversed = false, website, linkedin, noMargi
   return (
     <div className={styles.wrap} style={noMargin ? { marginLeft: 0, marginRight: 0 } : {}}>
       {website || linkedin ? (
-        <div className={reversed ? styles.linksReversed : styles.links}>
+        <div className={styles.links}>
           {linkedin ? (
             <a title={'Profilo Linkedin ' + name} href={linkedin} target="_blank">
               <Linkedin width={30} height={30} />
@@ -30,7 +30,7 @@ const Index = ({ image, name, role, reversed = false, website, linkedin, noMargi
       )}
       <CardImage reversed={reversed}>{image}</CardImage>
       <p className={styles.name}>{name}</p>
-      <p className={styles.role}>{role}</p>
+      <p className={styles.role} dangerouslySetInnerHTML={{ __html: role }}></p>
     </div>
   );
 };

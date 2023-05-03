@@ -5,20 +5,33 @@ import Heading from '../../atoms/Heading';
 const Index = () => {
   return (
     <div className={styles.wrap}>
-      <Heading text="Facci sentire la tua voce!" />
-      <p>
-        Hai un'idea?
-        <br />
-        Vuoi proporre una collaborazione?
-        <br />
-        Vuoi saperne di più sull'evento?
-      </p>
-      <p>
-        Scrivici su{' '}
-        <a title="Scrivici una mail" href="mailto:direttivo@syskrack.org">
-          direttivo@syskrack.org
-        </a>
-      </p>
+      <div className={styles.section}>
+        <Heading text="Facci sentire la tua voce!" />
+        <p>
+          Hai un'idea?
+          <br />
+          Vuoi proporre una collaborazione?
+          <br />
+          Vuoi saperne di più sull'evento?
+        </p>
+        <p>
+          Scrivici a{' '}
+          <a title="Scrivici una mail" href="mailto:direttivo@syskrack.org">
+            direttivo@syskrack.org
+          </a>
+        </p>
+      </div>
+      <div className={styles.section}>
+        <Heading text="Newsletter" />
+        <p>
+          Ti sei iscritto alla nostra newsletter?
+          <br />
+          I biglietti dell'evento non sono ancora usciti.
+          <br />
+          <br />
+          Iscriviti alla nostra newsletter per non perderti l'Early Bird!
+        </p>
+      </div>
     </div>
   );
 };

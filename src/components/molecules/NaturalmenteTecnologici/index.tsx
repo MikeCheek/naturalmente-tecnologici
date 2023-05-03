@@ -9,7 +9,8 @@ import Heading from '../../atoms/Heading';
 const info: SectionProps[] = [
   {
     title: "Cos'è?",
-    text: `Un festival, un evento di 3 giorni, un momento di incontro e di contaminazione della sempre crescente community di Syskrack (e non solo).`,
+    text: `Un festival alla sua seconda edizione.<br/>
+    Un evento di 3 giorni, un momento di incontro e di contaminazione della community Syskrack<br/>(in continua espansione).`,
     Svg: Bug,
     svgStyle: { transform: 'rotate(4.72deg)' },
   },
@@ -22,34 +23,43 @@ const info: SectionProps[] = [
   },
   {
     title: 'Perchè lo facciamo?',
-    text: `Crediamo nel potenziale della nostra terra.<br/>
-    Vogliamo invertire il trend che la vede spopolarsi giorno dopo giorno e creare un circolo virtuoso per attrarre menti innovatrici e portare nuova linfa ad un territorio spesso considerato dormiente.
+    text: `L'obiettivo è indagare nuovi orizzonti dello sviluppo tecnologico, etici e sostenibili dal punto di vista sociale ed ambientale.
     <br/><br/>
-    Vogliamo offrire opportunità ai nomadi digitali e agli aspiranti tali promuovendo un approccio di “south-working” consapevole, equilibrato e socialmente innovativo.
-    <br/><br/>    
-    L'obiettivo è indagare nuovi orizzonti dello sviluppo tecnologico etici e sostenibili dal punto di vista sociale ed ambientale.`,
+    Vogliamo invertire il trend che la vede spopolarsi giorno dopo giorno e creare un
+circolo virtuoso per attrarre menti innovatrici e portare nuova linfa ad un territorio spesso
+considerato dormiente.`,
     Svg: Bug,
     svgStyle: { transform: 'rotate(94.72deg)' },
+  },
+  {
+    title: 'La nostra terra',
+    text: `Crediamo nel potenziale della nostra terra.
+    <br/><br/>    
+    Vogliamo offrire opportunità ai nomadi digitali e agli aspiranti tali promuovendo un approccio di “south-working” consapevole, equilibrato e socialmente innovativo.`,
+    Svg: Insects,
+    svgStyle: { transform: 'rotateY(180deg)' },
   },
 ];
 
 const Index = () => {
   return (
-    <div className={styles.wrap}>
-      <Heading text="Naturalmente Tecnologici" />
-      {info.map((item, key) => {
-        return (
-          <Section
-            title={item.title}
-            text={item.text}
-            reversed={key % 2 == 1}
-            key={key}
-            Svg={item.Svg}
-            svgStyle={item.svgStyle}
-          />
-        );
-      })}
-    </div>
+    <>
+      <div className={styles.wrap}>
+        <Heading text="Naturalmente Tecnologici" />
+        {info.map((item, key) => {
+          return (
+            <Section
+              title={item.title}
+              text={item.text}
+              reversed={key % 2 == 1}
+              key={key}
+              Svg={item.Svg}
+              svgStyle={item.svgStyle}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 

@@ -5,6 +5,7 @@ import Loading from '../components/molecules/Loading';
 import Seo from '../components/atoms/Seo';
 import Theme from '../components/organisms/Theme';
 import { Suspense, lazy } from 'react';
+import WhenAndWhere from '../components/atoms/WhenAndWhere';
 
 const IndexPage = () => {
   const NaturalmenteTecnologici = lazy(() => import('../components/molecules/NaturalmenteTecnologici'));
@@ -15,6 +16,7 @@ const IndexPage = () => {
         <NaturalmenteTecnologici />
       </Suspense>
       <Theme />
+      <WhenAndWhere />
     </Layout>
   );
 };

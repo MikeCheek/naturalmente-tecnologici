@@ -11,9 +11,16 @@ export const organizers = [
   {
     name: 'Giuseppe Becci',
     role: 'Project Manager',
+    linkedin: 'https://www.linkedin.com/in/giuseppe-becci-3b8402171/',
     image: 1,
   },
-  // { name: 'Giuseppe Liuzzi', role: 'Community Manager e CTO' },
+  {
+    name: 'Giuseppe Liuzzi',
+    role: 'Community Manager<br/>CTO',
+    linkedin: 'https://www.linkedin.com/in/giuseppe-liuzzi-pirat3/',
+    website: 'https://giuseppeliuzzi.com',
+    image: 2,
+  },
   {
     name: 'Michele Pulvirenti',
     role: 'Developer',
