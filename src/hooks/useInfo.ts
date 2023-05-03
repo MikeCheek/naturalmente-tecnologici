@@ -35,9 +35,9 @@ export const organizers = [
     website: 'https://bernardoforcillo.com/',
     image: 4,
   },
+  { name: 'Marouan Elkoura', role: 'Sponsor Specialist', image: 5 },
   // { name: 'Teodosio Santagata', role: 'Stage Manager' },
   // { name: 'Giovanni Restaino', role: 'Stage Manager' },
-  // { name: 'Marouan Elkoura', role: 'Sponsor Specialist' },
 ];
 
 export const tickets = [
