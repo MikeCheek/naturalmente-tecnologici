@@ -4,28 +4,11 @@ import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
 import CardPerson from '../../molecules/CardPerson';
 import { organizers } from '../../../hooks/useInfo';
-import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import useOrganizers from '../../../hooks/useOrganizers';
 
 const Index = () => {
-  const data: Data = useStaticQuery(graphql`
-    query AssetsPhotos {
-      allFile(
-        filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, dir: { regex: "src/images/crew/" } }
-        sort: { name: ASC }
-      ) {
-        edges {
-          node {
-            id
-            name
-            childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 300, quality: 80)
-            }
-          }
-        }
-      }
-    }
-  `);
+  const data = useOrganizers();
 
   return (
     <div className={styles.wrap}>

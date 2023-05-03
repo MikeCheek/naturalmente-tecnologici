@@ -7,6 +7,7 @@ import Seo from '../components/atoms/Seo';
 import Syskrack from '../components/molecules/Syskrack';
 import useSyskrackImages from '../hooks/useSyskrackImages';
 import { getImage } from 'gatsby-plugin-image';
+import useOrganizers from '../hooks/useOrganizers';
 
 const ChiSiamo = () => {
   const Organizers = lazy(() => import('../components/organisms/Organizers'));
@@ -23,7 +24,12 @@ const ChiSiamo = () => {
 };
 
 export const Head = () => {
-  const images = useSyskrackImages();
+  const images = useSyskrackImages().allFile!.edges.map(
+    (image) => image.node.childImageSharp.gatsbyImageData.images.fallback.src
+  );
+  const organizers = useOrganizers().allFile!.edges.map(
+    (image) => image.node.childImageSharp.gatsbyImageData.images.fallback.src
+  );
 
   return (
     <Seo
@@ -31,7 +37,7 @@ export const Head = () => {
       pathname="/chi-siamo/"
       description="Naturalmente Tecnologici è un evento organizzato dall'associazione Syskrack Giuseppe Porsia in quel di Grassano (Matera)"
       structuredData
-      images={images.allFile!.edges.map((image) => image.node.childImageSharp.gatsbyImageData.images.fallback.src)}
+      images={[...images, ...organizers]}
     />
   );
 };
