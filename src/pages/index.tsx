@@ -25,7 +25,7 @@ export const Head = () => (
   <Seo
     title="Home"
     pathname="/"
-    description="I partecipanti si scambieranno idee, visioni ed esperienze. L'obiettivo è indagare su nuovi orizzonti etici e sostenibili dello sviluppo tecnologico."
+    description="Un evento di 3 giorni in una location mozzafiato, selvaggia, tra le colline materane tra camping, laboratori, conferenze e incontro tra persone di ogni dove."
     structuredData
   />
 );
