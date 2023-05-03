@@ -9,7 +9,9 @@ const Index = () => {
       <h3>
         11-13 Agosto 2023
         <br />
-        <br />A Grassano (Matera), tra le argillose colline lucane.
+        <br />A Grassano (Matera)
+        <br />
+        Tra le argillose colline lucane
       </h3>
     </div>
   );
