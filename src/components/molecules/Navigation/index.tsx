@@ -49,7 +49,7 @@ const Index = ({ opened, onClick }: NavigationProps) => {
             target="_blank"
             className={styles.buttonMobile}
           >
-            ISCRIVITI
+            NEWS
           </a>
         </nav>
       </div>
@@ -62,7 +62,7 @@ const Index = ({ opened, onClick }: NavigationProps) => {
           target="_blank"
           className={styles.button}
         >
-          ISCRIVITI
+          NEWS
         </a>
       </div>
     </>
