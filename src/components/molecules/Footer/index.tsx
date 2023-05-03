@@ -10,7 +10,7 @@ const Index = () => {
     <footer className={styles.wrap} id="footer">
       <Separator />
       <div>
-        <Link className={styles.logo} to="#top">
+        <Link className={styles.logo} to="#top" title="Go to top">
           <LogoNT width="266" height="87.92" style={{ fill: 'var(--nt-orange)' }} />
         </Link>
         <p>11-13 Agosto 2023</p>
