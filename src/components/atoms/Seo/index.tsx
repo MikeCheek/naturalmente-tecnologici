@@ -121,9 +121,6 @@ const Index = ({
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={metadata.siteUrl + seo.image.images.fallback.src} />
 
-      {/* TODO: LEVARE QUESTO TAG QUANDO SI CAMBIA DOMINIO */}
-      <meta name="google-site-verification" content="6CEt2yawsIZqWfyMh9IkmQa2U75Qu41kO92hyIV0R0M" />
-
       {structuredData ? <script type="application/ld+json">{JSON.stringify(microData)}</script> : <></>}
       {noIndex ? <meta name="robots" content="noindex,nofollow" /> : <></>}
 
