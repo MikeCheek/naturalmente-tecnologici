@@ -43,7 +43,7 @@ const Index = ({ green }: SocialLinksProps) => {
         title="Visita la pagina Linkedin dell'associazione"
         target="_blank"
       >
-        <Linkedin width={50} height={50} fill="var(--nt-white)" style={{ borderRadius: '10px' }} />
+        <Linkedin width={50} height={50} fill="var(--nt-white)" style={{ borderRadius: '5px' }} />
       </a>
     </div>
   );
