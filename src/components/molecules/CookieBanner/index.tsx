@@ -31,7 +31,7 @@ const Index = ({ close }: CookieBannerProps) => {
       Cookies.set(CookiesNames.marketing, marketing, options);
     }
     //@ts-ignore
-    window.dataLayer.push({ event: 'update-consent' });
+    window.dataLayer?.push({ event: 'update-consent' });
 
     if (close) {
       close();

@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
 import { NavigationProps } from './index.types';
+import { showPopUp } from '../../../hooks/newsletter';
 
 const links = [
   { name: 'Home', to: '/' },
@@ -42,28 +43,28 @@ const Index = ({ opened, onClick }: NavigationProps) => {
       >
         <nav className={styles.linksMobile}>
           {linkElements}
-          <a
+          <div
             title="Iscriviti alla Newsletter dell'associazione"
-            href="https://static.mailerlite.com/webforms/submit/m7k6g6"
-            rel="noopener noreferrer"
-            target="_blank"
+            onClick={showPopUp}
+            // rel="noopener noreferrer"
+            // target="_blank"
             className={styles.buttonMobile}
           >
             NEWS
-          </a>
+          </div>
         </nav>
       </div>
       <div className={styles.wrapDesktop}>
         <nav className={styles.links}>{linkElements}</nav>
-        <a
+        <div
           title="Iscriviti alla Newsletter dell'associazione"
-          href="https://static.mailerlite.com/webforms/submit/m7k6g6"
-          rel="noopener noreferrer"
-          target="_blank"
+          onClick={showPopUp}
+          // rel="noopener noreferrer"
+          // target="_blank"
           className={styles.button}
         >
           NEWS
-        </a>
+        </div>
       </div>
     </>
   );
