@@ -41,6 +41,7 @@ const Index = ({
         name: 'Naturalmente Tecnologici',
         url: 'https://nt.syskrack.org/',
         description: "(Ri)-prendiamoci il futuro. Ragionamenti complessi sull'accelerazione dei nostri tempi.",
+        image: [metadata.siteUrl + seo.image.images.fallback.src, ...images.map((image) => metadata.siteUrl + image)],
         startDate: '2023-08-11T09:00:00.000Z',
         endDate: '2023-08-13T23:59:59.999Z',
         eventStatus: 'https://schema.org/EventScheduled',
