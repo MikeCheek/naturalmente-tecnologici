@@ -83,7 +83,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: process.env.GTAG_ID,
+        id: 'GTM-KLQBPFW',
         includeInDevelopment: false,
         routeChangeEventName: 'ROUTE_CHANGE_EVENT',
         enableWebVitalsTracking: true,
