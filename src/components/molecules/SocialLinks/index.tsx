@@ -7,7 +7,7 @@ import Linkedin from '../../../assets/social/linkedin.svg';
 import Mail from '../../../assets/social/mail.svg';
 import { SocialLinksProps } from './index.types';
 
-const Index = ({ green }: SocialLinksProps) => {
+const Index = ({ green, onlySocial }: SocialLinksProps) => {
   return (
     <div className={`${styles.socialIcons} ${green ? styles.wrapGreen : ''}`}>
       <a
@@ -26,9 +26,13 @@ const Index = ({ green }: SocialLinksProps) => {
       >
         <Telegram width={50} height={50} fill="var(--nt-white)" />
       </a>
-      <a href="mailto:direttivo@syskrack.org" rel="noopener noreferrer" title="Scrivici una Email" target="_blank">
-        <Mail width={50} height={50} fill="var(--nt-white)" />
-      </a>
+      {!onlySocial ? (
+        <a href="mailto:direttivo@syskrack.org" rel="noopener noreferrer" title="Scrivici una Email" target="_blank">
+          <Mail width={50} height={50} fill="var(--nt-white)" />
+        </a>
+      ) : (
+        <></>
+      )}
       <a
         href="https://www.facebook.com/syskrackgiuseppeporsia/"
         rel="noopener noreferrer"

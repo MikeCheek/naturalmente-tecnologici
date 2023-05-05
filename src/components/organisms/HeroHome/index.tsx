@@ -30,7 +30,7 @@ const Index = () => {
       <div className={styles.notReleased}>
         <h2>I biglietti non sono ancora stati rilasciati</h2>
         <h3>Seguici sui social per rimanere aggiornato</h3>
-        <SocialLinks green />
+        <SocialLinks green onlySocial />
         <p></p>
       </div>
       <div className={styles.wrapHill}>
