@@ -2,6 +2,7 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import CardImage from '../../atoms/CardImage';
 import { SectionImageCTAProps } from './index.types';
+import Button from '../../atoms/Button';
 
 const Index = ({ image, text, title, buttonHref, buttonText, reversed = false }: SectionImageCTAProps) => {
   return (
@@ -12,9 +13,7 @@ const Index = ({ image, text, title, buttonHref, buttonText, reversed = false }:
           {image}
         </CardImage>
         <p dangerouslySetInnerHTML={{ __html: text }}></p>
-        <a href={buttonHref} title={buttonText} className={styles.button}>
-          {buttonText}
-        </a>
+        <Button text={buttonText} href={buttonHref} title={buttonText} />
       </div>
       <CardImage onlyDesktop reversed={reversed}>
         {image}

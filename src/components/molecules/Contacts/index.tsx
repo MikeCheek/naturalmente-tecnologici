@@ -2,6 +2,7 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
 import { showPopUp } from '../../../hooks/newsletter';
+import Button from '../../atoms/Button';
 
 const Index = () => {
   return (
@@ -32,9 +33,7 @@ const Index = () => {
           <br />
           Iscriviti alla nostra newsletter per non perderti l'Early Bird!
         </p>
-        <div title="Iscriviti alla Newsletter dell'associazione" className={styles.button} onClick={showPopUp}>
-          ISCRIVITI
-        </div>
+        <Button text="ISCRIVITI" title="Iscriviti alla Newsletter dell'associazione" onClick={showPopUp} />
       </div>
     </div>
   );

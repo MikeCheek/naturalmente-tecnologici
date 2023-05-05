@@ -1,0 +1,25 @@
+@use 'src/styles/styled';
+
+.wrap {
+  width: 100%;
+  padding: 20px 0;
+  background: var(--nt-white);
+  margin-top: -1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--nt-green);
+}
+
+.buttonWrap {
+  margin-bottom: 50px;
+}
+
+.collina {
+  fill: var(--nt-green);
+  margin-top: 50px;
+  margin-bottom: -21px;
+  width: 100vw;
+  height: auto;
+}

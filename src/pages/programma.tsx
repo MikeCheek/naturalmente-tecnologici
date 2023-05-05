@@ -2,13 +2,13 @@ import React from 'react';
 import Layout from '../components/organisms/Layout';
 import HeroProgram from '../components/organisms/HeroProgram';
 import Seo from '../components/atoms/Seo';
-import Banner from '../components/atoms/Banner';
+import Program from '../components/molecules/Program';
 
 const Programma = () => {
   return (
     <Layout>
       <HeroProgram />
-      <Banner text="IL PROGRAMMA NON È STATO RILASCIATO" />
+      <Program />
     </Layout>
   );
 };
