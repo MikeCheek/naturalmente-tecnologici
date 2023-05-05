@@ -106,7 +106,6 @@
 .heading {
   font-family: 'Cairo', sans-serif;
   font-weight: 900;
-  font-size: 30px;
   line-height: 120%;
   margin: 0;
   width: auto;
@@ -114,7 +113,6 @@
   position: relative;
   max-width: 300px;
   @media screen and (min-width: '768px') {
-    font-size: 50px;
     max-width: 700px;
   }
 

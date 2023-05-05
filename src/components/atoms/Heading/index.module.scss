@@ -9,7 +9,6 @@
   font-family: 'Cairo', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 23px;
   line-height: 115%;
   color: var(--nt-green);
   margin: 5px 10px;
@@ -19,7 +18,6 @@
   z-index: 1;
   @media screen and (min-width: '768px') {
     margin: 5px 20px;
-    font-size: 45px;
   }
 }
 
