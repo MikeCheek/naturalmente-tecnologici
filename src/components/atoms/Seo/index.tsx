@@ -2,6 +2,7 @@ import React from 'react';
 import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../hooks/useSiteMetadata';
 import { tickets } from '../../../hooks/useInfo';
+import { links } from '../../../hooks/navigation';
 
 const Index = ({
   lang = 'it',
@@ -28,12 +29,23 @@ const Index = ({
     '@context': 'https://schema.org',
     '@graph': [
       {
+        '@context': 'https://www.schema.org',
         '@type': 'WebSite',
         url: seo.url,
         name: seo.title,
         description: seo.description,
         image: [metadata.siteUrl + seo.image.images.fallback.src, ...images.map((image) => metadata.siteUrl + image)],
         inLanguage: 'IT',
+      },
+      {
+        '@context': 'https://www.schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: links.map((link) => ({
+          '@type': 'ListItem',
+          position: link.position,
+          name: link.name,
+          item: metadata.siteUrl + link.to,
+        })),
       },
       {
         '@context': 'https://www.schema.org',
@@ -51,7 +63,7 @@ const Index = ({
         logo: metadata.siteUrl + '/favicon.ico',
         location: {
           '@type': 'Place',
-          name: 'Tenute Bronzino',
+          name: 'Tenuta Bronzino',
           url: 'https://www.tenutabronzino.it/',
           address: {
             '@type': 'PostalAddress',
@@ -69,8 +81,8 @@ const Index = ({
           url: 'https://www.syskrack.org/',
           sameAs: ['https://www.wikidata.org/wiki/Q116907424', 'https://syskrack.org/'],
         },
-        //TODO: Rimettere appena partiranno i biglietti
 
+        //TODO: Rimettere appena partiranno i biglietti
         // offers: {
         //   '@type': 'AggregateOffer',
         //   highPrice: Math.max(...tickets.map((ticket) => ticket.price)),

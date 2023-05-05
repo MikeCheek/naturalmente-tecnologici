@@ -3,14 +3,7 @@ import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
 import { NavigationProps } from './index.types';
 import { showPopUp } from '../../../hooks/newsletter';
-
-const links = [
-  { name: 'Home', to: '/' },
-  { name: 'Programma', to: '/programma' },
-  { name: 'Contattaci', to: '/contattaci' },
-  { name: 'Partner', to: '/partner' },
-  { name: 'Chi siamo', to: '/chi-siamo' },
-];
+import { links } from '../../../hooks/navigation';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
