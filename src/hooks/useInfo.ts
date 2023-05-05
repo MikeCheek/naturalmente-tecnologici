@@ -25,7 +25,7 @@ export const organizers = [
     name: 'Michele Pulvirenti',
     role: 'Developer',
     linkedin: 'https://www.linkedin.com/in/michele-pulvirenti/',
-    website: 'https://michelepulvirenti.vercel.app',
+    website: 'https://michelepulvirenti.vercel.app/?r=nt',
     image: 3,
   },
   {
