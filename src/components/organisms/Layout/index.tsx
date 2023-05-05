@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavBar from '../../molecules/NavBar';
+import NavBar from '../NavBar';
 import { LayoutProps } from './index.types';
 import * as styles from './index.module.scss';
 import FlyingInsects from '../../molecules/FlyingInsects';

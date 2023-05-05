@@ -10,6 +10,7 @@
   transition: transform 200ms ease-in-out;
   transform: translate(0, -100%);
   opacity: 0;
+  box-shadow: 0 0 20px 0 rgb(0, 0, 0, 0.25);
 
   @media screen and (min-width: '992px') {
     display: none;
@@ -85,12 +86,10 @@
 }
 
 .buttonMobile {
-  @include styled.button;
-  color: var(--nt-green) !important;
+  @include styled.buttonFull;
 }
 
 .button {
-  @include styled.button;
+  @include styled.buttonFull;
   margin-top: -10px;
-  color: var(--nt-green) !important;
 }

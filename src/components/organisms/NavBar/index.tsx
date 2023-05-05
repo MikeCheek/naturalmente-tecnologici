@@ -3,7 +3,7 @@ import * as styles from './index.module.scss';
 import LogoNT from '../../../assets/logo-nt.svg';
 import Hamburger from '../../../assets/hamburger.svg';
 import X from '../../../assets/x.svg';
-import Navigation from '../Navigation';
+import Navigation from '../../molecules/Navigation';
 import { Link } from 'gatsby';
 
 const Index = () => {
