@@ -7,7 +7,7 @@ const Index = ({ image, text, title, buttonHref, buttonText, reversed = false }:
   return (
     <div className={reversed ? styles.wrapReversed : styles.wrap}>
       <div className={reversed ? styles.textReversed : styles.text}>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <CardImage onlyMobile reversed={reversed}>
           {image}
         </CardImage>

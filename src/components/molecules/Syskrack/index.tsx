@@ -2,6 +2,7 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../SectionImageCTA';
+import Heading from '../../atoms/Heading';
 
 const Index = () => {
   const image0 = (
@@ -29,6 +30,9 @@ const Index = () => {
 
   return (
     <>
+      <div className={styles.heading}>
+        <Heading text="L'associazione" />
+      </div>
       <SectionImageCTA
         title="CONOSCI SYSKRACK?"
         text={`L'associazione Syskrack Giuseppe Porsia è un'associazione senza scopo di lucro con sede a Grassano nata in
