@@ -20,4 +20,4 @@
 
 #
 
-Sito realizzato per l'evento Naturalmente Tecnologici 2023 Grassano (MT)
+Sito realizzato per l'evento Naturalmente Tecnologici 2023 a Grassano, Matera
