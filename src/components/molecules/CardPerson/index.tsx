@@ -11,14 +11,14 @@ const Index = ({ image, name, role, reversed = false, website, linkedin, noMargi
       {website || linkedin ? (
         <div className={styles.links}>
           {website ? (
-            <a title={'Sito web ' + name} href={website} target="_blank">
+            <a title={'Sito web ' + name} href={website} target="_blank" rel="noopener noreferrer">
               <Website width={30} height={30} />
             </a>
           ) : (
             <></>
           )}
           {linkedin ? (
-            <a title={'Profilo Linkedin ' + name} href={linkedin} target="_blank">
+            <a title={'Profilo Linkedin ' + name} href={linkedin} target="_blank" rel="noopener noreferrer">
               <Linkedin width={30} height={30} />
             </a>
           ) : (
