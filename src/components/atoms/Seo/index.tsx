@@ -151,6 +151,10 @@ const Index = ({
       `,
         }}
       ></script>
+      <link rel="dns-prefetch" href="https://https://static.mailerlite.com/" />
+      <link rel="dns-prefetch" href="https://https://www.google.com/" />
+      <link rel="preconnect" href="https://https://static.mailerlite.com/" />
+      <link rel="preconnect" href="https://https://www.google.com/" />
 
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
       {children}

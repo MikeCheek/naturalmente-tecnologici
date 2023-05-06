@@ -24,11 +24,33 @@ const config: GatsbyConfig = {
         short_name: 'NT',
         lang: 'it',
         background_color: '#025300',
-        theme_color: '#025300',
+        theme_color: '#e98a15',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',
         icon: 'src/images/favicon/favicon.png', //This path is relative to the root of the site.
+        icons: [
+          {
+            src: `src/images/favicon/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/favicon/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/favicon/favicon-32x32.png`,
+            sizes: `32x32`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/favicon/favicon-16x16.png`,
+            sizes: `16x16`,
+            type: `image/png`,
+          },
+        ],
         // An optional attribute which provides support for CORS check.
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
         // Any invalid keyword or empty string defaults to `anonymous`
