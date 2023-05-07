@@ -139,6 +139,7 @@ const Index = ({
 
       <script
         id="saro"
+        defer
         dangerouslySetInnerHTML={{
           __html: `(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
       var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
@@ -151,10 +152,14 @@ const Index = ({
       `,
         }}
       ></script>
-      <link rel="dns-prefetch" href="https://https://static.mailerlite.com/" />
-      <link rel="dns-prefetch" href="https://https://www.google.com/" />
-      <link rel="preconnect" href="https://https://static.mailerlite.com/" />
-      <link rel="preconnect" href="https://https://www.google.com/" />
+      <link rel="dns-prefetch" href="https://static.mailerlite.com/" />
+      <link rel="dns-prefetch" href="https://www.google.com/" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="https://assets.mlcdn.com" />
+      <link rel="preconnect" href="https://static.mailerlite.com/" />
+      <link rel="preconnect" href="https://www.google.com/" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://assets.mlcdn.com" />
 
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
       {children}
