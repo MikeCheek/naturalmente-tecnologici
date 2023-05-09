@@ -22,15 +22,15 @@ const Index = () => {
         ) : (
           <></>
         )}
-        <div className={styles.orangeFlowers}>
-          <Flower color="var(--nt-orange)" />
-          <Flower color="var(--nt-orange)" />
-          <Flower color="var(--nt-orange)" />
-          <Flower color="var(--nt-orange)" />
-        </div>
-        <Collina width="1440" height="129" className={styles.collina} />
-        <div className={styles.white}></div>
       </div>
+      <div className={styles.orangeFlowers}>
+        <Flower color="var(--nt-orange)" />
+        <Flower color="var(--nt-orange)" />
+        <Flower color="var(--nt-orange)" />
+        <Flower color="var(--nt-orange)" />
+      </div>
+      <Collina width="1440" height="129" className={styles.collina} />
+      <div className={styles.white}></div>
     </div>
   );
 };

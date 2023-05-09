@@ -8,26 +8,21 @@
 }
 
 .headWrap {
-  padding-left: 8%;
+  margin-left: 8%;
   margin-top: 75px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  position: relative;
-  overflow: hidden;
 
   @media screen and (min-width: '768px') {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  max-height: 980px;
-
   height: calc(100vh - 75px - 60px);
   @media screen and (min-width: '768px') {
     height: calc(100vh - 75px - 79.5px);
-    max-height: 1700px;
   }
   @media screen and (min-width: '992px') {
     height: calc(100vh - 75px - 86px);
@@ -42,9 +37,6 @@
   @media screen and (min-width: '768px') {
     margin-bottom: 0;
     margin-top: -2%;
-  }
-  @media screen and (min-width: '992px') {
-    margin-top: 0;
   }
 }
 

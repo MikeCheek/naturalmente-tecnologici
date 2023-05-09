@@ -8,16 +8,14 @@
 }
 
 .headWrap {
-  padding-left: 8%;
-  padding-right: 8%;
+  margin-left: 8%;
+  margin-right: 8%;
   margin-top: 75px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 10px;
-  position: relative;
-  overflow: hidden;
 
   @media screen and (min-width: '768px') {
     flex-direction: row;
@@ -25,12 +23,9 @@
     gap: 50px;
   }
 
-  max-height: 980px;
-
   height: calc(100vh - 75px - 60px);
   @media screen and (min-width: '768px') {
     height: calc(100vh - 75px - 79.5px);
-    max-height: 1700px;
   }
   @media screen and (min-width: '992px') {
     height: calc(100vh - 75px - 86px);
