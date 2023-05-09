@@ -149,6 +149,7 @@ const Index = ({
       
       var ml_account = ml('accounts', '3548897', 'g2t5m4i7e2', 'load');
       var ml_webform_5919036 = ml_account('webforms', '5919036', 'd0q6a0', 'load');
+      ml_webform_5919036('animation', 'fadeIn');
       `,
         }}
       ></script>
