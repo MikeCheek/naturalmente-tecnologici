@@ -13,15 +13,15 @@ const Index = () => {
           CHE INVESTONO NELLA CULTURA E NELLO SVILUPPO DELLE PERSONE
         </h1>
         <Handshake width={600} className={styles.svg} fill="var(--nt-dark-green)" />
+        <div className={styles.orangeFlowers}>
+          <Flower color="var(--nt-orange)" />
+          <Flower color="var(--nt-orange)" />
+          <Flower color="var(--nt-orange)" />
+          <Flower color="var(--nt-orange)" />
+        </div>
+        <Collina width="1440" height="129" className={styles.collina} />
+        <div className={styles.white}></div>
       </div>
-      <div className={styles.orangeFlowers}>
-        <Flower color="var(--nt-orange)" />
-        <Flower color="var(--nt-orange)" />
-        <Flower color="var(--nt-orange)" />
-        <Flower color="var(--nt-orange)" />
-      </div>
-      <Collina width="1440" height="129" className={styles.collina} />
-      <div className={styles.white}></div>
     </div>
   );
 };
