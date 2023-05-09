@@ -4,8 +4,10 @@ import BigBranch from '../../../assets/big-branch.svg';
 import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina.svg';
 import Flower from '../../atoms/Flower';
+import Button from '../../atoms/Button';
 import FastActions from '../../molecules/FastActions';
 import SocialLinks from '../../molecules/SocialLinks';
+import { showPopUp } from '../../../hooks/newsletter';
 
 const Index = () => {
   return (
@@ -28,8 +30,16 @@ const Index = () => {
       {/* <FastActions /> */}
       <div className={styles.notReleased}>
         <h2>I biglietti non sono ancora stati rilasciati</h2>
-        <h3>Seguici sui social per rimanere aggiornato</h3>
+        <h3>Seguici per rimanere aggiornato</h3>
         <SocialLinks green onlySocial />
+        <div className={styles.buttonWrap}>
+          <Button
+            text="NEWSLETTER"
+            hoverWhite
+            title="Iscriviti alla Newsletter dell'associazione"
+            onClick={showPopUp}
+          />
+        </div>
         <p></p>
       </div>
       <div className={styles.wrapHill}>
