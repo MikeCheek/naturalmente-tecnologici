@@ -200,6 +200,9 @@
     top: 30%;
     width: 555px;
   }
+  @media screen and (min-height: '980px') and (max-width: '767px') {
+    top: 600px;
+  }
 }
 
 .notReleased {
