@@ -22,7 +22,7 @@ const info: SectionProps[] = [
     Svg: Insects,
   },
   {
-    title: 'Perchè lo facciamo?',
+    title: 'Perché lo facciamo?',
     text: `L'obiettivo è indagare nuovi orizzonti dello sviluppo tecnologico, etici e sostenibili dal punto di vista sociale ed ambientale.
     <br/><br/>
     Vogliamo invertire il trend che la vede spopolarsi giorno dopo giorno e creare un

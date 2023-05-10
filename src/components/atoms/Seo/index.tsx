@@ -134,6 +134,8 @@ const Index = ({
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={metadata.siteUrl + seo.image.images.fallback.src} />
 
+      <meta name="robots" content="max-image-preview:large" />
+
       {structuredData ? <script type="application/ld+json">{JSON.stringify(microData)}</script> : <></>}
       {noIndex ? <meta name="robots" content="noindex,nofollow" /> : <></>}
 
