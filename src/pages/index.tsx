@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import Layout from '../components/organisms/Layout';
 import HeroHome from '../components/organisms/HeroHome';
 import Loading from '../components/molecules/Loading';
 import Seo from '../components/atoms/Seo';
@@ -8,14 +9,14 @@ import WhenAndWhere from '../components/atoms/WhenAndWhere';
 const IndexPage = () => {
   const NaturalmenteTecnologici = lazy(() => import('../components/molecules/NaturalmenteTecnologici'));
   return (
-    <>
+    <Layout>
       <HeroHome />
       <Suspense fallback={<Loading />}>
         <NaturalmenteTecnologici />
       </Suspense>
       <Theme />
       <WhenAndWhere />
-    </>
+    </Layout>
   );
 };
 

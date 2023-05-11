@@ -10,7 +10,7 @@ import Footer from '../../molecules/Footer';
 import { LayoutProps } from './index.types';
 import NavBar from '../NavBar';
 
-const Index = ({ children, insects = true, pathname }: LayoutProps) => {
+const Index = ({ children, insects = true }: LayoutProps) => {
   const [banner, setBanner] = useState<boolean>(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Index = ({ children, insects = true, pathname }: LayoutProps) => {
 
   return (
     <div id="top">
-      <NavBar pathname={pathname} />
+      <NavBar />
       {banner ? <CookieBanner close={() => setBanner(false)} /> : <></>}
       {insects ? <FlyingInsects /> : <></>}
       <main className={styles.wrap}>{children}</main>

@@ -5,8 +5,13 @@ import { NavigationProps } from './index.types';
 import { showPopUp } from '../../../hooks/newsletter';
 import { links } from '../../../hooks/navigation';
 
-const Index = ({ opened, onClick, pathname }: NavigationProps) => {
+const Index = ({ opened, onClick }: NavigationProps) => {
+  const [pathname, setPathname] = useState<string>();
   const removeSlashes = (text?: string) => (text ? text.replace(/\//g, '') : '');
+
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
 
   const linkElements = links.map((link, key) => {
     return (
