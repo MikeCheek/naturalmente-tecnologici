@@ -7,7 +7,7 @@ import '@fontsource/cairo/900.css';
 import './src/styles/globals.scss';
 
 import React from 'react';
-import Layout from './src/components/organisms/layout';
+import Layout from './src/components/organisms/Layout';
 
 const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
