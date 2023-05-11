@@ -61,20 +61,21 @@ const Index = ({
         isAccessibleForFree: false,
         inLanguage: 'IT',
         logo: metadata.siteUrl + '/favicon.ico',
-        location: {
-          '@type': 'Place',
-          name: 'Tenuta Bronzino',
-          url: 'https://www.tenutabronzino.it/',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'Contrada, Via S. Donato',
-            addressLocality: 'Grottole',
-            addressRegion: 'MT',
-            postalCode: '75010',
-            addressCountry: 'Italy',
-          },
-          sameAs: ['http://www.tenutabronzino.it/', 'https://goo.gl/maps/rs5PWEJgcMtwMRBNA'],
-        },
+        //TODO: Rimettere appena sarà confermata la location
+        // location: {
+        //   '@type': 'Place',
+        //   name: 'Tenuta Bronzino',
+        //   url: 'https://www.tenutabronzino.it/',
+        //   address: {
+        //     '@type': 'PostalAddress',
+        //     streetAddress: 'Contrada, Via S. Donato',
+        //     addressLocality: 'Grottole',
+        //     addressRegion: 'MT',
+        //     postalCode: '75010',
+        //     addressCountry: 'Italy',
+        //   },
+        //   sameAs: ['http://www.tenutabronzino.it/', 'https://goo.gl/maps/rs5PWEJgcMtwMRBNA'],
+        // },
         organizer: {
           '@type': 'Organization',
           name: 'Syskrack Giuseppe Porsia',
