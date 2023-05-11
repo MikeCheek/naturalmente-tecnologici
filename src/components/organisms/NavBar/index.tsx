@@ -5,8 +5,9 @@ import Hamburger from '../../../assets/hamburger.svg';
 import X from '../../../assets/x.svg';
 import Navigation from '../../molecules/Navigation';
 import { Link } from 'gatsby';
+import { NavBarProps } from './index.types';
 
-const Index = () => {
+const Index = ({ pathname }: NavBarProps) => {
   const [opened, setOpened] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(true);
   const [shadow, setShadow] = useState<boolean>(false);
@@ -50,7 +51,7 @@ const Index = () => {
       <Link to="/" className={styles.logoNT} title="Vai alla home">
         <LogoNT width="195" height="64.45" style={opened ? { fill: 'var(--nt-green)' } : { fill: 'var(--nt-white)' }} />
       </Link>
-      <Navigation opened={opened} onClick={() => setOpened(false)} />
+      <Navigation opened={opened} onClick={() => setOpened(false)} pathname={pathname} />
       {opened ? (
         <span onClick={() => setOpened(false)} className={styles.menuIcon}>
           <X width="25" height="25" fill="var(--nt-green)" />

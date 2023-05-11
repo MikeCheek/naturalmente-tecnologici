@@ -1,10 +1,11 @@
 import React from 'react';
+
 import * as styles from './index.module.scss';
-import Section from '../Section';
 import Bug from '../../../assets/bug.svg';
-import Insects from '../../../assets/insects.svg';
-import { SectionProps } from '../Section/index.types';
 import Heading from '../../atoms/Heading';
+import Insects from '../../../assets/insects.svg';
+import Section from '../Section';
+import { SectionProps } from '../Section/index.types';
 
 const info: SectionProps[] = [
   {

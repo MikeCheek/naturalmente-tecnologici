@@ -7,17 +7,17 @@ const Index = ({ text, onClick, href, title, hoverWhite = false }: ButtonProps) 
     <>
       {onClick ? (
         <button onClick={onClick} title={title} className={`${styles.button} ${hoverWhite ? styles.hoverWhite : ''}`}>
-          {text} <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          {text} <span className={styles.span}></span>
+          <span className={styles.span}></span>
+          <span className={styles.span}></span>
+          <span className={styles.span}></span>
         </button>
       ) : href ? (
         <a href={href} title={title} className={`${styles.button} ${hoverWhite ? styles.hoverWhite : ''}`}>
-          {text} <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          {text} <span className={styles.span}></span>
+          <span className={styles.span}></span>
+          <span className={styles.span}></span>
+          <span className={styles.span}></span>
         </a>
       ) : (
         <></>

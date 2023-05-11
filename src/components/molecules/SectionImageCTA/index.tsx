@@ -1,8 +1,9 @@
 import React from 'react';
+
 import * as styles from './index.module.scss';
+import Button from '../../atoms/Button';
 import CardImage from '../../atoms/CardImage';
 import { SectionImageCTAProps } from './index.types';
-import Button from '../../atoms/Button';
 
 const Index = ({ image, text, title, buttonHref, buttonText, reversed = false }: SectionImageCTAProps) => {
   return (

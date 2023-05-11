@@ -1,8 +1,9 @@
 import React from 'react';
+
 import * as styles from './index.module.scss';
-import Flower from '../../atoms/Flower';
 import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina-lato.svg';
+import Flower from '../../atoms/Flower';
 import Syskrack from '../../../assets/syskrack.svg';
 
 const Index = () => {

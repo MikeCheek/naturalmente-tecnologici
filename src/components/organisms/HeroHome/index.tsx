@@ -1,13 +1,14 @@
 import React from 'react';
+
 import * as styles from './index.module.scss';
 import BigBranch from '../../../assets/big-branch.svg';
+import Button from '../../atoms/Button';
 import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina.svg';
-import Flower from '../../atoms/Flower';
-import Button from '../../atoms/Button';
 import FastActions from '../../molecules/FastActions';
-import SocialLinks from '../../molecules/SocialLinks';
+import Flower from '../../atoms/Flower';
 import { showPopUp } from '../../../hooks/newsletter';
+import SocialLinks from '../../molecules/SocialLinks';
 
 const Index = () => {
   return (

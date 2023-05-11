@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import NavBar from '../NavBar';
-import { LayoutProps } from './index.types';
+
+import Cookies from 'js-cookie';
+
 import * as styles from './index.module.scss';
+import CookieBanner from '../../molecules/CookieBanner';
+import { CookiesNames } from '../../../hooks/cookies';
 import FlyingInsects from '../../molecules/FlyingInsects';
 import Footer from '../../molecules/Footer';
-import CookieBanner from '../../molecules/CookieBanner';
-import Cookies from 'js-cookie';
-import { CookiesNames } from '../../../hooks/cookies';
+import { LayoutProps } from './index.types';
+import NavBar from '../NavBar';
 
-const Index = ({ children, insects = true }: LayoutProps) => {
+const Index = ({ children, insects = true, pathname }: LayoutProps) => {
   const [banner, setBanner] = useState<boolean>(false);
 
   useEffect(() => {
@@ -19,7 +21,7 @@ const Index = ({ children, insects = true }: LayoutProps) => {
 
   return (
     <div id="top">
-      <NavBar />
+      <NavBar pathname={pathname} />
       {banner ? <CookieBanner close={() => setBanner(false)} /> : <></>}
       {insects ? <FlyingInsects /> : <></>}
       <main className={styles.wrap}>{children}</main>
