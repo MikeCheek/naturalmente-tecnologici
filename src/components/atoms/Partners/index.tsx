@@ -3,6 +3,7 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import Heading from '../Heading';
 import Syskrack from '../../../assets/syskrack.svg';
+import IBM from '../../../assets/partner/IBM.svg';
 
 const Index = () => {
   return (
@@ -47,6 +48,12 @@ const Index = () => {
             alt="Potenza Urban Art"
             width={180}
           />
+        </a>
+      </div>
+      <Heading text="Activity Partner" />
+      <div className={styles.wrap}>
+        <a href="https://skillsbuild.org/" rel="noopener noreferrer" target="_blank">
+          <IBM className={styles.logoOrizontal} height={40} />
         </a>
       </div>
     </div>
