@@ -44,23 +44,21 @@ considerato dormiente.`,
 
 const Index = () => {
   return (
-    <>
-      <div className={styles.wrap}>
-        <Heading text="Naturalmente Tecnologici" />
-        {info.map((item, key) => {
-          return (
-            <Section
-              title={item.title}
-              text={item.text}
-              reversed={key % 2 == 1}
-              key={key}
-              Svg={item.Svg}
-              svgStyle={item.svgStyle}
-            />
-          );
-        })}
-      </div>
-    </>
+    <div className={styles.wrap}>
+      <Heading text="Naturalmente Tecnologici" />
+      {info.map((item, key) => {
+        return (
+          <Section
+            title={item.title}
+            text={item.text}
+            reversed={key % 2 == 1}
+            key={key}
+            Svg={item.Svg}
+            svgStyle={item.svgStyle}
+          />
+        );
+      })}
+    </div>
   );
 };
 

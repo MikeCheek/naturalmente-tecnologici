@@ -4,4 +4,5 @@ export interface ButtonProps {
   onClick?: () => void;
   title: string;
   href?: string;
+  internal?: boolean;
 }

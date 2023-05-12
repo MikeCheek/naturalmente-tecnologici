@@ -10,7 +10,7 @@ const Index = () => {
   const organizer = organizers[1];
 
   return (
-    <>
+    <div className={styles.bigWrap}>
       <Heading text="Tema" />
       <div className={styles.wrap}>
         <h3>
@@ -44,7 +44,7 @@ Abbiamo scelto questo tema perché crediamo che lo sviluppo tecnologico necessit
           }
         />
       </div>
-    </>
+    </div>
   );
 };
 

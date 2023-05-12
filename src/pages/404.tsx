@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import Seo from '../components/atoms/Seo';
 import Layout from '../components/organisms/Layout';
 import * as styles from '../styles/NotFound.module.scss';
+import Button from '../components/atoms/Button';
 
 const NotFoundPage = () => {
   return (
@@ -10,9 +11,7 @@ const NotFoundPage = () => {
       <div className={styles.wrap}>
         <h1>Syskrack not found</h1>
         <p>Mi sa che sei fuori rotta!</p>
-        <Link className={styles.button} to="/">
-          Torna alla home
-        </Link>
+        <Button href="/" text="Torna alla home" title="Torna alla home" internal />
       </div>
     </Layout>
   );
