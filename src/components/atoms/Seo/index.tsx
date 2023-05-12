@@ -156,6 +156,7 @@ const Index = ({
       `,
         }}
       ></script>
+      <script defer src="https://tally.so/widgets/embed.js"></script>
       <link rel="dns-prefetch" href="https://static.mailerlite.com/" />
       <link rel="dns-prefetch" href="https://www.google.com/" />
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />

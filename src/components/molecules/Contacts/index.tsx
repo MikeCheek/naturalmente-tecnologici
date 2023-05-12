@@ -35,6 +35,15 @@ const Index = () => {
         </p>
         <Button text="ISCRIVITI" title="Iscriviti alla Newsletter dell'associazione" onClick={showPopUp} />
       </div>
+      <Heading text="Contattaci!" />
+      <iframe
+        data-tally-src="https://tally.so/embed/wvrrDg?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy"
+        width="70%"
+        height="438"
+        frameBorder={0}
+        title="Vuoi saperne di più?"
+      ></iframe>
     </div>
   );
 };
