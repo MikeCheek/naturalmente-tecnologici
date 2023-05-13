@@ -10,7 +10,7 @@ const Index = () => {
       <Heading text="Powered By" />
       <div className={styles.wrap}>
         <a href="https://www.syskrack.org/" rel="noopener noreferrer" target="_blank">
-          <Syskrack className={styles.logo} height={180} />
+          <Syskrack className={styles.logo} width={180} />
         </a>
       </div>
       <h4>
@@ -27,7 +27,7 @@ const Index = () => {
             src="../../../images/partners/hackability.jpg"
             className={styles.logo}
             alt="Hackability"
-            height={180}
+            width={180}
           />
         </a>
         <a href="" rel="noopener noreferrer" target="_blank">
@@ -36,7 +36,7 @@ const Index = () => {
             src="../../../images/partners/potenza_urban_art.jpg"
             className={styles.logo}
             alt="Potenza Urban Art"
-            height={180}
+            width={180}
           />
         </a>
         <a href="https://www.ashoka.org" rel="noopener noreferrer" target="_blank">
@@ -45,7 +45,7 @@ const Index = () => {
             src="../../../images/partners/ashoka.jpg"
             className={styles.logo}
             alt="Potenza Urban Art"
-            height={180}
+            width={180}
           />
         </a>
       </div>

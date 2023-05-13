@@ -36,15 +36,13 @@
 }
 
 .logo {
-  height: fit-content;
   border-radius: 2px;
-  height: 130px;
-  width: auto;
+  width: 120px;
   img {
     object-fit: contain !important;
   }
 
   @media screen and (min-width: 768px) {
-    height: 180px;
+    width: 170px;
   }
 }
