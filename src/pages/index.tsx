@@ -1,7 +1,7 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import Layout from '../components/organisms/Layout';
+import NaturalmenteTecnologici from '../components/molecules/NaturalmenteTecnologici';
 import HeroHome from '../components/organisms/HeroHome';
-import Loading from '../components/molecules/Loading';
 import Seo from '../components/atoms/Seo';
 import Theme from '../components/organisms/Theme';
 import WhenAndWhere from '../components/atoms/WhenAndWhere';
@@ -9,14 +9,11 @@ import Reviews from '../components/atoms/Reviews';
 import 'react-circular-progressbar/dist/styles.css';
 
 const IndexPage = () => {
-  const NaturalmenteTecnologici = lazy(() => import('../components/molecules/NaturalmenteTecnologici'));
   return (
     <Layout>
       <HeroHome />
       <Theme />
-      <Suspense fallback={<Loading />}>
-        <NaturalmenteTecnologici />
-      </Suspense>
+      <NaturalmenteTecnologici />
       <WhenAndWhere />
       <Reviews />
     </Layout>
