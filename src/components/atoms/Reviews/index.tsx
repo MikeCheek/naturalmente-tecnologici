@@ -6,6 +6,7 @@ import Workshop from '../../../assets/reviews/workshop.svg';
 import Camping from '../../../assets/reviews/camping.svg';
 import Event from '../../../assets/reviews/event.svg';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
+import { useInView } from 'react-intersection-observer';
 
 const data = [
   {
@@ -31,22 +32,29 @@ const data = [
 ];
 
 const Index = () => {
+  const [ref, inView, _entry] = useInView({
+    threshold: 0,
+    rootMargin: '10% 0px -20% 0px',
+    fallbackInView: true,
+  });
+
   return (
     <>
       <Heading text="Sulla scorsa edizione..." marginTop />
       <h3 className={styles.subTitle}>Gradimento dei partecipanti</h3>
-      <div className={styles.wrap}>
+      <div ref={ref} className={styles.wrap}>
         {data.map((review, key) => (
           <div key={key} className={styles.review}>
             <CircularProgressbarWithChildren
-              value={review.rank * 10}
+              value={inView ? review.rank * 10 : 1}
               counterClockwise
               styles={buildStyles({
                 pathColor: `var(--nt-orange)`,
                 trailColor: 'var(--nt-transparent-orange)',
+                pathTransitionDuration: 2,
               })}
             >
-              <review.svg className={styles.icon} height={50} fill="var(--nt-very-dark-green)" />
+              <review.svg className={styles.icon} height={40} fill="var(--nt-very-dark-green)" />
               <p className={styles.rank}>{review.rank.toFixed(1)}</p>
             </CircularProgressbarWithChildren>
             <p className={styles.topic}>{review.topic}</p>
