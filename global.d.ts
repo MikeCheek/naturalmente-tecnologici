@@ -21,7 +21,7 @@ declare type ImageDataType = {
 };
 
 declare type Edge = {
-  node: { childImageSharp: { gatsbyImageData: IGatsbyImageData } };
+  node: { childImageSharp: { gatsbyImageData: IGatsbyImageData }; name?: string };
 };
 
 declare type Data = {

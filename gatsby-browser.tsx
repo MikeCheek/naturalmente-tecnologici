@@ -5,3 +5,5 @@ import '@fontsource/poppins/800.css';
 import '@fontsource/cairo';
 import '@fontsource/cairo/900.css';
 import './src/styles/globals.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
