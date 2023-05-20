@@ -21,7 +21,7 @@ const Index = () => {
       </h4>
       <Heading text="Community Partner" />
       <div className={styles.wrap}>
-        <a href="http://www.hackability.it/" rel="noopener noreferrer" target="_blank">
+        {/*<a href="http://www.hackability.it/" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
             src="../../../images/partners/hackability.jpg"
@@ -29,7 +29,7 @@ const Index = () => {
             alt="Hackability"
             width={180}
           />
-        </a>
+        </a>*/}
         <a href="" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
