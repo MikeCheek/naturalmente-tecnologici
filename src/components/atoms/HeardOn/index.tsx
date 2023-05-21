@@ -24,6 +24,7 @@ const Index = () => {
         pauseOnHover
         swipeToSlide
         touchMove
+        waitForAnimate={false}
         responsive={[
           {
             breakpoint: 1700,
@@ -41,6 +42,8 @@ const Index = () => {
             breakpoint: 850,
             settings: {
               slidesToShow: 2,
+              speed: 2500,
+              autoplaySpeed: 2500,
             },
           },
           {
