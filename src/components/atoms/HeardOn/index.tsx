@@ -2,49 +2,10 @@ import React from 'react';
 import Slider from 'react-slick';
 import * as styles from './index.module.scss';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import AgenziaGiovani from '../../../assets/heardOn/agenziagiovani.svg';
-import useHeardOnImages from '../../../hooks/useHeardOnImages';
-
-const info = [
-  {
-    name: 'AGENZIA DI STAMPA GIOVANILE',
-
-    image: 'stampagiovanile',
-  },
-  {
-    name: 'RomaReport',
-
-    image: 'romareport',
-  },
-  {
-    name: 'AGENZIA NAZIONALE GIOVANI',
-
-    svg: AgenziaGiovani,
-  },
-  {
-    name: 'Basilicata 24',
-
-    image: 'basilicata24',
-  },
-  {
-    name: 'Sassi live',
-
-    image: 'sassilive',
-  },
-  // {
-  //   name: 'Basilicata a colori',
-  //
-  // },
-  // { name: 'Tecnica della scuola' },
-  // { name: 'TRM Network' },
-  // { name: 'TGR' },
-  // { name: 'VITA' },
-  // { name: 'WIRED' },
-  // { name: 'TEDx' },
-];
+import { info, images } from '../../../hooks/useHeardOn';
 
 const Index = () => {
-  const images = useHeardOnImages();
+  const data = images();
 
   return (
     <div className={styles.wrapper}>
@@ -92,12 +53,13 @@ const Index = () => {
           <div className={styles.slide} key={key}>
             <span>
               {elem.image ? (
-                images.allFile ? (
+                data.allFile ? (
                   <GatsbyImage
                     alt={elem.name}
                     loading="lazy"
+                    objectFit="contain"
                     image={
-                      images.allFile.edges.find((value) => value.node.name == elem.image)?.node.childImageSharp
+                      data.allFile.edges.find((value) => value.node.name == elem.image)?.node.childImageSharp
                         .gatsbyImageData
                     }
                     className={styles.image}
@@ -110,7 +72,7 @@ const Index = () => {
               ) : (
                 <></>
               )}
-              <span>{elem.name}</span>
+              {elem.showName ? <span>{elem.name}</span> : <></>}
             </span>
           </div>
         ))}

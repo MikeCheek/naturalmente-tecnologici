@@ -2,9 +2,9 @@
   width: 100%;
   margin: 5% 0;
   background-color: var(--nt-orange);
-  padding: 20px 10px;
+  padding: 5px 0;
   @media screen and (min-width: '768px') {
-    padding: 40px 20px;
+    padding: 10px 0;
   }
 
   h2 {
@@ -16,9 +16,13 @@
 }
 
 .image {
-  width: 100px;
+  width: fit-content;
+  height: 100%;
+  max-width: 100px;
+  max-height: 70px;
   @media screen and (min-width: '768px') {
-    width: 170px;
+    max-width: 170px;
+    max-height: 100px;
   }
 }
 
