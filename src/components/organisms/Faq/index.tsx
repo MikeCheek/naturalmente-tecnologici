@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading from '../../atoms/Heading';
-import data from './dataFAQ';
+import data from '../../../hooks/dataFAQ';
 import Accordion from '../../atoms/Accordion';
 import * as styles from './index.module.scss';
 
