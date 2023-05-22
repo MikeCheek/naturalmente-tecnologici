@@ -8,13 +8,11 @@ const Index = () => {
   return (
     <div className={styles.wrap}>
       <div className={styles.section}>
-        <Heading text="Facci sentire la tua voce!" />
+        <Heading text="Contattaci" />
         <p>
-          Hai un'idea?
+          Non hai trovato quello che cercavi?
           <br />
-          Vuoi proporre una collaborazione?
-          <br />
-          Vuoi saperne di più sull'evento?
+          Facci sentire la tua voce!
         </p>
         <p>
           Scrivici a{' '}

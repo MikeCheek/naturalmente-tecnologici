@@ -1,0 +1,75 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  text-align: center;
+
+  @media screen and (min-width: '768px') {
+    width: 80%;
+    text-align: left;
+  }
+
+  h3 {
+    color: var(--nt-orange);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--nt-orange);
+  }
+}
+
+.options {
+  border-radius: 20px;
+  border: 2px solid var(--nt-orange);
+  overflow: hidden;
+  background-color: var(--nt-dark-green);
+}
+
+.optionWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid var(--nt-orange);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+
+.optionTitle {
+  cursor: pointer;
+  color: var(--nt-orange);
+  background-color: var(--nt-dark-green);
+  margin: 0;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+
+  svg {
+    transition: transform 300ms ease;
+    will-change: transform;
+  }
+}
+
+.option {
+  max-height: 0px;
+  padding: 0 5%;
+  width: 90%;
+  overflow: hidden;
+  background-color: var(--nt-green);
+  transition: max-height 300ms ease-out;
+  will-change: max-height;
+  font-size: 0.9rem;
+
+  @media screen and (min-width: '768px') {
+    padding: 0 8%;
+    width: 84%;
+    font-size: 1.1rem;
+  }
+}

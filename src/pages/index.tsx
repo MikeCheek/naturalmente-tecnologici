@@ -7,12 +7,14 @@ import Theme from '../components/organisms/Theme';
 import WhenAndWhere from '../components/atoms/WhenAndWhere';
 import Reviews from '../components/atoms/Reviews';
 import 'react-circular-progressbar/dist/styles.css';
+import HeardOn from '../components/atoms/HeardOn';
 
 const IndexPage = () => {
   return (
     <Layout>
       <HeroHome />
       <Theme />
+      <HeardOn />
       <NaturalmenteTecnologici />
       <WhenAndWhere />
       <Reviews />
