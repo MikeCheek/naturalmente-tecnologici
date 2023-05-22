@@ -15,18 +15,21 @@ const Index = () => {
         </Link>
         <p className={styles.date}>11-13 Agosto 2023</p>
       </div>
-      <SocialLinks />
-      <p className={styles.who}>
-        Created with ❤ by{' '}
-        <a
-          href="https://michelepulvirenti.vercel.app/?r=nt23"
-          title="Michele Pulvirenti Website"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          Michele Pulvirenti
-        </a>
-      </p>
+      <div className={styles.bottom}>
+        <p>Copyright © APS Syskrack Giuseppe Porsia ETS</p>
+        <SocialLinks small />
+        <p>
+          Created with ❤ by{' '}
+          <a
+            href="https://michelepulvirenti.vercel.app/?r=nt23"
+            title="Michele Pulvirenti Website"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            Michele Pulvirenti
+          </a>
+        </p>
+      </div>
     </footer>
   );
 };

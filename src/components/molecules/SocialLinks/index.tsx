@@ -7,16 +7,17 @@ import Linkedin from '../../../assets/social/linkedin.svg';
 import Mail from '../../../assets/social/mail.svg';
 import { SocialLinksProps } from './index.types';
 
-const Index = ({ green, onlySocial }: SocialLinksProps) => {
+const Index = ({ green, onlySocial, small }: SocialLinksProps) => {
+  const dimension = small ? 40 : 50;
   return (
-    <div className={`${styles.socialIcons} ${green ? styles.wrapGreen : ''}`}>
+    <div className={`${small ? styles.smallSocialIcons : styles.socialIcons} ${green ? styles.wrapGreen : ''}`}>
       <a
         href="https://www.instagram.com/naturalmente_tecnologici/"
         rel="noopener noreferrer"
         title="Visita la nostra pagina Instagram"
         target="_blank"
       >
-        <Instagram width={50} height={50} fill="var(--nt-white)" />
+        <Instagram width={dimension} height={dimension} fill="var(--nt-white)" />
       </a>
       <a
         href="https://t.me/+AYplGqMtentlOTE0"
@@ -24,11 +25,11 @@ const Index = ({ green, onlySocial }: SocialLinksProps) => {
         title="Vai al canale Telegram delle News"
         target="_blank"
       >
-        <Telegram width={50} height={50} fill="var(--nt-white)" />
+        <Telegram width={dimension} height={dimension} fill="var(--nt-white)" />
       </a>
       {!onlySocial ? (
         <a href="mailto:direttivo@syskrack.org" rel="noopener noreferrer" title="Scrivici una Email" target="_blank">
-          <Mail width={50} height={50} fill="var(--nt-white)" />
+          <Mail width={dimension} height={dimension} fill="var(--nt-white)" />
         </a>
       ) : (
         <></>
@@ -39,7 +40,7 @@ const Index = ({ green, onlySocial }: SocialLinksProps) => {
         title="Visita la pagina Facebook dell'associazione"
         target="_blank"
       >
-        <Facebook width={50} height={50} fill="var(--nt-white)" />
+        <Facebook width={dimension} height={dimension} fill="var(--nt-white)" />
       </a>
       <a
         href="https://www.linkedin.com/company/syskrack-lab/"
@@ -47,7 +48,7 @@ const Index = ({ green, onlySocial }: SocialLinksProps) => {
         title="Visita la pagina Linkedin dell'associazione"
         target="_blank"
       >
-        <Linkedin width={50} height={50} fill="var(--nt-white)" style={{ borderRadius: '5px' }} />
+        <Linkedin width={dimension} height={dimension} fill="var(--nt-white)" style={{ borderRadius: '5px' }} />
       </a>
     </div>
   );

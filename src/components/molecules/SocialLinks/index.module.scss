@@ -3,6 +3,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
   @media screen and (min-width: '768px') {
     gap: 40px;
   }
@@ -32,6 +34,21 @@
     &:hover {
       fill: var(--nt-orange);
       transform: scale(1.05);
+    }
+  }
+}
+
+.smallSocialIcons {
+  @extend .socialIcons;
+  gap: 10px;
+  @media screen and (min-width: '768px') {
+    gap: 10px;
+  }
+
+  svg {
+    width: 30px;
+    @media screen and (min-width: '768px') {
+      width: 40px;
     }
   }
 }
