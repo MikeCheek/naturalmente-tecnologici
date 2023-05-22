@@ -36,6 +36,7 @@ export const organizers = [
     image: 4,
   },
   { name: 'Marouan Elkoura', role: 'Sponsor Specialist', image: 5 },
+  { name: 'Grazia Muro', role: 'Segretaria', image: 6 },
   // { name: 'Teodosio Santagata', role: 'Stage Manager' },
   // { name: 'Giovanni Restaino', role: 'Stage Manager' },
 ];
