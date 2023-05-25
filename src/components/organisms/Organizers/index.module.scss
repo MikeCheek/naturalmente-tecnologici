@@ -11,14 +11,13 @@
 .carousel {
   border-radius: 10px;
   z-index: 5;
-  margin-left: -10%;
-  margin-right: -10%;
   height: fit-content;
+  width: 90%;
 
   @media screen and (min-width: 768px) {
-    margin-left: 15%;
-    margin-right: 15%;
-    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
   }
 }
 
