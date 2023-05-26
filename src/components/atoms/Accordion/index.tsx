@@ -10,27 +10,35 @@ const Index = ({ title, data }: AccordionProps) => {
     <div className={styles.wrap}>
       <h3>{title}</h3>
       <div className={styles.options}>
-        {data.map((elem, key) =>
-          elem.text ? (
-            <div className={styles.optionWrap} style={key == 0 ? { borderTopWidth: '0' } : {}} key={key}>
-              <div className={styles.optionTitle} onClick={() => setSelected((curr) => (curr === key ? -1 : key))}>
-                <p>{elem.title}</p>
-                <Down
-                  width={30}
-                  height={30}
-                  style={selected === key ? { transform: 'rotate(180deg)' } : {}}
-                  fill="var(--nt-orange)"
-                />
-              </div>
+        {data
+          .map((elem, key) => ({ ...elem, id: key }))
+          .map((elem, key) =>
+            elem.text ? (
+              <div className={styles.optionWrap} style={elem.id == 0 ? { borderTopWidth: '0' } : {}} key={key}>
+                <div
+                  className={styles.optionTitle}
+                  onClick={() => setSelected((curr) => (curr === elem.id ? -1 : elem.id))}
+                >
+                  <p>{elem.title}</p>
+                  <Down
+                    width={30}
+                    height={30}
+                    style={selected === key ? { transform: 'rotate(180deg)' } : {}}
+                    fill="var(--nt-orange)"
+                  />
+                </div>
 
-              <span className={styles.option} style={selected === key ? { maxHeight: '1000px' } : {}}>
-                <p dangerouslySetInnerHTML={{ __html: elem.text ?? '' }}></p>
-              </span>
-            </div>
-          ) : (
-            <></>
-          )
-        )}
+                <span
+                  className={styles.option}
+                  style={selected === elem.id ? { maxHeight: '1000px', opacity: 1 } : { opacity: 0.5 }}
+                >
+                  <p dangerouslySetInnerHTML={{ __html: elem.text ?? '' }}></p>
+                </span>
+              </div>
+            ) : (
+              <></>
+            )
+          )}
       </div>
     </div>
   );
