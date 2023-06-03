@@ -54,3 +54,11 @@
     height: 40px;
   }
 }
+
+.logoOrizontal {
+  @extend .logo;
+  height: 20px;
+  @media screen and (min-width: 768px) {
+    height: 40px;
+  }
+}
