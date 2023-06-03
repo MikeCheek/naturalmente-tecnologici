@@ -53,7 +53,7 @@ const Index = () => {
       <Heading text="Activity Partner" />
       <div className={styles.wrap}>
         <a href="https://skillsbuild.org/" rel="noopener noreferrer" target="_blank">
-          <IBM className={styles.logoOrizontal} height={40} />
+          <IBM className={styles.logoHorizontal} height={40} />
         </a>
       </div>
     </div>
