@@ -46,3 +46,13 @@
     width: 170px;
   }
 }
+
+.logoHorizontal {
+  @extend .logo;
+  height: 20px;
+  width: fit-content !important;
+  @media screen and (min-width: 768px) {
+    height: 40px;
+    width: fit-content !important;
+  }
+}
