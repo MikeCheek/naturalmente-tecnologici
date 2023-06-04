@@ -1,6 +1,6 @@
-import Ticket from '../assets/ticket-1.svg';
-import Tickets from '../assets/ticket-2.svg';
-import Vip from '../assets/vip.svg';
+// import Ticket from '../assets/ticket-1.svg';
+// import Tickets from '../assets/ticket-2.svg';
+// import Vip from '../assets/vip.svg';
 
 export const organizers = [
   {
@@ -41,26 +41,26 @@ export const organizers = [
   // { name: 'Giovanni Restaino', role: 'Stage Manager' },
 ];
 
-export const tickets = [
-  {
-    icon: Ticket,
-    name: 'Biglietto giornaliero',
-    price: 25,
-    url: 'https://syskrack.org',
-  },
+// export const tickets = [
+//   {
+//     icon: Ticket,
+//     name: 'Biglietto giornaliero',
+//     price: 25,
+//     url: 'https://syskrack.org',
+//   },
 
-  {
-    icon: Tickets,
-    name: 'Biglietto 3 giorni',
-    price: 70,
-    url: 'https://syskrack.org',
-  },
-  {
-    icon: Vip,
-    name: 'Biglietto Super Show',
-    price: 30,
-    url: 'https://syskrack.org',
-  },
-];
+//   {
+//     icon: Tickets,
+//     name: 'Biglietto 3 giorni',
+//     price: 70,
+//     url: 'https://syskrack.org',
+//   },
+//   {
+//     icon: Vip,
+//     name: 'Biglietto Super Show',
+//     price: 30,
+//     url: 'https://syskrack.org',
+//   },
+// ];
 
-export const discount = 10;
+// export const discount = 10;
