@@ -2,7 +2,7 @@ import React from 'react';
 import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../hooks/useSiteMetadata';
 import { links } from '../../../hooks/navigation';
-import { DefaultTicketProps, tickets } from 'src/hooks/useInfo';
+import { DefaultTicketProps, tickets } from '../../../hooks/useInfo';
 
 const Index = ({
   lang = 'it',
@@ -91,7 +91,7 @@ const Index = ({
           lowPrice: Math.min(...tickets.map((ticket) => ticket.price)),
           offerCount: tickets.length,
           sameAs: [
-            'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067'
+            'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
           ],
           offers: tickets.map((ticket) => ({
             '@type': 'Offer',
@@ -110,7 +110,7 @@ const Index = ({
         sameAs: [
           'https://www.wikidata.org/wiki/Q117883453', // INFO: (Link evento [2023] aggiunto su Wikidata)
           'https://www.wikidata.org/wiki/Q117881465', // INFO: (Link evento aggiunto su Wikidata)
-          'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067'
+          'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
         ],
       },
     ],
