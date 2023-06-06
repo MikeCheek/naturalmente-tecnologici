@@ -1,8 +1,8 @@
 import React from 'react';
 import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../hooks/useSiteMetadata';
-import { tickets } from '../../../hooks/useInfo';
 import { links } from '../../../hooks/navigation';
+import { DefaultTicketProps, tickets } from 'src/hooks/useInfo';
 
 const Index = ({
   lang = 'it',
@@ -60,51 +60,57 @@ const Index = ({
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
         isAccessibleForFree: false,
         inLanguage: 'IT',
-        logo: metadata.siteUrl + '/favicon.ico',
-        //TODO: Rimettere appena sarà confermata la location
-        // location: {
-        //   '@type': 'Place',
-        //   name: 'Tenuta Bronzino',
-        //   url: 'https://www.tenutabronzino.it/',
-        //   address: {
-        //     '@type': 'PostalAddress',
-        //     streetAddress: 'Contrada, Via S. Donato',
-        //     addressLocality: 'Grottole',
-        //     addressRegion: 'MT',
-        //     postalCode: '75010',
-        //     addressCountry: 'Italy',
-        //   },
-        //   sameAs: ['http://www.tenutabronzino.it/', 'https://goo.gl/maps/rs5PWEJgcMtwMRBNA'],
-        // },
+        location: {
+          '@type': 'Place',
+          name: 'Podus - Bosco Coste',
+          url: 'http://www.podus.it/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Bosco Coste',
+            addressLocality: 'Grottole',
+            addressRegion: 'MT',
+            postalCode: '75010',
+            addressCountry: 'Italy',
+          },
+          sameAs: ['https://goo.gl/maps/bVJXkHquwbvapgWR6', 'https://goo.gl/maps/YLQ778t7ZbGhkpHt9'],
+        },
         organizer: {
           '@type': 'Organization',
           name: 'Syskrack Giuseppe Porsia',
           url: 'https://www.syskrack.org/',
           sameAs: ['https://www.wikidata.org/wiki/Q116907424', 'https://syskrack.org/'],
         },
-
-        //TODO: Rimettere appena partiranno i biglietti
-        // offers: {
-        //   '@type': 'AggregateOffer',
-        //   highPrice: Math.max(...tickets.map((ticket) => ticket.price)),
-        //   lowPrice: Math.min(...tickets.map((ticket) => ticket.price)),
-        //   offerCount: tickets.length,
-        //   priceCurrency: 'EUR',
-        //   offer: tickets.map((ticket) => ({
-        //     '@type': 'Offer',
-        //     url: ticket.url,
-        //     name: ticket.name,
-        //     availability: 'https://schema.org/PreOrder',
-        //     validFrom: '2023-08-11T09:00:00.000Z',
-        //     validThrough: '2023-08-13T23:59:59.999Z',
-        //     description: ticket.name,
-        //     price: ticket.price,
-        //     priceCurrency: 'EUR',
-        //   })),
-        // },
+        typicalAgeRange: '18-',
+        offer: {
+          '@type': 'AggregateOffer',
+          availabilityStarts: '2023-06-1T00:00:00.000Z',
+          availabilityEnds: '2023-08-13T23:59:59.999Z',
+          validFrom: '2023-08-10T18:00:00.000Z',
+          validThrough: '2023-08-14T10:59:59.999Z',
+          highPrice: Math.max(...tickets.map((ticket) => ticket.price)),
+          lowPrice: Math.min(...tickets.map((ticket) => ticket.price)),
+          offerCount: tickets.length,
+          sameAs: [
+            'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067'
+          ],
+          offers: tickets.map((ticket) => ({
+            '@type': 'Offer',
+            url: DefaultTicketProps.url,
+            name: ticket.name,
+            availability: 'https://schema.org/PreOrder',
+            availabilityStarts: ticket.availabilityStarts,
+            availabilityEnds: ticket.availabilityEnds,
+            validFrom: ticket.validFrom,
+            validThrough: ticket.validThrough,
+            description: ticket.description,
+            price: ticket.price,
+            priceCurrency: DefaultTicketProps.priceCurrency,
+          })),
+        },
         sameAs: [
           'https://www.wikidata.org/wiki/Q117883453', // INFO: (Link evento [2023] aggiunto su Wikidata)
           'https://www.wikidata.org/wiki/Q117881465', // INFO: (Link evento aggiunto su Wikidata)
+          'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067'
         ],
       },
     ],
