@@ -3,6 +3,7 @@ import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../hooks/useSiteMetadata';
 import { links } from '../../../hooks/navigation';
 import { DefaultTicketProps, tickets } from '../../../hooks/useInfo';
+import dataFAQ from '../../../hooks/dataFAQ';
 
 const Index = ({
   lang = 'it',
@@ -112,6 +113,21 @@ const Index = ({
           'https://www.wikidata.org/wiki/Q117881465', // INFO: (Link evento aggiunto su Wikidata)
           'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
         ],
+      },
+      {
+        '@context': 'https://schema.org/',
+        '@type': 'FAQPage',
+        mainEntity: dataFAQ
+          .map((data) => data.data)
+          .reduce((elem1, elem2) => elem1.concat(elem2))
+          .map((faq) => ({
+            '@type': 'Question',
+            name: faq.title,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.text,
+            },
+          })),
       },
     ],
   };
