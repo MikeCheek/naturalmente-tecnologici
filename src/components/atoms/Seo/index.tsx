@@ -119,13 +119,13 @@ const Index = ({
         '@type': 'FAQPage',
         mainEntity: dataFAQ
           .map((data) => data.data)
-          .reduce((elem1, elem2) => elem1.concat(elem2))
+          .reduce((elem1, elem2) => [...elem1, ...elem2])
           .map((faq) => ({
             '@type': 'Question',
             name: faq.title,
             acceptedAnswer: {
               '@type': 'Answer',
-              text: faq.text,
+              text: faq.text.replace(/<\/?[^>]+(>|$)/g, ''),
             },
           })),
       },
