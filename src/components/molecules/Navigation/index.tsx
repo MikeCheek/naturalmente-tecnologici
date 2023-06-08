@@ -2,8 +2,8 @@ import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
 import { NavigationProps } from './index.types';
-import { showPopUp } from '../../../hooks/newsletter';
-import { links } from '../../../hooks/navigation';
+import { showPopUp } from '../../../utilities/newsletter';
+import { links } from '../../../utilities/navigation';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();

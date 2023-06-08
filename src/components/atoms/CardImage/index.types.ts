@@ -3,4 +3,5 @@ export interface CardImageProps {
   reversed?: boolean;
   onlyMobile?: boolean;
   onlyDesktop?: boolean;
+  bigger?: boolean;
 }

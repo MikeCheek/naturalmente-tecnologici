@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import * as styles from './index.module.scss';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { info, images } from '../../../hooks/useHeardOn';
+import { info, images } from '../../../utilities/heardOn';
 
 const Index = () => {
   const data = images();

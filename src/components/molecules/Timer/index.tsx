@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
-import randInt from '../../../hooks/randInt';
+import randInt from '../../../utilities/randInt';
 import { TimerProps } from './index.types';
 
 const Index = ({ shutOffTimer, date }: TimerProps) => {

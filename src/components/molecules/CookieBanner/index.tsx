@@ -4,7 +4,7 @@ import X from '../../../assets/x.svg';
 import CookieBannerProps from './index.types';
 import Down from '../../../assets/down.svg';
 import Cookies from 'js-cookie';
-import { CookiesNames, options } from '../../../hooks/cookies';
+import { CookiesNames, options } from '../../../utilities/cookies';
 
 const Index = ({ close }: CookieBannerProps) => {
   const [showOptions, setShowOptions] = useState<boolean>(false);

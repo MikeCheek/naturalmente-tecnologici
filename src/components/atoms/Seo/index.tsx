@@ -1,9 +1,9 @@
 import React from 'react';
 import { SeoProps } from './index.types';
-import useSiteMetadata from '../../../hooks/useSiteMetadata';
-import { links } from '../../../hooks/navigation';
-import { DefaultTicketProps, tickets } from '../../../hooks/useInfo';
-import dataFAQ from '../../../hooks/dataFAQ';
+import useSiteMetadata from '../../../utilities/useSiteMetadata';
+import { links } from '../../../utilities/navigation';
+import { DefaultTicketProps, info as tickets } from '../../../utilities/tickets';
+import dataFAQ from '../../../utilities/dataFAQ';
 
 const Index = ({
   lang = 'it',

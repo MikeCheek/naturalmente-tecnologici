@@ -3,11 +3,11 @@ import * as styles from './index.module.scss';
 import Cloud from '../../atoms/Cloud';
 import CardPerson from '../../molecules/CardPerson';
 import { StaticImage } from 'gatsby-plugin-image';
-import { organizers } from '../../../hooks/useInfo';
+import { info } from '../../../utilities/organizers';
 import Heading from '../../atoms/Heading';
 
 const Index = () => {
-  const organizer = organizers[1];
+  const organizer = info[1];
 
   return (
     <div className={styles.bigWrap}>

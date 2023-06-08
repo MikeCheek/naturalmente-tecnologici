@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
-import { showPopUp } from '../../../hooks/newsletter';
+import { showPopUp } from '../../../utilities/newsletter';
 import Button from '../../atoms/Button';
 
 const Index = () => {

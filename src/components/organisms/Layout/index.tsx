@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 
 import * as styles from './index.module.scss';
 import CookieBanner from '../../molecules/CookieBanner';
-import { CookiesNames } from '../../../hooks/cookies';
+import { CookiesNames } from '../../../utilities/cookies';
 import FlyingInsects from '../../molecules/FlyingInsects';
 import Footer from '../../molecules/Footer';
 import { LayoutProps } from './index.types';

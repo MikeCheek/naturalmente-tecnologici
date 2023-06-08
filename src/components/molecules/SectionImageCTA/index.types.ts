@@ -1,6 +1,6 @@
 export interface SectionImageCTAProps {
   image: React.ReactElement;
-  title: string;
+  title?: string;
   text: string;
   buttonText: string;
   buttonHref: string;

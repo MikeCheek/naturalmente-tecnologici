@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-const useOrganizers = () => {
+export const images = () => {
   const data: Data = useStaticQuery(graphql`
-    query AssetsPhotos {
+    query SyskrackImages {
       allFile(
-        filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, dir: { regex: "src/images/crew/" } }
+        filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, dir: { regex: "src/images/syskrack/" } }
         sort: { name: ASC }
       ) {
         edges {
@@ -12,7 +12,7 @@ const useOrganizers = () => {
             id
             name
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 300, quality: 80)
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 700, quality: 90)
             }
           }
         }
@@ -22,5 +22,3 @@ const useOrganizers = () => {
 
   return data;
 };
-
-export default useOrganizers;

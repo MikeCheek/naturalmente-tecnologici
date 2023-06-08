@@ -3,7 +3,7 @@ import * as styles from './index.module.scss';
 import CardAction from '../../atoms/CardAction';
 import Timer from '../Timer';
 import Heading from '../../atoms/Heading';
-import { discount, tickets } from '../../../hooks/useInfo';
+import { discount, tickets } from '../../../utilities/tickets';
 
 const Index = () => {
   return (

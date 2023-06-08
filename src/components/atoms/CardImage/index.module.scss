@@ -10,6 +10,17 @@
   overflow: hidden;
 }
 
+.sectionImage {
+  @extend .image;
+  width: auto;
+  @media screen and (min-width: '768px') {
+    min-width: 40vw;
+    max-width: 40vw;
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+}
+
 .orange {
   border-radius: 15px;
   background-color: var(--nt-orange);
