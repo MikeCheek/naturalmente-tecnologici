@@ -82,8 +82,9 @@ const Index = ({
           sameAs: ['https://www.wikidata.org/wiki/Q116907424', 'https://syskrack.org/'],
         },
         typicalAgeRange: '18-',
-        offer: {
+        offers: {
           '@type': 'AggregateOffer',
+          url:'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
           availabilityStarts: '2023-06-1T00:00:00.000Z',
           availabilityEnds: '2023-08-13T23:59:59.999Z',
           validFrom: '2023-08-10T18:00:00.000Z',
@@ -91,6 +92,8 @@ const Index = ({
           highPrice: Math.max(...tickets.map((ticket) => ticket.price)),
           lowPrice: Math.min(...tickets.map((ticket) => ticket.price)),
           offerCount: tickets.length,
+          priceCurrency: DefaultTicketProps.priceCurrency,
+          availability: 'https://schema.org/PreOrder',
           sameAs: [
             'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
           ],
