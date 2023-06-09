@@ -14,12 +14,21 @@ const Index = () => {
           <br />
           Facci sentire la tua voce!
         </p>
-        <p>
+        <iframe
+          data-tally-src="https://tally.so/embed/w7b1Xa?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="100"
+          title="CONTATTACI"
+          style={{ border: 'none', minWidth: '70vw' }}
+        ></iframe>
+
+        {/* <p>
           Scrivici a{' '}
           <a title="Scrivici una mail" href="mailto:direttivo@syskrack.org">
             direttivo@syskrack.org
           </a>
-        </p>
+        </p> */}
       </div>
       <div className={styles.section}>
         <Heading text="Newsletter" />

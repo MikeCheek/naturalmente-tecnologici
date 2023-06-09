@@ -84,7 +84,7 @@ const Index = ({
         typicalAgeRange: '18-',
         offers: {
           '@type': 'AggregateOffer',
-          url:'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
+          url: 'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
           availabilityStarts: '2023-06-1T00:00:00.000Z',
           availabilityEnds: '2023-08-13T23:59:59.999Z',
           validFrom: '2023-08-10T18:00:00.000Z',
@@ -189,7 +189,17 @@ const Index = ({
       <link rel="preconnect" href="https://www.google.com/" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://assets.mlcdn.com" />
-
+      {/* <script defer src="https://tally.so/widgets/embed.js"></script> */}
+      <script
+        defer
+        dangerouslySetInnerHTML={{
+          __html: `
+      var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():
+      d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};
+      if("undefined"!=typeof Tally)v();
+      else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}`,
+        }}
+      ></script>
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
       {children}
     </>
