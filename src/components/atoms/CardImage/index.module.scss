@@ -8,6 +8,8 @@
   border-radius: 15px;
   position: relative;
   overflow: hidden;
+  transition: transform 500ms ease;
+  will-change: transform;
 }
 
 .sectionImage {
@@ -24,9 +26,6 @@
 .orange {
   border-radius: 15px;
   background-color: var(--nt-orange);
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   transform: rotate(-10deg);
@@ -38,6 +37,16 @@
   transform: rotate(10deg);
   animation-direction: alternate-reverse;
   animation-name: rotateReversed;
+}
+
+.orangeWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+  will-change: transform;
 }
 
 .onlyMobile {
