@@ -20,7 +20,7 @@ const Index = () => {
           width="100%"
           height="100"
           title="CONTATTACI"
-          style={{ border: 'none', minWidth: '70vw' }}
+          className={styles.form}
         ></iframe>
 
         {/* <p>

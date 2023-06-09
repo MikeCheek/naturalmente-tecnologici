@@ -24,3 +24,10 @@
   justify-content: center;
   margin: 40px 0;
 }
+
+.form {
+  border: 2px var(--nt-orange) solid;
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 70vw;
+}
