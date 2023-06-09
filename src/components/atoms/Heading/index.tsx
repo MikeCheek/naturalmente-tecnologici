@@ -6,7 +6,10 @@ const Index = ({ text, marginTop = false }: HeadingProps) => {
   return (
     <div
       className={styles.headingWrap}
-      id={text.toLowerCase().replace(/ /g, '-')}
+      id={text
+        .toLowerCase()
+        .replace(/ /g, '-')
+        .replace(/[^(a-z0-9\-)]/gi, '')}
       style={marginTop ? { marginTop: '70px' } : {}}
     >
       <div className={styles.orange}></div>
