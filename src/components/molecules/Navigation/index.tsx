@@ -5,14 +5,15 @@ import { NavigationProps } from './index.types';
 import { showPopUp } from '../../../utilities/newsletter';
 import { links } from '../../../utilities/navigation';
 import MultipleLinks from '../../atoms/MultipleLinks';
+import { isBrowser } from '../../../utilities/browser';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
   const removeSlashes = (text?: string) => (text ? text.replace(/\//g, '') : '');
 
   useEffect(() => {
-    setPathname(window.location.pathname);
-  }, [window.location]);
+    if (isBrowser()) setPathname(window.location.pathname);
+  }, []);
 
   const linkElements = links.map((link, key) => {
     if (link.hide) return;

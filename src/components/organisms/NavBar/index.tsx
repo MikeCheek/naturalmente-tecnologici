@@ -5,6 +5,7 @@ import Hamburger from '../../../assets/hamburger.svg';
 import X from '../../../assets/x.svg';
 import Navigation from '../../molecules/Navigation';
 import { Link } from 'gatsby';
+import { isBrowser } from '../../../utilities/browser';
 
 const Index = () => {
   const [opened, setOpened] = useState<boolean>(false);
@@ -44,8 +45,8 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    setOn(true);
-  }, [window.location]);
+    if (isBrowser() && window.location.pathname === '/') setOn(true);
+  }, []);
 
   return (
     <header
