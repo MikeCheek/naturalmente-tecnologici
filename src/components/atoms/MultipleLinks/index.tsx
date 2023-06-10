@@ -11,7 +11,7 @@ const Index = ({ name, active = false, children }: MultipleLinksProps) => {
         className={styles.name}
         onClick={() => setShow((curr) => !curr)}
         style={active ? { color: 'var(--nt-orange)' } : {}}
-        onMouseEnter={() => setShow(true)}
+        // onMouseEnter={() => setShow(true)}
       >
         <span>{name}</span>
         <Down
@@ -25,7 +25,7 @@ const Index = ({ name, active = false, children }: MultipleLinksProps) => {
       </p>
       <div
         className={styles.links}
-        onMouseLeave={() => setShow(false)}
+        // onMouseLeave={() => setShow(false)}
         style={show ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(0, -20%)', opacity: 0 }}
       >
         {children}
