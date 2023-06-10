@@ -53,7 +53,11 @@ const Index = () => {
           height="64.45"
           style={{
             fill:
-              window.location.pathname === '/' ? 'var(--nt-orange)' : opened ? 'var(--nt-green)' : 'var(--nt-white)',
+              typeof window !== 'undefined' && window.location.pathname === '/'
+                ? 'var(--nt-orange)'
+                : opened
+                ? 'var(--nt-green)'
+                : 'var(--nt-white)',
           }}
         />
       </Link>
