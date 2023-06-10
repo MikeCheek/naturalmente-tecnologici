@@ -12,7 +12,7 @@ const Index = ({ name, active = false, children }: MultipleLinksProps) => {
         onClick={() => setShow((curr) => !curr)}
         style={active ? { color: 'var(--nt-orange)' } : {}}
       >
-        {name}
+        {name}{' '}
         <Down
           width={20}
           height={20}
