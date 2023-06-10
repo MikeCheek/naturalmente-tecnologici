@@ -41,12 +41,23 @@ const Index = ({
       {
         '@context': 'https://www.schema.org',
         '@type': 'BreadcrumbList',
-        itemListElement: links.map((link) => ({
-          '@type': 'ListItem',
-          position: link.position,
-          name: link.name,
-          item: metadata.siteUrl + link.to,
-        })),
+        itemListElement: links
+          .map((link) =>
+            link.multiple
+              ? link.links.map((l) => ({
+                  '@type': 'ListItem',
+                  position: l.position,
+                  name: l.name,
+                  item: metadata.siteUrl + l.to,
+                }))
+              : {
+                  '@type': 'ListItem',
+                  position: link.position,
+                  name: link.name,
+                  item: metadata.siteUrl + link.to,
+                }
+          )
+          .flat(),
       },
       {
         '@context': 'https://www.schema.org',

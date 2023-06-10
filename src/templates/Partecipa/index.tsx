@@ -11,7 +11,6 @@ interface IndexProps {
 }
 
 const Index = ({ pageContext }: IndexProps) => {
-  console.log(pageContext);
   return (
     <Layout>
       <div className={styles.head}>
@@ -34,8 +33,6 @@ const Index = ({ pageContext }: IndexProps) => {
 export default Index;
 
 export const Head = ({ location, pageContext }: HeadProps) => {
-  console.log(location, pageContext);
-
   const context = pageContext as PartecipaData;
 
   return (

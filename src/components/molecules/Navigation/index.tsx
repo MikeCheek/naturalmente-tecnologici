@@ -7,7 +7,6 @@ import { links } from '../../../utilities/navigation';
 import MultipleLinks from '../../atoms/MultipleLinks';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
-  console.log(links);
   const [pathname, setPathname] = useState<string>();
   const removeSlashes = (text?: string) => (text ? text.replace(/\//g, '') : '');
 
