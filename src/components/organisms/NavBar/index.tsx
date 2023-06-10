@@ -10,6 +10,7 @@ const Index = () => {
   const [opened, setOpened] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(true);
   const [shadow, setShadow] = useState<boolean>(false);
+  const [on, setOn] = useState<boolean>(false);
 
   let prev = 0;
 
@@ -38,6 +39,7 @@ const Index = () => {
   };
 
   useEffect(() => {
+    if (window.location.pathname === '/') setOn(true);
     window.addEventListener('scroll', handleScroll);
     return window.removeEventListener('scroll', () => {});
   }, []);
@@ -52,12 +54,7 @@ const Index = () => {
           width="195"
           height="64.45"
           style={{
-            fill:
-              typeof window !== 'undefined' && window.location.pathname === '/'
-                ? 'var(--nt-orange)'
-                : opened
-                ? 'var(--nt-green)'
-                : 'var(--nt-white)',
+            fill: on ? 'var(--nt-orange)' : opened ? 'var(--nt-green)' : 'var(--nt-white)',
           }}
         />
       </Link>
