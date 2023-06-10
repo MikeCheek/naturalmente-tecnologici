@@ -39,10 +39,13 @@ const Index = () => {
   };
 
   useEffect(() => {
-    if (window.location.pathname === '/') setOn(true);
     window.addEventListener('scroll', handleScroll);
     return window.removeEventListener('scroll', () => {});
   }, []);
+
+  useEffect(() => {
+    setOn(true);
+  }, [window.location]);
 
   return (
     <header
