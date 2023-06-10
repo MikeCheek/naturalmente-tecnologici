@@ -6,11 +6,12 @@ import Down from '../../../assets/down.svg';
 const Index = ({ name, active = false, children }: MultipleLinksProps) => {
   const [show, setShow] = useState<boolean>(false);
   return (
-    <div className={styles.wrap} onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+    <div className={styles.wrap}>
       <p
         className={styles.name}
         onClick={() => setShow((curr) => !curr)}
         style={active ? { color: 'var(--nt-orange)' } : {}}
+        onMouseEnter={() => setShow(true)}
       >
         {name}{' '}
         <Down
@@ -24,7 +25,8 @@ const Index = ({ name, active = false, children }: MultipleLinksProps) => {
       </p>
       <div
         className={styles.links}
-        style={show ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(0, -100%)', opacity: 0 }}
+        onMouseLeave={() => setShow(false)}
+        style={show ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(0, -20%)', opacity: 0 }}
       >
         {children}
       </div>
