@@ -6,7 +6,7 @@ import Down from '../../../assets/down.svg';
 const Index = ({ name, active = false, children }: MultipleLinksProps) => {
   const [show, setShow] = useState<boolean>(false);
   return (
-    <div className={styles.wrap} style={{ overflowY: show ? 'unset' : 'hidden' }}>
+    <div className={show ? styles.wrapShown : styles.wrap} style={{ overflowY: show ? 'unset' : 'hidden' }}>
       <p
         className={styles.name}
         onClick={() => setShow((curr) => !curr)}

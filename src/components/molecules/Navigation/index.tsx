@@ -12,7 +12,7 @@ const Index = ({ opened, onClick }: NavigationProps) => {
 
   useEffect(() => {
     setPathname(window.location.pathname);
-  }, []);
+  }, [window.location]);
 
   const linkElements = links.map((link, key) => {
     if (link.hide) return;
