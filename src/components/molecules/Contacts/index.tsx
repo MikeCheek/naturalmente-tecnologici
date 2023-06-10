@@ -18,7 +18,7 @@ const Index = () => {
           data-tally-src="https://tally.so/embed/w7b1Xa?hideTitle=1&transparentBackground=1&dynamicHeight=1"
           loading="lazy"
           width="100%"
-          height="100"
+          height="510"
           title="CONTATTACI"
           className={styles.form}
         ></iframe>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { CardImageProps } from './index.types';
 import * as styles from './index.module.scss';
+import { CardImageProps } from './index.types';
 
 const Index = ({
   children,

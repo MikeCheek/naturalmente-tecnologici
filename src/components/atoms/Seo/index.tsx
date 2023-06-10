@@ -191,7 +191,6 @@ const Index = ({
       <link rel="preconnect" href="https://assets.mlcdn.com" />
       {/* <script defer src="https://tally.so/widgets/embed.js"></script> */}
       <script
-        defer
         dangerouslySetInnerHTML={{
           __html: `
       var d=document,

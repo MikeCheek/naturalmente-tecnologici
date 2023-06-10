@@ -1,0 +1,41 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.links {
+  transition: transform 200ms ease-in-out;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  z-index: -1;
+
+  a {
+    margin: 10px 5px;
+  }
+
+  @media screen and (min-width: '992px') {
+    background-color: var(--nt-green);
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0, 0.25);
+    padding: 5px 10px;
+  }
+}
+
+.name {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  svg {
+    transition: transform 200ms ease;
+    will-change: transform;
+  }
+}

@@ -39,7 +39,6 @@ const Index = () => {
             layout="constrained"
             width={700}
             height={500}
-            className={styles.image}
           />
         }
       />
@@ -59,7 +58,6 @@ const Index = () => {
             layout="constrained"
             width={700}
             height={500}
-            className={styles.image}
           />
         }
         reversed
