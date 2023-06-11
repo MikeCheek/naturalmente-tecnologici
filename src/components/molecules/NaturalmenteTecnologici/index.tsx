@@ -6,12 +6,28 @@ import Section from '../Section';
 import Bug from '../../../assets/bug.svg';
 import Insects from '../../../assets/insects.svg';
 import { info } from '../../../utilities/naturalmenteTecnologici';
+import whatIs from '../../../utilities/whatIs';
+import SingleSection from '../../atoms/SingleSection';
+import Button from '../../atoms/Button';
 
 const Index = () => {
   return (
     <div className={styles.wrap}>
-      <Heading text="Naturalmente Tecnologici" />
-      <div></div>
+      <div className={styles.singleSectionsWrap}>
+        {whatIs.map((item, key) => (
+          <div className={styles.singleSections} style={item.big ? {} : { maxWidth: '500px' }} key={key}>
+            <Heading text={item.name} />
+            <SingleSection>
+              <p dangerouslySetInnerHTML={{ __html: item.text }}></p>
+              {item.eventbrite ? (
+                <Button text={'Riserva il tuo posto qui!'} href="#top" title={'Riserva il tuo posto qui!'}></Button>
+              ) : (
+                <></>
+              )}
+            </SingleSection>
+          </div>
+        ))}
+      </div>
       {info.map((item, key) => {
         return (
           <Section

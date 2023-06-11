@@ -5,6 +5,7 @@ import CardPerson from '../../molecules/CardPerson';
 import { StaticImage } from 'gatsby-plugin-image';
 import { info } from '../../../utilities/organizers';
 import Heading from '../../atoms/Heading';
+import SingleSection from '../../atoms/SingleSection';
 
 const Index = () => {
   const organizer = info[1];
@@ -12,13 +13,13 @@ const Index = () => {
   return (
     <div className={styles.bigWrap}>
       <Heading text="Tema" />
-      <div className={styles.wrap}>
+      <SingleSection>
         <h3>
           RIPRENDIAMOCI IL FUTURO.
           <br />
           RAGIONAMENTI COMPLESSI SULL'ACCELERAZIONE DEI NOSTRI TEMPI
         </h3>
-      </div>
+      </SingleSection>
       <div className={styles.theme}>
         <Cloud
           text="Ciao sono Giuseppe Becci, l'organizzatore dell'evento Naturalmente Tecnologici.<br/><br/>Se l'innovazione non è anche sociale, allora è speculazione sull'ignoranza degli altri.<br/>
