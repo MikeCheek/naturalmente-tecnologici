@@ -5,8 +5,7 @@ import Heading from '../../atoms/Heading';
 import Section from '../Section';
 import Bug from '../../../assets/bug.svg';
 import Insects from '../../../assets/insects.svg';
-import { info } from '../../../utilities/naturalmenteTecnologici';
-import whatIs from '../../../utilities/whatIs';
+import { info, whatIs } from '../../../utilities/naturalmenteTecnologici';
 import SingleSection from '../../atoms/SingleSection';
 import Button from '../../atoms/Button';
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PartecipaData } from '../../utilities/partecipaData';
 import * as styles from './index.module.scss';
 import Seo from '../../components/atoms/Seo';
@@ -13,6 +13,11 @@ interface IndexProps {
 
 const Index = ({ pageContext }: IndexProps) => {
   const [loading, setLoading] = useState<boolean>(true);
+  const [loaded, setLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (loaded) setLoading(false);
+  }, [loaded]);
 
   return (
     <Layout>
@@ -30,7 +35,7 @@ const Index = ({ pageContext }: IndexProps) => {
           height={loading ? '0' : '420'}
           title="CONTATTACI"
           className={styles.form}
-          onLoad={() => setLoading(false)}
+          onLoad={() => setLoaded(true)}
         ></iframe>
       </div>
     </Layout>
