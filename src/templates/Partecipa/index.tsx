@@ -12,12 +12,12 @@ interface IndexProps {
 }
 
 const Index = ({ pageContext }: IndexProps) => {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    if (loaded) setLoading(false);
-  }, [loaded]);
+    if (!loaded) setLoading(true);
+  }, []);
 
   return (
     <Layout>
@@ -35,7 +35,10 @@ const Index = ({ pageContext }: IndexProps) => {
           height={loading ? '0' : '420'}
           title="CONTATTACI"
           className={styles.form}
-          onLoad={() => setLoaded(true)}
+          onLoad={() => {
+            setLoaded(true);
+            setLoading(false);
+          }}
         ></iframe>
       </div>
     </Layout>
