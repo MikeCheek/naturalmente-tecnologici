@@ -6,7 +6,7 @@ import Down from '../../../assets/down.svg';
 const Index = ({ name, active = false, children }: MultipleLinksProps) => {
   const [show, setShow] = useState<boolean>(false);
   return (
-    <div className={show ? styles.wrapShown : styles.wrap} style={{ overflowY: show ? 'unset' : 'hidden' }}>
+    <div className={show ? styles.wrapShown : styles.wrap}>
       <p
         className={styles.name}
         onClick={() => setShow((curr) => !curr)}
@@ -26,7 +26,7 @@ const Index = ({ name, active = false, children }: MultipleLinksProps) => {
       <div
         className={styles.links}
         // onMouseLeave={() => setShow(false)}
-        style={show ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(0, -20%)', opacity: 0 }}
+        style={show ? { transform: 'translate(0, 0)', opacity: 1, pointerEvents: 'auto' } : {}}
       >
         {children}
       </div>
