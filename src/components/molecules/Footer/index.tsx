@@ -4,6 +4,7 @@ import Separator from '../../atoms/Separator';
 import LogoNT from '../../../assets/logo-nt.svg';
 import { Link } from 'gatsby';
 import SocialLinks from '../SocialLinks';
+import { links } from '../../../utilities/navigation';
 
 const Index = () => {
   return (
@@ -14,6 +15,29 @@ const Index = () => {
           <LogoNT width="266" height="87.92" style={{ fill: 'var(--nt-orange)' }} />
         </Link>
         <p className={styles.date}>11-13 Agosto 2023</p>
+      </div>
+      <div className={styles.sitemap}>
+        <h4>Mappa del sito</h4>
+        <div className={styles.links}>
+          {links
+            .filter((l) => !l.multiple)
+            .map((link, key) => (
+              <Link key={key} to={link.to ?? ''} title={`Vai alla pagina ${link.name}`}>
+                {link.name}
+              </Link>
+            ))}
+        </div>
+        <div className={styles.links}>
+          {links
+            .filter((l) => l.multiple)
+            .map((link) =>
+              link.links?.map((l, key) => (
+                <Link key={key} to={l.to ?? ''} title={`Vai alla pagina ${link.name}`}>
+                  {l.name}
+                </Link>
+              ))
+            )}
+        </div>
       </div>
       <div className={styles.bottom}>
         <p>Copyright © APS Syskrack Giuseppe Porsia ETS</p>
