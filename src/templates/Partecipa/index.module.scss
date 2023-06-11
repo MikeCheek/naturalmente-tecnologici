@@ -1,8 +1,13 @@
-.form {
+.formWrap {
   border: 2px var(--nt-orange) solid;
   border-radius: 15px;
   padding: 10px;
+  min-height: 420px;
+}
+
+.form {
   width: 70vw;
+  border: none;
 }
 
 .head {

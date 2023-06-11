@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PartecipaData } from '../../utilities/partecipaData';
 import * as styles from './index.module.scss';
 import Seo from '../../components/atoms/Seo';
 import { HeadProps } from 'gatsby';
 import Layout from '../../components/organisms/Layout';
 import Heading from '../../components/atoms/Heading';
+import Loading from '../../components/molecules/Loading';
 
 interface IndexProps {
   pageContext: PartecipaData;
 }
 
 const Index = ({ pageContext }: IndexProps) => {
+  const [loading, setLoading] = useState<boolean>(true);
+
   return (
     <Layout>
       <div className={styles.head}>
@@ -18,14 +21,18 @@ const Index = ({ pageContext }: IndexProps) => {
         <h4 dangerouslySetInnerHTML={{ __html: pageContext.description }}></h4>
       </div>
       <Heading text="Contattaci" />
-      <iframe
-        data-tally-src={`https://tally.so/embed/n9XpoK?type=${pageContext.name}&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
-        loading="lazy"
-        width="100%"
-        height="420"
-        title="CONTATTACI"
-        className={styles.form}
-      ></iframe>
+      <div className={styles.formWrap}>
+        {loading ? <Loading noTitle /> : <></>}
+        <iframe
+          data-tally-src={`https://tally.so/embed/n9XpoK?type=${pageContext.name}&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
+          loading="lazy"
+          width="100%"
+          height={loading ? '0' : '420'}
+          title="CONTATTACI"
+          className={styles.form}
+          onLoad={() => setLoading(false)}
+        ></iframe>
+      </div>
     </Layout>
   );
 };

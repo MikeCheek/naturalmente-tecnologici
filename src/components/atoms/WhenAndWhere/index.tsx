@@ -43,7 +43,7 @@ const Index = () => {
         }
       />
       <SectionImageCTA
-        text={` Qui troverete un'area verde attrezzata dove ci
+        text={`Qui troverete un'area verde attrezzata dove ci
         si può immergere totalmente nella natura e farsi coccolare dai suoni che essa contiene.<br/>L'area si sviluppa in due piani, la parte superiore è un'area attrezzata con capanni per pic-nic forniti di illuminazione, giostrine
           per bambini, ristorante. Scendendo nel bosco invece si entra nel circuito ad anello che si sviluppa nel bosco
           per 5 Km, qui è possibile fare passeggiate a cavallo o mountain bike, trekking o respirare i profumi della
