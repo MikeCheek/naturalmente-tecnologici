@@ -1,6 +1,5 @@
 export const conferences = {
-  text: `Aver invitato ospiti come Carlo Boccazzi, Marina Berardi, Emanuele Poki, Giacomo Castana, Paolo Bonelli, Giancarlo Di Mita ci ha permesso di vivere un'esperienza di co-housing in un ambiente rurale, magico e surreale.<br/><br/>
-  Abbiamo vissuto una vera e propria residenza artistico-scientifica, un mastermind di 3 giorni intensi su tematiche, progetti, attività, etica, attivismo... qualcosa di indescrivibile.`,
+  text: `Aver invitato ospiti come Carlo Boccazzi, Marina Berardi, Emanuele Poki, Giacomo Castana, Paolo Bonelli, Giancarlo Di Mita ci ha permesso di vivere un'esperienza di co-housing in un ambiente rurale, magico e surreale.`,
   links: [
     {
       title: 'Immaginare nuovi orizzonti: Spopolamento, abitare digitale e abitare locale',

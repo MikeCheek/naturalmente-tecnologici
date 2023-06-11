@@ -66,7 +66,11 @@ const Index = () => {
       <div className={styles.conferencesWrap}>
         <h3 className={styles.subTitle}>Conferenze</h3>
         <p className={styles.conferenceText} dangerouslySetInnerHTML={{ __html: conferences.text }}></p>
-        <p>Ti sei perso le conferenze? Clicca qui sotto per vederle</p>
+        <p>
+          Ti sei perso le conferenze?
+          <br />
+          Clicca qui sotto per vederle
+        </p>
         <div className={styles.links}>
           {conferences.links.map((link, key) => (
             <div className={styles.linkWrap} key={key}>
