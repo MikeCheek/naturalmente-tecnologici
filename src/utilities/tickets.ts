@@ -2,8 +2,11 @@ import Ticket from '../assets/ticket-1.svg';
 import Tickets from '../assets/ticket-2.svg';
 // import Vip from '../assets/vip.svg';
 
+export const Eventbrite =
+  'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067';
+
 export const DefaultTicketProps = {
-  url: 'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
+  url: Eventbrite,
   priceCurrency: 'EUR',
 };
 

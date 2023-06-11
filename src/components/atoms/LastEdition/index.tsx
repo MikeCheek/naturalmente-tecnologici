@@ -7,6 +7,8 @@ import Camping from '../../../assets/reviews/camping.svg';
 import Event from '../../../assets/reviews/event.svg';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import { useInView } from 'react-intersection-observer';
+import { conferences } from '../../../utilities/lastEdition';
+import Button from '../Button';
 
 const data = [
   {
@@ -60,6 +62,19 @@ const Index = () => {
             <p className={styles.topic}>{review.topic}</p>
           </div>
         ))}
+      </div>
+      <div className={styles.conferencesWrap}>
+        <h3 className={styles.subTitle}>Conferenze</h3>
+        <p className={styles.conferenceText} dangerouslySetInnerHTML={{ __html: conferences.text }}></p>
+        <p>Ti sei perso le conferenze? Clicca qui sotto per vederle</p>
+        <div className={styles.links}>
+          {conferences.links.map((link, key) => (
+            <div className={styles.linkWrap} key={key}>
+              <em>“{link.title}„</em>
+              <Button text="Vai al video" title="Vai al video" href={link.link} />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

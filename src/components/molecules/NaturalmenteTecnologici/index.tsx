@@ -8,6 +8,7 @@ import Insects from '../../../assets/insects.svg';
 import { info, whatIs } from '../../../utilities/naturalmenteTecnologici';
 import SingleSection from '../../atoms/SingleSection';
 import Button from '../../atoms/Button';
+import { Eventbrite } from '../../../utilities/tickets';
 
 const Index = () => {
   return (
@@ -19,7 +20,11 @@ const Index = () => {
             <SingleSection>
               <p dangerouslySetInnerHTML={{ __html: item.text }}></p>
               {item.eventbrite ? (
-                <Button text={'Riserva il tuo posto qui!'} href="#top" title={'Riserva il tuo posto qui!'}></Button>
+                <Button
+                  text={'Riserva il tuo posto qui!'}
+                  href={Eventbrite}
+                  title={'Riserva il tuo posto qui!'}
+                ></Button>
               ) : (
                 <></>
               )}
