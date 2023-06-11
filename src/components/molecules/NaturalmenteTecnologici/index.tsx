@@ -15,7 +15,7 @@ const Index = () => {
       <div className={styles.singleSectionsWrap}>
         {whatIs.map((item, key) => (
           <div className={styles.singleSections} style={item.big ? {} : { maxWidth: '500px' }} key={key}>
-            <Heading text={item.name} />
+            <Heading text={item.name} smaller={key != 0} />
             <SingleSection>
               <p dangerouslySetInnerHTML={{ __html: item.text }}></p>
               {item.eventbrite ? (

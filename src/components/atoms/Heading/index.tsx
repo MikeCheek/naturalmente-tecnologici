@@ -2,7 +2,7 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import { HeadingProps } from './index.types';
 
-const Index = ({ text, marginTop = false }: HeadingProps) => {
+const Index = ({ text, marginTop = false, smaller = false }: HeadingProps) => {
   return (
     <div
       className={styles.headingWrap}
@@ -13,7 +13,11 @@ const Index = ({ text, marginTop = false }: HeadingProps) => {
       style={marginTop ? { marginTop: '70px' } : {}}
     >
       <div className={styles.orange}></div>
-      <h2 className={styles.heading} dangerouslySetInnerHTML={{ __html: text }}></h2>
+      {smaller ? (
+        <h3 className={styles.heading} dangerouslySetInnerHTML={{ __html: text }}></h3>
+      ) : (
+        <h2 className={styles.heading} dangerouslySetInnerHTML={{ __html: text }}></h2>
+      )}
     </div>
   );
 };

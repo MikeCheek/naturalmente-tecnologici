@@ -47,7 +47,7 @@ export const whatIs = [
     name: 'Perché partecipare?',
     text: `Visionari, visionarie…<br/>
   Idealisti e idealiste…<br/>
-  Esploratori e amanti delle T.A.Z siete nel posto giusto!<br/><br/>
+  Esploratori e amanti delle T.A.Z. siete nel posto giusto!<br/><br/>
   Naturalmente Tecnologici è un evento unico nel suo genere.<br/>
   Campeggio, laboratori, conferenze, escursioni sotto il cielo lucano e le sue stelle.<br/>
   Giorni pieni di energie, condivisione e cambiamento. <br/><br/>
