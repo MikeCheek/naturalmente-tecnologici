@@ -2,6 +2,11 @@ export const conferences = {
   text: `Aver invitato ospiti come Carlo Boccazzi, Marina Berardi, Emanuele Poki, Giacomo Castana, Paolo Bonelli, Giancarlo Di Mita ci ha permesso di vivere un'esperienza di co-housing in un ambiente rurale, magico e surreale.`,
   links: [
     {
+      title: 'Conferenza inaugurale',
+      speaker: ['Davide Saladino', 'Giuseppe Becci', 'Giuseppe Liuzzi'],
+      link: 'https://youtu.be/qY5WQHgfI_Q',
+    },
+    {
       title: 'Immaginare nuovi orizzonti: Spopolamento, abitare digitale e abitare locale',
       speaker: 'Marina Berardi',
       link: 'https://youtu.be/hlDoIN_5b4Y',
