@@ -6,6 +6,7 @@ import { HeadProps } from 'gatsby';
 import Layout from '../../components/organisms/Layout';
 import Heading from '../../components/atoms/Heading';
 import Loading from '../../components/molecules/Loading';
+import HeroPartecipa from '../../components/organisms/HeroPartecipa';
 
 interface IndexProps {
   pageContext: PartecipaData;
@@ -21,8 +22,8 @@ const Index = ({ pageContext }: IndexProps) => {
 
   return (
     <Layout>
+      <HeroPartecipa heading={pageContext.name} />
       <div className={styles.head}>
-        <Heading text={pageContext.name} />
         <h4 dangerouslySetInnerHTML={{ __html: pageContext.description }}></h4>
       </div>
       <Heading text="Contattaci" />
