@@ -4,9 +4,9 @@ import * as styles from './index.module.scss';
 import Seo from '../../components/atoms/Seo';
 import { HeadProps } from 'gatsby';
 import Layout from '../../components/organisms/Layout';
-import Heading from '../../components/atoms/Heading';
 import Loading from '../../components/molecules/Loading';
 import HeroPartecipa from '../../components/organisms/HeroPartecipa';
+import Heading from '../../components/atoms/Heading';
 
 interface IndexProps {
   pageContext: PartecipaData;

@@ -2,9 +2,9 @@ import React from 'react';
 
 import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
-import Section from '../Section';
 import Bug from '../../../assets/bug.svg';
 import Insects from '../../../assets/insects.svg';
+import Section from '../Section';
 import { info, whatIs } from '../../../utilities/naturalmenteTecnologici';
 import SingleSection from '../../atoms/SingleSection';
 import Button from '../../atoms/Button';
