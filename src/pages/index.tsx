@@ -5,7 +5,7 @@ import HeroHome from '../components/organisms/HeroHome';
 import Seo from '../components/atoms/Seo';
 import Theme from '../components/organisms/Theme';
 import WhenAndWhere from '../components/atoms/WhenAndWhere';
-import LastEdition from '../components/atoms/LastEdition';
+import LastEdition from '../components/molecules/LastEdition';
 import 'react-circular-progressbar/dist/styles.css';
 import HeardOn from '../components/atoms/HeardOn';
 

@@ -13,12 +13,7 @@ interface IndexProps {
 }
 
 const Index = ({ pageContext }: IndexProps) => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [loaded, setLoaded] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (!loaded) setLoading(true);
-  }, []);
+  const [loading, setLoading] = useState<boolean>(true);
 
   return (
     <Layout>
@@ -37,7 +32,6 @@ const Index = ({ pageContext }: IndexProps) => {
           title="CONTATTACI"
           className={styles.form}
           onLoad={() => {
-            setLoaded(true);
             setLoading(false);
           }}
         ></iframe>
