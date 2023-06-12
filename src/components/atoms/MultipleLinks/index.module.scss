@@ -4,7 +4,7 @@
   border-top-right-radius: 15px;
   box-shadow: 0 0px 40px 0 rgb(0, 0, 0, 0.2);
   padding: 20px 46px 0 46px;
-  overflow-y: unset;
+  overflow: unset;
   @media screen and (min-width: '992px') {
     transform: none;
     border-top-left-radius: 0;
@@ -23,7 +23,7 @@
   transition: transform 200ms ease;
   will-change: transform;
   background-color: var(--nt-white);
-  overflow-y: hidden;
+  overflow: hidden;
   @media screen and (min-width: '992px') {
     background-color: transparent;
   }
