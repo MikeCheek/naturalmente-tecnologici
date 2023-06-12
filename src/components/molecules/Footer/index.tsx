@@ -32,7 +32,7 @@ const Index = () => {
             .filter((l) => l.multiple)
             .map((link) =>
               link.links?.map((l, key) => (
-                <Link key={key} to={l.to ?? ''} title={`Vai alla pagina ${link.name}`}>
+                <Link key={key} to={l.to ?? ''} title={`Vai alla pagina ${l.name}`}>
                   {l.name}
                 </Link>
               ))
