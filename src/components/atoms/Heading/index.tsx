@@ -2,7 +2,7 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import { HeadingProps } from './index.types';
 
-const Index = ({ text, marginTop = false, smaller = false, main = false }: HeadingProps) => {
+const Index = ({ text, marginTop = false, smaller = false, main = false, textWhite = false }: HeadingProps) => {
   return (
     <div
       className={styles.headingWrap}
@@ -14,11 +14,23 @@ const Index = ({ text, marginTop = false, smaller = false, main = false }: Headi
     >
       <div className={styles.orange}></div>
       {main ? (
-        <h1 className={styles.heading} dangerouslySetInnerHTML={{ __html: text }}></h1>
+        <h1
+          className={styles.heading}
+          style={{ color: textWhite ? 'var(--nt-white)' : 'var(--nt-green)' }}
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></h1>
       ) : smaller ? (
-        <h3 className={styles.heading} dangerouslySetInnerHTML={{ __html: text }}></h3>
+        <h3
+          className={styles.heading}
+          style={{ color: textWhite ? 'var(--nt-white)' : 'var(--nt-green)' }}
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></h3>
       ) : (
-        <h2 className={styles.heading} dangerouslySetInnerHTML={{ __html: text }}></h2>
+        <h2
+          className={styles.heading}
+          style={{ color: textWhite ? 'var(--nt-white)' : 'var(--nt-green)' }}
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></h2>
       )}
     </div>
   );

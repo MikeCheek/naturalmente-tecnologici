@@ -3,4 +3,5 @@ export interface HeadingProps {
   marginTop?: boolean;
   smaller?: boolean;
   main?: boolean;
+  textWhite?: boolean;
 }

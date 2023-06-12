@@ -12,7 +12,7 @@ const Index = ({ heading }: HeroPartecipaProps) => {
   return (
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
-        <Heading text={heading} main />
+        <Heading text={heading} main textWhite />
         <SearchPeople width={300} className={styles.svg} fill="var(--nt-dark-green)" />
         <div className={styles.svgWrap}>
           <div className={styles.colliWrap}>
