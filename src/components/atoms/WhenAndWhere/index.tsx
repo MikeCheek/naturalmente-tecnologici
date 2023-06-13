@@ -3,6 +3,7 @@ import Heading from '../Heading';
 import * as styles from './index.module.scss';
 import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../../molecules/SectionImageCTA';
+import ShowOnView from '../ShowOnView';
 
 const Index = () => {
   const coords = [`40°37'14.0"N`, `16°24'38.6"E`];
@@ -10,17 +11,19 @@ const Index = () => {
   return (
     <div className={styles.whenAndWhere}>
       <Heading text="Quando e dove?" />
-      <h3>
-        11 &gt; 13 Agosto 2023
-        <br />
-        <br />
-        <a rel="noopener noreferrer" target="_blank" href={'https://www.google.com/maps/place/' + coords.join(' ')}>
-          @ Bosco Le Coste
-          <b>
-            <span>{coords[0]}</span> <span>{coords[1]}</span>
-          </b>
-        </a>
-      </h3>
+      <ShowOnView>
+        <h3>
+          11 &gt; 13 Agosto 2023
+          <br />
+          <br />
+          <a rel="noopener noreferrer" target="_blank" href={'https://www.google.com/maps/place/' + coords.join(' ')}>
+            @ Bosco Le Coste
+            <b>
+              <span>{coords[0]}</span> <span>{coords[1]}</span>
+            </b>
+          </a>
+        </h3>
+      </ShowOnView>
       <SectionImageCTA
         text={` Presso Bosco Le Coste, tra Grassano e Grottole, tra le argillose colline lucane.<br/>
         Rientra nel territorio dell'oasi naturale di San Giuliano, non lontano da Matera. Si gode di una vista mozzafiato, in cui l'occhio

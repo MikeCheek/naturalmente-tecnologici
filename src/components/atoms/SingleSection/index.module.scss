@@ -1,10 +1,16 @@
-.wrap {
-  border: 3px solid var(--nt-transparent-orange);
+.wrapper {
   color: var(--nt-orange);
-  border-radius: 10px;
   width: 90%;
   text-align: center;
   margin-top: 30px;
+  @media screen and (min-width: '768px') {
+    width: 60%;
+  }
+}
+
+.wrap {
+  border: 3px solid var(--nt-transparent-orange);
+  border-radius: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -22,10 +28,6 @@
     .inShadow {
       opacity: 0.8;
     }
-  }
-
-  @media screen and (min-width: '768px') {
-    width: 60%;
   }
 }
 

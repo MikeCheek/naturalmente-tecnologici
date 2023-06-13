@@ -10,6 +10,7 @@ import { useInView } from 'react-intersection-observer';
 import { conferences } from '../../../utilities/lastEdition';
 import Button from '../../atoms/Button';
 import YoutubeEmbed from '../../atoms/YoutubeEmbed';
+import ShowOnView from '../../atoms/ShowOnView';
 
 const data = [
   {
@@ -44,27 +45,32 @@ const Index = () => {
   return (
     <>
       <Heading text="Sulla scorsa edizione..." marginTop />
-      <h3 className={styles.subTitle}>Gradimento dei partecipanti</h3>
-      <div ref={ref} className={styles.wrap}>
-        {data.map((review, key) => (
-          <div key={key} className={styles.review}>
-            <CircularProgressbarWithChildren
-              value={inView ? review.rank * 10 : 1}
-              counterClockwise
-              styles={buildStyles({
-                pathColor: `var(--nt-orange)`,
-                trailColor: 'var(--nt-transparent-orange)',
-                pathTransitionDuration: 2,
-              })}
-            >
-              <review.svg className={styles.icon} height={40} fill="var(--nt-very-dark-green)" />
-              <p className={styles.rank}>{review.rank.toFixed(1)}</p>
-            </CircularProgressbarWithChildren>
-            <p className={styles.topic}>{review.topic}</p>
-          </div>
-        ))}
-      </div>
-      <div className={styles.conferencesWrap}>
+      <ShowOnView>
+        {' '}
+        <h3 className={styles.subTitle}>Gradimento dei partecipanti</h3>
+      </ShowOnView>
+      <ShowOnView className={styles.wrapper}>
+        <div ref={ref} className={styles.wrap}>
+          {data.map((review, key) => (
+            <div key={key} className={styles.review}>
+              <CircularProgressbarWithChildren
+                value={inView ? review.rank * 10 : 1}
+                counterClockwise
+                styles={buildStyles({
+                  pathColor: `var(--nt-orange)`,
+                  trailColor: 'var(--nt-transparent-orange)',
+                  pathTransitionDuration: 2,
+                })}
+              >
+                <review.svg className={styles.icon} height={40} fill="var(--nt-very-dark-green)" />
+                <p className={styles.rank}>{review.rank.toFixed(1)}</p>
+              </CircularProgressbarWithChildren>
+              <p className={styles.topic}>{review.topic}</p>
+            </div>
+          ))}
+        </div>
+      </ShowOnView>
+      <ShowOnView className={styles.conferencesWrap}>
         <h3 className={styles.subTitle}>Conferenze</h3>
         <p className={styles.conferenceText} dangerouslySetInnerHTML={{ __html: conferences.text }}></p>
         <div className={styles.links}>
@@ -76,7 +82,7 @@ const Index = () => {
             </div>
           ))}
         </div>
-      </div>
+      </ShowOnView>
     </>
   );
 };

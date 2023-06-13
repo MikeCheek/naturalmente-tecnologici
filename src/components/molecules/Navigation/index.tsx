@@ -6,6 +6,7 @@ import { showPopUp } from '../../../utilities/newsletter';
 import { links } from '../../../utilities/navigation';
 import MultipleLinks from '../../atoms/MultipleLinks';
 import { isBrowser } from '../../../utilities/browser';
+import { Eventbrite } from '../../../utilities/tickets';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
@@ -56,28 +57,28 @@ const Index = ({ opened, onClick }: NavigationProps) => {
       >
         <nav className={styles.linksMobile}>
           {linkElements}
-          {/* <div
-            title="Iscriviti alla Newsletter dell'associazione"
-            onClick={showPopUp}
-            // rel="noopener noreferrer"
-            // target="_blank"
+          <a
+            title="Iscriviti all' evento"
+            href={Eventbrite}
+            rel="noopener noreferrer"
+            target="_blank"
             className={styles.buttonMobile}
           >
-            PARTECIPA
-          </div> */}
+            ISCRIVITI
+          </a>
         </nav>
       </div>
       <div className={styles.wrapDesktop}>
         <nav className={styles.links}>{linkElements}</nav>
-        <div
-          title="Iscriviti alla Newsletter dell'associazione"
-          onClick={showPopUp}
-          // rel="noopener noreferrer"
-          // target="_blank"
+        <a
+          title="Iscriviti all' evento"
+          href={Eventbrite}
+          rel="noopener noreferrer"
+          target="_blank"
           className={styles.button}
         >
-          PARTECIPA
-        </div>
+          ISCRIVITI
+        </a>
       </div>
     </>
   );

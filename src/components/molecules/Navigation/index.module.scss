@@ -99,9 +99,11 @@
 
 .buttonMobile {
   @include styled.buttonFull;
+  color: var(--nt-green) !important;
 }
 
 .button {
   @include styled.buttonFull;
   margin-top: -10px;
+  color: var(--nt-green) !important;
 }
