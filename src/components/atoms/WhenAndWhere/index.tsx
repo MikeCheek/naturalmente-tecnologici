@@ -13,12 +13,12 @@ const Index = () => {
       <h3>
         11 &gt; 13 Agosto 2023
         <br />
-        @ Bosco Le Coste
-        <br />
         <br />
         <a rel="noopener noreferrer" target="_blank" href={'https://www.google.com/maps/place/' + coords.join(' ')}>
-          <span>{coords[0]}</span>
-          <span>{coords[1]}</span>
+          @ Bosco Le Coste
+          <b>
+            <span>{coords[0]}</span> <span>{coords[1]}</span>
+          </b>
         </a>
       </h3>
       <SectionImageCTA
