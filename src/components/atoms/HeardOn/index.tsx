@@ -3,12 +3,23 @@ import Slider from 'react-slick';
 import * as styles from './index.module.scss';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { info, images } from '../../../utilities/heardOn';
+import { useInView } from 'react-intersection-observer';
 
 const Index = () => {
   const data = images();
+  const [ref, inView, _entry] = useInView({
+    threshold: 0,
+    rootMargin: '10% 0px -20% 0px',
+    fallbackInView: true,
+    triggerOnce: true,
+  });
 
   return (
-    <div className={styles.wrapper}>
+    <div
+      ref={ref}
+      className={styles.wrapper}
+      style={{ transform: inView ? 'none' : 'translateX(50%)', opacity: inView ? 1 : 0 }}
+    >
       <h2>CI HAI VISTO SU</h2>
       <Slider
         dots={false}

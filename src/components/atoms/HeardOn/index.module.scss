@@ -3,6 +3,8 @@
   margin: 5% 0;
   background-color: var(--nt-orange);
   padding: 5px 0;
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+  will-change: opacity, transform;
   @media screen and (min-width: '768px') {
     padding: 10px 0;
   }
