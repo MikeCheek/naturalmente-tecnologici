@@ -40,7 +40,7 @@ const Index = () => {
         </div>
       </div>
       <div className={styles.bottom}>
-        <p>Copyright © APS Syskrack Giuseppe Porsia ETS</p>
+        <p>Copyright © {new Date().getFullYear()} APS Syskrack Giuseppe Porsia ETS</p>
         <SocialLinks small />
         <p>
           Created with ❤ by{' '}
