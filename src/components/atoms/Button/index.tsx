@@ -22,7 +22,13 @@ const Index = ({ text, onClick, href, title, hoverWhite = false, internal = fals
             <span className={styles.span}></span>
           </Link>
         ) : (
-          <a href={href} title={title} className={`${styles.button} ${hoverWhite ? styles.hoverWhite : ''}`}>
+          <a
+            href={href}
+            title={title}
+            className={`${styles.button} ${hoverWhite ? styles.hoverWhite : ''}`}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             {text} <span className={styles.span}></span>
             <span className={styles.span}></span>
             <span className={styles.span}></span>

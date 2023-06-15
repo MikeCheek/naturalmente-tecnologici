@@ -10,15 +10,11 @@
   font-style: normal;
   font-weight: 800;
   line-height: 115%;
-  color: var(--nt-green);
   margin: 5px 10px;
   text-transform: uppercase;
   text-align: center;
   position: relative;
   z-index: 1;
-  @media screen and (min-width: '768px') {
-    margin: 5px 20px;
-  }
 }
 
 .orange {

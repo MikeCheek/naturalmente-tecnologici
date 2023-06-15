@@ -1,0 +1,25 @@
+export const conferences = {
+  text: `Aver invitato ospiti come Carlo Boccazzi, Marina Berardi, Emanuele Poki, Giacomo Castana, Paolo Bonelli, Giancarlo Di Mita ci ha permesso di vivere un'esperienza di co-housing in un ambiente rurale, magico e surreale.`,
+  links: [
+    {
+      title: 'Conferenza inaugurale',
+      speaker: ['Davide Saladino', 'Giuseppe Becci', 'Giuseppe Liuzzi'],
+      id: 'qY5WQHgfI_Q',
+    },
+    {
+      title: 'Immaginare nuovi orizzonti: Spopolamento, abitare digitale e abitare locale',
+      speaker: 'Marina Berardi',
+      id: 'hlDoIN_5b4Y',
+    },
+    {
+      title: 'Mai più Jedi della tecnologia',
+      speaker: 'Carlo Boccazzi Varotto',
+      id: 'X0R_HVM6Ki4',
+    },
+    {
+      title: 'Etnobotanica, la madre di tutte le scienze. Come imparare ad imparare dalla natura',
+      speaker: 'Giacomo Castana',
+      id: 'zr-9KAfZi5w',
+    },
+  ],
+};

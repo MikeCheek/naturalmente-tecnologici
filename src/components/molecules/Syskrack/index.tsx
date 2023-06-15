@@ -13,7 +13,6 @@ const Index = () => {
       layout="constrained"
       width={700}
       height={500}
-      className={styles.image}
     />
   );
   const image1 = (
@@ -24,7 +23,6 @@ const Index = () => {
       layout="constrained"
       width={700}
       height={500}
-      className={styles.image}
     />
   );
 

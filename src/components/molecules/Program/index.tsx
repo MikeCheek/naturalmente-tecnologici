@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../../atoms/Banner';
 import * as styles from './index.module.scss';
-import { showPopUp } from '../../../hooks/newsletter';
+import { showPopUp } from '../../../utilities/newsletter';
 import Collina from '../../../assets/collina.svg';
 import Button from '../../atoms/Button';
 

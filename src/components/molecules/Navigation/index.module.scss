@@ -3,6 +3,7 @@
 .wrapMobile {
   position: absolute;
   width: 100%;
+  min-height: 520px;
   top: 0;
   z-index: -1;
   background-color: var(--nt-white);
@@ -16,11 +17,16 @@
     display: none;
   }
 
-  a {
+  a,
+  p {
     text-decoration: none;
     color: var(--nt-green);
     text-transform: uppercase;
     font-weight: 600;
+  }
+
+  svg {
+    fill: var(--nt-green);
   }
 }
 
@@ -36,16 +42,22 @@
     display: none;
   }
 
-  a {
+  a,
+  p {
     text-decoration: none;
     color: var(--nt-white);
     text-transform: uppercase;
     font-weight: 600;
   }
+
+  svg {
+    fill: var(--nt-white);
+  }
 }
 
 .link {
   position: relative;
+  width: max-content;
   &::before {
     content: ' ';
     position: absolute;
@@ -87,9 +99,11 @@
 
 .buttonMobile {
   @include styled.buttonFull;
+  color: var(--nt-green) !important;
 }
 
 .button {
   @include styled.buttonFull;
   margin-top: -10px;
+  color: var(--nt-green) !important;
 }

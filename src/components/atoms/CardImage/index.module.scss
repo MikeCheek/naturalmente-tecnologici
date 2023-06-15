@@ -8,22 +8,43 @@
   border-radius: 15px;
   position: relative;
   overflow: hidden;
+  transition: transform 500ms ease-out;
+  will-change: transform;
+}
+
+.sectionImage {
+  @extend .image;
+  width: auto;
+  @media screen and (min-width: '768px') {
+    max-width: 40vw;
+    max-height: 50vh;
+  }
 }
 
 .orange {
   border-radius: 15px;
   background-color: var(--nt-orange);
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   transform: rotate(-10deg);
+  animation: rotate 4s infinite alternate ease-in-out;
 }
 
 .orangeReversed {
   @extend .orange;
   transform: rotate(10deg);
+  animation-direction: alternate-reverse;
+  animation-name: rotateReversed;
+}
+
+.orangeWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+  will-change: transform;
 }
 
 .onlyMobile {
@@ -36,5 +57,23 @@
 .onlyDesktop {
   @media screen and (max-width: '767px') {
     display: none;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes rotateReversed {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(5deg);
   }
 }

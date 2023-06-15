@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
-import { showPopUp } from '../../../hooks/newsletter';
+import { showPopUp } from '../../../utilities/newsletter';
 import Button from '../../atoms/Button';
 
 const Index = () => {
@@ -14,12 +14,21 @@ const Index = () => {
           <br />
           Facci sentire la tua voce!
         </p>
-        <p>
+        <iframe
+          data-tally-src="https://tally.so/embed/w7b1Xa?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="510"
+          title="CONTATTACI"
+          className={styles.form}
+        ></iframe>
+
+        {/* <p>
           Scrivici a{' '}
           <a title="Scrivici una mail" href="mailto:direttivo@syskrack.org">
             direttivo@syskrack.org
           </a>
-        </p>
+        </p> */}
       </div>
       <div className={styles.section}>
         <Heading text="Newsletter" />

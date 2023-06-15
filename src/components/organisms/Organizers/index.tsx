@@ -2,13 +2,12 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
 import CardPerson from '../../molecules/CardPerson';
-import { organizers } from '../../../hooks/useInfo';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import useOrganizers from '../../../hooks/useOrganizers';
 import Slider from 'react-slick';
+import { images, info } from '../../../utilities/organizers';
 
 const Index = () => {
-  const data = useOrganizers();
+  const data = images();
 
   return (
     <div className={styles.wrap}>
@@ -54,7 +53,7 @@ const Index = () => {
             },
           ]}
         >
-          {organizers.map((item, key) => {
+          {info.map((item, key) => {
             return (
               <CardPerson
                 key={key}

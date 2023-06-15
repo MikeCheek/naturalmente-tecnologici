@@ -4,19 +4,20 @@ import * as styles from './index.module.scss';
 import Button from '../../atoms/Button';
 import CardImage from '../../atoms/CardImage';
 import { SectionImageCTAProps } from './index.types';
+import ShowOnView from '../../atoms/ShowOnView';
 
 const Index = ({ image, text, title, buttonHref, buttonText, reversed = false }: SectionImageCTAProps) => {
   return (
     <div className={reversed ? styles.wrapReversed : styles.wrap}>
-      <div className={reversed ? styles.textReversed : styles.text}>
-        <h3>{title}</h3>
-        <CardImage onlyMobile reversed={reversed}>
+      <ShowOnView className={reversed ? styles.textReversed : styles.text}>
+        {title ? <h3>{title}</h3> : <></>}
+        <CardImage onlyMobile reversed={reversed} bigger>
           {image}
         </CardImage>
         <p dangerouslySetInnerHTML={{ __html: text }}></p>
         <Button text={buttonText} href={buttonHref} title={buttonText} />
-      </div>
-      <CardImage onlyDesktop reversed={reversed}>
+      </ShowOnView>
+      <CardImage onlyDesktop reversed={reversed} bigger>
         {image}
       </CardImage>
     </div>

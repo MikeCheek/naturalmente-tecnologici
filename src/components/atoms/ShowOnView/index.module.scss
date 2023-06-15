@@ -1,0 +1,16 @@
+.wrap {
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapShown {
+  @extend .wrap;
+  opacity: 1;
+  transform: none;
+}

@@ -5,4 +5,5 @@ export interface FastActionProps {
   buttonHref: string;
   linkType?: LinkType;
   description?: string;
+  tag?: string;
 }

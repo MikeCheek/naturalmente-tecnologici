@@ -3,8 +3,9 @@ import { FastActionProps } from './index.types';
 import { Link } from 'gatsby';
 import * as styles from './index.module.scss';
 import { useInView } from 'react-intersection-observer';
+import Button from '../Button';
 
-const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external', description }: FastActionProps) => {
+const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external', description, tag }: FastActionProps) => {
   const [ref, inView, _entry] = useInView({
     threshold: 0,
     rootMargin: '5% 0px -20% 0px',
@@ -14,18 +15,11 @@ const Index = ({ text, icon, buttonHref, buttonText, linkType = 'external', desc
 
   return (
     <div className={inView ? styles.wrap : styles.wrapHidden} ref={ref}>
+      {tag ? <p className={styles.tag}>{tag}</p> : <></>}
       {icon}
       <p className={styles.bigText} dangerouslySetInnerHTML={{ __html: text }}></p>
       {description ? <p dangerouslySetInnerHTML={{ __html: description }}></p> : <></>}
-      {linkType == 'external' ? (
-        <a className={styles.button} href={buttonHref} title={buttonText} rel="noopener noreferrer" target="_blank">
-          {buttonText}
-        </a>
-      ) : (
-        <Link className={styles.button} to={buttonHref}>
-          {buttonText}
-        </Link>
-      )}
+      <Button text={buttonText} title={buttonText} href={buttonHref} internal={linkType == 'internal'} />
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import { SeoProps } from './index.types';
-import useSiteMetadata from '../../../hooks/useSiteMetadata';
-import { links } from '../../../hooks/navigation';
-import { DefaultTicketProps, tickets } from '../../../hooks/useInfo';
-import dataFAQ from '../../../hooks/dataFAQ';
+import useSiteMetadata from '../../../utilities/useSiteMetadata';
+import { links } from '../../../utilities/navigation';
+import { DefaultTicketProps, info as tickets } from '../../../utilities/tickets';
+import dataFAQ from '../../../utilities/dataFAQ';
 
 const Index = ({
   lang = 'it',
@@ -41,12 +41,23 @@ const Index = ({
       {
         '@context': 'https://www.schema.org',
         '@type': 'BreadcrumbList',
-        itemListElement: links.map((link) => ({
-          '@type': 'ListItem',
-          position: link.position,
-          name: link.name,
-          item: metadata.siteUrl + link.to,
-        })),
+        itemListElement: links
+          .map((link) =>
+            link.multiple
+              ? link.links.map((l) => ({
+                  '@type': 'ListItem',
+                  position: l.position,
+                  name: l.name,
+                  item: metadata.siteUrl + l.to,
+                }))
+              : {
+                  '@type': 'ListItem',
+                  position: link.position,
+                  name: link.name,
+                  item: metadata.siteUrl + link.to,
+                }
+          )
+          .flat(),
       },
       {
         '@context': 'https://www.schema.org',
@@ -84,7 +95,7 @@ const Index = ({
         typicalAgeRange: '18-',
         offers: {
           '@type': 'AggregateOffer',
-          url:'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
+          url: 'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
           availabilityStarts: '2023-06-1T00:00:00.000Z',
           availabilityEnds: '2023-08-13T23:59:59.999Z',
           validFrom: '2023-08-10T18:00:00.000Z',
@@ -93,7 +104,7 @@ const Index = ({
           lowPrice: Math.min(...tickets.map((ticket) => ticket.price)),
           offerCount: tickets.length,
           priceCurrency: DefaultTicketProps.priceCurrency,
-          availability: 'https://schema.org/PreOrder',
+          availability: 'https://schema.org/InStock',
           sameAs: [
             'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
           ],
@@ -101,7 +112,7 @@ const Index = ({
             '@type': 'Offer',
             url: DefaultTicketProps.url,
             name: ticket.name,
-            availability: 'https://schema.org/PreOrder',
+            availability: 'https://schema.org/InStock',
             availabilityStarts: ticket.availabilityStarts,
             availabilityEnds: ticket.availabilityEnds,
             validFrom: ticket.validFrom,
@@ -189,7 +200,18 @@ const Index = ({
       <link rel="preconnect" href="https://www.google.com/" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://assets.mlcdn.com" />
-
+      {/* <script defer src="https://tally.so/widgets/embed.js"></script> */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+      var d=document,
+      w="https://tally.so/widgets/embed.js",
+      v=function(){"undefined"!=typeof Tally?
+      Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};
+      if("undefined"!=typeof Tally)v();
+      else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}`,
+        }}
+      ></script>
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
       {children}
     </>

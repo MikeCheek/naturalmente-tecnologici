@@ -2,24 +2,45 @@ import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
 import { NavigationProps } from './index.types';
-import { showPopUp } from '../../../hooks/newsletter';
-import { links } from '../../../hooks/navigation';
+import { showPopUp } from '../../../utilities/newsletter';
+import { links } from '../../../utilities/navigation';
+import MultipleLinks from '../../atoms/MultipleLinks';
+import { isBrowser } from '../../../utilities/browser';
+import { Eventbrite } from '../../../utilities/tickets';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
   const removeSlashes = (text?: string) => (text ? text.replace(/\//g, '') : '');
 
   useEffect(() => {
-    setPathname(window.location.pathname);
+    if (isBrowser()) setPathname(window.location.pathname);
   }, []);
 
   const linkElements = links.map((link, key) => {
+    if (link.hide) return;
+    if (link.multiple)
+      return (
+        <MultipleLinks name={link.name} key={key} active={pathname?.split('/')[1] === link.name.toLowerCase()}>
+          {link.links.map((l, key) => (
+            <Link
+              key={key}
+              className={styles.link}
+              style={removeSlashes(pathname) === removeSlashes(l.to) ? { color: 'var(--nt-orange)' } : {}}
+              to={l.to}
+              onClick={onClick}
+              title={l.name}
+            >
+              {l.name}
+            </Link>
+          ))}
+        </MultipleLinks>
+      );
     return (
       <Link
         key={key}
         className={styles.link}
         style={removeSlashes(pathname) === removeSlashes(link.to) ? { color: 'var(--nt-orange)' } : {}}
-        to={link.to}
+        to={link.to ?? ''}
         onClick={onClick}
         title={link.name}
       >
@@ -36,28 +57,28 @@ const Index = ({ opened, onClick }: NavigationProps) => {
       >
         <nav className={styles.linksMobile}>
           {linkElements}
-          <div
-            title="Iscriviti alla Newsletter dell'associazione"
-            onClick={showPopUp}
-            // rel="noopener noreferrer"
-            // target="_blank"
+          <a
+            title="Partecipa all' evento"
+            href={Eventbrite}
+            rel="noopener noreferrer"
+            target="_blank"
             className={styles.buttonMobile}
           >
             PARTECIPA
-          </div>
+          </a>
         </nav>
       </div>
       <div className={styles.wrapDesktop}>
         <nav className={styles.links}>{linkElements}</nav>
-        <div
-          title="Iscriviti alla Newsletter dell'associazione"
-          onClick={showPopUp}
-          // rel="noopener noreferrer"
-          // target="_blank"
+        <a
+          title="Partecipa all' evento"
+          href={Eventbrite}
+          rel="noopener noreferrer"
+          target="_blank"
           className={styles.button}
         >
           PARTECIPA
-        </div>
+        </a>
       </div>
     </>
   );

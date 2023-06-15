@@ -4,8 +4,8 @@ import HeroAbout from '../components/organisms/HeroAbout';
 import Loading from '../components/molecules/Loading';
 import Seo from '../components/atoms/Seo';
 import Syskrack from '../components/molecules/Syskrack';
-import useSyskrackImages from '../hooks/useSyskrackImages';
-import useOrganizers from '../hooks/useOrganizers';
+import { images as syskrackImages } from '../utilities/syskrack';
+import { images as organizersImages } from '../utilities/organizers';
 
 const ChiSiamo = () => {
   const Organizers = lazy(() => import('../components/organisms/Organizers'));
@@ -22,10 +22,10 @@ const ChiSiamo = () => {
 };
 
 export const Head = () => {
-  const images = useSyskrackImages().allFile!.edges.map(
+  const images = syskrackImages().allFile!.edges.map(
     (image) => image.node.childImageSharp.gatsbyImageData.images.fallback.src
   );
-  const organizers = useOrganizers().allFile!.edges.map(
+  const organizers = organizersImages().allFile!.edges.map(
     (image) => image.node.childImageSharp.gatsbyImageData.images.fallback.src
   );
 
