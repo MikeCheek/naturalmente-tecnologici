@@ -4,4 +4,5 @@ export interface HeadingProps {
   smaller?: boolean;
   main?: boolean;
   textWhite?: boolean;
+  showOnView?: boolean;
 }
