@@ -104,7 +104,7 @@ const Index = ({
           lowPrice: Math.min(...tickets.map((ticket) => ticket.price)),
           offerCount: tickets.length,
           priceCurrency: DefaultTicketProps.priceCurrency,
-          availability: 'https://schema.org/PreOrder',
+          availability: 'https://schema.org/InStock',
           sameAs: [
             'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
           ],
@@ -112,7 +112,7 @@ const Index = ({
             '@type': 'Offer',
             url: DefaultTicketProps.url,
             name: ticket.name,
-            availability: 'https://schema.org/PreOrder',
+            availability: 'https://schema.org/InStock',
             availabilityStarts: ticket.availabilityStarts,
             availabilityEnds: ticket.availabilityEnds,
             validFrom: ticket.validFrom,

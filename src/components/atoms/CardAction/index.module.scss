@@ -2,7 +2,7 @@
 
 .wrap {
   border-radius: 10px;
-  border: 3px solid var(--nt-green);
+  border: 2px solid var(--nt-green);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
   }
 
   @media screen and (min-width: '768px') {
-    border-width: 4px;
+    border-width: 3px;
     padding: 30px 15px;
     margin: 25px;
     width: 250px;
