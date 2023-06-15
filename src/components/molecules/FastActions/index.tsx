@@ -9,17 +9,19 @@ import ShowOnView from '../../atoms/ShowOnView';
 const Index = () => {
   return (
     <div className={styles.wrap}>
-      <Heading text="ACQUISTA IL TUO BIGLIETTO <br/>PER L'EVENTO" />
+      <Heading text="RISERVA IL TUO BIGLIETTO <br/>PER L'EVENTO" />
       <div className={styles.cards}>
         {info.map((ticket, key) => {
+          const replaced = ticket.name.replace('- Early Bird', '');
+          const name = (replaced.split('(')[0] + '<br/>' + replaced.split('(')[1]).replace(')', '');
           return (
             <CardAction
               key={key}
               icon={<ticket.icon className={styles.icon} width={70} />}
               // text={`<span class='cuttedText'>${ticket.price}€</span><br/>${ticket.price - discount}€`}
               text={`${ticket.price} €`}
-              description={ticket.name.replace('- Early Bird', '')}
-              buttonText="ACQUISTA"
+              description={name}
+              buttonText="PARTECIPA"
               buttonHref={DefaultTicketProps.url}
               tag={'EARLY BIRD'}
             />

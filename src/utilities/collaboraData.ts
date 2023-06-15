@@ -1,10 +1,10 @@
-export interface PartecipaData {
+export interface CollaboraData {
   name: string;
   description: string;
   pathName: string;
 }
 
-const partecipaData: PartecipaData[] = [
+const collaboraData: CollaboraData[] = [
   {
     name: 'Media Partner',
     pathName: 'media-partner',
@@ -58,4 +58,4 @@ const partecipaData: PartecipaData[] = [
   },
 ];
 
-export default partecipaData;
+export default collaboraData;

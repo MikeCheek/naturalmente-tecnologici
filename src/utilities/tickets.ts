@@ -24,7 +24,7 @@ interface Ticket {
 export const info: Ticket[] = [
   {
     icon: Tickets,
-    name: 'Biglietto Intero (3 giorni) - Early Bird',
+    name: 'Biglietto Intero (3+1 giorni) - Early Bird',
     price: 72.71,
     description:
       "Il festival offre l'opzione di ingresso illimitato per tutti e tre i giorni dell'evento, che include una vasta gamma di attività come laboratori, conferenze, workshop, spettacoli e musica. Inoltre, è possibile utilizzare l'area camping per l'intera durata del festival, compresi i servizi come postazioni per ricaricare gli smartphone, docce e bagni. L'accesso all'area camping può essere ottenuto a partire dalla sera del 10. La quota di partecipazione al festival comprende l'accesso completo a tutte le attività dell'evento, inclusi i workshop, le conferenze, lo stage musicale e gli spettacoli. Tuttavia, la quota non copre i costi per cibi, bevande e merchandise, che devono essere acquistati separatamente. Per poter partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.",

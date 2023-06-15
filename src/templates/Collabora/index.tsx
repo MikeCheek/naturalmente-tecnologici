@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { PartecipaData } from '../../utilities/partecipaData';
+import { CollaboraData } from '../../utilities/collaboraData';
 import * as styles from './index.module.scss';
 import Seo from '../../components/atoms/Seo';
 import { HeadProps } from 'gatsby';
@@ -9,7 +9,7 @@ import HeroPartecipa from '../../components/organisms/HeroPartecipa';
 import Heading from '../../components/atoms/Heading';
 
 interface IndexProps {
-  pageContext: PartecipaData;
+  pageContext: CollaboraData;
 }
 
 const Index = ({ pageContext }: IndexProps) => {
@@ -43,11 +43,11 @@ const Index = ({ pageContext }: IndexProps) => {
 export default Index;
 
 export const Head = ({ location, pageContext }: HeadProps) => {
-  const context = pageContext as PartecipaData;
+  const context = pageContext as CollaboraData;
 
   return (
     <Seo
-      title={context.name + ' - Partecipa'}
+      title={context.name + ' - Collabora'}
       pathname={location.pathname}
       description={context.description}
       structuredData

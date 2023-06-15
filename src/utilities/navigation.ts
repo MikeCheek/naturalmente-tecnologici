@@ -1,4 +1,4 @@
-import partecipaData from './partecipaData';
+import collaboraData from './collaboraData';
 
 export const links = [
   { name: 'Home', to: '/', position: 1, hide: true },
@@ -7,8 +7,8 @@ export const links = [
   { name: 'Partner', to: '/partner', position: 2 },
   { name: 'Chi siamo', to: '/chi-siamo', position: 2 },
   {
-    name: 'Partecipa',
+    name: 'Collabora',
     multiple: true,
-    links: [...partecipaData.map((data) => ({ name: data.name, to: `/partecipa/${data.pathName}`, position: 3 }))],
+    links: [...collaboraData.map((data) => ({ name: data.name, to: `/collabora/${data.pathName}`, position: 3 }))],
   },
 ];
