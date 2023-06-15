@@ -28,8 +28,8 @@ const Index = () => {
         <Colli width="1440" height="185" className={styles.colli} />
         <div className={styles.white}></div>
       </div>
-      {/* <FastActions /> */}
-      <div className={styles.notReleased}>
+      <FastActions />
+      {/* <div className={styles.notReleased}>
         <h2>I biglietti non sono ancora stati rilasciati</h2>
         <h3>Seguici per rimanere aggiornato</h3>
         <SocialLinks green onlySocial />
@@ -42,7 +42,7 @@ const Index = () => {
           />
         </div>
         <p></p>
-      </div>
+      </div>*/}
       <div className={styles.wrapHill}>
         <div className={styles.greenFlowers}>
           <Flower color="var(--nt-green)" />

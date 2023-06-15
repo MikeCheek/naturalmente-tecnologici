@@ -11,7 +11,7 @@ const Index = ({ children, triggerOnce = true, className }: ShowOnViewProps) => 
     triggerOnce: triggerOnce,
   });
   return (
-    <div className={`${className} ${inView ? styles.wrapShown : styles.wrap}`} ref={ref}>
+    <div className={`${className ?? ''} ${inView ? styles.wrapShown : styles.wrap}`} ref={ref}>
       {children}
     </div>
   );

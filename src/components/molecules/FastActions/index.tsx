@@ -3,30 +3,33 @@ import * as styles from './index.module.scss';
 import CardAction from '../../atoms/CardAction';
 import Timer from '../Timer';
 import Heading from '../../atoms/Heading';
-import { discount, tickets } from '../../../utilities/tickets';
+import { info, DefaultTicketProps } from '../../../utilities/tickets';
+import ShowOnView from '../../atoms/ShowOnView';
 
 const Index = () => {
   return (
     <div className={styles.wrap}>
       <Heading text="ACQUISTA IL TUO BIGLIETTO <br/>PER L'EVENTO" />
       <div className={styles.cards}>
-        {tickets.map((ticket, key) => {
+        {info.map((ticket, key) => {
           return (
             <CardAction
               key={key}
               icon={<ticket.icon className={styles.icon} width={70} />}
-              text={`<span class='cuttedText'>${ticket.price}€</span><br/>${ticket.price - discount}€`}
-              description={ticket.name}
+              // text={`<span class='cuttedText'>${ticket.price}€</span><br/>${ticket.price - discount}€`}
+              text={`${ticket.price} €`}
+              description={ticket.name.replace('- Early Bird', '')}
               buttonText="ACQUISTA"
-              buttonHref={ticket.url}
+              buttonHref={DefaultTicketProps.url}
+              tag={'EARLY BIRD'}
             />
           );
         })}
       </div>
-      <div className={styles.timerWrap}>
+      <ShowOnView className={styles.timerWrap}>
         <h3>Affrettati! L'offerta scade tra</h3>
-        <Timer date={new Date('May 11, 2023 00:00:00')} shutOffTimer={() => {}} />
-      </div>
+        <Timer date={new Date(info[0].availabilityEnds)} shutOffTimer={() => {}} />
+      </ShowOnView>
     </div>
   );
 };

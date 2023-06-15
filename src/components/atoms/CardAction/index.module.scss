@@ -14,12 +14,18 @@
   width: 30vw;
   max-width: 160px;
   min-width: 140px;
-  min-height: 180px;
+  min-height: 200px;
   height: 100%;
   text-align: center;
   margin: 10px;
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   will-change: transform, opacity;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
   @media screen and (min-width: '768px') {
     border-width: 4px;
     padding: 30px 15px;
@@ -31,6 +37,17 @@
   p {
     margin-top: 0;
   }
+}
+
+.tag {
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  transform: rotate(-25deg);
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: var(--nt-orange);
+  font-weight: 400;
 }
 
 .bigText {
