@@ -60,7 +60,6 @@
   width: 80%;
   margin-top: 0;
   margin-bottom: 40px;
-  color: var(--nt-orange);
 }
 
 .conferencesWrap {
@@ -94,5 +93,7 @@
   em {
     text-align: center;
     margin: auto;
+    color: var(--nt-orange);
+    font-weight: bolder;
   }
 }
