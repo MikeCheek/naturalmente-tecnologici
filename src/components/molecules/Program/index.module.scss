@@ -29,3 +29,12 @@
   width: 100vw;
   height: auto;
 }
+
+.program {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px 10px;
+}
