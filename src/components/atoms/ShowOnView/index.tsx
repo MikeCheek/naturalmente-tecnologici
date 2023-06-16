@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import ShowOnViewProps from './index.types';
 import * as styles from './index.module.scss';
 
-const Index = ({ children, triggerOnce = true, className }: ShowOnViewProps) => {
+const Index = ({ children, triggerOnce = true, className, style }: ShowOnViewProps) => {
   const [ref, inView, _entry] = useInView({
     threshold: 0,
     rootMargin: '10% 0px -20% 0px',
@@ -11,7 +11,7 @@ const Index = ({ children, triggerOnce = true, className }: ShowOnViewProps) => 
     triggerOnce: triggerOnce,
   });
   return (
-    <div className={`${className ?? ''} ${inView ? styles.wrapShown : styles.wrap}`} ref={ref}>
+    <div className={`${className ?? ''} ${inView ? styles.wrapShown : styles.wrap}`} style={style ?? {}} ref={ref}>
       {children}
     </div>
   );

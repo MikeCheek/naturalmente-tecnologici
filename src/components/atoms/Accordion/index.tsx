@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import AccordionProps from './index.types';
 import * as styles from './index.module.scss';
 import Down from '../../../assets/down.svg';
+import ShowOnView from '../ShowOnView';
 
 const Index = ({ title, data }: AccordionProps) => {
   const [selected, setSelected] = useState<number>(-1);
 
   return (
-    <div className={styles.wrap}>
+    <ShowOnView className={styles.wrap}>
       <h3>{title}</h3>
       <div className={styles.options}>
         {data
@@ -40,7 +41,7 @@ const Index = ({ title, data }: AccordionProps) => {
             )
           )}
       </div>
-    </div>
+    </ShowOnView>
   );
 };
 

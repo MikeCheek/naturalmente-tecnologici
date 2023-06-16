@@ -6,6 +6,7 @@ import { HeadProps } from 'gatsby';
 import Layout from '../../components/organisms/Layout';
 import HeroPartecipa from '../../components/organisms/HeroPartecipa';
 import Heading from '../../components/atoms/Heading';
+import ShowOnView from '../../components/atoms/ShowOnView';
 
 interface IndexProps {
   pageContext: CollaboraData;
@@ -15,11 +16,11 @@ const Index = ({ pageContext }: IndexProps) => {
   return (
     <Layout>
       <HeroPartecipa heading={pageContext.name} />
-      <div className={styles.head}>
+      <ShowOnView className={styles.head}>
         <h4 dangerouslySetInnerHTML={{ __html: pageContext.description }}></h4>
-      </div>
+      </ShowOnView>
       <Heading text="Contattaci" />
-      <div className={styles.formWrap}>
+      <ShowOnView className={styles.formWrap}>
         <iframe
           data-tally-src={`https://tally.so/embed/n9XpoK?type=${pageContext.name}&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
           loading="lazy"
@@ -28,7 +29,7 @@ const Index = ({ pageContext }: IndexProps) => {
           title="CONTATTACI"
           className={styles.form}
         ></iframe>
-      </div>
+      </ShowOnView>
     </Layout>
   );
 };

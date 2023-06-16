@@ -4,24 +4,25 @@ import * as styles from './index.module.scss';
 import Heading from '../Heading';
 import Syskrack from '../../../assets/syskrack.svg';
 import IBM from '../../../assets/partner/IBM.svg';
+import ShowOnView from '../ShowOnView';
 
 const Index = () => {
   return (
     <div className={styles.partners}>
       <Heading text="Powered By" />
-      <div className={styles.wrap}>
+      <ShowOnView className={styles.wrap}>
         <a href="https://www.syskrack.org/" rel="noopener noreferrer" target="_blank">
           <Syskrack className={styles.logo} width={180} />
         </a>
-      </div>
-      <h4>
-        Selezioniamo partner che abbiano voglia di investire nella cultura e nello sviluppo delle persone e del
-        territorio e ad accettare la nostra sfida collettiva.
-        <br />
-        Vogliamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
-      </h4>
+        <h4>
+          Selezioniamo partner che abbiano voglia di investire nella cultura e nello sviluppo delle persone e del
+          territorio e ad accettare la nostra sfida collettiva.
+          <br />
+          Vogliamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
+        </h4>
+      </ShowOnView>
       <Heading text="Community Partner" />
-      <div className={styles.wrap}>
+      <ShowOnView className={styles.wrap}>
         {/*<a href="http://www.hackability.it/" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
@@ -49,13 +50,13 @@ const Index = () => {
             width={180}
           />
         </a>
-      </div>
+      </ShowOnView>
       <Heading text="Activity Partner" />
-      <div className={styles.wrap}>
+      <ShowOnView className={styles.wrap}>
         <a href="https://skillsbuild.org/" rel="noopener noreferrer" target="_blank">
           <IBM className={styles.logoHorizontal} height={40} />
         </a>
-      </div>
+      </ShowOnView>
     </div>
   );
 };
