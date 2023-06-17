@@ -46,7 +46,6 @@ const Index = () => {
     <>
       <Heading text="Sulla scorsa edizione..." marginTop />
       <ShowOnView>
-        {' '}
         <h3 className={styles.subTitle}>Gradimento dei partecipanti</h3>
       </ShowOnView>
       <ShowOnView className={styles.wrapper}>

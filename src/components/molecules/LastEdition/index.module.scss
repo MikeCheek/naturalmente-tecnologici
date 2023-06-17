@@ -58,8 +58,7 @@
 
 .conferenceText {
   width: 80%;
-  margin-top: 0;
-  margin-bottom: 40px;
+  margin: 0 auto;
 }
 
 .conferencesWrap {
@@ -69,6 +68,10 @@
   justify-content: center;
   text-align: center;
   margin-top: 40px;
+
+  h3 {
+    margin-bottom: 40px;
+  }
 }
 
 .links {
@@ -82,7 +85,7 @@
 
 .linkWrap {
   width: 350px;
-  min-height: 300px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,8 +95,12 @@
 
   em {
     text-align: center;
-    margin: auto;
+    margin: 10px;
     color: var(--nt-orange);
     font-weight: bolder;
+  }
+
+  @media screen and (min-width: '768px') {
+    min-height: 300px;
   }
 }
