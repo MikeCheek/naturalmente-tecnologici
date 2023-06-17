@@ -22,7 +22,8 @@
 
 .wrap {
   display: flex;
-  flex-direction: row;
+  flex-direction: row !important;
+  width: 90%;
   flex-wrap: wrap;
   flex: 1 1 120px;
   align-items: center;
