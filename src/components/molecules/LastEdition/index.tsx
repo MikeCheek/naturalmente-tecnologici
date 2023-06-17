@@ -8,7 +8,6 @@ import Event from '../../../assets/reviews/event.svg';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import { useInView } from 'react-intersection-observer';
 import { conferences } from '../../../utilities/lastEdition';
-import Button from '../../atoms/Button';
 import YoutubeEmbed from '../../atoms/YoutubeEmbed';
 import ShowOnView from '../../atoms/ShowOnView';
 

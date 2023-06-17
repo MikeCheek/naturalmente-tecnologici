@@ -7,23 +7,32 @@ import { info, DefaultTicketProps } from '../../../utilities/tickets';
 import ShowOnView from '../../atoms/ShowOnView';
 
 const Index = () => {
+  const tickets = info
+    .map((value) => ({
+      ...value,
+      name: value.name.match(/- Early Bird/i) ? value.name.replace('- Early Bird', '') : value.name,
+      offer: value.name.match(/- Early Bird/) ? true : false,
+    }))
+    .map((value) => ({
+      ...value,
+      name: value.name.replace(')', '').split('('),
+    }));
+
   return (
     <div className={styles.wrap}>
       <Heading text="RISERVA IL TUO BIGLIETTO <br/>PER L'EVENTO" />
       <div className={styles.cards}>
-        {info.map((ticket, key) => {
-          const replaced = ticket.name.replace('- Early Bird', '');
-          const name = (replaced.split('(')[0] + '<br/>' + replaced.split('(')[1]).replace(')', '');
+        {tickets.map((ticket, key) => {
           return (
             <CardAction
               key={key}
               icon={<ticket.icon className={styles.icon} width={70} />}
               // text={`<span class='cuttedText'>${ticket.price}€</span><br/>${ticket.price - discount}€`}
-              text={`${ticket.price} €`}
-              description={name}
+              text={`${ticket.price.toFixed(2)} €`}
+              description={ticket.name.join('<br/>')}
               buttonText="PARTECIPA"
               buttonHref={DefaultTicketProps.url}
-              tag={'EARLY BIRD'}
+              tag={ticket.offer ? 'EARLY BIRD' : undefined}
             />
           );
         })}
