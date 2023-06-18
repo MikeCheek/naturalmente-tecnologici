@@ -21,6 +21,8 @@
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   will-change: transform, opacity;
   position: relative;
+  opacity: 1;
+  transform: scale(1) rotateX(0);
 
   &:hover {
     transform: scale(1.05);
