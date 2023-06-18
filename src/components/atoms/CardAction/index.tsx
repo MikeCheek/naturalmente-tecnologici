@@ -1,6 +1,5 @@
 import React from 'react';
 import { FastActionProps } from './index.types';
-import { Link } from 'gatsby';
 import * as styles from './index.module.scss';
 import { useInView } from 'react-intersection-observer';
 import Button from '../Button';
@@ -24,10 +23,10 @@ const Index = ({
   });
 
   return (
-    <div className={inView ? styles.wrap : styles.wrapHidden} ref={ref}>
+    <div onClick={infoClick} className={inView ? styles.wrap : styles.wrapHidden} ref={ref}>
       {tag ? <p className={styles.tag}>{tag}</p> : <></>}
       {Info && infoClick ? (
-        <div className={styles.info} onClick={infoClick}>
+        <div className={styles.info}>
           <Info width={35} height={35} fill="var(--nt-orange)" />
         </div>
       ) : (
