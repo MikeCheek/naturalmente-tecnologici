@@ -28,7 +28,7 @@ const Index = ({
       {tag ? <p className={styles.tag}>{tag}</p> : <></>}
       {Info && infoClick ? (
         <div className={styles.info} onClick={infoClick}>
-          <Info width={30} height={30} fill="var(--nt-green)" />
+          <Info width={35} height={35} fill="var(--nt-orange)" />
         </div>
       ) : (
         <></>

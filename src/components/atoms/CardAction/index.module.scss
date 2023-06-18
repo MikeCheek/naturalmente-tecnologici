@@ -83,11 +83,27 @@
   top: 10px;
   right: 15px;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
 
-  @media screen and (min-width: '768px') {
-    width: 30px;
-    height: 30px;
+  svg {
+    transition: fill 200ms ease, background-color 200ms ease, border-width 200ms ease;
+    border-radius: 50%;
+    will-change: fill, background-color;
+    fill: var(--nt-orange);
+    background-color: transparent;
+    border: 0px var(--nt-orange) solid;
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+
+    &:hover {
+      fill: var(--nt-white);
+      background-color: var(--nt-orange);
+      border-width: 2px;
+    }
+
+    @media screen and (min-width: '768px') {
+      width: 35px;
+      height: 35px;
+    }
   }
 }

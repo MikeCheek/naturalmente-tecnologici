@@ -93,7 +93,7 @@ export const info: Ticket[] = [
     description:
       'Valido solo per ingresso giornaliero. Utilizzo area camping giornaliero, dura fino alle 10 del giorno dopo. Valido solo per biglietto giornaliero. Per poter partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
     price: 15.0,
-    badges: ['camping'],
+    badges: ['camping', 'docce'],
   },
 ];
 export const allBadges = info[0].badges;
