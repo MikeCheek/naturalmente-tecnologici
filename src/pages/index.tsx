@@ -27,6 +27,7 @@ const IndexPage = () => {
       }}
     >
       <Layout>
+        <HeroHome />
         <Modal
           opened={opened}
           close={() => setOpened(false)}
@@ -34,7 +35,6 @@ const IndexPage = () => {
           description={text.description}
           badges={badges}
         />
-        <HeroHome />
         <Theme />
         <HeardOn />
         <NaturalmenteTecnologici />

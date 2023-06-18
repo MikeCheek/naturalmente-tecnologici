@@ -15,7 +15,7 @@ const Index = ({ title, description, opened, close, badges }: ModalProps) => {
         <X width={20} height={20} fill="var(--nt-orange)" />
       </div>
       <div className={styles.titleWrap}>
-        <h3 dangerouslySetInnerHTML={{ __html: title }}></h3>
+        <p className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></p>
         {badges && badges.length > 0 ? (
           <div className={styles.badges}>
             {allBadges?.map((badge, key) => (
