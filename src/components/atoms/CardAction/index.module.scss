@@ -22,7 +22,7 @@
   will-change: transform, opacity;
   position: relative;
   opacity: 1;
-  transform: scale(1) rotateX(0);
+  transform: scale(1);
 
   &:hover {
     transform: scale(1.05);
@@ -66,7 +66,7 @@
 .wrapHidden {
   @extend .wrap;
   opacity: 0;
-  transform: scale(0.5) rotateX(90deg);
+  transform: scale(0.5);
 }
 
 .button {
