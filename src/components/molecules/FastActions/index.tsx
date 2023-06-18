@@ -5,8 +5,12 @@ import Timer from '../Timer';
 import Heading from '../../atoms/Heading';
 import { info, DefaultTicketProps } from '../../../utilities/tickets';
 import ShowOnView from '../../atoms/ShowOnView';
+import Info from '../../../assets/info.svg';
+import useModalContext from '../../../utilities/useModalContext';
 
 const Index = () => {
+  const { setText } = useModalContext();
+
   const tickets = info
     .map((value) => ({
       ...value,
@@ -15,7 +19,7 @@ const Index = () => {
     }))
     .map((value) => ({
       ...value,
-      name: value.name.replace(')', '').split('('),
+      name: value.name.replace(')', '').split('(').join('<br/>'),
     }));
 
   return (
@@ -29,10 +33,12 @@ const Index = () => {
               icon={<ticket.icon className={styles.icon} width={70} />}
               // text={`<span class='cuttedText'>${ticket.price}€</span><br/>${ticket.price - discount}€`}
               text={`${ticket.price.toFixed(2)} €`}
-              description={ticket.name.join('<br/>')}
+              description={ticket.name}
               buttonText="PARTECIPA"
               buttonHref={DefaultTicketProps.url}
               tag={ticket.offer ? 'EARLY BIRD' : undefined}
+              Info={Info}
+              infoClick={() => setText(ticket.name, ticket.description, ticket.badges)}
             />
           );
         })}

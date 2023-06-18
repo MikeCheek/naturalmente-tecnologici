@@ -20,6 +20,7 @@ interface Ticket {
   availabilityEnds: string;
   validFrom: string;
   validThrough: string;
+  badges?: string[];
 }
 
 export const info: Ticket[] = [
@@ -33,6 +34,18 @@ export const info: Ticket[] = [
     availabilityEnds: '2023-06-30T23:59:59.999Z',
     validFrom: '2023-08-10T18:00:00.000Z',
     validThrough: '2023-08-14T10:59:59.999Z',
+    badges: [
+      '10 agosto',
+      '11 agosto',
+      '12 agosto',
+      '13 agosto',
+      'camping',
+      'conferenze',
+      'workshop',
+      'spettacoli',
+      'docce',
+      'bagni',
+    ],
   },
   {
     icon: Ticket,
@@ -44,6 +57,7 @@ export const info: Ticket[] = [
     description:
       "L'ingresso giornaliero valido per il giorno 11 agosto 2023 offre la possibilità di partecipare alle attività del festival per quella specifica giornata. Ciò include l'accesso completo all'evento, compresi i workshop, le attività, lo stage musicale e gli spettacoli. La quota di partecipazione al biglietto giornaliero non copre i costi per cibi, bevande e merchandise, che devono essere acquistati separatamente. Per poter partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.",
     price: 15.0,
+    badges: ['11 agosto', 'conferenze', 'workshop', 'spettacoli', 'bagni'],
   },
   {
     icon: Ticket,
@@ -55,6 +69,7 @@ export const info: Ticket[] = [
     description:
       "L'ingresso giornaliero valido per il giorno 12 agosto 2023 offre la possibilità di partecipare alle attività del festival per quella specifica giornata. Ciò include l'accesso completo all'evento, compresi i workshop, le attività, lo stage musicale e gli spettacoli. La quota di partecipazione al biglietto giornaliero non copre i costi per cibi, bevande e merchandise, che devono essere acquistati separatamente. Per poter partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.",
     price: 15.0,
+    badges: ['12 agosto', 'conferenze', 'workshop', 'spettacoli', 'bagni'],
   },
   {
     icon: Ticket,
@@ -66,6 +81,7 @@ export const info: Ticket[] = [
     description:
       "L'ingresso giornaliero valido per il giorno 13 agosto 2023 offre la possibilità di partecipare alle attività del festival per quella specifica giornata. Ciò include l'accesso completo all'evento, compresi i workshop, le attività, lo stage musicale e gli spettacoli. La quota di partecipazione al biglietto giornaliero non copre i costi per cibi, bevande e merchandise, che devono essere acquistati separatamente. Per poter partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.",
     price: 15.0,
+    badges: ['13 agosto', 'conferenze', 'workshop', 'spettacoli', 'bagni'],
   },
   {
     icon: Camping,
@@ -77,5 +93,7 @@ export const info: Ticket[] = [
     description:
       'Valido solo per ingresso giornaliero. Utilizzo area camping giornaliero, dura fino alle 10 del giorno dopo. Valido solo per biglietto giornaliero. Per poter partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
     price: 17.22,
+    badges: ['camping'],
   },
 ];
+export const allBadges = info[0].badges;

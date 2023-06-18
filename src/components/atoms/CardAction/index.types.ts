@@ -6,4 +6,6 @@ export interface FastActionProps {
   linkType?: LinkType;
   description?: string;
   tag?: string;
+  Info?: SVG;
+  infoClick?: () => void;
 }
