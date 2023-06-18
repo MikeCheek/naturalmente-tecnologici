@@ -89,6 +89,7 @@
   background-color: var(--nt-orange);
   font-size: 10px;
   margin: 0;
+  border: 2px var(--nt-orange) solid;
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
@@ -96,7 +97,6 @@
 
 .offBadge {
   @extend .onBadge;
-  border: 2px var(--nt-orange) solid;
   background-color: transparent;
   color: var(--nt-orange);
   opacity: 0.5;
