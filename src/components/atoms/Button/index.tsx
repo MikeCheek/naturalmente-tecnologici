@@ -3,11 +3,13 @@ import * as styles from './index.module.scss';
 import { ButtonProps } from './index.types';
 import { Link } from 'gatsby';
 
-const Index = ({ text, onClick, href, title, hoverWhite = false, internal = false }: ButtonProps) => {
+const Index = ({ text, onClick, href, title, hoverWhite = false, internal = false, bigger = false }: ButtonProps) => {
+  const className = `${bigger ? styles.bigButton : styles.button} ${hoverWhite ? styles.hoverWhite : ''}`;
+
   return (
     <>
       {onClick ? (
-        <button onClick={onClick} title={title} className={`${styles.button} ${hoverWhite ? styles.hoverWhite : ''}`}>
+        <button onClick={onClick} title={title} className={className}>
           {text} <span className={styles.span}></span>
           <span className={styles.span}></span>
           <span className={styles.span}></span>
@@ -15,20 +17,14 @@ const Index = ({ text, onClick, href, title, hoverWhite = false, internal = fals
         </button>
       ) : href ? (
         internal ? (
-          <Link to={href} title={title} className={`${styles.button} ${hoverWhite ? styles.hoverWhite : ''}`}>
+          <Link to={href} title={title} className={className}>
             {text} <span className={styles.span}></span>
             <span className={styles.span}></span>
             <span className={styles.span}></span>
             <span className={styles.span}></span>
           </Link>
         ) : (
-          <a
-            href={href}
-            title={title}
-            className={`${styles.button} ${hoverWhite ? styles.hoverWhite : ''}`}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+          <a href={href} title={title} className={className} rel="noopener noreferrer" target="_blank">
             {text} <span className={styles.span}></span>
             <span className={styles.span}></span>
             <span className={styles.span}></span>

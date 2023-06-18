@@ -5,4 +5,5 @@ export interface ButtonProps {
   title: string;
   href?: string;
   internal?: boolean;
+  bigger?: boolean;
 }

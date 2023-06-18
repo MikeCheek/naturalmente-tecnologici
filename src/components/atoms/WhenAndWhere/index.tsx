@@ -4,6 +4,8 @@ import * as styles from './index.module.scss';
 import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../../molecules/SectionImageCTA';
 import ShowOnView from '../ShowOnView';
+import Button from '../Button';
+import { Eventbrite } from '../../../utilities/tickets';
 
 const Index = () => {
   const coords = [`40°37'14.0"N`, `16°24'38.6"E`];
@@ -28,6 +30,9 @@ const Index = () => {
             </b>
           </a>
         </h3>
+      </ShowOnView>
+      <ShowOnView>
+        <Button text="Riserva il tuo posto" title="Riserva il tuo posto" href={Eventbrite} bigger />
       </ShowOnView>
       <SectionImageCTA
         text={` Presso Bosco Le Coste, tra Grassano e Grottole, tra le argillose colline lucane.<br/>
