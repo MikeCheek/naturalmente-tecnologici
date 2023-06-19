@@ -33,7 +33,7 @@ export const whatIs = [
   },
   {
     name: 'Il festival musicale',
-    text: `Artisti nazionali e internazionali saliranno sullo stage di Naturalmente tecnologici.<br/><br/>
+    text: `Artisti nazionali e internazionali saliranno sullo stage di Naturalmente Tecnologici.<br/><br/>
   Potrai ascoltare tante sonorità diverse: dal hip-hop al reggae, dalla techno alla goa.`,
     eventbrite: true,
   },

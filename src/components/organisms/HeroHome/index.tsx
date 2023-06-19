@@ -2,13 +2,10 @@ import React from 'react';
 
 import * as styles from './index.module.scss';
 import BigBranch from '../../../assets/big-branch.svg';
-import Button from '../../atoms/Button';
 import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina.svg';
 import FastActions from '../../molecules/FastActions';
 import Flower from '../../atoms/Flower';
-import { showPopUp } from '../../../utilities/newsletter';
-import SocialLinks from '../../molecules/SocialLinks';
 
 const Index = () => {
   return (

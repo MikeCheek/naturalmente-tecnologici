@@ -25,12 +25,6 @@ const Index = () => {
             className={styles.form}
           ></iframe>
         </ShowOnView>
-        {/* <p>
-          Scrivici a{' '}
-          <a title="Scrivici una mail" href="mailto:direttivo@syskrack.org">
-            direttivo@syskrack.org
-          </a>
-        </p> */}
       </div>
       <div className={styles.section}>
         <Heading text="Newsletter" />
@@ -38,12 +32,10 @@ const Index = () => {
           <p>
             Ti sei iscritto alla nostra newsletter?
             <br />
-            I biglietti dell'evento non sono ancora usciti.
             <br />
-            <br />
-            Iscriviti alla nostra newsletter per non perderti l'Early Bird!
+            Iscriviti per restare sempre aggiornato sulle novità dell'evento!
           </p>
-          <Button text="ISCRIVITI" title="Iscriviti alla Newsletter dell'associazione" onClick={showPopUp} />
+          <Button text="ISCRIVITI" title="Iscriviti alla Newsletter dell'associazione" onClick={showPopUp} bigger />
         </ShowOnView>
       </div>
     </div>

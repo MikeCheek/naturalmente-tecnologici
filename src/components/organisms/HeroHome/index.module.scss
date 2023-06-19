@@ -51,9 +51,7 @@
   bottom: 0;
   width: 100vw;
 
-  svg {
-    animation: 1s grow ease-out;
-  }
+  animation: 1s grow ease-out;
 
   :nth-child(1) {
     transform: translateY(10px);
