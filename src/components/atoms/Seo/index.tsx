@@ -88,6 +88,7 @@ const Index = ({
         },
         organizer: {
           '@type': 'Organization',
+          '@id': 'https://www.syskrack.org/#organization',
           name: 'Syskrack Giuseppe Porsia',
           url: 'https://www.syskrack.org/',
           sameAs: ['https://www.wikidata.org/wiki/Q116907424', 'https://syskrack.org/'],
