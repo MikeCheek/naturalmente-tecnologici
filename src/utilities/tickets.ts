@@ -31,7 +31,7 @@ export const info: Ticket[] = [
     description:
       "Il festival offre l'opzione di ingresso illimitato per tutti e tre i giorni dell'evento, che include una vasta gamma di attività come laboratori, conferenze, workshop, spettacoli e musica. Inoltre, è possibile utilizzare l'area camping per l'intera durata del festival, compresi i servizi come postazioni per ricaricare gli smartphone, docce e bagni. L'accesso all'area camping può essere ottenuto a partire dalla sera del 10. La quota di partecipazione al festival comprende l'accesso completo a tutte le attività dell'evento, inclusi i workshop, le conferenze, lo stage musicale e gli spettacoli. La quota non copre i pasti e le bevande. Per poter partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.",
     availabilityStarts: '2023-06-15T00:00:00.000Z',
-    availabilityEnds: '2023-07-05T23:59:59.999Z',
+    availabilityEnds: '2023-07-10T23:59:59.999Z',
     validFrom: '2023-08-10T18:00:00.000Z',
     validThrough: '2023-08-14T10:59:59.999Z',
     badges: [
@@ -51,7 +51,7 @@ export const info: Ticket[] = [
     icon: Ticket,
     name: 'Biglietto Giornaliero (11 Agosto) - Early Bird',
     availabilityStarts: '2023-06-15T00:00:00.000Z',
-    availabilityEnds: '2023-07-05T23:59:59.999Z',
+    availabilityEnds: '2023-07-10T23:59:59.999Z',
     validFrom: '2023-08-11T00:00:00.000Z',
     validThrough: '2023-08-11T23:59:59.999Z',
     description:
@@ -63,7 +63,7 @@ export const info: Ticket[] = [
     icon: Ticket,
     name: 'Biglietto Giornaliero (12 Agosto) - Early Bird',
     availabilityStarts: '2023-06-15T00:00:00.000Z',
-    availabilityEnds: '2023-07-05T23:59:59.999Z',
+    availabilityEnds: '2023-07-10T23:59:59.999Z',
     validFrom: '2023-08-12T00:00:00.000Z',
     validThrough: '2023-08-12T23:59:59.999Z',
     description:
@@ -75,7 +75,7 @@ export const info: Ticket[] = [
     icon: Ticket,
     name: 'Biglietto Giornaliero (13 Agosto) - Early Bird',
     availabilityStarts: '2023-06-15T00:00:00.000Z',
-    availabilityEnds: '2023-07-05T23:59:59.999Z',
+    availabilityEnds: '2023-07-10T23:59:59.999Z',
     validFrom: '2023-08-13T00:00:00.000Z',
     validThrough: '2023-08-13T23:59:59.999Z',
     description:
@@ -87,7 +87,7 @@ export const info: Ticket[] = [
     icon: Camping,
     name: 'Integrazione Camping',
     availabilityStarts: '2023-06-15T00:00:00.000Z',
-    availabilityEnds: '2023-07-05T23:59:59.999Z',
+    availabilityEnds: '2023-07-10T23:59:59.999Z',
     validFrom: '2023-08-13T00:00:00.000Z',
     validThrough: '2023-08-13T23:59:59.999Z',
     description:
