@@ -38,13 +38,20 @@
 
 .logo {
   border-radius: 2px;
-  width: 120px;
+  width: 110px;
   img {
     object-fit: contain !important;
   }
-
   @media screen and (min-width: 768px) {
-    width: 170px;
+    width: 150px;
+  }
+}
+
+.logoLong {
+  @extend .logo;
+  width: 150px;
+  @media screen and (min-width: 768px) {
+    width: 200px;
   }
 }
 

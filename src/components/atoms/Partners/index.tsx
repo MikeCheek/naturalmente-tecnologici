@@ -12,7 +12,7 @@ const Index = () => {
       <Heading text="Powered By" />
       <ShowOnView className={styles.wrap}>
         <a href="https://www.syskrack.org/" rel="noopener noreferrer" title="Syskrack" target="_blank">
-          <Syskrack className={styles.logo} width={180} />
+          <Syskrack className={styles.logo} width={150} />
         </a>
         <h4>
           Selezioniamo partner che hanno voglia di investire nella cultura e nello sviluppo delle persone e del
@@ -29,7 +29,7 @@ const Index = () => {
             src="../../../images/partners/hackability.jpg"
             className={styles.logo}
             alt="Hackability"
-            width={180}
+            width={150}
           />
         </a>*/}
         {/* <a href="" rel="noopener noreferrer" title="Potenza Urban Art" target="_blank"> */}
@@ -38,7 +38,7 @@ const Index = () => {
           src="../../../images/partners/potenza_urban_art.jpg"
           className={styles.logo}
           alt="Potenza Urban Art"
-          width={180}
+          width={150}
         />
         {/* </a> */}
         <a href="https://www.ashoka.org" title="Ashoka" rel="noopener noreferrer" target="_blank">
@@ -47,7 +47,7 @@ const Index = () => {
             src="../../../images/partners/ashoka.jpg"
             className={styles.logo}
             alt="Potenza Urban Art"
-            width={180}
+            width={150}
           />
         </a>
       </ShowOnView>
@@ -65,7 +65,16 @@ const Index = () => {
             src="../../../images/partners/border-radio.png"
             className={styles.logo}
             alt="Border Radio"
-            width={180}
+            width={150}
+          />
+        </a>
+        <a href="https://www.italiachecambia.org/" title="Italia che cambia" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/italia-che-cambia.png"
+            className={styles.logoLong}
+            alt="Italia che cambia"
+            width={200}
           />
         </a>
       </ShowOnView>
