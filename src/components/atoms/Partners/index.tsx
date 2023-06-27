@@ -4,6 +4,7 @@ import * as styles from './index.module.scss';
 import Heading from '../Heading';
 import Syskrack from '../../../assets/syskrack.svg';
 import IBM from '../../../assets/partner/IBM.svg';
+import Podus from '../../../assets/partner/podus.svg';
 import ShowOnView from '../ShowOnView';
 
 const Index = () => {
@@ -20,6 +21,12 @@ const Index = () => {
           <br />
           Vogliamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
         </h4>
+      </ShowOnView>
+      <Heading text="Location Partner" />
+      <ShowOnView className={styles.wrap}>
+        <a href="https://podus.it/" title="Podus" rel="noopener noreferrer" target="_blank">
+          <Podus className={styles.logoLong} width={200} />
+        </a>
       </ShowOnView>
       <Heading text="Community Partner" />
       <ShowOnView className={styles.wrap}>
