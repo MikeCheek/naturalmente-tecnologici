@@ -11,11 +11,11 @@ const Index = () => {
   return (
     <div className={styles.wrap}>
       <Banner text="IL PROGRAMMA NON È STATO RILASCIATO" />
-      <div className={styles.program}>
+      {/* <div className={styles.program}>
         {program.map((item, key) => (
           <Timeline key={key} data={item} />
         ))}
-      </div>
+      </div> */}
 
       <h3>Vuoi sapere quando verrà rilasciato?</h3>
       <h4>Rimani aggiornato iscrivendoti alla nostra newsletter!</h4>

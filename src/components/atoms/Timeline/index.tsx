@@ -12,9 +12,9 @@ const Index = ({ data }: TimelineProps) => {
       <Heading text={data.day} smaller showOnView={false} />
 
       {data.timeline.map((item, key) => (
-        <div className={styles.itemWrap}>
+        <div key={key} className={styles.itemWrap}>
           <div className={key % 2 == 0 ? styles.item : styles.itemReversed} key={key}>
-            <p className={styles.title}>{item.title}</p>
+            <p className={styles.title} dangerouslySetInnerHTML={{ __html: item.title }}></p>
             {circle}
             <span className={styles.info}>
               <p>{item.time}</p>

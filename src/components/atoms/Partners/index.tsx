@@ -63,6 +63,15 @@ const Index = () => {
         <a href="https://skillsbuild.org/" title="IBM" rel="noopener noreferrer" target="_blank">
           <IBM className={styles.logoHorizontal} height={40} />
         </a>
+        <a href="" title="Atomico" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/atomico.jpg"
+            className={styles.logo}
+            alt="Atomico"
+            width={150}
+          />
+        </a>
       </ShowOnView>
       <Heading text="Media Partner" />
       <ShowOnView className={styles.wrap}>
@@ -81,6 +90,18 @@ const Index = () => {
             src="../../../images/partners/italia-che-cambia.png"
             className={styles.logoLong}
             alt="Italia che cambia"
+            width={200}
+          />
+        </a>
+      </ShowOnView>
+      <Heading text="Music Partner" />
+      <ShowOnView className={styles.wrap}>
+        <a href="" title="Millenium Van" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/millenium.png"
+            className={styles.logoLong}
+            alt="Millenium Van"
             width={200}
           />
         </a>
