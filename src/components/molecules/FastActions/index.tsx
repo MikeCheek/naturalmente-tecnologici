@@ -7,6 +7,7 @@ import { info, DefaultTicketProps } from '../../../utilities/tickets';
 import ShowOnView from '../../atoms/ShowOnView';
 import Info from '../../../assets/info.svg';
 import useModalContext from '../../../utilities/useModalContext';
+import Button from '../../atoms/Button';
 
 const Index = () => {
   const { setText } = useModalContext();
@@ -48,8 +49,20 @@ const Index = () => {
         })}
       </div>
       <ShowOnView className={styles.timerWrap}>
-        <h3>Affrettati! L'offerta scade tra</h3>
+        <h3>
+          Affrettati!
+          <br />
+          L'Early Bird scade tra
+        </h3>
         <Timer date={new Date(info[0].availabilityEnds)} shutOffTimer={() => {}} />
+      </ShowOnView>
+      <ShowOnView>
+        <h3>
+          Hai qualche dubbio?
+          <br />
+          Dai un'occhiata alle nostre FAQ o contattaci!
+        </h3>
+        <Button bigger internal href="/info#faq" title="Vai alle FAQ" text="Vai alle FAQ" />
       </ShowOnView>
     </div>
   );

@@ -20,6 +20,10 @@
   h2 {
     margin-top: 0;
   }
+
+  h3 {
+    color: var(--nt-white);
+  }
 }
 
 .cards {
@@ -52,8 +56,12 @@
   border-radius: 15px;
   padding: 0 20px;
   color: var(--nt-white);
+  width: 100vw;
+  background-color: var(--nt-orange);
+  color: var(--nt-green) !important;
 
   h3 {
     text-transform: uppercase;
+    color: var(--nt-green) !important;
   }
 }
