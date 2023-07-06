@@ -53,7 +53,7 @@ const Index = () => {
       className={`${styles.wrap} ${show || opened ? styles.show : styles.hide}`}
       style={shadow ? { boxShadow: '0 0 20px 0 rgb(0, 0, 0, 0.25)' } : {}}
     >
-      <Link to="/" className={styles.logoNT} title="Vai alla home">
+      <Link to="/" className={styles.logoNT} title="Vai alla home" onClick={() => setOpened(false)}>
         <LogoNT
           width="195"
           height="64.45"

@@ -2,11 +2,9 @@ import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
 import { NavigationProps } from './index.types';
-import { showPopUp } from '../../../utilities/newsletter';
 import { links } from '../../../utilities/navigation';
 import MultipleLinks from '../../atoms/MultipleLinks';
 import { isBrowser } from '../../../utilities/browser';
-import { Eventbrite } from '../../../utilities/tickets';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
@@ -57,14 +55,14 @@ const Index = ({ opened, onClick }: NavigationProps) => {
       >
         <nav className={styles.linksMobile}>
           {linkElements}
-          <Link title="Partecipa all' evento" to={'/#biglietti'} className={styles.buttonMobile}>
+          <Link title="Partecipa all' evento" to={'/#biglietti'} className={styles.buttonMobile} onClick={onClick}>
             PARTECIPA
           </Link>
         </nav>
       </div>
       <div className={styles.wrapDesktop}>
         <nav className={styles.links}>{linkElements}</nav>
-        <Link title="Partecipa all' evento" to={'/#biglietti'} className={styles.button}>
+        <Link title="Partecipa all' evento" to={'/#biglietti'} className={styles.button} onClick={onClick}>
           PARTECIPA
         </Link>
       </div>

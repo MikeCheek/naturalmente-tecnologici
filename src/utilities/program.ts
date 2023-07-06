@@ -209,8 +209,12 @@ export default [
         title: 'Paolo Baldini Live',
       },
       {
-        time: '01:00',
+        time: '01:00 - 06:00',
         title: 'PNEUMATIX Live',
+      },
+      {
+        time: '06:00',
+        title: 'Alba e arrivederci NT23',
       },
     ],
   },

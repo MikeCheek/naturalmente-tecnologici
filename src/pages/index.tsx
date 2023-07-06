@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/organisms/Layout';
 import NaturalmenteTecnologici from '../components/molecules/NaturalmenteTecnologici';
 import HeroHome from '../components/organisms/HeroHome';
@@ -16,7 +16,21 @@ const IndexPage = () => {
   const [opened, setOpened] = useState<boolean>(false);
   const [text, setText] = useState<{ name: string; description: string }>({ name: '', description: '' });
   const [badges, setBadges] = useState<string[]>();
-  const [price, setPrice] = useState<string>();
+  const [price, setPrice] = useState<string>('');
+
+  const scrollIntoElem = () => {
+    const hash = (window.location || location).hash.slice(1);
+    console.log(hash);
+    if (hash) {
+      const elem = document.getElementById(hash);
+      console.log(hash, elem);
+      if (elem) elem.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    setTimeout(scrollIntoElem, 500);
+  }, []);
 
   return (
     <ModalContext.Provider
