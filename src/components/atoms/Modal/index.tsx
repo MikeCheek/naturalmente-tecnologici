@@ -34,7 +34,14 @@ const Index = ({ title, description, opened, close, price, badges }: ModalProps)
       </div>
       <p className={styles.content} dangerouslySetInnerHTML={{ __html: desc }}></p>
       <div className={styles.shadow}></div>
-      <Button text={'RISERVA IL TUO BIGLIETTO'} title={'RISERVA IL TUO BIGLIETTO'} href={Eventbrite} internal={false} />
+      <div className={styles.buttonWrap}>
+        <Button
+          text={'RISERVA IL TUO BIGLIETTO'}
+          title={'RISERVA IL TUO BIGLIETTO'}
+          href={Eventbrite}
+          internal={false}
+        />
+      </div>
     </div>
   );
 };
