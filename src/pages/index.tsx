@@ -20,10 +20,8 @@ const IndexPage = () => {
 
   const scrollIntoElem = () => {
     const hash = (window.location || location).hash.slice(1);
-    console.log(hash);
     if (hash) {
       const elem = document.getElementById(hash);
-      console.log(hash, elem);
       if (elem) elem.scrollIntoView({ behavior: 'smooth' });
     }
   };
