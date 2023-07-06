@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react';
 
 interface Context {
-  setText: (title: string, description: string, badges?: string[]) => void;
+  setText: (title: string, price: string, description: string, badges?: string[]) => void;
 }
 
 export const ModalContext = createContext<Context>({

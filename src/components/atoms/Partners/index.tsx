@@ -16,10 +16,10 @@ const Index = () => {
           <Syskrack className={styles.logo} width={150} />
         </a>
         <h4>
-          Selezioniamo partner che hanno voglia di investire nella cultura e nello sviluppo delle persone e del
-          territorio e di accettare la nostra sfida collettiva.
+          I nostri partner selezionati investono nella cultura e nello sviluppo delle persone e del territorio e ad
+          accettare la nostra sfida collettiva.
           <br />
-          Vogliamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
+          Offriamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
         </h4>
       </ShowOnView>
       <Heading text="Location Partner" />

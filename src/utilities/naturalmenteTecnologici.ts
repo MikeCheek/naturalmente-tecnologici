@@ -1,25 +1,43 @@
 export const info = [
   {
-    title: "Come è strutturato l'evento?",
-    text: `3 giorni immersi in una location mozzafiato, selvaggia, tra le colline materane tra camping, laboratori, conferenze, esperienze, festival e incontro tra persone di ogni dove.
-    <br/><br/>
-    I partecipanti, gli abitanti del luogo e le community si scambieranno idee, visioni ed esperienze.`,
+    title: 'CONCERTI',
+    text: `Sonorità da tutto il mondo che infondono energia sullo stage principale, il Panoramic Stage.<br/>
+    E non solo…<br/><br/>
+    Rilassati e incontra gente come te nel Botanical Stage, che sarà animato dai partecipanti, attraverso estemporanee d'arte, jam session di improvvisazione musicale, dj set e molto altro che scoprirai presto…`,
     svgStyle: { transform: 'rotate(94.72deg)' },
+    cta: 'ASSICURATI IL PASS',
   },
   {
-    title: 'Perché lo facciamo?',
-    text: `L'obiettivo è indagare nuovi orizzonti dello sviluppo tecnologico, etici e sostenibili dal punto di vista sociale ed ambientale.
-    <br/><br/>
-    Vogliamo invertire il trend che la vede spopolarsi giorno dopo giorno e creare un
-circolo virtuoso per attrarre menti innovatrici e portare nuova linfa ad un territorio spesso
-considerato dormiente.`,
+    title: 'LABORATORI',
+    text: `Impara ad imparare…<br/>
+    Scopri nuove abilità, osserva persone sviluppare la propria arte e ascolta esperienze di valore. Scoprirai nuovi talenti, creando connessioni nuove divertendoci.<br/><br/>
+    Arte, tecnologia, artigianato, società in una sola parola: INNOVAZIONE etica e sostenibile, che parte dal basso.`,
+    cta: 'RISERVA IL TUO POSTO',
   },
   {
-    title: 'La nostra terra',
-    text: `Crediamo nel potenziale della nostra terra.
-    <br/><br/>    
-    Vogliamo offrire opportunità ai nomadi digitali e agli aspiranti tali promuovendo un approccio di “south-working” consapevole, equilibrato e socialmente innovativo.`,
+    title: 'TALK',
+    text: `Racconti di valore portati da relatori e relatrici selezionati.<br/>
+    Il cambiamento parte dalle esperienze affinché si possa spostare sempre di più l'asticella che separa l'utopia dalla realtà.<br/><br/>
+    IL FUTURO È ORA E QUI.`,
+    cta: 'PRENDINE PARTE',
     // svgStyle: { transform: 'rotateY(180deg)' },
+  },
+  {
+    title: 'ESTEMPORANEE',
+    text: `L'arte è un linguaggio di comunicazione innovativo che può davvero essere d'aiuto a raccontare il mondo di oggi.<br/>
+    Performer da tutto il mondo provenienti da ambienti diversi uniti alla ricerca di nuovi linguaggi.<br/><br/>
+    Sei un'artista?<br/>
+    Tu e la tua arte siete nel posto giusto!`,
+    svgStyle: { transform: 'rotate(94.72deg)' },
+    cta: 'PERFORMA',
+  },
+  {
+    title: 'STREAMING',
+    text: `Non potrai essere presente al festival?<br/>
+    Segui tutte le dirette streaming sui nostri canali Twitch e Discord.<br/><br/>   
+    Tutto il festival sarà arricchito da momenti musicali e podcast in diretta dalle aree del festival.<br/>
+    Scopri il nostro mondo virtuale!`,
+    cta: 'VAI AI CANALI',
   },
 ];
 

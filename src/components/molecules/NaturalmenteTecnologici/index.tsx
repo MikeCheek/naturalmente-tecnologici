@@ -9,6 +9,7 @@ import { info, whatIs } from '../../../utilities/naturalmenteTecnologici';
 import SingleSection from '../../atoms/SingleSection';
 import Button from '../../atoms/Button';
 import { Eventbrite } from '../../../utilities/tickets';
+import HeardOn from '../../atoms/HeardOn';
 
 const Index = () => {
   return (
@@ -22,7 +23,8 @@ const Index = () => {
               {item.eventbrite ? (
                 <Button
                   text={'Riserva il tuo posto qui!'}
-                  href={Eventbrite}
+                  href={'#biglietti'}
+                  internal
                   title={'Riserva il tuo posto qui!'}
                 ></Button>
               ) : (
@@ -32,6 +34,7 @@ const Index = () => {
           </div>
         ))}
       </div>
+      <HeardOn />
       {info.map((item, key) => {
         return (
           <Section

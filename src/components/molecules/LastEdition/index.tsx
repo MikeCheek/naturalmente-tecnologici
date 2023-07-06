@@ -44,6 +44,19 @@ const Index = () => {
   return (
     <>
       <Heading text="Sulla scorsa edizione..." marginTop />
+      <ShowOnView className={styles.conferencesWrap}>
+        <h3 className={styles.subTitle}>Conferenze</h3>
+        <p className={styles.conferenceText} dangerouslySetInnerHTML={{ __html: conferences.text }}></p>
+        <div className={styles.links}>
+          {conferences.links.map((link, key) => (
+            <div className={styles.linkWrap} key={key}>
+              <em>“{link.title}„</em>
+              {/* <Button text="Vai al video" title="Vai al video" href={link.link} /> */}
+              <YoutubeEmbed id={link.id} />
+            </div>
+          ))}
+        </div>
+      </ShowOnView>
       <ShowOnView>
         <h3 className={styles.subTitle}>Gradimento dei partecipanti</h3>
       </ShowOnView>
@@ -64,19 +77,6 @@ const Index = () => {
                 <p className={styles.rank}>{review.rank.toFixed(1)}</p>
               </CircularProgressbarWithChildren>
               <p className={styles.topic}>{review.topic}</p>
-            </div>
-          ))}
-        </div>
-      </ShowOnView>
-      <ShowOnView className={styles.conferencesWrap}>
-        <h3 className={styles.subTitle}>Conferenze</h3>
-        <p className={styles.conferenceText} dangerouslySetInnerHTML={{ __html: conferences.text }}></p>
-        <div className={styles.links}>
-          {conferences.links.map((link, key) => (
-            <div className={styles.linkWrap} key={key}>
-              <em>“{link.title}„</em>
-              {/* <Button text="Vai al video" title="Vai al video" href={link.link} /> */}
-              <YoutubeEmbed id={link.id} />
             </div>
           ))}
         </div>

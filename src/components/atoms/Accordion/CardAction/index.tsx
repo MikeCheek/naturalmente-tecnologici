@@ -15,7 +15,6 @@ const Index = ({
   Info,
   infoClick,
   glowing,
-  primary,
 }: FastActionProps) => {
   const [ref, inView, _entry] = useInView({
     threshold: 0,
@@ -25,11 +24,7 @@ const Index = ({
   });
 
   return (
-    <div
-      onClick={infoClick}
-      className={inView ? (primary ? styles.wrapBig : styles.wrap) : styles.wrapHidden}
-      ref={ref}
-    >
+    <div onClick={infoClick} className={inView ? styles.wrap : styles.wrapHidden} ref={ref}>
       {tag ? <p className={styles.tag}>{tag}</p> : <></>}
       {Info && infoClick ? (
         <div className={styles.info}>
@@ -39,8 +34,7 @@ const Index = ({
         <></>
       )}
       {icon}
-      {/* <p className={styles.bigText} dangerouslySetInnerHTML={{ __html: text }}></p> */}
-      <p className={styles.name}>{text}</p>
+      <p className={styles.bigText} dangerouslySetInnerHTML={{ __html: text }}></p>
       {description ? <p dangerouslySetInnerHTML={{ __html: description }}></p> : <></>}
       <Button text={buttonText} title={buttonText} href={buttonHref} internal={linkType == 'internal'} />
     </div>

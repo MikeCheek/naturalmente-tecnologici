@@ -2,7 +2,7 @@
 
 .wrap {
   border-radius: 10px;
-  border: 2px solid var(--nt-green);
+  border: 2px solid var(--nt-orange);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,24 @@
   }
 
   p {
-    margin-top: 0;
+    font-size: 14px;
+    @media screen and (min-width: '768px') {
+      font-size: 18px;
+    }
+  }
+}
+
+.wrapBig {
+  @extend .wrap;
+  width: 40vw;
+  max-width: 240px;
+  min-width: 200px;
+  height: 100%;
+  @media screen and (min-width: '768px') {
+    // width: 250px;
+    min-height: 360px;
+    max-width: 330px;
+    min-width: 190px;
   }
 }
 
@@ -50,16 +67,28 @@
   border-radius: 5px;
   padding: 5px 10px;
   background-color: var(--nt-orange);
+  color: var(--nt-green);
   font-weight: 400;
 }
 
 .bigText {
-  font-size: 19px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 10px 0 !important;
+  color: var(--nt-orange);
+  font-size: 19px;
   @media screen and (min-width: '768px') {
     font-size: 29px;
+  }
+}
+
+.name {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 0;
+  @media screen and (min-width: '768px') {
+    font-size: 25px !important;
   }
 }
 
@@ -98,7 +127,7 @@
     height: 25px;
 
     &:hover {
-      fill: var(--nt-white);
+      fill: var(--nt-green);
       background-color: var(--nt-orange);
       border-width: 2px;
     }

@@ -10,14 +10,18 @@ const Index = ({
   main = false,
   textWhite = false,
   showOnView = true,
+  id,
 }: HeadingProps) => {
   const Heading = (
     <div
       className={styles.headingWrap}
-      id={text
-        .toLowerCase()
-        .replace(/ /g, '-')
-        .replace(/[^(a-z0-9\-)]/gi, '')}
+      id={
+        id ??
+        text
+          .toLowerCase()
+          .replace(/ /g, '-')
+          .replace(/[^(a-z0-9\-)]/gi, '')
+      }
       style={{
         marginTop: marginTop ? '70px' : '',
       }}

@@ -32,7 +32,7 @@ const Index = () => {
         </h3>
       </ShowOnView>
       <ShowOnView>
-        <Button text="Riserva il tuo posto" title="Riserva il tuo posto" href={Eventbrite} bigger />
+        <Button text="Riserva il tuo posto" title="Riserva il tuo posto" href={'#biglietti'} bigger internal />
       </ShowOnView>
       <SectionImageCTA
         text={` Presso Bosco Le Coste, tra Grassano e Grottole, tra le argillose colline lucane.<br/>

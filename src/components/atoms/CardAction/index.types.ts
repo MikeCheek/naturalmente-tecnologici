@@ -8,4 +8,6 @@ export interface FastActionProps {
   tag?: string;
   Info?: SVG;
   infoClick?: () => void;
+  glowing?: boolean;
+  primary?: boolean;
 }

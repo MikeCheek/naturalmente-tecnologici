@@ -19,26 +19,30 @@ const Index = () => {
     }))
     .map((value) => ({
       ...value,
-      name: value.name.replace(')', '').split('(').join('<br/>'),
+      name: value.name.replace(')', '').split('('),
     }));
 
   return (
     <div className={styles.wrap}>
-      <Heading text="RISERVA IL TUO BIGLIETTO <br/>PER L'EVENTO" />
+      <Heading text="RISERVA IL TUO BIGLIETTO <br/>PER L'EVENTO" id="biglietti" />
       <div className={styles.cards}>
         {tickets.map((ticket, key) => {
           return (
             <CardAction
               key={key}
+              glowing={key == 0}
+              primary={key == 0}
               icon={<ticket.icon className={styles.icon} width={70} />}
               // text={`<span class='cuttedText'>${ticket.price}€</span><br/>${ticket.price - discount}€`}
-              text={`${ticket.price.toFixed(2)} €`}
-              description={ticket.name}
+              text={ticket.name[0]}
+              description={ticket.name[1]}
               buttonText="PARTECIPA"
               buttonHref={DefaultTicketProps.url}
               tag={ticket.offer ? 'EARLY BIRD' : undefined}
               Info={Info}
-              infoClick={() => setText(ticket.name, ticket.description, ticket.badges)}
+              infoClick={() =>
+                setText(ticket.name.join('<br/>'), `${ticket.price.toFixed(2)} €`, ticket.description, ticket.badges)
+              }
             />
           );
         })}

@@ -10,18 +10,18 @@ import Timeline from '../../atoms/Timeline';
 const Index = () => {
   return (
     <div className={styles.wrap}>
-      <Banner text="IL PROGRAMMA NON È STATO RILASCIATO" />
-      {/* <div className={styles.program}>
+      {/* <Banner text="IL PROGRAMMA NON È STATO RILASCIATO" /> */}
+      <div className={styles.program}>
         {program.map((item, key) => (
           <Timeline key={key} data={item} />
         ))}
-      </div> */}
+      </div>
 
-      <h3>Vuoi sapere quando verrà rilasciato?</h3>
+      {/* <h3>Vuoi sapere quando verrà rilasciato?</h3>
       <h4>Rimani aggiornato iscrivendoti alla nostra newsletter!</h4>
       <div className={styles.buttonWrap}>
         <Button text="ISCRIVITI" hoverWhite title="Iscriviti alla Newsletter dell'associazione" onClick={showPopUp} />
-      </div>
+      </div> */}
       <Collina width="1440" className={styles.collina} />
     </div>
   );

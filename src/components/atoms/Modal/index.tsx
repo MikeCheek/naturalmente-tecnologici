@@ -2,9 +2,10 @@ import React from 'react';
 import ModalProps from './index.types';
 import X from '../../../assets/x.svg';
 import * as styles from './index.module.scss';
-import { allBadges } from '../../../utilities/tickets';
+import { Eventbrite, allBadges } from '../../../utilities/tickets';
+import Button from '../Button';
 
-const Index = ({ title, description, opened, close, badges }: ModalProps) => {
+const Index = ({ title, description, opened, close, price, badges }: ModalProps) => {
   const desc =
     description.replace('https://syskrack.org/associati.', '').split('.').join('.<br/>') +
     `<a href="https://syskrack.org/associati" rel="noopener noreferrer" title"Associati" target="_blank">https://syskrack.org/associati</a>`;
@@ -15,7 +16,10 @@ const Index = ({ title, description, opened, close, badges }: ModalProps) => {
         <X width={20} height={20} fill="var(--nt-orange)" />
       </div>
       <div className={styles.titleWrap}>
-        <p className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></p>
+        <span className={styles.miniWrap}>
+          <p className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></p>
+          <p className={styles.price}>{price}</p>
+        </span>
         {badges && badges.length > 0 ? (
           <div className={styles.badges}>
             {allBadges?.map((badge, key) => (
@@ -30,6 +34,7 @@ const Index = ({ title, description, opened, close, badges }: ModalProps) => {
       </div>
       <p className={styles.content} dangerouslySetInnerHTML={{ __html: desc }}></p>
       <div className={styles.shadow}></div>
+      <Button text={'RISERVA IL TUO BIGLIETTO'} title={'RISERVA IL TUO BIGLIETTO'} href={Eventbrite} internal={false} />
     </div>
   );
 };

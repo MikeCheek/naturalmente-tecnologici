@@ -10,20 +10,33 @@ const Index = ({ data }: TimelineProps) => {
   return (
     <div className={styles.wrap}>
       <Heading text={data.day} smaller showOnView={false} />
-
-      {data.timeline.map((item, key) => (
-        <div key={key} className={styles.itemWrap}>
-          <div className={key % 2 == 0 ? styles.item : styles.itemReversed} key={key}>
-            <p className={styles.title} dangerouslySetInnerHTML={{ __html: item.title }}></p>
-            {circle}
-            <span className={styles.info}>
-              <p>{item.time}</p>
-              <p>{item.location}</p>
-            </span>
+      <h4>{data.name}</h4>
+      <p className={styles.desc}>{data.description}</p>
+      <div className={styles.colWrap}>
+        {bar}
+        {data.timeline.map((item, key) => (
+          <div key={key} className={styles.itemWrap}>
+            <div className={key % 2 == 0 ? styles.item : styles.itemReversed} key={key}>
+              <p className={styles.title} dangerouslySetInnerHTML={{ __html: item.title }}></p>
+              {circle}
+              <span className={styles.info}>
+                <p className={styles.time}>{item.time}</p>
+                {item.type ? <p>{item.type}</p> : <></>}
+                {item.location ? (
+                  <p
+                    className={styles.location}
+                    style={key % 2 == 0 ? { marginRight: 'auto' } : { marginLeft: 'auto' }}
+                  >
+                    {item.location}
+                  </p>
+                ) : (
+                  <></>
+                )}
+              </span>
+            </div>
           </div>
-          {key != data.timeline.length - 1 ? bar : <></>}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,22 +1,26 @@
 export interface TimelineItem {
   day: string;
+  name: string;
+  description?: string;
   timeline: {
     time: string;
     title: string;
-    location: string;
+    location?: string;
+    type?: string;
   }[];
 }
 
 export default [
   {
     day: '10 Agosto',
+    name: 'Welcome Day',
     timeline: [
       {
-        time: '16:00',
-        title: 'Caffè al Laboratorio [APERTO A TUTTI E TUTTE]',
+        time: '16:00 - 16:30',
+        title: 'Caffè di benvenuto al Laboratorio Syskrack Lab [APERTO A TUTTI E TUTTE]',
       },
       {
-        time: '16:30',
+        time: '16:30 - 17:30',
         title: `Conferenza di Benvenuto [GRATUITO E APERTO A TUTTI E TUTTE]
         10 anni senza Peps - Syskrack : 9 anni dopo`,
         //         Relatori:
@@ -27,58 +31,59 @@ export default [
         // Davide Saladino (Presidente APS Syskrack Giuseppe Porsia)
         // Giuseppe Liuzzi ( Community Manager)
         // Teodosio Santagata
-        location: 'Conferenza',
+        type: 'Conferenza',
+        location: 'Auditorium',
       },
       {
         time: '18:00',
+        title: 'Apertura camping "Welcome to Tijuana"',
+        location: 'Camping',
+      },
+      {
+        time: '18:30 - 20:00',
         title: 'Visita nel geosito dei Cinti e Esplorazione di una cantina Storica a cura di Alla Scoperta di Grassano',
       },
       {
-        time: '19:00',
-        title: 'Apertura porte festival e Welcome to Tijuana Camp',
-      },
-      {
-        time: '19:00',
-        title: 'Networking nelle aree del festival',
-      },
-      {
         time: '22:00',
-        title: 'Notte di San Lorenzo sotto le stelle',
+        title: 'Pre-party: Notte di San Lorenzo sotto le stelle',
       },
     ],
   },
   {
     day: '11 Agosto',
+    name: 'ART is Power',
+    description:
+      'Festeggiamo insieme il 50esimo compleanno della cultura Hip-Hop! Abbiamo preparato talk, presentazioni, estemporanee, battle di freestyle rap e un concerto che sarà la ciliegina sulla torta della giornata.',
     timeline: [
       {
         time: '09:00',
-        title: 'Apertura accredito',
+        title: 'Accoglienza ed accrediti',
       },
       {
         time: '09:30',
-        title: 'Morning routine con Giacomo Castana aka Prospettive Vegetali',
+        title: 'Good Morning Routine con Giacomo Castana "Prospettive Vegetali"',
       },
       {
         time: '10:30',
-        title: 'Start Selezione Musicale/Dj set - To Be Announed soon<br/>Teodosio introduce e conduce la giornata',
+        title: 'Good Morning Selecta / Djset - To Be Annouced Soon',
       },
       {
         time: '11:00',
-        title: 'Inizio Attività di estemporanea - TBA',
+        title: 'Attività di Estemporanea - TBA',
       },
       {
         time: '13:00',
-        title: 'Streaming Border Radio',
+        title: 'Border Radio - Online streaming',
       },
       {
-        time: '16:00',
-        title: `Talk Art as Power - L'HipHop Lucano - 50 anni dopo<br/>
+        time: '16:00 - 17:30',
+        title: `Talk "Music is Power! L'Hiphop lucano 50 anni dopo"<br/>
         Presentazione  Libri Hip Opera Foundation<br/>
-        Accredito Battle Rap<br/>`,
+        Accredito Battle Rap con montepremi<br/>`,
       },
       {
-        time: '18:00',
-        title: `Battle di Freestyle Rap`,
+        time: '18:00 - 20:00',
+        title: `La Potenza del Rap - Battle Rap Freestyle`,
       },
       {
         time: '20:00',
@@ -86,42 +91,43 @@ export default [
       },
       {
         time: '21:30',
-        title: `ShowCase DJ LUGI`,
+        title: `Showcase Dj Lugi`,
       },
       {
         time: '23:00',
-        title: `DAVIDE SHORTY - MAIN STAGE`,
+        title: `DAVIDE SHORTY - LIVE SOLO`,
         location: 'Main Stage',
       },
       {
-        time: '01:00',
-        title: `DJ Set di chiusura - TBA`,
+        time: '01:00 - 02:00',
+        title: `Dj Set`,
       },
     ],
   },
   {
     day: '12 Agosto',
+    name: 'DOING is Power',
+    description:
+      'Se ti piace sporcarti le mani, divertirti e fare festa sei nel posto giusto. Lasciati coinvolgere nelle attività che abbiamo preparato per te. Un percorso che parte dal Design Thinking, passando per nuovi immaginari rurali, immergendoti nelle legende dei boschi lucani fino ad arrivare al Naturalmente Tecnologici PARTY a cura di Moddi MC, Trix E DJ Lugi.',
     timeline: [
       {
         time: '09:00',
-        title: 'Apertura accredito',
+        title: 'Accoglienza ed accrediti',
       },
       {
         time: '09:30',
-        title: 'Morning routine con Giacomo Castana aka Prospettive Vegetali',
+        title: 'Good Morning Routine con Giacomo Castana "Prospettive Vegetali"',
       },
       {
         time: '10:30',
-        title: 'Wake up musicale/Dj set ',
+        title: 'Good Morning Selecta / Dj Set - TBA',
       },
       {
-        time: '11:00',
-        title: `Laboratorio - How to design think - IBM SkillsBuild<br/>
+        time: '10:00 - 13:00',
+        title: `Workshop "Design Thinking" - IBM SkillsBuild<br/>
             Co-progettare empaticamente  usando il DESIGN THINKING per creare <br/>
         connessioni tra persone e realtà virtuose.<br/>
-                LABORATORIO DA PRENOTARE - 60 posti disponibili<br/>
-                PRENOTAZIONE EFFETTUABILE VIA EMAIL DOPO AVER CONFERMATO<br/>
-        LA PARTECIPAZIONE<br/>`,
+                LABORATORIO DA PRENOTARE`,
       },
       {
         time: '11:30',
@@ -145,47 +151,24 @@ export default [
         title: 'Experience - TBA soon',
       },
       {
-        time: '19:00',
-        title: 'DJ set - TBA soon',
-      },
-      {
         time: '21:00',
         title: 'Opening Show - TBA soon',
       },
       {
         time: '22:00',
-        title: 'MAIN STAGE - Naturalmente Party a cura di Moddi, Trix e Dj Lugi direttamente dal 2TheBeat',
+        title: '"Naturalmente Party" - Moddi, Trix e Dj Lugi',
         location: 'Main Stage',
-      },
-      {
-        time: '01:00',
-        title: 'Dj set- TBA',
       },
     ],
   },
   {
     day: '13 Agosto',
+    name: 'KNOWLEDGE IS/AS POWER',
+    description: `Co(no)scienza, la musica e la natura si incontrano in un evento imperdibile. Ascolta le esperienze che contribuiscono a costruire il mondo del domani partendo da un immaginario collettivo. La sera GRAN FINALE con il DUB MASTER PAOLO BALDINI guardando, poi, l'alba con PNEUMATIX e ANGEL_ONE.`,
     timeline: [
-      //       Domenica 13 agosto 2023 - Knowledge is/as Power
-      // 9:00 Apertura accredito
-      // 9:30 Morning routine con Giacomo Castana aka Prospettive Vegetali
-      // 10:30 Creare una rivoluzione culturale dove non c'è mai stata - MAURO ACITO
-      //     I piccoli borghi esplodono di arte
-      // 11:30 L'arte è un crimine, il crimine è un arte - DONATO MONTESANO
-      //     Chi ha la polvere spara
-      // 13 Streaming a cura di Border Radio
-      // 16:00 Toccare il futuro con Mano - Come la tecnologia può unire le persone
-      //     GUIDO GIOIOSO
-      // 17:30 Immaginare il futuro partendo dal passato - Il primo caso di dichiarazione di indipendenza della storia della repubblica Italiana - Anna Albanese
-      // 19:00 Il meme come nuovo linguaggio - Raccontare una regione attraverso i meme
-      // Lucanian Shitposting
-      // 21:00 Opening Show - TBA
-      // 22:30 MAIN STAGE - Paolo Baldini
-      // 01:00 PNEUMATIX - TBA
-      // 06:00 Alba insieme e Arrivederci NT23`;
       {
         time: '09:00',
-        title: 'Apertura accredito',
+        title: 'Accoglienza ed accrediti',
       },
       {
         time: '09:30',
@@ -193,54 +176,41 @@ export default [
       },
       {
         time: '10:30',
-        title: 'Wake up musicale/Dj set ',
-      },
-      {
-        time: '11:00',
-        title: `Laboratorio - How to design think - IBM SkillsBuild<br/>
-      Co-progettare empaticamente  usando il DESIGN THINKING per creare <br/>
-  connessioni tra persone e realtà virtuose.<br/>
-          LABORATORIO DA PRENOTARE - 60 posti disponibili<br/>
-          PRENOTAZIONE EFFETTUABILE VIA EMAIL DOPO AVER CONFERMATO<br/>
-  LA PARTECIPAZIONE<br/>`,
+        title: `Creare una rivoluzione culturale dove non c'è mai stata`,
       },
       {
         time: '11:30',
-        title: 'Stand Espositivi ed estemporanee - TBA soon',
+        title: `L'arte è un crimine, il crimine è un arte<br/>
+        Presentazione del libro "Chi ha polvere spara"`,
+        type: 'Presentazione',
       },
       {
-        time: '15:30',
-        title: `IMMAGINARE UN FUTURO RURALE ECO TRANSFEMMINISTA<br/>
-          a cura di Rocco Pisilli e CAT<br/>
-  LABORATORIO DA PRENOTARE - 60 posti disponibili<br/>
-  PRENOTAZIONE EFFETTUABILE VIA EMAIL DOPO AVER<br/>
-  CONFERMATO`,
+        time: '13:00',
+        title: 'Border Radio LIVE Streaming',
       },
       {
         time: '16:00',
-        title: `Legende nei Boschi - Tra creature magiche e Briganti<br/>
-  A cura di Alla Scoperta di Grassano`,
+        title: `Toccare il futuro con Mano - La Tecnologia che unisce`,
       },
       {
-        time: '17:00',
-        title: 'Experience - TBA soon',
+        time: '17:30',
+        title: `Immaginare il futuro partendo dal passato`,
       },
       {
         time: '19:00',
-        title: 'DJ set - TBA soon',
+        title: 'Il meme come nuovo linguaggio',
       },
       {
         time: '21:00',
-        title: 'Opening Show - TBA soon',
+        title: 'Brigante Sound System (FULL EQUIPMENT) MONTONE & BIG SIMON <br/>BIG SIMON (SHOWCASE)',
       },
       {
-        time: '22:00',
-        title: 'MAIN STAGE - Naturalmente Party a cura di Moddi, Trix e Dj Lugi direttamente dal 2TheBeat',
-        location: 'Main Stage',
+        time: '23:00',
+        title: 'Paolo Baldini Live',
       },
       {
         time: '01:00',
-        title: 'Dj set- TBA',
+        title: 'PNEUMATIX Live',
       },
     ],
   },

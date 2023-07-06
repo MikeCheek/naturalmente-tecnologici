@@ -25,7 +25,7 @@ const Index = () => {
         <Colli width="1440" height="185" className={styles.colli} />
         <div className={styles.white}></div>
       </div>
-      <FastActions />
+      {/* <FastActions /> */}
       {/* <div className={styles.notReleased}>
         <h2>I biglietti non sono ancora stati rilasciati</h2>
         <h3>Seguici per rimanere aggiornato</h3>

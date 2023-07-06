@@ -8,13 +8,16 @@
   will-change: transform, opacity;
   z-index: 99999;
   opacity: 1;
-  background-color: var(--nt-white);
-  border: 2px var(--nt-green) solid;
+  background-color: var(--nt-green);
+  border: 2px var(--nt-dark-green) solid;
   border-radius: 15px;
   width: 80%;
-  color: var(--nt-green);
+  color: var(--nt-white);
   text-align: center;
   box-shadow: 0 0 200px 2000px rgb(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   font-size: 14px;
 
@@ -60,15 +63,27 @@
   }
 }
 
-.title {
-  width: auto;
+.miniWrap {
+  width: fit-content;
   min-width: fit-content;
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  width: fit-content;
+  min-width: fit-content;
+  margin-bottom: 0;
   font-weight: 800;
   font-size: 21px;
   @media screen and (min-width: '768px') {
     font-size: 30px;
+    margin-top: 0;
   }
+}
+
+.price {
+  color: var(--nt-orange);
 }
 
 .content {
@@ -81,7 +96,7 @@
 .shadow {
   width: 100%;
   height: 50px;
-  background: linear-gradient(to top, var(--nt-white), transparent);
+  background: linear-gradient(to top, var(--nt-green), transparent);
   z-index: 1;
   margin-top: -50px;
   position: relative;
@@ -103,7 +118,7 @@
 .onBadge {
   padding: 5px 10px;
   font-weight: 600;
-  color: var(--nt-white);
+  color: var(--nt-green);
   border-radius: 20px;
   text-transform: uppercase;
   background-color: var(--nt-orange);

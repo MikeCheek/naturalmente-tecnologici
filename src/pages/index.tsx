@@ -10,18 +10,21 @@ import 'react-circular-progressbar/dist/styles.css';
 import HeardOn from '../components/atoms/HeardOn';
 import { ModalContext } from '../utilities/useModalContext';
 import Modal from '../components/atoms/Modal';
+import FastActions from '../components/molecules/FastActions';
 
 const IndexPage = () => {
   const [opened, setOpened] = useState<boolean>(false);
   const [text, setText] = useState<{ name: string; description: string }>({ name: '', description: '' });
   const [badges, setBadges] = useState<string[]>();
+  const [price, setPrice] = useState<string>();
 
   return (
     <ModalContext.Provider
       value={{
-        setText: (title, description, badges) => {
+        setText: (title, price, description, badges) => {
           setText({ name: title, description: description });
           setBadges(badges);
+          setPrice(price);
           setOpened(true);
         },
       }}
@@ -32,14 +35,15 @@ const IndexPage = () => {
           opened={opened}
           close={() => setOpened(false)}
           title={text.name}
+          price={price}
           description={text.description}
           badges={badges}
         />
         <Theme />
-        <HeardOn />
         <NaturalmenteTecnologici />
         <WhenAndWhere />
         <LastEdition />
+        <FastActions />
       </Layout>
     </ModalContext.Provider>
   );

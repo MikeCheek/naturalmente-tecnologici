@@ -1,21 +1,20 @@
 .wrap {
   width: 100%;
-  padding: 40px 0 80px 0;
+  padding: 40px 0 0 0;
   margin-bottom: 1px;
-  background-color: var(--nt-white);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--nt-green);
+  color: var(--nt-white);
   position: relative;
   z-index: 1;
   text-align: center;
   @media screen and (min-width: '768px') {
-    padding: 80px 0 150px 0;
+    padding: 80px 0 0 0;
   }
   @media screen and (min-width: '1024px') {
-    padding: 80px 0 250px 0;
+    padding: 80px 0 0 0;
   }
 
   h2 {
@@ -43,7 +42,7 @@
 .icon {
   height: 50px;
   width: auto;
-  fill: var(--nt-green);
+  fill: var(--nt-very-dark-green);
   @media screen and (min-width: '768px') {
     height: 80px;
   }
@@ -52,7 +51,7 @@
 .timerWrap {
   border-radius: 15px;
   padding: 0 20px;
-  color: var(--nt-green);
+  color: var(--nt-white);
 
   h3 {
     text-transform: uppercase;

@@ -5,4 +5,5 @@ export interface HeadingProps {
   main?: boolean;
   textWhite?: boolean;
   showOnView?: boolean;
+  id?: string;
 }

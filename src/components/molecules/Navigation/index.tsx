@@ -57,28 +57,16 @@ const Index = ({ opened, onClick }: NavigationProps) => {
       >
         <nav className={styles.linksMobile}>
           {linkElements}
-          <a
-            title="Partecipa all' evento"
-            href={Eventbrite}
-            rel="noopener noreferrer"
-            target="_blank"
-            className={styles.buttonMobile}
-          >
+          <Link title="Partecipa all' evento" to={'/#biglietti'} className={styles.buttonMobile}>
             PARTECIPA
-          </a>
+          </Link>
         </nav>
       </div>
       <div className={styles.wrapDesktop}>
         <nav className={styles.links}>{linkElements}</nav>
-        <a
-          title="Partecipa all' evento"
-          href={Eventbrite}
-          rel="noopener noreferrer"
-          target="_blank"
-          className={styles.button}
-        >
+        <Link title="Partecipa all' evento" to={'/#biglietti'} className={styles.button}>
           PARTECIPA
-        </a>
+        </Link>
       </div>
     </>
   );

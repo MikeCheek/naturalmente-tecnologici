@@ -3,5 +3,6 @@ export default interface ModalProps {
   close: () => void;
   title: string;
   description: string;
+  price: string;
   badges?: string[];
 }
