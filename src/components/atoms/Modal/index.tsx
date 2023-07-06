@@ -22,6 +22,7 @@ const Index = ({ title, description, opened, close, price, badges }: ModalProps)
         </span>
         {badges && badges.length > 0 ? (
           <div className={styles.badges}>
+            {allBadges?.includes(badges[0]) ? <></> : <p className={styles.onBadge}>{badges[0]}</p>}
             {allBadges?.map((badge, key) => (
               <p className={badges?.includes(badge) ? styles.onBadge : styles.offBadge} key={key}>
                 {badge}

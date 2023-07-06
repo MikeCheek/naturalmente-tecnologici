@@ -51,6 +51,7 @@
   max-width: 240px;
   min-width: 200px;
   height: 100%;
+  transform: scale(1.05);
   @media screen and (min-width: '768px') {
     // width: 250px;
     min-height: 360px;

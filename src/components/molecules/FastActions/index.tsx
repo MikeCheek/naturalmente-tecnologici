@@ -42,7 +42,12 @@ const Index = () => {
               tag={ticket.offer ? 'EARLY BIRD' : undefined}
               Info={Info}
               infoClick={() =>
-                setText(ticket.name.join('<br/>'), `${ticket.price.toFixed(2)} €`, ticket.description, ticket.badges)
+                setText(
+                  ticket.name.join('<br/>'),
+                  `${ticket.price.toFixed(2)} €`,
+                  ticket.description,
+                  ticket.date ? [ticket.date, ...(ticket.badges ?? [])] : ticket.badges
+                )
               }
             />
           );
