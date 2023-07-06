@@ -83,9 +83,10 @@
   width: 100%;
   transform: translateY(-100%);
   z-index: 1;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: -50px;
   @media screen and (min-width: '768px') {
+    margin-top: 100px;
     margin-bottom: -100px;
   }
   @media screen and (min-width: '1024px') {
@@ -122,6 +123,8 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
+
+  animation: 2s grow ease-out;
 
   :nth-child(1),
   :nth-child(3) {
