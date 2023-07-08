@@ -15,11 +15,11 @@ const Index = () => {
           <p className={styles.date}>11-13 Agosto 2023</p>
           <h1 className={styles.heading}>
             PROGRAMMA <br />
-            FESTIVAL MUSICALE, CONFERENZE, WORKSHOP <br /> E CAMPING
+            CONCERTI, CONFERENZE, WORKSHOP E CAMPING
           </h1>
         </span>
         {showTimer ? (
-          <Timer date={new Date('August 11, 2023 00:00:00')} shutOffTimer={() => setShowTimer(false)} />
+          <Timer date={new Date('August 10, 2023 16:00:00')} shutOffTimer={() => setShowTimer(false)} />
         ) : (
           <></>
         )}
