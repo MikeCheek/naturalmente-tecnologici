@@ -5,6 +5,7 @@ import Heading from '../Heading';
 import Syskrack from '../../../assets/syskrack.svg';
 import IBM from '../../../assets/partner/IBM.svg';
 import Podus from '../../../assets/partner/podus.svg';
+import Basilicata from '../../../assets/partner/basilicata.svg';
 import ShowOnView from '../ShowOnView';
 
 const Index = () => {
@@ -27,6 +28,18 @@ const Index = () => {
         <a href="https://podus.it/" title="Podus" rel="noopener noreferrer" target="_blank">
           <Podus className={styles.logoLong} width={200} />
         </a>
+      </ShowOnView>
+      <Heading text="Hospitality Partner" />
+      <ShowOnView className={styles.wrap}>
+        {/* <a href="" title="Wonder Grottole" rel="noopener noreferrer" target="_blank"> */}
+        <StaticImage
+          layout="constrained"
+          src="../../../images/partners/wonder_grottole.jpg"
+          className={styles.logo}
+          alt="Wonder Grottole"
+          width={150}
+        />
+        {/* </a> */}
       </ShowOnView>
       <Heading text="Community Partner" />
       <ShowOnView className={styles.wrap}>
@@ -57,6 +70,7 @@ const Index = () => {
             width={150}
           />
         </a>
+        <Basilicata className={styles.logo} width={150} />
       </ShowOnView>
       <Heading text="Activity Partner" />
       <ShowOnView className={styles.wrap}>
