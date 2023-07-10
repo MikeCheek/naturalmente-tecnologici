@@ -17,7 +17,13 @@ const Index = () => {
       <Heading text="Ospiti musicali" />
       <div className={styles.guests}>
         {musicGuests.map((guest, key) => (
-          <GuestCard key={key} name={guest.name} description={guest.description ?? ''} field={guest.field}>
+          <GuestCard
+            key={key}
+            name={guest.name}
+            description={guest.description ?? ''}
+            field={guest.field}
+            id={guest.image}
+          >
             {guestsPhotos.allFile!.edges.find((e) => e.node.name === guest.image) ? (
               <GatsbyImage
                 alt={guest.name}
@@ -39,7 +45,13 @@ const Index = () => {
       <Heading text="Ospiti conferenze" />
       <div className={styles.guests}>
         {talkGuests.map((guest, key) => (
-          <GuestCard key={key} name={guest.name} description={guest.description ?? ''} field={guest.field}>
+          <GuestCard
+            key={key}
+            name={guest.name}
+            description={guest.description ?? ''}
+            field={guest.field}
+            id={guest.image}
+          >
             {guestsPhotos.allFile!.edges.find((e) => e.node.name === guest.image) ? (
               <GatsbyImage
                 alt={guest.name}

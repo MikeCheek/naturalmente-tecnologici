@@ -3,11 +3,11 @@ import ImageTemp from '../ImageTemp';
 import * as styles from './index.module.scss';
 import GuestCardProps from './index.types';
 
-const GuestCard = ({ children, name, description, field }: GuestCardProps) => {
+const GuestCard = ({ children, name, description, field, id }: GuestCardProps) => {
   const [more, setMore] = useState<boolean>(false);
 
   return (
-    <div className={more ? styles.cardActive : styles.card}>
+    <div className={more ? styles.cardActive : styles.card} id={id}>
       {children ?? <ImageTemp name={name} />}
       <div className={styles.details}>
         <span className={styles.title}>

@@ -3,4 +3,5 @@ export default interface GuestCardProps {
   name: string;
   description: string;
   field?: string[];
+  id: string;
 }
