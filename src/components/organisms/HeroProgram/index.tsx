@@ -4,6 +4,7 @@ import * as styles from './index.module.scss';
 import Collina from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
 import Timer from '../../molecules/Timer';
+import { Link } from 'gatsby';
 
 const Index = () => {
   const [showTimer, setShowTimer] = useState<boolean>(true);
@@ -12,7 +13,10 @@ const Index = () => {
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
         <span>
-          <p className={styles.date}>Basilicata, Grottole - 11&gt;13 Agosto 2023</p>
+          <Link className={styles.date} to="/#quando-e-dove" title="Quando e dove">
+            Bosco Coste, Grottole(MT)
+            <br /> 11&gt;13 Agosto 2023
+          </Link>
           <h1 className={styles.heading}>
             PROGRAMMA <br />
             CONCERTI, CONFERENZE, WORKSHOP E CAMPING

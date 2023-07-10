@@ -14,7 +14,7 @@ const Index = () => {
       <Heading text="Quando e dove?" />
       <ShowOnView>
         <h3>
-          Basilicata, Grottole
+          Basilicata, Grottole (MT)
           <br />
           11 &gt; 13 Agosto 2023
           <br />

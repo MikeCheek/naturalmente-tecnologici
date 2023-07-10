@@ -14,9 +14,10 @@ const Index = () => {
         <Link className={styles.logo} to="#top" title="Torna in cima">
           <LogoNT width="266" height="87.92" style={{ fill: 'var(--nt-orange)' }} />
         </Link>
-        <p className={styles.date}>
-          Basilicata, Grottole <br /> 11&gt;13 Agosto 2023
-        </p>
+        <Link className={styles.date} to="/#quando-e-dove" title="Quando e dove">
+          Bosco Coste, Grottole(MT)
+          <br /> 11&gt;13 Agosto 2023
+        </Link>
       </div>
       <div className={styles.sitemap}>
         <h4>Mappa del sito</h4>
