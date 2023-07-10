@@ -5,7 +5,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../../molecules/SectionImageCTA';
 import ShowOnView from '../ShowOnView';
 import Button from '../Button';
-import { Eventbrite } from '../../../utilities/tickets';
 
 const Index = () => {
   const coords = [`40°37'14.0"N`, `16°24'38.6"E`];
@@ -15,6 +14,8 @@ const Index = () => {
       <Heading text="Quando e dove?" />
       <ShowOnView>
         <h3>
+          Basilicata, Grottole
+          <br />
           11 &gt; 13 Agosto 2023
           <br />
           <br />

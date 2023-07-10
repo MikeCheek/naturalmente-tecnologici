@@ -63,14 +63,10 @@ export const whatIs = [
   },
   {
     name: 'Perché partecipare?',
-    text: `Visionari, visionarie…<br/>
-  Idealisti e idealiste…<br/>
-  Esploratori e amanti delle T.A.Z. siete nel posto giusto!<br/><br/>
-  Naturalmente Tecnologici è un evento unico nel suo genere.<br/>
+    text: `Naturalmente Tecnologici è un evento unico nel suo genere.<br/>
   Campeggio, laboratori, conferenze, escursioni sotto il cielo lucano e le sue stelle.<br/>
   Giorni pieni di energie, condivisione e cambiamento. <br/><br/>
   Una tre giorni per costruire, divertendosi, le fondamenta del mondo di domani: un mondo più inclusivo, sostenibile e naturalmente tecnologico.<br/>
-  Artisti e artiste, scienziati e scienziate, creativi e creative da tutto il mondo da incontrare e con cui scambiare idee e creare collaborazioni generative.<br/>
   Il festival è un catalizzatore di persone e idee, tornerai a casa pieno di nuove energie e stimoli, pronti e pronte a costruire il mondo del domani.`,
     big: true,
   },

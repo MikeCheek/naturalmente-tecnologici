@@ -12,7 +12,7 @@ const Index = () => {
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
         <span>
-          <p className={styles.date}>11-13 Agosto 2023</p>
+          <p className={styles.date}>Basilicata, Grottole - 11&gt;13 Agosto 2023</p>
           <h1 className={styles.heading}>
             PROGRAMMA <br />
             CONCERTI, CONFERENZE, WORKSHOP E CAMPING

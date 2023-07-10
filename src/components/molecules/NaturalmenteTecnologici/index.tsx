@@ -10,6 +10,7 @@ import SingleSection from '../../atoms/SingleSection';
 import Button from '../../atoms/Button';
 import { Eventbrite } from '../../../utilities/tickets';
 import HeardOn from '../../atoms/HeardOn';
+import WhenAndWhere from '../../atoms/WhenAndWhere';
 
 const Index = () => {
   return (
@@ -35,6 +36,8 @@ const Index = () => {
         ))}
       </div>
       <HeardOn />
+      <WhenAndWhere />
+      <Heading text="Cosa faremo" />
       {info.map((item, key) => {
         return (
           <Section

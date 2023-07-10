@@ -53,7 +53,6 @@ const IndexPage = () => {
         />
         <Theme />
         <NaturalmenteTecnologici />
-        <WhenAndWhere />
         <LastEdition />
         <FastActions />
       </Layout>
