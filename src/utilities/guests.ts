@@ -25,7 +25,7 @@ export default [
     field: ['Meme'],
   },
   {
-    name: 'Guido Gioso',
+    name: 'Guido Gioioso',
     description: `Guido Gioioso ha conseguito la laurea in Ingegneria Informatica e un dottorato di ricerca in Robotica e Automazione all'Università di Siena.
     Autore di più di 20 articoli scientifici pubblicati sulle più quotate riviste di settore, libri e conferenze internazionali, ha focalizzato la sua attività di ricerca sullo sviluppo di algoritmi di controllo per mani robotiche e dispositivi per la digitalizzazione del senso del tatto.
     Oggi è uno dei fondatori e business leader di WEART, una startup che sviluppa device rivoluzionari pensati per aggiungere sensazioni tattili ad esperienze digitali.

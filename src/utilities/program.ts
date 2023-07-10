@@ -69,6 +69,7 @@ export default [
       {
         time: '10:30',
         title: 'Good Morning Selecta / Djset - To Be Annouced Soon',
+        location: 'Botanical Stage',
       },
       {
         time: '11:00',
@@ -79,28 +80,37 @@ export default [
         title: 'Border Radio - Online streaming',
       },
       {
+        time: '15:00-16:00',
+        title: 'Degustazione di Vinili a cura di Sfinge Sound System and Co.',
+        location: 'Botanical Stage',
+      },
+      {
         time: '16:00 - 17:30',
         title: `Talk "Music is Power! L'Hiphop lucano 50 anni dopo"<br/>
         Presentazione  Libri Hip Opera Foundation<br/>
         Accredito Battle Rap con montepremi<br/>`,
+        location: 'Botanical Stage',
       },
       {
         time: '18:00 - 20:00',
         title: `La Potenza del Rap - Battle Rap Freestyle`,
+        location: 'Botanical Stage',
       },
       {
         time: '20:00',
         title: `Finale con Premiazione`,
+        location: 'Botanical Stage',
       },
       {
         time: '21:30',
         title: `Showcase Dj Lugi`,
+        location: 'Panoramic Stage',
       },
       {
         time: '23:00',
         title: `DAVIDE SHORTY - LIVE SOLO`,
-        location: 'Main Stage',
         starring: [guests.find((g) => g.name === 'Davide Shorty')],
+        location: 'Panoramic Stage',
       },
       {
         time: '01:00 - 02:00',
@@ -138,6 +148,11 @@ export default [
         title: 'Stand Espositivi ed estemporanee - TBA soon',
       },
       {
+        time: '15:00-16:00',
+        title: 'Degustazione di Vinili a cura di Sfinge Sound System and Co.',
+        location: 'Botanical Stage',
+      },
+      {
         time: '15:30',
         title: `IMMAGINARE UN FUTURO RURALE ECO TRANSFEMMINISTA<br/>
                 a cura di Rocco Pisilli e CAT<br/>
@@ -157,11 +172,12 @@ export default [
       {
         time: '21:00',
         title: 'Opening Show - TBA soon',
+        location: 'Panoramic Stage',
       },
       {
         time: '22:00',
         title: '"Naturalmente Party" - Moddi, Trix e Dj Lugi',
-        location: 'Main Stage',
+        location: 'Panoramic Stage',
       },
     ],
   },
@@ -181,40 +197,54 @@ export default [
       {
         time: '10:30',
         title: `Creare una rivoluzione culturale dove non c'è mai stata`,
+        location: 'Botanical Stage',
       },
       {
         time: '11:30',
         title: `L'arte è un crimine, il crimine è un arte<br/>
         Presentazione del libro "Chi ha polvere spara"`,
         type: 'Presentazione',
+        location: 'Botanical Stage',
       },
       {
         time: '13:00',
         title: 'Border Radio LIVE Streaming',
       },
       {
+        time: '15:00-16:00',
+        title: 'Degustazione di Vinili a cura di Sfinge Sound System and Co.',
+        location: 'Botanical Stage',
+      },
+      {
         time: '16:00',
         title: `Toccare il futuro con Mano - La Tecnologia che unisce`,
+        starring: [guests.find((g) => g.name === 'Guido Gioioso')],
+        location: 'Botanical Stage',
       },
       {
         time: '17:30',
         title: `Immaginare il futuro partendo dal passato`,
+        location: 'Botanical Stage',
       },
       {
         time: '19:00',
-        title: 'Il meme come nuovo linguaggio',
+        title: 'Il meme come nuovo linguaggio di comunicazione',
+        location: 'Botanical Stage',
       },
       {
         time: '21:00',
         title: 'Brigante Sound System (FULL EQUIPMENT) MONTONE & BIG SIMON <br/>BIG SIMON (SHOWCASE)',
+        location: 'Panoramic Stage',
       },
       {
         time: '23:00',
         title: 'Paolo Baldini Live',
+        location: 'Panoramic Stage',
       },
       {
         time: '01:00 - 06:00',
         title: 'PNEUMATIX Live',
+        location: 'Panoramic Stage',
       },
       {
         time: '06:00',
