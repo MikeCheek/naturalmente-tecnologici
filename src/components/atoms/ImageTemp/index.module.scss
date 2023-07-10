@@ -1,0 +1,63 @@
+.wrap {
+  width: calc(100% + 40px);
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  height: 200px;
+  background-color: var(--nt-orange);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Cairo', sans-serif;
+
+  // -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.15)));
+
+  @media screen and (min-width: 768px) {
+    height: 280px;
+  }
+
+  p {
+    color: var(--nt-white);
+    font-size: 1.6rem;
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    opacity: 0.9;
+    line-height: 3rem;
+  }
+
+  &:hover {
+    .reflect {
+      top: 80%;
+      left: 5%;
+    }
+    .reflect2 {
+      top: 20%;
+      left: -50%;
+    }
+  }
+  .reflect {
+    position: absolute;
+    top: 20%;
+    left: -50%;
+    width: 200%;
+    height: 60px;
+    background-color: var(--nt-white);
+    opacity: 0.1;
+    transform: rotate(-45deg);
+    transition: all 1s ease;
+    box-shadow: 0 0 20px 20px var(--nt-white);
+  }
+  .reflect2 {
+    @extend .reflect;
+    top: 80%;
+    left: 5%;
+  }
+}

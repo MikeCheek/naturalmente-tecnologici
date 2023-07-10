@@ -1,0 +1,170 @@
+.card {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--nt-green);
+  border-radius: 10px;
+  border: 4px solid var(--nt-orange);
+  padding: 20px;
+  width: 60vw;
+  transition: width 300ms ease;
+  will-change: width;
+  overflow: hidden;
+  @media screen and (min-width: 768px) {
+    gap: 20px;
+    text-align: left;
+    align-items: flex-start;
+    width: 20vw;
+  }
+}
+
+.cardActive {
+  @extend .card;
+  width: 70vw;
+  @media screen and (min-width: 768px) {
+    width: 30vw;
+  }
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  margin: 20px auto;
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    @media screen and (min-width: 768px) {
+      font-size: 1.7rem;
+    }
+  }
+  h4 {
+    text-align: center;
+    margin: 0;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+    margin-top: 0;
+    gap: 10px;
+  }
+}
+
+.description {
+  font-size: 14px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.fieldWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.field {
+  background-color: var(--nt-orange);
+  color: var(--nt-green);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.about {
+  width: fit-content;
+  position: relative;
+  max-height: 100px;
+  text-overflow: hidden;
+  overflow: hidden;
+  will-change: max-height;
+  transition: max-height 300ms ease;
+}
+
+.fade {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to top, var(--nt-white), transparent);
+  position: absolute;
+  top: -40px;
+  transition: opacity 1s ease;
+  will-change: opacity;
+}
+
+.aboutMore {
+  @extend .about;
+  max-height: 300px;
+  overflow-y: scroll;
+  @media screen and (min-width: 768px) {
+    max-height: 400px;
+  }
+  // .fade {
+  //   opacity: 0;
+  // }
+}
+
+.buttonMore {
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: var(--nt-orange);
+  background-color: transparent;
+  border: 4px solid var(--nt-orange);
+  font-size: 0.95rem;
+  margin-top: 10px;
+  cursor: pointer;
+  opacity: 0.9;
+  font-weight: bold;
+  &:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.buttonWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.theme {
+  margin-top: 20px;
+
+  .pre {
+    background-color: var(--nt-green);
+    z-index: 2;
+    margin: 0 10px;
+    padding: 0 5px;
+    border-radius: 5px;
+    border: 2px solid var(--nt-orange);
+  }
+
+  .quote {
+    padding: 10px;
+    margin-top: -10px;
+    border-radius: 10px;
+    border: 2px solid var(--nt-orange);
+    z-index: -1;
+  }
+}

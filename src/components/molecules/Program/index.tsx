@@ -1,15 +1,15 @@
 import React from 'react';
 import Banner from '../../atoms/Banner';
 import * as styles from './index.module.scss';
-import { showPopUp } from '../../../utilities/newsletter';
 import Collina from '../../../assets/collina.svg';
-import Button from '../../atoms/Button';
 import program from '../../../utilities/program';
 import Timeline from '../../atoms/Timeline';
+import Heading from '../../atoms/Heading';
 
 const Index = () => {
   return (
     <div className={styles.wrap}>
+      <Heading text="CRONOPROGRAMMA" />
       {/* <Banner text="IL PROGRAMMA NON È STATO RILASCIATO" /> */}
       <div className={styles.program}>
         {program.map((item, key) => (
