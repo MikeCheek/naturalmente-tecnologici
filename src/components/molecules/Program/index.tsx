@@ -1,5 +1,4 @@
 import React from 'react';
-import Banner from '../../atoms/Banner';
 import * as styles from './index.module.scss';
 import Collina from '../../../assets/collina.svg';
 import program from '../../../utilities/program';
@@ -13,6 +12,7 @@ const Index = () => {
       {/* <Banner text="IL PROGRAMMA NON È STATO RILASCIATO" /> */}
       <div className={styles.program}>
         {program.map((item, key) => (
+          //@ts-ignore
           <Timeline key={key} data={item} />
         ))}
       </div>

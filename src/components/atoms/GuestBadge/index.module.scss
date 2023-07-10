@@ -1,0 +1,27 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 5px 5px;
+  border-radius: 5px;
+  // border: 3px solid var(--nt-green);
+  color: var(--nt-green);
+  background-color: var(--nt-orange);
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 200ms ease-out;
+  will-change: transform;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

@@ -1,3 +1,5 @@
+import guests from './guests';
+
 export interface TimelineItem {
   day: string;
   name: string;
@@ -7,6 +9,7 @@ export interface TimelineItem {
     title: string;
     location?: string;
     type?: string;
+    starring?: typeof guests;
   }[];
 }
 
@@ -97,6 +100,7 @@ export default [
         time: '23:00',
         title: `DAVIDE SHORTY - LIVE SOLO`,
         location: 'Main Stage',
+        starring: [guests.find((g) => g.name === 'Davide Shorty')],
       },
       {
         time: '01:00 - 02:00',

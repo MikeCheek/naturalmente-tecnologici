@@ -2,10 +2,14 @@ import React from 'react';
 import TimelineProps from './index.types';
 import * as styles from './index.module.scss';
 import Heading from '../Heading';
+import { images } from '../../../utilities/guests';
+import GuestBadge from '../GuestBadge';
 
 const Index = ({ data }: TimelineProps) => {
   const circle = <div className={styles.circle}></div>;
   const bar = <div className={styles.bar}></div>;
+
+  const guestImages = images();
 
   return (
     <div className={styles.wrap}>
@@ -29,6 +33,25 @@ const Index = ({ data }: TimelineProps) => {
                   >
                     {item.location}
                   </p>
+                ) : (
+                  <></>
+                )}
+                {item.starring ? (
+                  <div
+                    className={styles.badges}
+                    style={key % 2 == 0 ? { marginRight: 'auto' } : { marginLeft: 'auto' }}
+                  >
+                    {item.starring.map((star, key) => (
+                      <GuestBadge
+                        name={star.name}
+                        id={star.image}
+                        image={
+                          guestImages.allFile!.edges.find((e) => e.node.name === star.image)?.node.childImageSharp
+                            .gatsbyImageData
+                        }
+                      />
+                    ))}
+                  </div>
                 ) : (
                   <></>
                 )}
