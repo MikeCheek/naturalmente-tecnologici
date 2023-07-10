@@ -3,6 +3,7 @@ import ImageTemp from '../ImageTemp';
 import * as styles from './index.module.scss';
 import GuestCardProps from './index.types';
 import ShowOnView from '../ShowOnView';
+import Button from '../Button';
 
 const GuestCard = ({ children, name, description, field, id }: GuestCardProps) => {
   const [more, setMore] = useState<boolean>(false);
@@ -29,9 +30,11 @@ const GuestCard = ({ children, name, description, field, id }: GuestCardProps) =
             <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
           </div>
           <div className={styles.buttonWrap}>
-            <button className={styles.buttonMore} onClick={() => setMore((state) => !state)}>
-              Leggi di{more ? ' meno' : ' più'}
-            </button>
+            <Button
+              text={`Leggi di${more ? ' meno' : ' più'}`}
+              title={`Leggi di${more ? ' meno' : ' più'}`}
+              onClick={() => setMore((state) => !state)}
+            />
             <div className={styles.fade}></div>
           </div>
 
