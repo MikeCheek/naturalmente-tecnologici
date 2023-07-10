@@ -4,6 +4,7 @@ import * as styles from './index.module.scss';
 import Heading from '../Heading';
 import { images } from '../../../utilities/guests';
 import GuestBadge from '../GuestBadge';
+import ShowOnView from '../ShowOnView';
 
 const Index = ({ data }: TimelineProps) => {
   const circle = <div className={styles.circle}></div>;
@@ -12,7 +13,7 @@ const Index = ({ data }: TimelineProps) => {
   const guestImages = images();
 
   return (
-    <div className={styles.wrap}>
+    <ShowOnView className={styles.wrap}>
       <Heading text={data.day} smaller showOnView={false} />
       <h4>{data.name}</h4>
       <p className={styles.desc}>{data.description}</p>
@@ -60,7 +61,7 @@ const Index = ({ data }: TimelineProps) => {
           </div>
         ))}
       </div>
-    </div>
+    </ShowOnView>
   );
 };
 
