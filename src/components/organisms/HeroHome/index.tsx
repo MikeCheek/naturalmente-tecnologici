@@ -12,7 +12,10 @@ const Index = () => {
     <div className={styles.wrap}>
       <BigBranch width="555" height="282" className={styles.bigBranch} />
       <div className={styles.headWrap}>
-        <p className={styles.date}>Basilicata, Grottole - 11&gt;13 Agosto 2023</p>
+        <a className={styles.date} href="#quando-e-dove" title="Quando e dove">
+          Bosco Coste, Grottole(MT)
+          <br /> 11&gt;13 Agosto 2023
+        </a>
         <h1 className={styles.heading}>
           RI-PRENDIAMOCI IL FUTURO <br />3 GIORNI DI MUSICA, ARTE, INNOVAZIONE TECNOLOGICA E SOCIALE
         </h1>
