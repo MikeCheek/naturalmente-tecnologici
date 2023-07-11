@@ -2,6 +2,7 @@ import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 export default interface GuestBadgeProps {
   name: string;
-  id: string;
+  href: string;
   image: IGatsbyImageData;
+  titles?: string[];
 }

@@ -20,7 +20,7 @@ export default [
     tutti. Dal 2020, la pagina cambia pelle senza tradire sè stessa, riuscendo a raggiungere un
     pubblico più esteso, il quale ha progressivamente formato una community viva e dinamica
     attorno al racconto memetico di una regione in cui apparentemente non accade nulla.`,
-    people: ['Giuseppe Sassano', 'Enzo Sansone'],
+    speaker: ['Giuseppe Sassano', 'Enzo Sansone'],
     type: GUEST_TYPE.TALK,
     field: ['Meme'],
   },
@@ -43,32 +43,58 @@ export default [
     type: GUEST_TYPE.TALK,
     field: ['Volevo solo aprire un museo'],
   },
+  {
+    name: 'Giacomo Castana',
+    field: ['Prospettive Vegetali'],
+    description: `Nato a Varese nel 1991, nel 2017 fonda il progetto <strong>Prospettive Vegetali</strong> e con esso si dedica ad esplorare il tema dell' <strong>interazione fra società umana e vegetale</strong>.<br/> 
+    Tra i suoi successi c'è il documentario “<strong>Botanica per tutti</strong>”: un viaggio tra le persone capaci di raccontare l'importanza della botanica nel nostro paese.<br/>
+    Secondo il Sole24Ore, Giacomo, è <em>il volto più anticonvenzionale tra i biofili della nuova generazione di attivisti italiani “green”</em>.<br/>
+    Nel 2021 coordina la prima forma di “<strong>co-progettazione etnobotanica</strong>” rendendo economicamente indipendente la realizzazione di “<strong>Un orto al posto dell'asfalto</strong>” sostituendo 45 metri quadri di cemento con un orto sinergico al centro di Varese.<br/>
+    Il progetto “Prospettive Vegetali” capace di azioni plurali in difesa dell'ambiente viene insignito del Premio Internazionale per la Pace “<strong>Book for Peace</strong>”.`,
+    type: GUEST_TYPE.TALK,
+  },
 
   {
     name: 'Davide Shorty',
-    description: `Davide Shorty è un rapper, cantautore e producer di Palermo capace di far convivere la sua inconfondibile voce soul
-    con sonorità e melodie contaminate da jazz e rap. Dopo varie esperienze nella scena hip hop siciliana nel 2010 si
-    trasferisce a Londra dove, nel 2012, fonda la band Retrospective For Love con cui suonerà in tutto il Regno Unito ed
-    in Europa.
-    Dopo essersi posizionato 3 alla nona edizione di X Factor Italia (dicembre 2015) a febbraio 2017 pubblica il suo
-    primo album ufficiale, "Straniero", che vanta prestigiose collaborazioni con Daniele Silvestri e Tormento.
-    Nel corso della sua carriera condivide il palco artisti internazionali del calibro di Robert Glasper, Jordan Rakei, Bilal e
-    mr jukes (Bombay Bicycle Club). Nel 2018 pubblica insieme ai Funk Shui Project l'album "Terapia di Gruppo", che
-    viene apprezzato molto da pubblico e critica.
-    La fortunata collaborazione tra Davide e i Funk Shui Project continua nel 2019 quando esce per Totally Imported
-    l'album “La Soluzione”, che conferma la sinergia artistica tra il cantante e il collettivo torinese.
-    Al disco segue la pubblicazione del reboot dello stesso: "La Soluzione Reboot" con all'interno l'inedito "Carillon" feat.
-    Roy Paci. Nello stesso anno Daniele Silvestri lo invita a far parte del brano “Tempi modesti", mentre nel 2020 firma
-    con l'etichetta indipendente Totally Imported. Nel 2021 partecipa alla 71^ edizione del Festival di Sanremo con il
-    brano “Regina”, nella categoria “Nuove Proposte”, dove si classifica 2 e vince il “Premio della Sala Stampa Lucio
-    Dalla”, il “Premio Enzo Jannacci NUOVO IMAIE 2021” e il “Premio Lunezia per Sanremo 2021” per il valore musicalletterario, essendo così l'artista più premiato di quella edizione del festival.
-    Segue l'uscita del suo secondo album da solista, “fusion.”, che anche durante la pandemia, lo porta ad esibirsi sui
+    description: `<strong>Davide Shorty</strong> è un rapper, cantautore e producer di <strong>Palermo</strong> capace di far convivere la sua inconfondibile <strong>voce soul</strong>
+    con sonorità e melodie contaminate da <strong>jazz</strong> e <strong>rap</strong>. Dopo varie esperienze nella scena <strong>hip hop siciliana</strong> nel <strong>2010</strong> si
+    trasferisce a <strong>Londra</strong> dove, nel <strong>2012</strong>, fonda la band <strong>Retrospective For Love</strong> con cui suonerà in tutto il <strong>Regno Unito</strong> ed
+    in <strong>Europa</strong>.<br/><br/>
+    Dopo essersi posizionato <strong>3</strong> alla nona edizione di <strong>X Factor Italia</strong> (<strong>dicembre 2015</strong>) a <strong>febbraio 2017</strong> pubblica il suo
+    primo album ufficiale, <strong>"Straniero"</strong>, che vanta prestigiose collaborazioni con <strong>Daniele Silvestri</strong> e <strong>Tormento</strong>.<br/>
+    Nel corso della sua carriera condivide il palco <strong>artisti internazionali</strong> del calibro di <strong>Robert Glasper</strong>, <strong>Jordan Rakei</strong>, <strong>Bilal</strong> e
+    <strong>mr jukes</strong> (<strong>Bombay Bicycle Club</strong>). Nel <strong>2018</strong> pubblica insieme ai <strong>Funk Shui Project</strong> l'album <strong>"Terapia di Gruppo"</strong>, che
+    viene apprezzato molto da pubblico e critica.<br/>
+    La fortunata collaborazione tra Davide e i Funk Shui Project continua nel <strong>2019</strong> quando esce per <strong>Totally Imported</strong>
+    l'album <strong>“La Soluzione”</strong>, che conferma la <strong>sinergia artistica</strong> tra il cantante e il <strong>collettivo torinese</strong>.<br/><br/>
+    Al disco segue la pubblicazione del <strong>reboot</strong> dello stesso: <strong>"La Soluzione Reboot"</strong> con all'interno l'inedito <strong>"Carillon"</strong> feat.
+    <strong>Roy Paci</strong>. Nello stesso anno <strong>Daniele Silvestri</strong> lo invita a far parte del brano <strong>“Tempi modesti"</strong>, mentre nel <strong>2020</strong> firma
+    con l'etichetta indipendente <strong>Totally Imported</strong>. Nel <strong>2021</strong> partecipa alla <strong>71^ edizione del Festival di Sanremo</strong> con il
+    brano <strong>“Regina”</strong>, nella categoria <strong>“Nuove Proposte”</strong>, dove si classifica <strong>2</strong> e vince il <strong>“Premio della Sala Stampa Lucio
+    Dalla”</strong>, il <strong>“Premio Enzo Jannacci NUOVO IMAIE 2021”</strong> e il <strong>“Premio Lunezia per Sanremo 2021”</strong> per il valore musicalletterario, essendo così l'<strong>artista più premiato</strong> di quella edizione del festival.<br/><br/>
+    Segue l'uscita del suo <strong>secondo album</strong> da <strong>solista</strong>, <strong>“fusion.”</strong>, che anche durante la pandemia, lo porta ad esibirsi sui
     palchi di tutta Italia.`,
     type: GUEST_TYPE.MUSIC,
     field: ['Rap', 'Hip Hop'],
   },
   {
     name: 'Millenium Van',
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Paolo Baldini',
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Pneumatix',
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Moddi MC',
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'DJ Lugi',
     type: GUEST_TYPE.MUSIC,
   },
 ].map((e) => ({ ...e, image: e.name.toLowerCase().replace(/ /g, '_') }));

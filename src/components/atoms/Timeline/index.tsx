@@ -3,6 +3,7 @@ import TimelineProps from './index.types';
 import * as styles from './index.module.scss';
 import Heading from '../Heading';
 import { images } from '../../../utilities/guests';
+import { images as orgImages } from '../../../utilities/organizers';
 import GuestBadge from '../GuestBadge';
 import ShowOnView from '../ShowOnView';
 
@@ -11,6 +12,11 @@ const Index = ({ data }: TimelineProps) => {
   const bar = <div className={styles.bar}></div>;
 
   const guestImages = images();
+  const organizersImages = orgImages();
+
+  const findImage = (name: string) =>
+    organizersImages.allFile!.edges[Number(name) ?? 0]?.node.childImageSharp.gatsbyImageData ||
+    guestImages.allFile!.edges.find((e) => e.node.name === name)?.node.childImageSharp.gatsbyImageData;
 
   return (
     <ShowOnView className={styles.wrap}>
@@ -26,7 +32,7 @@ const Index = ({ data }: TimelineProps) => {
               {circle}
               <span className={styles.info}>
                 <p className={styles.time}>{item.time}</p>
-                {item.type ? <p>{item.type}</p> : <></>}
+                {/* {item.type ? <p>{item.type}</p> : <></>} */}
                 {item.location ? (
                   <p
                     className={styles.location}
@@ -40,16 +46,21 @@ const Index = ({ data }: TimelineProps) => {
                 {item.starring ? (
                   <div
                     className={styles.badges}
-                    style={key % 2 == 0 ? { marginRight: 'auto' } : { marginLeft: 'auto' }}
+                    style={
+                      key % 2 == 0
+                        ? { marginRight: 'auto', alignItems: 'flex-start', textAlign: 'left' }
+                        : { marginLeft: 'auto', alignItems: 'flex-end', textAlign: 'right' }
+                    }
                   >
                     {item.starring.map((star, key) => (
                       <GuestBadge
                         name={star.name}
-                        id={star.image}
-                        image={
-                          guestImages.allFile!.edges.find((e) => e.node.name === star.image)?.node.childImageSharp
-                            .gatsbyImageData
-                        }
+                        //@ts-ignore
+                        href={star.href}
+                        key={key}
+                        image={findImage(star.image)}
+                        //@ts-ignore
+                        titles={star.field || star.role?.split('<br/>')}
                       />
                     ))}
                   </div>

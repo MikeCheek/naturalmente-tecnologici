@@ -1,7 +1,7 @@
 .wrap {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -14,13 +14,32 @@
   font-weight: bold;
   transition: transform 200ms ease-out;
   will-change: transform;
-
+  width: fit-content;
   &:hover {
     transform: scale(1.05);
   }
   font-size: 0.8rem;
   @media screen and (min-width: 768px) {
     font-size: 1rem;
+  }
+}
+
+.nameWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.subTitles {
+  margin-top: 0;
+  font-size: 0.6rem;
+  max-width: 120px;
+  overflow: hidden;
+  max-height: 1rem;
+  font-weight: 600;
+  @media screen and (min-width: 768px) {
+    font-size: 0.8rem;
+    max-width: fit-content;
   }
 }
 

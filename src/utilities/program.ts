@@ -1,4 +1,5 @@
 import guests from './guests';
+import { info } from './organizers';
 
 export interface TimelineItem {
   day: string;
@@ -13,38 +14,40 @@ export interface TimelineItem {
   }[];
 }
 
+const GuestsList = guests.map((g) => ({ ...g, href: '/programma/#' + g.image }));
+const OrganizersList = info.map((o) => ({ ...o, href: '/chi-siamo/#comitato-organizzativo' }));
+
 export default [
   {
-    day: '10 Agosto',
+    day: 'Giovedì 10 Agosto',
     name: 'Welcome Day',
     timeline: [
       {
         time: '16:00 - 16:30',
         title: 'Caffè di benvenuto al Laboratorio Syskrack Lab [APERTO A TUTTI E TUTTE]',
+        location: 'Grassano',
       },
       {
         time: '16:30 - 17:30',
         title: `Conferenza di Benvenuto [GRATUITO E APERTO A TUTTI E TUTTE]
         10 anni senza Peps - Syskrack : 9 anni dopo`,
-        //         Relatori:
-        // Davide Saladino (Presidente APS Syskrack Giuseppe Porsia)
-        // Giuseppe Liuzzi ( Community Manager)
-        // Naturalmente Tecnologici '23: (Ri)prendiamoci il futuro
-        // Giuseppe Becci (organizzatore )
-        // Davide Saladino (Presidente APS Syskrack Giuseppe Porsia)
-        // Giuseppe Liuzzi ( Community Manager)
-        // Teodosio Santagata
         type: 'Conferenza',
-        location: 'Auditorium',
+        location: 'Auditorium Grassano',
+        starring: [
+          OrganizersList.find((o) => o.name === 'Davide Saladino'),
+          OrganizersList.find((o) => o.name === 'Giuseppe Becci'),
+          OrganizersList.find((o) => o.name === 'Giuseppe Liuzzi'),
+        ],
       },
       {
         time: '18:00',
-        title: 'Apertura camping "Welcome to Tijuana"',
-        location: 'Camping',
+        title: 'Apertura Welcome to Tijuana Camp',
+        location: 'Bosco Coste',
       },
       {
         time: '18:30 - 20:00',
         title: 'Visita nel geosito dei Cinti e Esplorazione di una cantina Storica a cura di Alla Scoperta di Grassano',
+        location: 'Grassano',
       },
       {
         time: '22:00',
@@ -53,7 +56,7 @@ export default [
     ],
   },
   {
-    day: '11 Agosto',
+    day: 'Venerdì 11 Agosto',
     name: 'ART is Power',
     description:
       'Festeggiamo insieme il 50esimo compleanno della cultura Hip-Hop! Abbiamo preparato talk, presentazioni, estemporanee, battle di freestyle rap e un concerto che sarà la ciliegina sulla torta della giornata.',
@@ -64,7 +67,8 @@ export default [
       },
       {
         time: '09:30',
-        title: 'Good Morning Routine con Giacomo Castana "Prospettive Vegetali"',
+        title: 'Good Morning Routine',
+        starring: [GuestsList.find((g) => g.name === 'Giacomo Castana')],
       },
       {
         time: '10:30',
@@ -109,7 +113,7 @@ export default [
       {
         time: '23:00',
         title: `DAVIDE SHORTY - LIVE SOLO`,
-        starring: [guests.find((g) => g.name === 'Davide Shorty')],
+        starring: [GuestsList.find((g) => g.name === 'Davide Shorty')],
         location: 'Panoramic Stage',
       },
       {
@@ -119,7 +123,7 @@ export default [
     ],
   },
   {
-    day: '12 Agosto',
+    day: 'Sabato 12 Agosto',
     name: 'DOING is Power',
     description:
       'Se ti piace sporcarti le mani, divertirti e fare festa sei nel posto giusto. Lasciati coinvolgere nelle attività che abbiamo preparato per te. Un percorso che parte dal Design Thinking, passando per nuovi immaginari rurali, immergendoti nelle legende dei boschi lucani fino ad arrivare al Naturalmente Tecnologici PARTY a cura di Moddi MC, Trix E DJ Lugi.',
@@ -130,7 +134,8 @@ export default [
       },
       {
         time: '09:30',
-        title: 'Good Morning Routine con Giacomo Castana "Prospettive Vegetali"',
+        title: 'Good Morning Routine',
+        starring: [GuestsList.find((g) => g.name === 'Giacomo Castana')],
       },
       {
         time: '10:30',
@@ -182,7 +187,7 @@ export default [
     ],
   },
   {
-    day: '13 Agosto',
+    day: 'Domenica 13 Agosto',
     name: 'KNOWLEDGE IS/AS POWER',
     description: `Co(no)scienza, la musica e la natura si incontrano in un evento imperdibile. Ascolta le esperienze che contribuiscono a costruire il mondo del domani partendo da un immaginario collettivo. La sera GRAN FINALE con il DUB MASTER PAOLO BALDINI guardando, poi, l'alba con PNEUMATIX e ANGEL_ONE.`,
     timeline: [
@@ -192,7 +197,8 @@ export default [
       },
       {
         time: '09:30',
-        title: 'Morning routine con Giacomo Castana aka Prospettive Vegetali',
+        title: 'Good Morning Routine',
+        starring: [GuestsList.find((g) => g.name === 'Giacomo Castana')],
       },
       {
         time: '10:30',
@@ -218,7 +224,7 @@ export default [
       {
         time: '16:00',
         title: `Toccare il futuro con Mano - La Tecnologia che unisce`,
-        starring: [guests.find((g) => g.name === 'Guido Gioioso')],
+        starring: [GuestsList.find((g) => g.name === 'Guido Gioioso')],
         location: 'Botanical Stage',
       },
       {
