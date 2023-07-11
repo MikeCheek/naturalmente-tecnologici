@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/organisms/Layout';
 import NaturalmenteTecnologici from '../components/molecules/NaturalmenteTecnologici';
 import HeroHome from '../components/organisms/HeroHome';
 import Seo from '../components/atoms/Seo';
 import Theme from '../components/organisms/Theme';
-import WhenAndWhere from '../components/atoms/WhenAndWhere';
 import LastEdition from '../components/molecules/LastEdition';
 import 'react-circular-progressbar/dist/styles.css';
 import HeardOn from '../components/atoms/HeardOn';
@@ -17,18 +16,6 @@ const IndexPage = () => {
   const [text, setText] = useState<{ name: string; description: string }>({ name: '', description: '' });
   const [badges, setBadges] = useState<string[]>();
   const [price, setPrice] = useState<string>('');
-
-  const scrollIntoElem = () => {
-    const hash = (window.location || location).hash.slice(1);
-    if (hash) {
-      const elem = document.getElementById(hash);
-      if (elem) elem.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  useEffect(() => {
-    setTimeout(scrollIntoElem, 500);
-  }, []);
 
   return (
     <ModalContext.Provider

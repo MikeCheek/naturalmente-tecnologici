@@ -3,11 +3,13 @@ import Layout from '../components/organisms/Layout';
 import HeroProgram from '../components/organisms/HeroProgram';
 import Seo from '../components/atoms/Seo';
 import Program from '../components/molecules/Program';
+import Guests from '../components/organisms/Guests';
 
 const Programma = () => {
   return (
     <Layout>
       <HeroProgram />
+      <Guests />
       <Program />
     </Layout>
   );

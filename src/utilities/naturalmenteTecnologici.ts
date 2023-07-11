@@ -6,6 +6,7 @@ export const info = [
     Rilassati e incontra gente come te nel Botanical Stage, che sarà animato dai partecipanti, attraverso estemporanee d'arte, jam session di improvvisazione musicale, dj set e molto altro che scoprirai presto…`,
     svgStyle: { transform: 'rotate(94.72deg)' },
     cta: 'ASSICURATI IL PASS',
+    ctaLink: '#biglietti',
   },
   {
     title: 'LABORATORI',
@@ -13,6 +14,7 @@ export const info = [
     Scopri nuove abilità, osserva persone sviluppare la propria arte e ascolta esperienze di valore. Scoprirai nuovi talenti, creando connessioni nuove divertendoci.<br/><br/>
     Arte, tecnologia, artigianato, società in una sola parola: INNOVAZIONE etica e sostenibile, che parte dal basso.`,
     cta: 'RISERVA IL TUO POSTO',
+    ctaLink: '#biglietti',
   },
   {
     title: 'TALK',
@@ -20,6 +22,7 @@ export const info = [
     Il cambiamento parte dalle esperienze affinché si possa spostare sempre di più l'asticella che separa l'utopia dalla realtà.<br/><br/>
     IL FUTURO È ORA E QUI.`,
     cta: 'PRENDINE PARTE',
+    ctaLink: '#biglietti',
     // svgStyle: { transform: 'rotateY(180deg)' },
   },
   {
