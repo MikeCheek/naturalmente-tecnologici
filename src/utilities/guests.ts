@@ -54,35 +54,56 @@ export default [
     type: GUEST_TYPE.TALK,
   },
 
-  {
-    name: 'Davide Shorty',
-    description: `<strong>Davide Shorty</strong> è un rapper, cantautore e producer di <strong>Palermo</strong> capace di far convivere la sua inconfondibile <strong>voce soul</strong>
-    con sonorità e melodie contaminate da <strong>jazz</strong> e <strong>rap</strong>. Dopo varie esperienze nella scena <strong>hip hop siciliana</strong> nel <strong>2010</strong> si
-    trasferisce a <strong>Londra</strong> dove, nel <strong>2012</strong>, fonda la band <strong>Retrospective For Love</strong> con cui suonerà in tutto il <strong>Regno Unito</strong> ed
-    in <strong>Europa</strong>.<br/><br/>
-    Dopo essersi posizionato <strong>3</strong> alla nona edizione di <strong>X Factor Italia</strong> (<strong>dicembre 2015</strong>) a <strong>febbraio 2017</strong> pubblica il suo
-    primo album ufficiale, <strong>"Straniero"</strong>, che vanta prestigiose collaborazioni con <strong>Daniele Silvestri</strong> e <strong>Tormento</strong>.<br/>
-    Nel corso della sua carriera condivide il palco <strong>artisti internazionali</strong> del calibro di <strong>Robert Glasper</strong>, <strong>Jordan Rakei</strong>, <strong>Bilal</strong> e
-    <strong>mr jukes</strong> (<strong>Bombay Bicycle Club</strong>). Nel <strong>2018</strong> pubblica insieme ai <strong>Funk Shui Project</strong> l'album <strong>"Terapia di Gruppo"</strong>, che
-    viene apprezzato molto da pubblico e critica.<br/>
-    La fortunata collaborazione tra Davide e i Funk Shui Project continua nel <strong>2019</strong> quando esce per <strong>Totally Imported</strong>
-    l'album <strong>“La Soluzione”</strong>, che conferma la <strong>sinergia artistica</strong> tra il cantante e il <strong>collettivo torinese</strong>.<br/><br/>
-    Al disco segue la pubblicazione del <strong>reboot</strong> dello stesso: <strong>"La Soluzione Reboot"</strong> con all'interno l'inedito <strong>"Carillon"</strong> feat.
-    <strong>Roy Paci</strong>. Nello stesso anno <strong>Daniele Silvestri</strong> lo invita a far parte del brano <strong>“Tempi modesti"</strong>, mentre nel <strong>2020</strong> firma
-    con l'etichetta indipendente <strong>Totally Imported</strong>. Nel <strong>2021</strong> partecipa alla <strong>71^ edizione del Festival di Sanremo</strong> con il
-    brano <strong>“Regina”</strong>, nella categoria <strong>“Nuove Proposte”</strong>, dove si classifica <strong>2</strong> e vince il <strong>“Premio della Sala Stampa Lucio
-    Dalla”</strong>, il <strong>“Premio Enzo Jannacci NUOVO IMAIE 2021”</strong> e il <strong>“Premio Lunezia per Sanremo 2021”</strong> per il valore musicalletterario, essendo così l'<strong>artista più premiato</strong> di quella edizione del festival.<br/><br/>
-    Segue l'uscita del suo <strong>secondo album</strong> da <strong>solista</strong>, <strong>“fusion.”</strong>, che anche durante la pandemia, lo porta ad esibirsi sui
-    palchi di tutta Italia.`,
-    type: GUEST_TYPE.MUSIC,
-    field: ['Rap', 'Hip Hop'],
-  },
+  // {
+  //   name: 'Davide Shorty',
+  //   description: `<strong>Davide Shorty</strong> è un rapper, cantautore e producer di <strong>Palermo</strong> capace di far convivere la sua inconfondibile <strong>voce soul</strong>
+  //   con sonorità e melodie contaminate da <strong>jazz</strong> e <strong>rap</strong>. Dopo varie esperienze nella scena <strong>hip hop siciliana</strong> nel <strong>2010</strong> si
+  //   trasferisce a <strong>Londra</strong> dove, nel <strong>2012</strong>, fonda la band <strong>Retrospective For Love</strong> con cui suonerà in tutto il <strong>Regno Unito</strong> ed
+  //   in <strong>Europa</strong>.<br/><br/>
+  //   Dopo essersi posizionato <strong>3</strong> alla nona edizione di <strong>X Factor Italia</strong> (<strong>dicembre 2015</strong>) a <strong>febbraio 2017</strong> pubblica il suo
+  //   primo album ufficiale, <strong>"Straniero"</strong>, che vanta prestigiose collaborazioni con <strong>Daniele Silvestri</strong> e <strong>Tormento</strong>.<br/>
+  //   Nel corso della sua carriera condivide il palco <strong>artisti internazionali</strong> del calibro di <strong>Robert Glasper</strong>, <strong>Jordan Rakei</strong>, <strong>Bilal</strong> e
+  //   <strong>mr jukes</strong> (<strong>Bombay Bicycle Club</strong>). Nel <strong>2018</strong> pubblica insieme ai <strong>Funk Shui Project</strong> l'album <strong>"Terapia di Gruppo"</strong>, che
+  //   viene apprezzato molto da pubblico e critica.<br/>
+  //   La fortunata collaborazione tra Davide e i Funk Shui Project continua nel <strong>2019</strong> quando esce per <strong>Totally Imported</strong>
+  //   l'album <strong>“La Soluzione”</strong>, che conferma la <strong>sinergia artistica</strong> tra il cantante e il <strong>collettivo torinese</strong>.<br/><br/>
+  //   Al disco segue la pubblicazione del <strong>reboot</strong> dello stesso: <strong>"La Soluzione Reboot"</strong> con all'interno l'inedito <strong>"Carillon"</strong> feat.
+  //   <strong>Roy Paci</strong>. Nello stesso anno <strong>Daniele Silvestri</strong> lo invita a far parte del brano <strong>“Tempi modesti"</strong>, mentre nel <strong>2020</strong> firma
+  //   con l'etichetta indipendente <strong>Totally Imported</strong>. Nel <strong>2021</strong> partecipa alla <strong>71^ edizione del Festival di Sanremo</strong> con il
+  //   brano <strong>“Regina”</strong>, nella categoria <strong>“Nuove Proposte”</strong>, dove si classifica <strong>2</strong> e vince il <strong>“Premio della Sala Stampa Lucio
+  //   Dalla”</strong>, il <strong>“Premio Enzo Jannacci NUOVO IMAIE 2021”</strong> e il <strong>“Premio Lunezia per Sanremo 2021”</strong> per il valore musicalletterario, essendo così l'<strong>artista più premiato</strong> di quella edizione del festival.<br/><br/>
+  //   Segue l'uscita del suo <strong>secondo album</strong> da <strong>solista</strong>, <strong>“fusion.”</strong>, che anche durante la pandemia, lo porta ad esibirsi sui
+  //   palchi di tutta Italia.`,
+  //   type: GUEST_TYPE.MUSIC,
+  //   field: ['Rap', 'Hip Hop'],
+  // },
+  // {
+  //   name: 'Paolo Baldini',
+  //   type: GUEST_TYPE.MUSIC,
+  //   description: `<strong>Paolo Baldini</strong> è nato a <strong>Pordenone</strong>, nel <strong>1975</strong>. Con la sua prima band <strong>B.R. Stylers</strong>, si è distinto nel <strong>panorama reggae
+  //   italiano</strong> grazie al massiccio utilizzo dell'<strong>elettronica</strong> e di <strong>sonorità</strong> di ispirazione britannica, che sono rimaste a lungo una
+  //   delle sue caratteristiche distintive. Nel <strong>2006</strong> Baldini è entrato a far parte della più longeva <strong>band reggae italiana</strong>, gli
+  //   <strong>Africa Unite</strong>, di cui ha coprodotto due album (<strong>"Controlli"</strong> e <strong>“Rootz"</strong>). La collaborazione con <strong>Madaski</strong> ha dato origine al
+  //   progetto <strong>The Dub Sync</strong>, in cui <strong>Baldini</strong> ha lavorato sia come <strong>produttore</strong> (vennero realizzati 2 album) che come <strong>bassista</strong>
+  //   per gli show dal vivo.<br/><br/>
+  //   Nel <strong>2014</strong> Baldini ha debuttato con il suo progetto solista <strong>Paolo Baldini DubFiles</strong>, incentrato sul suo lavoro come
+  //   <strong>dubmaster</strong> realizzando l'<strong>omonimo album</strong>. Nel <strong>febbraio 2015</strong> si è recato in <strong>Giamaica</strong> per registrare quello che sarebbe
+  //   diventato il suo secondo album, intitolato <strong>"At Song Embassy Papine Kingston 6"</strong> che vede protagonisti numerosi
+  //   featuring di artisti dell'isola. Negli anni seguenti, ha girato molto in <strong>Europa</strong> e in <strong>America</strong>, esibendosi in alcuni dei più
+  //   grandi <strong>festival reggae</strong> del mondo come <strong>Rototom Sunsplash</strong> (Spagna), <strong>No Logo</strong> (Francia), <strong>Jamming Festival</strong>
+  //   (Colombia) e <strong>Sierra Nevada World Music Festival</strong> (USA).<br/><br/>
+  //   Il biennio <strong>2018/2019</strong> è molto prolifico dal punto di vista del lavoro in studio: Baldini produce <strong>To the Foundation</strong> di
+  //   <strong>Forelock & Arawak</strong>, <strong>Large</strong> di <strong>Mellow Mood</strong> ed il loro rispettivo seguito dub: <strong>"To the foundation of dub"</strong> e <strong>"Large Dub"</strong>.
+  //   Tutti questi album sono pubblicati dall'etichetta di Baldini, <strong>La Tempesta Dub</strong>, che gestisce insieme a <strong>Mellow Mood</strong>.
+  //   All'inizio del <strong>2020</strong>, Baldini ha pubblicato un album in collaborazione con <strong>Dan I</strong> e <strong>Imperial Sound Army</strong>, intitolato
+  //   <strong>"Dolomites Rockers”</strong>. Nel <strong>2020</strong> e <strong>2021</strong>, non essendoci la possibilità di svolgere attività live causa Covid, sono diverse
+  //   le produzioni realizzate in studio tra cui la <strong>collaborazione</strong> con la storica <strong>label Pressure Sounds</strong> e la realizzazione di <strong>2
+  //   album</strong> di dub versions per la <strong>Echo Beach</strong> in cui Baldini ha “riletto" storici successi dei <strong>Dubblestandart</strong> e dei
+  //   <strong>Noiseshaper</strong>.`,
+  //   field: ['Reggae'],
+  // },
   {
     name: 'Millenium Van',
-    type: GUEST_TYPE.MUSIC,
-  },
-  {
-    name: 'Paolo Baldini',
     type: GUEST_TYPE.MUSIC,
   },
   {

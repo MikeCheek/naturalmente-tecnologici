@@ -52,17 +52,20 @@ const Index = ({ data }: TimelineProps) => {
                         : { marginLeft: 'auto', alignItems: 'flex-end', textAlign: 'right' }
                     }
                   >
-                    {item.starring.map((star, key) => (
-                      <GuestBadge
-                        name={star.name}
-                        //@ts-ignore
-                        href={star.href}
-                        key={key}
-                        image={findImage(star.image)}
-                        //@ts-ignore
-                        titles={star.field || star.role?.split('<br/>')}
-                      />
-                    ))}
+                    {item.starring.map((star, key) => {
+                      console.log(star);
+                      return (
+                        <GuestBadge
+                          name={star.name}
+                          //@ts-ignore
+                          href={star.href}
+                          key={key}
+                          image={findImage(star.image)}
+                          //@ts-ignore
+                          titles={star.field || star.role?.split('<br/>')}
+                        />
+                      );
+                    })}
                   </div>
                 ) : (
                   <></>
