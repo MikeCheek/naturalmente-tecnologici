@@ -63,6 +63,7 @@ const Index = ({
         '@context': 'https://www.schema.org',
         '@type': 'Event',
         name: 'Naturalmente Tecnologici',
+        '@id': metadata.siteUrl + '/#event',
         url: 'https://nt.syskrack.org/',
         description: "(Ri)-prendiamoci il futuro. Ragionamenti complessi sull'accelerazione dei nostri tempi.",
         image: [metadata.siteUrl + seo.image.images.fallback.src, ...images.map((image) => metadata.siteUrl + image)],

@@ -39,7 +39,10 @@ const Index = ({ data }: TimelineProps) => {
       <div className={styles.colWrap}>
         {bar}
         {data.timeline.map((item, key) => (
-          <div key={key} className={styles.itemWrap} itemScope itemType='https://schema.org/Event'  itemID={webkitURL +'/programma#' + slugify(item.title)}>
+          <div key={key} className={styles.itemWrap} itemScope itemType='https://schema.org/Event'  itemID={websiteUrl +'/programma#' + slugify(item.title)}>
+             <span itemScope itemProp="superEvent" itemType='https://schema.org/Event' itemID={websiteUrl +'/#event'}>
+                <meta itemProp='name' content={"Naturalmente Tecnologici"}/>
+              </span>  
             <div className={key % 2 == 0 ? styles.item : styles.itemReversed} key={key}>
               <p className={styles.title} itemProp='name' dangerouslySetInnerHTML={{ __html: item.title }}></p>
               {circle}
