@@ -55,7 +55,7 @@ export default [
   },
 
   {
-    name: 'Davide Shorty',
+    name: 'Davide Shorty - Solo',
     description: `<strong>Davide Shorty</strong> è un rapper, cantautore e producer di <strong>Palermo</strong> capace di far convivere la sua inconfondibile <strong>voce soul</strong>
     con sonorità e melodie contaminate da <strong>jazz</strong> e <strong>rap</strong>. Dopo varie esperienze nella scena <strong>hip hop siciliana</strong> nel <strong>2010</strong> si
     trasferisce a <strong>Londra</strong> dove, nel <strong>2012</strong>, fonda la band <strong>Retrospective For Love</strong> con cui suonerà in tutto il <strong>Regno Unito</strong> ed
@@ -78,7 +78,7 @@ export default [
     field: ['Rap', 'Hip Hop'],
   },
   {
-    name: 'Paolo Baldini',
+    name: 'Paolo Baldini DubFiles',
     type: GUEST_TYPE.MUSIC,
     description: `<strong>Paolo Baldini</strong> è nato a <strong>Pordenone</strong>, nel <strong>1975</strong>. Con la sua prima band <strong>B.R. Stylers</strong>, si è distinto nel <strong>panorama reggae
     italiano</strong> grazie al massiccio utilizzo dell'<strong>elettronica</strong> e di <strong>sonorità</strong> di ispirazione britannica, che sono rimaste a lungo una
@@ -118,7 +118,10 @@ export default [
     name: 'Millenium Van',
     type: GUEST_TYPE.MUSIC,
   },
-].map((e) => ({ ...e, image: e.name.toLowerCase().replace(/ /g, '_') }));
+].map((e) => {
+  const splitted = e.name.toLowerCase().split(' ');
+  return { ...e, image: [splitted[0], splitted[1] ?? undefined].join('_') };
+});
 
 export const images = () => {
   const guestsPhotos: Data = useStaticQuery(graphql`
