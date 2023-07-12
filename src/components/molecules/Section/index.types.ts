@@ -4,4 +4,7 @@ export interface SectionProps {
   Svg?: SVG;
   reversed?: boolean;
   svgStyle?: React.CSSProperties;
+  buttonHref?: string;
+  buttonTitle?: string;
+  buttonInternal?: boolean;
 }

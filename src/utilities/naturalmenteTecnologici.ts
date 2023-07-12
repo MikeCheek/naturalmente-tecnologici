@@ -33,6 +33,7 @@ export const info = [
     Tu e la tua arte siete nel posto giusto!`,
     svgStyle: { transform: 'rotate(94.72deg)' },
     cta: 'PERFORMA',
+    ctaLink: '/collabora/art-partner',
   },
   {
     title: 'STREAMING',

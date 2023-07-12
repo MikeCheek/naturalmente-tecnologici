@@ -17,7 +17,10 @@ const Index = ({ children, insects = true }: LayoutProps) => {
     const hash = (window.location || location).hash;
     if (hash.length > 0) {
       const elem = document.getElementById(hash.slice(1));
-      if (elem) elem.scrollIntoView({ behavior: 'smooth' });
+      if (elem) {
+        const rect = elem.getBoundingClientRect();
+        window.scrollTo({ top: rect.top + window.scrollY - rect.height - 80 });
+      }
     }
   };
 

@@ -33,7 +33,12 @@ const Index = () => {
         </h3>
       </ShowOnView>
       <ShowOnView>
-        <Button text="Riserva il tuo posto" title="Riserva il tuo posto" href={'#biglietti'} bigger internal />
+        <Button
+          text="Scopri la location"
+          title="Scopri la location"
+          href={'https://www.google.com/maps/place/' + coords.join(' ')}
+          bigger
+        />
       </ShowOnView>
       <SectionImageCTA
         text={` Presso Bosco Le Coste, tra Grassano e Grottole, tra le argillose colline lucane.<br/>
