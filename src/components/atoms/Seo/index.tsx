@@ -4,6 +4,8 @@ import useSiteMetadata from '../../../utilities/useSiteMetadata';
 import { links } from '../../../utilities/navigation';
 import { DefaultTicketProps, info as tickets } from '../../../utilities/tickets';
 import dataFAQ from '../../../utilities/dataFAQ';
+import guests from '../../../utilities/guests';
+import { removeHTMLTags } from '../../../utilities/sanitizer';
 
 const Index = ({
   lang = 'it',
@@ -94,6 +96,17 @@ const Index = ({
           url: 'https://www.syskrack.org/',
           sameAs: ['https://www.wikidata.org/wiki/Q116907424', 'https://syskrack.org/'],
         },
+        performer: guests.map((guest) => ({
+          '@type': guest.speaker ? 'Organization' : 'Person',
+          name: guest.name,
+          description: guest.description ? removeHTMLTags(guest.description) : undefined,
+          member: guest.speaker
+            ? guest.speaker.map((speaker) => ({
+                '@type': 'Person',
+                name: speaker,
+              }))
+            : undefined,
+        })),
         typicalAgeRange: '18-',
         offers: {
           '@type': 'AggregateOffer',
@@ -141,7 +154,7 @@ const Index = ({
             name: faq.title,
             acceptedAnswer: {
               '@type': 'Answer',
-              text: faq.text.replace(/<\/?[^>]+(>|$)/g, ''),
+              text: removeHTMLTags(faq.text),
             },
           })),
       },
