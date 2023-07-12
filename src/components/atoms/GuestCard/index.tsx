@@ -5,7 +5,7 @@ import GuestCardProps from './index.types';
 import ShowOnView from '../ShowOnView';
 import Button from '../Button';
 
-const GuestCard = ({ children, name, description, field, id }: GuestCardProps) => {
+const GuestCard = ({ children, name, description, field, id, speaker }: GuestCardProps) => {
   const [more, setMore] = useState<boolean>(false);
 
   return (
@@ -24,19 +24,24 @@ const GuestCard = ({ children, name, description, field, id }: GuestCardProps) =
                 ))}
               </div>
             ) : null}
+            {speaker ? <p className={styles.speaker}>Speaker: {speaker.join(', ')}</p> : <></>}
           </span>
 
           <div className={`${more ? styles.aboutMore : styles.about}`}>
             <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
           </div>
-          <div className={styles.buttonWrap}>
-            <Button
-              text={`Leggi di${more ? ' meno' : ' più'}`}
-              title={`Leggi di${more ? ' meno' : ' più'}`}
-              onClick={() => setMore((state) => !state)}
-            />
-            <div className={styles.fade}></div>
-          </div>
+          {description ? (
+            <div className={styles.buttonWrap}>
+              <Button
+                text={`Leggi di${more ? ' meno' : ' più'}`}
+                title={`Leggi di${more ? ' meno' : ' più'}`}
+                onClick={() => setMore((state) => !state)}
+              />
+              <div className={styles.fade}></div>
+            </div>
+          ) : (
+            <></>
+          )}
 
           {/* {theme ? (
           <div className={styles.theme}>

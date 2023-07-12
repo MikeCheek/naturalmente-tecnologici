@@ -13,10 +13,19 @@ import NavBar from '../NavBar';
 const Index = ({ children, insects = true }: LayoutProps) => {
   const [banner, setBanner] = useState<boolean>(false);
 
+  const scrollIntoElem = () => {
+    const hash = (window.location || location).hash;
+    if (hash.length > 0) {
+      const elem = document.getElementById(hash.slice(1));
+      if (elem) elem.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     if (Cookies.get(CookiesNames.functional) == undefined) {
       setBanner(true);
     }
+    setTimeout(scrollIntoElem, 500);
   }, []);
 
   return (

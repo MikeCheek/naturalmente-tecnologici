@@ -23,6 +23,7 @@ const Index = () => {
             description={guest.description ?? ''}
             field={guest.field}
             id={guest.image}
+            speaker={guest.speaker}
           >
             {guestsPhotos.allFile!.edges.find((e) => e.node.name === guest.image) ? (
               <GatsbyImage
@@ -51,6 +52,7 @@ const Index = () => {
             description={guest.description ?? ''}
             field={guest.field}
             id={guest.image}
+            speaker={guest.speaker}
           >
             {guestsPhotos.allFile!.edges.find((e) => e.node.name === guest.image) ? (
               <GatsbyImage
