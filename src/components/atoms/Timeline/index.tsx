@@ -7,6 +7,19 @@ import { images as orgImages } from '../../../utilities/organizers';
 import GuestBadge from '../GuestBadge';
 import ShowOnView from '../ShowOnView';
 
+const slugify = function (str: string = "", separator = "-") {
+  return str
+      .toString()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9 ]/g, '')
+      .replace(/\s+/g, separator);
+};
+
+const websiteUrl = 'https://www.nt.syskrack.org';
+
 const Index = ({ data }: TimelineProps) => {
   const circle = <div className={styles.circle}></div>;
   const bar = <div className={styles.bar}></div>;
@@ -26,9 +39,9 @@ const Index = ({ data }: TimelineProps) => {
       <div className={styles.colWrap}>
         {bar}
         {data.timeline.map((item, key) => (
-          <div key={key} className={styles.itemWrap}>
+          <div key={key} className={styles.itemWrap} itemScope itemType='https://schema.org/Event'  itemID={webkitURL +'/programma#' + slugify(item.title)}>
             <div className={key % 2 == 0 ? styles.item : styles.itemReversed} key={key}>
-              <p className={styles.title} dangerouslySetInnerHTML={{ __html: item.title }}></p>
+              <p className={styles.title} itemProp='name' dangerouslySetInnerHTML={{ __html: item.title }}></p>
               {circle}
               <span className={styles.info}>
                 <p className={styles.time}>{item.time}</p>
