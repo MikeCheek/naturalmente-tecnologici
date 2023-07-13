@@ -12,7 +12,7 @@ const Index = () => {
       <div className={styles.headWrap}>
         <h1 className={styles.heading}>
           INFO E FAQ <br />
-          TUTTO CIÒ CHE DEVI SAPERE SUL FESTIVAL E MOLTO ALTRO
+          TUTTO CIÒ CHE DEVI SAPERE SUL FESTIVAL
         </h1>
         <Speaking width={600} className={styles.speaking} fill="var(--nt-dark-green)" />
         <div className={styles.svgWrap}>

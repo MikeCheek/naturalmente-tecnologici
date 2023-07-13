@@ -5,10 +5,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../../molecules/SectionImageCTA';
 import ShowOnView from '../ShowOnView';
 import Button from '../Button';
+import { coords, mapsLink } from '../../../utilities/howToReach';
 
 const Index = () => {
-  const coords = [`40°37'14.0"N`, `16°24'38.6"E`];
-
   return (
     <div className={styles.whenAndWhere}>
       <Heading text="Quando e dove?" />
@@ -19,12 +18,7 @@ const Index = () => {
           11 &gt; 13 Agosto 2023
           <br />
           <br />
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Scopri la location"
-            href={'https://www.google.com/maps/place/' + coords.join(' ')}
-          >
+          <a rel="noopener noreferrer" target="_blank" title="Scopri la location" href={mapsLink}>
             @ Bosco Le Coste
             <b>
               <span>{coords[0]}</span> <span>{coords[1]}</span>
@@ -33,12 +27,7 @@ const Index = () => {
         </h3>
       </ShowOnView>
       <ShowOnView>
-        <Button
-          text="Scopri la location"
-          title="Scopri la location"
-          href={'https://www.google.com/maps/place/' + coords.join(' ')}
-          bigger
-        />
+        <Button text="Scopri la location" title="Scopri la location" href={mapsLink} bigger />
       </ShowOnView>
       <SectionImageCTA
         text={` Presso Bosco Le Coste, tra Grassano e Grottole, tra le argillose colline lucane.<br/>
@@ -49,7 +38,7 @@ const Index = () => {
           ambientale sono anche la Foresta, un vasto territorio boschivo dove abbonda anche la presenza di macchia
           mediterranea e di specie floristiche e faunistiche molto rare.`}
         buttonText={'Scopri la location'}
-        buttonHref={'https://www.google.com/maps/place/' + coords.join(' ')}
+        buttonHref={mapsLink}
         image={
           <StaticImage
             quality={80}
@@ -68,7 +57,7 @@ const Index = () => {
           per 5 Km, qui è possibile fare passeggiate a cavallo o mountain bike, trekking o respirare i profumi della
           natura nel sentiero didattico.`}
         buttonText={'Scopri la location'}
-        buttonHref={'https://www.google.com/maps/place/' + coords.join(' ')}
+        buttonHref={mapsLink}
         image={
           <StaticImage
             quality={80}

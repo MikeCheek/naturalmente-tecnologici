@@ -6,6 +6,7 @@ import Syskrack from '../../../assets/syskrack.svg';
 import IBM from '../../../assets/partner/IBM.svg';
 import Podus from '../../../assets/partner/podus.svg';
 import Basilicata from '../../../assets/partner/basilicata.svg';
+import MarinoBus from '../../../assets/partner/marino-bus.svg';
 import ShowOnView from '../ShowOnView';
 
 const Index = () => {
@@ -27,6 +28,12 @@ const Index = () => {
       <ShowOnView className={styles.wrap}>
         <a href="https://podus.it/" title="Podus" rel="noopener noreferrer" target="_blank">
           <Podus className={styles.logoLong} width={200} />
+        </a>
+      </ShowOnView>
+      <Heading text="Mobility Partner" />
+      <ShowOnView className={styles.wrap}>
+        <a href="https://marinobus.it/" title="Marino Bus" rel="noopener noreferrer" target="_blank">
+          <MarinoBus className={styles.logoLong} width={200} style={{ maxHeight: '100px' }} />
         </a>
       </ShowOnView>
       <Heading text="Hospitality Partner" />
