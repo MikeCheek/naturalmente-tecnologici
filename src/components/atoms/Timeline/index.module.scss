@@ -32,6 +32,10 @@
   background-color: var(--nt-green);
   color: var(--nt-white);
   width: fit-content !important;
+  max-width: 130px;
+  @media screen and (min-width: '400px') {
+    max-width: fit-content;
+  }
 }
 
 .time {

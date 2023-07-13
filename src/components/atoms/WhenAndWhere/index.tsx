@@ -27,10 +27,15 @@ const Index = () => {
         </h3>
       </ShowOnView>
       <ShowOnView>
-        <Button text="Scopri la location" title="Scopri la location" href={mapsLink} bigger />
+        <h4>
+          Non sai come raggiungere la location?
+          <br />
+          Leggi la nostra guida nella pagina Info
+        </h4>
+        <Button text="Come raggiungerci" title="Come raggiungerci" href="/info/#come-raggiungerci" internal />
       </ShowOnView>
       <SectionImageCTA
-        text={` Presso Bosco Le Coste, tra Grassano e Grottole, tra le argillose colline lucane.<br/>
+        text={`Il festival avrà luogo presso Bosco Le Coste, tra Grassano e Grottole, tra le argillose colline lucane.<br/>
         Rientra nel territorio dell'oasi naturale di San Giuliano, non lontano da Matera. Si gode di una vista mozzafiato, in cui l'occhio
           spazia in ogni direzione, godendo lo spettacolo degli altopiani circostanti.<br/>
           Situato a pochi chilometri dall'abitato, è il più grosso polmone verde, appendice naturale dell'oasi predetta.

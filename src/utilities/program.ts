@@ -249,9 +249,15 @@ export default [
         // starring: [GuestsList.find((g) => g.name === 'Paolo Baldini')],
       },
       {
-        time: '01:00 - 06:00',
+        time: '01:00',
         title: 'PNEUMATIX Live',
         location: 'Panoramic Stage',
+        starring: [GuestsList.find((g) => g.name === 'Pneumatix')],
+      },
+      {
+        title: 'Angel_One DJ Set',
+        location: 'Panoramic Stage',
+        starring: [GuestsList.find((g) => g.name === 'Angel_One')],
       },
       {
         time: '06:00',

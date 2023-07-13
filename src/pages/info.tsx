@@ -10,7 +10,7 @@ const Info = () => {
   return (
     <Layout>
       <HeroInfo />
-      {/* <HowToReach /> */}
+      <HowToReach />
       <Faq />
       <Contacts />
     </Layout>

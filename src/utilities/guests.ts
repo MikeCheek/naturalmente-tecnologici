@@ -103,15 +103,27 @@ export default [
   //   field: ['Reggae'],
   // },
   {
-    name: 'Millenium Van',
-    type: GUEST_TYPE.MUSIC,
-  },
-  {
     name: 'Pneumatix',
     type: GUEST_TYPE.MUSIC,
+    description: `Pneumatix è un produttore musicale rumeno che ha iniziato la sua carriera musicale nel 2005 nella scena musicale underground come produttore musicale indipendente e deejay, la sua musica è un mix di suoni spaziali, accordi house con influenze techno e progressive mescolati nel suo stile Tekno per creare suoni vibrazioni chill e groove tek. Nel 2012 ha fondato "SleepNot! Soundsystem", un sound system con una comunità di appassionati di musica in continua crescita. La maggior parte della sua attività è stata svolta nella scena musicale underground della Romania e ultimamente in ambito europeo, negli ultimi dieci anni ha partecipato a diversi eventi e organizzato vari rave tekno con SleepNot! e altri sound system e collaborazioni nazionali o internazionali.
+    Ha all'attivo una vastissima discografia e questo lo rende uno dei produttori piu' prolifici e completi di tutto il  panorama europeo.`,
+  },
+  {
+    name: 'Angel_One',
+    type: GUEST_TYPE.MUSIC,
+    description: `La sua vasta conoscenza musicale e l'amicizia con importanti produttori lo hanno spinto nel 2017 a iniziare a mixare.
+    Si unisce a Psylosophia, un'etichetta psytrance napoletana come DJ, e dal 2017 al 2020 ha eseguito quasi mensilmente un set ai loro party.
+    Nel 2019 si è trasferito a Bucarest e ha iniziato a organizzare attivamente party con SleepNot Soundsystem di cui faceva già parte dal 2015.
+    Crede fermamente che non ci debbano essere barriere tra i generi musicali, soprattutto quello elettronico, per questo oltre ai set notturni di tekno tribe e psytrance si esibisce con piacere anche in set deep house, tech-house e italo dance 90-00.
+    Feste in cui ha mixato a: Capodanno a Cluj, Rotek 2019-2022, Albaniatek2022, TekOver, Blahna, Bucharest Tekno Unit, Step Evolution 2022, Smotek Party Zagreb, BulgariaTEk 2020, Various Italians Freeparty, Psylosophia Psytrance party, Tribal Ritual , Rave4 Base Czech republic`,
+    field: ['DJ Tekno Tribe', 'Psytrance', 'Deephouse', 'Deep Techno'],
   },
   {
     name: 'Moddi MC',
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Millenium Van',
     type: GUEST_TYPE.MUSIC,
   },
   {

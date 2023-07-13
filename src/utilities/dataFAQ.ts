@@ -1,4 +1,4 @@
-const mail = ({ subject, text }: { subject?: string; text?: string }): string => {
+export const mail = ({ subject, text }: { subject?: string; text?: string }): string => {
   return `<a title="Mandaci una mail" rel="noopener noreferrer" target="_blank" href="mailto:direttivo@syskrack.org${
     subject ? `?subject=${subject}` : ''
   }">${text ?? 'direttivo@syskrack.org'}</a>`;

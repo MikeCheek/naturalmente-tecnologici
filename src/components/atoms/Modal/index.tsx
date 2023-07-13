@@ -6,9 +6,12 @@ import { Eventbrite, allBadges } from '../../../utilities/tickets';
 import Button from '../Button';
 
 const Index = ({ title, description, opened, close, price, badges }: ModalProps) => {
-  const desc =
-    description.replace('https://syskrack.org/associati.', '').split('.').join('.<br/>') +
-    `<a href="https://syskrack.org/associati" rel="noopener noreferrer" title"Associati" target="_blank">https://syskrack.org/associati</a>`;
+  const isForATicket = badges ? true : false;
+
+  const desc = isForATicket
+    ? description.replace('https://syskrack.org/associati.', '').split('.').join('.<br/>') +
+      `<a href="https://syskrack.org/associati" rel="noopener noreferrer" title"Associati" target="_blank">https://syskrack.org/associati</a>`
+    : description;
 
   return (
     <div className={opened ? styles.opened : styles.closed}>
@@ -16,7 +19,7 @@ const Index = ({ title, description, opened, close, price, badges }: ModalProps)
         <X width={20} height={20} fill="var(--nt-orange)" />
       </div>
       <div className={styles.titleWrap}>
-        <span className={styles.miniWrap}>
+        <span className={styles.miniWrap} style={isForATicket ? {} : { alignItems: 'center' }}>
           <p className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></p>
           <p className={styles.price}>{price}</p>
         </span>
@@ -36,12 +39,16 @@ const Index = ({ title, description, opened, close, price, badges }: ModalProps)
       <p className={styles.content} dangerouslySetInnerHTML={{ __html: desc }}></p>
       <div className={styles.shadow}></div>
       <div className={styles.buttonWrap}>
-        <Button
-          text={'RISERVA IL TUO BIGLIETTO'}
-          title={'RISERVA IL TUO BIGLIETTO'}
-          href={Eventbrite}
-          internal={false}
-        />
+        {isForATicket ? (
+          <Button
+            text={'RISERVA IL TUO BIGLIETTO'}
+            title={'RISERVA IL TUO BIGLIETTO'}
+            href={Eventbrite}
+            internal={false}
+          />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
