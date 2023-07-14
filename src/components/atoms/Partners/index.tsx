@@ -18,8 +18,8 @@ const Index = () => {
           <Syskrack className={styles.logo} width={150} />
         </a>
         <h4>
-          I nostri partner selezionati investono nella cultura e nello sviluppo delle persone e del territorio e ad
-          accettare la nostra sfida collettiva.
+          I nostri partner selezionati investono nella cultura e nello sviluppo delle persone e del territorio e
+          accettano la nostra sfida collettiva.
           <br />
           Offriamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
         </h4>

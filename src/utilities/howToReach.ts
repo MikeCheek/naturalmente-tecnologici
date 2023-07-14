@@ -39,8 +39,9 @@ export default [
     MARINOBUS è Mobility Partner di Naturalmente Tecnologici e acquistando un biglietto per il festival hai diritto a uno sconto del 10% sulla tratta di andata e ritorno.<br/>
     Inserisci il codice che trovi nella guida qui sotto in fase di acquisto.<br/><br/>
     Da Matera è possibile raggiungere Grottole tramite il servizio pullman di <a title="Vedi gli orari" target="_blank" rel="noopener noreferrer" href="https://www.sitasudtrasporti.it/archivio/Download/corse/sitasud/Basilicata/Matera/ccebfbb7-4c10-41b5-b2ab-98144d50356e_Linea_352_Salandra_Grottole_Miglionico_Matera.pdf/0">SITA SUD</a>.<br/><br/>
-    Ma non è finita qui!<br/>
-    Se viaggi con MARINO BUS avrai diritto a uno sconto del 10% anche sul biglietto del festival!<br/><br/>`,
+    `,
+    // Ma non è finita qui!<br/>
+    // Se viaggi con MARINO BUS avrai diritto a uno sconto del 10% anche sul biglietto del festival!<br/><br/>
     infoMarinoBus: true,
   },
   {
