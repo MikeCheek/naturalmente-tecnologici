@@ -113,7 +113,7 @@ export default [
       {
         time: '23:00',
         title: `DAVIDE SHORTY - LIVE SOLO`,
-        // starring: [GuestsList.find((g) => g.name === 'Davide Shorty')],
+        starring: [GuestsList.find((g) => g.name === 'Davide Shorty')],
         location: 'Panoramic Stage',
       },
       {
@@ -246,7 +246,7 @@ export default [
         time: '23:00',
         title: 'Paolo Baldini Live',
         location: 'Panoramic Stage',
-        // starring: [GuestsList.find((g) => g.name === 'Paolo Baldini')],
+        starring: [GuestsList.find((g) => g.name === 'Paolo Baldini')],
       },
       {
         time: '01:00',
