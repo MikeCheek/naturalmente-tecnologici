@@ -4,11 +4,13 @@ import HeroInfo from '../components/organisms/HeroInfo';
 import Seo from '../components/atoms/Seo';
 import Contacts from '../components/molecules/Contacts';
 import Faq from '../components/organisms/Faq';
+import HowToReach from '../components/atoms/HowToReach';
 
 const Info = () => {
   return (
     <Layout>
       <HeroInfo />
+      <HowToReach />
       <Faq />
       <Contacts />
     </Layout>

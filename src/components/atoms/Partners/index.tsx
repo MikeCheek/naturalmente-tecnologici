@@ -6,6 +6,7 @@ import Syskrack from '../../../assets/syskrack.svg';
 import IBM from '../../../assets/partner/IBM.svg';
 import Podus from '../../../assets/partner/podus.svg';
 import Basilicata from '../../../assets/partner/basilicata.svg';
+import MarinoBus from '../../../assets/partner/marino-bus.svg';
 import ShowOnView from '../ShowOnView';
 
 const Index = () => {
@@ -17,8 +18,8 @@ const Index = () => {
           <Syskrack className={styles.logo} width={150} />
         </a>
         <h4>
-          I nostri partner selezionati investono nella cultura e nello sviluppo delle persone e del territorio e ad
-          accettare la nostra sfida collettiva.
+          I nostri partner selezionati investono nella cultura e nello sviluppo delle persone e del territorio e
+          accettano la nostra sfida collettiva.
           <br />
           Offriamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
         </h4>
@@ -27,6 +28,12 @@ const Index = () => {
       <ShowOnView className={styles.wrap}>
         <a href="https://podus.it/" title="Podus" rel="noopener noreferrer" target="_blank">
           <Podus className={styles.logoLong} width={200} />
+        </a>
+      </ShowOnView>
+      <Heading text="Mobility Partner" />
+      <ShowOnView className={styles.wrap}>
+        <a href="https://marinobus.it/" title="Marino Bus" rel="noopener noreferrer" target="_blank">
+          <MarinoBus className={styles.logoLong} width={200} style={{ maxHeight: '100px' }} />
         </a>
       </ShowOnView>
       <Heading text="Hospitality Partner" />

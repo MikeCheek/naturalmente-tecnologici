@@ -1,4 +1,4 @@
-const mail = ({ subject, text }: { subject?: string; text?: string }): string => {
+export const mail = ({ subject, text }: { subject?: string; text?: string }): string => {
   return `<a title="Mandaci una mail" rel="noopener noreferrer" target="_blank" href="mailto:direttivo@syskrack.org${
     subject ? `?subject=${subject}` : ''
   }">${text ?? 'direttivo@syskrack.org'}</a>`;
@@ -52,6 +52,12 @@ export default [
   {
     title: 'Festival',
     data: [
+      {
+        title: 'Dove si svolgerà il festival?',
+        text: `Il festival si svolgerà in Basilicata presso <a href="/#quando-e-dove" title="Scopri la location" rel="noopener noreferrer">Bosco Coste</a>, Grottole (MT).<br/>
+        Tuttavia alcune attività in programma come la Conferenza di Benvenuto e il caffè al Lab si svolgeranno a Grassano (MT).<br>
+        Trovi tutti i dettagli sulla <a href="/programma" title="Vai al programma" rel="noopener noreferrer">pagina del programma</a>`,
+      },
       {
         title: 'Cosa troverò a Naturalmente Tecnologici?',
         text: `Conferenze, workshop, laboratori, connessione con le persone e la natura che ti circonda.<br/>

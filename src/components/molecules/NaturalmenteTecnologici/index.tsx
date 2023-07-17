@@ -47,6 +47,8 @@ const Index = () => {
             key={key}
             Svg={key % 2 == 0 ? Bug : Insects}
             svgStyle={item.svgStyle}
+            buttonHref={item.ctaLink}
+            buttonTitle={item.cta}
           />
         );
       })}

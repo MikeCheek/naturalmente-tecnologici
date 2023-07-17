@@ -69,7 +69,6 @@ const Index = ({ data }: TimelineProps) => {
                     }
                   >
                     {item.starring.map((star, key) => {
-                      console.log(star);
                       return (
                         <GuestBadge
                           name={star.name}

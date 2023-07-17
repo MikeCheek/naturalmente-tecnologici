@@ -4,8 +4,18 @@ import { SectionProps } from './index.types';
 import ConnectionLeft from '../../../assets/connectionLeft.svg';
 import ConnectionRight from '../../../assets/connectionRight.svg';
 import { useInView } from 'react-intersection-observer';
+import Button from '../../atoms/Button';
 
-const Index = ({ title, text, Svg, reversed = false, svgStyle }: SectionProps) => {
+const Index = ({
+  title,
+  text,
+  Svg,
+  reversed = false,
+  svgStyle,
+  buttonHref,
+  buttonInternal = true,
+  buttonTitle,
+}: SectionProps) => {
   const [on, setOn] = useState<boolean>(false);
   const [ref, inView, _entry] = useInView({
     threshold: 0,
@@ -37,6 +47,11 @@ const Index = ({ title, text, Svg, reversed = false, svgStyle }: SectionProps) =
           <div className={reversed ? styles.textReversed : styles.text}>
             <h3>{title}</h3>
             <p dangerouslySetInnerHTML={{ __html: text }}></p>
+            {buttonHref && buttonTitle ? (
+              <Button text={buttonTitle} title={buttonTitle} href={buttonHref} internal={buttonInternal} />
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>

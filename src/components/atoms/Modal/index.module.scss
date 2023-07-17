@@ -92,6 +92,9 @@
   overflow-y: scroll;
   position: relative;
   padding-bottom: 50px;
+  li {
+    margin: 20px 0;
+  }
 }
 
 .shadow {

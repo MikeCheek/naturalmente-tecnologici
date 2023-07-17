@@ -5,10 +5,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../../molecules/SectionImageCTA';
 import ShowOnView from '../ShowOnView';
 import Button from '../Button';
+import { coords, mapsLink } from '../../../utilities/howToReach';
 
 const Index = () => {
-  const coords = [`40°37'14.0"N`, `16°24'38.6"E`];
-
   return (
     <div className={styles.whenAndWhere}>
       <Heading text="Quando e dove?" />
@@ -19,12 +18,7 @@ const Index = () => {
           11 &gt; 13 Agosto 2023
           <br />
           <br />
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Scopri la location"
-            href={'https://www.google.com/maps/place/' + coords.join(' ')}
-          >
+          <a rel="noopener noreferrer" target="_blank" title="Scopri la location" href={mapsLink}>
             @ Bosco Le Coste
             <b>
               <span>{coords[0]}</span> <span>{coords[1]}</span>
@@ -33,10 +27,15 @@ const Index = () => {
         </h3>
       </ShowOnView>
       <ShowOnView>
-        <Button text="Riserva il tuo posto" title="Riserva il tuo posto" href={'#biglietti'} bigger internal />
+        <h4>
+          Non sai come raggiungere la location?
+          <br />
+          Leggi la nostra guida nella pagina Info
+        </h4>
+        <Button text="Come raggiungerci" title="Come raggiungerci" href="/info/#come-raggiungerci" internal />
       </ShowOnView>
       <SectionImageCTA
-        text={` Presso Bosco Le Coste, tra Grassano e Grottole, tra le argillose colline lucane.<br/>
+        text={`Il festival avrà luogo presso Bosco Le Coste, tra Grassano e Grottole, tra le argillose colline lucane.<br/>
         Rientra nel territorio dell'oasi naturale di San Giuliano, non lontano da Matera. Si gode di una vista mozzafiato, in cui l'occhio
           spazia in ogni direzione, godendo lo spettacolo degli altopiani circostanti.<br/>
           Situato a pochi chilometri dall'abitato, è il più grosso polmone verde, appendice naturale dell'oasi predetta.
@@ -44,7 +43,7 @@ const Index = () => {
           ambientale sono anche la Foresta, un vasto territorio boschivo dove abbonda anche la presenza di macchia
           mediterranea e di specie floristiche e faunistiche molto rare.`}
         buttonText={'Scopri la location'}
-        buttonHref={'https://www.google.com/maps/place/' + coords.join(' ')}
+        buttonHref={mapsLink}
         image={
           <StaticImage
             quality={80}
@@ -63,7 +62,7 @@ const Index = () => {
           per 5 Km, qui è possibile fare passeggiate a cavallo o mountain bike, trekking o respirare i profumi della
           natura nel sentiero didattico.`}
         buttonText={'Scopri la location'}
-        buttonHref={'https://www.google.com/maps/place/' + coords.join(' ')}
+        buttonHref={mapsLink}
         image={
           <StaticImage
             quality={80}
