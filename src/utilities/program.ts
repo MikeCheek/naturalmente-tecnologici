@@ -150,7 +150,7 @@ export default [
             Co-progettare empaticamente  usando il DESIGN THINKING per creare <br/>
         connessioni tra persone e realtà virtuose.<br/>
                 LABORATORIO DA PRENOTARE`,
-        starring: [GuestsList.find((g) => g.name === 'IBM - SkillsBuild')],
+        starring: [GuestsList.find((g) => g.name === 'IBM SkillsBuild')],
       },
       {
         time: '11:30',

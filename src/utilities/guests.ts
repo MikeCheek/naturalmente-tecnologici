@@ -137,7 +137,7 @@ export default [
   },
 
   {
-    name: 'IBM - SkillsBuild',
+    name: 'IBM SkillsBuild',
     field: ['Workshop - "Design Thinking"'],
     description: `<strong>Design Thinking</strong><br/><br/>
     Bee Green Italia, una community IBM che si ispira ai principi della sostenibilità a 360°, è lieta di invitarvi al <strong>“Solutioning workshop di Design Thinking”</strong> dedicato ai partecipanti di SYSKRACK, Naturalmente Tecnologici ed. 2023.<br/>
