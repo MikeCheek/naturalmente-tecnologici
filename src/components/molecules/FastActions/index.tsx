@@ -67,7 +67,7 @@ const Index = () => {
           <br />
           Dai un'occhiata alle nostre FAQ o contattaci!
         </h3>
-        <Button bigger internal href="/info" title="Vai alle FAQ" text="Vai alle FAQ" />
+        <Button bigger internal href="/info/#faq" title="Vai alle FAQ" text="Vai alle FAQ" />
       </ShowOnView>
     </div>
   );

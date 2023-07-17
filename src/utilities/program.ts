@@ -244,7 +244,7 @@ export default [
       },
       {
         time: '23:00',
-        title: 'Paolo Baldini Live',
+        title: 'Paolo Baldini DubFiles Live',
         location: 'Panoramic Stage',
         starring: [GuestsList.find((g) => g.name === 'Paolo Baldini DubFiles')],
       },
