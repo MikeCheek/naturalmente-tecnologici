@@ -10,36 +10,38 @@ const Index = () => {
   return (
     <footer className={styles.wrap} id="footer">
       <Separator />
-      <div>
-        <Link className={styles.logo} to="#top" title="Torna in cima">
-          <LogoNT width="266" height="87.92" style={{ fill: 'var(--nt-orange)' }} />
-        </Link>
-        <Link className={styles.date} to="/#quando-e-dove" title="Quando e dove">
-          Bosco Coste, Grottole(MT)
-          <br /> 11&gt;13 Agosto 2023
-        </Link>
-      </div>
-      <div className={styles.sitemap}>
-        <h4>Mappa del sito</h4>
-        <div className={styles.links}>
-          {links
-            .filter((l) => !l.multiple)
-            .map((link, key) => (
-              <Link key={key} to={link.to ?? ''} title={`Vai alla pagina ${link.name}`}>
-                {link.name}
-              </Link>
-            ))}
+      <div className={styles.logoMap}>
+        <div>
+          <Link className={styles.logo} to="#top" title="Torna in cima">
+            <LogoNT width="266" height="87.92" style={{ fill: 'var(--nt-orange)' }} />
+          </Link>
+          <Link className={styles.date} to="/#quando-e-dove" title="Quando e dove">
+            Bosco Coste, Grottole(MT)
+            <br /> 11&gt;13 Agosto 2023
+          </Link>
         </div>
-        <div className={styles.links}>
-          {links
-            .filter((l) => l.multiple)
-            .map((link) =>
-              link.links?.map((l, key) => (
-                <Link key={key} to={l.to ?? ''} title={`Vai alla pagina ${l.name}`}>
-                  {l.name}
+        <div className={styles.sitemap}>
+          <h4>Mappa del sito</h4>
+          <div className={styles.links}>
+            {links
+              .filter((l) => !l.multiple)
+              .map((link, key) => (
+                <Link key={key} to={link.to ?? ''} title={`Vai alla pagina ${link.name}`}>
+                  {link.name}
                 </Link>
-              ))
-            )}
+              ))}
+          </div>
+          <div className={styles.links}>
+            {links
+              .filter((l) => l.multiple)
+              .map((link) =>
+                link.links?.map((l, key) => (
+                  <Link key={key} to={l.to ?? ''} title={`Vai alla pagina ${l.name}`}>
+                    {l.name}
+                  </Link>
+                ))
+              )}
+          </div>
         </div>
       </div>
       <div className={styles.bottom}>

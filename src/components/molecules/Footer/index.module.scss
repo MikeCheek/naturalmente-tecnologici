@@ -9,6 +9,19 @@
   text-align: center;
 }
 
+.logoMap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  @media screen and (min-width: '768px') {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
 .date {
   margin-top: 0;
   margin-bottom: 0;
@@ -69,19 +82,11 @@
   align-items: flex-start;
   justify-content: center;
   gap: 20px;
-  width: 90%;
-
-  @media screen and (min-width: '768px') {
-    justify-content: flex-start;
-  }
 
   h4 {
     width: 100%;
     text-align: center;
     margin-bottom: 0;
-    @media screen and (min-width: '768px') {
-      text-align: left;
-    }
   }
 
   a {
