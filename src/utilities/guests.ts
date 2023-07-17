@@ -3,34 +3,41 @@ import { graphql, useStaticQuery } from 'gatsby';
 export enum GUEST_TYPE {
   TALK,
   MUSIC,
+  ACTIVITY,
 }
 
 export default [
   {
     name: 'Donato Montesano',
-    description: `Donato Montesano è nato a Tricarico nel 1991. In età adolescenziale, grazie alla musica rap e al cinema, scopre che la letteratura non è solo quella noiosa che gli impongono di studiare a scuola: si appassiona ad autori americani come John Fante, Charles Bukowski ed Edward Bunker, i quali utilizzano un linguaggio simile al parlato.
-    Mescolando queste influenze alle storie di paese che gli venivano raccontate da sempre, inizia a scrivere storie sue, che gli varranno vari premi nazionali e la pubblicazione di due libri: "I grandi scrittori non mangiano", una raccolta di racconti, "Chi ha polvere spara", un romanzo dal ritmo cinematografico basato sulla storia vera dell'ex rapinatore lucano Pancrazio Chiruzzi.`,
+    field: ['Chi ha polvere spara'],
+    description: `<strong>Donato Montesano</strong> è nato a Tricarico nel 1991.<br/>
+    In età adolescenziale, grazie alla musica rap e al cinema, scopre che <strong>la letteratura non è solo quella noiosa</strong> che gli impongono di studiare a scuola: si appassiona ad autori americani come John Fante, Charles Bukowski ed Edward Bunker, i quali utilizzano un <strong>linguaggio simile al parlato</strong>.<br/><br/>
+    Mescolando queste influenze alle <strong>storie di paese</strong> che gli venivano raccontate da sempre, inizia a scrivere <strong>storie sue</strong>, che gli varranno vari <strong>premi nazionali</strong> e la pubblicazione di due libri: 
+    <ul>
+    <li><strong>"I grandi scrittori non mangiano"</strong>,<br/>
+     una raccolta di racconti;<br/><br/>
+    <li><strong>"Chi ha polvere spara"</strong>,<br/>
+    un romanzo dal ritmo cinematografico basato sulla storia vera dell'ex rapinatore lucano Pancrazio Chiruzzi.`,
     type: GUEST_TYPE.TALK,
   },
   {
     name: 'Lucanian Shitposting',
-    description: `Dal 2017 meme igp sulla Basilicata. Una delle poche pagina a poter vantare minacce di
-    querela da un deputato della repubblica, non per questo siamo dei gangster. Vogliamo solo
-    raccontare la nostra regione in tutti i suoi difetti perchè dalla parte della ragione ci sono già
-    tutti. Dal 2020, la pagina cambia pelle senza tradire sè stessa, riuscendo a raggiungere un
-    pubblico più esteso, il quale ha progressivamente formato una community viva e dinamica
-    attorno al racconto memetico di una regione in cui apparentemente non accade nulla.`,
-    speaker: ['Giuseppe Sassano', 'Enzo Sansone'],
+    description: `Dal 2017 <strong>meme igp</strong> sulla Basilicata.<br/>
+    Una delle poche pagine a poter vantare <strong>minacce di querela</strong> da un deputato della repubblica, non per questo siamo dei gangster.<br/>
+    Vogliamo solo <strong>raccontare la nostra regione</strong> in tutti i suoi difetti perchè dalla parte della ragione ci sono già tutti.<br/><br/>
+    Dal 2020, la pagina <strong>cambia pelle</strong> senza tradire sè stessa, riuscendo a raggiungere un <strong>pubblico più esteso</strong>, 
+    il quale ha progressivamente formato una <strong>community</strong> viva e dinamica attorno al racconto memetico di una regione in cui <strong>apparentemente non accade nulla</strong>.`,
+    mentor: ['Giuseppe Sassano', 'Enzo Sansone'],
     type: GUEST_TYPE.TALK,
     field: ['Meme'],
   },
   {
     name: 'Guido Gioioso',
-    description: `Guido Gioioso ha conseguito la laurea in Ingegneria Informatica e un dottorato di ricerca in Robotica e Automazione all'Università di Siena.
-    Autore di più di 20 articoli scientifici pubblicati sulle più quotate riviste di settore, libri e conferenze internazionali, ha focalizzato la sua attività di ricerca sullo sviluppo di algoritmi di controllo per mani robotiche e dispositivi per la digitalizzazione del senso del tatto.
-    Oggi è uno dei fondatori e business leader di WEART, una startup che sviluppa device rivoluzionari pensati per aggiungere sensazioni tattili ad esperienze digitali.
-    Ha intrapreso questa avventura imprenditoriale con l'obiettivo di portare sul mercato i risultati di anni di ricerca accademica, perché questi avessero un impatto reale e tangibile nelle vite delle persone, guidato dalla sua passione per i nuovi paradigmi di interazione digitale.
-    Crede fortemente nel motto di Alan Key, uno dei pionieri della Silicon Valley, che recita: “Il miglior modo di predire il futuro è inventarlo”`,
+    description: `Guido Gioioso ha conseguito la <strong>laurea in Ingegneria Informatica</strong> e un <strong>dottorato</strong> di ricerca in <strong>Robotica e Automazione</strong> all'Università di Siena.<br/>
+    Autore di <strong>più di 20 articoli</strong> scientifici pubblicati sulle più quotate riviste di settore, libri e conferenze internazionali, ha focalizzato la sua attività di ricerca sullo <strong>sviluppo di algoritmi di controllo</strong> per mani robotiche e dispositivi per la digitalizzazione del <strong>senso del tatto</strong>.<br/><br/>
+    Oggi è uno dei fondatori e business leader di <strong>WEART</strong>, una startup che sviluppa device rivoluzionari pensati per aggiungere <strong>sensazioni tattili</strong> ad esperienze digitali.<br/>
+    Ha intrapreso questa avventura imprenditoriale con l'obiettivo di portare sul mercato i risultati di <strong>anni di ricerca accademica</strong>, perché questi avessero un <strong>impatto reale e tangibile</strong> nelle vite delle persone, guidato dalla sua passione per i nuovi paradigmi di interazione digitale.<br/><br/>
+    Crede fortemente nel motto di <strong>Alan Key</strong>, uno dei pionieri della Silicon Valley, che recita: <strong>“Il miglior modo di predire il futuro è inventarlo”</strong>`,
     type: GUEST_TYPE.TALK,
   },
   {
@@ -39,19 +46,13 @@ export default [
   },
   {
     name: 'Mauro Acito',
-    description: `Nel 2017 ci siamo messi in testa che avremmo potuto trasformare uno spazio incredibile riscoperto, per caso, nei Sassi di Matera in un museo d'arte contemporanea (senza sapere come si fa). Da questa idea è nato prima "Volevo solo aprire un museo", un canale per raccontare le difficoltà che abbiamo affrontato per cercare di fare impresa culturale a Matera e, dopo qualche anno, il museo TAM: un museo d'arte contemporanea che produce nuovi contenuti coinvolgendo artisti nazionali ed internazionali che ha l'obiettivo di ribaltare la retorica della città. Un museo, per noi, serve a non far musealizzare la città e continuiamo, ogni giorno, a chiederci: come si apre un museo d'arte contemporanea, se non sei una ricca fondazione?`,
+    description: `Nel 2017 ci siamo messi in testa che <strong>avremmo potuto trasformare</strong> uno spazio incredibile riscoperto, per caso,
+    nei Sassi di Matera in un <strong>museo d'arte contemporanea</strong> (senza sapere come si fa).<br/><br/>
+    Da questa idea è nato prima <strong>"Volevo solo aprire un museo"</strong>, un canale per raccontare le <strong>difficoltà</strong> che abbiamo affrontato per cercare di fare <strong>impresa culturale</strong> a Matera
+    e, dopo qualche anno, il <strong>museo TAM</strong>: un museo <strong>d'arte contemporanea</strong> che produce nuovi contenuti coinvolgendo artisti nazionali ed internazionali che ha l'obiettivo di <strong>ribaltare la retorica</strong> della città.<br/><br/>
+    Un museo, per noi, serve a non far <strong>musealizzare la città</strong> e continuiamo, ogni giorno, a chiederci: <strong>come si apre un museo d'arte contemporanea, se non sei una ricca fondazione?</strong>`,
     type: GUEST_TYPE.TALK,
-    field: ['Volevo solo aprire un museo'],
-  },
-  {
-    name: 'Giacomo Castana',
-    field: ['Prospettive Vegetali'],
-    description: `Nato a Varese nel 1991, nel 2017 fonda il progetto <strong>Prospettive Vegetali</strong> e con esso si dedica ad esplorare il tema dell' <strong>interazione fra società umana e vegetale</strong>.<br/> 
-    Tra i suoi successi c'è il documentario “<strong>Botanica per tutti</strong>”: un viaggio tra le persone capaci di raccontare l'importanza della botanica nel nostro paese.<br/>
-    Secondo il Sole24Ore, Giacomo, è <em>il volto più anticonvenzionale tra i biofili della nuova generazione di attivisti italiani “green”</em>.<br/>
-    Nel 2021 coordina la prima forma di “<strong>co-progettazione etnobotanica</strong>” rendendo economicamente indipendente la realizzazione di “<strong>Un orto al posto dell'asfalto</strong>” sostituendo 45 metri quadri di cemento con un orto sinergico al centro di Varese.<br/>
-    Il progetto “Prospettive Vegetali” capace di azioni plurali in difesa dell'ambiente viene insignito del Premio Internazionale per la Pace “<strong>Book for Peace</strong>”.`,
-    type: GUEST_TYPE.TALK,
+    field: ['Volevo solo aprire un museo', 'Museo TAM'],
   },
 
   {
@@ -105,25 +106,25 @@ export default [
   {
     name: 'Pneumatix',
     type: GUEST_TYPE.MUSIC,
-    description: `Pneumatix è un produttore musicale rumeno che ha iniziato la sua carriera musicale nel 2005 nella scena musicale underground come produttore musicale indipendente e deejay, la sua musica è un mix di suoni spaziali, accordi house con influenze techno e progressive mescolati nel suo stile Tekno per creare suoni vibrazioni chill e groove tek. Nel 2012 ha fondato "SleepNot! Soundsystem", un sound system con una comunità di appassionati di musica in continua crescita. La maggior parte della sua attività è stata svolta nella scena musicale underground della Romania e ultimamente in ambito europeo, negli ultimi dieci anni ha partecipato a diversi eventi e organizzato vari rave tekno con SleepNot! e altri sound system e collaborazioni nazionali o internazionali.
-    Ha all'attivo una vastissima discografia e questo lo rende uno dei produttori piu' prolifici e completi di tutto il  panorama europeo.`,
+    description: `<strong>Pneumatix</strong> è un produttore musicale rumeno che ha iniziato la sua carriera musicale nel 2005 nella scena musicale underground come <strong>produttore musicale indipendente e deejay</strong>, la sua musica è un mix di <strong>suoni spaziali</strong>, 
+    accordi <strong>house</strong> con influenze <strong>techno</strong> e progressive mescolati nel suo stile <strong>Tekno</strong> per creare suoni <strong>vibrazioni chill e groove tek</strong>.<br/><br/>
+    Nel 2012 ha fondato <strong>"SleepNot! Soundsystem"</strong>, un sound system con una comunità di appassionati di musica in continua crescita.<br/>
+    La maggior parte della sua attività è stata svolta nella scena musicale <strong>underground</strong> della Romania e ultimamente in ambito <strong>europeo</strong>,
+    negli ultimi dieci anni ha partecipato a diversi eventi e organizzato vari rave tekno con SleepNot! e altri sound system e collaborazioni <strong>nazionali o internazionali</strong>.<br/><br/>
+    Ha all'attivo una <strong>vastissima discografia</strong> e questo lo rende uno dei produttori piu' <strong>prolifici e completi</strong> di tutto il panorama europeo.`,
   },
   {
     name: 'Angel_One',
     type: GUEST_TYPE.MUSIC,
-    description: `La sua vasta conoscenza musicale e l'amicizia con importanti produttori lo hanno spinto nel 2017 a iniziare a mixare.
-    Si unisce a Psylosophia, un'etichetta psytrance napoletana come DJ, e dal 2017 al 2020 ha eseguito quasi mensilmente un set ai loro party.
-    Nel 2019 si è trasferito a Bucarest e ha iniziato a organizzare attivamente party con SleepNot Soundsystem di cui faceva già parte dal 2015.
-    Crede fermamente che non ci debbano essere barriere tra i generi musicali, soprattutto quello elettronico, per questo oltre ai set notturni di tekno tribe e psytrance si esibisce con piacere anche in set deep house, tech-house e italo dance 90-00.
+    description: `La sua <strong>vasta conoscenza musicale</strong> e l'amicizia con importanti produttori lo hanno spinto nel 2017 a iniziare a <strong>mixare</strong>.<br/>
+    Si unisce a <strong>Psylosophia</strong>, un'etichetta psytrance napoletana come DJ, e dal 2017 al 2020 ha eseguito quasi mensilmente un set ai loro party.<br/><br/>
+    Nel 2019 si è trasferito a Bucarest e ha iniziato a organizzare attivamente <strong>party</strong> con SleepNot Soundsystem di cui faceva già parte dal 2015.<br/>
+    Crede fermamente che <strong>non ci debbano essere barriere</strong> tra i generi musicali, soprattutto quello elettronico, per questo oltre ai set notturni di tekno tribe e psytrance si esibisce con piacere anche in set deep house, tech-house e italo dance 90-00.<br/><br/>
     Feste in cui ha mixato a: Capodanno a Cluj, Rotek 2019-2022, Albaniatek2022, TekOver, Blahna, Bucharest Tekno Unit, Step Evolution 2022, Smotek Party Zagreb, BulgariaTEk 2020, Various Italians Freeparty, Psylosophia Psytrance party, Tribal Ritual , Rave4 Base Czech republic`,
     field: ['DJ Tekno Tribe', 'Psytrance', 'Deephouse', 'Deep Techno'],
   },
   {
     name: 'Moddi MC',
-    type: GUEST_TYPE.MUSIC,
-  },
-  {
-    name: 'Millenium Van',
     type: GUEST_TYPE.MUSIC,
   },
   {
@@ -134,8 +135,46 @@ export default [
     name: 'Millenium Van',
     type: GUEST_TYPE.MUSIC,
   },
+
+  {
+    name: 'IBM - SkillsBuild',
+    field: ['Workshop - "Design Thinking"'],
+    description: `<strong>Design Thinking</strong><br/><br/>
+    Bee Green Italia, una community IBM che si ispira ai principi della sostenibilità a 360°, è lieta di invitarvi al <strong>“Solutioning workshop di Design Thinking”</strong> dedicato ai partecipanti di SYSKRACK, Naturalmente Tecnologici ed. 2023.<br/>
+    In particolare, il workshop si soffermerà sull'ideazione di prodotti e soluzioni capaci di coniugare sostenibilità (ambientale, sociale, economica) e innovazione.<br/>
+Per poter prendere parte al workshop, i partecipanti saranno invitati a frequentare almeno uno dei due corsi dedicati al Design Thinking disponibili sulla piattaforma mondiale di formazione digitale gratuita <strong>IBM SkillsBuild</strong> <a title="IBM - SkillsBuild" href="https://skillsbuild.org/" target="_blank" rel="noopener noreferrer">https://skillsbuild.org/</a> che offre ai propri utenti 1000 corsi in ambito STEM & ICT tradotti in 19 lingue per il miglioramento delle skills tecnologiche e digitali dei cittadini.<br/>
+<ul>
+<li><a title="AGILE & DESIGN THINKING" href="https://skills.yourlearning.ibm.com/channel/CNL_LCB_1637851064346" target="_blank" rel="noopener noreferrer">
+<strong>AGILE & DESIGN THINKING</strong> - 2,5 H (ITA)
+</a>
+</li>
+<li>
+<a title="ENTERPRISE DESIGN THINKING" href="https://skills.yourlearning.ibm.com/activity/URL-F2C2D663869E" target="_blank" rel="noopener noreferrer">
+<strong>ENTERPRISE DESIGN THINKING</strong> - 2 H (ENG)
+</a>
+</li>
+</ul>
+Nel corso del workshop, della durata di 3 ore, i partecipanti saranno suddivisi in gruppi eterogenei, ideeremo perciò più prodotti/soluzioni e verrà tracciato il percorso che l'utente finale sarà chiamato a fare tenendo in considerazione tutti gli aspetti dei singoli prodotti/soluzioni ideati; come le fasi di utilizzo e di interfaccia. Inoltre, andremo ad individuare le potenziali tecnologie abilitanti di cui l'utente finale potrà avvalersi; sarà una sessione sfidante e corale!
+Nel corso del workshop, della durata di 3 ore, conosceremo e prenderemo confidenza con strumenti come l'”Empathy map” e la “User journey” e non mancheranno post-it, cartelloni e pennarelli per dare libero sfogo alla creatività e alle vostre mille fantastiche idee!
+Il workshop si concluderà con la progettazione di una cd. “Blueprint” che mostrerà come l'utente finale usufruirà del prodotto/servizio step-by-step e l'individuazione delle azioni che ogni singolo gruppo potrà adottare e mettere in campo per perfezionare ed implementare il proprio progetto o la propria soluzione.
+Questo perché, e lo ripeteremo durante il workshop, tutte le nostre idee e soluzioni si possono ancora e ancora migliorare grazie al contributo di tutti e tutte!
+    `,
+    type: GUEST_TYPE.ACTIVITY,
+    mentor: ['Sara Cricenti', 'Giuliana Bianchini'],
+  },
+  {
+    name: 'Giacomo Castana',
+    field: ['Prospettive Vegetali'],
+    description: `Nato a Varese nel 1991, nel 2017 fonda il progetto <strong>Prospettive Vegetali</strong> e con esso si dedica ad esplorare il tema dell' <strong>interazione fra società umana e vegetale</strong>.<br/> 
+    Tra i suoi successi c'è il documentario “<strong>Botanica per tutti</strong>”: un viaggio tra le persone capaci di raccontare l'importanza della botanica nel nostro paese.<br/>
+    Secondo il Sole24Ore, Giacomo, è <em>il volto più anticonvenzionale tra i biofili della nuova generazione di attivisti italiani “green”</em>.<br/>
+    Nel 2021 coordina la prima forma di “<strong>co-progettazione etnobotanica</strong>” rendendo economicamente indipendente la realizzazione di “<strong>Un orto al posto dell'asfalto</strong>” sostituendo 45 metri quadri di cemento con un orto sinergico al centro di Varese.<br/>
+    Il progetto “Prospettive Vegetali” capace di azioni plurali in difesa dell'ambiente viene insignito del Premio Internazionale per la Pace “<strong>Book for Peace</strong>”.`,
+    type: GUEST_TYPE.ACTIVITY,
+  },
 ].map((e) => {
   const splitted = e.name.toLowerCase().split(' ');
+  console.log({ ...e, image: splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0] });
   return { ...e, image: splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0] };
 });
 

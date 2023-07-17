@@ -4,5 +4,5 @@ export default interface GuestCardProps {
   description: string;
   field?: string[];
   id: string;
-  speaker?: string[];
+  mentor?: string[];
 }

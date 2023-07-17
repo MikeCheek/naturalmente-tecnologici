@@ -150,6 +150,7 @@ export default [
             Co-progettare empaticamente  usando il DESIGN THINKING per creare <br/>
         connessioni tra persone e realtà virtuose.<br/>
                 LABORATORIO DA PRENOTARE`,
+        starring: [GuestsList.find((g) => g.name === 'IBM - SkillsBuild')],
       },
       {
         time: '11:30',
@@ -208,6 +209,7 @@ export default [
         time: '10:30',
         title: `Creare una rivoluzione culturale dove non c'è mai stata`,
         location: 'Botanical Stage',
+        starring: [GuestsList.find((g) => g.name === 'Mauro Acito')],
       },
       {
         time: '11:30',
@@ -215,6 +217,7 @@ export default [
         Presentazione del libro "Chi ha polvere spara"`,
         type: 'Presentazione',
         location: 'Botanical Stage',
+        starring: [GuestsList.find((g) => g.name === 'Donato Montesano')],
       },
       {
         time: '13:00',
@@ -240,6 +243,7 @@ export default [
         time: '19:00',
         title: 'Il meme come nuovo linguaggio di comunicazione',
         location: 'Botanical Stage',
+        starring: [GuestsList.find((g) => g.name === 'Lucanian Shitposting')],
       },
       {
         time: '21:00',

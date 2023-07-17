@@ -53,7 +53,7 @@
   justify-content: center;
   width: fit-content;
   margin: auto;
-  margin: 20px auto;
+  margin-top: 20px;
   gap: 10px;
   width: 100%;
 
@@ -125,10 +125,10 @@
 
 .aboutMore {
   @extend .about;
-  max-height: 300px;
+  max-height: 230px;
   overflow-y: scroll;
   @media screen and (min-width: 768px) {
-    max-height: 400px;
+    max-height: 300px;
   }
   // .fade {
   //   opacity: 0;

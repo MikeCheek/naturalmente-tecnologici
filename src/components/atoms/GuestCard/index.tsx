@@ -7,7 +7,7 @@ import Button from '../Button';
 import program from '../../../utilities/program';
 import Badge from '../Badge';
 
-const GuestCard = ({ children, name, description, field, id, speaker }: GuestCardProps) => {
+const GuestCard = ({ children, name, description, field, id, mentor }: GuestCardProps) => {
   const [more, setMore] = useState<boolean>(false);
 
   const daysPerforming = program
@@ -63,7 +63,7 @@ const GuestCard = ({ children, name, description, field, id, speaker }: GuestCar
             ) : (
               <></>
             )}
-            {speaker ? <p className={styles.speaker}>Speaker: {speaker.join(', ')}</p> : <></>}
+            {mentor ? <p className={styles.speaker}>Mentor: {mentor.join(', ')}</p> : <></>}
           </span>
 
           <div className={`${more ? styles.aboutMore : styles.about}`}>
