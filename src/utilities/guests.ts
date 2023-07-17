@@ -130,6 +130,10 @@ export default [
     name: 'DJ Lugi',
     type: GUEST_TYPE.MUSIC,
   },
+  {
+    name: 'Millenium Van',
+    type: GUEST_TYPE.MUSIC,
+  },
 ].map((e) => {
   const splitted = e.name.toLowerCase().split(' ');
   return { ...e, image: splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0] };

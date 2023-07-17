@@ -1,4 +1,4 @@
-import Ticket from '../assets/ticket-1.svg';
+import TicketSvg from '../assets/ticket-1.svg';
 import Tickets from '../assets/ticket-2.svg';
 import Camping from '../assets/reviews/camping.svg';
 // import Vip from '../assets/vip.svg';
@@ -39,7 +39,7 @@ export const info: Ticket[] = [
     badges: ['camping', 'conferenze', 'workshop', 'spettacoli', 'docce', 'bagni'],
   },
   {
-    icon: Ticket,
+    icon: TicketSvg,
     name: 'Ingresso giornaliero Festival () - Early Bird',
     availabilityStarts: '2023-06-15T00:00:00.000+02:00',
     availabilityEnds: '2023-07-30T23:59:59.999+02:00',
