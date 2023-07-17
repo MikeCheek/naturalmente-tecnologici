@@ -120,29 +120,6 @@
   }
 }
 
-.onBadge {
-  padding: 2px 5px;
-  font-weight: 600;
-  color: var(--nt-green);
-  border-radius: 20px;
-  text-transform: uppercase;
-  background-color: var(--nt-orange);
-  font-size: 10px;
-  margin: 0;
-  border: 2px var(--nt-orange) solid;
-  @media screen and (min-width: 768px) {
-    padding: 5px 10px;
-    font-size: 14px;
-  }
-}
-
-.offBadge {
-  @extend .onBadge;
-  background-color: transparent;
-  color: var(--nt-orange);
-  opacity: 0.5;
-}
-
 .buttonWrap {
   background-color: var(--nt-green);
   width: 100%;

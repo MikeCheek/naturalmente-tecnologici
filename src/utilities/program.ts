@@ -19,6 +19,7 @@ const OrganizersList = info.map((o) => ({ ...o, href: '/chi-siamo/#comitato-orga
 
 export default [
   {
+    numberDay: 10,
     day: 'Giovedì 10 Agosto',
     name: 'Welcome Day',
     timeline: [
@@ -56,6 +57,7 @@ export default [
     ],
   },
   {
+    numberDay: 11,
     day: 'Venerdì 11 Agosto',
     name: 'ART is Power',
     description:
@@ -123,6 +125,7 @@ export default [
     ],
   },
   {
+    numberDay: 12,
     day: 'Sabato 12 Agosto',
     name: 'DOING is Power',
     description:
@@ -187,6 +190,7 @@ export default [
     ],
   },
   {
+    numberDay: 13,
     day: 'Domenica 13 Agosto',
     name: 'KNOWLEDGE IS/AS POWER',
     description: `Co(no)scienza, la musica e la natura si incontrano in un evento imperdibile. Ascolta le esperienze che contribuiscono a costruire il mondo del domani partendo da un immaginario collettivo. La sera GRAN FINALE con il DUB MASTER PAOLO BALDINI guardando, poi, l'alba con PNEUMATIX e ANGEL_ONE.`,

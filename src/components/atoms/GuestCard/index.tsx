@@ -4,9 +4,22 @@ import * as styles from './index.module.scss';
 import GuestCardProps from './index.types';
 import ShowOnView from '../ShowOnView';
 import Button from '../Button';
+import program from '../../../utilities/program';
+import Badge from '../Badge';
 
 const GuestCard = ({ children, name, description, field, id, speaker }: GuestCardProps) => {
   const [more, setMore] = useState<boolean>(false);
+
+  const daysPerforming = program
+    .filter(
+      (day) =>
+        day.timeline
+          //@ts-ignore
+          .filter((e) => e.starring)
+          //@ts-ignore
+          .filter((event) => event.starring.find((star) => star.name === name)).length > 0
+    )
+    .map((d) => ({ name: d.day, day: d.numberDay }));
 
   return (
     <ShowOnView>
@@ -24,6 +37,32 @@ const GuestCard = ({ children, name, description, field, id, speaker }: GuestCar
                 ))}
               </div>
             ) : null}
+            {daysPerforming && daysPerforming.length > 0 ? (
+              <div className={styles.badges}>
+                <Badge
+                  name={'10'}
+                  on={daysPerforming.filter((d) => d.day === 10).length > 0}
+                  href={daysPerforming.find((d) => d.day === 10)?.name}
+                />
+                <Badge
+                  name={'11'}
+                  on={daysPerforming.filter((d) => d.day === 11).length > 0}
+                  href={daysPerforming.find((d) => d.day === 11)?.name}
+                />
+                <Badge
+                  name={'12'}
+                  on={daysPerforming.filter((d) => d.day === 12).length > 0}
+                  href={daysPerforming.find((d) => d.day === 12)?.name}
+                />
+                <Badge
+                  name={'13'}
+                  on={daysPerforming.filter((d) => d.day === 13).length > 0}
+                  href={daysPerforming.find((d) => d.day === 13)?.name}
+                />
+              </div>
+            ) : (
+              <></>
+            )}
             {speaker ? <p className={styles.speaker}>Speaker: {speaker.join(', ')}</p> : <></>}
           </span>
 

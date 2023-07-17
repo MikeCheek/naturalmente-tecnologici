@@ -2,6 +2,7 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import { HeadingProps } from './index.types';
 import ShowOnView from '../ShowOnView';
+import { textToId } from '../../../utilities/sanitizer';
 
 const Index = ({
   text,
@@ -15,13 +16,7 @@ const Index = ({
   const Heading = (
     <div
       className={styles.headingWrap}
-      id={
-        id ??
-        text
-          .toLowerCase()
-          .replace(/ /g, '-')
-          .replace(/[^(a-z0-9\-)]/gi, '')
-      }
+      id={id ?? textToId(text)}
       style={{
         marginTop: marginTop ? '70px' : '',
       }}

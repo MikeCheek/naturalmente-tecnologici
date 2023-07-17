@@ -4,6 +4,7 @@ import X from '../../../assets/x.svg';
 import * as styles from './index.module.scss';
 import { Eventbrite, allBadges } from '../../../utilities/tickets';
 import Button from '../Button';
+import Badge from '../Badge';
 
 const Index = ({ title, description, opened, close, price, badges }: ModalProps) => {
   const isForATicket = badges ? true : false;
@@ -25,11 +26,9 @@ const Index = ({ title, description, opened, close, price, badges }: ModalProps)
         </span>
         {badges && badges.length > 0 ? (
           <div className={styles.badges}>
-            {allBadges?.includes(badges[0]) ? <></> : <p className={styles.onBadge}>{badges[0]}</p>}
+            {allBadges?.includes(badges[0]) ? <></> : <Badge on name={badges[0]} />}
             {allBadges?.map((badge, key) => (
-              <p className={badges?.includes(badge) ? styles.onBadge : styles.offBadge} key={key}>
-                {badge}
-              </p>
+              <Badge on={badges?.includes(badge)} key={key} name={badge} />
             ))}
           </div>
         ) : (
