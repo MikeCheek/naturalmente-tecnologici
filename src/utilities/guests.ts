@@ -174,7 +174,6 @@ Questo perché, e lo ripeteremo durante il workshop, tutte le nostre idee e solu
   },
 ].map((e) => {
   const splitted = e.name.toLowerCase().split(' ');
-  console.log({ ...e, image: splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0] });
   return { ...e, image: splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0] };
 });
 
