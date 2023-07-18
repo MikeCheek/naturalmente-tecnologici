@@ -8,19 +8,6 @@ import GuestBadge from '../GuestBadge';
 import ShowOnView from '../ShowOnView';
 import { textToId } from '../../../utilities/sanitizer';
 
-const slugify = function (str: string = '', separator = '-') {
-  return str
-    .toString()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9 ]/g, '')
-    .replace(/\s+/g, separator);
-};
-
-const websiteUrl = 'https://www.nt.syskrack.org';
-
 const Index = ({ data }: TimelineProps) => {
   const circle = <div className={styles.circle}></div>;
   const bar = <div className={styles.bar}></div>;
@@ -41,18 +28,12 @@ const Index = ({ data }: TimelineProps) => {
         {bar}
         {data.timeline.map((item, key) => (
           <div
-            key={key}
+            key={textToId(item.title)}
             id={textToId(item.title)}
             className={styles.itemWrap}
-            itemScope
-            itemType="https://schema.org/Event"
-            itemID={websiteUrl + '/programma#' + slugify(item.title)}
           >
-            <span itemScope itemProp="superEvent" itemType="https://schema.org/Event" itemID={websiteUrl + '/#event'}>
-              <meta itemProp="name" content={'Naturalmente Tecnologici'} />
-            </span>
             <div className={key % 2 == 0 ? styles.item : styles.itemReversed} key={key}>
-              <p className={styles.title} itemProp="name" dangerouslySetInnerHTML={{ __html: item.title }}></p>
+              <p className={styles.title} dangerouslySetInnerHTML={{ __html: item.title }}></p>
               {circle}
               <span className={styles.info}>
                 <p className={styles.time}>{item.time}</p>
