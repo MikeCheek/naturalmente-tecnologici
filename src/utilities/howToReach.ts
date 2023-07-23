@@ -4,7 +4,7 @@ import Plane from '../assets/infoUtili/plane.svg';
 import { mail } from './dataFAQ';
 
 export const coords = [`40°37'14.0"N`, `16°24'38.6"E`];
-export const mapsLink = 'https://www.google.com/maps/place/' + coords.join(' ');
+export const mapsLink = 'https://goo.gl/maps/pYpPNsTLSX5xBnkM9' /*'https://www.google.com/maps/place/' + coords.join(' ')*/;
 
 export const linkMarinoBus =
   '<a title="Prenota con MarinoBus" target="_blank" rel="noopener noreferrer" href="https://www.marinobus.it">www.marinobus.it</a>';
