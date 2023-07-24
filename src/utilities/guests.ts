@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import { type } from 'os';
 
 export enum GUEST_TYPE {
   TALK,
@@ -54,7 +55,41 @@ export default [
     type: GUEST_TYPE.TALK,
     field: ['Volevo solo aprire un museo', 'Museo TAM'],
   },
-
+  {
+    name: 'IBM SkillsBuild',
+    field: ['Workshop - "Design Thinking"'],
+    description: `<strong>Design Thinking</strong><br/><br/>
+    Bee Green Italia, una community IBM che si ispira ai principi della sostenibilità a 360°, è lieta di invitarvi al <strong>“Solutioning workshop di Design Thinking”</strong> dedicato ai partecipanti di SYSKRACK, Naturalmente Tecnologici ed. 2023.<br/>
+    In particolare, il workshop si soffermerà sull'ideazione di prodotti e soluzioni capaci di coniugare sostenibilità (ambientale, sociale, economica) e innovazione.<br/>
+    Per poter prendere parte al workshop, i partecipanti saranno invitati a frequentare almeno uno dei due corsi dedicati al Design Thinking disponibili sulla piattaforma mondiale di formazione digitale gratuita <strong>IBM SkillsBuild</strong> <a title="IBM - SkillsBuild" href="https://skillsbuild.org/" target="_blank" rel="noopener noreferrer">https://skillsbuild.org/</a> che offre ai propri utenti 1000 corsi in ambito STEM & ICT tradotti in 19 lingue per il miglioramento delle skills tecnologiche e digitali dei cittadini.<br/>
+    <ul>
+    <li><a title="AGILE & DESIGN THINKING" href="https://skills.yourlearning.ibm.com/channel/CNL_LCB_1637851064346" target="_blank" rel="noopener noreferrer">
+    <strong>AGILE & DESIGN THINKING</strong> - 2,5 H (ITA)
+    </a>
+    </li>
+    <li>
+    <a title="ENTERPRISE DESIGN THINKING" href="https://skills.yourlearning.ibm.com/activity/URL-F2C2D663869E" target="_blank" rel="noopener noreferrer">
+    <strong>ENTERPRISE DESIGN THINKING</strong> - 2 H (ENG)
+    </a>
+    </li>
+    </ul>
+    Nel corso del workshop, della durata di 3 ore, i partecipanti saranno suddivisi in gruppi eterogenei, ideeremo perciò più prodotti/soluzioni e verrà tracciato il percorso che l'utente finale sarà chiamato a fare tenendo in considerazione tutti gli aspetti dei singoli prodotti/soluzioni ideati; come le fasi di utilizzo e di interfaccia. Inoltre, andremo ad individuare le potenziali tecnologie abilitanti di cui l'utente finale potrà avvalersi; sarà una sessione sfidante e corale!
+    Nel corso del workshop, della durata di 3 ore, conosceremo e prenderemo confidenza con strumenti come l'”Empathy map” e la “User journey” e non mancheranno post-it, cartelloni e pennarelli per dare libero sfogo alla creatività e alle vostre mille fantastiche idee!
+    Il workshop si concluderà con la progettazione di una cd. “Blueprint” che mostrerà come l'utente finale usufruirà del prodotto/servizio step-by-step e l'individuazione delle azioni che ogni singolo gruppo potrà adottare e mettere in campo per perfezionare ed implementare il proprio progetto o la propria soluzione.
+    Questo perché, e lo ripeteremo durante il workshop, tutte le nostre idee e soluzioni si possono ancora e ancora migliorare grazie al contributo di tutti e tutte!`,
+    type: GUEST_TYPE.ACTIVITY,
+    mentor: ['Sara Cricenti', 'Giuliana Bianchini'],
+  },
+  {
+    name: 'Giacomo Castana',
+    field: ['Prospettive Vegetali'],
+    description: `Nato a Varese nel 1991, nel 2017 fonda il progetto <strong>Prospettive Vegetali</strong> e con esso si dedica ad esplorare il tema dell' <strong>interazione fra società umana e vegetale</strong>.<br/> 
+    Tra i suoi successi c'è il documentario “<strong>Botanica per tutti</strong>”: un viaggio tra le persone capaci di raccontare l'importanza della botanica nel nostro paese.<br/>
+    Secondo il Sole24Ore, Giacomo, è <em>il volto più anticonvenzionale tra i biofili della nuova generazione di attivisti italiani “green”</em>.<br/>
+    Nel 2021 coordina la prima forma di “<strong>co-progettazione etnobotanica</strong>” rendendo economicamente indipendente la realizzazione di “<strong>Un orto al posto dell'asfalto</strong>” sostituendo 45 metri quadri di cemento con un orto sinergico al centro di Varese.<br/>
+    Il progetto “Prospettive Vegetali” capace di azioni plurali in difesa dell'ambiente viene insignito del Premio Internazionale per la Pace “<strong>Book for Peace</strong>”.`,
+    type: GUEST_TYPE.ACTIVITY,
+  },
   {
     name: 'Davide Shorty - Solo',
     description: `<strong>Davide Shorty</strong> è un rapper, cantautore e producer di <strong>Palermo</strong> capace di far convivere la sua inconfondibile <strong>voce soul</strong>
@@ -125,52 +160,138 @@ export default [
   },
   {
     name: 'Moddi MC',
+    description: `Tarantino, nomade per ispirazione, Moddi è il più autentico e completo Maestro di Cerimonia della nostra penisola. Dotato di una cassa toracica che pare fatta in abete come un contrabbasso antico, la voce dell'mc pugliese vibra ad una potenza micidiale, che lui 
+    sa gestire con sapienza e rara ironia. Campione indiscusso e imbattuto di freestyle da ben prima che la disciplina sbarcasse sulle tv italiche, Moddi è un vero artista da palcoscenico, poco incline a chiudersi in uno studio di registrazione. Tra le sue sporadiche e preziose 
+    comparse su disco ricordiamo l'esordio con il collettivo Pooglia Tribe e la sua affiliazione al leggendario gruppo bolognese Melma e Merda.`,
     type: GUEST_TYPE.MUSIC,
   },
   {
     name: 'DJ Lugi',
+    description: `Mc, Dj e beatmaker di origine etiope, ma cosentino d'adozione, Lugi ha una storia artistica che nasce a cavallo tra gli anni '80 e '90, durante i quali animò la scena musicale calabra con i South Posse. Tra le sue numerose incisioni lo ricordiamo in tutti i 
+    dischi di rap di Neffa da "I Messaggeri della Dopa" in poi, indimenticabile in "Novecinquanta" di Fritz Da Cat e autore di un primo disco solista, "Ca'Pù" nel 2000. Timbro vocale nasale e ondeggiante, flow morbido e pieno di ritmo, Lugi ricorda i migliori protagonisti 
+    della "Daisy Age" americana e la sua impronta nell'hip hop italico è indelebile e massiccia come il patrimonio di rime che ha depositato nei suoi tanti lustri di carriera.`,
     type: GUEST_TYPE.MUSIC,
   },
   {
     name: 'Millenium Van',
     type: GUEST_TYPE.MUSIC,
-  },
-
-  {
-    name: 'IBM SkillsBuild',
-    field: ['Workshop - "Design Thinking"'],
-    description: `<strong>Design Thinking</strong><br/><br/>
-    Bee Green Italia, una community IBM che si ispira ai principi della sostenibilità a 360°, è lieta di invitarvi al <strong>“Solutioning workshop di Design Thinking”</strong> dedicato ai partecipanti di SYSKRACK, Naturalmente Tecnologici ed. 2023.<br/>
-    In particolare, il workshop si soffermerà sull'ideazione di prodotti e soluzioni capaci di coniugare sostenibilità (ambientale, sociale, economica) e innovazione.<br/>
-Per poter prendere parte al workshop, i partecipanti saranno invitati a frequentare almeno uno dei due corsi dedicati al Design Thinking disponibili sulla piattaforma mondiale di formazione digitale gratuita <strong>IBM SkillsBuild</strong> <a title="IBM - SkillsBuild" href="https://skillsbuild.org/" target="_blank" rel="noopener noreferrer">https://skillsbuild.org/</a> che offre ai propri utenti 1000 corsi in ambito STEM & ICT tradotti in 19 lingue per il miglioramento delle skills tecnologiche e digitali dei cittadini.<br/>
-<ul>
-<li><a title="AGILE & DESIGN THINKING" href="https://skills.yourlearning.ibm.com/channel/CNL_LCB_1637851064346" target="_blank" rel="noopener noreferrer">
-<strong>AGILE & DESIGN THINKING</strong> - 2,5 H (ITA)
-</a>
-</li>
-<li>
-<a title="ENTERPRISE DESIGN THINKING" href="https://skills.yourlearning.ibm.com/activity/URL-F2C2D663869E" target="_blank" rel="noopener noreferrer">
-<strong>ENTERPRISE DESIGN THINKING</strong> - 2 H (ENG)
-</a>
-</li>
-</ul>
-Nel corso del workshop, della durata di 3 ore, i partecipanti saranno suddivisi in gruppi eterogenei, ideeremo perciò più prodotti/soluzioni e verrà tracciato il percorso che l'utente finale sarà chiamato a fare tenendo in considerazione tutti gli aspetti dei singoli prodotti/soluzioni ideati; come le fasi di utilizzo e di interfaccia. Inoltre, andremo ad individuare le potenziali tecnologie abilitanti di cui l'utente finale potrà avvalersi; sarà una sessione sfidante e corale!
-Nel corso del workshop, della durata di 3 ore, conosceremo e prenderemo confidenza con strumenti come l'”Empathy map” e la “User journey” e non mancheranno post-it, cartelloni e pennarelli per dare libero sfogo alla creatività e alle vostre mille fantastiche idee!
-Il workshop si concluderà con la progettazione di una cd. “Blueprint” che mostrerà come l'utente finale usufruirà del prodotto/servizio step-by-step e l'individuazione delle azioni che ogni singolo gruppo potrà adottare e mettere in campo per perfezionare ed implementare il proprio progetto o la propria soluzione.
-Questo perché, e lo ripeteremo durante il workshop, tutte le nostre idee e soluzioni si possono ancora e ancora migliorare grazie al contributo di tutti e tutte!
-    `,
-    type: GUEST_TYPE.ACTIVITY,
-    mentor: ['Sara Cricenti', 'Giuliana Bianchini'],
+    description: `Millenium Van è un collettivo di artisti che viaggia a bordo di un furgoncino indipendente da tutti i punti di vista!
+    Tramite un sistema fotovoltaico, il suo palco mobile si sposta ovunque nell'universo irradiando il cammino di energia e good vibes senza doversi alimentare.
+    Tutti i suoi spettacoli sono gratuiti e incentrati sull'interazione attiva con il pubblico che non solo funge da spettatore ma prende parte direttamente allo spettacolo!`
   },
   {
-    name: 'Giacomo Castana',
-    field: ['Prospettive Vegetali'],
-    description: `Nato a Varese nel 1991, nel 2017 fonda il progetto <strong>Prospettive Vegetali</strong> e con esso si dedica ad esplorare il tema dell' <strong>interazione fra società umana e vegetale</strong>.<br/> 
-    Tra i suoi successi c'è il documentario “<strong>Botanica per tutti</strong>”: un viaggio tra le persone capaci di raccontare l'importanza della botanica nel nostro paese.<br/>
-    Secondo il Sole24Ore, Giacomo, è <em>il volto più anticonvenzionale tra i biofili della nuova generazione di attivisti italiani “green”</em>.<br/>
-    Nel 2021 coordina la prima forma di “<strong>co-progettazione etnobotanica</strong>” rendendo economicamente indipendente la realizzazione di “<strong>Un orto al posto dell'asfalto</strong>” sostituendo 45 metri quadri di cemento con un orto sinergico al centro di Varese.<br/>
-    Il progetto “Prospettive Vegetali” capace di azioni plurali in difesa dell'ambiente viene insignito del Premio Internazionale per la Pace “<strong>Book for Peace</strong>”.`,
-    type: GUEST_TYPE.ACTIVITY,
+    name: 'SFINGE',
+    description: `SFINGE è un progetto Tosco-Lucano nato a Pisa nel corso del 2022. Come prima parte di questo
+    progetto il gruppo si è focalizzato sulla costruzione di un Sound System e sulla strutturazione di
+    una collezione di vinili che ricopre un’ampia gamma di stili, dalla Roots alla Dub più
+    contemporanea, muovendo così i loro primi passi nel mondo della musica.
+    In occasione del festival Naturalmente Tecnologici il gruppo proporrà varie sessioni musicali
+    durante le quali intratterrà e farà ballare con dischi dello scenario nazionale e internazionale: dalla
+    Jamaica alla UK, dalla Francia alle produzioni più nostrane. Il tutto amplificato fedelmente dal loro
+    Sound System nel secondo stage del festival.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'DJHtt1',
+    description: `HTT1 è un codice da decifrare, un algoritmo difettoso dietro il quale si cela un misterioso producer/dj 
+    del quale si sa poco e nulla. Ha pubblicato da poco il suo primo EP in formato tape “Detriti Digitali” con la label 
+    romagnola Spalato Wyale con la quale farà uscire a breve altro materiale. Nei dj set esplora una sua personale 
+    geografia sonora usando il funk come bussola per orientarsi.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Katzuma Aka Deda',
+    description: `Katzuma è il progetto disco/house di Deda. Nasce nel 2004
+    dall’amore verso i generi musicali dominati dal groove,
+    con l’intento di rielaborare quei suoni dimenticati
+    attraverso un minuzioso lavoro di produzione. Il
+    risultato è la creazione di sonorità completamente nuove
+    ma dalle vibrazioni familiari, seducenti atmosfere disco
+    che invitano al dancefloor. Da questo gioco vedranno la
+    luce tre album e numerosi singoli assieme ad una serie di
+    remix di prestigio: John Morales , LTJ Experience, Al
+    Kent di Million Dollar Disco, Ajello. Da quasi 20 anni,
+    l’approccio empatico e autentico verso la musica e il suo
+    pubblico, ha fatto viaggiare i djset di Katzuma tra
+    festival internazionali e gli house party più
+    underground.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Brigante Sound System',
+    description:`Brigante Sound System nasce nel 1999 in Lucania, da una forte passione per la musica jamaicana e per 
+    promuovere la stessa rendendola veicolo di aggregazione e unione in un contesto sociale abbandonato e destinato ad 
+    essere periferico. Il gruppo operativo è composto, come la tradizione dei sound system insegna, da selectors ed mc. 
+    Al microfono si alternano Big Simon e Manuel (dalla Krikka Reggae), mentre Danilo e Montone curano le selezioni 
+    musicali e si occupano della manutenzione del sound system. I dischi selezionati nelle dancehall, rigorosamente 
+    in vinile, variano dal rocksteady al roots, dal new roots al bashment, ripercorrendo la storia musicale senza 
+    tralasciare le ultime produzioni e tendenze del suono jamaicano.
+    Tantissime le collaborazioni accumulate in questi anni: Anthony Johnson, ospitato per tre volte ai microfoni del 
+    Brigante Sound, Lion Face, Joseph Cotton Pinchers, Murgia Youth, One Love Hi Powa, High Grade, Erbapipa, Fido Guido, 
+    Mama Marjas, Gramigna, Marina, Ranking Lele, Papaleu, Mad Kid, Moddi MC, Pier Tosi, Tonico 70, Kianka Town, 
+    Running Irie, Ishu MC, Cool Runnings, Bunna, Villa Ada Posse, Sud Sound System, David Rodigan e tanti altri. 
+    Il sound si cimenta spesso anche nella produzione di remix molto particolari e apprezzati nell’ambiente tali da 
+    sfociare in una autoproduzione di due mixtape quasi totalmente composti da remix. Il Brigante Sound inoltre è 
+    promotore di numerose rassegne e serate sulle coste ioniche d’estate e d’inverno ospitando ogni volta altre grandi 
+    realtà della scena reggae nazionale ed internazionale.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'DJ Trix',
+    description: `Tarantino di nascita ma stazionario in Emilia Romagna da tutta la sua carriera, Dj Trix ha accompagnato 
+    la storia dell'hip hop bolognese da inossidabile protagonista. Alle ruote d'acciaio dai primi anni '90, è stato uno 
+    dei cardini della storica Zona Dopa, progetto nato all'interno dello spazio sociale Livello 57, manipolando i suoni 
+    per artisti del calibro di Sangue Misto,  Kaos One, Melma e Merda. Da sempre è conosciuto come instancabile dispensatore 
+    di cultura roots e hip hop in molteplici forme, dall'organizzazione di eventi storici come il contest 2 The Beat, 
+    alla fondazione del Trix Shop, corner bolognese dedicato allo smazzo di vinili e luogo d'incontro per appassionati.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Shark Emcee',
+    description: `Shark Emcee è il pioniere del Rap made in Sannio. Coinvolgente, ironico, impegnato e in perfetto
+    equilibrio tra tradizione e rinnovamento. lo stile compositivo di Shark Emcee è essenziale e
+    contemporaneamente ricco di eccitanti sfumature.
+    Il suo disco d’esordio “La trappola” viene pubblicato nel 2007. Il progetto genera un notevole
+    interesse e diversi live sul territorio, ampliando la platea dei fan.
+    Successivamente nel 2010 esce Made in Sann-Yo che rappresenta un’evoluzione rispetto al primo
+    disco aumentando notevolmente il suo seguito.
+    Nel dicembre dello stesso anno Shark Emcee pubblica il primo singolo da solista: “Orgoglio
+    Sannita”, che spinge il rapper beneventano al di fuori del circuito underground.
+    Interessante la citazione e la messa in onda del brano Orgoglio Sannita, nel programma radiofonico
+    condotto da Linus “Deejay chiama Italia”, come pezzo rap dedicato alle città italiane con più alto
+    numero di segnalazioni del pubblico.
+    
+    L’attività di Shark Emcee lo vede sempre più spesso protagonista di battles lungo lo stivale, che con
+    il tempo forgiano la sua personalità ed il suo stile. Riesce a guadagnare il titolo di campione
+    nazionale al prestigioso contest “Microphone masta”
+    Nel 2011 arriva il secondo singolo “Ad ogni signorina” , il clip con – regia di Valerio Vestoso –
+    conquista il secondo posto al più importante concorso per videoclip italiani “PIVI”. Grazie a tale
+    risultato il videoclip va in rotazione sui monitor delle metro di Roma e Milano, sui voli nazionali
+    Alitalia e in vari cinema del Paese.
+    Nel 2012 con il singolo “Fattell ‘na risat”, ed il featuring con il gruppo folk campano dei Sancto
+    Ianne nel singolo “Guardame Sienteme” fondono il folk ed il rap in un impasto sonoro atipico ed
+    emozionante.
+    Il 22 dicembre del 2012 Shark Emcee lancia il suo primo EP da solista: “I was a b.boy, please gimme
+    a job”.
+    Nello stesso anno è stato anche protagonista con Rocco Hunt, Fabio Mef, Doc Shock e Lucariello di
+    “Il suono che parla”, progetto di scrittura rap per i detenuti all’istituto per minori di Airola, dopo il
+    quale sono stati pubblicati un libro ed un cd.
+    Nel 2014 Shark Emcee si posiziona tra i primi 6 classificati del torneo nazionale di freestyle “Passa il
+    microfono” all’Alcatraz di Milano.
+    Nel 2015 presenta il singolo “Non ho bisogno” alle selezioni di Sanremo Giovani. Il rapper riesce a
+    superare la prima selezione entrando nei 60 finalisti su 660 brani presentati.
+    Nel 2016 presenta il singolo “Delle volte”. Nella stagione calcistica 2017/18 Shark Emcee è stato
+    scelto come inviato dallo stadio per la trasmissione “Quelli che il calcio” in concomitanza dei match
+    Napoli-Benevento e Crotone-Benevento; occasioni in cui il rapper beneventano ha dimostrato le
+    proprie abilità con l’improvvisazione in rima.
+    Nel 2019/2020 torna sulla scena con i singoli “Fuoco sulla traccia” e “Boom”.
+    Le sue doti da freestyler inoltre lo hanno portato più volte a condividere il palco con artisti di
+    rilievo nel mondo musicale nazionale (Clementino, Rocco Hunt, Ghemon, Lucariello, Mama Marjas,
+    Luca Aquino, Daniele Sepe e tanti altri).
+    Dopo aver rilasciato i singoli "Accussì mò", "'Na man' aizàt" e “VIP” è attualmente in promozione
+    con il nuovo singolo "Quello che so" e del disco dal titolo “Dopo un po” in uscita il 14 aprile 2023
+    per l’etichetta Dischi Rurali e distribuito da Artist First.`,
+    type: GUEST_TYPE.MUSIC,
   },
 ].map((e) => {
   const splitted = e.name.toLowerCase().split(' ');

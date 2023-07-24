@@ -29,7 +29,7 @@ export default [
         location: 'Grassano',
       },
       {
-        time: '16:30 - 17:30',
+        time: '16:30 - 17:00',
         title: `Conferenza di Benvenuto [GRATUITO E APERTO A TUTTI E TUTTE]
         10 anni senza Peps - Syskrack : 9 anni dopo`,
         type: 'Conferenza',
@@ -41,13 +41,32 @@ export default [
         ],
       },
       {
-        time: '18:00',
+        time: '17:00 - 17:30',
+        title: `[Conferenza Stampa] Presentazione del festival`,
+        type: 'Conferenza',
+        location: 'Auditorium Grassano',
+        starring: [
+          OrganizersList.find((o) => o.name === 'Giuseppe Becci'),
+          OrganizersList.find((o) => o.name === 'Giuseppe Liuzzi'),
+        ],
+      },
+      {
+        time: '17:30 - 18:00',
+        title: `[Conferenza Stampa] Presentazione residenza artistico scientifica`,
+        type: 'Conferenza',
+        location: 'Auditorium Grassano',
+        starring: [
+          OrganizersList.find((o) => o.name === 'Giuseppe Becci'),
+        ],
+      },
+      {
+        time: '19:00',
         title: 'Apertura Welcome to Tijuana Camp',
         location: 'Bosco Coste',
       },
       {
-        time: '18:30 - 20:00',
-        title: 'Visita nel geosito dei Cinti e Esplorazione di una cantina Storica a cura di Alla Scoperta di Grassano',
+        time: '18:00 - 20:30',
+        title: 'Esplorazione di una cantina Storica a cura di Alla Scoperta di Grassano',
         location: 'Grassano',
       },
       {
@@ -64,25 +83,31 @@ export default [
       'Festeggiamo insieme il 50esimo compleanno della cultura Hip-Hop! Abbiamo preparato talk, presentazioni, estemporanee, battle di freestyle rap e un concerto che sarà la ciliegina sulla torta della giornata.',
     timeline: [
       {
-        time: '09:00',
+        time: '08:00',
         title: 'Accoglienza ed accrediti',
       },
       {
-        time: '09:30',
+        time: '8:00 - 10:30',
         title: 'Good Morning Routine',
         starring: [GuestsList.find((g) => g.name === 'Giacomo Castana')],
       },
       {
-        time: '10:30',
+        time: '11:00 - 14:00',
         title: 'Good Morning Selecta / Djset - To Be Annouced Soon',
         location: 'Botanical Stage',
       },
       {
-        time: '11:00',
-        title: 'Attività di Estemporanea - TBA',
+        time: '11:30 - 12:30',
+        title: 'Inaugurazione Mostre',
+        location: 'Second Stage',
       },
       {
-        time: '13:00',
+        time: '12:00 - 15:00',
+        title: 'Live Painting',
+        location: 'Second Stage',
+      },
+      {
+        time: '13:00 - 15:30',
         title: 'Border Radio - Online streaming',
       },
       {

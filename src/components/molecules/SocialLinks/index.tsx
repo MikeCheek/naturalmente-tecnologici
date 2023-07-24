@@ -20,9 +20,9 @@ const Index = ({ green, onlySocial, small }: SocialLinksProps) => {
         <Instagram width={dimension} height={dimension} fill="var(--nt-white)" />
       </a>
       <a
-        href="https://t.me/+AYplGqMtentlOTE0"
+        href="https://t.me/+5XTI4xMmm9sxMDE0"
         rel="noopener noreferrer"
-        title="Vai al canale Telegram delle News"
+        title="Entra nella Community Telegram di Naturalmente Tecnologici"
         target="_blank"
       >
         <Telegram width={dimension} height={dimension} fill="var(--nt-white)" />
