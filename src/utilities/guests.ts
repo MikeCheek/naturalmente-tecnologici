@@ -8,7 +8,7 @@ export enum GUEST_TYPE {
 }
 
 export default [
-  {
+  {    
     name: 'Donato Montesano',
     field: ['Chi ha polvere spara'],
     description: `<strong>Donato Montesano</strong> è nato a Tricarico nel 1991.<br/>
@@ -293,6 +293,11 @@ export default [
     per l’etichetta Dischi Rurali e distribuito da Artist First.`,
     type: GUEST_TYPE.MUSIC,
   },
+  {
+    name: 'Capsicum Set Party',
+    description: `Capsicum Set Party è un proggetto musicale, nato dalle sinergie di Dj Trix , Moddi MC e Dj Lugi`,
+    type: GUEST_TYPE.MUSIC,
+  }
 ].map((e) => {
   const splitted = e.name.toLowerCase().split(' ');
   return { ...e, image: splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0] };
