@@ -8,7 +8,7 @@ export enum GUEST_TYPE {
 }
 
 export default [
-  {    
+  {
     name: 'Donato Montesano',
     field: ['Chi ha polvere spara'],
     description: `<strong>Donato Montesano</strong> è nato a Tricarico nel 1991.<br/>
@@ -177,18 +177,18 @@ export default [
     type: GUEST_TYPE.MUSIC,
     description: `Millenium Van è un collettivo di artisti che viaggia a bordo di un furgoncino indipendente da tutti i punti di vista!
     Tramite un sistema fotovoltaico, il suo palco mobile si sposta ovunque nell'universo irradiando il cammino di energia e good vibes senza doversi alimentare.
-    Tutti i suoi spettacoli sono gratuiti e incentrati sull'interazione attiva con il pubblico che non solo funge da spettatore ma prende parte direttamente allo spettacolo!`
+    Tutti i suoi spettacoli sono gratuiti e incentrati sull'interazione attiva con il pubblico che non solo funge da spettatore ma prende parte direttamente allo spettacolo!`,
   },
   {
     name: 'SFINGE',
     description: `SFINGE è un progetto Tosco-Lucano nato a Pisa nel corso del 2022. Come prima parte di questo
     progetto il gruppo si è focalizzato sulla costruzione di un Sound System e sulla strutturazione di
-    una collezione di vinili che ricopre un’ampia gamma di stili, dalla Roots alla Dub più
+    una collezione di vinili che ricopre un'ampia gamma di stili, dalla Roots alla Dub più
     contemporanea, muovendo così i loro primi passi nel mondo della musica.
     In occasione del festival Naturalmente Tecnologici il gruppo proporrà varie sessioni musicali
     durante le quali intratterrà e farà ballare con dischi dello scenario nazionale e internazionale: dalla
     Jamaica alla UK, dalla Francia alle produzioni più nostrane. Il tutto amplificato fedelmente dal loro
-    Sound System nel secondo stage del festival.`,
+    Sound System nel Botanical Stage del festival.`,
     type: GUEST_TYPE.MUSIC,
   },
   {
@@ -202,8 +202,8 @@ export default [
   {
     name: 'Katzuma Aka Deda',
     description: `Katzuma è il progetto disco/house di Deda. Nasce nel 2004
-    dall’amore verso i generi musicali dominati dal groove,
-    con l’intento di rielaborare quei suoni dimenticati
+    dall'amore verso i generi musicali dominati dal groove,
+    con l'intento di rielaborare quei suoni dimenticati
     attraverso un minuzioso lavoro di produzione. Il
     risultato è la creazione di sonorità completamente nuove
     ma dalle vibrazioni familiari, seducenti atmosfere disco
@@ -211,7 +211,7 @@ export default [
     luce tre album e numerosi singoli assieme ad una serie di
     remix di prestigio: John Morales , LTJ Experience, Al
     Kent di Million Dollar Disco, Ajello. Da quasi 20 anni,
-    l’approccio empatico e autentico verso la musica e il suo
+    l'approccio empatico e autentico verso la musica e il suo
     pubblico, ha fatto viaggiare i djset di Katzuma tra
     festival internazionali e gli house party più
     underground.`,
@@ -219,7 +219,7 @@ export default [
   },
   {
     name: 'Brigante Sound System',
-    description:`Brigante Sound System nasce nel 1999 in Lucania, da una forte passione per la musica jamaicana e per 
+    description: `Brigante Sound System nasce nel 1999 in Lucania, da una forte passione per la musica jamaicana e per 
     promuovere la stessa rendendola veicolo di aggregazione e unione in un contesto sociale abbandonato e destinato ad 
     essere periferico. Il gruppo operativo è composto, come la tradizione dei sound system insegna, da selectors ed mc. 
     Al microfono si alternano Big Simon e Manuel (dalla Krikka Reggae), mentre Danilo e Montone curano le selezioni 
@@ -230,9 +230,9 @@ export default [
     Brigante Sound, Lion Face, Joseph Cotton Pinchers, Murgia Youth, One Love Hi Powa, High Grade, Erbapipa, Fido Guido, 
     Mama Marjas, Gramigna, Marina, Ranking Lele, Papaleu, Mad Kid, Moddi MC, Pier Tosi, Tonico 70, Kianka Town, 
     Running Irie, Ishu MC, Cool Runnings, Bunna, Villa Ada Posse, Sud Sound System, David Rodigan e tanti altri. 
-    Il sound si cimenta spesso anche nella produzione di remix molto particolari e apprezzati nell’ambiente tali da 
+    Il sound si cimenta spesso anche nella produzione di remix molto particolari e apprezzati nell'ambiente tali da 
     sfociare in una autoproduzione di due mixtape quasi totalmente composti da remix. Il Brigante Sound inoltre è 
-    promotore di numerose rassegne e serate sulle coste ioniche d’estate e d’inverno ospitando ogni volta altre grandi 
+    promotore di numerose rassegne e serate sulle coste ioniche d'estate e d'inverno ospitando ogni volta altre grandi 
     realtà della scena reggae nazionale ed internazionale.`,
     type: GUEST_TYPE.MUSIC,
   },
@@ -251,9 +251,9 @@ export default [
     description: `Shark Emcee è il pioniere del Rap made in Sannio. Coinvolgente, ironico, impegnato e in perfetto
     equilibrio tra tradizione e rinnovamento. lo stile compositivo di Shark Emcee è essenziale e
     contemporaneamente ricco di eccitanti sfumature.
-    Il suo disco d’esordio “La trappola” viene pubblicato nel 2007. Il progetto genera un notevole
+    Il suo disco d'esordio “La trappola” viene pubblicato nel 2007. Il progetto genera un notevole
     interesse e diversi live sul territorio, ampliando la platea dei fan.
-    Successivamente nel 2010 esce Made in Sann-Yo che rappresenta un’evoluzione rispetto al primo
+    Successivamente nel 2010 esce Made in Sann-Yo che rappresenta un'evoluzione rispetto al primo
     disco aumentando notevolmente il suo seguito.
     Nel dicembre dello stesso anno Shark Emcee pubblica il primo singolo da solista: “Orgoglio
     Sannita”, che spinge il rapper beneventano al di fuori del circuito underground.
@@ -261,7 +261,7 @@ export default [
     condotto da Linus “Deejay chiama Italia”, come pezzo rap dedicato alle città italiane con più alto
     numero di segnalazioni del pubblico.
     
-    L’attività di Shark Emcee lo vede sempre più spesso protagonista di battles lungo lo stivale, che con
+    L'attività di Shark Emcee lo vede sempre più spesso protagonista di battles lungo lo stivale, che con
     il tempo forgiano la sua personalità ed il suo stile. Riesce a guadagnare il titolo di campione
     nazionale al prestigioso contest “Microphone masta”
     Nel 2011 arriva il secondo singolo “Ad ogni signorina” , il clip con – regia di Valerio Vestoso –
@@ -274,30 +274,30 @@ export default [
     Il 22 dicembre del 2012 Shark Emcee lancia il suo primo EP da solista: “I was a b.boy, please gimme
     a job”.
     Nello stesso anno è stato anche protagonista con Rocco Hunt, Fabio Mef, Doc Shock e Lucariello di
-    “Il suono che parla”, progetto di scrittura rap per i detenuti all’istituto per minori di Airola, dopo il
+    “Il suono che parla”, progetto di scrittura rap per i detenuti all'istituto per minori di Airola, dopo il
     quale sono stati pubblicati un libro ed un cd.
     Nel 2014 Shark Emcee si posiziona tra i primi 6 classificati del torneo nazionale di freestyle “Passa il
-    microfono” all’Alcatraz di Milano.
+    microfono” all'Alcatraz di Milano.
     Nel 2015 presenta il singolo “Non ho bisogno” alle selezioni di Sanremo Giovani. Il rapper riesce a
     superare la prima selezione entrando nei 60 finalisti su 660 brani presentati.
     Nel 2016 presenta il singolo “Delle volte”. Nella stagione calcistica 2017/18 Shark Emcee è stato
     scelto come inviato dallo stadio per la trasmissione “Quelli che il calcio” in concomitanza dei match
     Napoli-Benevento e Crotone-Benevento; occasioni in cui il rapper beneventano ha dimostrato le
-    proprie abilità con l’improvvisazione in rima.
+    proprie abilità con l'improvvisazione in rima.
     Nel 2019/2020 torna sulla scena con i singoli “Fuoco sulla traccia” e “Boom”.
     Le sue doti da freestyler inoltre lo hanno portato più volte a condividere il palco con artisti di
     rilievo nel mondo musicale nazionale (Clementino, Rocco Hunt, Ghemon, Lucariello, Mama Marjas,
     Luca Aquino, Daniele Sepe e tanti altri).
     Dopo aver rilasciato i singoli "Accussì mò", "'Na man' aizàt" e “VIP” è attualmente in promozione
     con il nuovo singolo "Quello che so" e del disco dal titolo “Dopo un po” in uscita il 14 aprile 2023
-    per l’etichetta Dischi Rurali e distribuito da Artist First.`,
+    per l'etichetta Dischi Rurali e distribuito da Artist First.`,
     type: GUEST_TYPE.MUSIC,
   },
   {
     name: 'Capsicum Set Party',
     description: `Capsicum Set Party è un proggetto musicale, nato dalle sinergie di Dj Trix , Moddi MC e Dj Lugi`,
     type: GUEST_TYPE.MUSIC,
-  }
+  },
 ].map((e) => {
   const splitted = e.name.toLowerCase().split(' ');
   return { ...e, image: splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0] };

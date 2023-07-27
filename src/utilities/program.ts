@@ -55,9 +55,7 @@ export default [
         title: `[Conferenza Stampa] Presentazione residenza artistico scientifica`,
         type: 'Conferenza',
         location: 'Auditorium Grassano',
-        starring: [
-          OrganizersList.find((o) => o.name === 'Giuseppe Becci'),
-        ],
+        starring: [OrganizersList.find((o) => o.name === 'Giuseppe Becci')],
       },
       {
         time: '19:00',
@@ -93,18 +91,18 @@ export default [
       },
       {
         time: '11:00 - 14:00',
-        title: 'Good Morning Selecta / Djset - To Be Annouced Soon',
+        title: 'Good Morning Selecta / Djset',
         location: 'Botanical Stage',
       },
       {
         time: '11:30 - 12:30',
         title: 'Inaugurazione Mostre',
-        location: 'Second Stage',
+        location: 'Botanical Stage',
       },
       {
         time: '12:00 - 15:00',
         title: 'Live Painting',
-        location: 'Second Stage',
+        location: 'Botanical Stage',
       },
       {
         time: '13:00 - 15:30',
@@ -112,7 +110,7 @@ export default [
       },
       {
         time: '15:00-16:00',
-        title: 'Degustazione di Vinili a cura di Sfinge Sound System and Co.',
+        title: 'Degustazione di Vinili a cura di Sfinge Sound',
         location: 'Botanical Stage',
       },
       {
@@ -167,7 +165,7 @@ export default [
       },
       {
         time: '10:30',
-        title: 'Good Morning Selecta / Dj Set - TBA',
+        title: 'Good Morning Selecta / Dj Set',
       },
       {
         time: '10:00 - 13:00',
@@ -179,11 +177,11 @@ export default [
       },
       {
         time: '11:30',
-        title: 'Stand Espositivi ed estemporanee - TBA soon',
+        title: 'Stand Espositivi ed estemporanee',
       },
       {
         time: '15:00-16:00',
-        title: 'Degustazione di Vinili a cura di Sfinge Sound System and Co.',
+        title: 'Degustazione di Vinili a cura di Sfinge Sound',
         location: 'Botanical Stage',
       },
       {
@@ -201,11 +199,11 @@ export default [
       },
       {
         time: '17:00',
-        title: 'Experience - TBA soon',
+        title: 'Experience',
       },
       {
         time: '21:00',
-        title: 'Opening Show - TBA soon',
+        title: 'Opening Show',
         location: 'Panoramic Stage',
       },
       {
@@ -250,7 +248,7 @@ export default [
       },
       {
         time: '15:00-16:00',
-        title: 'Degustazione di Vinili a cura di Sfinge Sound System and Co.',
+        title: 'Degustazione di Vinili a cura di Sfinge Sound',
         location: 'Botanical Stage',
       },
       {
@@ -262,6 +260,7 @@ export default [
       {
         time: '17:30',
         title: `Immaginare il futuro partendo dal passato`,
+        starring: [GuestsList.find((g) => g.name === 'Anna Albanese')],
         location: 'Botanical Stage',
       },
       {
