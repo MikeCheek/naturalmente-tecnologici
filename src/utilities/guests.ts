@@ -59,7 +59,26 @@ export default [
     type: GUEST_TYPE.ACTIVITY,
   },
   {
+    name: 'Teodosio Santagata',
+    type: GUEST_TYPE.ACTIVITY,
+  },
+  {
     name: 'Pisilli Rocco',
+    type: GUEST_TYPE.ACTIVITY,
+  },
+  {
+    name: 'Giuliana Bianchini',
+    description: `Maceratese di nascita, romana d'adozione, Giuliana è Business Transformation Consultant di IBM Italia ed è specializzata nelle aree di Intelligenza Artificiale e Analytics. Lavora, quindi, 
+    come consulente informatico e supporta la trasformazione digitale delle aziende del nostro Paese da 6 anni, dopo un'esperienza di oltre due anni in una grande banca italiana.`,
+    field: ['Workshop - "Design Thinking"'],
+    type: GUEST_TYPE.ACTIVITY,
+  },
+  {
+    name: 'Sara Cricenti',
+    description: `Program Manager per l'area Education di IBM Italia è referente delle iniziative di formazione per studenti, giovani, persone in cerca di lavoro ed organizzazioni. 
+    Vice-presidente del Soroptimist International Net Lead; primo e-club Soroptimist dedicato all'empowerment femminile under 35. Laureata in Diritto e Genere ha approfondito i suoi 
+    studi attraverso il Master in Gestione delle Diversità, Inclusione ed Equità presso l'Università di Trento.`,
+    field: ['Workshop - "Design Thinking"'],
     type: GUEST_TYPE.ACTIVITY,
   },
   {
