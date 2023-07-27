@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { type } from 'os';
 
 export enum GUEST_TYPE {
   TALK,

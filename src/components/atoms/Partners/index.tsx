@@ -127,6 +127,18 @@ const Index = () => {
           />
         </a>
       </ShowOnView>
+      <Heading text="Sponsor" />
+      <ShowOnView className={styles.wrap}>
+        <a href="" title="EDEALAB" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/edealab.jpg"
+            className={styles.logo}
+            alt="EDEALAB"
+            width={200}
+          />
+        </a>
+      </ShowOnView>
     </div>
   );
 };
