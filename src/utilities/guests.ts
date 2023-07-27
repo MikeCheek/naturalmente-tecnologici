@@ -55,6 +55,14 @@ export default [
     field: ['Volevo solo aprire un museo', 'Museo TAM'],
   },
   {
+    name: 'Barbara Siebenlist Palomar',
+    type: GUEST_TYPE.ACTIVITY,
+  },
+  {
+    name: 'Pisilli Rocco',
+    type: GUEST_TYPE.ACTIVITY,
+  },
+  {
     name: 'IBM SkillsBuild',
     field: ['Workshop - "Design Thinking"'],
     description: `<strong>Design Thinking</strong><br/><br/>
