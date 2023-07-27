@@ -35,8 +35,8 @@ export const info = [
   },
   { name: 'Marouan Elkoura', role: 'Sponsor Specialist', image: 5 },
   { name: 'Grazia Muro', role: 'Segretaria', image: 6 },
-  //{ name: 'Teodosio Santagata', role: 'Stage Manager' },
-  //{ name: 'Giovanni Restaino', role: 'Stage Manager' },
+  { name: 'Teodosio Santagata', role: 'Direttore Artistico', image: 7 },
+  { name: 'Giovanni Restaino', role: 'Direttore Artistico',  image: 8 },
 ];
 
 export const images = () => {

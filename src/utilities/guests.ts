@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { type } from 'os';
 
 export enum GUEST_TYPE {
   TALK,
@@ -54,6 +53,14 @@ export default [
     Un museo, per noi, serve a non far <strong>musealizzare la città</strong> e continuiamo, ogni giorno, a chiederci: <strong>come si apre un museo d'arte contemporanea, se non sei una ricca fondazione?</strong>`,
     type: GUEST_TYPE.TALK,
     field: ['Volevo solo aprire un museo', 'Museo TAM'],
+  },
+  {
+    name: 'Barbara Siebenlist Palomar',
+    type: GUEST_TYPE.ACTIVITY,
+  },
+  {
+    name: 'Pisilli Rocco',
+    type: GUEST_TYPE.ACTIVITY,
   },
   {
     name: 'IBM SkillsBuild',
