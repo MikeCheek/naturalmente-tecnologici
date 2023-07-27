@@ -146,64 +146,8 @@ export default [
     field: ['Reggae'],
   },
   {
-    name: 'Pneumatix',
-    type: GUEST_TYPE.MUSIC,
-    description: `<strong>Pneumatix</strong> è un produttore musicale rumeno che ha iniziato la sua carriera musicale nel 2005 nella scena musicale underground come <strong>produttore musicale indipendente e deejay</strong>, la sua musica è un mix di <strong>suoni spaziali</strong>, 
-    accordi <strong>house</strong> con influenze <strong>techno</strong> e progressive mescolati nel suo stile <strong>Tekno</strong> per creare suoni <strong>vibrazioni chill e groove tek</strong>.<br/><br/>
-    Nel 2012 ha fondato <strong>"SleepNot! Soundsystem"</strong>, un sound system con una comunità di appassionati di musica in continua crescita.<br/>
-    La maggior parte della sua attività è stata svolta nella scena musicale <strong>underground</strong> della Romania e ultimamente in ambito <strong>europeo</strong>,
-    negli ultimi dieci anni ha partecipato a diversi eventi e organizzato vari rave tekno con SleepNot! e altri sound system e collaborazioni <strong>nazionali o internazionali</strong>.<br/><br/>
-    Ha all'attivo una <strong>vastissima discografia</strong> e questo lo rende uno dei produttori piu' <strong>prolifici e completi</strong> di tutto il panorama europeo.`,
-  },
-  {
-    name: 'Angel_One',
-    type: GUEST_TYPE.MUSIC,
-    description: `La sua <strong>vasta conoscenza musicale</strong> e l'amicizia con importanti produttori lo hanno spinto nel 2017 a iniziare a <strong>mixare</strong>.<br/>
-    Si unisce a <strong>Psylosophia</strong>, un'etichetta psytrance napoletana come DJ, e dal 2017 al 2020 ha eseguito quasi mensilmente un set ai loro party.<br/><br/>
-    Nel 2019 si è trasferito a Bucarest e ha iniziato a organizzare attivamente <strong>party</strong> con SleepNot Soundsystem di cui faceva già parte dal 2015.<br/>
-    Crede fermamente che <strong>non ci debbano essere barriere</strong> tra i generi musicali, soprattutto quello elettronico, per questo oltre ai set notturni di tekno tribe e psytrance si esibisce con piacere anche in set deep house, tech-house e italo dance 90-00.<br/><br/>
-    Feste in cui ha mixato a: Capodanno a Cluj, Rotek 2019-2022, Albaniatek2022, TekOver, Blahna, Bucharest Tekno Unit, Step Evolution 2022, Smotek Party Zagreb, BulgariaTEk 2020, Various Italians Freeparty, Psylosophia Psytrance party, Tribal Ritual , Rave4 Base Czech republic`,
-    field: ['DJ Tekno Tribe', 'Psytrance', 'Deephouse', 'Deep Techno'],
-  },
-  {
-    name: 'Moddi MC',
-    description: `Tarantino, nomade per ispirazione, Moddi è il più autentico e completo Maestro di Cerimonia della nostra penisola. Dotato di una cassa toracica che pare fatta in abete come un contrabbasso antico, la voce dell'mc pugliese vibra ad una potenza micidiale, che lui 
-    sa gestire con sapienza e rara ironia. Campione indiscusso e imbattuto di freestyle da ben prima che la disciplina sbarcasse sulle tv italiche, Moddi è un vero artista da palcoscenico, poco incline a chiudersi in uno studio di registrazione. Tra le sue sporadiche e preziose 
-    comparse su disco ricordiamo l'esordio con il collettivo Pooglia Tribe e la sua affiliazione al leggendario gruppo bolognese Melma e Merda.`,
-    type: GUEST_TYPE.MUSIC,
-  },
-  {
-    name: 'DJ Lugi',
-    description: `Mc, Dj e beatmaker di origine etiope, ma cosentino d'adozione, Lugi ha una storia artistica che nasce a cavallo tra gli anni '80 e '90, durante i quali animò la scena musicale calabra con i South Posse. Tra le sue numerose incisioni lo ricordiamo in tutti i 
-    dischi di rap di Neffa da "I Messaggeri della Dopa" in poi, indimenticabile in "Novecinquanta" di Fritz Da Cat e autore di un primo disco solista, "Ca'Pù" nel 2000. Timbro vocale nasale e ondeggiante, flow morbido e pieno di ritmo, Lugi ricorda i migliori protagonisti 
-    della "Daisy Age" americana e la sua impronta nell'hip hop italico è indelebile e massiccia come il patrimonio di rime che ha depositato nei suoi tanti lustri di carriera.`,
-    type: GUEST_TYPE.MUSIC,
-  },
-  {
-    name: 'Millenium Van',
-    type: GUEST_TYPE.MUSIC,
-    description: `Millenium Van è un collettivo di artisti che viaggia a bordo di un furgoncino indipendente da tutti i punti di vista!
-    Tramite un sistema fotovoltaico, il suo palco mobile si sposta ovunque nell'universo irradiando il cammino di energia e good vibes senza doversi alimentare.
-    Tutti i suoi spettacoli sono gratuiti e incentrati sull'interazione attiva con il pubblico che non solo funge da spettatore ma prende parte direttamente allo spettacolo!`,
-  },
-  {
-    name: 'SFINGE',
-    description: `SFINGE è un progetto Tosco-Lucano nato a Pisa nel corso del 2022. Come prima parte di questo
-    progetto il gruppo si è focalizzato sulla costruzione di un Sound System e sulla strutturazione di
-    una collezione di vinili che ricopre un'ampia gamma di stili, dalla Roots alla Dub più
-    contemporanea, muovendo così i loro primi passi nel mondo della musica.
-    In occasione del festival Naturalmente Tecnologici il gruppo proporrà varie sessioni musicali
-    durante le quali intratterrà e farà ballare con dischi dello scenario nazionale e internazionale: dalla
-    Jamaica alla UK, dalla Francia alle produzioni più nostrane. Il tutto amplificato fedelmente dal loro
-    Sound System nel Botanical Stage del festival.`,
-    type: GUEST_TYPE.MUSIC,
-  },
-  {
-    name: 'DJHtt1',
-    description: `HTT1 è un codice da decifrare, un algoritmo difettoso dietro il quale si cela un misterioso producer/dj 
-    del quale si sa poco e nulla. Ha pubblicato da poco il suo primo EP in formato tape “Detriti Digitali” con la label 
-    romagnola Spalato Wyale con la quale farà uscire a breve altro materiale. Nei dj set esplora una sua personale 
-    geografia sonora usando il funk come bussola per orientarsi.`,
+    name: 'Capsicum Set Party',
+    description: `Capsicum Set Party è un proggetto musicale, nato dalle sinergie di Dj Trix , Moddi MC e Dj Lugi`,
     type: GUEST_TYPE.MUSIC,
   },
   {
@@ -225,6 +169,77 @@ export default [
     type: GUEST_TYPE.MUSIC,
   },
   {
+    name: 'DJHtt1',
+    description: `HTT1 è un codice da decifrare, un algoritmo difettoso dietro il quale si cela un misterioso producer/dj 
+    del quale si sa poco e nulla. Ha pubblicato da poco il suo primo EP in formato tape “Detriti Digitali” con la label 
+    romagnola Spalato Wyale con la quale farà uscire a breve altro materiale. Nei dj set esplora una sua personale 
+    geografia sonora usando il funk come bussola per orientarsi.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'DJ Lugi',
+    description: `Mc, Dj e beatmaker di origine etiope, ma cosentino d'adozione, Lugi ha una storia artistica che nasce a cavallo tra gli anni '80 e '90, durante i quali animò la scena musicale calabra con i South Posse. Tra le sue numerose incisioni lo ricordiamo in tutti i 
+    dischi di rap di Neffa da "I Messaggeri della Dopa" in poi, indimenticabile in "Novecinquanta" di Fritz Da Cat e autore di un primo disco solista, "Ca'Pù" nel 2000. Timbro vocale nasale e ondeggiante, flow morbido e pieno di ritmo, Lugi ricorda i migliori protagonisti 
+    della "Daisy Age" americana e la sua impronta nell'hip hop italico è indelebile e massiccia come il patrimonio di rime che ha depositato nei suoi tanti lustri di carriera.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Moddi MC',
+    description: `Tarantino, nomade per ispirazione, Moddi è il più autentico e completo Maestro di Cerimonia della nostra penisola. Dotato di una cassa toracica che pare fatta in abete come un contrabbasso antico, la voce dell'mc pugliese vibra ad una potenza micidiale, che lui 
+    sa gestire con sapienza e rara ironia. Campione indiscusso e imbattuto di freestyle da ben prima che la disciplina sbarcasse sulle tv italiche, Moddi è un vero artista da palcoscenico, poco incline a chiudersi in uno studio di registrazione. Tra le sue sporadiche e preziose 
+    comparse su disco ricordiamo l'esordio con il collettivo Pooglia Tribe e la sua affiliazione al leggendario gruppo bolognese Melma e Merda.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'DJ Trix',
+    description: `Tarantino di nascita ma stazionario in Emilia Romagna da tutta la sua carriera, Dj Trix ha accompagnato 
+    la storia dell'hip hop bolognese da inossidabile protagonista. Alle ruote d'acciaio dai primi anni '90, è stato uno 
+    dei cardini della storica Zona Dopa, progetto nato all'interno dello spazio sociale Livello 57, manipolando i suoni 
+    per artisti del calibro di Sangue Misto,  Kaos One, Melma e Merda. Da sempre è conosciuto come instancabile dispensatore 
+    di cultura roots e hip hop in molteplici forme, dall'organizzazione di eventi storici come il contest 2 The Beat, 
+    alla fondazione del Trix Shop, corner bolognese dedicato allo smazzo di vinili e luogo d'incontro per appassionati.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Pneumatix',
+    type: GUEST_TYPE.MUSIC,
+    description: `<strong>Pneumatix</strong> è un produttore musicale rumeno che ha iniziato la sua carriera musicale nel 2005 nella scena musicale underground come <strong>produttore musicale indipendente e deejay</strong>, la sua musica è un mix di <strong>suoni spaziali</strong>, 
+    accordi <strong>house</strong> con influenze <strong>techno</strong> e progressive mescolati nel suo stile <strong>Tekno</strong> per creare suoni <strong>vibrazioni chill e groove tek</strong>.<br/><br/>
+    Nel 2012 ha fondato <strong>"SleepNot! Soundsystem"</strong>, un sound system con una comunità di appassionati di musica in continua crescita.<br/>
+    La maggior parte della sua attività è stata svolta nella scena musicale <strong>underground</strong> della Romania e ultimamente in ambito <strong>europeo</strong>,
+    negli ultimi dieci anni ha partecipato a diversi eventi e organizzato vari rave tekno con SleepNot! e altri sound system e collaborazioni <strong>nazionali o internazionali</strong>.<br/><br/>
+    Ha all'attivo una <strong>vastissima discografia</strong> e questo lo rende uno dei produttori piu' <strong>prolifici e completi</strong> di tutto il panorama europeo.`,
+  },
+  {
+    name: 'Angel_One',
+    type: GUEST_TYPE.MUSIC,
+    description: `La sua <strong>vasta conoscenza musicale</strong> e l'amicizia con importanti produttori lo hanno spinto nel 2017 a iniziare a <strong>mixare</strong>.<br/>
+    Si unisce a <strong>Psylosophia</strong>, un'etichetta psytrance napoletana come DJ, e dal 2017 al 2020 ha eseguito quasi mensilmente un set ai loro party.<br/><br/>
+    Nel 2019 si è trasferito a Bucarest e ha iniziato a organizzare attivamente <strong>party</strong> con SleepNot Soundsystem di cui faceva già parte dal 2015.<br/>
+    Crede fermamente che <strong>non ci debbano essere barriere</strong> tra i generi musicali, soprattutto quello elettronico, per questo oltre ai set notturni di tekno tribe e psytrance si esibisce con piacere anche in set deep house, tech-house e italo dance 90-00.<br/><br/>
+    Feste in cui ha mixato a: Capodanno a Cluj, Rotek 2019-2022, Albaniatek2022, TekOver, Blahna, Bucharest Tekno Unit, Step Evolution 2022, Smotek Party Zagreb, BulgariaTEk 2020, Various Italians Freeparty, Psylosophia Psytrance party, Tribal Ritual , Rave4 Base Czech republic`,
+    field: ['DJ Tekno Tribe', 'Psytrance', 'Deephouse', 'Deep Techno'],
+  },
+  {
+    name: 'Millenium Van',
+    type: GUEST_TYPE.MUSIC,
+    description: `Millenium Van è un collettivo di artisti che viaggia a bordo di un furgoncino indipendente da tutti i punti di vista!
+    Tramite un sistema fotovoltaico, il suo palco mobile si sposta ovunque nell'universo irradiando il cammino di energia e good vibes senza doversi alimentare.
+    Tutti i suoi spettacoli sono gratuiti e incentrati sull'interazione attiva con il pubblico che non solo funge da spettatore ma prende parte direttamente allo spettacolo!`,
+  },
+  {
+    name: 'SFINGE SOUND',
+    description: `SFINGE è un progetto Tosco-Lucano nato a Pisa nel corso del 2022. Come prima parte di questo
+    progetto il gruppo si è focalizzato sulla costruzione di un Sound System e sulla strutturazione di
+    una collezione di vinili che ricopre un'ampia gamma di stili, dalla Roots alla Dub più
+    contemporanea, muovendo così i loro primi passi nel mondo della musica.
+    In occasione del festival Naturalmente Tecnologici il gruppo proporrà varie sessioni musicali
+    durante le quali intratterrà e farà ballare con dischi dello scenario nazionale e internazionale: dalla
+    Jamaica alla UK, dalla Francia alle produzioni più nostrane. Il tutto amplificato fedelmente dal loro
+    Sound System nel Botanical Stage del festival.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
     name: 'Brigante Sound System',
     description: `Brigante Sound System nasce nel 1999 in Lucania, da una forte passione per la musica jamaicana e per 
     promuovere la stessa rendendola veicolo di aggregazione e unione in un contesto sociale abbandonato e destinato ad 
@@ -241,16 +256,6 @@ export default [
     sfociare in una autoproduzione di due mixtape quasi totalmente composti da remix. Il Brigante Sound inoltre è 
     promotore di numerose rassegne e serate sulle coste ioniche d'estate e d'inverno ospitando ogni volta altre grandi 
     realtà della scena reggae nazionale ed internazionale.`,
-    type: GUEST_TYPE.MUSIC,
-  },
-  {
-    name: 'DJ Trix',
-    description: `Tarantino di nascita ma stazionario in Emilia Romagna da tutta la sua carriera, Dj Trix ha accompagnato 
-    la storia dell'hip hop bolognese da inossidabile protagonista. Alle ruote d'acciaio dai primi anni '90, è stato uno 
-    dei cardini della storica Zona Dopa, progetto nato all'interno dello spazio sociale Livello 57, manipolando i suoni 
-    per artisti del calibro di Sangue Misto,  Kaos One, Melma e Merda. Da sempre è conosciuto come instancabile dispensatore 
-    di cultura roots e hip hop in molteplici forme, dall'organizzazione di eventi storici come il contest 2 The Beat, 
-    alla fondazione del Trix Shop, corner bolognese dedicato allo smazzo di vinili e luogo d'incontro per appassionati.`,
     type: GUEST_TYPE.MUSIC,
   },
   {
@@ -298,11 +303,6 @@ export default [
     Dopo aver rilasciato i singoli "Accussì mò", "'Na man' aizàt" e “VIP” è attualmente in promozione
     con il nuovo singolo "Quello che so" e del disco dal titolo “Dopo un po” in uscita il 14 aprile 2023
     per l'etichetta Dischi Rurali e distribuito da Artist First.`,
-    type: GUEST_TYPE.MUSIC,
-  },
-  {
-    name: 'Capsicum Set Party',
-    description: `Capsicum Set Party è un proggetto musicale, nato dalle sinergie di Dj Trix , Moddi MC e Dj Lugi`,
     type: GUEST_TYPE.MUSIC,
   },
 ].map((e) => {
