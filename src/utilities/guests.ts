@@ -220,6 +220,25 @@ export default [
     type: GUEST_TYPE.MUSIC,
   },
   {
+    name: 'Brigante Sound System',
+    description: `Brigante Sound System nasce nel 1999 in Lucania, da una forte passione per la musica jamaicana e per 
+    promuovere la stessa rendendola veicolo di aggregazione e unione in un contesto sociale abbandonato e destinato ad 
+    essere periferico. Il gruppo operativo è composto, come la tradizione dei sound system insegna, da selectors ed mc. 
+    Al microfono si alternano Big Simon e Manuel (dalla Krikka Reggae), mentre Danilo e Montone curano le selezioni 
+    musicali e si occupano della manutenzione del sound system. I dischi selezionati nelle dancehall, rigorosamente 
+    in vinile, variano dal rocksteady al roots, dal new roots al bashment, ripercorrendo la storia musicale senza 
+    tralasciare le ultime produzioni e tendenze del suono jamaicano.
+    Tantissime le collaborazioni accumulate in questi anni: Anthony Johnson, ospitato per tre volte ai microfoni del 
+    Brigante Sound, Lion Face, Joseph Cotton Pinchers, Murgia Youth, One Love Hi Powa, High Grade, Erbapipa, Fido Guido, 
+    Mama Marjas, Gramigna, Marina, Ranking Lele, Papaleu, Mad Kid, Moddi MC, Pier Tosi, Tonico 70, Kianka Town, 
+    Running Irie, Ishu MC, Cool Runnings, Bunna, Villa Ada Posse, Sud Sound System, David Rodigan e tanti altri. 
+    Il sound si cimenta spesso anche nella produzione di remix molto particolari e apprezzati nell'ambiente tali da 
+    sfociare in una autoproduzione di due mixtape quasi totalmente composti da remix. Il Brigante Sound inoltre è 
+    promotore di numerose rassegne e serate sulle coste ioniche d'estate e d'inverno ospitando ogni volta altre grandi 
+    realtà della scena reggae nazionale ed internazionale.`,
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
     name: 'Pneumatix',
     type: GUEST_TYPE.MUSIC,
     description: `<strong>Pneumatix</strong> è un produttore musicale rumeno che ha iniziato la sua carriera musicale nel 2005 nella scena musicale underground come <strong>produttore musicale indipendente e deejay</strong>, la sua musica è un mix di <strong>suoni spaziali</strong>, 
@@ -249,25 +268,6 @@ export default [
     durante le quali intratterrà e farà ballare con dischi dello scenario nazionale e internazionale: dalla
     Jamaica alla UK, dalla Francia alle produzioni più nostrane. Il tutto amplificato fedelmente dal loro
     Sound System nel Botanical Stage del festival.`,
-    type: GUEST_TYPE.MUSIC,
-  },
-  {
-    name: 'Brigante Sound System',
-    description: `Brigante Sound System nasce nel 1999 in Lucania, da una forte passione per la musica jamaicana e per 
-    promuovere la stessa rendendola veicolo di aggregazione e unione in un contesto sociale abbandonato e destinato ad 
-    essere periferico. Il gruppo operativo è composto, come la tradizione dei sound system insegna, da selectors ed mc. 
-    Al microfono si alternano Big Simon e Manuel (dalla Krikka Reggae), mentre Danilo e Montone curano le selezioni 
-    musicali e si occupano della manutenzione del sound system. I dischi selezionati nelle dancehall, rigorosamente 
-    in vinile, variano dal rocksteady al roots, dal new roots al bashment, ripercorrendo la storia musicale senza 
-    tralasciare le ultime produzioni e tendenze del suono jamaicano.
-    Tantissime le collaborazioni accumulate in questi anni: Anthony Johnson, ospitato per tre volte ai microfoni del 
-    Brigante Sound, Lion Face, Joseph Cotton Pinchers, Murgia Youth, One Love Hi Powa, High Grade, Erbapipa, Fido Guido, 
-    Mama Marjas, Gramigna, Marina, Ranking Lele, Papaleu, Mad Kid, Moddi MC, Pier Tosi, Tonico 70, Kianka Town, 
-    Running Irie, Ishu MC, Cool Runnings, Bunna, Villa Ada Posse, Sud Sound System, David Rodigan e tanti altri. 
-    Il sound si cimenta spesso anche nella produzione di remix molto particolari e apprezzati nell'ambiente tali da 
-    sfociare in una autoproduzione di due mixtape quasi totalmente composti da remix. Il Brigante Sound inoltre è 
-    promotore di numerose rassegne e serate sulle coste ioniche d'estate e d'inverno ospitando ogni volta altre grandi 
-    realtà della scena reggae nazionale ed internazionale.`,
     type: GUEST_TYPE.MUSIC,
   },
   {
