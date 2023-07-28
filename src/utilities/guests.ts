@@ -240,13 +240,6 @@ export default [
     field: ['DJ Tekno Tribe', 'Psytrance', 'Deephouse', 'Deep Techno'],
   },
   {
-    name: 'Millenium Van',
-    type: GUEST_TYPE.MUSIC,
-    description: `Millenium Van è un collettivo di artisti che viaggia a bordo di un furgoncino indipendente da tutti i punti di vista!
-    Tramite un sistema fotovoltaico, il suo palco mobile si sposta ovunque nell'universo irradiando il cammino di energia e good vibes senza doversi alimentare.
-    Tutti i suoi spettacoli sono gratuiti e incentrati sull'interazione attiva con il pubblico che non solo funge da spettatore ma prende parte direttamente allo spettacolo!`,
-  },
-  {
     name: 'SFINGE SOUND',
     description: `SFINGE è un progetto Tosco-Lucano nato a Pisa nel corso del 2022. Come prima parte di questo
     progetto il gruppo si è focalizzato sulla costruzione di un Sound System e sulla strutturazione di
@@ -323,6 +316,13 @@ export default [
     con il nuovo singolo "Quello che so" e del disco dal titolo “Dopo un po” in uscita il 14 aprile 2023
     per l'etichetta Dischi Rurali e distribuito da Artist First.`,
     type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Millenium Van',
+    type: GUEST_TYPE.MUSIC,
+    description: `Millenium Van è un collettivo di artisti che viaggia a bordo di un furgoncino indipendente da tutti i punti di vista!
+    Tramite un sistema fotovoltaico, il suo palco mobile si sposta ovunque nell'universo irradiando il cammino di energia e good vibes senza doversi alimentare.
+    Tutti i suoi spettacoli sono gratuiti e incentrati sull'interazione attiva con il pubblico che non solo funge da spettatore ma prende parte direttamente allo spettacolo!`,
   },
 ].map((e) => {
   const splitted = e.name.toLowerCase().split(' ');
