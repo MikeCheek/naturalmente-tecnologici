@@ -35,8 +35,8 @@ const Index = ({ shutOffTimer, date }: TimerProps) => {
       minutes != m ? setMinutes(m) : null;
       seconds != s ? setSeconds(s) : null;
       if (distance < 0) {
-        shutOffTimer();
         clearInterval(timeRemaining);
+        shutOffTimer();
       }
     }, 1000);
 

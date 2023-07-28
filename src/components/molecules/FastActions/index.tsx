@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as styles from './index.module.scss';
 import CardAction from '../../atoms/CardAction';
 import Timer from '../Timer';
@@ -11,6 +11,8 @@ import Button from '../../atoms/Button';
 
 const Index = () => {
   const { setText } = useModalContext();
+
+  const [timer, setTimer] = useState<boolean>(true);
 
   const tickets = info
     .map((value) => ({
@@ -53,14 +55,27 @@ const Index = () => {
           );
         })}
       </div>
-      <ShowOnView className={styles.timerWrap}>
+      <ShowOnView>
         <h3>
-          Affrettati!
+          I biglietti saranno disponibili anche in loco al botteghino ma a un prezzo maggiorato.
           <br />
-          L'Early Bird scade tra
+          <br />
+          Riserva ora il tuo posto al prezzo più basso!
         </h3>
-        <Timer date={new Date(info[0].availabilityEnds)} shutOffTimer={() => {}} />
       </ShowOnView>
+      {timer ? (
+        <ShowOnView className={styles.timerWrap}>
+          <h3>
+            Affrettati!
+            <br />
+            L'Early Bird scade tra
+          </h3>
+          <Timer date={new Date(info[0].availabilityEnds)} shutOffTimer={() => setTimer(false)} />
+        </ShowOnView>
+      ) : (
+        <></>
+      )}
+
       <ShowOnView>
         <h3>
           Hai qualche dubbio?

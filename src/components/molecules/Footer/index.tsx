@@ -56,6 +56,15 @@ const Index = () => {
             className={styles.link}
           >
             Michele Pulvirenti
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://bernardoforcillo.com/"
+            title="Bernardo Forcillo Website"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            Bernardo Forcillo
           </a>
         </p>
       </div>
