@@ -173,7 +173,11 @@ export default [
             Co-progettare empaticamente  usando il DESIGN THINKING per creare <br/>
         connessioni tra persone e realtà virtuose.<br/>
                 LABORATORIO DA PRENOTARE`,
-        starring: [GuestsList.find((g) => g.name === 'IBM SkillsBuild')],
+        starring: [
+          GuestsList.find((g) => g.name === 'IBM SkillsBuild'),
+          GuestsList.find((g) => g.name === 'Giuliana Bianchini'),
+          GuestsList.find((g) => g.name === 'Sara Cricenti'),
+        ],
       },
       {
         time: '11:30',
@@ -182,6 +186,7 @@ export default [
       {
         time: '15:00-16:00',
         title: 'Degustazione di Vinili a cura di Sfinge Sound',
+        starring: [GuestsList.find((g) => g.name === 'SFINGE SOUND')],
         location: 'Botanical Stage',
       },
       {
@@ -191,6 +196,7 @@ export default [
         LABORATORIO DA PRENOTARE - 60 posti disponibili<br/>
         PRENOTAZIONE EFFETTUABILE VIA EMAIL DOPO AVER<br/>
         CONFERMATO`,
+        starring: [GuestsList.find((g) => g.name === 'Pisilli Rocco')],
       },
       {
         time: '16:00',
@@ -255,6 +261,7 @@ export default [
       {
         time: '15:00-16:00',
         title: 'Degustazione di Vinili a cura di Sfinge Sound',
+        starring: [GuestsList.find((g) => g.name === 'SFINGE SOUND')],
         location: 'Botanical Stage',
       },
       {
@@ -278,6 +285,7 @@ export default [
       {
         time: '21:00',
         title: 'Brigante Sound System (FULL EQUIPMENT) MONTONE & BIG SIMON <br/>BIG SIMON (SHOWCASE)',
+        starring: [GuestsList.find((g) => g.name === 'Brigante Sound System')],
         location: 'Panoramic Stage',
       },
       {
