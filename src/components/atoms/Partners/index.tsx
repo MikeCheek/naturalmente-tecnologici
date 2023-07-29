@@ -138,6 +138,15 @@ const Index = () => {
             width={200}
           />
         </a>
+        <a href="" title="Verre Gioielli" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/verre.jpg"
+            className={styles.logo}
+            alt="Verre Gioielli"
+            width={200}
+          />
+        </a>
       </ShowOnView>
     </div>
   );
