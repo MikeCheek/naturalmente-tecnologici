@@ -67,6 +67,7 @@ export default [
   {
     name: 'Pisilli Rocco',
     type: GUEST_TYPE.ACTIVITY,
+    imagePosition: 'center 80%',
   },
   {
     name: 'Giuliana Bianchini',
