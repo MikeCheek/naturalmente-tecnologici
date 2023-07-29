@@ -30,7 +30,7 @@ const Index = () => {
           }
           loading="lazy"
           className={styles.image}
-          objectPosition={'center top'}
+          objectPosition={guest.imagePosition ?? 'center top'}
         />
       ) : (
         <ImageTemp name={guest.name} />

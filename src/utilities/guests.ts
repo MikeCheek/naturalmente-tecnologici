@@ -57,10 +57,12 @@ export default [
   {
     name: 'Barbara Siebenlist Palomar',
     type: GUEST_TYPE.ACTIVITY,
+    imagePosition: 'center 80%',
   },
   {
     name: 'Teodosio Santagata',
     type: GUEST_TYPE.ACTIVITY,
+    imagePosition: 'center 80%',
   },
   {
     name: 'Pisilli Rocco',
@@ -323,6 +325,7 @@ export default [
     description: `Millenium Van è un collettivo di artisti che viaggia a bordo di un furgoncino indipendente da tutti i punti di vista!
     Tramite un sistema fotovoltaico, il suo palco mobile si sposta ovunque nell'universo irradiando il cammino di energia e good vibes senza doversi alimentare.
     Tutti i suoi spettacoli sono gratuiti e incentrati sull'interazione attiva con il pubblico che non solo funge da spettatore ma prende parte direttamente allo spettacolo!`,
+    imagePosition: 'center 80%',
   },
 ].map((e) => {
   const splitted = e.name.toLowerCase().split(' ');
