@@ -208,7 +208,13 @@ export default [
       },
       {
         time: '22:00',
-        title: '"Naturalmente Party" - Moddi, Trix e Dj Lugi',
+        title: 'Capsicum Set Party - Moddi, Trix e Dj Lugi',
+        starring: [
+          GuestsList.find((g) => g.name === 'Capsicum Set Party'),
+          GuestsList.find((g) => g.name === 'Moddi MC'),
+          GuestsList.find((g) => g.name === 'DJ Lugi'),
+          GuestsList.find((g) => g.name === 'DJ Trix'),
+        ],
         location: 'Panoramic Stage',
       },
     ],
