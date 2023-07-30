@@ -36,6 +36,27 @@ const Index = () => {
           <MarinoBus className={styles.logoLong} width={200} style={{ maxHeight: '100px' }} />
         </a>
       </ShowOnView>
+      <Heading text="Sponsor" />
+      <ShowOnView className={styles.wrap}>
+        <a href="" title="EDEALAB" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/edealab.jpg"
+            className={styles.logo}
+            alt="EDEALAB"
+            width={200}
+          />
+        </a>
+        <a href="" title="Verre Gioielli" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/verre.jpg"
+            className={styles.logo}
+            alt="Verre Gioielli"
+            width={200}
+          />
+        </a>
+      </ShowOnView>
       <Heading text="Hospitality Partner" />
       <ShowOnView className={styles.wrap}>
         {/* <a href="" title="Wonder Grottole" rel="noopener noreferrer" target="_blank"> */}
@@ -123,27 +144,6 @@ const Index = () => {
             src="../../../images/partners/millenium.png"
             className={styles.logoLong}
             alt="Millenium Van"
-            width={200}
-          />
-        </a>
-      </ShowOnView>
-      <Heading text="Sponsor" />
-      <ShowOnView className={styles.wrap}>
-        <a href="" title="EDEALAB" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/edealab.jpg"
-            className={styles.logo}
-            alt="EDEALAB"
-            width={200}
-          />
-        </a>
-        <a href="" title="Verre Gioielli" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/verre.jpg"
-            className={styles.logo}
-            alt="Verre Gioielli"
             width={200}
           />
         </a>
