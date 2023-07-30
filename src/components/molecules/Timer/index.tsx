@@ -25,7 +25,12 @@ const Index = ({ shutOffTimer, date }: TimerProps) => {
 
     const timeRemaining = setInterval(() => {
       const now = new Date().getTime();
-      const distance = countDownDate - now;
+      let distance = countDownDate - now;
+      if (distance < 0) {
+        clearInterval(timeRemaining);
+        shutOffTimer();
+      }
+      distance = Math.abs(countDownDate - now);
       const d = Math.floor(distance / (1000 * 60 * 60 * 24));
       const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -34,10 +39,7 @@ const Index = ({ shutOffTimer, date }: TimerProps) => {
       hours != h ? setHours(h) : null;
       minutes != m ? setMinutes(m) : null;
       seconds != s ? setSeconds(s) : null;
-      if (distance < 0) {
-        clearInterval(timeRemaining);
-        shutOffTimer();
-      }
+      
     }, 1000);
 
     return clearInterval(undefined);
