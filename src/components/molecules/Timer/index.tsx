@@ -13,10 +13,10 @@ const Index = ({ shutOffTimer, date }: TimerProps) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDays(Math.floor(randInt(0, 99)));
-      setHours(Math.floor(randInt(0, 23)));
-      setMinutes(Math.floor(randInt(0, 59)));
-      setSeconds(Math.floor(randInt(0, 59)));
+      setDays(0);
+      setHours(0);
+      setMinutes(0);
+      setSeconds(0);
     }, 50);
 
     setTimeout(() => {
@@ -29,17 +29,17 @@ const Index = ({ shutOffTimer, date }: TimerProps) => {
       if (distance < 0) {
         clearInterval(timeRemaining);
         shutOffTimer();
+      } else {
+        distance = Math.abs(countDownDate - now);
+        const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((distance % (1000 * 60)) / 1000);
+        days != d ? setDays(d) : null;
+        hours != h ? setHours(h) : null;
+        minutes != m ? setMinutes(m) : null;
+        seconds != s ? setSeconds(s) : null;
       }
-      distance = Math.abs(countDownDate - now);
-      const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const s = Math.floor((distance % (1000 * 60)) / 1000);
-      days != d ? setDays(d) : null;
-      hours != h ? setHours(h) : null;
-      minutes != m ? setMinutes(m) : null;
-      seconds != s ? setSeconds(s) : null;
-      
     }, 1000);
 
     return clearInterval(undefined);
