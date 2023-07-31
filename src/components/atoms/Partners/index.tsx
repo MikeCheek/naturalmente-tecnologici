@@ -7,6 +7,8 @@ import IBM from '../../../assets/partner/IBM.svg';
 import Podus from '../../../assets/partner/podus.svg';
 import Basilicata from '../../../assets/partner/basilicata.svg';
 import MarinoBus from '../../../assets/partner/marino-bus.svg';
+import Katzuma from '../../../assets/partner/katzuma.svg';
+import LaPotenzaDellArte from '../../../assets/partner/lapotenzadellarte.svg';
 import ShowOnView from '../ShowOnView';
 
 const Index = () => {
@@ -81,6 +83,7 @@ const Index = () => {
           />
         </a>*/}
         {/* <a href="" rel="noopener noreferrer" title="Potenza Urban Art" target="_blank"> */}
+        <LaPotenzaDellArte className={styles.logoHorizontal} height={200} />
         <StaticImage
           layout="constrained"
           src="../../../images/partners/potenza_urban_art.jpg"
@@ -99,6 +102,18 @@ const Index = () => {
           />
         </a>
         <Basilicata className={styles.logo} width={150} />
+      </ShowOnView>
+      <Heading text="Technical Partner" />
+      <ShowOnView className={styles.wrap}>
+        <a title="Centro Servizio Volontariato - Basilicata" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/cvs-basilicata.jpeg"
+            className={styles.logoLong}
+            alt="Centro Servizio Volontariato - Basilicata"
+            width={200}
+          />
+        </a>
       </ShowOnView>
       <Heading text="Activity Partner" />
       <ShowOnView className={styles.wrap}>
@@ -138,6 +153,18 @@ const Index = () => {
       </ShowOnView>
       <Heading text="Music Partner" />
       <ShowOnView className={styles.wrap}>
+        <a href="" title="Katzuma" rel="noopener noreferrer" target="_blank">
+          <Katzuma className={styles.logoLong} width={200} />
+        </a>
+        <a href="" title="Open Stage" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/openstage.png"
+            className={styles.logoLong}
+            alt="Open Stage"
+            width={200}
+          />
+        </a>
         <a href="" title="Millenium Van" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
