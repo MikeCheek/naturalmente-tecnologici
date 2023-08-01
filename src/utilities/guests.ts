@@ -42,7 +42,14 @@ export default [
   },
   {
     name: 'Anna Albanese',
+    description:`Anna Albanese è nata a Tricarico il 31 ottobre 1988. Dopo la laurea triennale in Lettere Moderne presso l’Università di Basilicata nel 2012 consegue la magistrale in Storia e Civiltà Europee presso lo stesso dipartimento nel 2014, con una tesi intitolata “La politica delle arti all’interno dei Regimi Dittatoriali”.
+    Nel 2015 si specializza in produzione e distribuzione cinematografica. Organizza diverse estemporanee di pittura e mostre collettive, tra le quali spicca il primo memoriale in onore del grafico pubblicitario Orlando Orlandi.
+    È vicepresidente dell’associazione Parco dei Cinti Grassano, associazione di promozione turistica culturale fondata da suo padre Andrea Albanese vent’aanni prima con lo scopo di ridare valore storico alla zona Cinti e alla storia dimenticata di Grassano.
+    Collabora attivamente alla prima (11 agosto 2013) e seconda edizione (10 agosto 2014) della Rievocazione  settecentesca dell’arrivo del Commendatore, “Alla Commenda  di Grassano”, ideata dalla associazione Parco dei Cinti.
+    Accompagnatore nelle visite guidate, nel 2017/2018 è stata Tutor Fai responsabile per ITC Carlo Levi di Grassano.
+    Nel febbraio 2021 è una delle due curatrici del libro: Michele Mulieri: una stanchezza da meditare, pubblicata da Cisu nella collana Antropologia del patrimonio.`,
     type: GUEST_TYPE.TALK,
+    field: ['Alla scoperta di Grassano'],
   },
   {
     name: 'Mauro Acito',
