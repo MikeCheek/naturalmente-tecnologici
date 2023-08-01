@@ -59,6 +59,16 @@ const Index = () => {
           />
         </a>
       </ShowOnView>
+      <Heading text="Istitutional Partner" />
+      <ShowOnView className={styles.wrap}>
+        <StaticImage
+          layout="constrained"
+          src="../../../images/partners/comune_grottole.webp"
+          className={styles.logo}
+          alt="Comune di Grottole"
+          width={150}
+        />
+      </ShowOnView>
       <Heading text="Hospitality Partner" />
       <ShowOnView className={styles.wrap}>
         {/* <a href="" title="Wonder Grottole" rel="noopener noreferrer" target="_blank"> */}
