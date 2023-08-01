@@ -242,17 +242,15 @@ export default [
       },
       {
         time: '10:30',
-        title: `Creare una rivoluzione culturale dove non c'è mai stata`,
+        title: `Toccare il futuro con Mano - La Tecnologia che unisce`,
+        starring: [GuestsList.find((g) => g.name === 'Guido Gioioso')],
         location: 'Botanical Stage',
-        starring: [GuestsList.find((g) => g.name === 'Mauro Acito')],
       },
       {
         time: '11:30',
-        title: `L'arte è un crimine, il crimine è un arte<br/>
-        Presentazione del libro "Chi ha polvere spara"`,
-        type: 'Presentazione',
+        title: 'Il meme come nuovo linguaggio di comunicazione',
         location: 'Botanical Stage',
-        starring: [GuestsList.find((g) => g.name === 'Donato Montesano')],
+        starring: [GuestsList.find((g) => g.name === 'Lucanian Shitposting')],
       },
       {
         time: '13:00',
@@ -266,21 +264,23 @@ export default [
       },
       {
         time: '16:00',
-        title: `Toccare il futuro con Mano - La Tecnologia che unisce`,
-        starring: [GuestsList.find((g) => g.name === 'Guido Gioioso')],
-        location: 'Botanical Stage',
-      },
-      {
-        time: '17:30',
         title: `Immaginare il futuro partendo dal passato`,
         starring: [GuestsList.find((g) => g.name === 'Anna Albanese')],
         location: 'Botanical Stage',
       },
       {
-        time: '19:00',
-        title: 'Il meme come nuovo linguaggio di comunicazione',
+        time: '17:30',
+        title: `Creare una rivoluzione culturale dove non c'è mai stata`,
         location: 'Botanical Stage',
-        starring: [GuestsList.find((g) => g.name === 'Lucanian Shitposting')],
+        starring: [GuestsList.find((g) => g.name === 'Mauro Acito')],
+      },
+      {
+        time: '19:00',
+        title: `L'arte è un crimine, il crimine è un arte<br/>
+        Presentazione del libro "Chi ha polvere spara"`,
+        type: 'Presentazione',
+        location: 'Botanical Stage',
+        starring: [GuestsList.find((g) => g.name === 'Donato Montesano')],
       },
       {
         time: '21:00',
