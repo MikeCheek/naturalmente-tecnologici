@@ -64,8 +64,13 @@ export default [
       },
       {
         time: '18:00 - 20:30',
-        title: 'Esplorazione di una cantina Storica a cura di Alla Scoperta di Grassano',
-        location: 'Grassano',
+        title: 'Esplorazione di più cantine Storiche',
+        location: 'I cinti di Grassano',
+        starring: [
+          GuestsList.find((g) => g.name === 'Anna Albanese'),
+          GuestsList.find((g) => g.name === 'Maria Mugnolo'),
+          GuestsList.find((g) => g.name === 'Innocenzo Pontillo'),
+        ],
       },
       {
         time: '22:00',
@@ -265,7 +270,11 @@ export default [
       {
         time: '16:00',
         title: `Immaginare il futuro partendo dal passato`,
-        starring: [GuestsList.find((g) => g.name === 'Anna Albanese')],
+        starring: [
+          GuestsList.find((g) => g.name === 'Anna Albanese'),
+          GuestsList.find((g) => g.name === 'Innocenzo Bronzino'),
+          GuestsList.find((g) => g.name === 'Domenico Lostrangio'),
+        ],
         location: 'Botanical Stage',
       },
       {
