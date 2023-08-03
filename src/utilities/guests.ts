@@ -41,6 +41,22 @@ export default [
     type: GUEST_TYPE.TALK,
   },
   {
+    name: 'Domenico Lostrangio',
+    type: GUEST_TYPE.TALK,
+  },
+  {
+    name: 'Innocenzo Bronzino',
+    type: GUEST_TYPE.TALK,
+  },
+  {
+    name: 'Innocenzo Pontillo',
+    type: GUEST_TYPE.ACTIVITY,
+  },
+  {
+    name: 'Maria Mugnolo',
+    type: GUEST_TYPE.ACTIVITY,
+  },
+  {
     name: 'Anna Albanese',
     description:`Anna Albanese è nata a Tricarico il 31 ottobre 1988. Dopo la laurea triennale in Lettere Moderne presso l’Università di Basilicata nel 2012 consegue la magistrale in Storia e Civiltà Europee presso lo stesso dipartimento nel 2014, con una tesi intitolata “La politica delle arti all’interno dei Regimi Dittatoriali”.
     Nel 2015 si specializza in produzione e distribuzione cinematografica. Organizza diverse estemporanee di pittura e mostre collettive, tra le quali spicca il primo memoriale in onore del grafico pubblicitario Orlando Orlandi.
