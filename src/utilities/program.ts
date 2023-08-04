@@ -120,14 +120,17 @@ export default [
       },
       {
         time: '16:00 - 17:30',
-        title: `Talk "Music is Power! L'Hiphop lucano 50 anni dopo"<br/>
-        Presentazione  Libri Hip Opera Foundation<br/>
-        Accredito Battle Rap con montepremi<br/>`,
+        title: `Talk: Hip Hop Power! Un momento di condivisione e di confronto sui temi sociali che hanno caratterizzato i 50 anni di questa fantastica Cultura.`,
+        location: 'Botanical Stage',
+      },
+      {
+        time: '17:30',
+        title: `Termine iscrizione Battle Rap Freestyle`,
         location: 'Botanical Stage',
       },
       {
         time: '18:00 - 20:00',
-        title: `La Potenza del Rap - Battle Rap Freestyle`,
+        title: `La Potenza del Rap - Battle Rap Freestyle *il comitato organizzativo invita tutti i partecipanti ad essere puntuali al fine di ripettare il programma del festival`, 
         location: 'Botanical Stage',
       },
       {
@@ -246,7 +249,7 @@ export default [
         starring: [GuestsList.find((g) => g.name === 'Giacomo Castana')],
       },
       {
-        time: '10:30',
+        time: '10:00',
         title: `Toccare il futuro con Mano - La Tecnologia che unisce`,
         starring: [GuestsList.find((g) => g.name === 'Guido Gioioso')],
         location: 'Botanical Stage',
@@ -269,6 +272,12 @@ export default [
       },
       {
         time: '16:00',
+        title: `Creare una rivoluzione culturale dove non c'è mai stata`,
+        location: 'Botanical Stage',
+        starring: [GuestsList.find((g) => g.name === 'Mauro Acito')],
+      },
+      {
+        time: '17:00',
         title: `Immaginare il futuro partendo dal passato`,
         starring: [
           GuestsList.find((g) => g.name === 'Anna Albanese'),
@@ -278,13 +287,7 @@ export default [
         location: 'Botanical Stage',
       },
       {
-        time: '17:30',
-        title: `Creare una rivoluzione culturale dove non c'è mai stata`,
-        location: 'Botanical Stage',
-        starring: [GuestsList.find((g) => g.name === 'Mauro Acito')],
-      },
-      {
-        time: '19:00',
+        time: '18:00',
         title: `L'arte è un crimine, il crimine è un arte<br/>
         Presentazione del libro "Chi ha polvere spara"`,
         type: 'Presentazione',

@@ -160,6 +160,13 @@ const Index = () => {
             width={200}
           />
         </a>
+        <StaticImage
+            layout="constrained"
+            src="../../../images/partners/turbostudio.webp"
+            className={styles.logo}
+            alt="Turbo Studio - Sky"
+            width={150}
+          />
       </ShowOnView>
       <Heading text="Music Partner" />
       <ShowOnView className={styles.wrap}>
