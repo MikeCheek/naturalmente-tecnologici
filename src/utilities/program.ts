@@ -249,7 +249,7 @@ export default [
         starring: [GuestsList.find((g) => g.name === 'Giacomo Castana')],
       },
       {
-        time: '10:30',
+        time: '10:00',
         title: `Toccare il futuro con Mano - La Tecnologia che unisce`,
         starring: [GuestsList.find((g) => g.name === 'Guido Gioioso')],
         location: 'Botanical Stage',
@@ -272,6 +272,12 @@ export default [
       },
       {
         time: '16:00',
+        title: `Creare una rivoluzione culturale dove non c'è mai stata`,
+        location: 'Botanical Stage',
+        starring: [GuestsList.find((g) => g.name === 'Mauro Acito')],
+      },
+      {
+        time: '17:00',
         title: `Immaginare il futuro partendo dal passato`,
         starring: [
           GuestsList.find((g) => g.name === 'Anna Albanese'),
@@ -281,13 +287,7 @@ export default [
         location: 'Botanical Stage',
       },
       {
-        time: '17:30',
-        title: `Creare una rivoluzione culturale dove non c'è mai stata`,
-        location: 'Botanical Stage',
-        starring: [GuestsList.find((g) => g.name === 'Mauro Acito')],
-      },
-      {
-        time: '19:00',
+        time: '18:00',
         title: `L'arte è un crimine, il crimine è un arte<br/>
         Presentazione del libro "Chi ha polvere spara"`,
         type: 'Presentazione',
