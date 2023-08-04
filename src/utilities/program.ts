@@ -199,11 +199,7 @@ export default [
       },
       {
         time: '15:30',
-        title: `IMMAGINARE UN FUTURO RURALE ECO TRANSFEMMINISTA<br/>
-                a cura di Rocco Pisilli e CAT<br/>
-        LABORATORIO DA PRENOTARE - 60 posti disponibili<br/>
-        PRENOTAZIONE EFFETTUABILE VIA EMAIL DOPO AVER<br/>
-        CONFERMATO`,
+        title: `IMMAGINARE UN FUTURO RURALE ECO TRANSFEMMINISTA`,
         starring: [GuestsList.find((g) => g.name === 'Pisilli Rocco')],
       },
       {
