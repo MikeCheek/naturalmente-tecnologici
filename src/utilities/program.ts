@@ -120,14 +120,17 @@ export default [
       },
       {
         time: '16:00 - 17:30',
-        title: `Talk "Music is Power! L'Hiphop lucano 50 anni dopo"<br/>
-        Presentazione  Libri Hip Opera Foundation<br/>
-        Accredito Battle Rap con montepremi<br/>`,
+        title: `Talk: Hip Hop Power! Un momento di condivisione e di confronto sui temi sociali che hanno caratterizzato i 50 anni di questa fantastica Cultura.`,
+        location: 'Botanical Stage',
+      },
+      {
+        time: '17:30',
+        title: `Termine iscrizione Battle Rap Freestyle`,
         location: 'Botanical Stage',
       },
       {
         time: '18:00 - 20:00',
-        title: `La Potenza del Rap - Battle Rap Freestyle`,
+        title: `La Potenza del Rap - Battle Rap Freestyle *il comitato organizzativo invita tutti i partecipanti ad essere puntuali al fine di ripettare il programma del festival`, 
         location: 'Botanical Stage',
       },
       {
