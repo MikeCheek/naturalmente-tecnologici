@@ -12,7 +12,7 @@ import NavBar from '../NavBar';
 import { ModalContext } from '../../../utilities/useModalContext';
 import Modal from '../../atoms/Modal';
 
-const Index = ({ children, insects = true }: LayoutProps) => {
+const Index = ({ children, insects = true, onlyLogo = false }: LayoutProps) => {
   const [banner, setBanner] = useState<boolean>(false);
 
   const [opened, setOpened] = useState<boolean>(false);
@@ -50,7 +50,7 @@ const Index = ({ children, insects = true }: LayoutProps) => {
       }}
     >
       <div id="top">
-        <NavBar />
+        <NavBar onlyLogo={onlyLogo} />
         {banner ? <CookieBanner close={() => setBanner(false)} /> : <></>}
         {insects ? <FlyingInsects /> : <></>}
         <Modal

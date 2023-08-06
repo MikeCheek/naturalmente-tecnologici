@@ -6,8 +6,9 @@ import X from '../../../assets/x.svg';
 import Navigation from '../../molecules/Navigation';
 import { Link } from 'gatsby';
 import { isBrowser } from '../../../utilities/browser';
+import NavBarProps from './index.types';
 
-const Index = () => {
+const Index = ({ onlyLogo = false }: NavBarProps) => {
   const [opened, setOpened] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(true);
   const [shadow, setShadow] = useState<boolean>(false);
@@ -62,15 +63,21 @@ const Index = () => {
           }}
         />
       </Link>
-      <Navigation opened={opened} onClick={() => setOpened(false)} />
-      {opened ? (
-        <span onClick={() => setOpened(false)} className={styles.menuIcon}>
-          <X width="25" height="25" fill="var(--nt-green)" />
-        </span>
+      {onlyLogo ? (
+        <></>
       ) : (
-        <span onClick={() => setOpened(true)} className={styles.menuIcon}>
-          <Hamburger width="28" height="20" />
-        </span>
+        <>
+          <Navigation opened={opened} onClick={() => setOpened(false)} />
+          {opened ? (
+            <span onClick={() => setOpened(false)} className={styles.menuIcon}>
+              <X width="25" height="25" fill="var(--nt-green)" />
+            </span>
+          ) : (
+            <span onClick={() => setOpened(true)} className={styles.menuIcon}>
+              <Hamburger width="28" height="20" />
+            </span>
+          )}
+        </>
       )}
     </header>
   );
