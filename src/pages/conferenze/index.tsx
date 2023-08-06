@@ -1,12 +1,15 @@
 import React from 'react';
-import Seo from '../components/atoms/Seo';
-import Layout from '../components/organisms/Layout';
-import ConferenceBody from '../components/atoms/ConferenceBody';
+import Layout from '../../components/organisms/Layout';
+import ConferenceBody from '../../components/atoms/ConferenceBody';
+import Seo from '../../components/atoms/Seo';
 
-type Data = {
+export type FData = {
   questions: string[];
   createdAt: number;
   id: string;
+  startAt: number;
+  endAt: number;
+  password: string;
 }[];
 
 const Conferenze = () => {

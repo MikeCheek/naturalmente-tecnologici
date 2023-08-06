@@ -2,21 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { query, collection, orderBy, onSnapshot, limit } from 'firebase/firestore';
 import { db } from '../../../firebase/config';
 import Loading from '../../molecules/Loading';
-
-type Data = {
-  questions: string[];
-  createdAt: number;
-  id: string;
-}[];
+import * as styles from './index.module.scss';
+import { FData } from '../../../pages/conferenze';
 
 const ConferenceBody = () => {
-  const [data, setData] = useState<Data>();
+  const [data, setData] = useState<FData>();
 
   useEffect(() => {
     const q = query(collection(db, 'question-answer'), orderBy('createdAt', 'desc'), limit(50));
 
     const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
-      const fetchedMessages: Data = [];
+      const fetchedMessages: FData = [];
       QuerySnapshot.forEach((doc) => {
         //@ts-ignore
         fetchedMessages.push({ ...doc.data(), id: doc.id });
@@ -30,7 +26,7 @@ const ConferenceBody = () => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.wrap}>
       <h1>Conferenze</h1>
       <p>Domande e info su conferenze real time</p>
       {data ? (
