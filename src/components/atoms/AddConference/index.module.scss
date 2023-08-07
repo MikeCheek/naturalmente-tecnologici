@@ -19,6 +19,9 @@
 }
 
 .inputDate {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid var(--nt-white);
   color: var(--nt-white);
   z-index: 99;
 }

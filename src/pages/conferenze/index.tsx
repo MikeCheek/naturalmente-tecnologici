@@ -7,6 +7,7 @@ export type FData = {
   questions: string[];
   createdAt: number;
   id: string;
+  title: string;
   startAt: number;
   endAt: number;
   password: string;

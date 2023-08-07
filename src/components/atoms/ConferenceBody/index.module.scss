@@ -9,3 +9,26 @@
     color: var(--nt-orange);
   }
 }
+
+.conference {
+  border-radius: 5px;
+  border: 2px solid var(--nt-white);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 200ms ease, transform 200ms ease;
+  position: relative;
+  min-width: 200px;
+  &:hover {
+    border-color: var(--nt-orange);
+    color: var(--nt-orange);
+    transform: scale(1.05);
+  }
+}
+
+.date {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 15px;
+  opacity: 0.8;
+}

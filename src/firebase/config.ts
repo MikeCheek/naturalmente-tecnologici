@@ -16,3 +16,5 @@ let firebase_app = getApps().length === 0 ? initializeApp(firebaseConfig) : getA
 export default firebase_app;
 
 export const db = getFirestore(firebase_app);
+
+export const questionDbName = 'question-answer';

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { query, collection, orderBy, onSnapshot, limit } from 'firebase/firestore';
-import { db } from '../../../firebase/config';
+import { db, questionDbName } from '../../../firebase/config';
 import Loading from '../../molecules/Loading';
 import * as styles from './index.module.scss';
 import { FData } from '../../../pages/conferenze';
@@ -9,7 +9,7 @@ const ConferenceBody = () => {
   const [data, setData] = useState<FData>();
 
   useEffect(() => {
-    const q = query(collection(db, 'question-answer'), orderBy('createdAt', 'desc'), limit(50));
+    const q = query(collection(db, questionDbName), orderBy('createdAt', 'desc'), limit(50));
 
     const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
       const fetchedMessages: FData = [];
@@ -33,8 +33,9 @@ const ConferenceBody = () => {
         data.length > 0 ? (
           <div>
             {data.map((conference, key) => (
-              <p key={key}>
-                {conference.id} {new Date(conference.createdAt).toLocaleString()}
+              <p key={key} className={styles.conference}>
+                {conference.title}
+                <span className={styles.date}>{new Date(conference.createdAt).toLocaleDateString()}</span>
               </p>
             ))}
           </div>
