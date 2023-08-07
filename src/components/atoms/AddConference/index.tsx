@@ -4,6 +4,7 @@ import * as styles from './index.module.scss';
 import Button from '../Button';
 import { db, questionDbName } from '../../../firebase/config';
 import { addDoc, collection } from 'firebase/firestore';
+import { encryptData } from '../../../utilities/crypto';
 
 type ValuePiece = Date | null;
 
@@ -25,10 +26,10 @@ const Index = () => {
           title: title,
           startAt: startDate.getTime(),
           endAt: endDate.getTime(),
-          password: password,
+          password: encryptData(password),
         })
           .then(() => {
-            alert('Aggiunto');
+            alert('Conferenza creata!');
           })
           .catch((e) => {
             alert('Error');
