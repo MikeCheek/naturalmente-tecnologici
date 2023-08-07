@@ -125,7 +125,7 @@ export default [
       },
       {
         time: '17:30',
-        title: `Termine iscrizione Battle Rap Freestyle`,
+        title: `Apertura delle iscrizioni alla  Battle Rap Freestyle`,
         location: 'Botanical Stage',
       },
       {
