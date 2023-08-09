@@ -199,17 +199,13 @@ export default [
       },
       {
         time: '15:30',
-        title: `IMMAGINARE UN FUTURO RURALE ECO TRANSFEMMINISTA`,
-        starring: [GuestsList.find((g) => g.name === 'Pisilli Rocco')],
-      },
-      {
-        time: '16:00',
         title: `Legende nei Boschi - Tra creature magiche e Briganti<br/>
         A cura di Alla Scoperta di Grassano`,
       },
       {
         time: '17:00',
-        title: 'Experience',
+        title: `IMMAGINARE UN FUTURO RURALE`,
+        starring: [GuestsList.find((g) => g.name === 'Pisilli Rocco')],
       },
       {
         time: '21:00',

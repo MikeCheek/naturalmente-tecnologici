@@ -78,6 +78,11 @@ export default [
     field: ['Volevo solo aprire un museo', 'Museo TAM'],
   },
   {
+    name: 'Thelucagna',
+    type: GUEST_TYPE.TALK,
+    field: ['Meme', 'Inteligenza Artificiale'],
+  },
+  {
     name: 'Barbara Siebenlist Palomar',
     type: GUEST_TYPE.ACTIVITY,
     imagePosition: 'center 80%',
