@@ -17,7 +17,35 @@ export interface TimelineItem {
 const GuestsList = guests.map((g) => ({ ...g, href: '/programma/#' + g.image }));
 const OrganizersList = info.map((o) => ({ ...o, href: '/chi-siamo/#comitato-organizzativo' }));
 
-export default [
+export const nowActive = () => {
+  const today = new Date();
+  const [day, hours, minutes] = [today.getDate(), today.getHours(), today.getMinutes()];
+  const timeNow = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
+  const current = program.filter((e) => e.numberDay === day);
+  if (current.length > 0)
+    return (current[0].timeline as Event[])
+      .filter((event) => {
+        const time = event.time.split('-');
+        if (time.length > 1) {
+          const eventStarts = time[0].replace(' ', '');
+          const eventEnds = time[1].replace(' ', '');
+          return eventStarts <= timeNow && timeNow < eventEnds;
+        }
+        return time[0] < timeNow;
+      })
+      .reverse();
+  return null;
+};
+
+export type Event = {
+  time: string;
+  title: string;
+  type: string;
+  location: string;
+  starring: any[];
+};
+
+const program = [
   {
     numberDay: 10,
     day: 'Giovedì 10 Agosto',
@@ -130,7 +158,7 @@ export default [
       },
       {
         time: '18:00 - 20:00',
-        title: `La Potenza del Rap - Battle Rap Freestyle *il comitato organizzativo invita tutti i partecipanti ad essere puntuali al fine di ripettare il programma del festival`, 
+        title: `La Potenza del Rap - Battle Rap Freestyle *il comitato organizzativo invita tutti i partecipanti ad essere puntuali al fine di ripettare il programma del festival`,
         location: 'Botanical Stage',
       },
       {
@@ -316,3 +344,5 @@ export default [
     ],
   },
 ];
+
+export default program;
