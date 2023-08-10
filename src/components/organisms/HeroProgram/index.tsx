@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import * as styles from './index.module.scss';
 import Collina from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
 import Timer from '../../molecules/Timer';
 import { Link } from 'gatsby';
+import { Event, nowActive } from '../../../utilities/program';
 
 const Index = () => {
-  const [showTimer, setShowTimer] = useState<boolean>(true);
+  const [now, setNow] = useState<Event[] | null>(null);
+
+  useEffect(() => {
+    const e = nowActive();
+    setNow(e);
+  }, []);
 
   return (
     <div className={styles.wrap}>
@@ -22,8 +28,17 @@ const Index = () => {
             CONCERTI, CONFERENZE, WORKSHOP E CAMPING
           </h1>
         </span>
-        {showTimer ? (
-          <Timer date={new Date('August 10, 2023 16:00:00')} shutOffTimer={() => setShowTimer(false)} />
+        {now != null ? (
+          <div className={styles.inProgressWrap}>
+            <h3>Attività in corso</h3>
+            {now.map((e) => (
+              <div className={styles.inProgress}>
+                <p className={styles.timeProgress}>{e.time}</p>
+                <p>{e.title}</p>
+                <span className={styles.badge}>{e.location}</span>
+              </div>
+            ))}
+          </div>
         ) : (
           <></>
         )}
