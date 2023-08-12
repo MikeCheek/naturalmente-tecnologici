@@ -32,8 +32,12 @@ const Index = () => {
           <div className={styles.inProgressWrap}>
             <h3>Attività in corso</h3>
             <div className={styles.miniWrap}>
-              {now.map((e) => (
-                <div className={styles.inProgress}>
+              {now.map((e, key) => (
+                <div
+                  key={key}
+                  className={styles.inProgress}
+                  onClick={() => document.getElementById('cronoprogramma')?.scrollIntoView()}
+                >
                   <p className={styles.timeProgress}>{e.time}</p>
                   <p dangerouslySetInnerHTML={{ __html: e.title }}></p>
                   <span className={styles.badge}>{e.location}</span>
