@@ -31,13 +31,15 @@ const Index = () => {
         {now != null ? (
           <div className={styles.inProgressWrap}>
             <h3>Attività in corso</h3>
-            {now.map((e) => (
-              <div className={styles.inProgress}>
-                <p className={styles.timeProgress}>{e.time}</p>
-                <p>{e.title}</p>
-                <span className={styles.badge}>{e.location}</span>
-              </div>
-            ))}
+            <div className={styles.miniWrap}>
+              {now.map((e) => (
+                <div className={styles.inProgress}>
+                  <p className={styles.timeProgress}>{e.time}</p>
+                  <p dangerouslySetInnerHTML={{ __html: e.title }}></p>
+                  <span className={styles.badge}>{e.location}</span>
+                </div>
+              ))}
+            </div>
           </div>
         ) : (
           <></>
