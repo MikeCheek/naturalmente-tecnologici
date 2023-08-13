@@ -8,13 +8,6 @@ import { Link } from 'gatsby';
 import { Event, nowActive } from '../../../utilities/program';
 
 const Index = () => {
-  const [now, setNow] = useState<Event[] | null>(null);
-
-  useEffect(() => {
-    const e = nowActive();
-    setNow(e);
-  }, []);
-
   return (
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
@@ -28,26 +21,6 @@ const Index = () => {
             CONCERTI, CONFERENZE, WORKSHOP E CAMPING
           </h1>
         </span>
-        {now != null ? (
-          <div className={styles.inProgressWrap}>
-            <h3>Attività in corso</h3>
-            <div className={styles.miniWrap}>
-              {now.map((e, key) => (
-                <div
-                  key={key}
-                  className={styles.inProgress}
-                  onClick={() => document.getElementById('cronoprogramma')?.scrollIntoView()}
-                >
-                  <p className={styles.timeProgress}>{e.time}</p>
-                  <p dangerouslySetInnerHTML={{ __html: e.title }}></p>
-                  <span className={styles.badge}>{e.location}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <></>
-        )}
       </div>
       <div className={styles.orangeFlowers}>
         <Flower color="var(--nt-orange)" />
