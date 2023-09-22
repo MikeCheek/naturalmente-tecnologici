@@ -15,7 +15,7 @@ const IndexPage = () => {
       <Theme />
       <NaturalmenteTecnologici />
       <LastEdition />
-      <FastActions />
+      {/* <FastActions /> */}
     </Layout>
   );
 };

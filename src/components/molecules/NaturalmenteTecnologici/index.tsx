@@ -21,7 +21,7 @@ const Index = () => {
             <Heading text={item.name} smaller={key != 0} />
             <SingleSection>
               <p dangerouslySetInnerHTML={{ __html: item.text }}></p>
-              {item.eventbrite ? (
+              {/* {item.eventbrite ? (
                 <Button
                   text={'Riserva il tuo posto qui!'}
                   href={'#biglietti'}
@@ -30,7 +30,7 @@ const Index = () => {
                 ></Button>
               ) : (
                 <></>
-              )}
+              )} */}
             </SingleSection>
           </div>
         ))}
