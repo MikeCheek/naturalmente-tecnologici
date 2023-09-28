@@ -1,22 +1,22 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import Layout from '../components/organisms/Layout';
 import HeroAbout from '../components/organisms/HeroAbout';
-import Loading from '../components/molecules/Loading';
+// import Loading from '../components/molecules/Loading';
 import Seo from '../components/atoms/Seo';
 import Syskrack from '../components/molecules/Syskrack';
 import { images as syskrackImages } from '../utilities/syskrack';
 import { images as organizersImages } from '../utilities/organizers';
 
 const ChiSiamo = () => {
-  const Organizers = lazy(() => import('../components/organisms/Organizers'));
+  // const Organizers = lazy(() => import('../components/organisms/Organizers'));
 
   return (
     <Layout>
       <HeroAbout />
       <Syskrack />
-      <Suspense fallback={<Loading />}>
+      {/* <Suspense fallback={<Loading />}>
         <Organizers />
-      </Suspense>
+      </Suspense> */}
     </Layout>
   );
 };

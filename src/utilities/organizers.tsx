@@ -8,7 +8,7 @@ export const info = [
   },
   {
     name: 'Giuseppe Becci',
-    role: 'Project Manager',
+    // role: 'Project Manager',
     linkedin: 'https://www.linkedin.com/in/giuseppe-becci-3b8402171/',
     image: 1,
   },
@@ -36,7 +36,7 @@ export const info = [
   { name: 'Marouan Elkoura', role: 'Sponsor Specialist', image: 5 },
   { name: 'Grazia Muro', role: 'Segretaria', image: 6 },
   { name: 'Teodosio Santagata', role: 'Direttore Artistico', image: 7 },
-  { name: 'Giovanni Restaino', role: 'Direttore Artistico',  image: 8 },
+  { name: 'Giovanni Restaino', role: 'Direttore Artistico', image: 8 },
 ];
 
 export const images = () => {
