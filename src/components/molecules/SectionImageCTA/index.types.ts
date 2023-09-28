@@ -1,5 +1,5 @@
 export interface SectionImageCTAProps {
-  image: React.ReactElement;
+  imageOrVideo: React.ReactElement | HTMLVideoElement;
   title?: string;
   text: string;
   buttonText: string;

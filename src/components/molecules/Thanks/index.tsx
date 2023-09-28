@@ -86,11 +86,10 @@ const Index = () => {
   return (
     <div ref={ref} onClick={(e) => onClick(e)} className={styles.wrap}>
       <SingleSection brighter>
-        <h2>
-          GRAZIE DI CUORE
-          <br />
-          CI VEDIAMO AD AGOSTO 2024
-        </h2>
+        <span>
+          <h2>GRAZIE DI CUORE!</h2>
+          <h3>CI VEDIAMO AD AGOSTO 2024</h3>
+        </span>
       </SingleSection>
     </div>
   );

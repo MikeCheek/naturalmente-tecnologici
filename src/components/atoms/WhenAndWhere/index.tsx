@@ -1,11 +1,13 @@
 import React from 'react';
 import Heading from '../Heading';
 import * as styles from './index.module.scss';
-import { StaticImage } from 'gatsby-plugin-image';
+// import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../../molecules/SectionImageCTA';
 import ShowOnView from '../ShowOnView';
 import Button from '../Button';
 import { coords, mapsLink } from '../../../utilities/howToReach';
+import BoscoCoste from '../../../assets/bosco_coste_low.mp4';
+import BoscoCoste1 from '../../../assets/bosco_coste_1_low.mp4';
 
 const Index = () => {
   return (
@@ -44,15 +46,19 @@ const Index = () => {
           mediterranea e di specie floristiche e faunistiche molto rare.`}
         buttonText={'Scopri la location'}
         buttonHref={mapsLink}
-        image={
-          <StaticImage
-            quality={80}
-            alt="Bosco coste"
-            src="../../../images/location/bosco-coste.jpg"
-            layout="constrained"
-            width={700}
+        imageOrVideo={
+          <video
             height={500}
-          />
+            muted
+            autoPlay
+            controls={false}
+            loop
+            playsInline
+            poster="../../../images/location/bosco-1-low.JPG"
+          >
+            <source src={BoscoCoste} type="video/mp4" />
+            Your browser doesn't support video tag
+          </video>
         }
       />
       <SectionImageCTA
@@ -63,15 +69,27 @@ const Index = () => {
           natura nel sentiero didattico.`}
         buttonText={'Scopri la location'}
         buttonHref={mapsLink}
-        image={
-          <StaticImage
-            quality={80}
-            alt="Bosco coste"
-            src="../../../images/location/bosco-2.JPG"
-            layout="constrained"
-            width={700}
+        imageOrVideo={
+          <video
             height={500}
-          />
+            muted
+            autoPlay
+            controls={false}
+            loop
+            playsInline
+            poster="../../../images/location/bosco-2-low.JPG"
+          >
+            <source src={BoscoCoste1} type="video/mp4" />
+            Your browser doesn't support video tag
+          </video>
+          // <StaticImage
+          //   quality={80}
+          //   alt="Bosco coste"
+          //   src="../../../images/location/bosco-2.JPG"
+          //   layout="constrained"
+          //   width={700}
+          //   height={500}
+          // />
         }
         reversed
       />

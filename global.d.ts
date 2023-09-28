@@ -6,6 +6,8 @@ declare module '*.svg' {
   export default ReactComponent;
 }
 
+declare module '*.mp4';
+
 declare type LinkType = 'internal' | 'external';
 
 declare type SVG = React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
