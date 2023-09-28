@@ -8,6 +8,7 @@ export const info = [
   },
   {
     name: 'Giuseppe Becci',
+    role: '',
     // role: 'Project Manager',
     linkedin: 'https://www.linkedin.com/in/giuseppe-becci-3b8402171/',
     image: 1,

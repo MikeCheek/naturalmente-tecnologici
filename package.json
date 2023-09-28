@@ -18,6 +18,7 @@
     "@fontsource/cairo": "^4.5.13",
     "@fontsource/poppins": "^4.5.10",
     "@types/react-slick": "^0.23.10",
+    "canvas-confetti": "^1.6.1",
     "gatsby": "^5.8.0",
     "gatsby-plugin-canonical-urls": "^5.9.0",
     "gatsby-plugin-google-tagmanager": "^5.9.0",
@@ -40,6 +41,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.6.1",
     "@types/js-cookie": "^3.0.3",
     "@types/node": "^18.15.8",
     "@types/react": "^18.0.29",

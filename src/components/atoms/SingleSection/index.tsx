@@ -9,6 +9,7 @@ const Index = ({ children, brighter = false, showOnView = true, fullWidth = fals
       className={styles.wrap}
       style={{
         borderColor: brighter ? 'var(--nt-orange)' : 'var(--nt-transparent-orange)',
+        borderWidth: brighter ? 5 : 3,
       }}
     >
       <div className={styles.outShadow}></div>

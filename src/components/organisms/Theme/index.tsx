@@ -14,7 +14,9 @@ const Index = () => {
   return (
     <div className={styles.bigWrap}>
       <Heading text="Tema" />
-      <SingleSection brighter>
+      <SingleSection
+      // brighter
+      >
         <h3>
           RIPRENDIAMOCI IL FUTURO.
           <br />

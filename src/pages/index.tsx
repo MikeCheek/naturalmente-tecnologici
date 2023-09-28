@@ -7,11 +7,13 @@ import Theme from '../components/organisms/Theme';
 import LastEdition from '../components/molecules/LastEdition';
 import 'react-circular-progressbar/dist/styles.css';
 import FastActions from '../components/molecules/FastActions';
+import Thanks from '../components/molecules/Thanks';
 
 const IndexPage = () => {
   return (
     <Layout>
       <HeroHome />
+      <Thanks />
       <Theme />
       <NaturalmenteTecnologici />
       <LastEdition />
