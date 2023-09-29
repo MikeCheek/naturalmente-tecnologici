@@ -14,10 +14,20 @@
 
 .sectionImage {
   @extend .image;
-  width: auto;
+  max-width: 80vw;
+  max-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  video {
+    max-height: 30vh;
+  }
   @media screen and (min-width: '768px') {
     max-width: 40vw;
     max-height: 50vh;
+    video {
+      max-height: 50vh;
+    }
   }
 }
 
