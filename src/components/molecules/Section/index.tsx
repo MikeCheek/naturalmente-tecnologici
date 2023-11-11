@@ -15,6 +15,7 @@ const Index = ({
   buttonHref,
   buttonInternal = true,
   buttonTitle,
+  ButtonIcon,
 }: SectionProps) => {
   const [on, setOn] = useState<boolean>(false);
   const [ref, inView, _entry] = useInView({
@@ -48,7 +49,13 @@ const Index = ({
             <h3>{title}</h3>
             <p dangerouslySetInnerHTML={{ __html: text }}></p>
             {buttonHref && buttonTitle ? (
-              <Button text={buttonTitle} title={buttonTitle} href={buttonHref} internal={buttonInternal} />
+              <Button text={buttonTitle} title={buttonTitle} href={buttonHref} internal={buttonInternal}>
+                {ButtonIcon ? (
+                  <ButtonIcon width={20} height={20} fill="var(--nt-orange)" className={styles.buttonIcon} />
+                ) : (
+                  <></>
+                )}
+              </Button>
             ) : (
               <></>
             )}

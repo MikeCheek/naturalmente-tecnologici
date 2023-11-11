@@ -1,10 +1,11 @@
 import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
-import { NavigationProps } from './index.types';
 import { links } from '../../../utilities/navigation';
 import MultipleLinks from '../../atoms/MultipleLinks';
 import { isBrowser } from '../../../utilities/browser';
+import { NavigationProps } from './index.types';
+import Play from '../../../assets/play.svg';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
@@ -16,23 +17,23 @@ const Index = ({ opened, onClick }: NavigationProps) => {
 
   const linkElements = links.map((link, key) => {
     if (link.hide) return;
-    if (link.multiple)
-      return (
-        <MultipleLinks name={link.name} key={key} active={pathname?.split('/')[1] === link.name.toLowerCase()}>
-          {link.links.map((l, key) => (
-            <Link
-              key={key}
-              className={styles.link}
-              style={removeSlashes(pathname) === removeSlashes(l.to) ? { color: 'var(--nt-orange)' } : {}}
-              to={l.to}
-              onClick={onClick}
-              title={l.name}
-            >
-              {l.name}
-            </Link>
-          ))}
-        </MultipleLinks>
-      );
+    // if (link.multiple)
+    //   return (
+    //     <MultipleLinks name={link.name} key={key} active={pathname?.split('/')[1] === link.name.toLowerCase()}>
+    //       {link.links.map((l, key) => (
+    //         <Link
+    //           key={key}
+    //           className={styles.link}
+    //           style={removeSlashes(pathname) === removeSlashes(l.to) ? { color: 'var(--nt-orange)' } : {}}
+    //           to={l.to}
+    //           onClick={onClick}
+    //           title={l.name}
+    //         >
+    //           {l.name}
+    //         </Link>
+    //       ))}
+    //     </MultipleLinks>
+    //   );
     return (
       <Link
         key={key}
@@ -47,6 +48,19 @@ const Index = ({ opened, onClick }: NavigationProps) => {
     );
   });
 
+  const button = (mobile?: boolean) => (
+    <a
+      title="Contattaci"
+      target="_blank"
+      rel="noopener noreferrer"
+      href={'https://youtube.com/playlist?list=PLUPBawFanl496dZgv1Qyf5IWaPYvUOu0W&si=1MYjrDeLdQHmtPMY'}
+      className={mobile ? styles.buttonMobile : styles.button}
+      onClick={onClick}
+    >
+      <Play width={20} height={20} fill="var(--nt-green)" /> TALKS
+    </a>
+  );
+
   return (
     <>
       <div
@@ -55,16 +69,12 @@ const Index = ({ opened, onClick }: NavigationProps) => {
       >
         <nav className={styles.linksMobile}>
           {linkElements}
-          <Link title="Collabora" to={'/collabora/sostienici'} className={styles.buttonMobile} onClick={onClick}>
-            COLLABORA
-          </Link>
+          {button(true)}
         </nav>
       </div>
       <div className={styles.wrapDesktop}>
         <nav className={styles.links}>{linkElements}</nav>
-        <Link title="Collabora" to={'/collabora/sostienici'} className={styles.button} onClick={onClick}>
-          COLLABORA
-        </Link>
+        {button()}
       </div>
     </>
   );

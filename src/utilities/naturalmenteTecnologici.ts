@@ -1,3 +1,4 @@
+import Twitch from '../assets/twitch.svg';
 export const info = [
   {
     title: 'CONCERTI',
@@ -33,7 +34,7 @@ export const info = [
     Tu e la tua arte siete nel posto giusto!`,
     svgStyle: { transform: 'rotate(94.72deg)' },
     cta: 'PERFORMA',
-    ctaLink: '/collabora/art-partner',
+    ctaLink: '/contattaci/art-partner',
   },
   {
     title: 'STREAMING',
@@ -41,7 +42,9 @@ export const info = [
     Segui tutte le dirette streaming sui nostri canali Twitch e Discord.<br/><br/>   
     Tutto il festival sarà arricchito da momenti musicali e podcast in diretta dalle aree del festival.<br/>
     Scopri il nostro mondo virtuale!`,
-    cta: 'VAI AI CANALI',
+    cta: 'TWITCH',
+    ctaLink: 'https://www.twitch.tv/syskracktv',
+    ctaIcon: Twitch,
   },
 ];
 

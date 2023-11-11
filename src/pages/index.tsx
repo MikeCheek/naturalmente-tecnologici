@@ -14,7 +14,7 @@ const IndexPage = () => {
     <Layout>
       <HeroHome />
       <Thanks />
-      <Theme />
+      {/* <Theme /> */}
       <NaturalmenteTecnologici />
       <LastEdition />
       {/* <FastActions /> */}

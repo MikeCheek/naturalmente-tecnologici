@@ -1,21 +1,21 @@
 import React from 'react';
-import { CollaboraData } from '../../utilities/collaboraData';
+import { ContattaciData } from '../../utilities/contattaciData';
 import * as styles from './index.module.scss';
 import Seo from '../../components/atoms/Seo';
 import { HeadProps } from 'gatsby';
 import Layout from '../../components/organisms/Layout';
-import HeroPartecipa from '../../components/organisms/HeroCollabora';
 import Heading from '../../components/atoms/Heading';
 import ShowOnView from '../../components/atoms/ShowOnView';
+import HeroContattaci from '../../components/organisms/HeroContattaci';
 
 interface IndexProps {
-  pageContext: CollaboraData;
+  pageContext: ContattaciData;
 }
 
 const Index = ({ pageContext }: IndexProps) => {
   return (
     <Layout>
-      <HeroPartecipa heading={pageContext.name} />
+      <HeroContattaci heading={pageContext.name} />
       <ShowOnView className={styles.head}>
         <h4 dangerouslySetInnerHTML={{ __html: pageContext.description }}></h4>
       </ShowOnView>
@@ -37,11 +37,11 @@ const Index = ({ pageContext }: IndexProps) => {
 export default Index;
 
 export const Head = ({ location, pageContext }: HeadProps) => {
-  const context = pageContext as CollaboraData;
+  const context = pageContext as ContattaciData;
 
   return (
     <Seo
-      title={context.name + ' - Collabora'}
+      title={context.name + ' - Contattaci'}
       pathname={location.pathname}
       description={context.description}
       structuredData

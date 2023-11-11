@@ -6,4 +6,5 @@ export interface ButtonProps {
   href?: string;
   internal?: boolean;
   bigger?: boolean;
+  children?: React.ReactNode;
 }

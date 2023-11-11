@@ -49,6 +49,7 @@ const Index = () => {
             svgStyle={item.svgStyle}
             buttonHref={item.ctaLink}
             buttonTitle={item.cta}
+            ButtonIcon={item.ctaIcon}
           />
         );
       })}

@@ -5,14 +5,16 @@ import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
 import SearchPeople from '../../../assets/search-people.svg';
-import HeroPartecipaProps from './index.types';
-import Heading from '../../atoms/Heading';
 
-const Index = ({ heading }: HeroPartecipaProps) => {
+const Index = () => {
   return (
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
-        <Heading text={heading} main textWhite showOnView={false} />
+        <h1 className={styles.heading}>
+          CONTATTACI
+          <br />
+          SIAMO QUI PER TE
+        </h1>
         <SearchPeople width={300} className={styles.svg} fill="var(--nt-dark-green)" />
         <div className={styles.svgWrap}>
           <div className={styles.colliWrap}>

@@ -39,7 +39,7 @@ const Index = () => {
           Syskrack è una community glocale <br/>(globale + locale), connessa tramite internet, tramite che agisce localmente attraverso luoghi fisici, i laboratori.`}
         buttonHref="https://syskrack.org"
         buttonText="SCOPRI L'ASSOCIAZIONE"
-        image={image0}
+        imageOrVideo={image0}
       />
       <SectionImageCTA
         title="LA NOSTRA FILOSOFIA"
@@ -49,7 +49,7 @@ const Index = () => {
         Crediamo fortemente che chi, in un modo o nell'altro, abbia un privilegio debba metterlo a disposizione di chi non lo ha per per far sì che possa acquisirlo. `}
         buttonHref="https://syskrack.org"
         buttonText="SCOPRI L'ASSOCIAZIONE"
-        image={image1}
+        imageOrVideo={image1}
         reversed
       />
     </>

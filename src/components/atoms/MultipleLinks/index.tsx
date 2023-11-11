@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import { MultipleLinksProps } from './index.types';
 import * as styles from './index.module.scss';
 import Down from '../../../assets/down.svg';
+import { Link } from 'gatsby';
 
 const Index = ({ name, active = false, children }: MultipleLinksProps) => {
   const [show, setShow] = useState<boolean>(false);
   return (
     <div className={show ? styles.wrapShown : styles.wrap}>
-      <p
+      <Link
         className={styles.name}
         onClick={() => setShow((curr) => !curr)}
         style={active ? { color: 'var(--nt-orange)' } : {}}
+        to="/contattaci"
         // onMouseEnter={() => setShow(true)}
       >
         <span>{name}</span>
@@ -22,7 +24,7 @@ const Index = ({ name, active = false, children }: MultipleLinksProps) => {
             fill: active ? 'var(--nt-orange)' : '',
           }}
         />
-      </p>
+      </Link>
       <div
         className={styles.links}
         // onMouseLeave={() => setShow(false)}

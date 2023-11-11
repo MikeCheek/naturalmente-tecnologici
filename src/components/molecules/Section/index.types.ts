@@ -7,4 +7,5 @@ export interface SectionProps {
   buttonHref?: string;
   buttonTitle?: string;
   buttonInternal?: boolean;
+  ButtonIcon?: SVG;
 }

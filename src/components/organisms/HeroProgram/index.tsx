@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import * as styles from './index.module.scss';
 import Collina from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
-import Timer from '../../molecules/Timer';
 import { Link } from 'gatsby';
-import { Event, nowActive } from '../../../utilities/program';
 
 const Index = () => {
   return (
