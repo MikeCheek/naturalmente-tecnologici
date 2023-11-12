@@ -20,7 +20,7 @@ const contattaciData: ContattaciData[] = [
     Aspettiamo con impazienza di conoscerti e di creare insieme qualcosa di unico!`,
   },
   {
-    name: 'Sono un volontario',
+    name: 'Volontariato',
     pathName: 'volontario',
     description: `Grazie per il tuo interesse a diventare parte integrante della nostra famiglia di volontari e volontarie al festival!<br/>
     Collabora con un team dinamico, contribuisci al successo del festival e crea ricordi indelebili insieme a una comunità appassionata.<br/>
