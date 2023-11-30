@@ -178,7 +178,7 @@ const config: GatsbyConfig = {
           ];
           languages.forEach((lang: string) => {
             if (lang === defaultLanguage) return;
-            links.push({ lang, siteUrl: `${siteUrl}/${lang}${originalPath}` });
+            links.push({ lang, siteUrl: `${url}/${lang}${originalPath}` });
           });
           return {
             siteUrl,
