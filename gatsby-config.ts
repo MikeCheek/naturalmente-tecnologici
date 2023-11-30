@@ -1,12 +1,11 @@
 import type { GatsbyConfig } from 'gatsby';
-import { I18NextContext } from 'gatsby-plugin-react-i18next/dist/types';
 
-const url = `https://nt.syskrack.org`;
+const siteUrl = `https://nt.syskrack.org`;
 
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Naturalmente Tecnologici 2023 - NT`,
-    siteUrl: url,
+    siteUrl: siteUrl,
     description: `L'evento si propone di essere occasione di ritrovo della community di Syskrack nonché strumento di disseminazione culturale sul territorio.`,
     keywords: 'naturalmente, tecnologici, evento, futuro',
   },
@@ -62,15 +61,15 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: url,
+        host: siteUrl,
         policy: [{ userAgent: '*', allow: '/' }],
-        sitemap: url + '/sitemap-index.xml',
+        sitemap: siteUrl + '/sitemap-index.xml',
       },
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: url,
+        siteUrl: siteUrl,
       },
     },
     {
@@ -111,7 +110,7 @@ const config: GatsbyConfig = {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `it`],
         defaultLanguage: `it`,
-        siteUrl: url,
+        siteUrl: siteUrl,
         // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
         trailingSlash: 'always',
         // you can pass any i18next options
@@ -169,20 +168,27 @@ const config: GatsbyConfig = {
           }
         }
         `,
-        serialize: (node: any) => {
+        serialize: (node: {
+          context: {
+            i18n: {
+              defaultLanguage: string;
+              languages: string[];
+              originalPath: string;
+            };
+          };
+        }) => {
           const { languages, originalPath, defaultLanguage } = node.context.i18n;
-          console.log(node, languages, originalPath, defaultLanguage);
-          const siteUrl = url + originalPath;
+          const url = siteUrl + originalPath;
           const links = [
-            { lang: defaultLanguage, siteUrl },
-            { lang: 'x-default', siteUrl },
+            { lang: defaultLanguage, url },
+            { lang: 'x-default', url },
           ];
           languages.forEach((lang: string) => {
             if (lang === defaultLanguage) return;
-            links.push({ lang, siteUrl: `${url}/${lang}${originalPath}` });
+            links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
           });
           return {
-            siteUrl,
+            url,
             changefreq: 'daily',
             priority: originalPath === '/' ? 1.0 : 0.7,
             links,
