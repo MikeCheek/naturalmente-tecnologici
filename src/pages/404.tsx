@@ -1,22 +1,23 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Seo from '../components/atoms/Seo';
 import Layout from '../components/organisms/Layout';
 import * as styles from '../styles/NotFound.module.scss';
 import Button from '../components/atoms/Button';
 import SingleSection from '../components/atoms/SingleSection';
-import Thanks from '../components/molecules/Thanks';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { graphql } from 'gatsby';
 
 const NotFoundPage = () => {
+  const { t } = useTranslation();
+
   return (
     <Layout>
       <div className={styles.wrap}>
         <SingleSection showOnView={false} fullWidth>
-          <h1>Syskrack not found</h1>
+          <h1>{t('404Title')}</h1>
         </SingleSection>
-        <p>Mi sa che sei fuori rotta!</p>
-        <Button href="/" text="Torna alla home" title="Torna alla home" internal />
-        <Thanks />
+        <p>{t('404Paragraph')}</p>
+        <Button href="/" text={t('404cta')} title={t('404cta')} internal />
       </div>
     </Layout>
   );
@@ -25,3 +26,17 @@ const NotFoundPage = () => {
 export const Head = () => <Seo title="404" description="Error 404, Syskrack not found" noIndex />;
 
 export default NotFoundPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { ns: { in: ["common", "404"] }, language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

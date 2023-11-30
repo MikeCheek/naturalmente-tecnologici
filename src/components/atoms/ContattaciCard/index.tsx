@@ -5,8 +5,10 @@ import Button from '../Button';
 import X from '../../../assets/x.svg';
 import Heading from '../Heading';
 import ShowOnView from '../ShowOnView';
+import { useTranslation } from 'react-i18next';
 
 const Index = ({ title, text, link, opened, minimized, open, close, style, children }: ContattaciCardProps) => {
+  const { t } = useTranslation();
   return (
     <ShowOnView className={opened ? styles.cardOpened : minimized ? styles.cardMinimized : styles.card} style={style}>
       {opened ? (
@@ -21,7 +23,7 @@ const Index = ({ title, text, link, opened, minimized, open, close, style, child
       <p className={styles.text} dangerouslySetInnerHTML={{ __html: text }}></p>
 
       <div className={styles.button}>
-        <Button text="Contattaci" title="Contattaci" onClick={open} />
+        <Button text={t('ButtonText')} title={t('ButtonText')} onClick={open} />
       </div>
 
       {children}

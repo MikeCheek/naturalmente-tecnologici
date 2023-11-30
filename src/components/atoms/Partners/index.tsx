@@ -10,8 +10,10 @@ import MarinoBus from '../../../assets/partner/marino-bus.svg';
 import Katzuma from '../../../assets/partner/katzuma.svg';
 import LaPotenzaDellArte from '../../../assets/partner/lapotenzadellarte.svg';
 import ShowOnView from '../ShowOnView';
+import { useTranslation } from 'react-i18next';
 
 const Index = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.partners}>
       <Heading text="Powered By" />
@@ -19,12 +21,7 @@ const Index = () => {
         <a href="https://www.syskrack.org/" rel="noopener noreferrer" title="Syskrack" target="_blank">
           <Syskrack className={styles.logo} width={150} />
         </a>
-        <h4>
-          I nostri partner selezionati investono nella cultura e nello sviluppo delle persone e del territorio e
-          accettano la nostra sfida collettiva.
-          <br />
-          Offriamo un'esperienza di impatto positivo e di risonanza nella community e sul luogo.
-        </h4>
+        <h4 dangerouslySetInnerHTML={{ __html: t('PartnersText') }}></h4>
       </ShowOnView>
       <Heading text="Location Partner" />
       <ShowOnView className={styles.wrap}>
@@ -161,12 +158,12 @@ const Index = () => {
           />
         </a>
         <StaticImage
-            layout="constrained"
-            src="../../../images/partners/turbostudio.webp"
-            className={styles.logo}
-            alt="Turbo Studio - Sky"
-            width={150}
-          />
+          layout="constrained"
+          src="../../../images/partners/turbostudio.webp"
+          className={styles.logo}
+          alt="Turbo Studio - Sky"
+          width={150}
+        />
       </ShowOnView>
       <Heading text="Music Partner" />
       <ShowOnView className={styles.wrap}>

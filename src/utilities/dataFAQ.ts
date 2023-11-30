@@ -4,7 +4,7 @@ export const mail = ({ subject, text }: { subject?: string; text?: string }): st
   }">${text ?? 'direttivo@syskrack.org'}</a>`;
 };
 
-export default [
+export const faqIT = [
   {
     title: 'Residenza Artistica',
     data: [
@@ -217,3 +217,5 @@ export default [
     ],
   },
 ];
+
+export const faqEN = [];

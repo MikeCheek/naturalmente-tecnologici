@@ -5,12 +5,14 @@ import CookieBannerProps from './index.types';
 import Down from '../../../assets/down.svg';
 import Cookies from 'js-cookie';
 import { CookiesNames, options } from '../../../utilities/cookies';
+import { useTranslation } from 'react-i18next';
 
 const Index = ({ close }: CookieBannerProps) => {
   const [showOptions, setShowOptions] = useState<boolean>(false);
   const [marketing, setMarketing] = useState<string>('allow');
   const [statistics, setStatistics] = useState<string>('allow');
   const [info, setInfo] = useState<number>();
+  const { t } = useTranslation();
 
   const handleAcceptCookie = (denyAll: boolean = false) => {
     Cookies.set(CookiesNames.functional, 'allow', options);
@@ -44,22 +46,17 @@ const Index = ({ close }: CookieBannerProps) => {
       <div className={styles.banner}>
         <X className={styles.close} width={20} height={20} onClick={() => handleAcceptCookie(true)} />
         <div className={styles.content}>
-          Questo sito utilizza cookie tecnici per il proprio funzionamento e per l'erogazione dei relativi servizi; per
-          tali cookie non è richiesto il tuo consenso. Potrebbero, inoltre, essere installati cookie analitici (propri e
-          di terza parte) per comprendere meglio il tuo utilizzo di questo sito e cookie di profilazione (propri e di
-          terze parti) per inviarti pubblicità in linea con le tue preferenze; per accettare l'utilizzo di questi cookie
-          clicca su “Accetta tutti”, mentre cliccando sul tasto “X” precludi la loro installazione; se, invece, vuoi
-          operare una scelta analitica su specifici cookie{' '}
+          {t('CookiesText')}{' '}
           <span className={styles.link} style={{ display: 'contents' }} onClick={openOptions}>
-            personalizza le tue preferenze
+            {t('CookiesTextCta')}
           </span>
           .
           {showOptions ? (
             <div className={styles.options}>
               <div className={styles.option}>
-                <p>Funzionale</p>
+                <p>{t('CookiesFunc')}</p>
                 <div className={styles.functional}>
-                  <p>Sempre attivo</p>
+                  <p>{t('CookiesFuncStatus')}</p>
                   <span className={styles.checkboxChecked}></span>
                   <Down
                     className={styles.down}
@@ -70,17 +67,9 @@ const Index = ({ close }: CookieBannerProps) => {
                   />
                 </div>
               </div>
-              {info === 0 ? (
-                <p className={styles.info}>
-                  L'archiviazione tecnica o l'accesso sono strettamente necessari al fine legittimo di consentire l'uso
-                  di un servizio specifico esplicitamente richiesto dall'abbonato o dall'utente, o al solo scopo di
-                  effettuare la trasmissione di una comunicazione su una rete di comunicazione elettronica.
-                </p>
-              ) : (
-                <></>
-              )}
+              {info === 0 ? <p className={styles.info}>{t('CookiesFuncDesc')}</p> : <></>}
               <div className={styles.option}>
-                <p>Statistiche</p>
+                <p>{t('CookiesStat')}</p>
                 <div className={styles.actions}>
                   <span
                     className={isAllowed(statistics) ? styles.checkboxChecked : styles.checkbox}
@@ -95,18 +84,9 @@ const Index = ({ close }: CookieBannerProps) => {
                   />
                 </div>
               </div>
-              {info === 1 ? (
-                <p className={styles.info}>
-                  L'archiviazione tecnica o l'accesso che viene utilizzato esclusivamente per scopi statistici anonimi.
-                  Senza un mandato di comparizione, una conformità volontaria da parte del vostro Fornitore di Servizi
-                  Internet, o ulteriori registrazioni da parte di terzi, le informazioni memorizzate o recuperate per
-                  questo scopo da sole non possono di solito essere utilizzate per l'identificazione.
-                </p>
-              ) : (
-                <></>
-              )}
+              {info === 1 ? <p className={styles.info}>{t('CookiesStatDesc')}</p> : <></>}
               <div className={styles.option}>
-                <p>Marketing</p>
+                <p>{t('CookiesMark')}</p>
                 <div className={styles.actions}>
                   <span
                     className={isAllowed(marketing) ? styles.checkboxChecked : styles.checkbox}
@@ -121,15 +101,7 @@ const Index = ({ close }: CookieBannerProps) => {
                   />
                 </div>
               </div>
-              {info === 2 ? (
-                <p className={styles.info}>
-                  L'archiviazione tecnica o l'accesso sono necessari per creare profili di utenti per inviare
-                  pubblicità, o per tracciare l'utente su un sito web o su diversi siti web per scopi di marketing
-                  simili.
-                </p>
-              ) : (
-                <></>
-              )}
+              {info === 2 ? <p className={styles.info}>{t('CookiesMarkDesc')}</p> : <></>}
             </div>
           ) : (
             <></>
@@ -138,7 +110,7 @@ const Index = ({ close }: CookieBannerProps) => {
 
         <div className={styles.buttons}>
           <button className={styles.acceptButton} onClick={() => handleAcceptCookie()}>
-            {showOptions ? 'Salva preferenze' : 'Accetta tutti'}
+            {showOptions ? t('CookiesSave') : t('CookiesAccept')}
           </button>
         </div>
         <div className={styles.links}>

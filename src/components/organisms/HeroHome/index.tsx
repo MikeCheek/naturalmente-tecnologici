@@ -4,20 +4,23 @@ import * as styles from './index.module.scss';
 import BigBranch from '../../../assets/big-branch.svg';
 import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina.svg';
-import FastActions from '../../molecules/FastActions';
 import Flower from '../../atoms/Flower';
+import { useTranslation } from 'react-i18next';
 
 const Index = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.wrap}>
       <BigBranch width="555" height="282" className={styles.bigBranch} />
       <div className={styles.headWrap}>
-        <a className={styles.date} href="#quando-e-dove" title="Quando e dove">
+        <a className={styles.date} href="#quando-e-dove" title={t('WhenWhere')}>
           Bosco Coste, Grottole(MT)
-          <br /> 11&gt;13 Agosto 2023
+          <br /> {t('Date')}
         </a>
         <h1 className={styles.heading}>
-          RI-PRENDIAMOCI IL FUTURO <br />3 GIORNI DI MUSICA, ARTE, INNOVAZIONE TECNOLOGICA E SOCIALE
+          {t('Title')} <br />
+          {t('Subtitle')}
         </h1>
         <div className={styles.orangeFlowers}>
           <Flower color="var(--nt-orange)" />

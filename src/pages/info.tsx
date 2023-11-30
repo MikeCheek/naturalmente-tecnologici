@@ -5,6 +5,9 @@ import Seo from '../components/atoms/Seo';
 import Contacts from '../components/molecules/Contacts';
 import Faq from '../components/organisms/Faq';
 import HowToReach from '../components/atoms/HowToReach';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const Info = () => {
   return (
@@ -17,13 +20,27 @@ const Info = () => {
   );
 };
 
-export const Head = () => (
-  <Seo
-    title="Info"
-    pathname="/info/"
-    description="Tutto ciò che devi sapere sul festival e molto altro. Per qualunque collaborazione, intervista, supporto o informazione puoi contattarci a direttivo@syskrack.org"
-    structuredData
-  />
-);
+export const Head = () => {
+  const { t } = useTranslation();
+  const { language } = useI18next();
+
+  return (
+    <Seo lang={language} title={t('SEOTitle')} pathname="/info/" description={t('SEODescription')} structuredData />
+  );
+};
 
 export default Info;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { ns: { in: ["common", "info"] }, language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

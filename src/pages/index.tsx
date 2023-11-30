@@ -8,6 +8,9 @@ import LastEdition from '../components/molecules/LastEdition';
 import 'react-circular-progressbar/dist/styles.css';
 import FastActions from '../components/molecules/FastActions';
 import Thanks from '../components/molecules/Thanks';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const IndexPage = () => {
   return (
@@ -22,13 +25,25 @@ const IndexPage = () => {
   );
 };
 
-export const Head = () => (
-  <Seo
-    title="Home"
-    pathname="/"
-    description="Un evento di 3 giorni in una location mozzafiato, selvaggia, tra le colline materane tra camping, laboratori, conferenze e incontro tra persone di ogni dove."
-    structuredData
-  />
-);
+export const Head = () => {
+  const { t } = useTranslation();
+  const { language } = useI18next();
+
+  return <Seo lang={language} title={t('SEOTitle')} pathname="/" description={t('SEODescription')} structuredData />;
+};
 
 export default IndexPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { ns: { in: ["common", "index"] }, language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

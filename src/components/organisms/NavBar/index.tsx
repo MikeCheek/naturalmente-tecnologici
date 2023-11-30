@@ -6,12 +6,15 @@ import X from '../../../assets/x.svg';
 import Navigation from '../../molecules/Navigation';
 import { Link } from 'gatsby';
 import { isBrowser } from '../../../utilities/browser';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const Index = () => {
   const [opened, setOpened] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(true);
   const [shadow, setShadow] = useState<boolean>(false);
   const [on, setOn] = useState<boolean>(false);
+  const { language } = useI18next();
+  const removeLang = (text: string) => (language != 'it' ? text.substring(3) : text);
 
   let prev = 0;
 
@@ -45,7 +48,7 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    if (isBrowser() && window.location.pathname === '/') setOn(true);
+    if (isBrowser() && removeLang(window.location.pathname) === '/') setOn(true);
   }, []);
 
   return (

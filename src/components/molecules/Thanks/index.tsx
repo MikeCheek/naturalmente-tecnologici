@@ -3,6 +3,7 @@ import confetti from 'canvas-confetti';
 import * as styles from './index.module.scss';
 import SingleSection from '../../atoms/SingleSection';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 
 const COLORS = ['#025300', '#014900', '#002400', '#0a5908', '#e98a15', '#e98a1560', '#fdfdff'];
 
@@ -29,6 +30,8 @@ const Index = () => {
   });
 
   const duration = 3 * 1000;
+
+  const { t } = useTranslation();
 
   const onClick = (e: React.MouseEvent) => {
     const x = e.clientX / window.innerWidth;
@@ -87,8 +90,8 @@ const Index = () => {
     <div ref={ref} onClick={(e) => onClick(e)} className={styles.wrap}>
       <SingleSection brighter>
         <span>
-          <h2>GRAZIE DI CUORE!</h2>
-          <h3>CI VEDIAMO AD AGOSTO 2024</h3>
+          <h2>{t('ThanksTitle')}</h2>
+          <h3>{t('ThanksSubTitle')}</h3>
         </span>
       </SingleSection>
     </div>

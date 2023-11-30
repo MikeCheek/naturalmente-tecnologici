@@ -33,7 +33,7 @@
 .wrapDesktop {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   width: 100%;
   margin-right: 35px;
@@ -112,11 +112,12 @@
 
 .button {
   @include styled.buttonFull;
-  margin-top: -10px;
+  // margin-top: -10px;
   color: var(--nt-green) !important;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
   justify-content: center;
+  margin-right: 30px;
 }

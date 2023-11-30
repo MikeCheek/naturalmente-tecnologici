@@ -5,14 +5,75 @@ import Heading from '../../atoms/Heading';
 import Bug from '../../../assets/bug.svg';
 import Insects from '../../../assets/insects.svg';
 import Section from '../Section';
-import { info, whatIs } from '../../../utilities/naturalmenteTecnologici';
 import SingleSection from '../../atoms/SingleSection';
-import Button from '../../atoms/Button';
-import { Eventbrite } from '../../../utilities/tickets';
 import HeardOn from '../../atoms/HeardOn';
 import WhenAndWhere from '../../atoms/WhenAndWhere';
+import { useTranslation } from 'react-i18next';
+import Twitch from '../../../assets/twitch.svg';
 
 const Index = () => {
+  const { t } = useTranslation();
+
+  const whatIs = [
+    {
+      name: t('WhatIsName1'),
+      text: t('WhatIsText1'),
+      big: true,
+    },
+    {
+      name: t('WhatIsName2'),
+      text: t('WhatIsText2'),
+      eventbrite: true,
+    },
+    {
+      name: t('WhatIsName3'),
+      text: t('WhatIsText3'),
+      eventbrite: true,
+    },
+    {
+      name: t('WhatIsName4'),
+      text: t('WhatIsText4'),
+      big: true,
+    },
+  ];
+
+  const info = [
+    {
+      title: t('InfoTitle1'),
+      text: t('InfoText1'),
+      svgStyle: { transform: 'rotate(94.72deg)' },
+      // cta: 'ASSICURATI IL PASS',
+      // ctaLink: '#biglietti',
+    },
+    {
+      title: t('InfoTitle2'),
+      text: t('InfoText2'),
+      // cta: 'RISERVA IL TUO POSTO',
+      // ctaLink: '#biglietti',
+    },
+    {
+      title: t('InfoTitle3'),
+      text: t('InfoText3'),
+      // cta: 'PRENDINE PARTE',
+      // ctaLink: '#biglietti',
+      // svgStyle: { transform: 'rotateY(180deg)' },
+    },
+    {
+      title: t('InfoTitle4'),
+      text: t('InfoText4'),
+      svgStyle: { transform: 'rotate(94.72deg)' },
+      cta: t('InfoCta4'),
+      ctaLink: '/contattaci/art-partner',
+    },
+    {
+      title: t('InfoTitle5'),
+      text: t('InfoText5'),
+      cta: t('InfoCta5'),
+      ctaLink: 'https://www.twitch.tv/syskracktv',
+      ctaIcon: Twitch,
+    },
+  ];
+
   return (
     <div className={styles.wrap}>
       <div className={styles.singleSectionsWrap}>
@@ -21,23 +82,13 @@ const Index = () => {
             <Heading text={item.name} smaller={key != 0} />
             <SingleSection>
               <p dangerouslySetInnerHTML={{ __html: item.text }}></p>
-              {/* {item.eventbrite ? (
-                <Button
-                  text={'Riserva il tuo posto qui!'}
-                  href={'#biglietti'}
-                  internal
-                  title={'Riserva il tuo posto qui!'}
-                ></Button>
-              ) : (
-                <></>
-              )} */}
             </SingleSection>
           </div>
         ))}
       </div>
       <HeardOn />
       <WhenAndWhere />
-      <Heading text="Cosa faremo" />
+      <Heading text={t('WhatHeading')} />
       {info.map((item, key) => {
         return (
           <Section

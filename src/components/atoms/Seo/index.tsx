@@ -3,7 +3,7 @@ import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../utilities/useSiteMetadata';
 import { links } from '../../../utilities/navigation';
 import { DefaultTicketProps, info as tickets } from '../../../utilities/tickets';
-import dataFAQ from '../../../utilities/dataFAQ';
+import { faqIT as dataFAQ } from '../../../utilities/dataFAQ';
 import guests from '../../../utilities/guests';
 import { removeHTMLTags } from '../../../utilities/sanitizer';
 
@@ -43,21 +43,22 @@ const Index = ({
       {
         '@context': 'https://www.schema.org',
         '@type': 'BreadcrumbList',
-        itemListElement: links
+        itemListElement: links(lang)
           .map((link) =>
-            link.multiple
-              ? link.links.map((l) => ({
-                  '@type': 'ListItem',
-                  position: l.position,
-                  name: l.name,
-                  item: metadata.siteUrl + l.to,
-                }))
-              : {
-                  '@type': 'ListItem',
-                  position: link.position,
-                  name: link.name,
-                  item: metadata.siteUrl + link.to,
-                }
+            // link.multiple
+            //   ? link.links.map((l) => ({
+            //       '@type': 'ListItem',
+            //       position: l.position,
+            //       name: l.name,
+            //       item: metadata.siteUrl + l.to,
+            //     }))
+            //   :
+            ({
+              '@type': 'ListItem',
+              position: link.position,
+              name: link.name,
+              item: metadata.siteUrl + link.to,
+            })
           )
           .flat(),
       },
@@ -97,13 +98,13 @@ const Index = ({
           sameAs: ['https://www.wikidata.org/wiki/Q116907424', 'https://syskrack.org/'],
         },
         performer: guests.map((guest) => ({
-          '@type': guest.speaker ? 'Organization' : 'Person',
+          '@type': guest.mentor ? 'Organization' : 'Person',
           name: guest.name,
           description: guest.description ? removeHTMLTags(guest.description) : undefined,
-          member: guest.speaker
-            ? guest.speaker.map((speaker) => ({
+          member: guest.mentor
+            ? guest.mentor.map((mentor) => ({
                 '@type': 'Person',
-                name: speaker,
+                name: mentor,
               }))
             : undefined,
         })),

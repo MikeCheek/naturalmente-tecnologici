@@ -5,15 +5,17 @@ import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
 import SearchPeople from '../../../assets/search-people.svg';
+import { useTranslation } from 'react-i18next';
 
 const Index = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
         <h1 className={styles.heading}>
-          CONTATTACI
+          {t('Title')}
           <br />
-          SIAMO QUI PER TE
+          {t('Subtitle')}
         </h1>
         <SearchPeople width={300} className={styles.svg} fill="var(--nt-dark-green)" />
         <div className={styles.svgWrap}>

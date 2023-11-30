@@ -5,8 +5,11 @@ import LogoNT from '../../../assets/logo-nt.svg';
 import { Link } from 'gatsby';
 import SocialLinks from '../SocialLinks';
 import { links } from '../../../utilities/navigation';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 
 const Index = () => {
+  const { language } = useI18next();
+  const { t } = useTranslation();
   return (
     <footer className={styles.wrap} id="footer">
       <Separator />
@@ -17,22 +20,22 @@ const Index = () => {
           </Link>
           <Link className={styles.date} to="/#quando-e-dove" title="Quando e dove">
             Bosco Coste, Grottole(MT)
-            <br /> 11&gt;13 Agosto 2023
+            <br /> {t('Date')}
           </Link>
         </div>
         <div className={styles.sitemap}>
-          <h4>Mappa del sito</h4>
+          <h4>{t('FooterMap')}</h4>
           <div className={styles.links}>
-            {links
-              .filter((l) => !l.multiple)
+            {links(language)
+              // .filter((l) => !l.multiple)
               .map((link, key) => (
                 <Link key={key} to={link.to ?? ''} title={`Vai alla pagina ${link.name}`}>
                   {link.name}
                 </Link>
               ))}
           </div>
-          <div className={styles.links}>
-            {links
+          {/* <div className={styles.links}>
+            {links(language)
               .filter((l) => l.multiple)
               .map((link) =>
                 link.links?.map((l, key) => (
@@ -41,7 +44,7 @@ const Index = () => {
                   </Link>
                 ))
               )}
-          </div>
+          </div> */}
         </div>
       </div>
       <div className={styles.bottom}>

@@ -4,9 +4,11 @@ import * as styles from './index.module.scss';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { info, images } from '../../../utilities/heardOn';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 
 const Index = () => {
   const data = images();
+  const { t } = useTranslation();
   const [ref, inView, _entry] = useInView({
     threshold: 0,
     rootMargin: '10% 0px -20% 0px',
@@ -20,7 +22,7 @@ const Index = () => {
       className={styles.wrapper}
       style={{ transform: inView ? 'none' : 'translateX(50%)', opacity: inView ? 1 : 0 }}
     >
-      <h2>CI HAI VISTO SU</h2>
+      <h2>{t('HeardOn')}</h2>
       <Slider
         dots={false}
         arrows={false}

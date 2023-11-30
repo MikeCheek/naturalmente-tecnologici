@@ -5,14 +5,17 @@ import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina.svg';
 import Flower from '../../atoms/Flower';
 import Speaking from '../../../assets/speaking.svg';
+import { useTranslation } from 'react-i18next';
 
 const Index = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
         <h1 className={styles.heading}>
-          INFO E FAQ <br />
-          TUTTO CIÒ CHE DEVI SAPERE SUL FESTIVAL
+          {t('Title')}
+          <br />
+          {t('Subtitle')}
         </h1>
         <Speaking width={600} className={styles.speaking} fill="var(--nt-dark-green)" />
         <div className={styles.svgWrap}>

@@ -4,14 +4,16 @@ import * as styles from './index.module.scss';
 import Collina from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
 import Handshake from '../../../assets/handshake.svg';
+import { useTranslation } from 'react-i18next';
 
 const Index = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
         <h1 className={styles.heading}>
-          PARTNER <br />
-          CHE INVESTONO NELLA CULTURA E NELLO SVILUPPO DELLE PERSONE
+          {t('Title')} <br />
+          {t('Subtitle')}
         </h1>
         <Handshake width={600} className={styles.svg} fill="var(--nt-dark-green)" />
       </div>

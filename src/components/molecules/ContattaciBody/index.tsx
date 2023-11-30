@@ -1,22 +1,42 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ShowOnView from '../../atoms/ShowOnView';
-import Heading from '../../atoms/Heading';
 import * as styles from './index.module.scss';
-import contattaciData from '../../../utilities/contattaciData';
 import ContattaciCard from '../../atoms/ContattaciCard';
+import { useTranslation } from 'react-i18next';
+
+export interface ContattaciData {
+  name: string;
+  description: string;
+  pathName: string;
+}
 
 const Index = () => {
   const [selected, setSelected] = useState<number>();
   const ref = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
+
+  const contattaciData: ContattaciData[] = [
+    {
+      name: t('Name1'),
+      description: t('Description1'),
+    },
+    {
+      name: t('Name2'),
+      description: t('Description2'),
+    },
+    {
+      name: t('Name3'),
+      description: t('Description3'),
+    },
+    {
+      name: t('Name4'),
+      description: t('Description4'),
+    },
+  ].map((i) => ({ ...i, pathName: i.name.toLowerCase().replace(' ', '-') }));
 
   useEffect(() => {
-    console.log(ref.current?.getBoundingClientRect());
     if (selected) ref.current?.scrollIntoView();
     //  window.scrollTo(0, -ref.current?.getBoundingClientRect().top!);
-  }, [selected]);
-
-  useEffect(() => {
-    console.log(selected);
   }, [selected]);
 
   return (

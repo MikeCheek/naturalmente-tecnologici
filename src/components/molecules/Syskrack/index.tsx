@@ -3,12 +3,14 @@ import * as styles from './index.module.scss';
 import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../SectionImageCTA';
 import Heading from '../../atoms/Heading';
+import { useTranslation } from 'react-i18next';
 
 const Index = () => {
+  const { t } = useTranslation();
   const image0 = (
     <StaticImage
       quality={80}
-      alt="Syskrack foto 1"
+      alt="Syskrack 1"
       src="../../../images/syskrack/camp0.jpg"
       layout="constrained"
       width={700}
@@ -18,7 +20,7 @@ const Index = () => {
   const image1 = (
     <StaticImage
       quality={80}
-      alt="Syskrack foto 2"
+      alt="Syskrack 2"
       src="../../../images/syskrack/camp1.jpg"
       layout="constrained"
       width={700}
@@ -29,26 +31,20 @@ const Index = () => {
   return (
     <>
       <div className={styles.heading}>
-        <Heading text="L'associazione" />
+        <Heading text={t('SysHeading')} />
       </div>
       <SectionImageCTA
-        title="CONOSCI SYSKRACK?"
-        text={`L'associazione Syskrack Giuseppe Porsia è un'associazione senza scopo di lucro con sede a Grassano nata in
-          memoria del nostro Peps, scomparso prematuramente il 5 Luglio 2013.
-          <br />
-          Syskrack è una community glocale <br/>(globale + locale), connessa tramite internet, tramite che agisce localmente attraverso luoghi fisici, i laboratori.`}
+        title={t('SysTitle1')}
+        text={t('SysText1')}
         buttonHref="https://syskrack.org"
-        buttonText="SCOPRI L'ASSOCIAZIONE"
+        buttonText={t('SysCta1')}
         imageOrVideo={image0}
       />
       <SectionImageCTA
-        title="LA NOSTRA FILOSOFIA"
-        text={`Syskrack era il nickname di Giuseppe Porsia e significa: <br/>System + Kracking = "Rompere il sistema”.
-        Come? trovando i <b><em>bug</em></b> della società per riuscire ad <b><em>hackerarla</em></b>, modificarne il comportamento, riportandolo alla consapevolezza, all'umanità, alla scienza e alla natura.
-        <br/> <br/>
-        Crediamo fortemente che chi, in un modo o nell'altro, abbia un privilegio debba metterlo a disposizione di chi non lo ha per per far sì che possa acquisirlo. `}
+        title={t('SysTitle2')}
+        text={t('SysText2')}
         buttonHref="https://syskrack.org"
-        buttonText="SCOPRI L'ASSOCIAZIONE"
+        buttonText={t('SysCta2')}
         imageOrVideo={image1}
         reversed
       />

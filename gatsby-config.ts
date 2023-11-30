@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from 'gatsby';
+import { I18NextContext } from 'gatsby-plugin-react-i18next/dist/types';
 
 const url = `https://nt.syskrack.org`;
 
@@ -16,7 +17,6 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -99,12 +99,94 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: [`en`, `it`],
+        defaultLanguage: `it`,
+        siteUrl: url,
+        // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+        trailingSlash: 'always',
+        // you can pass any i18next options
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+        pages: [
+          // {
+          //   matchPath: '/:lang?/blog/:uid',
+          //   getLanguageFromPath: true,
+          //   excludeLanguages: ['es'],
+          // },
+          // {
+          //   matchPath: '/preview',
+          //   languages: ['en'],
+          // },
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         id: 'GTM-KLQBPFW',
         includeInDevelopment: false,
         routeChangeEventName: 'ROUTE_CHANGE_EVENT',
         enableWebVitalsTracking: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        excludes: ['/**/404', '/**/404.html'],
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage(filter: {context: {i18n: {routed: {eq: false}}}}) {
+            nodes {
+              context {
+                i18n {
+                  defaultLanguage
+                  languages
+                  originalPath
+                }
+              }
+              path
+            }
+          }
+        }
+        `,
+        serialize: (node: any) => {
+          const { languages, originalPath, defaultLanguage } = node.context.i18n;
+          const siteUrl = url + originalPath;
+          const links = [
+            { lang: defaultLanguage, siteUrl },
+            { lang: 'x-default', siteUrl },
+          ];
+          languages.forEach((lang: string) => {
+            if (lang === defaultLanguage) return;
+            links.push({ lang, siteUrl: `${siteUrl}/${lang}${originalPath}` });
+          });
+          return {
+            siteUrl,
+            changefreq: 'daily',
+            priority: originalPath === '/' ? 1.0 : 0.7,
+            links,
+          };
+        },
       },
     },
   ],

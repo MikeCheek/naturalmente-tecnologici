@@ -5,9 +5,11 @@ import * as styles from './index.module.scss';
 import { Eventbrite, allBadges } from '../../../utilities/tickets';
 import Button from '../Button';
 import Badge from '../Badge';
+import { useTranslation } from 'react-i18next';
 
 const Index = ({ title, description, opened, close, price, badges }: ModalProps) => {
   const isForATicket = badges ? true : false;
+  const { t } = useTranslation();
 
   const desc = isForATicket
     ? description.replace('https://syskrack.org/associati.', '').split('.').join('.<br/>') +
@@ -39,12 +41,7 @@ const Index = ({ title, description, opened, close, price, badges }: ModalProps)
       <div className={styles.shadow}></div>
       <div className={styles.buttonWrap}>
         {isForATicket ? (
-          <Button
-            text={'RISERVA IL TUO BIGLIETTO'}
-            title={'RISERVA IL TUO BIGLIETTO'}
-            href={Eventbrite}
-            internal={false}
-          />
+          <Button text={t('ModalCta')} title={t('ModalCta')} href={Eventbrite} internal={false} />
         ) : (
           <></>
         )}

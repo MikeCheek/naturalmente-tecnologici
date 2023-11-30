@@ -3,6 +3,9 @@ import Layout from '../components/organisms/Layout';
 import HeroPartner from '../components/organisms/HeroPartner';
 import PartnerBody from '../components/molecules/PartnerBody';
 import Seo from '../components/atoms/Seo';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const Partner = () => {
   return (
@@ -13,13 +16,27 @@ const Partner = () => {
   );
 };
 
-export const Head = () => (
-  <Seo
-    title="Partner"
-    pathname="/partner/"
-    description="Selezioniamo partner che abbiano voglia di investire nella cultura e nello sviluppo delle persone e del territorio e ad accettare la nostra sfida collettiva."
-    structuredData
-  />
-);
+export const Head = () => {
+  const { t } = useTranslation();
+  const { language } = useI18next();
+
+  return (
+    <Seo lang={language} title={t('SEOTitle')} pathname="/partner/" description={t('SEODescription')} structuredData />
+  );
+};
 
 export default Partner;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { ns: { in: ["common", "partner"] }, language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
