@@ -171,6 +171,7 @@ const config: GatsbyConfig = {
         `,
         serialize: (node: any) => {
           const { languages, originalPath, defaultLanguage } = node.context.i18n;
+          console.log(node, languages, originalPath, defaultLanguage);
           const siteUrl = url + originalPath;
           const links = [
             { lang: defaultLanguage, siteUrl },
