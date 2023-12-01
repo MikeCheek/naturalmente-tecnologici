@@ -3,9 +3,7 @@ import Layout from '../components/organisms/Layout';
 import HeroPartner from '../components/organisms/HeroPartner';
 import PartnerBody from '../components/molecules/PartnerBody';
 import Seo from '../components/atoms/Seo';
-import { graphql } from 'gatsby';
-import { useTranslation } from 'react-i18next';
-import { useI18next } from 'gatsby-plugin-react-i18next';
+import { HeadProps, graphql } from 'gatsby';
 
 const Partner = () => {
   return (
@@ -16,12 +14,17 @@ const Partner = () => {
   );
 };
 
-export const Head = () => {
-  const { t } = useTranslation();
-  const { language } = useI18next();
+export const Head = ({ data, pageContext }: HeadProps) => {
+  const t = (key: string) => JSON.parse((data as any).locales.edges[1].node.data)[key] ?? key;
 
   return (
-    <Seo lang={language} title={t('SEOTitle')} pathname="/partner/" description={t('SEODescription')} structuredData />
+    <Seo
+      lang={(pageContext as any).language}
+      title={t('SEOTitle')}
+      pathname="/partner/"
+      description={t('SEODescription')}
+      structuredData
+    />
   );
 };
 

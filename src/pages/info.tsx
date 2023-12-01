@@ -5,9 +5,7 @@ import Seo from '../components/atoms/Seo';
 import Contacts from '../components/molecules/Contacts';
 import Faq from '../components/organisms/Faq';
 import HowToReach from '../components/atoms/HowToReach';
-import { graphql } from 'gatsby';
-import { useTranslation } from 'react-i18next';
-import { useI18next } from 'gatsby-plugin-react-i18next';
+import { HeadProps, graphql } from 'gatsby';
 
 const Info = () => {
   return (
@@ -20,12 +18,16 @@ const Info = () => {
   );
 };
 
-export const Head = () => {
-  const { t } = useTranslation();
-  const { language } = useI18next();
-
+export const Head = ({ data, pageContext }: HeadProps) => {
+  const t = (key: string) => JSON.parse((data as any).locales.edges[1].node.data)[key] ?? key;
   return (
-    <Seo lang={language} title={t('SEOTitle')} pathname="/info/" description={t('SEODescription')} structuredData />
+    <Seo
+      lang={(pageContext as any).language}
+      title={t('SEOTitle')}
+      pathname="/info/"
+      description={t('SEODescription')}
+      structuredData
+    />
   );
 };
 

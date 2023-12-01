@@ -19,6 +19,7 @@ const Index = ({
   images = [],
 }: SeoProps) => {
   const { metadata, featuredImage } = useSiteMetadata();
+  console.log(lang);
 
   const seo = {
     title: title && pathname != '/' ? title + ' | ' + metadata.title : metadata.title,

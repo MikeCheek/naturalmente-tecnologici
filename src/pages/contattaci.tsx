@@ -4,8 +4,6 @@ import HeroContattaci from '../components/organisms/HeroContattaci';
 import ContattaciBody from '../components/molecules/ContattaciBody';
 import { HeadProps, graphql } from 'gatsby';
 import Seo from '../components/atoms/Seo';
-import { useTranslation } from 'react-i18next';
-import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const Contattaci = () => {
   return (
@@ -18,12 +16,12 @@ const Contattaci = () => {
 
 export default Contattaci;
 
-export const Head = ({ location }: HeadProps) => {
-  const { t } = useTranslation();
-  const { language } = useI18next();
+export const Head = ({ location, data, pageContext }: HeadProps) => {
+  const t = (key: string) => JSON.parse((data as any).locales.edges[1].node.data)[key] ?? key;
+
   return (
     <Seo
-      lang={language}
+      lang={(pageContext as any).language}
       title={t('SEOTitle')}
       pathname={location.pathname}
       description={t('SEODescription')}

@@ -6,13 +6,15 @@ import Collina from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
 import SearchPeople from '../../../assets/search-people.svg';
 import { useTranslation } from 'react-i18next';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const Index = () => {
   const { t } = useTranslation();
+  const { language } = useI18next();
   return (
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
-        <h1 className={styles.heading}>
+        <h1 className={language === 'en' ? styles.headingEn : styles.heading}>
           {t('Title')}
           <br />
           {t('Subtitle')}

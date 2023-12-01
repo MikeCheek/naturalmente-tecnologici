@@ -6,9 +6,7 @@ import Seo from '../components/atoms/Seo';
 import Syskrack from '../components/molecules/Syskrack';
 import { images as syskrackImages } from '../utilities/syskrack';
 import { images as organizersImages } from '../utilities/organizers';
-import { graphql } from 'gatsby';
-import { useTranslation } from 'react-i18next';
-import { useI18next } from 'gatsby-plugin-react-i18next';
+import { HeadProps, graphql } from 'gatsby';
 
 const ChiSiamo = () => {
   // const Organizers = lazy(() => import('../components/organisms/Organizers'));
@@ -24,9 +22,8 @@ const ChiSiamo = () => {
   );
 };
 
-export const Head = () => {
-  const { t } = useTranslation();
-  const { language } = useI18next();
+export const Head = ({ data, pageContext }: HeadProps) => {
+  const t = (key: string) => JSON.parse((data as any).locales.edges[1].node.data)[key] ?? key;
   const images = syskrackImages().allFile!.edges.map(
     (image) => image.node.childImageSharp.gatsbyImageData.images.fallback.src
   );
@@ -36,7 +33,7 @@ export const Head = () => {
 
   return (
     <Seo
-      lang={language}
+      lang={(pageContext as any).language}
       title={t('SEOTitle')}
       pathname="/chi-siamo/"
       description={t('SEODescription')}

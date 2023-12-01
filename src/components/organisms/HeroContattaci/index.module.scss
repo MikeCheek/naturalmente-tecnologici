@@ -73,6 +73,16 @@
   }
 }
 
+.headingEn {
+  @extend .heading;
+  &:before {
+    width: 175px;
+    @media screen and (min-width: '768px') {
+      width: 285px;
+    }
+  }
+}
+
 .svgWrap {
   position: absolute;
   left: 0;
