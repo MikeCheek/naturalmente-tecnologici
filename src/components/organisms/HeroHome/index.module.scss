@@ -48,13 +48,14 @@
   justify-content: center;
   position: absolute;
   gap: 0;
-  right: 40px;
+  right: 10px;
   bottom: 0;
 
   // animation: 1s grow ease-out;
 
   @media screen and (min-width: '768px') {
     gap: 20px;
+    right: 40px;
   }
 
   .firstWind {
