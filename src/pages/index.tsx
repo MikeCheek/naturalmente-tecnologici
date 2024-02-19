@@ -9,15 +9,16 @@ import 'react-circular-progressbar/dist/styles.css';
 import FastActions from '../components/molecules/FastActions';
 import Thanks from '../components/molecules/Thanks';
 import { HeadProps, graphql } from 'gatsby';
+import WindShovel from '../components/atoms/WindShovel';
 
 const IndexPage = () => {
   return (
     <Layout>
       <HeroHome />
-      <Thanks />
+      {/* <Thanks /> */}
       {/* <Theme /> */}
-      <NaturalmenteTecnologici />
-      <LastEdition />
+      {/* <NaturalmenteTecnologici /> */}
+      {/* <LastEdition /> */}
       {/* <FastActions /> */}
     </Layout>
   );
