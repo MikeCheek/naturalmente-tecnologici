@@ -9,11 +9,11 @@
     animation: fly 11s infinite linear alternate;
   }
   svg {
-    width: 50px;
+    width: 40px;
     will-change: fill;
     transition: fill 800ms cubic-bezier(0.12, -0.96, 0.96, 1.97);
     @media screen and (min-width: '768px') {
-      width: 88px;
+      width: 58px;
     }
   }
 }
