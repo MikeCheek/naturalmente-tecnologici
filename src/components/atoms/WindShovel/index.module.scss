@@ -1,5 +1,5 @@
 .shovel {
-  width: 180px;
+  width: 200px;
   height: auto;
   filter: drop-shadow(-20px 10px 7px rgba(0, 0, 0, 0.25));
   overflow: visible;
@@ -7,7 +7,7 @@
     animation-duration: 10s;
   }
   @media screen and (min-width: '768px') {
-    width: 280px;
+    width: 340px;
   }
 }
 

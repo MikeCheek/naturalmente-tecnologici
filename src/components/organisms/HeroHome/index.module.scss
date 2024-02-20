@@ -3,6 +3,7 @@
 .wrap {
   display: flex;
   overflow-x: hidden;
+  overflow-y: hidden;
   flex-direction: column;
   width: 100vw;
 }
@@ -55,22 +56,21 @@
   // animation: 1s grow ease-out;
 
   @media screen and (min-width: '768px') {
-    gap: 20px;
-    right: 40px;
+    right: 30px;
   }
 
   .firstWind {
-    transform: translateY(140px) scale(0.65);
-    margin-right: -40px;
+    transform: translateY(160px) scale(0.65);
+    margin-right: -60px;
     @media screen and (min-width: '768px') {
-      transform: translateY(130px) scale(0.65);
-      margin-right: 0;
+      transform: translateY(210px) scale(0.65);
+      margin-right: -40px;
     }
   }
   .secondWind {
-    transform: translateY(80px);
+    transform: translateY(120px);
     @media screen and (min-width: '768px') {
-      transform: translateY(70px);
+      transform: translateY(150px);
     }
   }
 }
@@ -100,12 +100,12 @@
 
 .green {
   width: 100vw;
-  height: 40px;
+  height: 70px;
   z-index: 2;
   position: relative;
   background-color: var(--nt-green);
   margin-top: -8.5px;
-  margin-bottom: -30px;
+  margin-bottom: -60px;
   @media screen and (min-width: '768px') {
     height: 80px;
     margin-top: -9.5px;
