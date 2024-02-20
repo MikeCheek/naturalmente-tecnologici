@@ -1,12 +1,12 @@
 @keyframes light {
   0% {
-    stroke: var(--nt-dark-green);
+    stroke: var(--nt-dark-green) !important;
   }
   90% {
-    stroke: var(--nt-dark-green);
+    stroke: var(--nt-dark-green) !important;
   }
   100% {
-    stroke: var(--nt-transparent-orange);
+    stroke: var(--nt-transparent-orange) !important;
   }
 }
 
