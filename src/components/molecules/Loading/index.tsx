@@ -9,12 +9,16 @@ const Index = ({ noTitle = false }: LoadingProps) => {
     <div className={styles.wrap} style={noTitle ? { height: 'fit-content' } : {}}>
       {noTitle ? <></> : <Heading text="Loading" />}
       <div className={styles.insects}>
-        <Insect width={60} height={60} style={{ top: 0, left: '50%', transform: 'translateX(-50%) rotate(130deg)' }} />
-        <Insect
-          width={60}
-          height={60}
-          style={{ bottom: 0, left: '50%', transform: 'translateX(-50%) rotate(310deg)' }}
-        />
+        <div className={styles.insectWrap} style={{ top: '50%', left: '50%' }}>
+          <div style={{ transform: 'rotate(40deg)' }}>
+            <Insect width={60} height={60} />
+          </div>
+        </div>
+        <div className={styles.insectWrap} style={{ top: '50%', left: '50%', animationDelay: '1s' }}>
+          <div style={{ transform: 'rotate(40deg)' }}>
+            <Insect width={60} height={60} style={{ animationDelay: '1s' }} />
+          </div>
+        </div>
       </div>
     </div>
   );
