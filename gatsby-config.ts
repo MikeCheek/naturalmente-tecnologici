@@ -3,6 +3,9 @@ import type { GatsbyConfig } from 'gatsby';
 const siteUrl = `https://nt.syskrack.org`;
 
 const config: GatsbyConfig = {
+  flags: {
+    DEV_SSR: true,
+  },
   siteMetadata: {
     title: `Naturalmente Tecnologici 2023 - NT`,
     siteUrl: siteUrl,

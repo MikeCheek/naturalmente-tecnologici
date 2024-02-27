@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Sketch from 'react-p5';
 import p5Types from 'p5'; //Import this for typechecking and intellisense
 import Boid from './Boid';
+import loadable from '@loadable/component';
+
+const Sketch = loadable(() => import('react-p5'));
 
 const Index = () => {
   const [flock, setFlock] = useState<Boid[]>([]);

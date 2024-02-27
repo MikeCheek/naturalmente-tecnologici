@@ -3,9 +3,10 @@ import FlyingInsect from '../../atoms/FlyingInsect';
 import * as styles from './index.module.scss';
 import Flocking from '../../atoms/Flocking';
 
+const isBrowser = typeof window !== 'undefined';
+
 const Index = () => {
   // const [catched, setCatched] = useState<number>(0);
-
   // const handleClick = () => {
   //   setCatched((old) => old + 1);
   // };

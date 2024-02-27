@@ -18,7 +18,7 @@ import { GatsbyNode } from 'gatsby';
 //   });
 // };
 
-export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ actions }) => {
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ stage, loaders, actions }) => {
   const { createTypes } = actions;
   createTypes(`
     type SitePage implements Node {
@@ -35,4 +35,16 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
         routed: Boolean
     }
   `);
+  // if (stage === 'build-html' || stage === 'develop-html') {
+  //   actions.setWebpackConfig({
+  //     module: {
+  //       rules: [
+  //         {
+  //           test: /react-p5/,
+  //           use: (loaders as any).null(),
+  //         },
+  //       ],
+  //     },
+  //   });
+  // }
 };
