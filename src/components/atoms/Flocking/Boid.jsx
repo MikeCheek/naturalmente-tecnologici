@@ -11,6 +11,7 @@ class Boid extends React.Component {
     this.acceleration = p5.createVector();
     this.maxForce = 0.5;
     this.maxSpeed = 4;
+    this.opacity = 0;
   }
 
   show(
@@ -18,8 +19,10 @@ class Boid extends React.Component {
     //, img
   ) {
     // let angle = this.velocity.heading();
+    let count = p5.frameCount;
+    this.opacity = count > 255 ? 255 : count;
     p5.strokeWeight(6);
-    p5.stroke(233, 138, 21);
+    p5.stroke(233, 138, 21, this.opacity);
     p5.point(this.position.x, this.position.y);
 
     // p5.push();
@@ -123,8 +126,8 @@ class Boid extends React.Component {
     this.acceleration.add(cohesion);
 
     let mouseVelocity = this.p5.createVector(this.p5.mouseX - this.p5.pmouseX, this.p5.mouseY - this.p5.pmouseY);
-    if (this.p5.dist(this.position.x, this.position.y, mouseVelocity.x, mouseVelocity.y) < 50) {
-      this.velocity.add(mouseVelocity.mult(10));
+    if (this.p5.dist(this.position.x, this.position.y, mouseVelocity.x, mouseVelocity.y) < 150) {
+      this.velocity.add(mouseVelocity.mult(50));
     }
   }
 
