@@ -31,13 +31,13 @@ const Index = () => {
     window.addEventListener('resize', () => p5.resizeCanvas(window.innerWidth, window.innerHeight));
 
     p5.angleMode(p5.DEGREES);
-    for (let i = 0; i < (width < 768 ? 50 : 90); i++) {
+    for (let i = 0; i < (width < 768 ? 40 : 90); i++) {
       setFlock((state) => [...state, new Boid({ p5: p5 })]);
     }
   };
 
   const draw = (p5: p5Types) => {
-    p5.background(2, 83, 0, 80);
+    p5.background(2, 83, 0, 110);
 
     for (let boid of flock) {
       boid.edges();
