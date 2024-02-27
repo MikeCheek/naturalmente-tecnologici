@@ -25,18 +25,19 @@ const Index = () => {
   }, []);
 
   const setup = (p5: p5Types, canvasParentRef: HTMLCanvasElement) => {
+    const width = window.innerWidth;
     p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef);
 
     window.addEventListener('resize', () => p5.resizeCanvas(window.innerWidth, window.innerHeight));
 
     p5.angleMode(p5.DEGREES);
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < (width < 768 ? 50 : 90); i++) {
       setFlock((state) => [...state, new Boid({ p5: p5 })]);
     }
   };
 
   const draw = (p5: p5Types) => {
-    p5.background(2, 83, 0, 130);
+    p5.background(2, 83, 0, 80);
 
     for (let boid of flock) {
       boid.edges();
