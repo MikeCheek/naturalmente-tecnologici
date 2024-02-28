@@ -115,13 +115,15 @@ class Boid extends React.Component {
 
   join(boids, numNear) {
     let n = numNear * 5;
+    let count = 0;
     for (let element of boids) {
-      if (element !== this) {
+      if (element !== this && count < 3) {
         let dis = this.p5.dist(this.position.x, this.position.y, element.position.x, element.position.y);
         if (dis < this.perceptionRadius) {
           this.p5.strokeWeight(1);
           this.p5.stroke(255, 255, 255, n > 100 ? 100 : n);
           this.p5.line(this.position.x, this.position.y, element.position.x, element.position.y);
+          count++;
         }
       }
     }
