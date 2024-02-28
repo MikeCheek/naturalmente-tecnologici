@@ -10,13 +10,11 @@ import FastActions from '../components/molecules/FastActions';
 import Thanks from '../components/molecules/Thanks';
 import { HeadProps, graphql } from 'gatsby';
 import WindShovel from '../components/atoms/WindShovel';
-import Loading from '../components/molecules/Loading';
 
 const IndexPage = () => {
   return (
     <Layout>
       <HeroHome />
-      <Loading noTitle />
       {/* <Thanks /> */}
       {/* <Theme /> */}
       {/* <NaturalmenteTecnologici /> */}

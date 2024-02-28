@@ -10,7 +10,7 @@
 
 .headWrap {
   margin-left: 8%;
-  margin-top: 75px;
+  padding-top: 75px;
 
   height: calc(100vh - 75px - 60px);
   @media screen and (min-width: '768px') {
@@ -60,17 +60,17 @@
   }
 
   .firstWind {
-    transform: translateY(160px) scale(0.65);
+    transform: translateY(180px) scale(0.65);
     margin-right: -60px;
     @media screen and (min-width: '768px') {
-      transform: translateY(210px) scale(0.65);
+      transform: translateY(250px) scale(0.65);
       margin-right: -40px;
     }
   }
   .secondWind {
-    transform: translateY(120px);
+    transform: translateY(140px);
     @media screen and (min-width: '768px') {
-      transform: translateY(150px);
+      transform: translateY(190px);
     }
   }
 }
@@ -119,8 +119,9 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  opacity: 0;
 
-  animation: 2s grow ease-out;
+  // animation: 2s grow ease-out;
 
   :nth-child(1),
   :nth-child(3) {

@@ -41,11 +41,16 @@ const Index = () => {
   };
 
   const draw = (p5: p5Types) => {
-    p5.background(2, 83, 0, 110);
+    p5.background(
+      2,
+      83,
+      0 //, 110
+    );
 
     for (let boid of flock) {
       boid.edges();
       const numNear = boid.flock(flock, mults.al, mults.coh, mults.sep);
+      boid.join(flock, numNear);
       boid.update();
       boid.show(
         p5,

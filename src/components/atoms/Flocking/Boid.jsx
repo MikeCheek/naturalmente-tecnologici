@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Boid extends React.Component {
+  perceptionRadius = 60;
   constructor(props) {
     super(props);
     const { p5, key } = props;
@@ -45,13 +46,12 @@ class Boid extends React.Component {
   }
 
   align(boids) {
-    let perceptionRadius = 50;
     let steering = this.p5.createVector(0, 0);
     let total = 0;
 
     for (let other of boids) {
       let d = this.p5.dist(this.position.x, this.position.y, other.position.x, other.position.y);
-      if (other !== this && d < perceptionRadius) {
+      if (other !== this && d < this.perceptionRadius) {
         steering.add(other.velocity);
         total++;
       }
@@ -68,13 +68,12 @@ class Boid extends React.Component {
   }
 
   cohesion(boids) {
-    let perceptionRadius = 60;
     let steering = this.p5.createVector(0, 0);
     let total = 0;
 
     for (let other of boids) {
       let d = this.p5.dist(this.position.x, this.position.y, other.position.x, other.position.y);
-      if (other !== this && d < perceptionRadius) {
+      if (other !== this && d < this.perceptionRadius) {
         steering.add(other.position);
         total++;
       }
@@ -92,12 +91,11 @@ class Boid extends React.Component {
   }
 
   separation(boids) {
-    let perceptionRadius = 50;
     let steering = this.p5.createVector();
     let total = 0;
     for (let other of boids) {
       let d = this.p5.dist(this.position.x, this.position.y, other.position.x, other.position.y);
-      if (other !== this && d < perceptionRadius) {
+      if (other !== this && d < this.perceptionRadius) {
         let diff = this.p5.createVector(0, 0);
         diff.add(this.position);
         diff.sub(other.position);
@@ -115,6 +113,20 @@ class Boid extends React.Component {
     return steering;
   }
 
+  join(boids, numNear) {
+    let n = numNear * 5;
+    for (let element of boids) {
+      if (element !== this) {
+        let dis = this.p5.dist(this.position.x, this.position.y, element.position.x, element.position.y);
+        if (dis < this.perceptionRadius) {
+          this.p5.strokeWeight(1);
+          this.p5.stroke(255, 255, 255, n > 100 ? 100 : n);
+          this.p5.line(this.position.x, this.position.y, element.position.x, element.position.y);
+        }
+      }
+    }
+  }
+
   flock(boids, mulAl, mulCoh, mulSep) {
     let alignment = this.align(boids);
     let separation = this.separation(boids);
@@ -129,7 +141,8 @@ class Boid extends React.Component {
     this.acceleration.add(alignment);
     this.acceleration.add(cohesion);
 
-    if (this.p5.dist(this.position.x, this.position.y, this.p5.mouseX, this.p5.mouseY) < 150) {
+    let distBoidMouse = this.p5.dist(this.position.x, this.position.y, this.p5.mouseX, this.p5.mouseY);
+    if (distBoidMouse < 150 && distBoidMouse > 2) {
       let pointMouse = this.p5.createVector(this.p5.mouseX - this.position.x, this.p5.mouseY - this.position.y);
       if (this.p5.mouseIsPressed) this.acceleration.add(pointMouse);
       else this.acceleration.sub(pointMouse);

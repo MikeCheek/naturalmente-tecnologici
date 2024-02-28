@@ -33,7 +33,7 @@ const Index = () => {
             <WindShovel color="var(--nt-orange)" slower />
           </div>
         </div>
-        <Colli width="1440" height="185" className={styles.colli} />
+        <Colli width="1440" className={styles.colli} />
         <div className={styles.white}></div>
       </div>
       <div className={styles.wrapHill}>
