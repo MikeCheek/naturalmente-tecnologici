@@ -131,7 +131,8 @@ class Boid extends React.Component {
 
     if (this.p5.dist(this.position.x, this.position.y, this.p5.mouseX, this.p5.mouseY) < 150) {
       let pointMouse = this.p5.createVector(this.p5.mouseX - this.position.x, this.p5.mouseY - this.position.y);
-      this.acceleration.sub(pointMouse);
+      if (this.p5.mouseIsPressed) this.acceleration.add(pointMouse);
+      else this.acceleration.sub(pointMouse);
     }
 
     return res.total;
