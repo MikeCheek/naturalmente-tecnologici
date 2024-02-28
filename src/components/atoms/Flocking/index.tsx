@@ -7,19 +7,23 @@ const Sketch = loadable(() => import('react-p5'));
 
 const Index = () => {
   const [flock, setFlock] = useState<Boid[]>([]);
-  const [mults, setMults] = useState<{ al: number; coh: number; sep: number }>({ al: 1, coh: 1, sep: 1 });
+  const [mults, setMults] = useState<{ al: number; coh: number; sep: number }>({ al: 0.2, coh: 1.7, sep: 0.2 });
   // const [mySvg, setMySvg] = useState<p5Types.Image>();
 
   // const preload = (p5: p5Types) => {
   //   setMySvg(p5.loadImage('./assets/insect.svg'));
   // };
 
+  const getRandomNum = (min: number, max: number) => Math.random() * (max - min) + min;
+
+  useEffect(() => console.log(mults), [mults]);
+
   useEffect(() => {
     setInterval(() => {
       setMults({
-        al: Math.random(),
-        coh: Math.random(),
-        sep: Math.random(),
+        al: getRandomNum(0, 1),
+        coh: getRandomNum(1, 2),
+        sep: getRandomNum(0, 1),
       });
     }, 5000);
   }, []);
@@ -32,7 +36,7 @@ const Index = () => {
 
     p5.angleMode(p5.DEGREES);
     for (let i = 0; i < (width < 768 ? 40 : 90); i++) {
-      setFlock((state) => [...state, new Boid({ p5: p5 })]);
+      setFlock((state) => [...state, new Boid({ p5: p5, key: i })]);
     }
   };
 
@@ -41,10 +45,11 @@ const Index = () => {
 
     for (let boid of flock) {
       boid.edges();
-      boid.flock(flock, mults.al, mults.coh, mults.sep);
+      const numNear = boid.flock(flock, mults.al, mults.coh, mults.sep);
       boid.update();
       boid.show(
-        p5
+        p5,
+        numNear
         //, mySvg
       );
     }

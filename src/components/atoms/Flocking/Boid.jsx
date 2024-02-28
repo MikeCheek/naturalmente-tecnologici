@@ -3,7 +3,8 @@ import React from 'react';
 class Boid extends React.Component {
   constructor(props) {
     super(props);
-    const { p5 } = props;
+    const { p5, key } = props;
+    this.key = key;
     this.p5 = p5;
     this.position = p5.createVector(p5.random(p5.width), p5.random(p5.height));
     this.velocity = p5.createVector(p5.random(-2, 2), p5.random(-2, 2));
@@ -15,13 +16,15 @@ class Boid extends React.Component {
   }
 
   show(
-    p5
+    p5,
+    numNear
     //, img
   ) {
     // let angle = this.velocity.heading();
     let count = p5.frameCount;
-    this.opacity = count > 255 ? 255 : count;
-    p5.strokeWeight(6);
+    let n = 30 + numNear * 50;
+    this.opacity = count < 255 && count < n ? count : n;
+    p5.strokeWeight(6 + numNear / 2);
     p5.stroke(233, 138, 21, this.opacity);
     p5.point(this.position.x, this.position.y);
 
@@ -42,7 +45,7 @@ class Boid extends React.Component {
   }
 
   align(boids) {
-    let perceptionRadius = 25;
+    let perceptionRadius = 50;
     let steering = this.p5.createVector(0, 0);
     let total = 0;
 
@@ -65,7 +68,7 @@ class Boid extends React.Component {
   }
 
   cohesion(boids) {
-    let perceptionRadius = 70;
+    let perceptionRadius = 60;
     let steering = this.p5.createVector(0, 0);
     let total = 0;
 
@@ -85,7 +88,7 @@ class Boid extends React.Component {
       steering.limit(this.maxForce);
     }
 
-    return steering;
+    return { steering, total };
   }
 
   separation(boids) {
@@ -114,8 +117,9 @@ class Boid extends React.Component {
 
   flock(boids, mulAl, mulCoh, mulSep) {
     let alignment = this.align(boids);
-    let cohesion = this.cohesion(boids);
     let separation = this.separation(boids);
+    let res = this.cohesion(boids);
+    let cohesion = res.steering;
 
     alignment.mult(mulAl);
     cohesion.mult(mulCoh);
@@ -125,10 +129,12 @@ class Boid extends React.Component {
     this.acceleration.add(alignment);
     this.acceleration.add(cohesion);
 
-    let mouseVelocity = this.p5.createVector(this.p5.mouseX - this.p5.pmouseX, this.p5.mouseY - this.p5.pmouseY);
-    if (this.p5.dist(this.position.x, this.position.y, mouseVelocity.x, mouseVelocity.y) < 150) {
-      this.velocity.add(mouseVelocity.mult(50));
+    if (this.p5.dist(this.position.x, this.position.y, this.p5.mouseX, this.p5.mouseY) < 150) {
+      let pointMouse = this.p5.createVector(this.p5.mouseX - this.position.x, this.p5.mouseY - this.position.y);
+      this.acceleration.sub(pointMouse);
     }
+
+    return res.total;
   }
 
   edges() {
