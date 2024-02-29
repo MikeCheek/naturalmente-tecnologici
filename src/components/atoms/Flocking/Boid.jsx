@@ -1,10 +1,9 @@
 import React from 'react';
 
 class Boid extends React.Component {
-  perceptionRadius = 60;
   constructor(props) {
     super(props);
-    const { p5, key } = props;
+    const { p5, key, perceptionRadius } = props;
     this.key = key;
     this.p5 = p5;
     this.position = p5.createVector(p5.random(p5.width), p5.random(p5.height));
@@ -14,6 +13,7 @@ class Boid extends React.Component {
     this.maxForce = 0.5;
     this.maxSpeed = 4;
     this.opacity = 0;
+    this.perceptionRadius = perceptionRadius;
   }
 
   show(
@@ -25,6 +25,7 @@ class Boid extends React.Component {
     let count = p5.frameCount;
     let n = 30 + numNear * 50;
     this.opacity = count < 255 && count < n ? count : n;
+
     p5.strokeWeight(6 + numNear / 2);
     p5.stroke(233, 138, 21, this.opacity);
     p5.point(this.position.x, this.position.y);

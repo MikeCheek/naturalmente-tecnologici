@@ -7,7 +7,7 @@ const Sketch = loadable(() => import('react-p5'));
 
 const Index = () => {
   const [flock, setFlock] = useState<Boid[]>([]);
-  const [mults, setMults] = useState<{ al: number; coh: number; sep: number }>({ al: 0.2, coh: 1.7, sep: 0.2 });
+  const [mults, setMults] = useState<{ al: number; coh: number; sep: number }>({ al: 1, coh: 1.7, sep: 0.2 });
   // const [mySvg, setMySvg] = useState<p5Types.Image>();
 
   // const preload = (p5: p5Types) => {
@@ -21,7 +21,7 @@ const Index = () => {
   useEffect(() => {
     setInterval(() => {
       setMults({
-        al: getRandomNum(0, 1),
+        al: getRandomNum(1, 2),
         coh: getRandomNum(1, 2),
         sep: getRandomNum(0, 1),
       });
@@ -34,9 +34,12 @@ const Index = () => {
 
     window.addEventListener('resize', () => p5.resizeCanvas(window.innerWidth, window.innerHeight));
 
+    const isPhone = width <= 768;
+    const numBoids = isPhone ? 50 : 100;
+
     p5.angleMode(p5.DEGREES);
-    for (let i = 0; i < (width < 768 ? 40 : 90); i++) {
-      setFlock((state) => [...state, new Boid({ p5: p5, key: i })]);
+    for (let i = 0; i < numBoids; i++) {
+      setFlock((state) => [...state, new Boid({ p5: p5, key: i, perceptionRadius: numBoids / 2 })]);
     }
   };
 

@@ -28,7 +28,7 @@ const Index = () => {
         </a>
         <div className={styles.svgWrap}>
           <div className={styles.colliWrap}>
-            <Colli width="1440" height="185" className={styles.colli} fill="var(--nt-white)" />
+            <Colli width="1440" className={styles.colli} fill="var(--nt-white)" />
             <div className={styles.white}></div>
           </div>
           <div className={styles.greenFlowers}>
