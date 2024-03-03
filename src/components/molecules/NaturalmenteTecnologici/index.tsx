@@ -20,16 +20,16 @@ const Index = () => {
       text: t('WhatIsText1'),
       big: true,
     },
-    {
-      name: t('WhatIsName2'),
-      text: t('WhatIsText2'),
-      eventbrite: true,
-    },
-    {
-      name: t('WhatIsName3'),
-      text: t('WhatIsText3'),
-      eventbrite: true,
-    },
+    // {
+    //   name: t('WhatIsName2'),
+    //   text: t('WhatIsText2'),
+    //   eventbrite: true,
+    // },
+    // {
+    //   name: t('WhatIsName3'),
+    //   text: t('WhatIsText3'),
+    //   eventbrite: true,
+    // },
     {
       name: t('WhatIsName4'),
       text: t('WhatIsText4'),
@@ -63,7 +63,7 @@ const Index = () => {
       text: t('InfoText4'),
       svgStyle: { transform: 'rotate(94.72deg)' },
       cta: t('InfoCta4'),
-      ctaLink: '/contattaci/art-partner',
+      ctaLink: '/contattaci',
     },
     {
       title: t('InfoTitle5'),
@@ -87,7 +87,7 @@ const Index = () => {
         ))}
       </div>
       <HeardOn />
-      <WhenAndWhere />
+      {/* <WhenAndWhere /> */}
       <Heading text={t('WhatHeading')} />
       {info.map((item, key) => {
         return (
