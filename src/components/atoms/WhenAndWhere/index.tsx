@@ -17,27 +17,27 @@ const Index = () => {
       <Heading text={t('WhenWhere')} />
       <ShowOnView>
         <h3>
-          Basilicata, Grottole (MT)
+          BASILICATA
           <br />
           {t('Date')}
-          <br />
+          {/* <br />
           <br />
           <a rel="noopener noreferrer" target="_blank" title="Scopri la location" href={mapsLink}>
             @ Bosco Le Coste
             <b>
               <span>{coords[0]}</span> <span>{coords[1]}</span>
             </b>
-          </a>
+          </a> */}
         </h3>
       </ShowOnView>
-      <ShowOnView>
+      {/* <ShowOnView>
         <h4 dangerouslySetInnerHTML={{ __html: t('WhereLocation') }}></h4>
         <Button text={t('HowToReach')} title={t('HowToReach')} href="/info/#come-raggiungerci" internal />
-      </ShowOnView>
+      </ShowOnView> */}
       <SectionImageCTA
         text={t('LocationText1')}
-        buttonText={t('LocationCta')}
-        buttonHref={mapsLink}
+        // buttonText={t('LocationCta')}
+        // buttonHref={mapsLink}
         imageOrVideo={
           <video
             height={500}
@@ -55,8 +55,8 @@ const Index = () => {
       />
       <SectionImageCTA
         text={t('LocationText2')}
-        buttonText={t('LocationCta')}
-        buttonHref={mapsLink}
+        // buttonText={t('LocationCta')}
+        // buttonHref={mapsLink}
         imageOrVideo={
           <video
             height={500}

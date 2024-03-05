@@ -15,7 +15,7 @@ const Index = ({ imageOrVideo, text, title, buttonHref, buttonText, reversed = f
           <>{imageOrVideo}</>
         </CardImage>
         <p dangerouslySetInnerHTML={{ __html: text }}></p>
-        <Button text={buttonText} href={buttonHref} title={buttonText} />
+        {buttonText && buttonHref ? <Button text={buttonText} href={buttonHref} title={buttonText} /> : <></>}
       </ShowOnView>
       <CardImage onlyDesktop reversed={reversed} bigger>
         <>{imageOrVideo}</>

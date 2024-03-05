@@ -87,7 +87,7 @@ const Index = () => {
         ))}
       </div>
       <HeardOn />
-      {/* <WhenAndWhere /> */}
+      <WhenAndWhere />
       <Heading text={t('WhatHeading')} />
       {info.map((item, key) => {
         return (

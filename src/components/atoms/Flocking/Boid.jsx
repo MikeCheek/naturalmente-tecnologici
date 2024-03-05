@@ -23,7 +23,7 @@ class Boid extends React.Component {
   ) {
     // let angle = this.velocity.heading();
     let count = p5.frameCount;
-    let n = 30 + numNear * 50;
+    let n = 30 + numNear * 70;
     this.opacity = count < 255 && count < n ? count : n;
 
     p5.strokeWeight(6 + numNear / 2);
