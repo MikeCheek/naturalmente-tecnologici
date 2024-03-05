@@ -2,16 +2,21 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import SingleSectionProps from './index.types';
 import ShowOnView from '../ShowOnView';
+import SectionDecoration from '../../../assets/sectionDecoration.svg';
 
 const Index = ({ children, brighter = false, showOnView = true, fullWidth = false }: SingleSectionProps) => {
+  const color = brighter ? 'var(--nt-orange)' : 'var(--nt-transparent-orange)';
+
   const Section = (
     <div
       className={styles.wrap}
       style={{
-        borderColor: brighter ? 'var(--nt-orange)' : 'var(--nt-transparent-orange)',
-        borderWidth: brighter ? 5 : 3,
+        borderColor: color,
+        borderWidth: brighter ? 8 : 6,
       }}
     >
+      <SectionDecoration fill={color} className={styles.decorationUp} />
+      <SectionDecoration fill={color} className={styles.decorationDown} />
       <div className={styles.outShadow}></div>
       <div className={styles.inShadow}></div>
       {children}
