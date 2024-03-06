@@ -20,4 +20,4 @@
 
 #
 
-Sito realizzato per l'evento Naturalmente Tecnologici 11-13 Agosto 2023 a Grassano, Matera
+Sito realizzato per l'evento Naturalmente Tecnologici a Grassano (Matera)
