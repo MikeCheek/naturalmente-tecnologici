@@ -7,9 +7,7 @@ const isBrowser = typeof window !== 'undefined';
 
 const Index = () => {
   // const [catched, setCatched] = useState<number>(0);
-  // const handleClick = () => {
-  //   setCatched((old) => old + 1);
-  // };
+  // const handleClick = () => setCatched((old) => old + 1);
 
   // useEffect(() => {
   //   console.log(catched);
