@@ -3,3 +3,5 @@ const randInt = (min: number, max: number) => {
 };
 
 export default randInt;
+
+export const getRandomNum = (min: number, max: number) => Math.random() * (max - min) + min;

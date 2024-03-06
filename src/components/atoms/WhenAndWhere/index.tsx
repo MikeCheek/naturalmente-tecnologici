@@ -39,15 +39,7 @@ const Index = () => {
         // buttonText={t('LocationCta')}
         // buttonHref={mapsLink}
         imageOrVideo={
-          <video
-            height={500}
-            muted
-            autoPlay
-            controls={false}
-            loop
-            playsInline
-            poster="../../../images/location/bosco-1-low.JPG"
-          >
+          <video height={500} muted autoPlay controls={false} loop playsInline poster="./images/bosco-1-low.JPG">
             <source src={BoscoCoste} type="video/mp4" />
             Your browser doesn't support video tag
           </video>
@@ -58,15 +50,7 @@ const Index = () => {
         // buttonText={t('LocationCta')}
         // buttonHref={mapsLink}
         imageOrVideo={
-          <video
-            height={500}
-            muted
-            autoPlay
-            controls={false}
-            loop
-            playsInline
-            poster="../../../images/location/bosco-2-low.JPG"
-          >
+          <video height={500} muted autoPlay controls={false} loop playsInline poster="./images/bosco-2-low.JPG">
             <source src={BoscoCoste1} type="video/mp4" />
             Your browser doesn't support video tag
           </video>

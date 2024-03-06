@@ -60,19 +60,19 @@
   }
 
   .firstWind {
-    transform: translateY(180px) scale(0.65);
+    transform: translateY(20px) scale(0.65);
     margin-right: -60px;
     @media screen and (min-width: '768px') {
-      transform: translateY(250px) scale(0.65);
+      transform: translateY(50px) scale(0.65);
       margin-right: -40px;
     }
   }
-  .secondWind {
-    transform: translateY(140px);
-    @media screen and (min-width: '768px') {
-      transform: translateY(190px);
-    }
-  }
+  // .secondWind {
+  //   transform: translateY(40px);
+  //   @media screen and (min-width: '768px') {
+  //     transform: translateY(90px);
+  //   }
+  // }
 }
 
 .wrapHill {
@@ -166,6 +166,9 @@
   position: relative;
   @media screen and (min-width: '768px') {
     max-width: 700px;
+  }
+  @media (display-mode: fullscreen) {
+    display: none;
   }
 
   &:before {

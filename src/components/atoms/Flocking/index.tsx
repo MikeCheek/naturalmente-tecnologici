@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import p5Types from 'p5'; //Import this for typechecking and intellisense
 import Boid from './Boid';
 import loadable from '@loadable/component';
+import { getRandomNum } from '../../../utilities/randInt';
 
 const Sketch = loadable(() => import('react-p5'));
 
@@ -14,9 +15,9 @@ const Index = () => {
   //   setMySvg(p5.loadImage('./assets/insect.svg'));
   // };
 
-  const getRandomNum = (min: number, max: number) => Math.random() * (max - min) + min;
-
-  useEffect(() => console.log(mults), [mults]);
+  useEffect(() => {
+    process.env.NODE_ENV === 'development' && console.log(mults);
+  }, [mults]);
 
   useEffect(() => {
     setInterval(() => {
