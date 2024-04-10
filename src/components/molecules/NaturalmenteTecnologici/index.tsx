@@ -64,12 +64,14 @@ const Index = () => {
       svgStyle: { transform: 'rotate(94.72deg)' },
       cta: t('InfoCta4'),
       ctaLink: '/contattaci',
+      ctaInternal: true,
     },
     {
       title: t('InfoTitle5'),
       text: t('InfoText5'),
       cta: t('InfoCta5'),
       ctaLink: 'https://www.twitch.tv/syskracktv',
+      ctaInternal: false,
       ctaIcon: Twitch,
     },
   ];
@@ -100,6 +102,7 @@ const Index = () => {
             svgStyle={item.svgStyle}
             buttonHref={item.ctaLink}
             buttonTitle={item.cta}
+            buttonInternal={item.ctaInternal}
             ButtonIcon={item.ctaIcon}
           />
         );

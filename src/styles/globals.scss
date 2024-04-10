@@ -10,6 +10,13 @@
   --nt-white: #fdfdff;
 }
 
+@font-face {
+  font-family: 'Alba';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Alba'), url('/fonts/alba/ALBA____.woff') format('woff');
+}
+
 html {
   scroll-behavior: smooth;
   margin: 0;
