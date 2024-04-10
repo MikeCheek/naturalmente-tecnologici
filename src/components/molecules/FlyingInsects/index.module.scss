@@ -24,6 +24,10 @@
     color: var(--nt-orange);
   }
 
+  @media (hover: none) and (pointer: coarse) {
+    display: none;
+  }
+
   @media (display-mode: fullscreen) {
     transform: translateY(-80px);
     opacity: 0.2;

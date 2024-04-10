@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import FlyingInsect from '../../atoms/FlyingInsect';
 import * as styles from './index.module.scss';
 import Flocking from '../../atoms/Flocking';
+import detectBrowser from '../../../utilities/detectBrowser';
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -48,9 +49,13 @@ const Index = () => {
       <FlyingInsect top={50} onClick={handleClick} />
       <FlyingInsect top={70} onClick={handleClick} />
       <FlyingInsect top={20} onClick={handleClick} /> */}
-      <button className={styles.zen} onClick={toggleFullscreen}>
-        Zen Mode
-      </button>
+      {isBrowser && detectBrowser() != 'Safari' ? (
+        <button className={styles.zen} onClick={toggleFullscreen}>
+          Zen Mode
+        </button>
+      ) : (
+        <></>
+      )}
       <Flocking />
     </div>
   );
