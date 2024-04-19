@@ -17,7 +17,7 @@ const IndexPage = () => {
       <HeroHome />
       {/* <Thanks /> */}
       {/* <Theme /> */}
-      <NaturalmenteTecnologici />
+      {/* <NaturalmenteTecnologici /> RIMETTERE QUESTO QUANDO SI DEVONO RIAGGIUNGERE LE INFO */}
       {/* <LastEdition /> */}
       {/* <FastActions /> */}
     </Layout>
