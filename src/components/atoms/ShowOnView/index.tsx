@@ -5,8 +5,8 @@ import * as styles from './index.module.scss';
 
 const Index = ({ children, triggerOnce = true, className, style }: ShowOnViewProps) => {
   const [ref, inView, _entry] = useInView({
-    threshold: 0,
-    rootMargin: '5% 0px 5% 0px',
+    threshold: 0.5,
+    // rootMargin: '5% 0px 5% 0px',
     fallbackInView: true,
     triggerOnce: triggerOnce,
   });

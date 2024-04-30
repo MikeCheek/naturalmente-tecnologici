@@ -19,8 +19,8 @@ const Index = ({
 }: SectionProps) => {
   const [on, setOn] = useState<boolean>(false);
   const [ref, inView, _entry] = useInView({
-    threshold: 0,
-    rootMargin: '10% 0px -20% 0px',
+    threshold: 0.5,
+    // rootMargin: '10% 0px -20% 0px',
     fallbackInView: true,
     triggerOnce: true,
   });

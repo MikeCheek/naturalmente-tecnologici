@@ -18,8 +18,8 @@ const Index = ({
   primary,
 }: FastActionProps) => {
   const [ref, inView, _entry] = useInView({
-    threshold: 0,
-    rootMargin: '5% 0px -20% 0px',
+    threshold: 0.5,
+    // rootMargin: '5% 0px -20% 0px',
     fallbackInView: true,
     triggerOnce: true,
   });

@@ -23,8 +23,8 @@ const randomInRange = (min: number, max: number) => {
 
 const Index = () => {
   const [ref, inView, _entry] = useInView({
-    threshold: 0,
-    rootMargin: '5% 0px 5% 0px',
+    threshold: 0.5,
+    // rootMargin: '5% 0px 5% 0px',
     fallbackInView: true,
     triggerOnce: true,
   });
