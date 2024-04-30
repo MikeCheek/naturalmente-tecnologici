@@ -66,10 +66,10 @@
     border-radius: 5px;
     transform: rotate(-2deg);
     height: 35px;
-    width: 170px;
+    width: 200px;
     @media screen and (min-width: '768px') {
       height: 60px;
-      width: 275px;
+      width: 305px;
     }
   }
 }
@@ -77,9 +77,9 @@
 .headingEn {
   @extend .heading;
   &:before {
-    width: 175px;
+    width: 205px;
     @media screen and (min-width: '768px') {
-      width: 285px;
+      width: 315px;
     }
   }
 }

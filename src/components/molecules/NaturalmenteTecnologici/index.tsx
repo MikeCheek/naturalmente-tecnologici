@@ -91,7 +91,7 @@ const Index = () => {
           <VerticalSectionImage text={t('Value1')}>
             <CardImage>
               <StaticImage
-                quality={80}
+                quality={50}
                 alt={t('Value1')}
                 src="../../../images/nt/DSC_0741.JPG"
                 layout="constrained"
@@ -103,7 +103,7 @@ const Index = () => {
           <VerticalSectionImage text={t('Value2')}>
             <CardImage>
               <StaticImage
-                quality={80}
+                quality={50}
                 alt={t('Value2')}
                 src="../../../images/nt/DSC_0852.JPG"
                 layout="constrained"
@@ -115,7 +115,7 @@ const Index = () => {
           <VerticalSectionImage text={t('Value3')}>
             <CardImage>
               <StaticImage
-                quality={80}
+                quality={50}
                 alt={t('Value3')}
                 src="../../../images/nt/DSC_2623.JPG"
                 layout="constrained"
