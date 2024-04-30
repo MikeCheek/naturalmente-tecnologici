@@ -12,7 +12,8 @@ const Index = () => {
     <div className={styles.languagePicker} onMouseLeave={() => setDropdown(false)}>
       <p onClick={() => setDropdown((v) => !v)}>
         <Flag className={styles.flag} code={enToUk(language)} />
-        {language.toUpperCase()} <Down width={10} height={10} />
+        {language.toUpperCase()}
+        {/* <Down width={10} height={10} /> */}
       </p>
       <div className={dropdown ? styles.dropdown : styles.dropdownClosed}>
         {languages.map((lng, key) => (

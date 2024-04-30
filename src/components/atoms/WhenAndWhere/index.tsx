@@ -14,11 +14,12 @@ const Index = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.whenAndWhere}>
-      <Heading text={t('WhenWhere')} />
+      <Heading text={t('WhenWhere')} simple />
       <ShowOnView>
         <h3>
-          BASILICATA
+          Bosco Coste, Grottole (MT)
           <br />
+          <span></span>
           {t('Date')}
           {/* <br />
           <br />

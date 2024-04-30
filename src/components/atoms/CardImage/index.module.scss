@@ -10,6 +10,13 @@
   overflow: hidden;
   transition: transform 500ms ease-out;
   will-change: transform;
+  max-height: 30vh;
+  @media screen and (min-width: '768px') {
+    max-height: 50vh;
+    video {
+      max-height: 50vh;
+    }
+  }
 }
 
 .sectionImage {

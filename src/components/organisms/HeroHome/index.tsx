@@ -17,14 +17,14 @@ const Index = () => {
     <div className={styles.wrap}>
       {/* <BigBranch width="555" height="282" className={styles.bigBranch} /> */}
       <div className={styles.headWrap}>
-        {/* <a className={styles.date} href="#quando-e-dove" title={t('WhenWhere')}>
-          Bosco Coste, Grottole(MT)
-          <br /> {t('Date')}
-        </a> */}
         <h1 className={language === 'en' ? styles.headingEn : styles.heading}>
-          {t('NewEdition')} <br />
-          {t('NewEditionSub')}
+          {t('Title')} <br />
+          {t('Subtitle')}
         </h1>
+        <a className={styles.date} href="#quando-e-dove" title={t('WhenWhere')}>
+          Bosco Coste, Grottole(MT)
+          <br /> <span>{t('Date')}</span>
+        </a>
         <div className={styles.windShovels}>
           <div className={styles.firstWind}>
             <WindShovel color="var(--nt-orange)" />

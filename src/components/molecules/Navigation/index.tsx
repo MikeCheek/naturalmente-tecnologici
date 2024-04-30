@@ -7,6 +7,7 @@ import { NavigationProps } from './index.types';
 import Play from '../../../assets/play.svg';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import LanguagePicker from '../../atoms/LanguagePicker';
+import MultipleLinks from '../../atoms/MultipleLinks';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();

@@ -10,6 +10,10 @@ import HeardOn from '../../atoms/HeardOn';
 import WhenAndWhere from '../../atoms/WhenAndWhere';
 import { useTranslation } from 'react-i18next';
 import Twitch from '../../../assets/twitch.svg';
+import VerticalSectionImage from '../../atoms/VerticalSectionImage';
+import { StaticImage } from 'gatsby-plugin-image';
+import CardImage from '../../atoms/CardImage';
+import ShowOnView from '../../atoms/ShowOnView';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -30,11 +34,11 @@ const Index = () => {
     //   text: t('WhatIsText3'),
     //   eventbrite: true,
     // },
-    {
-      name: t('WhatIsName4'),
-      text: t('WhatIsText4'),
-      big: true,
-    },
+    // {
+    //   name: t('WhatIsName4'),
+    //   text: t('WhatIsText4'),
+    //   big: true,
+    // },
   ];
 
   const info = [
@@ -79,18 +83,60 @@ const Index = () => {
   return (
     <div className={styles.wrap}>
       <div className={styles.singleSectionsWrap}>
-        {whatIs.map((item, key) => (
+        <ShowOnView className={styles.singleSections}>
+          <Heading text={whatIs[0].name} smaller={false} simple showOnView={false} />
+          <p dangerouslySetInnerHTML={{ __html: whatIs[0].text }}></p>
+        </ShowOnView>
+        <div className={styles.wrapVerticalSections}>
+          <VerticalSectionImage text={t('Value1')}>
+            <CardImage>
+              <StaticImage
+                quality={80}
+                alt={t('Value1')}
+                src="../../../images/nt/DSC_0741.JPG"
+                layout="constrained"
+                width={500}
+                height={700}
+              />
+            </CardImage>
+          </VerticalSectionImage>
+          <VerticalSectionImage text={t('Value2')}>
+            <CardImage>
+              <StaticImage
+                quality={80}
+                alt={t('Value2')}
+                src="../../../images/nt/DSC_0852.JPG"
+                layout="constrained"
+                width={500}
+                height={700}
+              />
+            </CardImage>
+          </VerticalSectionImage>
+          <VerticalSectionImage text={t('Value3')}>
+            <CardImage>
+              <StaticImage
+                quality={80}
+                alt={t('Value3')}
+                src="../../../images/nt/DSC_2623.JPG"
+                layout="constrained"
+                width={500}
+                height={700}
+              />
+            </CardImage>
+          </VerticalSectionImage>
+        </div>
+        {/* {whatIs.map((item, key) => (
           <div className={styles.singleSections} style={item.big ? {} : { maxWidth: '500px' }} key={key}>
             <Heading text={item.name} smaller={key != 0} />
             <SingleSection>
               <p dangerouslySetInnerHTML={{ __html: item.text }}></p>
             </SingleSection>
           </div>
-        ))}
+        ))} */}
       </div>
       <HeardOn />
       <WhenAndWhere />
-      <Heading text={t('WhatHeading')} />
+      {/* <Heading text={t('WhatHeading')} />
       {info.map((item, key) => {
         return (
           <Section
@@ -106,7 +152,7 @@ const Index = () => {
             ButtonIcon={item.ctaIcon}
           />
         );
-      })}
+      })} */}
     </div>
   );
 };

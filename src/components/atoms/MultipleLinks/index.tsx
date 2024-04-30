@@ -16,14 +16,14 @@ const Index = ({ name, active = false, children }: MultipleLinksProps) => {
         // onMouseEnter={() => setShow(true)}
       >
         <span>{name}</span>
-        <Down
+        {/* <Down
           width={20}
           height={20}
           style={{
             transform: show ? 'rotate(180deg)' : 'rotate(0)',
             fill: active ? 'var(--nt-orange)' : '',
           }}
-        />
+        /> */}
       </Link>
       <div
         className={styles.links}

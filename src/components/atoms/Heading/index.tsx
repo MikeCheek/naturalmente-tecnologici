@@ -11,8 +11,11 @@ const Index = ({
   main = false,
   textWhite = false,
   showOnView = true,
+  simple = false,
   id,
 }: HeadingProps) => {
+  const style = { color: simple ? 'var(--nt-orange)' : textWhite ? 'var(--nt-white)' : 'var(--nt-green)' };
+
   const Heading = (
     <div
       className={styles.headingWrap}
@@ -21,25 +24,14 @@ const Index = ({
         marginTop: marginTop ? '70px' : '',
       }}
     >
-      <div className={styles.orange}></div>
+      {simple ? <></> : <div className={styles.orange}></div>}
+
       {main ? (
-        <h1
-          className={styles.heading}
-          style={{ color: textWhite ? 'var(--nt-white)' : 'var(--nt-green)' }}
-          dangerouslySetInnerHTML={{ __html: text }}
-        ></h1>
+        <h1 className={styles.heading} style={style} dangerouslySetInnerHTML={{ __html: text }}></h1>
       ) : smaller ? (
-        <h3
-          className={styles.heading}
-          style={{ color: textWhite ? 'var(--nt-white)' : 'var(--nt-green)' }}
-          dangerouslySetInnerHTML={{ __html: text }}
-        ></h3>
+        <h3 className={styles.heading} style={style} dangerouslySetInnerHTML={{ __html: text }}></h3>
       ) : (
-        <h2
-          className={styles.heading}
-          style={{ color: textWhite ? 'var(--nt-white)' : 'var(--nt-green)' }}
-          dangerouslySetInnerHTML={{ __html: text }}
-        ></h2>
+        <h2 className={styles.heading} style={style} dangerouslySetInnerHTML={{ __html: text }}></h2>
       )}
     </div>
   );
