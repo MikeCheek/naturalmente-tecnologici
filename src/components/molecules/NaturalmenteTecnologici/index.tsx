@@ -101,7 +101,7 @@ const Index = () => {
             </CardImage>
           </VerticalSectionImage>
           <VerticalSectionImage text={t('Value2')}>
-            <CardImage>
+            <CardImage reversed>
               <StaticImage
                 quality={50}
                 alt={t('Value2')}
