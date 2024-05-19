@@ -1,0 +1,46 @@
+.wrap {
+  position: relative;
+
+  h4 {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    text-align: right;
+    z-index: 2;
+    transform: translateY(-50%);
+    width: 40%;
+  }
+}
+
+.wrapReverse {
+  @extend .wrap;
+
+  h4 {
+    right: auto;
+    left: 8%;
+    text-align: left;
+  }
+}
+
+.bigImage {
+  width: 100vw;
+  height: 80vh;
+  span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100vw;
+    background: linear-gradient(to right, var(--nt-transparent-orange) -10%, var(--nt-green) 90%);
+  }
+}
+
+.bigImageReverse {
+  @extend .bigImage;
+  span {
+    right: auto;
+    left: 0;
+    transform: scaleX(-1);
+  }
+}

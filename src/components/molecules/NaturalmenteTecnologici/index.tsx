@@ -14,6 +14,7 @@ import VerticalSectionImage from '../../atoms/VerticalSectionImage';
 import { StaticImage } from 'gatsby-plugin-image';
 import CardImage from '../../atoms/CardImage';
 import ShowOnView from '../../atoms/ShowOnView';
+import BigPictureSection from '../../atoms/BigPictureSection';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -135,6 +136,17 @@ const Index = () => {
         ))} */}
       </div>
       <HeardOn />
+      <BigPictureSection text={t('InfoText2').split('<br/><br/>')[0]} reverse>
+        <StaticImage
+          quality={70}
+          alt={t('Value3')}
+          src="../../../images/nt/DSC_2573.JPG"
+          layout="fullWidth"
+          width={700}
+          height={500}
+          style={{ width: '100%', height: '100%' }}
+        />
+      </BigPictureSection>
       <WhenAndWhere />
       {/* <Heading text={t('WhatHeading')} />
       {info.map((item, key) => {
