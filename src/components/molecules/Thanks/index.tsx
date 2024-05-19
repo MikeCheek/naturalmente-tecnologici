@@ -62,7 +62,7 @@ const Index = () => {
       let interval: NodeJS.Timer = setInterval(function () {
         let timeLeft = end - Date.now();
         if (timeLeft <= 0) {
-          return clearInterval(interval);
+          return clearInterval(interval as NodeJS.Timeout);
         }
         let particleCount = 50 * (timeLeft / duration);
         // since particles fall down, start a bit higher than random
