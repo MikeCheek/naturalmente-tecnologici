@@ -1,5 +1,6 @@
 export interface BigPictureSectionProps {
   children: React.ReactNode;
-  text: string;
+  title: string;
+  text?: string;
   reverse?: boolean;
 }

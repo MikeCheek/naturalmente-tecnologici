@@ -3,4 +3,5 @@ export default interface ShowOnViewProps {
   triggerOnce?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  setInView?: (inView: boolean) => void;
 }

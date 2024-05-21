@@ -1,25 +1,49 @@
 .wrap {
   position: relative;
+}
+.wrapText {
+  position: absolute;
+  top: -10%;
+  right: 4%;
+  text-align: right;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
+  // mix-blend-mode: soft-light;
   h4 {
-    position: absolute;
-    top: 50%;
-    right: 8%;
-    text-align: right;
-    z-index: 2;
-    transform: translateY(-50%);
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    opacity: 0.2;
+    font-family: 'Alba';
+  }
+  p {
+    margin: 0 40px;
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+
+  @media screen and (min-width: '768px') {
     width: 40%;
+
+    h4 {
+      font-size: 10rem;
+    }
+
+    p {
+      max-width: 450px;
+    }
   }
 }
 
-.wrapReverse {
-  @extend .wrap;
-
-  h4 {
-    right: auto;
-    left: 8%;
-    text-align: left;
-  }
+.wrapTextReverse {
+  @extend .wrapText;
+  align-items: flex-start;
+  right: auto;
+  left: 4%;
+  text-align: left;
 }
 
 .bigImage {

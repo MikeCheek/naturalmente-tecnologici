@@ -1,35 +1,26 @@
 import React from 'react';
-import Heading from '../Heading';
+import Heading from '../../atoms/Heading';
 import * as styles from './index.module.scss';
 // import { StaticImage } from 'gatsby-plugin-image';
-import SectionImageCTA from '../../molecules/SectionImageCTA';
-import ShowOnView from '../ShowOnView';
-import Button from '../Button';
-import { coords, mapsLink } from '../../../utilities/howToReach';
+import SectionImageCTA from '../SectionImageCTA';
+import ShowOnView from '../../atoms/ShowOnView';
+import Button from '../../atoms/Button';
 import BoscoCoste from '../../../assets/bosco_coste_low.mp4';
 import BoscoCoste1 from '../../../assets/bosco_coste_1_low.mp4';
 import { useTranslation } from 'react-i18next';
+import LocationMap from '../../atoms/LocationMap';
 
 const Index = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.whenAndWhere}>
       <Heading text={t('WhenWhere')} simple />
-      <ShowOnView>
-        <h3>
-          Bosco Coste, Grottole (MT)
-          <br />
-          <span></span>
-          {t('Date')}
-          {/* <br />
-          <br />
-          <a rel="noopener noreferrer" target="_blank" title="Scopri la location" href={mapsLink}>
-            @ Bosco Le Coste
-            <b>
-              <span>{coords[0]}</span> <span>{coords[1]}</span>
-            </b>
-          </a> */}
-        </h3>
+      <ShowOnView className={styles.wrapMap}>
+        <span>
+          <h3>Bosco Coste, Grottole (MT)</h3>
+          <p>{t('Date')}</p>
+        </span>
+        <LocationMap />
       </ShowOnView>
       {/* <ShowOnView>
         <h4 dangerouslySetInnerHTML={{ __html: t('WhereLocation') }}></h4>

@@ -7,7 +7,7 @@ import Insects from '../../../assets/insects.svg';
 import Section from '../Section';
 import SingleSection from '../../atoms/SingleSection';
 import HeardOn from '../../atoms/HeardOn';
-import WhenAndWhere from '../../atoms/WhenAndWhere';
+import WhenAndWhere from '../WhenAndWhere';
 import { useTranslation } from 'react-i18next';
 import Twitch from '../../../assets/twitch.svg';
 import VerticalSectionImage from '../../atoms/VerticalSectionImage';
@@ -88,7 +88,40 @@ const Index = () => {
           <Heading text={whatIs[0].name} smaller={false} simple showOnView={false} />
           <p dangerouslySetInnerHTML={{ __html: whatIs[0].text }}></p>
         </ShowOnView>
-        <div className={styles.wrapVerticalSections}>
+        <BigPictureSection title={t('Value1')} text={t('ValueText1')}>
+          <StaticImage
+            quality={70}
+            alt={t('Value3')}
+            src="../../../images/nt/DSC_0741.JPG"
+            layout="fullWidth"
+            width={700}
+            height={500}
+            style={{ width: '100%', height: '100%' }}
+          />
+        </BigPictureSection>
+        <BigPictureSection title={t('Value2')} text={t('ValueText2')} reverse>
+          <StaticImage
+            quality={70}
+            alt={t('Value3')}
+            src="../../../images/nt/DSC_0852.JPG"
+            layout="fullWidth"
+            width={700}
+            height={500}
+            style={{ width: '100%', height: '100%' }}
+          />
+        </BigPictureSection>
+        <BigPictureSection title={t('Value3')} text={t('ValueText3')}>
+          <StaticImage
+            quality={70}
+            alt={t('Value3')}
+            src="../../../images/nt/DSC_2623.JPG"
+            layout="fullWidth"
+            width={700}
+            height={500}
+            style={{ width: '100%', height: '100%' }}
+          />
+        </BigPictureSection>
+        {/* <div className={styles.wrapVerticalSections}>
           <VerticalSectionImage text={t('Value1')}>
             <CardImage>
               <StaticImage
@@ -125,7 +158,7 @@ const Index = () => {
               />
             </CardImage>
           </VerticalSectionImage>
-        </div>
+        </div> */}
         {/* {whatIs.map((item, key) => (
           <div className={styles.singleSections} style={item.big ? {} : { maxWidth: '500px' }} key={key}>
             <Heading text={item.name} smaller={key != 0} />
@@ -136,17 +169,7 @@ const Index = () => {
         ))} */}
       </div>
       <HeardOn />
-      <BigPictureSection text={t('InfoText2').split('<br/><br/>')[0]} reverse>
-        <StaticImage
-          quality={70}
-          alt={t('Value3')}
-          src="../../../images/nt/DSC_2573.JPG"
-          layout="fullWidth"
-          width={700}
-          height={500}
-          style={{ width: '100%', height: '100%' }}
-        />
-      </BigPictureSection>
+
       <WhenAndWhere />
       {/* <Heading text={t('WhatHeading')} />
       {info.map((item, key) => {
