@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import FlyingInsect from '../../atoms/FlyingInsect';
 import * as styles from './index.module.scss';
-import Flocking from '../../atoms/Flocking';
+// import Flocking from '../../atoms/Flocking';
 import detectBrowser from '../../../utilities/detectBrowser';
 
-const isBrowser = typeof window !== 'undefined';
+// const isBrowser = typeof window !== 'undefined';
 
 const Index = () => {
+  const Flocking = lazy(() => import('../../atoms/Flocking'));
+  // const [animate, setAnimate] = useState<boolean>(false);
   // const [catched, setCatched] = useState<number>(0);
   // const handleClick = () => setCatched((old) => old + 1);
 
@@ -35,13 +37,13 @@ const Index = () => {
   //   }
   // }
 
-  const toggleFullscreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-    } else {
-      document.exitFullscreen();
-    }
-  };
+  // const toggleFullscreen = () => {
+  //   if (!document.fullscreenElement) {
+  //     document.documentElement.requestFullscreen();
+  //   } else {
+  //     document.exitFullscreen();
+  //   }
+  // };
 
   return (
     <div className={styles.wrap}>
@@ -49,14 +51,13 @@ const Index = () => {
       <FlyingInsect top={50} onClick={handleClick} />
       <FlyingInsect top={70} onClick={handleClick} />
       <FlyingInsect top={20} onClick={handleClick} /> */}
-      {isBrowser && detectBrowser() != 'Safari' ? (
-        <button className={styles.zen} onClick={toggleFullscreen}>
-          Zen Mode
-        </button>
-      ) : (
-        <></>
-      )}
-      <Flocking />
+      {/* <button className={styles.zen} onClick={() => setAnimate((a) => !a)}>
+        Animate Background
+      </button> */}
+      {/* {animate ? <Flocking /> : <></>} */}
+      <Suspense>
+        <Flocking />
+      </Suspense>
     </div>
   );
 };
