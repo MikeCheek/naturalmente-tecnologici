@@ -94,8 +94,6 @@ const Index = () => {
             alt={t('Value3')}
             src="../../../images/nt/DSC_0741.JPG"
             layout="fullWidth"
-            width={700}
-            height={500}
             style={{ width: '100%', height: '100%' }}
           />
         </BigPictureSection>
@@ -105,8 +103,6 @@ const Index = () => {
             alt={t('Value3')}
             src="../../../images/nt/DSC_0852.JPG"
             layout="fullWidth"
-            width={700}
-            height={500}
             style={{ width: '100%', height: '100%' }}
           />
         </BigPictureSection>
@@ -116,8 +112,6 @@ const Index = () => {
             alt={t('Value3')}
             src="../../../images/nt/DSC_2623.JPG"
             layout="fullWidth"
-            width={700}
-            height={500}
             style={{ width: '100%', height: '100%' }}
           />
         </BigPictureSection>

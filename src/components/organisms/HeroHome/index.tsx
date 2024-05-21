@@ -29,7 +29,9 @@ const Index = () => {
           <div className={styles.firstWind}>
             <WindShovel color="var(--nt-orange)" />
           </div>
-          <div className={styles.secondWind}>
+          <div
+          // className={styles.secondWind}
+          >
             <WindShovel color="var(--nt-orange)" slower />
           </div>
         </div>
