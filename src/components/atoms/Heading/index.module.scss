@@ -6,7 +6,8 @@
 }
 
 .heading {
-  font-family: 'Cairo', sans-serif;
+  //font-family: 'Cairo', sans-serif;
+  font-family: 'Alba';
   font-style: normal;
   font-weight: 800;
   line-height: 115%;
@@ -14,6 +15,7 @@
   text-transform: uppercase;
   text-align: center;
   position: relative;
+  letter-spacing: 0.1rem;
   z-index: 1;
 }
 

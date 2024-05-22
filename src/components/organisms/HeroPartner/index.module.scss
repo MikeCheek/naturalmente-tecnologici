@@ -40,7 +40,7 @@
   height: auto;
   z-index: 1;
   filter: drop-shadow(-58px 5px 5px rgba(0, 0, 0, 0.25));
-  fill: var(--nt-white);
+  fill: var(--nt-soft-green);
 }
 
 .white {
@@ -50,7 +50,7 @@
   width: 100vw;
   height: 100px;
   z-index: 1;
-  background-color: var(--nt-white);
+  background-color: var(--nt-soft-green);
 }
 
 .orangeFlowers {
@@ -103,6 +103,7 @@
 
 .heading {
   font-family: 'Cairo', sans-serif;
+  letter-spacing: 0.2rem;
   font-weight: 900;
   line-height: 120%;
   margin: 0;
@@ -123,10 +124,10 @@
     border-radius: 5px;
     transform: rotate(-2deg);
     height: 35px;
-    width: 140px;
+    width: 155px;
     @media screen and (min-width: '768px') {
       height: 60px;
-      width: 220px;
+      width: 240px;
     }
   }
 }
@@ -134,9 +135,9 @@
 .headingEn {
   @extend .heading;
   &:before {
-    width: 150px;
+    width: 175px;
     @media screen and (min-width: '768px') {
-      width: 250px;
+      width: 270px;
     }
   }
 }

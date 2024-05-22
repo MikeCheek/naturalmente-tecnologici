@@ -17,6 +17,16 @@
     padding-top: 20px;
     margin-top: 0px;
   }
+
+  &:-webkit-full-screen {
+    transform: translateY(-100%) scaleY(0) !important;
+    opacity: 0 !important;
+  }
+
+  @media (display-mode: fullscreen) {
+    transform: translateY(-100%) scaleY(0) !important;
+    opacity: 0 !important;
+  }
 }
 
 .show {

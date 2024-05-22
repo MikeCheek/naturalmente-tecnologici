@@ -1,0 +1,75 @@
+.wrap {
+  position: relative;
+}
+.wrapText {
+  position: absolute;
+  margin: 50px 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: center;
+
+  // mix-blend-mode: soft-light;
+  h4 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    opacity: 0.4;
+    font-family: 'Alba';
+    width: 100%;
+  }
+  p {
+    margin: 0 20px;
+    opacity: 0.8;
+  }
+
+  @media screen and (min-width: '768px') {
+    width: 40%;
+    text-align: right;
+    right: 4%;
+    h4 {
+      opacity: 0.2;
+      font-size: 10rem;
+    }
+
+    p {
+      margin: 0 40px;
+      max-width: 450px;
+    }
+  }
+}
+
+.wrapTextReverse {
+  @extend .wrapText;
+  align-items: flex-start;
+  right: auto;
+  @media screen and (min-width: '768px') {
+    left: 4%;
+    text-align: left;
+  }
+}
+
+.bigImage {
+  width: 100vw;
+  height: 80vh;
+  span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100vw;
+    background: linear-gradient(to right, var(--nt-transparent-orange) -10%, var(--nt-green) 90%);
+  }
+}
+
+.bigImageReverse {
+  @extend .bigImage;
+  span {
+    right: auto;
+    left: 0;
+    transform: scaleX(-1);
+  }
+}

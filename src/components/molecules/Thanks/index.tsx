@@ -23,8 +23,8 @@ const randomInRange = (min: number, max: number) => {
 
 const Index = () => {
   const [ref, inView, _entry] = useInView({
-    threshold: 0,
-    rootMargin: '5% 0px 5% 0px',
+    threshold: 0.5,
+    // rootMargin: '5% 0px 5% 0px',
     fallbackInView: true,
     triggerOnce: true,
   });
@@ -62,7 +62,7 @@ const Index = () => {
       let interval: NodeJS.Timer = setInterval(function () {
         let timeLeft = end - Date.now();
         if (timeLeft <= 0) {
-          return clearInterval(interval);
+          return clearInterval(interval as NodeJS.Timeout);
         }
         let particleCount = 50 * (timeLeft / duration);
         // since particles fall down, start a bit higher than random

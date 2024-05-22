@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg>
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="-20 0 118 149" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+  .rotateWindShovel{
+    animation: rotateWindShovel infinite linear;
+    transform-origin: 37.2% 33.6%;
+  }
+  @keyframes rotateWindShovel{
+    from{transform:rotate(0);}
+    to{transform:rotate(360deg);}
+  }
+</style>
+<g>
+  <g class="rotateWindShovel">
+    <path d="M50.1727 51.6155C49.7095 51.9201 49.5801 52.7596 49.5801 52.7596C49.5801 52.7596 46.9286 54.8143 74.0378 67.646C92.5196 76.3941 91.519 76.2909 75.3291 65.72C51.5656 50.2041 51.005 51.0681 50.1727 51.6155Z" fill="current" fill-rule="nonzero" opacity="1" stroke="none"/>
+    <path d="M42.673 43.9044C43.159 44.1711 43.9615 43.8926 43.9615 43.8926C43.9615 43.8926 47.0182 45.2742 45.6697 15.3118C44.7503-5.11518 45.1274-4.18267 43.3633 15.0721C40.7739 43.3341 41.7998 43.4251 42.673 43.9044Z" fill="current" fill-rule="nonzero" opacity="1" stroke="none"/>
+    <path d="M37.5588 52.6972C37.5131 52.1447 36.8381 51.6291 36.8381 51.6291C36.8381 51.6291 36.3042 48.3174 12.0575 65.9714C-4.47273 78.0071-3.903 77.1781 13.1299 68.0273C38.1308 54.5959 37.6407 53.69 37.5588 52.6972Z" fill="current" fill-rule="nonzero" opacity="1" stroke="none"/>
+  </g>
+<path d="M40.8962 147.722C40.2005 146.495 43.0392 50.6821 43.0392 50.6821L45.0185 50.5952C45.0185 50.5952 47.5392 146.69 46.8115 147.722C45.9992 148.874 41.7027 149.144 40.8962 147.722Z" fill="current" fill-rule="nonzero" opacity="0.998312" stroke="none"/>
+<path d="M43.676 53.8885C49.093 53.8885 48.6822 46.1177 43.6445 46.3018C38.6068 46.486 39.3624 53.8885 43.676 53.8885Z" fill="current" fill-rule="nonzero" opacity="0.998312" stroke="none"/>
+</g>
+</svg>

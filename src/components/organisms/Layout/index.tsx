@@ -11,6 +11,7 @@ import { LayoutProps } from './index.types';
 import NavBar from '../NavBar';
 import { ModalContext } from '../../../utilities/useModalContext';
 import Modal from '../../atoms/Modal';
+import MakeEditable from '../../atoms/MakeEditable';
 
 const Index = ({ children, insects = true }: LayoutProps) => {
   const [banner, setBanner] = useState<boolean>(false);
@@ -49,6 +50,7 @@ const Index = ({ children, insects = true }: LayoutProps) => {
         },
       }}
     >
+      <MakeEditable />
       <div id="top">
         <NavBar />
         {banner ? <CookieBanner close={() => setBanner(false)} /> : <></>}

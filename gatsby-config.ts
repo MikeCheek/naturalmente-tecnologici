@@ -3,8 +3,11 @@ import type { GatsbyConfig } from 'gatsby';
 const siteUrl = `https://nt.syskrack.org`;
 
 const config: GatsbyConfig = {
+  flags: {
+    DEV_SSR: true,
+  },
   siteMetadata: {
-    title: `Naturalmente Tecnologici 2023 - NT`,
+    title: `Naturalmente Tecnologici - NT`,
     siteUrl: siteUrl,
     description: `L'evento si propone di essere occasione di ritrovo della community di Syskrack nonché strumento di disseminazione culturale sul territorio.`,
     keywords: 'naturalmente, tecnologici, evento, futuro',

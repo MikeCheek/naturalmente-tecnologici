@@ -13,18 +13,113 @@
   width: 300px;
   height: 300px;
   position: relative;
-  transform-origin: center center;
-  animation: rotate 2s infinite linear;
+
+  .insectWrap {
+    position: absolute;
+    animation: rotateInfinite 4s infinite linear;
+  }
 
   svg {
-    position: absolute;
     fill: var(--nt-orange);
     z-index: 1;
+    transform-origin: center center;
+    transform: rotate(0) translateX(-100px);
+    animation: rotate 4s infinite linear;
+  }
+}
+
+@keyframes rotateInfinite {
+  0% {
+    transform: translateX(-200px);
+  }
+  2% {
+    transform: translateX(-200px) translateY(-20px);
+  }
+  10% {
+    transform: translateX(-120px) translateY(-100px);
+  }
+  12% {
+    transform: translateX(-100px) translateY(-100px);
+  }
+  14% {
+    transform: translateX(-80px) translateY(-100px);
+  }
+  25% {
+    transform: translateX(0) translateY(0);
+  }
+  35% {
+    transform: translateX(80px) translateY(100px);
+  }
+  37% {
+    transform: translateX(100px) translateY(100px);
+  }
+  39% {
+    transform: translateX(120px) translateY(100px);
+  }
+  48% {
+    transform: translateX(200px) translateY(20px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  52% {
+    transform: translateX(200px) translateY(-20px);
+  }
+  60% {
+    transform: translateX(120px) translateY(-100px);
+  }
+  62% {
+    transform: translateX(100px) translateY(-100px);
+  }
+  64% {
+    transform: translateX(80px) translateY(-100px);
+  }
+  75% {
+    transform: translateX(0);
+  }
+  85% {
+    transform: translateX(-80px) translateY(100px);
+  }
+  87% {
+    transform: translateX(-100px) translateY(100px);
+  }
+  89% {
+    transform: translateX(-120px) translateY(100px);
+  }
+  98% {
+    transform: translateX(-200px) translateY(20px);
+  }
+  100% {
+    transform: translateX(-200px);
   }
 }
 
 @keyframes rotate {
-  to {
-    transform: rotate(360deg);
+  0% {
+    transform: rotate(0);
+  }
+  12% {
+    transform: rotate(90deg);
+  }
+  25% {
+    transform: rotate(140deg);
+  }
+  37% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  62% {
+    transform: rotate(-90deg);
+  }
+  75% {
+    transform: rotate(-140deg);
+  }
+  87% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }

@@ -9,7 +9,7 @@ const Index = () => {
   const { t } = useTranslation();
   const image0 = (
     <StaticImage
-      quality={80}
+      quality={60}
       alt="Syskrack 1"
       src="../../../images/syskrack/camp0.jpg"
       layout="constrained"
@@ -19,7 +19,7 @@ const Index = () => {
   );
   const image1 = (
     <StaticImage
-      quality={80}
+      quality={60}
       alt="Syskrack 2"
       src="../../../images/syskrack/camp1.jpg"
       layout="constrained"

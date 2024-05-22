@@ -4,9 +4,17 @@
   --nt-dark-green: #014900;
   --nt-very-dark-green: #002400;
   --nt-light-green: #0a5908;
+  --nt-soft-green: #ecffe0;
   --nt-orange: #e98a15;
   --nt-transparent-orange: #e98a1560;
   --nt-white: #fdfdff;
+}
+
+@font-face {
+  font-family: 'Alba';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Alba'), url('/fonts/alba/ALBA____.woff') format('woff');
 }
 
 html {
@@ -57,7 +65,7 @@ h1 {
 }
 
 h2 {
-  font-size: 23px;
+  font-size: 30px;
   @media screen and (min-width: '768px') {
     font-size: 45px;
   }

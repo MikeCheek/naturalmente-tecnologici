@@ -22,7 +22,7 @@ const Index = () => {
         <Speaking width={600} className={styles.speaking} fill="var(--nt-dark-green)" />
         <div className={styles.svgWrap}>
           <div className={styles.collinaWrap}>
-            <Collina width="1440" className={styles.collina} fill="var(--nt-white)" />
+            <Collina width="1440" className={styles.collina} />
             <div className={styles.white}></div>
           </div>
 

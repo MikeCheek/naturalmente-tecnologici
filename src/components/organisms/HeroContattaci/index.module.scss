@@ -46,6 +46,7 @@
 .heading {
   font-family: 'Cairo', sans-serif;
   font-weight: 900;
+  letter-spacing: 0.2rem;
   line-height: 120%;
   margin: 0;
   width: fit-content;
@@ -65,10 +66,10 @@
     border-radius: 5px;
     transform: rotate(-2deg);
     height: 35px;
-    width: 170px;
+    width: 200px;
     @media screen and (min-width: '768px') {
       height: 60px;
-      width: 275px;
+      width: 305px;
     }
   }
 }
@@ -76,9 +77,9 @@
 .headingEn {
   @extend .heading;
   &:before {
-    width: 175px;
+    width: 205px;
     @media screen and (min-width: '768px') {
-      width: 285px;
+      width: 315px;
     }
   }
 }
@@ -104,14 +105,14 @@
   width: 100vw;
   height: auto;
   z-index: 1;
-  fill: var(--nt-white);
+  fill: var(--nt-soft-green);
 }
 
 .white {
   width: 100%;
   height: 80px;
   z-index: 1;
-  background-color: var(--nt-white);
+  background-color: var(--nt-soft-green);
   margin-top: -1px;
   @media screen and (min-width: '768px') {
     height: 130px;

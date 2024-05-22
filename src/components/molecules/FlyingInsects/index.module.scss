@@ -3,6 +3,33 @@
   top: 0;
   left: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
   width: 100vw;
   height: 100vh;
+}
+
+.zen {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  background: none;
+  border: none;
+  color: var(--nt-white);
+  cursor: pointer;
+  opacity: 0.5;
+
+  transition: color 100ms ease, transform 100ms ease;
+
+  &:hover {
+    color: var(--nt-orange);
+  }
+
+  // @media (hover: none) and (pointer: coarse) {
+  //   display: none;
+  // }
+
+  @media (display-mode: fullscreen) {
+    transform: translateY(-80px);
+    opacity: 0.2;
+  }
 }

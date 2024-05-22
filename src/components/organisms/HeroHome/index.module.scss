@@ -3,13 +3,14 @@
 .wrap {
   display: flex;
   overflow-x: hidden;
+  overflow-y: hidden;
   flex-direction: column;
   width: 100vw;
 }
 
 .headWrap {
   margin-left: 8%;
-  margin-top: 75px;
+  padding-top: 75px;
 
   height: calc(100vh - 75px - 60px);
   @media screen and (min-width: '768px') {
@@ -28,7 +29,7 @@
   height: auto;
   z-index: 1;
   filter: drop-shadow(-58px 5px 5px rgba(0, 0, 0, 0.25));
-  fill: var(--nt-white);
+  fill: var(--nt-soft-green);
 }
 
 .white {
@@ -38,45 +39,40 @@
   width: 100vw;
   height: 100px;
   z-index: 1;
-  background-color: var(--nt-white);
+  background-color: var(--nt-soft-green);
 }
 
-.orangeFlowers {
+.windShovels {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   position: absolute;
-  left: 0;
+  gap: 0;
+  right: 10px;
   bottom: 0;
-  width: 100vw;
+  z-index: 1;
 
-  animation: 1s grow ease-out;
+  // animation: 1s grow ease-out;
 
-  :nth-child(1) {
-    transform: translateY(10px);
-    @media screen and (min-width: '768px') {
-      transform: translateY(20px);
-    }
-  }
-  :nth-child(2) {
-    transform: translateY(15px);
-    @media screen and (min-width: '768px') {
-      transform: translateY(30px);
-    }
-  }
-  :nth-child(4) {
-    transform: translateY(-10px);
-    @media screen and (min-width: '768px') {
-      transform: translateY(-20px);
-    }
+  @media screen and (min-width: '768px') {
+    right: 30px;
   }
 
-  svg {
-    > * {
-      transform: none !important;
+  .firstWind {
+    transform: translateY(50px) scale(0.65);
+    margin-right: -60px;
+    @media screen and (min-width: '768px') {
+      transform: translateY(50px) scale(0.65);
+      margin-right: -40px;
     }
   }
+  // .secondWind {
+  //   transform: translateY(40px);
+  //   @media screen and (min-width: '768px') {
+  //     transform: translateY(90px);
+  //   }
+  // }
 }
 
 .wrapHill {
@@ -104,12 +100,12 @@
 
 .green {
   width: 100vw;
-  height: 40px;
+  height: 70px;
   z-index: 2;
   position: relative;
   background-color: var(--nt-green);
   margin-top: -8.5px;
-  margin-bottom: -30px;
+  margin-bottom: -60px;
   @media screen and (min-width: '768px') {
     height: 80px;
     margin-top: -9.5px;
@@ -123,8 +119,9 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  opacity: 0;
 
-  animation: 2s grow ease-out;
+  // animation: 2s grow ease-out;
 
   :nth-child(1),
   :nth-child(3) {
@@ -143,7 +140,6 @@
   svg {
     > * {
       transform: none !important;
-      opacity: 0.2;
     }
   }
 }
@@ -151,17 +147,28 @@
 .date {
   font-weight: 600;
   color: var(--nt-orange);
-  margin: 0;
-  margin-bottom: 5px;
+  margin: 10px 0;
   z-index: 1;
-  position: relative;
+  position: absolute;
+  right: 8%;
+  text-align: right;
   width: fit-content;
   text-decoration: none;
+  span {
+    font-size: 1.3rem;
+  }
+  @media screen and (min-width: '768px') {
+    font-size: x-large;
+    span {
+      font-size: xx-large;
+    }
+  }
 }
 
 .heading {
   font-family: 'Cairo', sans-serif;
   font-weight: 900;
+  letter-spacing: 0.2rem;
   line-height: 120%;
   margin: 0;
   width: fit-content;
@@ -171,6 +178,9 @@
   @media screen and (min-width: '768px') {
     max-width: 700px;
   }
+  @media (display-mode: fullscreen) {
+    display: none;
+  }
 
   &:before {
     content: ' ';
@@ -179,14 +189,24 @@
     position: absolute;
     z-index: -1;
     border-radius: 5px;
-    transform: rotate(-2deg);
+    transform: rotate(-2deg) translateY(100%);
     height: 35px;
-    width: 45px;
+    width: 105px;
     @media screen and (min-width: '768px') {
       height: 60px;
-      width: 70px;
+      width: 170px;
     }
   }
+}
+
+.headingEn {
+  @extend .heading;
+  // &:before {
+  //   width: 75px;
+  //   @media screen and (min-width: '768px') {
+  //     width: 120px;
+  //   }
+  // }
 }
 
 .bigBranch {

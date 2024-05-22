@@ -7,6 +7,7 @@ import { NavigationProps } from './index.types';
 import Play from '../../../assets/play.svg';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import LanguagePicker from '../../atoms/LanguagePicker';
+import MultipleLinks from '../../atoms/MultipleLinks';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
@@ -56,7 +57,7 @@ const Index = ({ opened, onClick }: NavigationProps) => {
 
   const button = (mobile?: boolean) => (
     <a
-      title={t('NavContactUs')}
+      title={t('NavCta')}
       target="_blank"
       rel="noopener noreferrer"
       href={'https://youtube.com/playlist?list=PLUPBawFanl496dZgv1Qyf5IWaPYvUOu0W&si=1MYjrDeLdQHmtPMY'}
