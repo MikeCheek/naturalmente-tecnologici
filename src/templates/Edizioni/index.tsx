@@ -7,6 +7,8 @@ import Heading from '../../components/atoms/Heading';
 import ShowOnView from '../../components/atoms/ShowOnView';
 import EdizioniData from './index.types';
 import HeroEdizioni from '../../components/organisms/HeroEdizioni';
+import YoutubeEmbed from '../../components/atoms/YoutubeEmbed';
+import ScrollyTelling from '../../components/molecules/ScrollyTelling';
 
 interface IndexProps {
   pageContext: EdizioniData;
@@ -15,23 +17,20 @@ interface IndexProps {
 const Index = ({ pageContext }: IndexProps) => {
   return (
     <Layout>
-      <HeroEdizioni theme={pageContext.theme} year={pageContext.year} />
-      <ShowOnView className={styles.head}>
+      {/* <HeroEdizioni theme={pageContext.title} year={pageContext.year} /> */}
+      <ScrollyTelling {...pageContext} />
+      {/* <ShowOnView className={styles.head}>
+        <Heading text={'Tema'} />
         <h4 dangerouslySetInnerHTML={{ __html: pageContext.theme }}></h4>
       </ShowOnView>
-      <Heading text={'Edizione ' + pageContext.year} />
+      <Heading text={'Conferenze'} />
       {pageContext.youtubePlaylist && (
-        <iframe
-          width="560"
-          height="315"
-          src={'https://www.youtube-nocookie.com/embed/videoseries?' + pageContext.youtubePlaylist}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+        <ShowOnView>
+          <YoutubeEmbed src={'https://www.youtube-nocookie.com/embed/videoseries?' + pageContext.youtubePlaylist} />
+        </ShowOnView>
       )}
+      <Heading text={'Attività'} />
+      <Heading text={'Articoli'} /> */}
     </Layout>
   );
 };

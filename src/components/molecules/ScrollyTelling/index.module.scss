@@ -1,0 +1,21 @@
+.section {
+  min-height: 100vh;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionOrange {
+  @extend .section;
+  background-color: var(--color-orange);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

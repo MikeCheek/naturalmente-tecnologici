@@ -85,8 +85,8 @@ const Index = () => {
     <div className={styles.wrap}>
       <div className={styles.singleSectionsWrap}>
         <ShowOnView className={styles.singleSections}>
-          <Heading text={whatIs[0].name} smaller={false} simple showOnView={false} />
-          <p dangerouslySetInnerHTML={{ __html: whatIs[0].text }}></p>
+          <Heading text={t('EventTitle')} smaller={false} simple showOnView={false} />
+          <p dangerouslySetInnerHTML={{ __html: t('EventDescription') }}></p>
         </ShowOnView>
         <BigPictureSection title={t('Value1')} text={t('ValueText1')}>
           <StaticImage

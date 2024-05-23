@@ -4,7 +4,7 @@ import * as styles from './index.module.scss';
 import Colli from '../../../assets/colli.svg';
 import Collina from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
-import SearchPeople from '../../../assets/search-people.svg';
+import Timer from '../../../assets/timer.svg';
 import { useTranslation } from 'react-i18next';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 import HeroEdizioniProps from './index.types';
@@ -20,7 +20,7 @@ const Index = ({ theme, year }: HeroEdizioniProps) => {
           <br />
           {theme}
         </h1>
-        <SearchPeople width={300} className={styles.svg} fill="var(--nt-dark-green)" />
+        <Timer width={300} className={styles.svg} fill="var(--nt-dark-green)" />
         <div className={styles.svgWrap}>
           <div className={styles.colliWrap}>
             <Colli width="1440" className={styles.colli} />
