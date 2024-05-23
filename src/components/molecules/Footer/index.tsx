@@ -27,24 +27,24 @@ const Index = () => {
           <h4>{t('FooterMap')}</h4>
           <div className={styles.links}>
             {links(language)
-              // .filter((l) => !l.multiple)
+              .filter((l) => !l.multiple)
               .map((link, key) => (
                 <Link key={key} to={link.to ?? ''} title={`Vai alla pagina ${link.name}`}>
                   {link.name}
                 </Link>
               ))}
           </div>
-          {/* <div className={styles.links}>
+          <div className={styles.links}>
             {links(language)
               .filter((l) => l.multiple)
               .map((link) =>
                 link.links?.map((l, key) => (
-                  <Link key={key} to={l.to ?? ''} title={`Vai alla pagina ${l.name}`}>
-                    {l.name}
+                  <Link key={key} to={l.to ?? ''} title={`Vai alla pagina ${link.name}/${l.name}`}>
+                    {link.name}-{l.name}
                   </Link>
                 ))
               )}
-          </div> */}
+          </div>
         </div>
       </div>
       <div className={styles.bottom}>
