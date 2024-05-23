@@ -3,4 +3,5 @@ export default interface EdizioniData {
   image: string;
   year: string;
   conferencesLinks?: string[];
+  youtubePlaylist?: string;
 }
