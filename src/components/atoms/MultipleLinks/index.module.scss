@@ -1,5 +1,5 @@
 @mixin show {
-  transform: translateY(-450%);
+  transform: translateY(-150%);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: 0 0px 40px 0 rgb(0, 0, 0, 0.2);
@@ -66,6 +66,7 @@
 
   a {
     margin: 10px 5px;
+    padding: 20px 46px 0 46px;
   }
 
   @media screen and (min-width: '992px') {

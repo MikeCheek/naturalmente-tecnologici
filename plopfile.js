@@ -3,7 +3,7 @@
 //   npm run generate component
 // and fill in the name and type
 
-const base = 'src/components/{{lowerCase type}}s/{{pascalCase name}}/';
+const pathComponent = 'src/components/{{lowerCase type}}s/{{pascalCase name}}/';
 
 module.exports = (plop) => {
   plop.setGenerator('component', {
@@ -23,17 +23,17 @@ module.exports = (plop) => {
     actions: [
       {
         type: 'add',
-        path: base + 'index.tsx',
+        path: pathComponent + 'index.tsx',
         templateFile: 'plopTemplates/Component/index.tsx.hbs',
       },
       {
         type: 'add',
-        path: base + 'index.types.ts',
+        path: pathComponent + 'index.types.ts',
         templateFile: 'plopTemplates/Component/index.types.ts.hbs',
       },
       {
         type: 'add',
-        path: base + 'index.module.scss',
+        path: pathComponent + 'index.module.scss',
         templateFile: 'plopTemplates/Component/index.module.scss.hbs',
       },
     ],
