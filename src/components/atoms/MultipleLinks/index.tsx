@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 
 const Index = ({ name, active = false, children }: MultipleLinksProps) => {
   const [show, setShow] = useState<boolean>(false);
+  console.log('Mounted multiple links');
   return (
     <div className={show ? styles.wrapShown : styles.wrap}>
       <p
