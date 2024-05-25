@@ -15,7 +15,11 @@ const Index = ({ title, text, reverse = false, images }: BigPictureSectionProps)
     triggerOnce: false,
   });
 
-  const parallax = () => setOffset(((window.scrollY - base) / window.innerHeight) * 100);
+  const parallax = () => {
+    const rect = entry!.target.getBoundingClientRect();
+    const a = rect.top + rect.bottom;
+    setOffset((a / window.innerHeight) * 100);
+  };
 
   useEffect(() => {
     if (inView) {
