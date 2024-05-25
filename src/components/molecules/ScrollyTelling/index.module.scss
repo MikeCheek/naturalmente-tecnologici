@@ -1,3 +1,7 @@
+.wrap {
+  width: 100%;
+  text-align: center;
+}
 .section {
   padding: 20px 0;
 }
@@ -5,10 +9,4 @@
 .sectionOrange {
   background: #ffa500;
   padding: 20px 0;
-}
-
-.wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
 }

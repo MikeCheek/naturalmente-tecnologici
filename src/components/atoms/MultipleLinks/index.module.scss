@@ -67,6 +67,9 @@
   a {
     margin: 10px 5px;
     padding: 20px 46px 0 46px;
+    @media (hover: hover) and (pointer: fine) {
+      padding: 0;
+    }
   }
 
   @media screen and (min-width: '992px') {

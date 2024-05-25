@@ -30,6 +30,8 @@ const Index = ({ title, text, reverse = false, images }: BigPictureSectionProps)
     return window.removeEventListener('scroll', () => {});
   }, [inView]);
 
+  const transform = `translateX(${reverse ? '-' : '+'}${Math.round(offset / 2)}%)`;
+
   return (
     <div className={styles.wrap}>
       <ShowOnView className={reverse ? styles.wrapTextReverse : styles.wrapText}>
@@ -40,7 +42,10 @@ const Index = ({ title, text, reverse = false, images }: BigPictureSectionProps)
       <div ref={ref} className={reverse ? styles.bigImageReverse : styles.bigImage}>
         <span></span>
         <div
-          style={{ transform: `translateX(${reverse ? '-' : '+'}${Math.round(offset / 2)}%)` }}
+          style={{
+            transform: transform,
+            WebkitTransform: transform,
+          }}
           className={reverse ? styles.scrollingImagesReverse : styles.scrollingImages}
         >
           {images.edges.map((e, index) => (
