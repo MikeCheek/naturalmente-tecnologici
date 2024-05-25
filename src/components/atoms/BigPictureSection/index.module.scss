@@ -22,7 +22,8 @@
   }
   p {
     margin: 0 20px;
-    opacity: 0.8;
+    text-shadow: 0 0 10px black;
+    // opacity: 0.8;
   }
 
   @media screen and (min-width: '768px') {
@@ -63,7 +64,7 @@
     height: 100%;
     width: 100vw;
     opacity: 0.5;
-    background: linear-gradient(to left, var(--nt-orange) -10%, var(--nt-green) 90%);
+    background: linear-gradient(to right, var(--nt-orange) -10%, var(--nt-green) 90%);
   }
 }
 
@@ -85,7 +86,8 @@
   display: flex;
   flex-direction: row-reverse;
   height: 100%;
-  transition: transform 100ms ease;
+  transition: transform 200ms ease;
+  will-change: transform;
 }
 
 .scrollingImagesReverse {

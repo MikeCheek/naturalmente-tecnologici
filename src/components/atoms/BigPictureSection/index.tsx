@@ -40,7 +40,7 @@ const Index = ({ title, text, reverse = false, images }: BigPictureSectionProps)
       <div ref={ref} className={reverse ? styles.bigImageReverse : styles.bigImage}>
         <span></span>
         <div
-          style={{ transform: `translateX(${reverse ? '-' : '+'}${offset / 2}%)` }}
+          style={{ transform: `translateX(${reverse ? '-' : '+'}${Math.round(offset / 2)}%)` }}
           className={reverse ? styles.scrollingImagesReverse : styles.scrollingImages}
         >
           {images.edges.map((e, index) => (
