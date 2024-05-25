@@ -15,9 +15,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 import CardImage from '../../atoms/CardImage';
 import ShowOnView from '../../atoms/ShowOnView';
 import BigPictureSection from '../../atoms/BigPictureSection';
+import { images as ntImages } from '../../../utilities/ntPhotos';
 
 const Index = () => {
   const { t } = useTranslation();
+  const { music, activities, nature } = ntImages();
 
   const whatIs = [
     {
@@ -88,71 +90,9 @@ const Index = () => {
           <Heading text={t('EventTitle')} smaller={false} simple showOnView={false} />
           <p dangerouslySetInnerHTML={{ __html: t('EventDescription') }}></p>
         </ShowOnView>
-        <BigPictureSection title={t('Value1')} text={t('ValueText1')}>
-          <StaticImage
-            quality={70}
-            alt={t('Value3')}
-            src="../../../images/nt/DSC_0741.JPG"
-            layout="fullWidth"
-            style={{ width: '100%', height: '100%' }}
-          />
-        </BigPictureSection>
-        <BigPictureSection title={t('Value2')} text={t('ValueText2')} reverse>
-          <StaticImage
-            quality={70}
-            alt={t('Value3')}
-            src="../../../images/nt/DSC_0852.JPG"
-            layout="fullWidth"
-            style={{ width: '100%', height: '100%' }}
-          />
-        </BigPictureSection>
-        <BigPictureSection title={t('Value3')} text={t('ValueText3')}>
-          <StaticImage
-            quality={70}
-            alt={t('Value3')}
-            src="../../../images/nt/DSC_2623.JPG"
-            layout="fullWidth"
-            style={{ width: '100%', height: '100%' }}
-          />
-        </BigPictureSection>
-        {/* <div className={styles.wrapVerticalSections}>
-          <VerticalSectionImage text={t('Value1')}>
-            <CardImage>
-              <StaticImage
-                quality={50}
-                alt={t('Value1')}
-                src="../../../images/nt/DSC_0741.JPG"
-                layout="constrained"
-                width={500}
-                height={700}
-              />
-            </CardImage>
-          </VerticalSectionImage>
-          <VerticalSectionImage text={t('Value2')}>
-            <CardImage reversed>
-              <StaticImage
-                quality={50}
-                alt={t('Value2')}
-                src="../../../images/nt/DSC_0852.JPG"
-                layout="constrained"
-                width={500}
-                height={700}
-              />
-            </CardImage>
-          </VerticalSectionImage>
-          <VerticalSectionImage text={t('Value3')}>
-            <CardImage>
-              <StaticImage
-                quality={50}
-                alt={t('Value3')}
-                src="../../../images/nt/DSC_2623.JPG"
-                layout="constrained"
-                width={500}
-                height={700}
-              />
-            </CardImage>
-          </VerticalSectionImage>
-        </div> */}
+        <BigPictureSection images={music} title={t('Value1')} text={t('ValueText1')} />
+        <BigPictureSection images={activities} title={t('Value2')} text={t('ValueText2')} reverse />
+        <BigPictureSection images={nature} title={t('Value3')} text={t('ValueText3')} />
         {/* {whatIs.map((item, key) => (
           <div className={styles.singleSections} style={item.big ? {} : { maxWidth: '500px' }} key={key}>
             <Heading text={item.name} smaller={key != 0} />

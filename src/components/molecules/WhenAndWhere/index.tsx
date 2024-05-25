@@ -26,8 +26,8 @@ const Index = () => {
         <LocationMap />
       </ShowOnView>
       <div className={styles.services}>
-        {services.map((s) => (
-          <Badge name={s} on />
+        {services.map((s, key) => (
+          <Badge key={key} name={s} on />
         ))}
       </div>
       {/* <ShowOnView>
