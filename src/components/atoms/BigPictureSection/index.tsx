@@ -36,17 +36,7 @@ const Index = ({ title, text, reverse = false, images, videos }: BigPictureSecti
 
   const slides = [
     videos?.map((v, key) => (
-      <video
-        key={key}
-        className={styles.video}
-        height={500}
-        muted
-        autoPlay
-        controls={false}
-        loop
-        playsInline
-        poster="/images/bosco-1-low.JPG"
-      >
+      <video key={key} className={styles.video} height={500} muted autoPlay controls={false} loop playsInline>
         <source src={v} type="video/mp4" />
         Your browser doesn't support video tag
       </video>
