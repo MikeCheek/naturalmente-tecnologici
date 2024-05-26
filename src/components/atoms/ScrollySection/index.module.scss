@@ -1,0 +1,36 @@
+.wrap {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.child {
+  max-width: 60vw;
+  margin-left: 10%;
+  margin-right: auto;
+  text-align: left;
+}
+
+.childReverse {
+  @extend .child;
+  margin-left: auto;
+  margin-right: 10%;
+  text-align: right;
+}
+
+.steps {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  svg {
+    position: absolute;
+    transition: fill 200ms ease;
+    will-change: fill;
+  }
+}

@@ -9,6 +9,8 @@ import BoscoCoste from '../../../assets/bosco_coste_low.mp4';
 import BoscoCoste1 from '../../../assets/bosco_coste_1_low.mp4';
 import { useTranslation } from 'react-i18next';
 import LocationMap from '../../atoms/LocationMap';
+import Badge from '../../atoms/Badge';
+import { services } from '../../../utilities/location';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -19,9 +21,15 @@ const Index = () => {
         <span>
           <h3>Bosco Coste, Grottole (MT)</h3>
           <p>{t('Date')}</p>
+          {/* <p className={styles.locDesc} dangerouslySetInnerHTML={{ __html: t('LocationDescription') }}></p> */}
         </span>
         <LocationMap />
       </ShowOnView>
+      <div className={styles.services}>
+        {services.map((s, key) => (
+          <Badge key={key} name={s} on />
+        ))}
+      </div>
       {/* <ShowOnView>
         <h4 dangerouslySetInnerHTML={{ __html: t('WhereLocation') }}></h4>
         <Button text={t('HowToReach')} title={t('HowToReach')} href="/info/#come-raggiungerci" internal />

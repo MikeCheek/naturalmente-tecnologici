@@ -8,11 +8,10 @@ const Index = ({ name, active = false, children }: MultipleLinksProps) => {
   const [show, setShow] = useState<boolean>(false);
   return (
     <div className={show ? styles.wrapShown : styles.wrap}>
-      <Link
+      <p
         className={styles.name}
         onClick={() => setShow((curr) => !curr)}
         style={active ? { color: 'var(--nt-orange)' } : {}}
-        to="/contattaci"
         // onMouseEnter={() => setShow(true)}
       >
         <span>{name}</span>
@@ -24,7 +23,7 @@ const Index = ({ name, active = false, children }: MultipleLinksProps) => {
             fill: active ? 'var(--nt-orange)' : '',
           }}
         /> */}
-      </Link>
+      </p>
       <div
         className={styles.links}
         // onMouseLeave={() => setShow(false)}

@@ -1,0 +1,33 @@
+.formWrap {
+  border: 2px var(--nt-orange) solid;
+  border-radius: 15px;
+  min-height: 420px;
+  @media screen and (min-width: '768px') {
+    padding: 10px;
+  }
+}
+
+.form {
+  width: 90vw;
+  border: none;
+
+  @media screen and (min-width: '768px') {
+    width: 70vw;
+  }
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  text-align: center;
+  margin: 80px 0;
+  max-width: 90%;
+  h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
