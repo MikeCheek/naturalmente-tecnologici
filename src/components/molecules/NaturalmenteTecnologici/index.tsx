@@ -18,7 +18,7 @@ import BigPictureSection from '../../atoms/BigPictureSection';
 import { images as ntImages } from '../../../utilities/ntPhotos';
 import Banner from '../../atoms/Banner';
 import BoscoCoste from '../../../assets/bosco_coste_low.mp4';
-import Shorty from '../../../assets/video/shorty.mp4';
+import Shorty from '../../../assets/video/shorty_10s.mp4';
 import Moddilugitrix from '../../../assets/video/moddilugitrix_10s.mp4';
 import Baldini from '../../../assets/video/baldini_10s.mp4';
 import Millenium from '../../../assets/video/millenium_10s.mp4';
