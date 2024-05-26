@@ -21,7 +21,7 @@ const Index = () => {
         <span>
           <h3>Bosco Coste, Grottole (MT)</h3>
           <p>{t('Date')}</p>
-          <p className={styles.locDesc} dangerouslySetInnerHTML={{ __html: t('LocationDescription') }}></p>
+          {/* <p className={styles.locDesc} dangerouslySetInnerHTML={{ __html: t('LocationDescription') }}></p> */}
         </span>
         <LocationMap />
       </ShowOnView>
