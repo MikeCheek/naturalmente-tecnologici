@@ -22,6 +22,7 @@ import Shorty from '../../../assets/video/shorty.mp4';
 import Moddilugitrix from '../../../assets/video/moddilugitrix_10s.mp4';
 import Baldini from '../../../assets/video/baldini_10s.mp4';
 import Millenium from '../../../assets/video/millenium_10s.mp4';
+import Transplay from '../../../assets/video/transplay_10s.mp4';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -127,7 +128,7 @@ const Index = () => {
           text={t('ValueText1')}
         />
         <BigPictureSection images={activities} title={t('Value2')} text={t('ValueText2')} reverse />
-        <BigPictureSection images={nature} title={t('Value3')} text={t('ValueText3')} />
+        <BigPictureSection images={nature} videos={[Transplay]} title={t('Value3')} text={t('ValueText3')} />
         {/* {whatIs.map((item, key) => (
           <div className={styles.singleSections} style={item.big ? {} : { maxWidth: '500px' }} key={key}>
             <Heading text={item.name} smaller={key != 0} />
