@@ -5,10 +5,12 @@
   position: absolute;
   margin: 50px 0;
   bottom: 0;
+  width: 100%;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 
   // mix-blend-mode: soft-light;
@@ -27,6 +29,7 @@
   }
 
   @media screen and (min-width: '768px') {
+    align-items: flex-end;
     width: 40%;
     text-align: right;
     right: 4%;
@@ -44,9 +47,9 @@
 
 .wrapTextReverse {
   @extend .wrapText;
-  align-items: flex-start;
   right: auto;
   @media screen and (min-width: '768px') {
+    align-items: flex-start;
     left: 4%;
     text-align: left;
   }
@@ -78,16 +81,23 @@
 }
 
 .image {
+  height: 100vh;
+  overflow: hidden;
+  // min-width: 100vw;
+}
+
+.video {
   width: 100vw;
-  min-width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .scrollingImages {
   display: flex;
   flex-direction: row-reverse;
   height: 100%;
-  transition: transform 200ms ease;
-  will-change: transform;
+  // transition: transform 200ms ease;
+  // will-change: transform;
 }
 
 .scrollingImagesReverse {

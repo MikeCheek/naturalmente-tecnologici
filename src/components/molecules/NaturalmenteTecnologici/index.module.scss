@@ -13,6 +13,22 @@
   }
 }
 
+.videoWrap {
+  position: relative;
+  width: 80vw;
+  height: auto;
+  margin: 30px 0;
+  video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
 .singleSectionsWrap {
   display: flex;
   flex-direction: row;

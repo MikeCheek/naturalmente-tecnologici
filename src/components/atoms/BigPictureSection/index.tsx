@@ -4,33 +4,66 @@ import * as styles from './index.module.scss';
 import ShowOnView from '../ShowOnView';
 import { useInView } from 'react-intersection-observer';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import Slider from 'react-slick';
+import Button from '../Button';
 
-const Index = ({ title, text, reverse = false, images }: BigPictureSectionProps) => {
-  let base = 0;
-  const [offset, setOffset] = useState<number>(0);
+const Index = ({ title, text, reverse = false, images, videos }: BigPictureSectionProps) => {
+  // let base = 0;
+  // const [offset, setOffset] = useState<number>(0);
 
-  const [ref, inView, entry] = useInView({
-    threshold: 0.2,
-    fallbackInView: true,
-    triggerOnce: false,
-  });
+  // const [ref, inView, entry] = useInView({
+  //   threshold: 0.2,
+  //   fallbackInView: true,
+  //   triggerOnce: false,
+  // });
 
-  const parallax = () => {
-    const rect = entry!.target.getBoundingClientRect();
-    const a = rect.top + rect.bottom;
-    setOffset((a / window.innerHeight) * 100);
-  };
+  // const parallax = () => {
+  //   const rect = entry!.target.getBoundingClientRect();
+  //   const a = rect.top + rect.bottom;
+  //   setOffset((a / window.innerHeight) * 100);
+  // };
 
-  useEffect(() => {
-    if (inView) {
-      base = window.scrollY;
-      window.addEventListener('scroll', () => parallax());
-    } else window.removeEventListener('scroll', () => {});
+  // useEffect(() => {
+  //   if (inView) {
+  //     base = window.scrollY;
+  //     window.addEventListener('scroll', () => parallax());
+  //   } else window.removeEventListener('scroll', () => {});
 
-    return window.removeEventListener('scroll', () => {});
-  }, [inView]);
+  //   return window.removeEventListener('scroll', () => {});
+  // }, [inView]);
 
-  const transform = `translateX(${reverse ? '-' : '+'}${Math.round(offset / 2)}%)`;
+  // const transform = `translateX(${reverse ? '-' : '+'}${Math.round(offset / 2)}%)`;
+
+  const slides = [
+    videos?.map((v, key) => (
+      <video
+        key={key}
+        className={styles.video}
+        height={500}
+        muted
+        autoPlay
+        controls={false}
+        loop
+        playsInline
+        poster="/images/bosco-1-low.JPG"
+      >
+        <source src={v} type="video/mp4" />
+        Your browser doesn't support video tag
+      </video>
+    )),
+    images?.edges.map((e, index) => (
+      <GatsbyImage
+        key={index}
+        alt={e.node.name ?? ''}
+        image={e.node.childImageSharp.gatsbyImageData}
+        loading="lazy"
+        className={styles.image}
+        objectPosition={'center bottom'}
+      />
+    )),
+  ]
+    .filter((e) => e != undefined)
+    .flat();
 
   return (
     <div className={styles.wrap}>
@@ -39,26 +72,41 @@ const Index = ({ title, text, reverse = false, images }: BigPictureSectionProps)
         <p dangerouslySetInnerHTML={{ __html: text ?? '' }}></p>
       </ShowOnView>
 
-      <div ref={ref} className={reverse ? styles.bigImageReverse : styles.bigImage}>
+      <div className={reverse ? styles.bigImageReverse : styles.bigImage}>
         <span></span>
-        <div
+        {/* <div
           style={{
             transform: transform,
             WebkitTransform: transform,
           }}
           className={reverse ? styles.scrollingImagesReverse : styles.scrollingImages}
+        > */}
+        <Slider
+          dots
+          infinite
+          slidesToShow={1}
+          slidesToScroll={1}
+          touchMove
+          autoplay
+          autoplaySpeed={5000}
+          // pauseOnHover
+          arrows
+          responsive={[
+            {
+              breakpoint: 850,
+              settings: {
+                dots: false,
+              },
+            },
+            {
+              breakpoint: 300,
+              settings: 'unslick', // destroys slick
+            },
+          ]}
         >
-          {images.edges.map((e, index) => (
-            <GatsbyImage
-              key={index}
-              alt={e.node.name ?? ''}
-              image={e.node.childImageSharp.gatsbyImageData}
-              loading="lazy"
-              className={styles.image}
-              objectPosition={'center top'}
-            />
-          ))}
-        </div>
+          {slides}
+        </Slider>
+        {/* </div> */}
       </div>
     </div>
   );
