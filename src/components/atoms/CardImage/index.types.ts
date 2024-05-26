@@ -1,5 +1,5 @@
 export interface CardImageProps {
-  children: React.ReactElement;
+  children: React.ReactNode;
   reversed?: boolean;
   onlyMobile?: boolean;
   onlyDesktop?: boolean;

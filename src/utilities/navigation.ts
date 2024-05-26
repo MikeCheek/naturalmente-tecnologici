@@ -7,15 +7,17 @@ export const links = (lang = 'it') => [
   { name: lang === 'it' ? 'Partner' : 'Partner', to: '/partner', position: 2 },
   { name: lang === 'it' ? 'Chi siamo' : 'Who', to: '/chi-siamo', position: 2 },
   { name: lang === 'it' ? 'Contattaci' : 'Contact us', to: '/contattaci', position: 2 },
-  // {
-  //   name: lang === 'it' ? 'Edizioni' : 'Editions',
-  //   multiple: true,
-  //   links: edizioniData.map((ed) => ({
-  //     name: ed.year,
-  //     to: `/edizioni/${ed.year}`,
-  //     position: 3,
-  //   })),
-  // },
+  {
+    name: lang === 'it' ? 'Edizioni' : 'Editions',
+    multiple: true,
+    links: edizioniData
+      .sort((a, b) => (a.year > b.year ? -1 : 1))
+      .map((ed) => ({
+        name: ed.year,
+        to: `/edizioni/${ed.year}`,
+        position: 3,
+      })),
+  },
   // {
   //   name: 'Esempio',
   //   multiple: true,

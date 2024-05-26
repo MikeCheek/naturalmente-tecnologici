@@ -4,6 +4,8 @@ type Activity = {
   outputs: string;
 };
 
+type Section = { title: string; description?: string; imageSrc?: string; youtubeSrc?: string };
+
 export default interface EdizioniData {
   theme: string;
   title: string;
@@ -11,5 +13,6 @@ export default interface EdizioniData {
   year: string;
   articleLinks?: string[];
   youtubePlaylist?: string;
-  activities: Activity[];
+  activities?: Activity[];
+  story: Section[];
 }
