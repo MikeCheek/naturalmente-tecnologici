@@ -32,6 +32,7 @@
 .video {
   -webkit-clip-path: url(#clip-00);
   clip-path: url(#clip-00);
+  transform: translateZ(0); // just to force component to render on safari
 }
 
 .singleSectionsWrap {
