@@ -29,6 +29,11 @@
   }
 }
 
+.video {
+  clip-path: url(#clip-00);
+  -webkit-clip-path: url(#clip-00);
+}
+
 .singleSectionsWrap {
   display: flex;
   flex-direction: row;
