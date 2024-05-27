@@ -8,12 +8,13 @@ import ScrollyTelling from '../../components/molecules/ScrollyTelling';
 
 interface IndexProps {
   pageContext: EdizioniData;
+  data: Data;
 }
 
-const Index = ({ pageContext }: IndexProps) => {
+const Index = ({ pageContext, data, ...props }: IndexProps) => {
   return (
     <Layout>
-      <ScrollyTelling {...pageContext} />
+      <ScrollyTelling {...pageContext} data={data} />
     </Layout>
   );
 };
@@ -29,13 +30,24 @@ export const Head = ({ location, pageContext }: HeadProps) => {
 };
 
 export const query = graphql`
-  query ($language: String!) {
+  query ($language: String!, $imagesPath: String!) {
     locales: allLocale(filter: { ns: { in: ["common", "editions"] }, language: { eq: $language } }) {
       edges {
         node {
           ns
           data
           language
+        }
+      }
+    }
+    allFile(filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, dir: { regex: $imagesPath } }, sort: { id: ASC }) {
+      edges {
+        node {
+          id
+          name
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 300, quality: 80)
+          }
         }
       }
     }

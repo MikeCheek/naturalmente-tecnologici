@@ -17,12 +17,12 @@ import ShowOnView from '../../atoms/ShowOnView';
 import BigPictureSection from '../../atoms/BigPictureSection';
 import { images as ntImages } from '../../../utilities/ntPhotos';
 import Banner from '../../atoms/Banner';
-import BoscoCoste from '../../../assets/bosco_coste_low.mp4';
 import Shorty from '../../../assets/video/shorty_10s.mp4';
 import Moddilugitrix from '../../../assets/video/moddilugitrix_10s.mp4';
 import Baldini from '../../../assets/video/baldini_10s.mp4';
 import Millenium from '../../../assets/video/millenium_10s.mp4';
 import Transplay from '../../../assets/video/transplay_10s.mp4';
+import VideoMasked from '../../atoms/VideoMasked';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -93,16 +93,11 @@ const Index = () => {
   return (
     <div className={styles.wrap}>
       <div className={styles.singleSectionsWrap}>
-        <ShowOnView className={styles.singleSections}>
-          <Heading text={t('EventTitle')} smaller={false} simple showOnView={false} />
-          <div className={styles.videoWrap}>
-            <video height={500} muted autoPlay controls={false} loop playsInline poster="/images/bosco-1-low.JPG">
-              <source src={BoscoCoste} type="video/mp4" />
-              Your browser doesn't support video tag
-            </video>
-          </div>
+        <Heading text={t('EventTitle')} smaller={false} simple showOnView />
+        <div className={styles.singleSections}>
+          <VideoMasked />
           <p dangerouslySetInnerHTML={{ __html: t('EventDescription') }}></p>
-        </ShowOnView>
+        </div>
         <BigPictureSection
           images={music}
           videos={[Shorty, Moddilugitrix, Baldini, Millenium]}

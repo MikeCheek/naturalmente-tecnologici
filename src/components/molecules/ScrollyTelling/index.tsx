@@ -6,8 +6,12 @@ import Heading from '../../atoms/Heading';
 import ScrollySection from '../../atoms/ScrollySection';
 import YoutubeEmbed from '../../atoms/YoutubeEmbed';
 import CardImage from '../../atoms/CardImage';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-const Index = ({ theme, title, year, youtubePlaylist, story }: ScrollyTellingProps) => {
+const Index = ({ theme, title, year, youtubePlaylist, story, data }: ScrollyTellingProps) => {
+  const findImage = (name: string) =>
+    data.allFile!.edges.find((e) => e.node.name === name)?.node.childImageSharp.gatsbyImageData;
+
   return (
     <div className={styles.wrap}>
       <Heading text={'Edizione ' + year} main marginTop />
@@ -20,7 +24,13 @@ const Index = ({ theme, title, year, youtubePlaylist, story }: ScrollyTellingPro
               <h2>{s.title}</h2>
               {s.description ? <p dangerouslySetInnerHTML={{ __html: s.description }}></p> : <></>}
               {s.youtubeSrc ? <YoutubeEmbed src={s.youtubeSrc} /> : <></>}
-              {s.imageSrc ? <CardImage>{s.imageSrc}</CardImage> : <></>}
+              {s.imageName ? (
+                <CardImage bigger>
+                  <GatsbyImage alt={s.imageName} image={findImage(s.imageName)} />
+                </CardImage>
+              ) : (
+                <></>
+              )}
             </ScrollySection>
           </div>
         </Scrollytelling.Root>

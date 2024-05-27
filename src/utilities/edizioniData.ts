@@ -1,11 +1,12 @@
 import EdizioniData from '../templates/Edizioni/index.types';
 
-export default [
+const imagePathBase = 'src/images/editions/';
+
+const data: EdizioniData[] = [
   {
     year: '2022',
     title: 'Dove tutto è iniziato',
     theme: 'Dove tutto è iniziato',
-    image: 'none',
     story: [
       {
         title: "L'inizio",
@@ -48,7 +49,6 @@ export default [
     year: '2023',
     title: 'Ri-prendiamoci il futuro',
     theme: "Ri-prendiamoci il futuro. Ragionamenti complessi sull'accelerazione dei nostri tempi",
-    image: 'none',
     story: [
       {
         title: 'Si riparte',
@@ -72,6 +72,7 @@ export default [
         <br/><br/>Tra i protagonisti vi erano Jane Goodall, la celebre primatologa e attivista ambientale, e Tim Berners-Lee, l'inventore del World Wide Web. 
         <br/>Ogni intervento fu un momento di riflessione e ispirazione, con ospiti che condivisero non solo le loro scoperte, ma anche le sfide e le opportunità future. 
         <br/>Le loro storie di innovazione e dedizione lasciarono un segno indelebile nei cuori e nelle menti dei partecipanti, alimentando la voglia di contribuire al progresso globale.`,
+        imageName: 'DSC_0741',
       },
       {
         title: 'Parlano di noi',
@@ -87,4 +88,6 @@ export default [
       },
     ],
   },
-] as EdizioniData[];
+].map((v) => ({ ...v, imagesPath: imagePathBase + v.year + '/' }));
+
+export default data;
