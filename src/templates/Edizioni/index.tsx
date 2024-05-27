@@ -3,11 +3,7 @@ import * as styles from './index.module.scss';
 import Seo from '../../components/atoms/Seo';
 import { HeadProps, graphql } from 'gatsby';
 import Layout from '../../components/organisms/Layout';
-import Heading from '../../components/atoms/Heading';
-import ShowOnView from '../../components/atoms/ShowOnView';
 import EdizioniData from './index.types';
-import HeroEdizioni from '../../components/organisms/HeroEdizioni';
-import YoutubeEmbed from '../../components/atoms/YoutubeEmbed';
 import ScrollyTelling from '../../components/molecules/ScrollyTelling';
 
 interface IndexProps {
@@ -17,20 +13,7 @@ interface IndexProps {
 const Index = ({ pageContext }: IndexProps) => {
   return (
     <Layout>
-      {/* <HeroEdizioni theme={pageContext.title} year={pageContext.year} /> */}
       <ScrollyTelling {...pageContext} />
-      {/* <ShowOnView className={styles.head}>
-        <Heading text={'Tema'} />
-        <h4 dangerouslySetInnerHTML={{ __html: pageContext.theme }}></h4>
-      </ShowOnView>
-      <Heading text={'Conferenze'} />
-      {pageContext.youtubePlaylist && (
-        <ShowOnView>
-          <YoutubeEmbed src={'https://www.youtube-nocookie.com/embed/videoseries?' + pageContext.youtubePlaylist} />
-        </ShowOnView>
-      )}
-      <Heading text={'Attività'} />
-      <Heading text={'Articoli'} /> */}
     </Layout>
   );
 };
