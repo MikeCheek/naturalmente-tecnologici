@@ -217,4 +217,151 @@ export const faqIT = [
   },
 ];
 
-export const faqEN = [];
+export const faqEN = [
+  {
+    title: 'Festival',
+    data: [
+      {
+        title: 'Where will the festival take place?',
+        text: `The festival will take place in Basilicata at <a href="/#quando-e-dove" title="Discover the location" rel="noopener noreferrer">Bosco Coste</a>, Grottole (MT).<br/>
+        However, some scheduled activities such as the Welcome Conference and coffee at the Lab will take place in Grassano (MT).<br>`,
+        // You can find all the details on the <a href="/programma" title="Go to the program page" rel="noopener noreferrer">program page</a>
+      },
+      {
+        title: 'What will I find at Naturalmente Tecnologici?',
+        text: `Conferences, workshops, labs, connection with people and the surrounding nature.<br/>
+        A festival of social and technological innovation with guests from all over the world, but also a music festival with international artists.`,
+      },
+      {
+        title: 'Can I propose a collaboration?',
+        text: `Yes, we are happy to have new ideas and perspectives.<br/>
+        Send us an email at ${mail({})} to tell us about the collaboration you have in mind.`,
+      },
+      {
+        title: 'I am a professional and would like to support and collaborate, can I do that?',
+        text: `Yes, we select partners who are willing to invest in culture and in the development of people and the territory and to accept our collective challenge.<br/>
+      We want an experience of positive impact and resonance in the community and in the place.`,
+      },
+    ],
+  },
+  {
+    title: 'Ticket',
+    data: [
+      {
+        title: 'What types of tickets are available?',
+        text: `There are two types of tickets:<br/>
+        - <b>Full 3 days</b><br/>
+        - <b>Daily</b><br/>
+      For the daily ticket, you can separately add access to camping.`,
+      },
+      {
+        title: 'What does my ticket cover?',
+        text: `Full 3 days (Welcome to Tijuana Camp included):<br/>
+    <ul>
+		  <li>Access to the festival for all 3 days</li>
+        <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
+      <li>Use of camping area for all 3 days</li>
+        <ul><li>Smartphone charging stations, showers, reserved toilets</li></ul>
+      <li>Use of camping area for the entire duration of the festival</li>
+    </ul>
+	        Daily
+    <ul>
+	    <li>Access to the festival from 10 am until closing</li>
+        <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
+    </ul>
+`,
+      },
+      { title: 'Can minors participate?', text: `Yes, you will need to be accompanied by a parent.` },
+      { title: 'Do I need to buy a ticket for my child?', text: `No, children under 14 do not pay` },
+      {
+        title: 'Can I access discounts?',
+        text: `If you are from Grassano, you can access a special discount.<br/>
+      You will need to bring a valid identification document issued by the municipality of Grassano.<br/><br/>
+      People with reduced mobility pay half price and accompanying persons do not pay.`,
+      },
+    ],
+  },
+  {
+    title: 'Welcome to Tijuana Camp',
+    data: [
+      {
+        title: 'When does Welcome To Tijuana open?',
+        text: `Access will be allowed from 10 am to 7 pm`,
+      },
+      {
+        title: 'What does the camping area provide?',
+        text: `The camping area provides mobile phone charging stations, toilets and showers, tent space 200*220cm.<br/><br/>
+      If your tent is larger, write to ${mail({
+        subject: 'TENT SIZE',
+      })} with the subject: TENT SIZE and we will give you further instructions.`,
+      },
+      {
+        title: 'Can I rent a tent from you?',
+        text: `Yes, however the number of tents available for rent is very limited.<br/>
+    To rent the tent you must do so by <b><u>August 1, 2024</u></b>.<br/>
+    If you intend to rent a tent write to ${mail({
+      subject: 'TENT RENTAL',
+    })} with the subject: TENT RENTAL
+  `,
+      },
+      { title: 'Will food and drinks be available?', text: `Yes, the area will be equipped with refreshment areas` },
+      {
+        title: 'Can I bring my own food and drinks?',
+        text: `Yes, you can bring your own food and drinks.<br/><br/>
+    Remember that it is FORBIDDEN TO BRING GLASS and it is FORBIDDEN TO USE OPEN FLAMES inside the festival area`,
+      },
+      {
+        title: 'Is the camping area equipped with toilets?',
+        text: `Yes, the camping area has chemical toilets and showers.`,
+      },
+      {
+        title: 'Will there be a medical first aid service?',
+        text: `Yes, a mobile first aid station will be present.`,
+      },
+      {
+        title: 'Should I bring my own tent or can I buy one there?',
+        text: `We recommend BRINGING YOUR OWN TENT.`,
+      },
+      {
+        title: 'I have never camped before, what do I need to know?',
+        text: `Camping is a wonderful experience, but you need to be prepared!<br/>
+        Consider that temperatures can change rapidly, so make sure to have both light and warm clothes with you.<br/><br/>
+        We also recommend bringing:
+        <ul>
+        <li>Flashlights</li>
+        <li>Appropriate footwear</li>
+        <li>Rain gear (you never know)</li>
+        <li>Sleeping bag</li>
+        <li>Camping tent</li>
+        <li>Towels and swimsuit</li>
+        </ul>
+        `,
+      },
+    ],
+  },
+  {
+    title: 'Participate',
+    data: [
+      {
+        title: 'I am a craftsman and would like to bring my art to your festival, can I do that?',
+        text: `Yes, we want to promote craftsmanship.<br/>
+    Write an email to ${mail({ subject: 'PARTNERSHIP REQUEST' })} with the subject: PARTNERSHIP REQUEST`,
+      },
+      {
+        title: 'We are a group of people, can we get discounts?',
+        text: `Yes, we favor communities and united groups.<br/>
+        For groups of more than 20 people we offer a special discount.<br/>
+      Write an email to ${mail({ subject: 'GROUP DISCOUNT REQUEST' })} with the subject: GROUP DISCOUNT REQUEST`,
+      },
+    ],
+  },
+  {
+    title: 'Other',
+    data: [
+      {
+        title: 'Can four-legged friends enter?',
+        text: `If you want to bring your pet with you, please contact us in advance.`,
+      },
+    ],
+  },
+];
