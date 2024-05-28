@@ -4,12 +4,14 @@ import HeroContattaci from '../components/organisms/HeroContattaci';
 import ContattaciBody from '../components/molecules/ContattaciBody';
 import { HeadProps, graphql } from 'gatsby';
 import Seo from '../components/atoms/Seo';
+import Faq from '../components/organisms/Faq';
 
 const Contattaci = () => {
   return (
     <Layout>
       <HeroContattaci />
       <ContattaciBody />
+      <Faq />
     </Layout>
   );
 };

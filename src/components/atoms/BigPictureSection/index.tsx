@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BigPictureSectionProps } from './index.types';
 import * as styles from './index.module.scss';
 import ShowOnView from '../ShowOnView';
-import { useInView } from 'react-intersection-observer';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import Slider from 'react-slick';
-import Button from '../Button';
+import Carousel from '../Carousel';
 
 const Index = ({ title, text, reverse = false, images, videos }: BigPictureSectionProps) => {
   // let base = 0;
@@ -71,31 +69,7 @@ const Index = ({ title, text, reverse = false, images, videos }: BigPictureSecti
           }}
           className={reverse ? styles.scrollingImagesReverse : styles.scrollingImages}
         > */}
-        <Slider
-          dots
-          infinite
-          slidesToShow={1}
-          slidesToScroll={1}
-          touchMove
-          autoplay
-          autoplaySpeed={5000}
-          // pauseOnHover
-          arrows
-          responsive={[
-            {
-              breakpoint: 850,
-              settings: {
-                dots: false,
-              },
-            },
-            {
-              breakpoint: 300,
-              settings: 'unslick', // destroys slick
-            },
-          ]}
-        >
-          {slides}
-        </Slider>
+        <Carousel>{slides}</Carousel>
         {/* </div> */}
       </div>
     </div>
