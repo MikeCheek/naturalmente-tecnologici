@@ -15,6 +15,7 @@ const data: EdizioniData[] = [
                        <br/>Visionari e appassionati di tutto il mondo si riunirono, attratti dal desiderio di connettere natura e tecnologia. 
                        <br/>Lì, sotto il cielo stellato, prese vita un festival che prometteva di unire arte, scienza e comunità, creando un futuro condiviso e sostenibile.
                        <br/>Così iniziò la magia di NT22, un'avventura destinata a crescere.`,
+        imageName: 'VolantinoNT-white',
       },
       {
         title: 'Un trionfo di idee',
@@ -30,6 +31,7 @@ const data: EdizioniData[] = [
         <br/><br/>Tra loro spiccavano nomi come Luca Parmitano, l'astronauta che condivise le sue esperienze dallo spazio, e Marco Tempest, il mago tecnologico che stupì il pubblico con le sue performance. 
         <br/>Ogni ospite portò una prospettiva unica, arricchendo il festival con storie ispiratrici e visioni future. 
         <br/>La loro presenza trasformò l'evento in una celebrazione della creatività umana e della collaborazione globale.`,
+        imageName: 'millenium_poster',
       },
       {
         title: 'Parlano di noi',
@@ -78,6 +80,7 @@ const data: EdizioniData[] = [
         title: 'Parlano di noi',
         description: `Il sito ufficiale di Syskrack presenta le caratteristiche principali dell'evento del 2023, inclusi i vari laboratori, conferenze e attività pratiche che facevano parte del programma. L'evento si è tenuto a Bosco Le Coste e ha attirato un'ampia gamma di partecipanti interessati all'innovazione sostenibile ed etica (Naturalmente Tecnologici - NT) (Syskrack.org).
                   <br/><br/>Un articolo su Wikidata offre una panoramica dell'evento, mettendo in luce la sua missione di unire il progresso tecnologico con l'armonia naturale. L'evento è noto per il suo ruolo nel promuovere nuove idee e connessioni tra i partecipanti(Wikidata).`,
+        imageName: ['programma_concerti', 'programma_cultura'],
       },
       {
         title: 'Espansione e innovazione',

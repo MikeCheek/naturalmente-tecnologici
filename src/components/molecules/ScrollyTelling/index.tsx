@@ -7,6 +7,7 @@ import ScrollySection from '../../atoms/ScrollySection';
 import YoutubeEmbed from '../../atoms/YoutubeEmbed';
 import CardImage from '../../atoms/CardImage';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import Slider from 'react-slick';
 
 const Index = ({ theme, title, year, youtubePlaylist, story, data }: ScrollyTellingProps) => {
   const findImage = (name: string) =>
@@ -25,9 +26,38 @@ const Index = ({ theme, title, year, youtubePlaylist, story, data }: ScrollyTell
               {s.description ? <p dangerouslySetInnerHTML={{ __html: s.description }}></p> : <></>}
               {s.youtubeSrc ? <YoutubeEmbed src={s.youtubeSrc} /> : <></>}
               {s.imageName ? (
-                <CardImage bigger>
-                  <GatsbyImage alt={s.imageName} image={findImage(s.imageName)} />
-                </CardImage>
+                Array.isArray(s.imageName) ? (
+                  <Slider
+                    dots
+                    arrows
+                    draggable
+                    infinite
+                    slidesToShow={1}
+                    slidesToScroll={1}
+                    className={styles.slider}
+                    autoplay
+                    autoplaySpeed={3000}
+                    cssEase="linear"
+                    pauseOnHover
+                    swipeToSlide
+                    touchMove
+                    waitForAnimate={false}
+                    responsive={[
+                      {
+                        breakpoint: 300,
+                        settings: 'unslick', // destroys slick
+                      },
+                    ]}
+                  >
+                    {s.imageName.map((v) => (
+                      <GatsbyImage className={styles.image} alt={v} image={findImage(v)} />
+                    ))}
+                  </Slider>
+                ) : (
+                  <CardImage bigger>
+                    <GatsbyImage alt={s.imageName} image={findImage(s.imageName)} />
+                  </CardImage>
+                )
               ) : (
                 <></>
               )}
