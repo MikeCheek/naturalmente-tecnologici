@@ -24,23 +24,23 @@ const Index = ({ opened, onClick }: NavigationProps) => {
 
   const linkElements = links(language).map((link, key) => {
     if (link.hide) return;
-    if (link.multiple)
-      return (
-        <MultipleLinks name={link.name} key={key} active={pathname?.startsWith(link.name.toLowerCase())}>
-          {link.links.map((l, key) => (
-            <Link
-              key={key}
-              className={styles.link}
-              style={removeSlashes(pathname) === removeSlashes(l.to) ? { color: 'var(--nt-orange)' } : {}}
-              to={l.to}
-              onClick={onClick}
-              // title={l.name}
-            >
-              {l.name}
-            </Link>
-          ))}
-        </MultipleLinks>
-      );
+    if (link.multiple) return;
+    // return (
+    //   <MultipleLinks name={link.name} key={key} active={pathname?.startsWith(link.name.toLowerCase())}>
+    //     {link.links.map((l, key) => (
+    //       <Link
+    //         key={key}
+    //         className={styles.link}
+    //         style={removeSlashes(pathname) === removeSlashes(l.to) ? { color: 'var(--nt-orange)' } : {}}
+    //         to={l.to}
+    //         onClick={onClick}
+    //         // title={l.name}
+    //       >
+    //         {l.name}
+    //       </Link>
+    //     ))}
+    //   </MultipleLinks>
+    // );
     return (
       <Link
         key={key}
