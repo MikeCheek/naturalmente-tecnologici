@@ -10,7 +10,7 @@ export const images = () => {
             id
             name
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 90)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 60)
             }
           }
         }
@@ -23,7 +23,7 @@ export const images = () => {
             id
             name
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 90)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 60)
             }
           }
         }
@@ -36,7 +36,7 @@ export const images = () => {
             id
             name
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 90)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 60)
             }
           }
         }

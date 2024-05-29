@@ -6,6 +6,7 @@ import { DefaultTicketProps, info as tickets } from '../../../utilities/tickets'
 import { faqIT as dataFAQ } from '../../../utilities/dataFAQ';
 import guests from '../../../utilities/guests';
 import { removeHTMLTags } from '../../../utilities/sanitizer';
+import { Script } from 'gatsby';
 
 const Index = ({
   lang = 'it',
@@ -20,7 +21,6 @@ const Index = ({
   tally = false,
 }: SeoProps) => {
   const { metadata, featuredImage } = useSiteMetadata();
-  console.log(lang);
 
   const seo = {
     title: title && pathname != '/' ? title + ' | ' + metadata.title : metadata.title,
@@ -191,12 +191,13 @@ const Index = ({
 
       <meta name="robots" content="max-image-preview:large" />
 
-      {structuredData ? <script type="application/ld+json">{JSON.stringify(microData)}</script> : <></>}
+      {structuredData ? <Script type="application/ld+json">{JSON.stringify(microData)}</Script> : <></>}
       {noIndex ? <meta name="robots" content="noindex,nofollow" /> : <></>}
 
-      <script
+      <Script
         id="saro"
         defer
+        strategy="idle"
         dangerouslySetInnerHTML={{
           __html: `(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
       var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
@@ -209,18 +210,18 @@ const Index = ({
       ml_webform_5919036('animation', 'fadeIn');
       `,
         }}
-      ></script>
+      ></Script>
       <link rel="dns-prefetch" href="https://static.mailerlite.com/" />
-      <link rel="dns-prefetch" href="https://www.google.com/" />
+      {/* <link rel="dns-prefetch" href="https://www.google.com/" /> */}
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       <link rel="dns-prefetch" href="https://assets.mlcdn.com" />
       <link rel="preconnect" href="https://static.mailerlite.com/" />
-      <link rel="preconnect" href="https://www.google.com/" />
+      {/* <link rel="preconnect" href="https://www.google.com/" /> */}
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://assets.mlcdn.com" />
-      {/* <script defer src="https://tally.so/widgets/embed.js"></script> */}
+      {/* <S defer src="https://tally.so/widgets/embed.js"></script> */}
       {tally ? (
-        <script
+        <Script
           async
           dangerouslySetInnerHTML={{
             __html: `
@@ -231,7 +232,7 @@ const Index = ({
       if("undefined"!=typeof Tally)v();
       else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}`,
           }}
-        ></script>
+        ></Script>
       ) : (
         <></>
       )}

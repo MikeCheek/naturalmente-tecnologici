@@ -1,14 +1,13 @@
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import FlyingInsect from '../../atoms/FlyingInsect';
 import * as styles from './index.module.scss';
-// import Flocking from '../../atoms/Flocking';
+import Flocking from '../../atoms/Flocking';
 import detectBrowser from '../../../utilities/detectBrowser';
 
 // const isBrowser = typeof window !== 'undefined';
 
 const Index = () => {
-  const Flocking = lazy(() => import('../../atoms/Flocking'));
-  // const [animate, setAnimate] = useState<boolean>(false);
+  const [animate, setAnimate] = useState<boolean>(false);
   // const [catched, setCatched] = useState<number>(0);
   // const handleClick = () => setCatched((old) => old + 1);
 
@@ -51,13 +50,11 @@ const Index = () => {
       <FlyingInsect top={50} onClick={handleClick} />
       <FlyingInsect top={70} onClick={handleClick} />
       <FlyingInsect top={20} onClick={handleClick} /> */}
-      {/* <button className={styles.zen} onClick={() => setAnimate((a) => !a)}>
+      <button className={styles.zen} onClick={() => setAnimate((a) => !a)}>
         Animate Background
-      </button> */}
-      {/* {animate ? <Flocking /> : <></>} */}
-      <Suspense>
-        <Flocking />
-      </Suspense>
+      </button>
+      {animate ? <Flocking /> : <></>}
+      {/* <Flocking /> */}
     </div>
   );
 };
