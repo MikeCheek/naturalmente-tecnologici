@@ -3,34 +3,18 @@ import * as styles from './index.module.scss';
 import Seo from '../../components/atoms/Seo';
 import { HeadProps, graphql } from 'gatsby';
 import Layout from '../../components/organisms/Layout';
-import Heading from '../../components/atoms/Heading';
-import ShowOnView from '../../components/atoms/ShowOnView';
 import EdizioniData from './index.types';
-import HeroEdizioni from '../../components/organisms/HeroEdizioni';
-import YoutubeEmbed from '../../components/atoms/YoutubeEmbed';
 import ScrollyTelling from '../../components/molecules/ScrollyTelling';
 
 interface IndexProps {
   pageContext: EdizioniData;
+  data: Data;
 }
 
-const Index = ({ pageContext }: IndexProps) => {
+const Index = ({ pageContext, data, ...props }: IndexProps) => {
   return (
     <Layout>
-      {/* <HeroEdizioni theme={pageContext.title} year={pageContext.year} /> */}
-      <ScrollyTelling {...pageContext} />
-      {/* <ShowOnView className={styles.head}>
-        <Heading text={'Tema'} />
-        <h4 dangerouslySetInnerHTML={{ __html: pageContext.theme }}></h4>
-      </ShowOnView>
-      <Heading text={'Conferenze'} />
-      {pageContext.youtubePlaylist && (
-        <ShowOnView>
-          <YoutubeEmbed src={'https://www.youtube-nocookie.com/embed/videoseries?' + pageContext.youtubePlaylist} />
-        </ShowOnView>
-      )}
-      <Heading text={'Attività'} />
-      <Heading text={'Articoli'} /> */}
+      <ScrollyTelling {...pageContext} data={data} />
     </Layout>
   );
 };
@@ -46,13 +30,24 @@ export const Head = ({ location, pageContext }: HeadProps) => {
 };
 
 export const query = graphql`
-  query ($language: String!) {
+  query ($language: String!, $imagesPath: String!) {
     locales: allLocale(filter: { ns: { in: ["common", "editions"] }, language: { eq: $language } }) {
       edges {
         node {
           ns
           data
           language
+        }
+      }
+    }
+    allFile(filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, dir: { regex: $imagesPath } }, sort: { id: ASC }) {
+      edges {
+        node {
+          id
+          name
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 800, quality: 80)
+          }
         }
       }
     }

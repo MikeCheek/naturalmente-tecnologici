@@ -49,6 +49,7 @@ const Index = ({ children, reverse = false, first = false }: ScrollySectionProps
                 180 + // to make steps point down
                 (reverse ? -1 : 1) * // to change direction if section is reversed
                   (key * 15) + // amount to steer
+                (key == 5 ? (reverse ? 20 : -20) : 0) + // to make last steps coherent with next ones
                 (key == 0 ? (reverse ? 30 : -30) : 0) // to make first steps coherent with precedents
               }deg)`,
               top: `${curveTop(key)}%`,

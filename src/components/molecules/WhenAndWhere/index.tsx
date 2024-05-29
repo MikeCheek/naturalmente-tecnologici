@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Heading from '../../atoms/Heading';
 import * as styles from './index.module.scss';
 // import { StaticImage } from 'gatsby-plugin-image';
 import SectionImageCTA from '../SectionImageCTA';
 import ShowOnView from '../../atoms/ShowOnView';
 import Button from '../../atoms/Button';
-import BoscoCoste from '../../../assets/bosco_coste_low.mp4';
-import BoscoCoste1 from '../../../assets/bosco_coste_1_low.mp4';
+import BoscoCoste from '../../../assets/video/bosco_coste_backward.mp4';
+import BoscoCoste1 from '../../../assets/video/pala_eolica.mp4';
 import { useTranslation } from 'react-i18next';
 import LocationMap from '../../atoms/LocationMap';
 import Badge from '../../atoms/Badge';
@@ -14,6 +14,12 @@ import { services } from '../../../utilities/location';
 
 const Index = () => {
   const { t } = useTranslation();
+  const [loadVideo, setLoadVideo] = useState<boolean>(false);
+
+  useEffect(() => {
+    setLoadVideo(true);
+  }, []);
+
   return (
     <div className={styles.whenAndWhere}>
       <Heading text={t('WhenWhere')} simple />
@@ -39,8 +45,8 @@ const Index = () => {
         // buttonText={t('LocationCta')}
         // buttonHref={mapsLink}
         imageOrVideo={
-          <video height={500} muted autoPlay controls={false} loop playsInline poster="/images/bosco-1-low.JPG">
-            <source src={BoscoCoste} type="video/mp4" />
+          <video height={500} muted autoPlay controls={false} loop playsInline>
+            {loadVideo ? <source src={BoscoCoste} type="video/mp4" /> : <></>}
             Your browser doesn't support video tag
           </video>
         }
@@ -50,8 +56,8 @@ const Index = () => {
         // buttonText={t('LocationCta')}
         // buttonHref={mapsLink}
         imageOrVideo={
-          <video height={500} muted autoPlay controls={false} loop playsInline poster="/images/bosco-2-low.JPG">
-            <source src={BoscoCoste1} type="video/mp4" />
+          <video height={500} muted autoPlay controls={false} loop playsInline>
+            {loadVideo ? <source src={BoscoCoste1} type="video/mp4" /> : <></>}
             Your browser doesn't support video tag
           </video>
           // <StaticImage

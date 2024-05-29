@@ -34,7 +34,7 @@ const Index = () => {
                 </Link>
               ))}
           </div>
-          <div className={styles.links}>
+          {/* <div className={styles.links}>
             {links(language)
               .filter((l) => l.multiple)
               .map((link) =>
@@ -44,7 +44,7 @@ const Index = () => {
                   </Link>
                 ))
               )}
-          </div>
+          </div> */}
         </div>
       </div>
       <div className={styles.bottom}>
