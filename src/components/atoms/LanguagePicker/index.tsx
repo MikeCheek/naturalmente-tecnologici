@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <div className={styles.languagePicker} onMouseLeave={() => setDropdown(false)}>
       <p onClick={() => setDropdown((v) => !v)}>
-        <Flag className={styles.flag} code={enToUk(language)} />
+        <Flag className={styles.flag} code={enToUk(language)} alt={language + ' flag'} />
         {language.toUpperCase()}
         {/* <Down width={10} height={10} /> */}
       </p>
@@ -23,7 +23,7 @@ const Index = () => {
               to={originalPath}
               language={lng}
             >
-              <Flag className={styles.flag} code={enToUk(lng)} /> {lng.toUpperCase()}
+              <Flag className={styles.flag} code={enToUk(lng)} alt={lng + ' flag'} /> {lng.toUpperCase()}
             </Link>
             {key % 2 === 0 ? <div className={styles.separator}></div> : null}
           </div>

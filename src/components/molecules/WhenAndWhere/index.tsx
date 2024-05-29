@@ -31,11 +31,11 @@ const Index = () => {
         </span>
         <LocationMap />
       </ShowOnView>
-      <div className={styles.services}>
+      <ShowOnView className={styles.services}>
         {services.map((s, key) => (
           <Badge key={key} name={s} on />
         ))}
-      </div>
+      </ShowOnView>
       {/* <ShowOnView>
         <h4 dangerouslySetInnerHTML={{ __html: t('WhereLocation') }}></h4>
         <Button text={t('HowToReach')} title={t('HowToReach')} href="/info/#come-raggiungerci" internal />

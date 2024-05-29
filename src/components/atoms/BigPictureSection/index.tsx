@@ -6,32 +6,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Carousel from '../Carousel';
 
 const Index = ({ title, text, reverse = false, images, videos }: BigPictureSectionProps) => {
-  // let base = 0;
-  // const [offset, setOffset] = useState<number>(0);
-
-  // const [ref, inView, entry] = useInView({
-  //   threshold: 0.2,
-  //   fallbackInView: true,
-  //   triggerOnce: false,
-  // });
-
-  // const parallax = () => {
-  //   const rect = entry!.target.getBoundingClientRect();
-  //   const a = rect.top + rect.bottom;
-  //   setOffset((a / window.innerHeight) * 100);
-  // };
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     base = window.scrollY;
-  //     window.addEventListener('scroll', () => parallax());
-  //   } else window.removeEventListener('scroll', () => {});
-
-  //   return window.removeEventListener('scroll', () => {});
-  // }, [inView]);
-
-  // const transform = `translateX(${reverse ? '-' : '+'}${Math.round(offset / 2)}%)`;
-
   const slides = [
     videos?.map((v, key) => (
       <video key={key} className={styles.video} height={500} muted autoPlay controls={false} loop playsInline>
@@ -56,7 +30,7 @@ const Index = ({ title, text, reverse = false, images, videos }: BigPictureSecti
   return (
     <div className={styles.wrap}>
       <ShowOnView className={reverse ? styles.wrapTextReverse : styles.wrapText}>
-        <h4 dangerouslySetInnerHTML={{ __html: title }}></h4>
+        <h3 dangerouslySetInnerHTML={{ __html: title }}></h3>
         <p dangerouslySetInnerHTML={{ __html: text ?? '' }}></p>
       </ShowOnView>
 
