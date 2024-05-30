@@ -45,12 +45,14 @@ const Index = ({ close }: CookieBannerProps) => {
       <div className={styles.shadow}></div>
       <div className={styles.banner}>
         <X className={styles.close} width={20} height={20} onClick={() => handleAcceptCookie(true)} />
-        <div className={styles.content}>
-          {t('CookiesText')}{' '}
-          <span className={styles.link} style={{ display: 'contents' }} onClick={openOptions}>
-            {t('CookiesTextCta')}
-          </span>
-          .
+        <div className={styles.content} style={showOptions ? {} : { maxHeight: '15vh' }}>
+          <p>
+            {t('CookiesText')}{' '}
+            <span className={styles.link} style={{ display: 'contents' }} onClick={openOptions}>
+              {t('CookiesTextCta')}
+            </span>
+            .
+          </p>
           {showOptions ? (
             <div className={styles.options}>
               <div className={styles.option}>
