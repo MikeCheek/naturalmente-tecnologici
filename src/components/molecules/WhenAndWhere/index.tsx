@@ -53,7 +53,7 @@ const Index = () => {
           <StaticImage
             quality={80}
             alt="Bosco coste"
-            src="../../../images/location/bosco-coste.JPG"
+            src="../../../images/location/bosco-coste.jpg"
             layout="constrained"
             width={700}
             height={500}
