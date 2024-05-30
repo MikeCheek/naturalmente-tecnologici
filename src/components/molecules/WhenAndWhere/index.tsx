@@ -11,6 +11,8 @@ import { useTranslation } from 'react-i18next';
 import LocationMap from '../../atoms/LocationMap';
 import Badge from '../../atoms/Badge';
 import { services } from '../../../utilities/location';
+import { mapsLink } from '../../../utilities/howToReach';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -27,7 +29,6 @@ const Index = () => {
         <span>
           <h3>Bosco Coste, Grottole (MT)</h3>
           <p>{t('Date')}</p>
-          {/* <p className={styles.locDesc} dangerouslySetInnerHTML={{ __html: t('LocationDescription') }}></p> */}
         </span>
         <LocationMap />
       </ShowOnView>
@@ -42,32 +43,40 @@ const Index = () => {
       </ShowOnView> */}
       <SectionImageCTA
         text={t('LocationText1')}
-        // buttonText={t('LocationCta')}
-        // buttonHref={mapsLink}
+        buttonText={t('LocationCta')}
+        buttonHref={mapsLink}
         imageOrVideo={
-          <video height={500} muted autoPlay controls={false} loop playsInline>
-            {loadVideo ? <source src={BoscoCoste} type="video/mp4" /> : <></>}
-            Your browser doesn't support video tag
-          </video>
+          // <video height={500} muted autoPlay controls={false} loop playsInline>
+          //   {loadVideo ? <source src={BoscoCoste} type="video/mp4" /> : <></>}
+          //   Your browser doesn't support video tag
+          // </video>
+          <StaticImage
+            quality={80}
+            alt="Bosco coste"
+            src="../../../images/location/bosco-coste.JPG"
+            layout="constrained"
+            width={700}
+            height={500}
+          />
         }
       />
       <SectionImageCTA
         text={t('LocationText2')}
-        // buttonText={t('LocationCta')}
-        // buttonHref={mapsLink}
+        buttonText={t('LocationCta')}
+        buttonHref={mapsLink}
         imageOrVideo={
-          <video height={500} muted autoPlay controls={false} loop playsInline>
-            {loadVideo ? <source src={BoscoCoste1} type="video/mp4" /> : <></>}
-            Your browser doesn't support video tag
-          </video>
-          // <StaticImage
-          //   quality={80}
-          //   alt="Bosco coste"
-          //   src="../../../images/location/bosco-2.JPG"
-          //   layout="constrained"
-          //   width={700}
-          //   height={500}
-          // />
+          // <video height={500} muted autoPlay controls={false} loop playsInline>
+          //   {loadVideo ? <source src={BoscoCoste1} type="video/mp4" /> : <></>}
+          //   Your browser doesn't support video tag
+          // </video>
+          <StaticImage
+            quality={80}
+            alt="Bosco coste"
+            src="../../../images/location/bosco-2.JPG"
+            layout="constrained"
+            width={700}
+            height={500}
+          />
         }
         reversed
       />

@@ -20,19 +20,22 @@
   position: fixed;
   width: 100%;
   font-weight: 100;
-  gap: 10px;
   z-index: 99999;
-  padding: 30px 0;
+  padding: 10px 0;
 }
 
 .content {
-  margin: 10px 40px;
+  margin: 0 40px;
   text-align: center;
+  overflow-y: hidden;
   font-size: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  p {
+    overflow-y: scroll;
+  }
   @media screen and (min-width: '768px') {
     font-size: 0.85rem;
   }
