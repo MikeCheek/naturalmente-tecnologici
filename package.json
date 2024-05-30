@@ -50,7 +50,6 @@
     "react-intersection-observer": "^9.4.3",
     "react-p5": "^1.4.1",
     "react-slick": "^0.29.0",
-    "react-world-flags": "^1.6.0",
     "sass": "^1.60.0",
     "slick-carousel": "^1.8.1"
   },
@@ -61,7 +60,6 @@
     "@types/react": "^18.0.29",
     "@types/react-dom": "^18.0.11",
     "@types/react-slick": "^0.23.10",
-    "@types/react-world-flags": "^1.4.5",
     "plop": "^4.0.1",
     "typescript": "^5.0.2"
   }
