@@ -7,14 +7,24 @@
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;
-
-  animation: morph 10s infinite alternate;
-
+  max-height: 25vh !important;
+  @media screen and (min-width: '768px') {
+    max-height: 45vh !important;
+  }
   video {
+    width: 100%;
+    height: auto;
     object-fit: cover;
     width: 100%;
     height: 100%;
-    max-height: 45vh;
-    transition: transform 200ms ease;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (min-width: '768px') {
+      width: 80vw !important;
+    }
   }
 }

@@ -7,11 +7,11 @@ import WhenAndWhere from '../WhenAndWhere';
 import { useTranslation } from 'react-i18next';
 import BigPictureSection from '../../atoms/BigPictureSection';
 import { images as ntImages } from '../../../utilities/ntPhotos';
-import Shorty from '../../../assets/video/shorty_10s_low.mp4';
-import Moddilugitrix from '../../../assets/video/moddilugitrix_10s_low.mp4';
-import Baldini from '../../../assets/video/baldini_10s_low.mp4';
-import Millenium from '../../../assets/video/millenium_10s_low.mp4';
-import Transplay from '../../../assets/video/transplay_10s_low.mp4';
+import Shorty from '../../../assets/video/webm/shorty_10s_low.webm';
+import Moddilugitrix from '../../../assets/video/webm/moddilugitrix_10s_low.webm';
+import Baldini from '../../../assets/video/webm/baldini_10s_low.webm';
+import Millenium from '../../../assets/video/webm/millenium_10s_low.webm';
+import Transplay from '../../../assets/video/webm/transplay_10s_low.webm';
 import VideoMasked from '../../atoms/VideoMasked';
 
 const Index = () => {
