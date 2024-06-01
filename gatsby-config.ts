@@ -61,6 +61,7 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-loadable-components-ssr',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
