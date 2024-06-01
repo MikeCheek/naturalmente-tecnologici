@@ -4,14 +4,24 @@ import * as styles from './index.module.scss';
 import ShowOnView from '../ShowOnView';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Carousel from '../Carousel';
+import Player from 'react-player/lazy';
 
 const Index = ({ title, text, reverse = false, images, videos }: BigPictureSectionProps) => {
   const slides = [
     videos?.map((v, key) => (
-      <video key={key} className={styles.video} height={500} muted autoPlay controls={false} loop playsInline>
-        <source src={v} type="video/mp4" />
-        Your browser doesn't support video tag
-      </video>
+      <Player
+        key={key}
+        url={v}
+        className={styles.video}
+        height={500}
+        muted
+        autoPlay
+        playing
+        controls={false}
+        loop
+        playsInline
+        config={{ file: { forceVideo: true } }}
+      />
     )),
     images?.edges.map((e, index) => (
       <GatsbyImage
