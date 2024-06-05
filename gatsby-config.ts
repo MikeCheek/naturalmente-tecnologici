@@ -114,15 +114,6 @@ const config: GatsbyConfig = {
         },
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-react-svg',
-    //   options: {
-    //     rule: {
-    //       include: /assets/,
-    //       omitKeys: ['xmlnsDc', 'xmlnsCc', 'xmlnsRdf', 'xmlnsSvg', 'xmlnsSodipodi', 'xmlnsInkscape', 'id'],
-    //     },
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
