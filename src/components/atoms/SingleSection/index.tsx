@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import * as styles from './index.module.scss';
 import SingleSectionProps from './index.types';
 import ShowOnView from '../ShowOnView';
-import SectionDecoration from '../../../assets/sectionDecoration.svg';
+import { ReactComponent as SectionDecoration } from '../../../assets/sectionDecoration.svg';
 import { getRandomNum } from '../../../utilities/randInt';
 import { useInView } from 'react-intersection-observer';
 

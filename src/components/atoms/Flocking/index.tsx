@@ -9,11 +9,6 @@ const Sketch = loadable(() => import('react-p5'));
 const Index = () => {
   const [flock, setFlock] = useState<Boid[]>([]);
   const [mults, setMults] = useState<{ al: number; coh: number; sep: number }>({ al: 1, coh: 1.7, sep: 0.2 });
-  // const [mySvg, setMySvg] = useState<p5Types.Image>();
-
-  // const preload = (p5: p5Types) => {
-  //   setMySvg(p5.loadImage('./assets/insect.svg'));
-  // };
 
   useEffect(() => {
     process.env.NODE_ENV === 'development' && console.log(mults);

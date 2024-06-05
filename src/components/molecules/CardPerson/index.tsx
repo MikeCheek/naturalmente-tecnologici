@@ -2,8 +2,8 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import CardImage from '../../atoms/CardImage';
 import { CardPersonProps } from './index.types';
-import Linkedin from '../../../assets/social/linkedin.svg';
-import Website from '../../../assets/link.svg';
+import { ReactComponent as Linkedin } from '../../../assets/social/linkedin.svg';
+import { ReactComponent as Website } from '../../../assets/link.svg';
 
 const Index = ({ image, name, role, reversed = false, website, linkedin, noMargin = false }: CardPersonProps) => {
   return (

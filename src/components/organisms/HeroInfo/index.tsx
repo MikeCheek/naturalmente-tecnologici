@@ -1,10 +1,10 @@
 import React from 'react';
 
 import * as styles from './index.module.scss';
-import Colli from '../../../assets/colli.svg';
-import Collina from '../../../assets/collina.svg';
+import { ReactComponent as Colli } from '../../../assets/colli.svg';
+import { ReactComponent as Collina } from '../../../assets/collina.svg';
 import Flower from '../../atoms/Flower';
-import Speaking from '../../../assets/speaking.svg';
+import { ReactComponent as Speaking } from '../../../assets/speaking.svg';
 import { useTranslation } from 'react-i18next';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 

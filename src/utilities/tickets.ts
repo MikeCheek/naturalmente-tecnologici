@@ -1,7 +1,7 @@
-import TicketSvg from '../assets/ticket-1.svg';
-import Tickets from '../assets/ticket-2.svg';
-import Camping from '../assets/reviews/camping.svg';
-// import Vip from '../assets/vip.svg';
+import { ReactComponent as TicketSvg } from '../assets/ticket-1.svg';
+import { ReactComponent as Tickets } from '../assets/ticket-2.svg';
+import { ReactComponent as Camping } from '../assets/reviews/camping.svg';
+// import {ReactComponent as Vip} from '../assets/vip.svg';
 
 export const Eventbrite =
   'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067';

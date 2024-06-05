@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import AgenziaGiovani from '../assets/heardOn/agenziagiovani.svg';
-import Wired from '../assets/heardOn/wired.svg';
-import Tedx from '../assets/heardOn/tedx.svg';
+import { ReactComponent as AgenziaGiovani } from '../assets/heardOn/agenziagiovani.svg';
+import { ReactComponent as Wired } from '../assets/heardOn/wired.svg';
+import { ReactComponent as Tedx } from '../assets/heardOn/tedx.svg';
 
 const images = () => {
   const data: Data = useStaticQuery(graphql`

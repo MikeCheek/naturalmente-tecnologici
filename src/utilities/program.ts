@@ -25,7 +25,6 @@ export const nowActive = () => {
   if (current.length > 0)
     return (current[0].timeline as Event[])
       .filter((event) => {
-        console.log(event);
         const time = event.time.split('-');
         if (time.length > 1) {
           const eventStarts = time[0].replace(' ', '');

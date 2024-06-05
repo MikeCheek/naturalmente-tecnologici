@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './index.module.scss';
 import Separator from '../../atoms/Separator';
-import LogoNT from '../../../assets/logo-nt.svg';
+import { ReactComponent as LogoNT } from '../../../assets/logo-nt.svg';
 import { Link } from 'gatsby';
 import SocialLinks from '../SocialLinks';
 import { links } from '../../../utilities/navigation';

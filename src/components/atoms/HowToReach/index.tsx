@@ -6,9 +6,9 @@ import { mapsLink } from '../../../utilities/howToReach';
 import Button from '../Button';
 import useModalContext from '../../../utilities/useModalContext';
 import { useTranslation } from 'react-i18next';
-import Car from '../../../assets/infoUtili/car.svg';
-import Bus from '../../../assets/infoUtili/bus.svg';
-import Plane from '../../../assets/infoUtili/plane.svg';
+import { ReactComponent as Car } from '../../../assets/infoUtili/car.svg';
+import { ReactComponent as Bus } from '../../../assets/infoUtili/bus.svg';
+import { ReactComponent as Plane } from '../../../assets/infoUtili/plane.svg';
 
 const Index = () => {
   // const { setText } = useModalContext();

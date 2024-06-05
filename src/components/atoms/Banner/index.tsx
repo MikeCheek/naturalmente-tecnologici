@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './index.module.scss';
-import Hand from '../../../assets/hand.svg';
+import { ReactComponent as Hand } from '../../../assets/hand.svg';
 import { BannerProps } from './index.types';
 
 const Index = ({ text }: BannerProps) => {

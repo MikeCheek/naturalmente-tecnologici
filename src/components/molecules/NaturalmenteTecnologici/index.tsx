@@ -11,7 +11,6 @@ import Shorty from '../../../assets/video/webm/shorty_10s_low.webm';
 import Moddilugitrix from '../../../assets/video/webm/moddilugitrix_10s_low.webm';
 import Baldini from '../../../assets/video/webm/baldini_10s_low.webm';
 import Millenium from '../../../assets/video/webm/millenium_10s_low.webm';
-import Transplay from '../../../assets/video/webm/transplay_10s_low.webm';
 import VideoMasked from '../../atoms/VideoMasked';
 
 const Index = () => {
@@ -33,7 +32,7 @@ const Index = () => {
           text={t('ValueText1')}
         />
         <BigPictureSection images={activities} title={t('Value2')} text={t('ValueText2')} reverse />
-        <BigPictureSection images={nature} videos={[Transplay]} title={t('Value3')} text={t('ValueText3')} />
+        <BigPictureSection images={nature} title={t('Value3')} text={t('ValueText3')} />
       </div>
       <HeardOn />
 

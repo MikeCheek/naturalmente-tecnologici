@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Basilicata from '../../../assets/basilicata.svg';
-//import BasilicataPin from '../../../assets/basilicataPin.svg';
-import Location from '../../../assets/location.svg';
+import { ReactComponent as Basilicata } from '../../../assets/basilicata.svg';
+//import {ReactComponent as BasilicataPin} from '../../../assets/basilicataPin.svg';
+import { ReactComponent as Location } from '../../../assets/location.svg';
 import ShowOnView from '../ShowOnView';
 import * as styles from './index.module.scss';
 import { coords, mapsLink } from '../../../utilities/howToReach';

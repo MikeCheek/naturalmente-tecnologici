@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import * as styles from './index.module.scss';
 import { SectionProps } from './index.types';
-import ConnectionLeft from '../../../assets/connectionLeft.svg';
-import ConnectionRight from '../../../assets/connectionRight.svg';
+import { ReactComponent as ConnectionLeft } from '../../../assets/connectionLeft.svg';
+import { ReactComponent as ConnectionRight } from '../../../assets/connectionRight.svg';
 import { useInView } from 'react-intersection-observer';
 import Button from '../../atoms/Button';
 

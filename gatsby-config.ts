@@ -61,6 +61,7 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-loadable-components-ssr',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -92,11 +93,24 @@ const config: GatsbyConfig = {
       __key: 'assets',
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: 'gatsby-plugin-svgr',
       options: {
-        rule: {
-          include: /assets/,
-          omitKeys: ['xmlnsDc', 'xmlnsCc', 'xmlnsRdf', 'xmlnsSvg', 'xmlnsSodipodi', 'xmlnsInkscape', 'id'],
+        prettier: true, // use prettier to format JS code output (default)
+        svgo: true, // use svgo to optimize SVGs (default)
+        svgoConfig: {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  removeViewBox: false,
+                },
+              },
+            },
+            'cleanupIds',
+            'removeXMLNS',
+            // { name: 'removeAttrs', params: { attrs: 'xmlns*' } },
+          ],
         },
       },
     },

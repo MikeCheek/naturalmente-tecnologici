@@ -16,7 +16,6 @@ const Index = () => {
       for (let i = 0; i < ps.length; i++) elements.push(ps[i]);
       for (let i = 1; i <= 6; i++) {
         const hs = document.getElementsByTagName('h' + i);
-        console.log(hs);
         for (let j = 0; j < hs.length; j++) elements.push(hs[j]);
       }
       elements.forEach((e) => e.setAttribute('contenteditable', enabled ? 'true' : 'false'));

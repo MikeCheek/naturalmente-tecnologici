@@ -1,6 +1,6 @@
 import React from 'react';
 import ModalProps from './index.types';
-import X from '../../../assets/x.svg';
+import { ReactComponent as X } from '../../../assets/x.svg';
 import * as styles from './index.module.scss';
 import { Eventbrite, allBadges } from '../../../utilities/tickets';
 import Button from '../Button';

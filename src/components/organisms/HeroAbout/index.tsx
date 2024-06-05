@@ -1,10 +1,10 @@
 import React from 'react';
 
 import * as styles from './index.module.scss';
-import Colli from '../../../assets/colli.svg';
-import Collina from '../../../assets/collina-lato.svg';
+import { ReactComponent as Colli } from '../../../assets/colli.svg';
+import { ReactComponent as Collina } from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
-import Syskrack from '../../../assets/syskrack.svg';
+import { ReactComponent as Syskrack } from '../../../assets/syskrack.svg';
 import { useTranslation } from 'react-i18next';
 
 const Index = () => {

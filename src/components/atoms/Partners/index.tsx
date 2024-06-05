@@ -2,13 +2,13 @@ import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import * as styles from './index.module.scss';
 import Heading from '../Heading';
-import Syskrack from '../../../assets/syskrack.svg';
-import IBM from '../../../assets/partner/IBM.svg';
-import Podus from '../../../assets/partner/podus.svg';
-import Basilicata from '../../../assets/partner/basilicata.svg';
-import MarinoBus from '../../../assets/partner/marino-bus.svg';
-import Katzuma from '../../../assets/partner/katzuma.svg';
-import LaPotenzaDellArte from '../../../assets/partner/lapotenzadellarte.svg';
+import { ReactComponent as Syskrack } from '../../../assets/syskrack.svg';
+import { ReactComponent as IBM } from '../../../assets/partner/IBM.svg';
+import { ReactComponent as Podus } from '../../../assets/partner/podus.svg';
+import { ReactComponent as Basilicata } from '../../../assets/partner/basilicata.svg';
+// import { ReactComponent as MarinoBus } from '../../../assets/partner/marino-bus.svg';
+// import { ReactComponent as Katzuma } from '../../../assets/partner/katzuma.svg';
+import { ReactComponent as LaPotenzaDellArte } from '../../../assets/partner/lapotenzadellarte.svg';
 import ShowOnView from '../ShowOnView';
 import { useTranslation } from 'react-i18next';
 
@@ -32,7 +32,15 @@ const Index = () => {
       <Heading text="Mobility Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="https://marinobus.it/" title="Marino Bus" rel="noopener noreferrer" target="_blank">
-          <MarinoBus className={styles.logoLong} width={200} style={{ maxHeight: '100px' }} />
+          {/* <MarinoBus className={styles.logoLong} width={200} style={{ maxHeight: '100px' }} /> */}
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/marino-bus.png"
+            className={styles.logoLong}
+            width={200}
+            style={{ maxHeight: '100px' }}
+            alt="MarinoBus"
+          />
         </a>
       </ShowOnView>
       <Heading text="Sponsor" />
@@ -95,6 +103,7 @@ const Index = () => {
           layout="constrained"
           src="../../../images/partners/potenza_urban_art.jpg"
           className={styles.logo}
+          style={{ borderRadius: '50%' }}
           alt="Potenza Urban Art"
           width={150}
         />
@@ -132,6 +141,7 @@ const Index = () => {
             layout="constrained"
             src="../../../images/partners/atomico.jpg"
             className={styles.logo}
+            style={{ borderRadius: '50%' }}
             alt="Atomico"
             width={150}
           />
@@ -168,7 +178,14 @@ const Index = () => {
       <Heading text="Music Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="" title="Katzuma" rel="noopener noreferrer" target="_blank">
-          <Katzuma className={styles.logoLong} width={200} />
+          {/* <Katzuma className={styles.logoLong} width={200} /> */}
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/katzuma.png"
+            className={styles.logoLong}
+            width={200}
+            alt="Katzuma"
+          />
         </a>
         <a href="" title="Open Stage" rel="noopener noreferrer" target="_blank">
           <StaticImage
