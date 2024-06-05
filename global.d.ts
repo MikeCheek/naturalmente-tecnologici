@@ -1,17 +1,14 @@
+declare type SVG = React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+
 declare module '*.svg' {
-  import React from 'react';
-
-  const ReactComponent: SVG;
-
-  export default ReactComponent;
+  import { FC, SVGProps } from 'react';
+  export const ReactComponent: FC<SVGProps<SVGElement>>;
 }
 
 declare module '*.mp4';
 declare module '*.webm';
 
 declare type LinkType = 'internal' | 'external';
-
-declare type SVG = React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
 
 declare type ImageDataType = {
   images: {

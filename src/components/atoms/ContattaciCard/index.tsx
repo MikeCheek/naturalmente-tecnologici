@@ -2,7 +2,7 @@ import React from 'react';
 import ContattaciCardProps from './index.types';
 import * as styles from './index.module.scss';
 import Button from '../Button';
-import X from '../../../assets/x.svg';
+import { ReactComponent as X } from '../../../assets/x.svg';
 import Heading from '../Heading';
 import ShowOnView from '../ShowOnView';
 import { useTranslation } from 'react-i18next';

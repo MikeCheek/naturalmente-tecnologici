@@ -1,10 +1,10 @@
 import React from 'react';
 import * as styles from './index.module.scss';
-import Instagram from '../../../assets/social/instagram.svg';
-import Facebook from '../../../assets/social/facebook.svg';
-import Telegram from '../../../assets/social/telegram.svg';
-import Linkedin from '../../../assets/social/linkedin.svg';
-import Mail from '../../../assets/social/mail.svg';
+import { ReactComponent as Instagram } from '../../../assets/social/instagram.svg';
+import { ReactComponent as Facebook } from '../../../assets/social/facebook.svg';
+import { ReactComponent as Telegram } from '../../../assets/social/telegram.svg';
+import { ReactComponent as Linkedin } from '../../../assets/social/linkedin.svg';
+import { ReactComponent as Mail } from '../../../assets/social/mail.svg';
 import { SocialLinksProps } from './index.types';
 
 const Index = ({ green, onlySocial, small }: SocialLinksProps) => {

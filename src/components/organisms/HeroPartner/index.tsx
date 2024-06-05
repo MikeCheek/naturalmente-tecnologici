@@ -1,9 +1,9 @@
 import React from 'react';
 
 import * as styles from './index.module.scss';
-import Collina from '../../../assets/collina-lato.svg';
+import { ReactComponent as Collina } from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
-import Handshake from '../../../assets/handshake.svg';
+import { ReactComponent as Handshake } from '../../../assets/handshake.svg';
 import { useTranslation } from 'react-i18next';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 

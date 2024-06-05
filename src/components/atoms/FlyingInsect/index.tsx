@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Insect from '../../../assets/insect.svg';
+import { ReactComponent as Insect } from '../../../assets/insect.svg';
 import { InsectProps } from './index.types';
 import * as styles from './insect.module.scss';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
-import Insect from '../../../assets/insect.svg';
+import { ReactComponent as Insect } from '../../../assets/insect.svg';
 import LoadingProps from './index.types';
 
 const Index = ({ noTitle = false }: LoadingProps) => {

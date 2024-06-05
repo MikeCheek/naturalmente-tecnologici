@@ -4,7 +4,7 @@ import * as styles from './index.module.scss';
 import { links } from '../../../utilities/navigation';
 import { isBrowser } from '../../../utilities/browser';
 import { NavigationProps } from './index.types';
-import Play from '../../../assets/play.svg';
+import { ReactComponent as Play } from '../../../assets/play.svg';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import LanguagePicker from '../../atoms/LanguagePicker';
 import MultipleLinks from '../../atoms/MultipleLinks';

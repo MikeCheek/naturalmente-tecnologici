@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
-import LogoNT from '../../../assets/logo-nt.svg';
-import Hamburger from '../../../assets/hamburger.svg';
-import X from '../../../assets/x.svg';
+import { ReactComponent as LogoNT } from '../../../assets/logo-nt.svg';
+import { ReactComponent as Hamburger } from '../../../assets/hamburger.svg';
+import { ReactComponent as X } from '../../../assets/x.svg';
 import Navigation from '../../molecules/Navigation';
 import { Link } from 'gatsby';
 import { isBrowser } from '../../../utilities/browser';

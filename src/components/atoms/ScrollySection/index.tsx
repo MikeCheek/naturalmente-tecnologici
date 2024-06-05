@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Steps from '../../../assets/steps.svg';
+import { ReactComponent as Steps } from '../../../assets/steps.svg';
 import * as styles from './index.module.scss';
 import ScrollySectionProps from './index.types';
 import { useInView } from 'react-intersection-observer';

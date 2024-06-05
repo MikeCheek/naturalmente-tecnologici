@@ -1,9 +1,9 @@
 import React from 'react';
 
 import * as styles from './index.module.scss';
-import BigBranch from '../../../assets/big-branch.svg';
-import Colli from '../../../assets/colli.svg';
-import Collina from '../../../assets/collina.svg';
+import { ReactComponent as BigBranch } from '../../../assets/big-branch.svg';
+import { ReactComponent as Colli } from '../../../assets/colli.svg';
+import { ReactComponent as Collina } from '../../../assets/collina.svg';
 import WindShovel from '../../atoms/WindShovel';
 import { useTranslation } from 'react-i18next';
 import Flower from '../../atoms/Flower';

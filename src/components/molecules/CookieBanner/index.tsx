@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
-import X from '../../../assets/x.svg';
+import { ReactComponent as X } from '../../../assets/x.svg';
 import CookieBannerProps from './index.types';
-import Down from '../../../assets/down.svg';
+import { ReactComponent as Down } from '../../../assets/down.svg';
 import Cookies from 'js-cookie';
 import { CookiesNames, options } from '../../../utilities/cookies';
 import { useTranslation } from 'react-i18next';

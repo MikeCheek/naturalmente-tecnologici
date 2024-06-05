@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { FlowerProps } from './index.types';
-import Flower from '../../../assets/flower.svg';
+import { ReactComponent as Flower } from '../../../assets/flower.svg';
 import * as styles from './index.module.scss';
 
 const Index = memo(({ color }: FlowerProps) => {

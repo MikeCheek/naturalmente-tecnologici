@@ -1,9 +1,9 @@
 import { useI18next, Link } from 'gatsby-plugin-react-i18next';
 import React, { useState } from 'react';
 import * as styles from './index.module.scss';
-import Down from '../../../assets/down.svg';
-import Italy from '../../../assets/flags/italy.svg';
-import UK from '../../../assets/flags/united-kingdom.svg';
+import { ReactComponent as Down } from '../../../assets/down.svg';
+import { ReactComponent as Italy } from '../../../assets/flags/italy.svg';
+import { ReactComponent as UK } from '../../../assets/flags/united-kingdom.svg';
 
 const Index = () => {
   const { languages, language, originalPath } = useI18next();

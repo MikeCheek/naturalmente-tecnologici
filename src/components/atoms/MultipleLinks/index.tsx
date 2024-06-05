@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MultipleLinksProps } from './index.types';
 import * as styles from './index.module.scss';
-import Down from '../../../assets/down.svg';
+import { ReactComponent as Down } from '../../../assets/down.svg';
 import { Link } from 'gatsby';
 
 const Index = ({ name, active = false, children }: MultipleLinksProps) => {

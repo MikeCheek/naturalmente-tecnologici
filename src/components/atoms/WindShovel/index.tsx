@@ -1,6 +1,6 @@
 import React from 'react';
 import { WindShovelProps } from './index.types';
-import WindShovel from '../../../assets/windShovel.svg';
+import { ReactComponent as WindShovel } from '../../../assets/windShovel.svg';
 import * as styles from './index.module.scss';
 
 const Index = ({ color, slower = false }: WindShovelProps) => {

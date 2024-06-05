@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AccordionProps from './index.types';
 import * as styles from './index.module.scss';
-import Down from '../../../assets/down.svg';
+import { ReactComponent as Down } from '../../../assets/down.svg';
 import ShowOnView from '../ShowOnView';
 
 const Index = ({ title, data }: AccordionProps) => {

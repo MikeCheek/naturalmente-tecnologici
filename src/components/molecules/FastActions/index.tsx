@@ -5,7 +5,7 @@ import Timer from '../Timer';
 import Heading from '../../atoms/Heading';
 import { info, DefaultTicketProps } from '../../../utilities/tickets';
 import ShowOnView from '../../atoms/ShowOnView';
-import Info from '../../../assets/info.svg';
+import { ReactComponent as Info } from '../../../assets/info.svg';
 import useModalContext from '../../../utilities/useModalContext';
 import Button from '../../atoms/Button';
 

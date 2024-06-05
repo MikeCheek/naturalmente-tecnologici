@@ -1,10 +1,10 @@
 import React from 'react';
 import * as styles from './index.module.scss';
 import Heading from '../../atoms/Heading';
-import Conference from '../../../assets/reviews/conference.svg';
-import Workshop from '../../../assets/reviews/workshop.svg';
-import Camping from '../../../assets/reviews/camping.svg';
-import Event from '../../../assets/reviews/event.svg';
+import { ReactComponent as Conference } from '../../../assets/reviews/conference.svg';
+import { ReactComponent as Workshop } from '../../../assets/reviews/workshop.svg';
+import { ReactComponent as Camping } from '../../../assets/reviews/camping.svg';
+import { ReactComponent as Event } from '../../../assets/reviews/event.svg';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import { useInView } from 'react-intersection-observer';
 import YoutubeEmbed from '../../atoms/YoutubeEmbed';
