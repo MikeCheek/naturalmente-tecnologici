@@ -21,13 +21,20 @@
 
 .sectionImage {
   @extend .image;
-  max-width: 80vw;
-  max-height: 30vh;
+  max-width: 60vw;
+  max-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  > * {
+    height: fit-content !important;
+  }
   video {
-    max-height: 30vh;
+    max-height: 40vh;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
   }
   @media screen and (min-width: '768px') {
     max-width: 40vw;

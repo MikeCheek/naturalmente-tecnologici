@@ -196,7 +196,7 @@ const Index = ({
 
       <Script
         id="saro"
-        defer
+        // defer
         strategy="idle"
         dangerouslySetInnerHTML={{
           __html: `(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
