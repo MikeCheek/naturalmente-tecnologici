@@ -5,22 +5,17 @@ import * as styles from './index.module.scss';
 import SectionImageCTA from '../SectionImageCTA';
 import ShowOnView from '../../atoms/ShowOnView';
 import Button from '../../atoms/Button';
-import BoscoCoste from '../../../assets/video/bosco_coste_backward.mp4';
-import BoscoCoste1 from '../../../assets/video/pala_eolica.mp4';
 import { useTranslation } from 'react-i18next';
 import LocationMap from '../../atoms/LocationMap';
 import Badge from '../../atoms/Badge';
 import { services } from '../../../utilities/location';
 import { mapsLink } from '../../../utilities/howToReach';
 import { StaticImage } from 'gatsby-plugin-image';
+import Player from 'react-player/lazy';
+import Bench from '../../../assets/video/webm/big_bench.webm';
 
 const Index = () => {
   const { t } = useTranslation();
-  const [loadVideo, setLoadVideo] = useState<boolean>(false);
-
-  useEffect(() => {
-    setLoadVideo(true);
-  }, []);
 
   return (
     <div className={styles.whenAndWhere}>
@@ -60,7 +55,7 @@ const Index = () => {
           />
         }
       />
-      <SectionImageCTA
+      {/* <SectionImageCTA
         text={t('LocationText2')}
         buttonText={t('LocationCta')}
         buttonHref={mapsLink}
@@ -78,6 +73,14 @@ const Index = () => {
             height={500}
           />
         }
+        reversed
+      /> */}
+      <Heading text={t('BigBench')} simple marginTop />
+      <SectionImageCTA
+        text={t('LocationText3')}
+        buttonText={t('LocationCta')}
+        buttonHref={mapsLink}
+        imageOrVideo={<Player width={700} url={Bench} muted autoPlay playing controls={false} loop playsInline />}
         reversed
       />
     </div>
