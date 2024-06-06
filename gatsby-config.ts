@@ -97,6 +97,7 @@ const config: GatsbyConfig = {
       options: {
         prettier: true, // use prettier to format JS code output (default)
         svgo: true, // use svgo to optimize SVGs (default)
+        exclude: '/src/assets/optimized/',
         svgoConfig: {
           plugins: [
             {

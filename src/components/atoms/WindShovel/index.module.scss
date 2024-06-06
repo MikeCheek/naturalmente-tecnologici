@@ -4,7 +4,7 @@
   filter: drop-shadow(-20px 10px 7px rgba(0, 0, 0, 0.25));
   overflow: visible;
   & g {
-    animation-duration: 10s;
+    animation-duration: 10s !important;
   }
   @media screen and (min-width: '768px') {
     width: 340px;
@@ -14,6 +14,6 @@
 .shovelSlower {
   @extend .shovel;
   & g {
-    animation-duration: 20s;
+    animation-duration: 20s !important;
   }
 }
