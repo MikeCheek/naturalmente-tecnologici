@@ -10,6 +10,9 @@ import { ReactComponent as Car } from '../../../assets/infoUtili/car.svg';
 import { ReactComponent as Bus } from '../../../assets/infoUtili/bus.svg';
 import { ReactComponent as Plane } from '../../../assets/infoUtili/plane.svg';
 
+// <br/>MARINOBUS è Mobility Partner di Naturalmente Tecnologici e acquistando un biglietto per il festival hai diritto a uno sconto del 10% sulla tratta di andata e ritorno.<br/>Inserisci il codice che trovi nella guida qui sotto in fase di acquisto.
+// <br/>MARINOBUS is a Mobility Partner of Naturalmente Tecnologici, and by purchasing a ticket for the festival, you are entitled to a 10% discount on the round trip.<br/>Enter the code found in the guide below during the purchase process.
+
 const Index = () => {
   // const { setText } = useModalContext();
   const { t } = useTranslation();
@@ -25,7 +28,7 @@ const Index = () => {
       name: t('HowToReachName2'),
       svg: Bus,
       info: t('HowToReachInfo2'),
-      infoMarinoBus: true,
+      infoMarinoBus: false,
     },
     {
       name: t('HowToReachName3'),

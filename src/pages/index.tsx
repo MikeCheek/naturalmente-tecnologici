@@ -20,7 +20,7 @@ const IndexPage = () => {
       <NaturalmenteTecnologici />
       {/* RIMETTERE QUESTO QUANDO SI DEVONO RIAGGIUNGERE LE INFO */}
       {/* <LastEdition /> */}
-      {/* <FastActions /> */}
+      <FastActions />
     </Layout>
   );
 };

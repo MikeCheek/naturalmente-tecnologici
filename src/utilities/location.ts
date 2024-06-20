@@ -1,4 +1,4 @@
-const services = [
+const servicesIT = [
   'AREE PICNIC',
   'FONTANELLE CON ACQUA POTABILE',
   'DOCCE',
@@ -8,4 +8,14 @@ const services = [
   'BIRRA FRESCA',
 ];
 
-export { services };
+const servicesEN = [
+  'PICNIC AREAS',
+  'DRINKING FOUNTAINS',
+  'SHOWERS',
+  'CAMPING AREA',
+  'RESTROOMS AND TOILETS',
+  'GOOD FOOD',
+  'COLD BEER',
+];
+
+export { servicesIT, servicesEN };

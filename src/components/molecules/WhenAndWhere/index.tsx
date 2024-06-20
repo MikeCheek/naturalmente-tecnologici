@@ -8,14 +8,17 @@ import Button from '../../atoms/Button';
 import { useTranslation } from 'react-i18next';
 import LocationMap from '../../atoms/LocationMap';
 import Badge from '../../atoms/Badge';
-import { services } from '../../../utilities/location';
+import { servicesEN, servicesIT } from '../../../utilities/location';
 import { mapsLink } from '../../../utilities/howToReach';
 import { StaticImage } from 'gatsby-plugin-image';
 import Player from 'react-player/lazy';
 import Bench from '../../../assets/video/webm/big_bench.webm';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const Index = () => {
   const { t } = useTranslation();
+  const { language } = useI18next();
+  const services = language == 'it' ? servicesIT : servicesEN;
 
   return (
     <div className={styles.whenAndWhere}>
