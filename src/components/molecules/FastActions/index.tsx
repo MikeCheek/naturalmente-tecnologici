@@ -42,7 +42,9 @@ const Index = () => {
               infoClick={() =>
                 setText(
                   ticket.name.join('<br/>'),
-                  `${ticket.price.toFixed(2)} €`,
+                  Array.isArray(ticket.price)
+                    ? ticket.price.map((t) => t.toFixed(2) + ' €').join(' / ')
+                    : ticket.price.toFixed(2) + ' €',
                   ticket.description,
                   ticket.date ? [ticket.date, ...(ticket.badges ?? [])] : ticket.badges
                 )
