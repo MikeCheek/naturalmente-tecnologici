@@ -3,7 +3,7 @@ import * as styles from './index.module.scss';
 import CardAction from '../../atoms/CardAction';
 import Timer from '../Timer';
 import Heading from '../../atoms/Heading';
-import { info } from '../../../utilities/tickets';
+import { DefaultTicketProps, info } from '../../../utilities/tickets';
 import ShowOnView from '../../atoms/ShowOnView';
 import { ReactComponent as Info } from '../../../assets/info.svg';
 import useModalContext from '../../../utilities/useModalContext';
@@ -66,16 +66,16 @@ const Index = () => {
             <br />
             L'Early Bird scade tra
           </h3>
-          <Timer date={new Date(info[0].availabilityEnds)} shutOffTimer={() => setTimer(false)} />
+          <Timer date={new Date(DefaultTicketProps.endOffer)} shutOffTimer={() => setTimer(false)} />
         </ShowOnView>
       ) : (
         <></>
       )}
 
-      <ShowOnView>
+      {/* <ShowOnView>
         <h3 dangerouslySetInnerHTML={{ __html: t('FaqCtaDesc') }}></h3>
         <Button bigger internal href="/info/#faq" title={t('FaqCta')} text={t('FaqCta')} />
-      </ShowOnView>
+      </ShowOnView> */}
     </div>
   );
 };

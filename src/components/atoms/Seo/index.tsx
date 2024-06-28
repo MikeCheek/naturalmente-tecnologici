@@ -47,20 +47,19 @@ const Index = ({
         '@type': 'BreadcrumbList',
         itemListElement: links(lang)
           .map((link) =>
-            // link.multiple
-            //   ? link.links.map((l) => ({
-            //       '@type': 'ListItem',
-            //       position: l.position,
-            //       name: l.name,
-            //       item: metadata.siteUrl + l.to,
-            //     }))
-            //   :
-            ({
-              '@type': 'ListItem',
-              position: link.position,
-              name: link.name,
-              item: metadata.siteUrl + link.to,
-            })
+            link.multiple
+              ? link.links.map((l) => ({
+                  '@type': 'ListItem',
+                  position: l.position,
+                  name: l.name,
+                  item: metadata.siteUrl + l.to,
+                }))
+              : {
+                  '@type': 'ListItem',
+                  position: link.position,
+                  name: link.name,
+                  item: metadata.siteUrl + link.to,
+                }
           )
           .flat(),
       },

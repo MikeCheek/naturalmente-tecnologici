@@ -149,6 +149,13 @@ const Index = () => {
       </ShowOnView>
       <Heading text="Media Partner" />
       <ShowOnView className={styles.wrap}>
+        <StaticImage
+          layout="constrained"
+          src="../../../images/partners/logo-rfl.png"
+          className={styles.logoLong}
+          alt="Radio Frequenza Libera"
+          width={200}
+        />
         <a href="https://border-radio.it/" title="Border Radio" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"

@@ -9,6 +9,7 @@ export const DefaultTicketProps = {
   url: PassUrl,
   offer: true,
   priceCurrency: 'EUR',
+  endOffer: '2024-07-10T00:00:00.000+02:00',
 };
 
 interface Ticket {
