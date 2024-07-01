@@ -26,8 +26,43 @@ const Index = () => {
       <Heading text="Location Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="https://podus.it/" title="Podus" rel="noopener noreferrer" target="_blank">
-          <Podus className={styles.logoLong} width={200} />
+          <Podus className={styles.logoLong} width={400} />
         </a>
+      </ShowOnView>
+      <Heading text="Media Partner" />
+      <ShowOnView className={styles.wrap}>
+        <StaticImage
+          layout="constrained"
+          src="../../../images/partners/logo-rfl.png"
+          className={styles.logoLong}
+          alt="Radio Frequenza Libera"
+          width={200}
+        />
+        <a href="https://border-radio.it/" title="Border Radio" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/border-radio.png"
+            className={styles.logo}
+            alt="Border Radio"
+            width={100}
+          />
+        </a>
+        <a href="https://www.italiachecambia.org/" title="Italia che cambia" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/italia-che-cambia.png"
+            className={styles.logoLong}
+            alt="Italia che cambia"
+            width={100}
+          />
+        </a>
+        <StaticImage
+          layout="constrained"
+          src="../../../images/partners/turbostudio.webp"
+          className={styles.logo}
+          alt="Turbo Studio - Sky"
+          width={150}
+        />
       </ShowOnView>
       <Heading text="Mobility Partner" />
       <ShowOnView className={styles.wrap}>
@@ -51,7 +86,7 @@ const Index = () => {
             src="../../../images/partners/edealab.jpg"
             className={styles.logo}
             alt="EDEALAB"
-            width={200}
+            width={150}
           />
         </a>
         <a href="" title="Verre Gioielli" rel="noopener noreferrer" target="_blank">
@@ -60,7 +95,7 @@ const Index = () => {
             src="../../../images/partners/verre.jpg"
             className={styles.logo}
             alt="Verre Gioielli"
-            width={200}
+            width={150}
           />
         </a>
       </ShowOnView>
@@ -146,41 +181,6 @@ const Index = () => {
             width={150}
           />
         </a>
-      </ShowOnView>
-      <Heading text="Media Partner" />
-      <ShowOnView className={styles.wrap}>
-        <StaticImage
-          layout="constrained"
-          src="../../../images/partners/logo-rfl.png"
-          className={styles.logoLong}
-          alt="Radio Frequenza Libera"
-          width={200}
-        />
-        <a href="https://border-radio.it/" title="Border Radio" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/border-radio.png"
-            className={styles.logo}
-            alt="Border Radio"
-            width={150}
-          />
-        </a>
-        <a href="https://www.italiachecambia.org/" title="Italia che cambia" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/italia-che-cambia.png"
-            className={styles.logoLong}
-            alt="Italia che cambia"
-            width={200}
-          />
-        </a>
-        <StaticImage
-          layout="constrained"
-          src="../../../images/partners/turbostudio.webp"
-          className={styles.logo}
-          alt="Turbo Studio - Sky"
-          width={150}
-        />
       </ShowOnView>
       <Heading text="Music Partner" />
       <ShowOnView className={styles.wrap}>

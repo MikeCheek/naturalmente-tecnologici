@@ -58,14 +58,14 @@ const Index = ({ opened, onClick }: NavigationProps) => {
 
   const button = (mobile?: boolean) => (
     <a
-      title={t('NavCta')}
+      title={t('NavCta') + ' PASS'}
       target="_blank"
       rel="noopener noreferrer"
       href={DefaultTicketProps.url}
       className={mobile ? styles.buttonMobile : styles.button}
       onClick={onClick}
     >
-      <Play width={20} height={20} fill="var(--nt-green)" /> {t('NavCta')}
+      <Play width={20} height={20} fill="var(--nt-green)" /> {t('NavCta') + ' PASS'}
     </a>
   );
 

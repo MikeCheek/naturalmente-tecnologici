@@ -51,9 +51,9 @@
 
 .logoLong {
   @extend .logo;
-  width: 150px;
+  width: 200px;
   @media screen and (min-width: 768px) {
-    width: 200px;
+    width: 300px;
   }
 }
 

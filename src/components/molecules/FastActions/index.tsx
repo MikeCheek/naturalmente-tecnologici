@@ -26,25 +26,31 @@ const Index = () => {
       <Heading text={t('TicketsTitle')} id="biglietti" simple />
       <div className={styles.cards}>
         {tickets.map((ticket, key) => {
+          const currentPrice = timer && ticket.priceDiscount ? ticket.priceDiscount : ticket.price;
           return (
             <CardAction
               key={key}
               glowing={ticket.bigger}
               primary={ticket.bigger}
               icon={<ticket.icon className={styles.icon} width={70} />}
-              // text={`<span class='cuttedText'>${ticket.price}€</span><br/>${ticket.price - discount}€`}
+              special={[
+                ticket.price.toFixed(2) + DefaultTicketProps.priceSymbol,
+                timer && ticket.priceDiscount
+                  ? ticket.priceDiscount.toFixed(2) + DefaultTicketProps.priceSymbol
+                  : undefined,
+              ]}
               text={ticket.name[0]}
               description={ticket.name[1]}
-              buttonText="PARTECIPA"
+              buttonText={t('NavCta')}
               buttonHref={ticket.url}
-              tag={ticket.offer ? 'EARLY BIRD' : undefined}
+              tag={timer && ticket.offer ? 'EARLY BIRD' : undefined}
               Info={Info}
               infoClick={() =>
                 setText(
                   ticket.name.join('<br/>'),
-                  Array.isArray(ticket.price)
-                    ? ticket.price.map((t) => t.toFixed(2) + ' €').join(' / ')
-                    : ticket.price.toFixed(2) + ' €',
+                  Array.isArray(currentPrice)
+                    ? currentPrice.map((t) => t.toFixed(2) + DefaultTicketProps.priceSymbol).join(' / ')
+                    : currentPrice.toFixed(2) + DefaultTicketProps.priceSymbol,
                   ticket.description,
                   ticket.date ? [ticket.date, ...(ticket.badges ?? [])] : ticket.badges
                 )
@@ -63,11 +69,7 @@ const Index = () => {
       </ShowOnView> */}
       {timer ? (
         <ShowOnView className={styles.timerWrap}>
-          <h3>
-            Affrettati!
-            <br />
-            L'Early Bird scade tra
-          </h3>
+          <h3 dangerouslySetInnerHTML={{ __html: t('Offer') }}></h3>
           <Timer date={new Date(DefaultTicketProps.endOffer)} shutOffTimer={() => setTimer(false)} />
         </ShowOnView>
       ) : (

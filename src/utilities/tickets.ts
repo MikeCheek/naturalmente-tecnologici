@@ -9,14 +9,16 @@ export const DefaultTicketProps = {
   url: PassUrl,
   offer: true,
   priceCurrency: 'EUR',
+  priceSymbol: ' €',
   endOffer: '2024-07-10T00:00:00.000+02:00',
 };
 
+export type Price = number; //| number[];
 interface Ticket {
   icon: SVG;
   name: string;
-  price: number | number[];
-  priceDiscount?: number | number[];
+  price: Price;
+  priceDiscount?: Price;
   bigger?: boolean;
   offer?: boolean;
   description: string;
@@ -32,37 +34,37 @@ interface Ticket {
 
 export const info: Ticket[] = [
   {
-    icon: TicketSvg,
+    icon: Tickets,
     name: 'Daily Pass (Camping incluso)',
     description:
-      'Accesso al festival per 24 ore, incluso il camping. Vivi una giornata piena di scoperte e connessioni 🌟. La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
-    price: 17.0,
+      'Accesso al festival per una giornata fino a chiusura, incluso il camping. Vivi una giornata piena di scoperte e connessioni 🌟. <br/>La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
+    price: 30.0,
     priceDiscount: 13.0,
     date: 'Un solo giorno',
     badges: ['camping', 'conferenze', 'workshop', 'spettacoli', 'docce', 'bagni'],
     ...DefaultTicketProps,
   },
   {
-    icon: Tickets,
+    icon: Camping,
     name: 'Community Pass 2/3 giorni/notti (Camping incluso)',
-    price: [45, 30],
-    priceDiscount: [37.0, 25.0],
+    price: 67,
+    priceDiscount: 37.0,
     bigger: true,
     description:
-      'Accesso completo al festival e al camping incluso per 3 giorni e 3 notti o 2 giorni e 2 notti. Goditi ogni momento di questo evento unico sotto le stelle ✨. La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
+      'Accesso completo al festival e al camping incluso per 3 giorni e 3 notti o 2 giorni e 2 notti. Goditi ogni momento di questo evento unico sotto le stelle ✨. <br/> La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
     date: '2/3 giorni',
     badges: ['camping', 'conferenze', 'workshop', 'spettacoli', 'docce', 'bagni'],
     ...DefaultTicketProps,
   },
   {
-    icon: Camping,
-    name: 'Pass Serale (Ingresso serale)',
+    icon: TicketSvg,
+    name: 'Half Day Pass (09-18 | 18-chiusura)',
     description:
-      "Goditi la musica autentica e l'intrattenimento. Accesso al festival per una singola serata (9, 10 o 11 agosto) dalle 20 fino alla chiusura. Immergiti nella magia della notte, tra musica 🎶 e nuove amicizie 🤝 (*campeggio escluso). Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.",
-    price: 7.0,
+      "Goditi la musica autentica e l'intrattenimento.<br/>Accesso al festival per una singola giornata (9, 10 o 11 agosto) ad ORARIO.<br/><b>- Dalle 9 alle 18</b> <br/><b>- Dalle 18 fino alla chiusura</b><br/><br/> Immergiti nella cultura, nei dibattiti e lasciati coinvolgere dai workshop di #nt24 oppure lasciati trasportare dalla magia della notte, tra musica 🎶 e nuove amicizie 🤝 (*campeggio escluso).<br/> La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.",
+    price: 17.0,
     priceDiscount: 5.0,
-    date: 'solo una sera',
-    badges: ['spettacoli'],
+    date: 'mezza giornata',
+    badges: ['spettacoli', 'conferenze', 'workshop', 'docce', 'bagni'],
     ...DefaultTicketProps,
   },
 ];

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
 import { TimerProps } from './index.types';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const Index = ({ shutOffTimer, date }: TimerProps) => {
+  const { language } = useI18next();
   const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(0);
@@ -48,21 +50,21 @@ const Index = ({ shutOffTimer, date }: TimerProps) => {
       <span>
         <div className={styles.timeWrap}>
           <p className={styles.time}>{days}</p>
-          <p>Giorni</p>
+          <p>{language == 'it' ? 'Giorni' : 'Days'}</p>
         </div>
         <div className={styles.timeWrap}>
           <p className={styles.time}>{hours}</p>
-          <p>Ore</p>
+          <p>{language == 'it' ? 'Ore' : 'Hours'}</p>
         </div>
       </span>
       <span>
         <div className={styles.timeWrap}>
           <p className={styles.time}>{minutes}</p>
-          <p>Minuti</p>
+          <p>{language == 'it' ? 'Minuti' : 'Minutes'}</p>
         </div>
         <div className={styles.timeWrap}>
           <p className={styles.time}>{seconds}</p>
-          <p>Secondi</p>
+          <p>{language == 'it' ? 'Secondi' : 'Seconds'}</p>
         </div>
       </span>
     </div>
