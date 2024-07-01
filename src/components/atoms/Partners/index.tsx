@@ -36,7 +36,7 @@ const Index = () => {
           src="../../../images/partners/logo-rfl.png"
           className={styles.logoLong}
           alt="Radio Frequenza Libera"
-          width={200}
+          width={400}
         />
         <a href="https://border-radio.it/" title="Border Radio" rel="noopener noreferrer" target="_blank">
           <StaticImage
