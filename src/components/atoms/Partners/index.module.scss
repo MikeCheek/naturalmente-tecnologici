@@ -57,6 +57,14 @@
   }
 }
 
+.logoLongBig {
+  @extend .logo;
+  width: 300px;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+}
+
 .logoHorizontal {
   @extend .logo;
   height: 20px;
