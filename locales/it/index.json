@@ -29,7 +29,7 @@
   "HowToReach": "Come raggiungerci",
   "LocationText1": "Il festival avrà luogo tra le argillose colline lucane.<br/>Rientra nel territorio dell'oasi naturale di San Giuliano, non lontano da Matera.<br/><br/> Si gode di una vista mozzafiato, in cui l'occhio spazia in ogni direzione, godendo lo spettacolo degli altopiani circostanti.",
   "LocationText2": "Situato a pochi chilometri dall'abitato, è il più grosso polmone verde, appendice naturale dell'oasi predetta.<br/><br/> La foresta è di notevole importanza ambientale, un vasto territorio boschivo dove abbonda anche la presenza di macchia mediterranea e di specie floristiche e faunistiche molto rare.",
-  "LocationText3": "A Bosco Coste, trovi una delle fantastiche Panchine Giganti sparse per tutta Italia.<br/>Parte del Big Bench Community Project, queste enormi panchine offrono un punto di vista speciale sul paesaggio e ti fanno sentire più vicino alla natura.<br/><br/>La Panchina Gigante di Grottole è perfetta per una pausa e per riscoprire la meraviglia di sentirsi un po’ bambini. Simbolo di comunità e condivisione, ti permette di rilassarti e goderti le viste spettacolari della Basilicata. Se cerchi tranquillità o panorami mozzafiato, la Panchina Gigante a Bosco Coste è da non perdere!",
+  "LocationText3": "A Bosco Coste, trovi una delle fantastiche Panchine Giganti sparse per tutta Italia.<br/>Parte del <a href='https://bigbenchcommunityproject.org/' target='_blank' rel='noopener noreferrer' title='Big Bench Project'>Big Bench Community Project</a>, queste enormi panchine offrono un punto di vista speciale sul paesaggio e ti fanno sentire più vicino alla natura.<br/><br/>La Panchina Gigante di Grottole è perfetta per una pausa e per riscoprire la meraviglia di sentirsi un po’ bambini. Simbolo di comunità e condivisione, ti permette di rilassarti e goderti le viste spettacolari della Basilicata. Se cerchi tranquillità o panorami mozzafiato, la Panchina Gigante a Bosco Coste è da non perdere!",
   "LocationCta": "Scopri la location",
   "WhatHeading": "Cosa faremo",
   "InfoTitle1": "CONCERTI",
@@ -47,5 +47,9 @@
   "LastEditionHeading": "Sulla scorsa edizione...",
   "LastEditionTitle1": "Conferenze",
   "LastEditionTitle2": "Gradimento dei partecipanti",
-  "ConferencesText": "Aver invitato ospiti come Carlo Boccazzi, Marina Berardi, Emanuele Poki, Giacomo Castana, Paolo Bonelli, Giancarlo Di Mita ci ha permesso di vivere un'esperienza di co-housing in un ambiente rurale, magico e surreale."
+  "ConferencesText": "Aver invitato ospiti come Carlo Boccazzi, Marina Berardi, Emanuele Poki, Giacomo Castana, Paolo Bonelli, Giancarlo Di Mita ci ha permesso di vivere un'esperienza di co-housing in un ambiente rurale, magico e surreale.",
+  "TicketsTitle": "RISERVA IL TUO PASS <br/>PER L'EVENTO",
+  "FaqCtaDesc": "Hai qualche dubbio?<br />Dai un'occhiata alle nostre FAQ o contattaci!",
+  "FaqCta": "Vai alle FAQ",
+  "Offer": "Affrettati!<br/>L'early bird scade tra"
 }

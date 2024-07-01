@@ -10,4 +10,5 @@ export interface FastActionProps {
   infoClick?: () => void;
   glowing?: boolean;
   primary?: boolean;
+  special?: [string, string | undefined];
 }

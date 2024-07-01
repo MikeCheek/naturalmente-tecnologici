@@ -29,7 +29,7 @@
   "HowToReach": "How to reach us",
   "LocationText1": "The festival will take place amidst the clayey hills of Basilicata, located within the territory of the San Giuliano natural oasis, not far from Matera.<br/><br/> It offers a breathtaking view where the eye wanders in every direction, enjoying the spectacle of the surrounding plateaus.",
   "LocationText2": "Located a few kilometers from the village, it is the largest green lung, a natural extension of the aforementioned oasis.<br/><br/> The forest is also of significant environmental importance, a vast wooded area where Mediterranean vegetation and very rare floral and faunal species abound.",
-  "LocationText3": "At Bosco Coste, you'll find one of the fantastic Big Benches scattered across Italy.<br/>Part of the Big Bench Community Project, these enormous benches offer a unique vantage point to enjoy the landscape and feel closer to nature.<br/><br/>The Big Bench in Grottole is perfect for a break and for rediscovering the wonder of feeling like a kid again. As a symbol of community and sharing, it allows you to relax and enjoy the spectacular views of Basilicata. If you're looking for tranquility or breathtaking scenery, the Big Bench at Bosco Coste is a must-see!",
+  "LocationText3": "At Bosco Coste, you'll find one of the fantastic Big Benches scattered across Italy.<br/>Part of the <a href='https://bigbenchcommunityproject.org/' target='_blank' rel='noopener noreferrer' title='Big Bench Project'>Big Bench Community Project</a>, these enormous benches offer a unique vantage point to enjoy the landscape and feel closer to nature.<br/><br/>The Big Bench in Grottole is perfect for a break and for rediscovering the wonder of feeling like a kid again. As a symbol of community and sharing, it allows you to relax and enjoy the spectacular views of Basilicata. If you're looking for tranquility or breathtaking scenery, the Big Bench at Bosco Coste is a must-see!",
   "LocationCta": "Discover the location",
   "WhatHeading": "What we will do",
   "InfoTitle1": "CONCERTS",
@@ -47,5 +47,9 @@
   "LastEditionHeading": "On the last edition...",
   "LastEditionTitle1": "Conferences",
   "LastEditionTitle2": "Participants satisfaction",
-  "ConferencesText": "Inviting guests such as Carlo Boccazzi, Marina Berardi, Emanuele Poki, Giacomo Castana, Paolo Bonelli, Giancarlo Di Mita allowed us to experience co-housing in a rural, magical, and surreal environment."
+  "ConferencesText": "Inviting guests such as Carlo Boccazzi, Marina Berardi, Emanuele Poki, Giacomo Castana, Paolo Bonelli, Giancarlo Di Mita allowed us to experience co-housing in a rural, magical, and surreal environment.",
+  "TicketsTitle": "RESERVE YOUR PASS <br/>FOR THE EVENT",
+  "FaqCtaDesc": "Any doubts?<br/>Check out our FAQ or contact us!",
+  "FaqCta": "Visit the FAQs",
+  "Offer": "Hurry up!<br/>The early bird expires in"
 }

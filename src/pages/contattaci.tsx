@@ -11,7 +11,7 @@ const Contattaci = () => {
     <Layout>
       <HeroContattaci />
       <ContattaciBody />
-      <Faq />
+      {/* <Faq /> */}
     </Layout>
   );
 };

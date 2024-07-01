@@ -81,6 +81,9 @@
 
 .price {
   color: var(--nt-orange);
+  transform: scale(1.2);
+  transform-origin: center left;
+  font-weight: bold;
 }
 
 .content {

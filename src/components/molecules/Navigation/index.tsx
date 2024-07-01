@@ -8,6 +8,7 @@ import { ReactComponent as Play } from '../../../assets/play.svg';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import LanguagePicker from '../../atoms/LanguagePicker';
 import MultipleLinks from '../../atoms/MultipleLinks';
+import { DefaultTicketProps } from '../../../utilities/tickets';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
@@ -57,14 +58,14 @@ const Index = ({ opened, onClick }: NavigationProps) => {
 
   const button = (mobile?: boolean) => (
     <a
-      title={t('NavCta')}
+      title={t('NavCta') + ' PASS'}
       target="_blank"
       rel="noopener noreferrer"
-      href={'https://youtube.com/playlist?list=PLUPBawFanl496dZgv1Qyf5IWaPYvUOu0W&si=1MYjrDeLdQHmtPMY'}
+      href={DefaultTicketProps.url}
       className={mobile ? styles.buttonMobile : styles.button}
       onClick={onClick}
     >
-      <Play width={20} height={20} fill="var(--nt-green)" /> {t('NavCta')}
+      <Play width={20} height={20} fill="var(--nt-green)" /> {t('NavCta') + ' PASS'}
     </a>
   );
 

@@ -11,7 +11,7 @@ const Index = ({
   main = false,
   textWhite = false,
   showOnView = true,
-  simple = false,
+  simple = true,
   id,
 }: HeadingProps) => {
   const style = { color: simple ? 'var(--nt-orange)' : textWhite ? 'var(--nt-white)' : 'var(--nt-green)' };

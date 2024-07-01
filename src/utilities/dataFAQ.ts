@@ -1,8 +1,14 @@
+import { info } from './tickets';
+
 export const mail = ({ subject, text }: { subject?: string; text?: string }): string => {
   return `<a title="Mandaci una mail" rel="noopener noreferrer" target="_blank" href="mailto:direttivo@syskrack.org${
     subject ? `?subject=${subject}` : ''
   }">${text ?? 'direttivo@syskrack.org'}</a>`;
 };
+
+const tickets = info.map((t) => ({
+  name: t.name,
+}));
 
 export const faqIT = [
   // {
@@ -95,32 +101,30 @@ export const faqIT = [
     ],
   },
   {
-    title: 'Ticket',
+    title: 'PASS festival',
     data: [
       {
-        title: 'Quali tipologie di ticket ci sono?',
-        text: `Ci sono due ticket:<br/>
-        - <b>Intero 3 giorni</b><br/>
-        - <b>Giornaliero</b><br/>
-      Al giornaliero è possibile aggiungere separatamente l'accesso al camping.`,
+        title: 'Quali tipologie di PASS ci sono?',
+        text: `Ci sono ${tickets.length} tipologie di PASS:<br/>
+        ${tickets.map((t) => ` - <b>${t.name}</b><br/>`).join('')}`,
       },
-      {
-        title: 'Cosa copre il mio ticket?',
-        text: `Intero 3 giorni (Welcome to Tijuana Camp incluso):<br/>
-    <ul>
-		  <li>Ingresso al festival per tutti e 3 i giorni</li>
-        <ul><li>Laboratori, conferenza, workshop, stage musicale, servizi igienici</li></ul>
-      <li>Utilizzo area camping per tutti e 3 i giorni</li>
-        <ul><li>Postazioni ricarica smartphone, docce e servizi igienici riservati</li></ul>
-      <li>Utilizzo area camping per tutta la durata del festival</li>
-    </ul>
-	        Giornaliero
-    <ul>
-	    <li>Ingresso al festival dalle ore 10 a chiusura</li>
-        <ul><li>Laboratori, conferenza, workshop, stage musicale, servizi igienici</li></ul>
-    </ul>
-`,
-      },
+      //       {
+      //         title: 'Cosa copre il mio PASS?',
+      //         text: `Intero 3 giorni (Welcome to Tijuana Camp incluso):<br/>
+      //     <ul>
+      // 		  <li>Ingresso al festival per tutti e 3 i giorni</li>
+      //         <ul><li>Laboratori, conferenza, workshop, stage musicale, servizi igienici</li></ul>
+      //       <li>Utilizzo area camping per tutti e 3 i giorni</li>
+      //         <ul><li>Postazioni ricarica smartphone, docce e servizi igienici riservati</li></ul>
+      //       <li>Utilizzo area camping per tutta la durata del festival</li>
+      //     </ul>
+      // 	        Giornaliero
+      //     <ul>
+      // 	    <li>Ingresso al festival dalle ore 10 a chiusura</li>
+      //         <ul><li>Laboratori, conferenza, workshop, stage musicale, servizi igienici</li></ul>
+      //     </ul>
+      // `,
+      //       },
       { title: 'Posso partecipare se sono minorenne?', text: `Si, dovrai essere accompagnato da un genitore.` },
       { title: 'Devo comprare un biglietto per il mio bambino?', text: `No, i bambini sotto i 14 anni non pagano` },
       {
@@ -245,32 +249,30 @@ export const faqEN = [
     ],
   },
   {
-    title: 'Ticket',
+    title: 'PASS festival',
     data: [
       {
-        title: 'What types of tickets are available?',
-        text: `There are two types of tickets:<br/>
-        - <b>Full 3 days</b><br/>
-        - <b>Daily</b><br/>
-      For the daily ticket, you can separately add access to camping.`,
+        title: 'What types of PASS are available?',
+        text: `There are ${tickets.length} types of PASS:<br/>
+        ${tickets.map((t) => ` - <b>${t.name}</b><br/>`).join('')}`,
       },
-      {
-        title: 'What does my ticket cover?',
-        text: `Full 3 days (Welcome to Tijuana Camp included):<br/>
-    <ul>
-		  <li>Access to the festival for all 3 days</li>
-        <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
-      <li>Use of camping area for all 3 days</li>
-        <ul><li>Smartphone charging stations, showers, reserved toilets</li></ul>
-      <li>Use of camping area for the entire duration of the festival</li>
-    </ul>
-	        Daily
-    <ul>
-	    <li>Access to the festival from 10 am until closing</li>
-        <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
-    </ul>
-`,
-      },
+      //       {
+      //         title: 'What does my PASS cover?',
+      //         text: `Full 3 days (Welcome to Tijuana Camp included):<br/>
+      //     <ul>
+      // 		  <li>Access to the festival for all 3 days</li>
+      //         <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
+      //       <li>Use of camping area for all 3 days</li>
+      //         <ul><li>Smartphone charging stations, showers, reserved toilets</li></ul>
+      //       <li>Use of camping area for the entire duration of the festival</li>
+      //     </ul>
+      // 	        Daily
+      //     <ul>
+      // 	    <li>Access to the festival from 10 am until closing</li>
+      //         <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
+      //     </ul>
+      // `,
+      //       },
       { title: 'Can minors participate?', text: `Yes, you will need to be accompanied by a parent.` },
       { title: 'Do I need to buy a ticket for my child?', text: `No, children under 14 do not pay` },
       {

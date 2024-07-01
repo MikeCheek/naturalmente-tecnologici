@@ -15,6 +15,7 @@ const Index = ({
   Info,
   infoClick,
   glowing,
+  special,
   primary,
 }: FastActionProps) => {
   const [ref, inView, _entry] = useInView({
@@ -41,6 +42,20 @@ const Index = ({
       {icon}
       {/* <p className={styles.bigText} dangerouslySetInnerHTML={{ __html: text }}></p> */}
       <p className={styles.name}>{text}</p>
+      {special ? (
+        <div className={styles.special}>
+          {special[1] ? (
+            <>
+              <p className={styles.cutted}>{special[0]}</p>
+              <p className={styles.primary}>{special[1]}</p>
+            </>
+          ) : (
+            <p className={styles.primary}>{special[0]}</p>
+          )}
+        </div>
+      ) : (
+        <></>
+      )}
       {description ? <p dangerouslySetInnerHTML={{ __html: description }}></p> : <></>}
       <Button text={buttonText} title={buttonText} href={buttonHref} internal={linkType == 'internal'} />
     </div>

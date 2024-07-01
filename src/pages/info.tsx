@@ -27,6 +27,7 @@ export const Head = ({ data, pageContext }: HeadProps) => {
       pathname="/info/"
       description={t('SEODescription')}
       structuredData
+      tally
     />
   );
 };

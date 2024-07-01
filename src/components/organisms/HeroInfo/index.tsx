@@ -32,7 +32,7 @@ const Index = () => {
             <Flower color="var(--nt-green)" />
             <Flower color="var(--nt-green)" />
           </div>
-          <Colli width="1440" height="185" className={styles.colli} fill="var(--nt-green)" />
+          <Colli width="1440" className={styles.colli} fill="var(--nt-green)" />
           <div className={styles.green}></div>
         </div>
       </div>

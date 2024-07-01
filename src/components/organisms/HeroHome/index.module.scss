@@ -98,6 +98,18 @@
   fill: var(--nt-green);
 }
 
+.bgCollina {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  fill: var(--nt-soft-green);
+  opacity: 0.8;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  filter: drop-shadow(-58px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
 .green {
   width: 100vw;
   height: 70px;
@@ -150,8 +162,8 @@
   margin: 10px 0;
   z-index: 1;
   position: absolute;
-  right: 8%;
-  text-align: right;
+  left: 8%;
+  text-align: left;
   width: fit-content;
   text-decoration: none;
   span {
