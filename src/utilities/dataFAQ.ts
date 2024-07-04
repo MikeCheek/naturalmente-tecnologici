@@ -127,12 +127,12 @@ export const faqIT = [
       //       },
       { title: 'Posso partecipare se sono minorenne?', text: `Si, dovrai essere accompagnato da un genitore.` },
       { title: 'Devo comprare un biglietto per il mio bambino?', text: `No, i bambini sotto i 14 anni non pagano` },
-      {
-        title: 'Posso avere accesso a degli sconti?',
-        text: `Se sei di Grassano puoi avere accesso allo sconto speciale.<br/>
-      Dovrai portare con te un documento di riconoscimento in corso di validità che sia rilasciato dal comune di Grassano.<br/><br/>
-      Le persone con ridotta mobilità pagano il prezzo dimezzato e gli accompagnatori non pagano.`,
-      },
+      // {
+      //   title: 'Posso avere accesso a degli sconti?',
+      //   text: `Se sei di Grassano puoi avere accesso allo sconto speciale.<br/>
+      // Dovrai portare con te un documento di riconoscimento in corso di validità che sia rilasciato dal comune di Grassano.<br/><br/>
+      // Le persone con ridotta mobilità pagano il prezzo dimezzato e gli accompagnatori non pagano.`,
+      // },
     ],
   },
   {
@@ -275,12 +275,12 @@ export const faqEN = [
       //       },
       { title: 'Can minors participate?', text: `Yes, you will need to be accompanied by a parent.` },
       { title: 'Do I need to buy a ticket for my child?', text: `No, children under 14 do not pay` },
-      {
-        title: 'Can I access discounts?',
-        text: `If you are from Grassano, you can access a special discount.<br/>
-      You will need to bring a valid identification document issued by the municipality of Grassano.<br/><br/>
-      People with reduced mobility pay half price and accompanying persons do not pay.`,
-      },
+      // {
+      //   title: 'Can I access discounts?',
+      //   text: `If you are from Grassano, you can access a special discount.<br/>
+      // You will need to bring a valid identification document issued by the municipality of Grassano.<br/><br/>
+      // People with reduced mobility pay half price and accompanying persons do not pay.`,
+      // },
     ],
   },
   {
