@@ -1,21 +1,14 @@
-import guests from './guests';
+import guests, { GUEST_TYPE } from './guests';
 import { info } from './organizers';
-
-export interface TimelineItem {
-  day: string;
-  name: string;
-  description?: string;
-  timeline: {
-    time: string;
-    title: string;
-    location?: string;
-    type?: string;
-    starring?: typeof guests;
-  }[];
-}
 
 const GuestsList = guests.map((g) => ({ ...g, href: '/programma/#' + g.image }));
 const OrganizersList = info.map((o) => ({ ...o, href: '/chi-siamo/#comitato-organizzativo' }));
+
+const Stars = [...GuestsList, ...OrganizersList];
+
+const findStar = (name: string) => {
+  return Stars.find((s) => s.name == name);
+};
 
 export const nowActive = () => {
   const today = new Date();
@@ -37,53 +30,64 @@ export const nowActive = () => {
   return null;
 };
 
+export enum EVENT_TYPE {
+  MORNING_ROUTINE = 'Morning Routine',
+  CONFERENZA = 'Conferenza',
+  LABORATORIO = 'Laboratorio',
+}
+
 export type Event = {
   time: string;
   title: string;
-  type: string;
+  type: EVENT_TYPE;
   location: string;
   starring: any[];
 };
 
 const program = [
   {
-    numberDay: 10,
-    day: 'Giovedì 10 Agosto',
+    numberDay: 9,
+    day: 'Venerdì 9 Agosto',
     name: 'Welcome Day',
     timeline: [
       {
-        time: '16:00 - 16:30',
-        title: 'Caffè di benvenuto al Laboratorio Syskrack Lab [APERTO A TUTTI E TUTTE]',
-        location: 'Grassano',
+        time: '10:00 - 10:30',
+        title: 'Risveglio con ASJa',
+        type: EVENT_TYPE.MORNING_ROUTINE,
       },
       {
-        time: '16:30 - 17:00',
-        title: `Conferenza di Benvenuto [GRATUITO E APERTO A TUTTI E TUTTE]
-        10 anni senza Peps - Syskrack : 9 anni dopo`,
-        type: 'Conferenza',
-        location: 'Auditorium Grassano',
-        starring: [
-          OrganizersList.find((o) => o.name === 'Davide Saladino'),
-          OrganizersList.find((o) => o.name === 'Giuseppe Becci'),
-          OrganizersList.find((o) => o.name === 'Giuseppe Liuzzi'),
-        ],
+        time: '10:30 - 13:00',
+        title:
+          'Esprimento in cui si cercherà di riprodurre il metodo di fabbricazione della ceramica utilizzando la materia prima e delle tecniche antiche',
+        type: EVENT_TYPE.LABORATORIO,
+      },
+      {
+        time: '13:00 - 13:30',
+        title: 'Networking & Chill',
+      },
+      {
+        time: '13:30 - 14:30',
+        title: 'Pausa pranzo',
+      },
+      {
+        time: '14:30 - 15:00',
+        title: `Laboratorio di canto`,
+        type: EVENT_TYPE.LABORATORIO,
+        starring: [findStar('Giuseppe Becci')],
       },
       {
         time: '17:00 - 17:30',
         title: `[Conferenza Stampa] Presentazione del festival`,
         type: 'Conferenza',
         location: 'Auditorium Grassano',
-        starring: [
-          OrganizersList.find((o) => o.name === 'Giuseppe Becci'),
-          OrganizersList.find((o) => o.name === 'Giuseppe Liuzzi'),
-        ],
+        starring: [findStar('Giuseppe Becci'), findStar('Giuseppe Liuzzi')],
       },
       {
         time: '17:30 - 18:00',
         title: `[Conferenza Stampa] Presentazione residenza artistico scientifica`,
         type: 'Conferenza',
         location: 'Auditorium Grassano',
-        starring: [OrganizersList.find((o) => o.name === 'Giuseppe Becci')],
+        starring: [findStar('Giuseppe Becci')],
       },
       {
         time: '19:00',
@@ -94,11 +98,7 @@ const program = [
         time: '18:00 - 20:30',
         title: 'Esplorazione di più cantine Storiche',
         location: 'I cinti di Grassano',
-        starring: [
-          GuestsList.find((g) => g.name === 'Anna Albanese'),
-          GuestsList.find((g) => g.name === 'Maria Mugnolo'),
-          GuestsList.find((g) => g.name === 'Innocenzo Pontillo'),
-        ],
+        starring: [findStar('Anna Albanese'), findStar('Maria Mugnolo'), findStar('Innocenzo Pontillo')],
       },
       {
         time: '22:00',
@@ -120,7 +120,7 @@ const program = [
       {
         time: '8:00 - 10:30',
         title: 'Good Morning Routine',
-        starring: [GuestsList.find((g) => g.name === 'Giacomo Castana')],
+        starring: [findStar('Giacomo Castana')],
       },
       {
         time: '11:00 - 14:00',
@@ -174,7 +174,7 @@ const program = [
       {
         time: '23:00',
         title: `DAVIDE SHORTY - LIVE SOLO`,
-        starring: [GuestsList.find((g) => g.name === 'Davide Shorty - Solo')],
+        starring: [findStar('Davide Shorty - Solo')],
         location: 'Panoramic Stage',
       },
       {
@@ -197,7 +197,7 @@ const program = [
       {
         time: '09:30',
         title: 'Good Morning Routine',
-        starring: [GuestsList.find((g) => g.name === 'Giacomo Castana')],
+        starring: [findStar('Giacomo Castana')],
       },
       {
         time: '10:30',
@@ -209,11 +209,7 @@ const program = [
             Co-progettare empaticamente  usando il DESIGN THINKING per creare <br/>
         connessioni tra persone e realtà virtuose.<br/>
                 LABORATORIO DA PRENOTARE`,
-        starring: [
-          GuestsList.find((g) => g.name === 'IBM SkillsBuild'),
-          GuestsList.find((g) => g.name === 'Giuliana Bianchini'),
-          GuestsList.find((g) => g.name === 'Sara Cricenti'),
-        ],
+        starring: [findStar('IBM SkillsBuild'), findStar('Giuliana Bianchini'), findStar('Sara Cricenti')],
       },
       {
         time: '11:30',
@@ -222,7 +218,7 @@ const program = [
       {
         time: '15:00-16:00',
         title: 'Degustazione di Vinili a cura di Sfinge Sound',
-        starring: [GuestsList.find((g) => g.name === 'SFINGE SOUND')],
+        starring: [findStar('SFINGE SOUND')],
         location: 'Botanical Stage',
       },
       {
@@ -233,7 +229,7 @@ const program = [
       {
         time: '17:00',
         title: `IMMAGINARE UN FUTURO RURALE`,
-        starring: [GuestsList.find((g) => g.name === 'Pisilli Rocco')],
+        starring: [findStar('Pisilli Rocco')],
       },
       {
         time: '21:00',
@@ -243,12 +239,7 @@ const program = [
       {
         time: '22:00',
         title: 'Capsicum Set Party - Moddi, Trix e Dj Lugi',
-        starring: [
-          GuestsList.find((g) => g.name === 'Capsicum Set Party'),
-          GuestsList.find((g) => g.name === 'Moddi MC'),
-          GuestsList.find((g) => g.name === 'DJ Lugi'),
-          GuestsList.find((g) => g.name === 'DJ Trix'),
-        ],
+        starring: [findStar('Capsicum Set Party'), findStar('Moddi MC'), findStar('DJ Lugi'), findStar('DJ Trix')],
         location: 'Panoramic Stage',
       },
     ],
@@ -266,19 +257,19 @@ const program = [
       {
         time: '09:30',
         title: 'Good Morning Routine',
-        starring: [GuestsList.find((g) => g.name === 'Giacomo Castana')],
+        starring: [findStar('Giacomo Castana')],
       },
       {
         time: '10:00',
         title: `Toccare il futuro con Mano - La Tecnologia che unisce`,
-        starring: [GuestsList.find((g) => g.name === 'Guido Gioioso')],
+        starring: [findStar('Guido Gioioso')],
         location: 'Botanical Stage',
       },
       {
         time: '11:30',
         title: 'Il meme come nuovo linguaggio di comunicazione',
         location: 'Botanical Stage',
-        starring: [GuestsList.find((g) => g.name === 'Lucanian Shitposting')],
+        starring: [findStar('Lucanian Shitposting')],
       },
       {
         time: '13:00',
@@ -287,23 +278,19 @@ const program = [
       {
         time: '15:00-16:00',
         title: 'Degustazione di Vinili a cura di Sfinge Sound',
-        starring: [GuestsList.find((g) => g.name === 'SFINGE SOUND')],
+        starring: [findStar('SFINGE SOUND')],
         location: 'Botanical Stage',
       },
       {
         time: '16:00',
         title: `Creare una rivoluzione culturale dove non c'è mai stata`,
         location: 'Botanical Stage',
-        starring: [GuestsList.find((g) => g.name === 'Mauro Acito')],
+        starring: [findStar('Mauro Acito')],
       },
       {
         time: '17:00',
         title: `Immaginare il futuro partendo dal passato`,
-        starring: [
-          GuestsList.find((g) => g.name === 'Anna Albanese'),
-          GuestsList.find((g) => g.name === 'Innocenzo Bronzino'),
-          GuestsList.find((g) => g.name === 'Domenico Lostrangio'),
-        ],
+        starring: [findStar('Anna Albanese'), findStar('Innocenzo Bronzino'), findStar('Domenico Lostrangio')],
         location: 'Botanical Stage',
       },
       {
@@ -312,30 +299,30 @@ const program = [
         Presentazione del libro "Chi ha polvere spara"`,
         type: 'Presentazione',
         location: 'Botanical Stage',
-        starring: [GuestsList.find((g) => g.name === 'Donato Montesano')],
+        starring: [findStar('Donato Montesano')],
       },
       {
         time: '21:00',
         title: 'Brigante Sound System (FULL EQUIPMENT) MONTONE & BIG SIMON <br/>BIG SIMON (SHOWCASE)',
-        starring: [GuestsList.find((g) => g.name === 'Brigante Sound System')],
+        starring: [findStar('Brigante Sound System')],
         location: 'Panoramic Stage',
       },
       {
         time: '23:00',
         title: 'Paolo Baldini DubFiles Live',
         location: 'Panoramic Stage',
-        starring: [GuestsList.find((g) => g.name === 'Paolo Baldini DubFiles')],
+        starring: [findStar('Paolo Baldini DubFiles')],
       },
       {
         time: '01:00',
         title: 'PNEUMATIX Live',
         location: 'Panoramic Stage',
-        starring: [GuestsList.find((g) => g.name === 'Pneumatix')],
+        starring: [findStar('Pneumatix')],
       },
       {
         title: 'Angel_One DJ Set',
         location: 'Panoramic Stage',
-        starring: [GuestsList.find((g) => g.name === 'Angel_One')],
+        starring: [findStar('Angel_One')],
       },
       {
         time: '06:00',
@@ -344,5 +331,19 @@ const program = [
     ],
   },
 ];
+
+export type TimelineItem = (typeof program)[number];
+// {
+//   day: string;
+//   name: string;
+//   description?: string;
+//   timeline: {
+//     time: string;
+//     title: string;
+//     location?: string;
+//     type?: GUEST_TYPE;
+//     starring?: typeof guests;
+//   }[];
+// }
 
 export default program;

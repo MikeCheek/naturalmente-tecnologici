@@ -4,12 +4,13 @@ import HeroProgram from '../components/organisms/HeroProgram';
 import Seo from '../components/atoms/Seo';
 import Program from '../components/molecules/Program';
 import Guests from '../components/organisms/Guests';
+import { graphql } from 'gatsby';
 
 const Programma = () => {
   return (
     <Layout>
       <HeroProgram />
-      <Guests />
+      {/* <Guests /> */}
       <Program />
     </Layout>
   );
@@ -25,3 +26,17 @@ export const Head = () => (
 );
 
 export default Programma;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { ns: { in: ["common"] }, language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
