@@ -27,7 +27,11 @@ const Index = ({ data }: TimelineProps) => {
       <div className={styles.colWrap}>
         {bar}
         {data.timeline.map((item, key) => (
-          <div key={key} id={item.title ? textToId(item.title) : undefined} className={styles.itemWrap}>
+          <div
+            key={item.title ? textToId(item.title) : '' + key}
+            id={item.title ? textToId(item.title) : undefined}
+            className={styles.itemWrap}
+          >
             <div className={key % 2 == 0 ? styles.item : styles.itemReversed} key={key}>
               <p className={styles.title} dangerouslySetInnerHTML={{ __html: item.title ?? '' }}></p>
               {circle}
