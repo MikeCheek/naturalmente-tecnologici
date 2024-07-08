@@ -6,6 +6,16 @@ export enum GUEST_TYPE {
   ACTIVITY,
 }
 
+interface Guest {
+  name: string;
+  field?: string[];
+  description?: string;
+  type: GUEST_TYPE;
+  mentor?: string[];
+  image: string;
+  imagePosition?: string;
+}
+
 const guests = [
   {
     name: 'Donato Montesano',
@@ -356,7 +366,11 @@ const guests = [
     Tutti i suoi spettacoli sono gratuiti e incentrati sull'interazione attiva con il pubblico che non solo funge da spettatore ma prende parte direttamente allo spettacolo!`,
     imagePosition: 'center 80%',
   },
-].map((e) => {
+] as const;
+
+export type GuestNames = (typeof guests)[number]['name'];
+
+const guestsOut = guests.map((e) => {
   const splitted = e.name.toLowerCase().split(' ');
   return { ...e, image: splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0] };
 });
@@ -384,4 +398,4 @@ export const images = () => {
   return guestsPhotos;
 };
 
-export default guests;
+export default guestsOut as Guest[];
