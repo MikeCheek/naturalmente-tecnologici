@@ -27,14 +27,14 @@ const Index = ({ data }: TimelineProps) => {
       <div className={styles.colWrap}>
         {bar}
         {data.timeline.map((item, key) => (
-          <div key={textToId(item.title)} id={textToId(item.title)} className={styles.itemWrap}>
+          <div key={key} id={item.title ? textToId(item.title) : undefined} className={styles.itemWrap}>
             <div className={key % 2 == 0 ? styles.item : styles.itemReversed} key={key}>
-              <p className={styles.title} dangerouslySetInnerHTML={{ __html: item.title }}></p>
+              <p className={styles.title} dangerouslySetInnerHTML={{ __html: item.title ?? '' }}></p>
               {circle}
               <span className={styles.info}>
                 <p className={styles.time}>{item.time}</p>
                 {/* {item.type ? <p>{item.type}</p> : <></>} */}
-                {item.location ? (
+                {/* {item.location ? (
                   <p
                     className={styles.location}
                     style={key % 2 == 0 ? { marginRight: 'auto' } : { marginLeft: 'auto' }}
@@ -43,7 +43,7 @@ const Index = ({ data }: TimelineProps) => {
                   </p>
                 ) : (
                   <></>
-                )}
+                )} */}
                 {item.starring ? (
                   <div
                     className={styles.badges}
@@ -57,7 +57,6 @@ const Index = ({ data }: TimelineProps) => {
                       return star ? (
                         <GuestBadge
                           name={star.name}
-                          //@ts-ignore
                           href={star.href}
                           key={key}
                           image={findImage(String(star.image))}

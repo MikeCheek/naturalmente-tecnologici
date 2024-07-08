@@ -1,5 +1,13 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
+interface Info {
+  name: string;
+  role: string;
+  linkedin?: string;
+  website?: string;
+  image: number;
+}
+
 export const info = [
   {
     name: 'Davide Saladino',
@@ -38,7 +46,7 @@ export const info = [
   { name: 'Grazia Muro', role: 'Segretaria', image: 6 },
   { name: 'Teodosio Santagata', role: 'Direttore Artistico', image: 7 },
   { name: 'Giovanni Restaino', role: 'Direttore Artistico', image: 8 },
-];
+] as const;
 
 export const images = () => {
   const data: Data = useStaticQuery(graphql`
@@ -62,3 +70,5 @@ export const images = () => {
 
   return data;
 };
+
+export type OrganizersNames = (typeof info)[number]['name'];
