@@ -11,17 +11,29 @@ import { ReactComponent as Basilicata } from '../../../assets/partner/basilicata
 import { ReactComponent as LaPotenzaDellArte } from '../../../assets/partner/lapotenzadellarte.svg';
 import ShowOnView from '../ShowOnView';
 import { useTranslation } from 'react-i18next';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const Index = () => {
   const { t } = useTranslation();
+  const { language } = useI18next();
   return (
     <div className={styles.partners}>
       <Heading text="Powered By" />
       <ShowOnView className={styles.wrap}>
         <a href="https://www.syskrack.org/" rel="noopener noreferrer" title="Syskrack" target="_blank">
-          <Syskrack className={styles.logo} width={150} />
+          <Syskrack className={styles.logoLong} width={250} />
         </a>
         <h4 dangerouslySetInnerHTML={{ __html: t('PartnersText') }}></h4>
+      </ShowOnView>
+      <Heading text={language === 'it' ? 'Con il patrocinio di' : 'Under the patronage of'} />
+      <ShowOnView className={styles.wrap}>
+        <StaticImage
+          layout="constrained"
+          src="../../../images/partners/comune_grottole.webp"
+          className={styles.logoLong}
+          alt="Comune di Grottole"
+          width={250}
+        />
       </ShowOnView>
       <Heading text="Location Partner" />
       <ShowOnView className={styles.wrap}>
@@ -100,16 +112,6 @@ const Index = () => {
             width={150}
           />
         </a>
-      </ShowOnView>
-      <Heading text="Istitutional Partner" />
-      <ShowOnView className={styles.wrap}>
-        <StaticImage
-          layout="constrained"
-          src="../../../images/partners/comune_grottole.webp"
-          className={styles.logo}
-          alt="Comune di Grottole"
-          width={150}
-        />
       </ShowOnView>
       <Heading text="Hospitality Partner" />
       <ShowOnView className={styles.wrap}>
