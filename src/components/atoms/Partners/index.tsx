@@ -16,6 +16,7 @@ import { useI18next } from 'gatsby-plugin-react-i18next';
 const Index = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
+
   return (
     <div className={styles.partners}>
       <Heading text="Powered By" />
