@@ -40,7 +40,7 @@ const Index = () => {
 
   return (
     <div className={styles.wrap}>
-      <Heading text="Ospiti musicali" />
+      <Heading text="Performers" />
       <div className={styles.guests}>{musicGuests.map((guest, key) => Card(guest, key))}</div>
 
       <Heading text="Ospiti conferenze" />

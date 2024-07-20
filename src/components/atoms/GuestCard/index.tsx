@@ -13,11 +13,8 @@ const GuestCard = ({ children, name, description, field, id, mentor }: GuestCard
   const daysPerforming = program
     .filter(
       (day) =>
-        day.timeline
-          //@ts-ignore
-          .filter((e) => e.starring)
-          //@ts-ignore
-          .filter((event) => event.starring.find((star) => star.name === name)).length > 0
+        day.timeline.filter((e) => e.starring).filter((event) => event.starring?.find((star) => star?.name === name))
+          .length > 0
     )
     .map((d) => ({ name: d.day, day: d.numberDay }));
 
@@ -39,26 +36,16 @@ const GuestCard = ({ children, name, description, field, id, mentor }: GuestCard
             ) : null}
             {daysPerforming && daysPerforming.length > 0 ? (
               <div className={styles.badges}>
-                <Badge
-                  name={'10'}
-                  on={daysPerforming.filter((d) => d.day === 10).length > 0}
-                  href={daysPerforming.find((d) => d.day === 10)?.name}
-                />
-                <Badge
-                  name={'11'}
-                  on={daysPerforming.filter((d) => d.day === 11).length > 0}
-                  href={daysPerforming.find((d) => d.day === 11)?.name}
-                />
-                <Badge
-                  name={'12'}
-                  on={daysPerforming.filter((d) => d.day === 12).length > 0}
-                  href={daysPerforming.find((d) => d.day === 12)?.name}
-                />
-                <Badge
-                  name={'13'}
-                  on={daysPerforming.filter((d) => d.day === 13).length > 0}
-                  href={daysPerforming.find((d) => d.day === 13)?.name}
-                />
+                {program
+                  .map((p) => p.numberDay)
+                  .map((day, key) => (
+                    <Badge
+                      key={key}
+                      name={day.toString()}
+                      on={daysPerforming.filter((d) => d.day === day).length > 0}
+                      href={daysPerforming.find((d) => d.day === day)?.name}
+                    />
+                  ))}
               </div>
             ) : (
               <></>

@@ -79,6 +79,32 @@ const Index = () => {
           width={150}
         />
       </ShowOnView>
+      <Heading text="Activity Partner" />
+      <ShowOnView className={styles.wrap}>
+        <a href="" title="MAAP" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/maap.png"
+            className={styles.logo}
+            style={{ borderRadius: '50%' }}
+            alt="Atomico"
+            width={150}
+          />
+        </a>
+        <a href="https://skillsbuild.org/" title="IBM" rel="noopener noreferrer" target="_blank">
+          <IBM className={styles.logoHorizontal} height={40} />
+        </a>
+        <a href="" title="Atomico" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/atomico.jpg"
+            className={styles.logo}
+            style={{ borderRadius: '50%' }}
+            alt="Atomico"
+            width={150}
+          />
+        </a>
+      </ShowOnView>
       <Heading text="Mobility Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="https://marinobus.it/" title="Marino Bus" rel="noopener noreferrer" target="_blank">
@@ -168,22 +194,6 @@ const Index = () => {
             className={styles.logoLong}
             alt="Centro Servizio Volontariato - Basilicata"
             width={200}
-          />
-        </a>
-      </ShowOnView>
-      <Heading text="Activity Partner" />
-      <ShowOnView className={styles.wrap}>
-        <a href="https://skillsbuild.org/" title="IBM" rel="noopener noreferrer" target="_blank">
-          <IBM className={styles.logoHorizontal} height={40} />
-        </a>
-        <a href="" title="Atomico" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/atomico.jpg"
-            className={styles.logo}
-            style={{ borderRadius: '50%' }}
-            alt="Atomico"
-            width={150}
           />
         </a>
       </ShowOnView>
