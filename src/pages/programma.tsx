@@ -10,7 +10,7 @@ const Programma = () => {
   return (
     <Layout>
       <HeroProgram />
-      {/* <Guests /> */}
+      <Guests />
       <Program />
     </Layout>
   );

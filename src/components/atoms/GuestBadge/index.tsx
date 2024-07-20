@@ -7,7 +7,11 @@ import { Link } from 'gatsby';
 const Index = ({ name, href, image, titles }: GuestBadgeProps) => {
   return (
     <Link className={styles.wrap} to={href} title={name}>
-      <GatsbyImage alt={name} image={image} loading="lazy" className={styles.image} objectPosition={'center top'} />
+      {image ? (
+        <GatsbyImage alt={name} image={image} loading="lazy" className={styles.image} objectPosition={'center top'} />
+      ) : (
+        <></>
+      )}
       <span className={styles.nameWrap}>
         <span>{name}</span>
         {titles ? <span className={styles.subTitles}>{titles.join(', ')}</span> : <></>}
