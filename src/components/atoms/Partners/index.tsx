@@ -114,18 +114,7 @@ const Index = () => {
           />
         </a>
       </ShowOnView>
-      <Heading text="Hospitality Partner" />
-      <ShowOnView className={styles.wrap}>
-        {/* <a href="" title="Wonder Grottole" rel="noopener noreferrer" target="_blank"> */}
-        <StaticImage
-          layout="constrained"
-          src="../../../images/partners/wonder_grottole.jpg"
-          className={styles.logo}
-          alt="Wonder Grottole"
-          width={150}
-        />
-        {/* </a> */}
-      </ShowOnView>
+      {/* <Heading text="Hospitality Partner" /> */}
       <Heading text="Community Partner" />
       <ShowOnView className={styles.wrap}>
         {/*<a href="http://www.hackability.it/" rel="noopener noreferrer" target="_blank">
