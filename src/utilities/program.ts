@@ -7,8 +7,8 @@ const OrganizersList = info.map((o) => ({ ...o, href: '/chi-siamo/#comitato-orga
 const Stars = [...GuestsList, ...OrganizersList];
 
 const findStar = (
-  name: string
-  // OrganizersNames | GuestNames
+  name: //string
+  OrganizersNames | GuestNames
 ) => {
   return Stars.find((s) => s.name == name);
 };
@@ -58,11 +58,6 @@ const program = [
     description: '',
     timeline: [
       {
-        time: '10:00 - 10:30',
-        title: 'Risveglio con ASJa',
-        type: EVENT_TYPE.MORNING_ROUTINE,
-      },
-      {
         time: '10:30 - 13:00',
         title:
           'Esprimento in cui si cercherà di riprodurre il metodo di fabbricazione della ceramica utilizzando la materia prima e delle tecniche antiche',
@@ -88,30 +83,20 @@ const program = [
         title: `Molky`,
       },
       {
-        time: '16:00 - 16:30',
+        time: '16:00 - 17:00',
         title: `"Raccontare nuovi immaginare rurali: nuovi strumenti narrativi per creare progresso."`,
         type: EVENT_TYPE.CONFERENZA,
         starring: [findStar('Vittoria Elena Simone')],
       },
       {
-        time: '16:30 - 17:00',
-        title: `Dialogo generativo`,
-        type: EVENT_TYPE.DIALOGO,
-      },
-      {
-        time: '17:00 - 17:30',
-        title: '"Guerriglia culturale: Il mondo del maestro infantino"',
+        time: '17:00 - 18:00',
+        title: 'Il maestro Infantino: innovazione e progresso nel mondo del maestro',
         type: EVENT_TYPE.CONFERENZA,
-        starring: [findStar('Associazione Antonio Infantino')],
+        // starring: [findStar('Associazione Antonio Infantino')],
       },
       {
-        time: '17:30 - 18:00',
-        title: `Dialogo generativo`,
-        type: EVENT_TYPE.DIALOGO,
-      },
-      {
-        time: '18:00 - 18:30',
-        title: 'Abitare',
+        time: '18:00 - 19:00',
+        title: '"Abitare: antropologia, fotografia vernacolare e intelligenza artificiale"',
         type: EVENT_TYPE.CONFERENZA,
         starring: [findStar('Marina Berardi')],
       },
@@ -127,19 +112,21 @@ const program = [
       },
       {
         time: '22:30 - 23:30',
+        title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
         starring: [findStar('Mattone su mattone')],
       },
       {
         time: '23:30 - 01:00',
+        title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
-        starring: [findStar('Ave Marianne')],
+        // starring: [findStar('Ave Marianne')],
       },
       {
         time: '01:00 - 02:30',
-        title: 'Chiusura',
+        title: 'Performance fino a chiusura',
         type: EVENT_TYPE.CONCERTO,
-        starring: [findStar('Dj Bomberone')],
+        // starring: [findStar('Dj Bomberone')],
       },
     ],
   },
@@ -149,96 +136,75 @@ const program = [
     name: '',
     timeline: [
       {
-        time: '10:00 - 10:30',
-        title: 'Morning Routine',
-        type: EVENT_TYPE.MORNING_ROUTINE,
-      },
-      {
-        time: '10:30 - 13:00',
-        title: 'Laboratorio di riconoscimento del suolo',
+        time: '11:00 - 13:00',
+        title: 'Analisi sperimentali del suolo: conosciamo la terra',
         type: EVENT_TYPE.LABORATORIO,
         starring: [findStar('Noi ortadini')],
       },
       {
-        time: '13:00 - 14:30',
+        time: '13:00 - 15:00',
         title: 'Pausa pranzo',
       },
       {
-        time: '14:30 - 15:30',
-        title: `Degustazione vinilica + Molky`,
-        starring: [findStar('SFINGE SOUND'), findStar('Pisilli Rocco')],
+        time: '15:00 - 16:00',
+        title: `Conclusione - Analisi sperimentali del suolo: conosciamo la terra`,
       },
       {
-        time: '15:30 - 16:30',
-        title: `"Abitare il rurale del domani. Arte e persone per creare luoghi di abitabili"`,
+        time: '16:00 - 17:30',
+        title: `"Riformulare i luoghi attraverso l'arte sulla base dei bisogni delle soggettività."`,
         type: EVENT_TYPE.CONFERENZA,
         starring: [findStar('Stefania Dubla')],
       },
       {
-        time: '16:30 - 17:00',
-        title: `Dialogo generativo`,
+        time: '17:30 - 19:00',
+        title: `"Nuovi immaginari rurali: L'esempio del molky"`,
         type: EVENT_TYPE.DIALOGO,
-        starring: [findStar('Giacomo Castana')],
-      },
-      {
-        time: '17:00 - 17:30',
-        title: `Persone e piante. Comunicare con il luogo`,
-        type: EVENT_TYPE.CONFERENZA,
-        starring: [findStar('Giacomo Castana')],
-      },
-      {
-        time: '17:30 - 18:00',
-        title: `"Creare community in Basilicata. L'esmpio del molky"`,
-        type: EVENT_TYPE.DIALOGO,
-        starring: [findStar('Atomico')],
-      },
-      {
-        time: '18:00 - 18:30',
-        title: `Imparare dalla terra`,
-        type: EVENT_TYPE.CONFERENZA,
-        starring: [findStar('Atomico')],
+        // starring: [findStar('Atomico')],
       },
       {
         time: '19:00 - 20:30',
         title: 'Conferenza sul bosco',
         type: EVENT_TYPE.DIALOGO,
-        starring: [findStar('Green e speculazioni')],
+        // starring: [findStar('Green e speculazioni')],
       },
       {
         time: '20:30 - 21:00',
         title: `Introduzione all'astro fotografia`,
         type: EVENT_TYPE.CONFERENZA,
+        // starring: [findStar('Giandomenico Mercadante')];
       },
       {
         time: '21:00 - 22:00',
-        title: 'Pausa cena, chill & networking',
+        title: 'Chill & networking',
       },
       {
         time: '22:00 - 23:30',
+        title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
         starring: [findStar('LINBO')],
       },
       {
         time: '23:30 - 01:00',
+        title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
-        starring: [findStar('OBERDAN')],
+        // starring: [findStar('OBERDAN')],
       },
       {
         time: '01:00 - 02:30',
         title: 'Osservazione delle stelle',
         type: EVENT_TYPE.CONCERTO,
-        starring: [findStar('SLEEPING CONCERT')],
+        // starring: [findStar('SLEEPING CONCERT')],
       },
       {
         time: '02:30 - 03:30',
         type: EVENT_TYPE.CONCERTO,
-        starring: [findStar('Giandomenico Mercadante')],
+        // starring: [findStar('Giandomenico Mercadante')],
       },
-      {
-        time: '03:30 - 04:00',
-        type: EVENT_TYPE.CONCERTO,
-        starring: [findStar('SFINGE SOUND')],
-      },
+      // {
+      //   time: '03:30 - 04:00',
+      //   type: EVENT_TYPE.CONCERTO,
+      //   starring: [findStar('SFINGE SOUND')],
+      // },
     ],
   },
   {
@@ -246,73 +212,77 @@ const program = [
     day: 'Domenica 11 Agosto',
     name: '',
     timeline: [
+      // {
+      //   time: '10:30 - 13:00',
+      //   title: 'Laboratorio di Arduino',
+      //   type: EVENT_TYPE.LABORATORIO,
+      // },
+      // {
+      //   time: '13:00 - 14:30',
+      //   title: 'Pausa pranzo',
+      // },
+      // {
+      //   time: '14:30 - 15:30',
+      //   title: `Molky`,
+      // },
+      // {
+      //   time: '15:30 - 16:00',
+      //   title: `"10 anni di glocalità e ruralità"`,
+      //   type: EVENT_TYPE.CONFERENZA,
+      //   // starring: [findStar('Syskrack')],
+      // },
       {
-        time: '10:00 - 10:30',
-        title: 'Morning Routine',
-        type: EVENT_TYPE.MORNING_ROUTINE,
-      },
-      {
-        time: '10:30 - 13:00',
-        title: 'Laboratorio di Arduino',
-        type: EVENT_TYPE.LABORATORIO,
-      },
-      {
-        time: '13:00 - 14:30',
-        title: 'Pausa pranzo',
-      },
-      {
-        time: '14:30 - 15:30',
-        title: `Molky`,
-      },
-      {
-        time: '15:30 - 16:00',
-        title: `"10 anni di glocalità e ruralità"`,
-        type: EVENT_TYPE.CONFERENZA,
-        starring: [findStar('Syskrack')],
-      },
-      {
-        time: '16:00 - 16:30',
-        title: `"Restituzione & Output"`,
-        type: EVENT_TYPE.CONFERENZA,
-        starring: [findStar('Syskrack')],
-      },
-      {
-        time: '16:30 - 17:00',
-        title: `Dialogo generativo`,
+        time: '16:00 - 17:00',
+        title: `"Disobbedienza come strumento di innovazione: la storia di Michele Mulieri"`,
         type: EVENT_TYPE.DIALOGO,
         starring: [findStar('Anna Albanese')],
       },
       {
-        time: '17:00 - 17:30',
-        title: `"Rompere il sistema. La storia di Michele Mulieri"`,
+        time: '17:00 - 18:00',
+        title: `"Glocalità, la nostra pratica di resilienza"`,
         type: EVENT_TYPE.CONFERENZA,
-        starring: [findStar('Anna Albanese')],
+        starring: [findStar('Giuseppe Becci'), findStar('Giuseppe Liuzzi')],
       },
       {
-        time: '17:30 - 18:00',
-        title: `"Passaggio attraverso il teatro"`,
+        time: '18:30 - 19:30',
+        title: `Aperi mas`,
         type: EVENT_TYPE.CONFERENZA,
-        starring: [findStar('IAC')],
+        // starring: [findStar('Eliana Luceri')],
       },
       {
-        time: '18:00 - 20:30',
-        title: 'Performance IAC',
+        time: '21:00 - 22:30',
+        title: 'Performance Freestyle',
         type: EVENT_TYPE.PERFORMANCE,
         starring: [findStar('LINBO')],
       },
       {
-        time: '20:30 - 22:30',
-        title: 'Pausa cena, chill & networking',
-      },
-      {
-        time: '22:30 - 02:00',
+        time: '22:30 - 00:00',
+        title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
         starring: [findStar('SFINGE SOUND')],
       },
       {
-        time: '05:00 - 06:00',
-        title: 'Saluto al sole',
+        time: '00:00 - 01:00',
+        title: 'Performance',
+        type: EVENT_TYPE.CONCERTO,
+        // starring: [findStar('Terra Terra Sound')],
       },
+      {
+        time: '01:00 - 02:00',
+        title: 'Performance',
+        type: EVENT_TYPE.CONCERTO,
+        // starring: [findStar('Pupa Antezz')],
+      },
+      {
+        time: '02:00 - 04:00',
+        title: 'Performance',
+        type: EVENT_TYPE.CONCERTO,
+        starring: [findStar('SFINGE SOUND')],
+      },
+      // {
+      //   time: '05:00 - 06:00',
+      //   title: 'Saluto al sole',
+      // },
     ],
   },
 ];

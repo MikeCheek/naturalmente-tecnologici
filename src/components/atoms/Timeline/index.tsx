@@ -28,7 +28,7 @@ const Index = ({ data }: TimelineProps) => {
         {bar}
         {data.timeline.map((item, key) => (
           <div
-            key={item.title ? textToId(item.title) : '' + key}
+            key={(item.title ? textToId(item.title) : '') + key}
             id={item.title ? textToId(item.title) : undefined}
             className={styles.itemWrap}
           >
