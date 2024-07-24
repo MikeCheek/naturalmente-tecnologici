@@ -10,7 +10,6 @@ const Index = () => {
   return (
     <div className={styles.wrap}>
       <Heading text="CRONOPROGRAMMA" showOnView={false} />
-      {/* <Banner text="IL PROGRAMMA NON È STATO RILASCIATO" /> */}
       <p>
         L'evento avrà luogo a Grottole (MT) presso <Link to="/#quando-e-dove">Bosco Coste</Link>.
       </p>
