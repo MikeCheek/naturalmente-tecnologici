@@ -234,6 +234,19 @@ const Index = () => {
           />
         </a>
       </ShowOnView>
+      <Heading text="Si ringrazia" />
+      <ShowOnView>
+        <a href="" title="Comune di Grassano" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/comune-grassano.png"
+            className={styles.logoLong}
+            alt="Comune di Grassano"
+            width={200}
+          />
+          <p style={{ color: 'black', fontWeight: 'bold' }}>Comune di Grassano</p>
+        </a>
+      </ShowOnView>
     </div>
   );
 };

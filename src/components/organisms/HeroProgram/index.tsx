@@ -4,19 +4,23 @@ import * as styles from './index.module.scss';
 import { ReactComponent as Collina } from '../../../assets/collina-lato.svg';
 import Flower from '../../atoms/Flower';
 import { Link } from 'gatsby';
+import { useTranslation } from 'react-i18next';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const Index = () => {
+  const { t } = useTranslation();
+  const { language } = useI18next();
   return (
     <div className={styles.wrap}>
       <div className={styles.headWrap}>
         <span>
           <Link className={styles.date} to="/#quando-e-dove" title="Quando e dove">
             Bosco Coste, Grottole(MT)
-            <br /> 11&gt;13 Agosto 2023
+            <br /> 09 &gt; 11 Agosto 2024
           </Link>
-          <h1 className={styles.heading}>
-            PROGRAMMA <br />
-            CONCERTI, CONFERENZE, WORKSHOP E CAMPING
+          <h1 className={language === 'en' ? styles.headingEn : styles.heading}>
+            {t('Title')} <br />
+            {t('Subtitle')}
           </h1>
         </span>
       </div>
