@@ -158,20 +158,20 @@ const program = [
         time: '17:30 - 19:00',
         title: `"Nuovi immaginari rurali: L'esempio del molky"`,
         type: EVENT_TYPE.DIALOGO,
-        // starring: [findStar('Atomico')],
+        starring: [findStar('Atomico')],
       },
-      {
-        time: '19:00 - 20:30',
-        title: 'Conferenza sul bosco',
-        type: EVENT_TYPE.DIALOGO,
-        // starring: [findStar('Green e speculazioni')],
-      },
-      {
-        time: '20:30 - 21:00',
-        title: `Introduzione all'astro fotografia`,
-        type: EVENT_TYPE.CONFERENZA,
-        // starring: [findStar('Giandomenico Mercadante')];
-      },
+      // {
+      //   time: '19:00 - 20:30',
+      //   title: 'Conferenza sul bosco',
+      //   type: EVENT_TYPE.DIALOGO,
+      //   // starring: [findStar('Green e speculazioni')],
+      // },
+      // {
+      //   time: '20:30 - 21:00',
+      //   title: `Introduzione all'astro fotografia`,
+      //   type: EVENT_TYPE.CONFERENZA,
+      //   // starring: [findStar('Giandomenico Mercadante')];
+      // },
       {
         time: '21:00 - 22:00',
         title: 'Chill & networking',
@@ -193,11 +193,6 @@ const program = [
         title: 'Osservazione delle stelle',
         type: EVENT_TYPE.CONCERTO,
         // starring: [findStar('SLEEPING CONCERT')],
-      },
-      {
-        time: '02:30 - 03:30',
-        type: EVENT_TYPE.CONCERTO,
-        // starring: [findStar('Giandomenico Mercadante')],
       },
       // {
       //   time: '03:30 - 04:00',
@@ -244,9 +239,9 @@ const program = [
       },
       {
         time: '18:30 - 19:30',
-        title: `Aperi mas`,
+        title: `Aperi Mas`,
         type: EVENT_TYPE.CONFERENZA,
-        // starring: [findStar('Eliana Luceri')],
+        starring: [findStar('MAS')],
       },
       {
         time: '21:00 - 22:30',

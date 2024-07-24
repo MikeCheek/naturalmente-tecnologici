@@ -4,6 +4,7 @@ export enum GUEST_TYPE {
   TALK,
   MUSIC,
   ACTIVITY,
+  COMMUNITY,
 }
 
 interface Guest {
@@ -568,6 +569,46 @@ Nel 2023 la mappa di Avemarianne segna almeno due tappe da menzionare mentre col
 Da poco ha rilasciato il suo EP HyperVrnzl, un tentativo di narrazione fedele della Napoli contemporanea in unione al gusto per la musica elettronica, in collaborazione con Angelo Ferlaino (Bologna).
 
 `,
+  },
+  {
+    name: 'Dj Bomberone',
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Giandomenico Mercadante',
+    type: GUEST_TYPE.ACTIVITY,
+  },
+  {
+    name: 'MAS',
+    type: GUEST_TYPE.COMMUNITY,
+    imagePosition: 'center center',
+    description: `Il Movimento per l'Autocoscienza del Sud nasce nel 2023. Vogliamo creare un Movimento per il Sud che possa strutturare, organizzare e dare voce alle diverse soggettività meridionali, con una progettualità che vada oltre la singola riforma o il singolo momento storico.
+
+
+Siamo un collettivo meridionalista, non neoborbonico, ecologista, antirazzista,  transfemminista, anticapitalista, antiabilista. Utilizziamo un approccio intersezionale perché siamo consapevoli della complessità della realtà e delle nostre identità. 
+
+Alle discriminazioni per ciò che siamo e che rappresentiamo, si aggiunge il peso di problemi e carenze legate al divario tra Nord e Sud del Paese sul piano economico, di accesso ai servizi di base e alle risorse. 
+
+
+Rifiutiamo, però, il pensiero del Sud come “non ancora Nord” e vogliamo costruire un futuro diverso.
+
+Pensiamo al Sud come concetto rivoluzionario, tenendo l'autocoscienza come centro e motore della nostra metodologia.
+
+
+Vogliamo intraprendere un percorso condiviso di scoperta e rivendicazione della lotta meridionalista all'interno di uno spazio più ampio, affinché possa accendere una luce sulla questione, intrecciarsi e rafforzare le altre lotte che sentiamo vicine, collaborando con le realtà che le portano avanti.`,
+  },
+  {
+    name: 'Pupa Antezz',
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Terra Terra Sound',
+    type: GUEST_TYPE.MUSIC,
+  },
+  {
+    name: 'Atomico',
+    imagePosition: 'center center',
+    type: GUEST_TYPE.COMMUNITY,
   },
 ] as const;
 
