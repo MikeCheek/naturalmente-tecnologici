@@ -10,6 +10,7 @@ const Index = () => {
   const talkGuests = guests.filter((e) => e.type === GUEST_TYPE.TALK);
   const musicGuests = guests.filter((e) => e.type === GUEST_TYPE.MUSIC);
   const activityGuests = guests.filter((e) => e.type === GUEST_TYPE.ACTIVITY);
+  const communityGuests = guests.filter((e) => e.type === GUEST_TYPE.COMMUNITY);
 
   const guestsPhotos = images();
 
@@ -40,14 +41,17 @@ const Index = () => {
 
   return (
     <div className={styles.wrap}>
-      <Heading text="Ospiti musicali" />
+      <Heading text="Performers" />
       <div className={styles.guests}>{musicGuests.map((guest, key) => Card(guest, key))}</div>
 
-      <Heading text="Ospiti conferenze" />
+      <Heading text="Ospiti talks" />
       <div className={styles.guests}>{talkGuests.map((guest, key) => Card(guest, key))}</div>
 
       <Heading text="Ospiti attività" />
       <div className={styles.guests}>{activityGuests.map((guest, key) => Card(guest, key))}</div>
+
+      <Heading text="Community" />
+      <div className={styles.guests}>{communityGuests.map((guest, key) => Card(guest, key))}</div>
     </div>
   );
 };

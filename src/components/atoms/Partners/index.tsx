@@ -79,6 +79,49 @@ const Index = () => {
           width={150}
         />
       </ShowOnView>
+      <Heading text="Activity Partner" />
+      <ShowOnView className={styles.wrap}>
+        <a href="" title="MAS" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/mas.png"
+            className={styles.logo}
+            style={{ borderRadius: '50%' }}
+            alt="MAS"
+            width={150}
+          />
+        </a>
+        <a href="" title="MAAP" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/maap.png"
+            className={styles.logo}
+            style={{ borderRadius: '50%' }}
+            alt="MAAP"
+            width={150}
+          />
+        </a>
+
+        <a href="" title="Atomico" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/atomico.jpg"
+            className={styles.logo}
+            style={{ borderRadius: '50%' }}
+            alt="Atomico"
+            width={150}
+          />
+        </a>
+        <a
+          href="https://skillsbuild.org/"
+          style={{ width: '100%', marginTop: '20px' }}
+          title="IBM"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <IBM className={styles.logoHorizontal} height={40} />
+        </a>
+      </ShowOnView>
       <Heading text="Mobility Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="https://marinobus.it/" title="Marino Bus" rel="noopener noreferrer" target="_blank">
@@ -160,22 +203,6 @@ const Index = () => {
           />
         </a>
       </ShowOnView>
-      <Heading text="Activity Partner" />
-      <ShowOnView className={styles.wrap}>
-        <a href="https://skillsbuild.org/" title="IBM" rel="noopener noreferrer" target="_blank">
-          <IBM className={styles.logoHorizontal} height={40} />
-        </a>
-        <a href="" title="Atomico" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/atomico.jpg"
-            className={styles.logo}
-            style={{ borderRadius: '50%' }}
-            alt="Atomico"
-            width={150}
-          />
-        </a>
-      </ShowOnView>
       <Heading text="Music Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="" title="Katzuma" rel="noopener noreferrer" target="_blank">
@@ -205,6 +232,19 @@ const Index = () => {
             alt="Millenium Van"
             width={200}
           />
+        </a>
+      </ShowOnView>
+      <Heading text="Si ringrazia" />
+      <ShowOnView>
+        <a href="" title="Comune di Grassano" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/comune-grassano.png"
+            className={styles.logoLong}
+            alt="Comune di Grassano"
+            width={200}
+          />
+          <p style={{ color: 'black', fontWeight: 'bold' }}>Comune di Grassano</p>
         </a>
       </ShowOnView>
     </div>
