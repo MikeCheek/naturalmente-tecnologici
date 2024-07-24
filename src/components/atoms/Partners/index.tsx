@@ -81,19 +81,27 @@ const Index = () => {
       </ShowOnView>
       <Heading text="Activity Partner" />
       <ShowOnView className={styles.wrap}>
+        <a href="" title="MAS" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/mas.png"
+            className={styles.logo}
+            style={{ borderRadius: '50%' }}
+            alt="MAS"
+            width={150}
+          />
+        </a>
         <a href="" title="MAAP" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
             src="../../../images/partners/maap.png"
             className={styles.logo}
             style={{ borderRadius: '50%' }}
-            alt="Atomico"
+            alt="MAAP"
             width={150}
           />
         </a>
-        <a href="https://skillsbuild.org/" title="IBM" rel="noopener noreferrer" target="_blank">
-          <IBM className={styles.logoHorizontal} height={40} />
-        </a>
+
         <a href="" title="Atomico" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
@@ -103,6 +111,15 @@ const Index = () => {
             alt="Atomico"
             width={150}
           />
+        </a>
+        <a
+          href="https://skillsbuild.org/"
+          style={{ width: '100%', marginTop: '20px' }}
+          title="IBM"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <IBM className={styles.logoHorizontal} height={40} />
         </a>
       </ShowOnView>
       <Heading text="Mobility Partner" />

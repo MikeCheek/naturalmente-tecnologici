@@ -54,13 +54,12 @@ const program = [
   {
     numberDay: 9,
     day: 'Venerdì 9 Agosto',
-    name: 'Welcome Day',
+    name: '',
     description: '',
     timeline: [
       {
         time: '10:30 - 13:00',
-        title:
-          'Esprimento in cui si cercherà di riprodurre il metodo di fabbricazione della ceramica utilizzando la materia prima e delle tecniche antiche',
+        title: '"Archeologia Sperimentale: Modellare l\'argilla con la tecnica del colombino"',
         type: EVENT_TYPE.LABORATORIO,
         starring: [findStar('Simone Ritunnano')],
       },
@@ -120,7 +119,7 @@ const program = [
         time: '23:30 - 01:00',
         title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
-        // starring: [findStar('Ave Marianne')],
+        starring: [findStar('Avemarianne')],
       },
       {
         time: '01:00 - 02:30',
@@ -187,7 +186,7 @@ const program = [
         time: '23:30 - 01:00',
         title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
-        // starring: [findStar('OBERDAN')],
+        starring: [findStar('OBERDAN')],
       },
       {
         time: '01:00 - 02:30',
@@ -256,7 +255,7 @@ const program = [
         starring: [findStar('LINBO')],
       },
       {
-        time: '22:30 - 00:00',
+        time: '22:30 - 04:00',
         title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
         starring: [findStar('SFINGE SOUND')],
@@ -265,24 +264,14 @@ const program = [
         time: '00:00 - 01:00',
         title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
-        // starring: [findStar('Terra Terra Sound')],
+        // starring: [findStar('Pupa Antezz')],
       },
       {
         time: '01:00 - 02:00',
         title: 'Performance',
         type: EVENT_TYPE.CONCERTO,
-        // starring: [findStar('Pupa Antezz')],
+        // starring: [findStar('Terra Terra Sound')],
       },
-      {
-        time: '02:00 - 04:00',
-        title: 'Performance',
-        type: EVENT_TYPE.CONCERTO,
-        starring: [findStar('SFINGE SOUND')],
-      },
-      // {
-      //   time: '05:00 - 06:00',
-      //   title: 'Saluto al sole',
-      // },
     ],
   },
 ];

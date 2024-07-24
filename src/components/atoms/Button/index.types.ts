@@ -7,4 +7,5 @@ export interface ButtonProps {
   internal?: boolean;
   bigger?: boolean;
   children?: React.ReactNode;
+  simple?: boolean;
 }

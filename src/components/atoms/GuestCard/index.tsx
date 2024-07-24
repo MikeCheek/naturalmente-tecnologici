@@ -62,6 +62,7 @@ const GuestCard = ({ children, name, description, field, id, mentor }: GuestCard
                 text={`Leggi di${more ? ' meno' : ' più'}`}
                 title={`Leggi di${more ? ' meno' : ' più'}`}
                 onClick={() => setMore((state) => !state)}
+                simple
               />
               <div className={styles.fade}></div>
             </div>

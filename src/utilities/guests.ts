@@ -452,7 +452,7 @@ istinto ritmico.`,
   {
     name: 'Kalura - Meridionalismo',
     type: GUEST_TYPE.MUSIC,
-    imagePosition: 'center bottom',
+    imagePosition: 'center 80%',
     description: `Si parte con il laboratorio di canto: Viva cu canta! E cu canta vive cent'anni!
 Il canto ha da sempre accompagnato le nostre comunitá, i momenti di gioia, i momenti di dolore, la fatica e la celebrazione.
 Riprendiamo a cantare insieme e a riunirci in cerchio!
@@ -504,6 +504,70 @@ autunno: JUMP MUSIC.`,
 Ha partecipato ad alcuni scavi: al castello di Rontana nella zona ravennate e al sito della città romana di Suasa.
 Sta cercando si specializzarsi nello studio della landscape achaeology o archeologia del paesaggio, una disciplina delle scienze storiche e archeologiche che documenta e analizza la complessa fenomenologia del rapporto tra ambiente, territorio e mobilità umana. 
 Scopo della sua ricerca è quello di comprendere chi abitava la Lucania antica, nello specifico la regione tra Basento e Bradano, e come queste popolazioni hanno abitato il territorio nel corso dei secoli: come si spostavano, come costruivano, che materiali utilizzavano, che tipo di alimentazione avevano, come commerciavano ecc.  ma anche come passavano il tempo libero, come comunicavano, in cosa credevano.`,
+  },
+  {
+    name: 'OBERDAN',
+    type: GUEST_TYPE.MUSIC,
+    imagePosition: 'center center',
+    description: `Leonardo Antinori, in arte “Oberdan”, è un artista polistrumentista classe '95 nato e
+cresciuto a Pesaro.
+Con una formazione prevalentemente rock (Pixies, Bloc Party, Arctic Monkeys,
+Babyshambles, Queens Of The Stone Age, Nine Inch Nails, Klaxons, Nick Cave &
+The Bad Seeds) all'età di circa 13 anni comincia a scrivere le prime canzoni per poi
+esordire ufficialmente nel 2013 come batterista e cantante nel duo stoner rock
+"Jumping The Shark” con cui comincerà a suonare nei primi locali e festival
+sull'intero territorio italiano.
+Nel 2017 comincia un nuovo capitolo con il progetto musicale “Gastone”. Questa
+nuova formazione, composta da Leonardo Antinori (batteria, chitarra, tastiere e voce
+in studio, chitarra e voce nei live) e Marco Bertuccioli (chitarra) esordisce con il loro
+disco omonimo, pubblicato per Mattonella Records e co-edito da Bomba Dischi.
+Il magazine Ondarock lo definisce “baroque pop, con ritmi matematici che
+scandiscono un universo sonoro fatto di arpeggi eterei e psichedelici, sfuggendo ai
+canoni del nuovo cantautorato pop.”
+Il primo album porta la band a esibirsi su palchi importanti come quello del MI AMI
+Festival, e cattura l'attenzione di artisti come Giorgio Poi o i Phoenix, che li
+inseriscono nella playlist Ti Amo Paris, in rotazione per tutta la durata del loro festival
+parigino.
+Col secondo disco, dal titolo “(II)”, la band entra nel roster di Panico Concerti che
+permetterà di sostenere un tour nei più grandi locali italiani, interrotto solo dall'arrivo
+della pandemia.
+Nel 2018 (contemporaneamente all'attività musicale coi Gastone) la passione per la
+cassa dritta e la voglia di far muovere il corpo, unite a un sequencer, una 808 e un
+registratore a 8 piste dimenticate in camera, lo inducono alla nascita del progetto
+musicale elettronico solista “Oberdan”.
+Il 29 marzo 2019 vede la luce il primo singolo “Scorpione”, brano techno dal sapore
+volutamente retrò, pubblicato dall'etichetta romana Mattonella Records. Il videoclip,
+arrivato in finale al Cortinametraggio 2020, diretto da Cristiano Pedrocco, spinge
+deciso l'acceleratore sul citazionismo in uno scenario onirico, dipingendo una storia
+di fuga e amore a colpi di zoomate anni Settanta.
+Il secondo singolo, dal titolo “Espandersi”, assume invece sonorità più orecchiabili,
+accompagnandosi a un video western-pop.
+
+Il nuovo album, “Forever Noi”, scritto, suonato e registrato tra la fine del 2020 e
+l'inizio del 2021 in pieno periodo di coprifuoco, si immerge in territori più tenebrosi e
+legati a una forte spiritualità. Influenzato particolarmente da “What's your pleasure”
+di Jessie Ware, “Róisín Machine” di Róisín Murphy e “Outrun” di Kavisnky, l'album
+vede la luce a ottobre 2022 per FLUIDOSTUDIO.`,
+  },
+  {
+    name: 'Avemarianne',
+    type: GUEST_TYPE.MUSIC,
+    imagePosition: 'center center',
+    description: `Marianna Amendola, in arte Avemarianne è una selecter e cantante calabro-napoletana con attuale sede a Napoli.
+
+Già singer/mc, selecter e promoter per Pull Up Sound, (Calabria, since 2014). Il suo aka in questi anni è Lady Mi-Fi
+
+Ciò le fornisce una formazione su base street, in particolare su base dancehall, hip hop, reggae, soul. In questi anni sta a contatto con vari artisti della scena urban nazionale e internazionale e si appassiona al mondo dei dubplate realizzandone lei stessa alcuni con l'aka Lady Mi-Fire. Million Stylez, Mama Marjas, Dj Shocca, Dj Delta sono solo alcuni nomi che segnano il suo percorso in questi anni grazie al lavoro di promotion e grazie alle apparizioni in warm up dei suddetti artisti.
+
+Con Pull Up, affiancata da Dj Rice e Mistaga, si spinge fino al centro/nord Italia, esibendosi in luoghi storici come il Leoncavallo o il Sottotetto.
+
+Gli anni bolognesi ampliano la sua visione, dapprima nel canto in collaborazione con varie realtà, in particolar modo col chitarrista Andrea Manni, insieme a cui rilascia l'inedito "These Days", e poi mettendola a stretto contatto con generi puramente elettronici come techno, d&b, breakbeat, glitch, anche grazie a BUM, una realtà bolognese che spinge drum & bass e affini sotto la guida di Lizard aka Enrico Sandron.
+
+Nel 2023 la mappa di Avemarianne segna almeno due tappe da menzionare mentre collabora con Vesuvi-ha come dj della Ballroom scene di Napoli e mentre affianca la cantante e performer Miriam Ayaba come cantante e dj: realizza un dj set per Radio Raheem e si esibisce in apertura a Meg in occasione del compleanno dello Scugnizzo Liberato, Napoli.
+
+Da poco ha rilasciato il suo EP HyperVrnzl, un tentativo di narrazione fedele della Napoli contemporanea in unione al gusto per la musica elettronica, in collaborazione con Angelo Ferlaino (Bologna).
+
+`,
   },
 ] as const;
 
