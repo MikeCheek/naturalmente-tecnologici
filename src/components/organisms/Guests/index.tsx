@@ -5,6 +5,7 @@ import Heading from '../../atoms/Heading';
 import GuestCard from '../../atoms/GuestCard';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ImageTemp from '../../atoms/ImageTemp';
+import Banner from '../../atoms/Banner';
 
 const Index = () => {
   const talkGuests = guests.filter((e) => e.type === GUEST_TYPE.TALK);
@@ -41,6 +42,8 @@ const Index = () => {
 
   return (
     <div className={styles.wrap}>
+      <Banner text="IL PROGRAMMA È ANCORA IN AGGIORNAMENTO" />
+
       <Heading text="Performers" />
       <div className={styles.guests}>{musicGuests.map((guest, key) => Card(guest, key))}</div>
 

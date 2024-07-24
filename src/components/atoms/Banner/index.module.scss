@@ -26,16 +26,17 @@
     }
   }
 
-  :nth-child(1) {
-    font-size: 60px;
-    margin: 10px 0;
-    @media screen and (min-width: '768px') {
-      font-size: 96px;
-      margin: initial;
-    }
-  }
+  // :nth-child(1) {
+  //   font-size: 60px;
+  //   margin: 10px 0;
+  //   @media screen and (min-width: '768px') {
+  //     font-size: 96px;
+  //     margin: initial;
+  //   }
+  // }
 
-  :nth-child(2) {
+  // :nth-child(2) {
+  :nth-child(1) {
     font-size: 40px;
     margin: 10px 0;
     @media screen and (min-width: '768px') {
