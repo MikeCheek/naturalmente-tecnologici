@@ -13,9 +13,9 @@
 
   > * {
     max-width: 90vw;
-    @media screen and (min-width: '768px') {
-      max-width: 40vw;
-    }
+    // @media screen and (min-width: '768px') {
+    //   max-width: 40vw;
+    // }
   }
 
   svg {
@@ -37,10 +37,10 @@
 
   // :nth-child(2) {
   :nth-child(1) {
-    font-size: 40px;
+    font-size: 20px;
     margin: 10px 0;
     @media screen and (min-width: '768px') {
-      font-size: 50px;
+      font-size: 30px;
       margin: initial;
     }
   }

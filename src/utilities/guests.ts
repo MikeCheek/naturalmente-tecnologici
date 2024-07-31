@@ -302,15 +302,19 @@ const guests = [
   // },
   {
     name: 'SFINGE SOUND',
-    description: `SFINGE è un progetto Tosco-Lucano nato a Pisa nel corso del 2022. Come prima parte di questo
-    progetto il gruppo si è focalizzato sulla costruzione di un Sound System e sulla strutturazione di
-    una collezione di vinili che ricopre un'ampia gamma di stili, dalla Roots alla Dub più
-    contemporanea, muovendo così i loro primi passi nel mondo della musica.
-    In occasione del festival Naturalmente Tecnologici il gruppo proporrà varie sessioni musicali
-    durante le quali intratterrà e farà ballare con dischi dello scenario nazionale e internazionale: dalla
-    Jamaica alla UK, dalla Francia alle produzioni più nostrane. Il tutto amplificato fedelmente dal loro
-    Sound System nel Botanical Stage del festival.`,
+    description: `SFINGE è un progetto tosco-lucano nato a Pisa nel corso del 2023 con l'obbiettivo di prendere parte e sostenere la scena ricreativa e culturale locale. In questo primo anno di attività il gruppo ha preso parte ad eventi di intrattenimento indipendenti e popolari iniziando a collaborare con locali, collettivi universitari e realtà di quartiere. 
+
+ 
+
+A livello musicale il progetto si è fino ad ora focalizzato su due aspetti principali. Il primo è stato la costruzione di un impianto hifi, realizzato integrando casse di risonanze provenienti da varie correnti, sia da quella più classica della musica giamaicana, sia dalle più recenti tendenze nella progettazione e sperimentazione audio. 
+
+Il secondo aspetto riguarda la strutturazione di una selezione musicale in vinile di vari stile della musica reggae, dalla roots alla dub più contemporanea da riprodurre sull'impianto nel classico stile “one by one” con la consueta presenza di delay, echi e sirene analogiche.
+
+ 
+
+ In occasione del festival Naturalmente Tecnologici il gruppo proporrà due sessioni principali, una pomeridiana ed una serale, durante le quali intratterrà e farà ballare con dischi dello scenario nazionale e internazionale: dalla Jamaica alla UK, dalla Francia alle produzioni più nostrane.`,
     type: GUEST_TYPE.MUSIC,
+    imagePosition: 'center center',
   },
   // {
   //   name: 'Shark Emcee',
@@ -608,6 +612,7 @@ Vogliamo intraprendere un percorso condiviso di scoperta e rivendicazione della 
   {
     name: 'Atomico',
     imagePosition: 'center center',
+    description: `Atomico è una rete aperta di persone che hanno deciso di immaginare e vivere il  margine come spazio di possibilità, creando sinergie, prendendosi cura dei territori attraverso pratiche artistiche, culturali e sociali.`,
     type: GUEST_TYPE.COMMUNITY,
   },
 ] as const;

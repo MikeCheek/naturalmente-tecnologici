@@ -36,6 +36,29 @@ const Index = () => {
           width={250}
         />
       </ShowOnView>
+      <Heading text="Main Sponsor" />
+      <ShowOnView className={styles.wrap}>
+        <a href="" title="EDEALAB" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/edealab.jpg"
+            className={styles.logo}
+            alt="EDEALAB"
+            width={150}
+          />
+        </a>
+      </ShowOnView>
+      <ShowOnView className={styles.wrap}>
+        <a href="" title="Tourismotion" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/tourismotion.png"
+            className={styles.logoLong}
+            alt="Tourismotion"
+            width={350}
+          />
+        </a>
+      </ShowOnView>
       <Heading text="Location Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="https://podus.it/" title="Podus" rel="noopener noreferrer" target="_blank">
@@ -122,6 +145,27 @@ const Index = () => {
           <IBM className={styles.logoHorizontal} height={40} />
         </a>
       </ShowOnView>
+      <Heading text="Sponsor" />
+      <ShowOnView className={styles.wrap}>
+        <a href="" title="Basilicata Creativa" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/basilicata_creativa.png"
+            className={styles.logoLongBig}
+            alt="Basilicata Creativa"
+            width={450}
+          />
+        </a>
+        <a href="" title="Verre Gioielli" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/verre.jpg"
+            className={styles.logo}
+            alt="Verre Gioielli"
+            width={150}
+          />
+        </a>
+      </ShowOnView>
       <Heading text="Mobility Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="https://marinobus.it/" title="Marino Bus" rel="noopener noreferrer" target="_blank">
@@ -133,27 +177,6 @@ const Index = () => {
             width={200}
             style={{ maxHeight: '100px' }}
             alt="MarinoBus"
-          />
-        </a>
-      </ShowOnView>
-      <Heading text="Sponsor" />
-      <ShowOnView className={styles.wrap}>
-        <a href="" title="EDEALAB" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/edealab.jpg"
-            className={styles.logo}
-            alt="EDEALAB"
-            width={150}
-          />
-        </a>
-        <a href="" title="Verre Gioielli" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/verre.jpg"
-            className={styles.logo}
-            alt="Verre Gioielli"
-            width={150}
           />
         </a>
       </ShowOnView>
