@@ -25,7 +25,9 @@ const IndexPage = () => {
 };
 
 export const Head = ({ data, pageContext }: HeadProps) => {
-  const t = (key: string) => JSON.parse((data as any).locales.edges[1].node.data)[key] ?? key;
+  const edges: Array<{ node: { data: string } }> = (data as any).locales.edges;
+  const json = edges.map((e) => JSON.parse(e.node.data)).reduce((acc, curr) => ({ ...acc, ...curr }));
+  const t = (key: string) => json[key] ?? key;
 
   return (
     <Seo
