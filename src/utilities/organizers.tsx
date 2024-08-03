@@ -23,7 +23,7 @@ export const info = [
   },
   {
     name: 'Giuseppe Liuzzi',
-    role: 'Community Manager<br/>CTO',
+    // role: 'Community Manager<br/>CTO',
     linkedin: 'https://www.linkedin.com/in/giuseppe-liuzzi-pirat3/',
     website: 'https://giuseppeliuzzi.com',
     image: 2,
