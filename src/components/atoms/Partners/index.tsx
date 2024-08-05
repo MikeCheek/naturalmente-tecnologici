@@ -183,39 +183,6 @@ const Index = () => {
         </a>
       </ShowOnView>
       {/* <Heading text="Hospitality Partner" /> */}
-      <Heading text="Community Partner" />
-      <ShowOnView className={styles.wrap}>
-        {/*<a href="http://www.hackability.it/" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/hackability.jpg"
-            className={styles.logo}
-            alt="Hackability"
-            width={150}
-          />
-        </a>*/}
-        {/* <a href="" rel="noopener noreferrer" title="Potenza Urban Art" target="_blank"> */}
-        <LaPotenzaDellArte className={styles.logoHorizontal} height={200} />
-        <StaticImage
-          layout="constrained"
-          src="../../../images/partners/potenza_urban_art.jpg"
-          className={styles.logo}
-          style={{ borderRadius: '50%' }}
-          alt="Potenza Urban Art"
-          width={150}
-        />
-        {/* </a> */}
-        <a href="https://www.ashoka.org" title="Ashoka" rel="noopener noreferrer" target="_blank">
-          <StaticImage
-            layout="constrained"
-            src="../../../images/partners/ashoka.jpg"
-            className={styles.logo}
-            alt="Potenza Urban Art"
-            width={150}
-          />
-        </a>
-        <Basilicata className={styles.logo} width={150} />
-      </ShowOnView>
       <Heading text="Technical Partner" />
       <ShowOnView className={styles.wrap}>
       <a href="" title="New Wave Service" rel="noopener noreferrer" target="_blank">
@@ -267,6 +234,39 @@ const Index = () => {
             width={200}
           />
         </a>
+        </ShowOnView>
+      <Heading text="Community Partner" />
+      <ShowOnView className={styles.wrap}>
+        {/*<a href="http://www.hackability.it/" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/hackability.jpg"
+            className={styles.logo}
+            alt="Hackability"
+            width={150}
+          />
+        </a>*/}
+        {/* <a href="" rel="noopener noreferrer" title="Potenza Urban Art" target="_blank"> */}
+        <LaPotenzaDellArte className={styles.logoHorizontal} height={200} />
+        <StaticImage
+          layout="constrained"
+          src="../../../images/partners/potenza_urban_art.jpg"
+          className={styles.logo}
+          style={{ borderRadius: '50%' }}
+          alt="Potenza Urban Art"
+          width={150}
+        />
+        {/* </a> */}
+        <a href="https://www.ashoka.org" title="Ashoka" rel="noopener noreferrer" target="_blank">
+          <StaticImage
+            layout="constrained"
+            src="../../../images/partners/ashoka.jpg"
+            className={styles.logo}
+            alt="Potenza Urban Art"
+            width={150}
+          />
+        </a>
+        <Basilicata className={styles.logo} width={150} />
       </ShowOnView>
       <Heading text="Si ringrazia" />
       <ShowOnView>
