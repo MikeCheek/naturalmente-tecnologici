@@ -33,12 +33,12 @@ const Index = () => {
               glowing={ticket.bigger}
               primary={ticket.bigger}
               icon={<ticket.icon className={styles.icon} width={70} />}
-              special={[
-                ticket.price.toFixed(2) + DefaultTicketProps.priceSymbol,
-                timer && ticket.priceDiscount
-                  ? ticket.priceDiscount.toFixed(2) + DefaultTicketProps.priceSymbol
-                  : undefined,
-              ]}
+              // special={[
+              //   ticket.price.toFixed(2) + DefaultTicketProps.priceSymbol,
+              //   timer && ticket.priceDiscount
+              //     ? ticket.priceDiscount.toFixed(2) + DefaultTicketProps.priceSymbol
+              //     : undefined,
+              // ]}
               text={ticket.name[0]}
               description={ticket.name[1]}
               buttonText={t('NavCta')}
@@ -48,9 +48,10 @@ const Index = () => {
               infoClick={() =>
                 setText(
                   ticket.name.join('<br/>'),
-                  Array.isArray(currentPrice)
-                    ? currentPrice.map((t) => t.toFixed(2) + DefaultTicketProps.priceSymbol).join(' / ')
-                    : currentPrice.toFixed(2) + DefaultTicketProps.priceSymbol,
+                  // Array.isArray(currentPrice)
+                  //   ? currentPrice.map((t) => t.toFixed(2) + DefaultTicketProps.priceSymbol).join(' / ')
+                  //   : currentPrice.toFixed(2) + DefaultTicketProps.priceSymbol
+                  '',
                   ticket.description,
                   ticket.date ? [ticket.date, ...(ticket.badges ?? [])] : ticket.badges
                 )
