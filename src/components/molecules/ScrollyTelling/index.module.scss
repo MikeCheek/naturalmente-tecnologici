@@ -5,6 +5,9 @@
 .section {
   min-height: 100vh;
   padding: 30px 0;
+  p {
+    margin-bottom: 50px;
+  }
 }
 
 .slider {
@@ -16,6 +19,6 @@
   max-width: 500px;
   width: 80vw;
   @media screen and (min-width: '768px') {
-    width: 40vw;
+    width: 30vw;
   }
 }

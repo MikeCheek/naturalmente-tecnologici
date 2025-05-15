@@ -21,11 +21,13 @@ const Index = () => {
   return (
     <div className={styles.wrap}>
       <div className={styles.singleSectionsWrap}>
-        <Heading text={t('EventTitle')} smaller={false} simple showOnView={false} />
+        {/* <Heading text={t('EventTitle')} smaller={false} simple showOnView={false} />
         <div className={styles.singleSections}>
           <VideoMasked />
           <p dangerouslySetInnerHTML={{ __html: t('EventDescription') }}></p>
-        </div>
+        </div> */}
+        <FastActions />
+        <div style={{ width: '100%', height: '200px' }}> </div>
         <BigPictureSection
           images={music}
           videos={[Shorty, Moddilugitrix, Baldini, Millenium]}
@@ -35,7 +37,6 @@ const Index = () => {
         <BigPictureSection images={activities} title={t('Value2')} text={t('ValueText2')} reverse />
         <BigPictureSection images={nature} title={t('Value3')} text={t('ValueText3')} />
       </div>
-      <FastActions />
       <HeardOn />
 
       <WhenAndWhere />

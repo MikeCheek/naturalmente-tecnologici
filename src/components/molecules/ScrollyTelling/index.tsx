@@ -22,7 +22,7 @@ const Index = ({ theme, title, year, youtubePlaylist, story, data }: ScrollyTell
         <Scrollytelling.Root scrub={false} key={key}>
           <div className={styles.section}>
             <ScrollySection reverse={key % 2 == 1}>
-              <h2>{s.title}</h2>
+              <Heading text={s.title} smaller />
               {s.description ? <p dangerouslySetInnerHTML={{ __html: s.description }}></p> : <></>}
               {s.youtubeSrc ? <YoutubeEmbed src={s.youtubeSrc} /> : <></>}
               {s.imageName ? (
@@ -33,7 +33,7 @@ const Index = ({ theme, title, year, youtubePlaylist, story, data }: ScrollyTell
                     ))}
                   </Carousel>
                 ) : (
-                  <CardImage bigger>
+                  <CardImage>
                     <GatsbyImage alt={s.imageName} image={findImage(s.imageName)} />
                   </CardImage>
                 )

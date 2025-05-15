@@ -6,8 +6,9 @@ import { isBrowser } from '../../../utilities/browser';
 import { NavigationProps } from './index.types';
 import { ReactComponent as Play } from '../../../assets/play.svg';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
-import { DefaultTicketProps } from '../../../utilities/tickets';
 import LanguagePicker from '../../atoms/LanguagePicker';
+import MultipleLinks from '../../atoms/MultipleLinks';
+import { DefaultTicketProps } from '../../../utilities/tickets';
 
 const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
@@ -55,13 +56,13 @@ const Index = ({ opened, onClick }: NavigationProps) => {
     );
   });
 
-  const button = () => (
+  const button = (mobile?: boolean) => (
     <a
       title={t('NavCta') + ' PASS'}
       target="_blank"
       rel="noopener noreferrer"
       href={DefaultTicketProps.url}
-      className={styles.button}
+      className={mobile ? styles.buttonMobile : styles.button}
       onClick={onClick}
     >
       <Play width={20} height={20} fill="var(--nt-green)" /> {t('NavCta') + ' PASS'}
@@ -71,14 +72,19 @@ const Index = ({ opened, onClick }: NavigationProps) => {
   return (
     <>
       <div
-        className={styles.wrap}
-        style={opened ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(-100%, 0)', opacity: 0 }}
+        className={styles.wrapMobile}
+        style={opened ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(0, -100%)', opacity: 0 }}
       >
-        <nav className={styles.links}>
+        <nav className={styles.linksMobile}>
           {linkElements}
-          {button()}
+          {button(true)}
           <LanguagePicker />
         </nav>
+      </div>
+      <div className={styles.wrapDesktop}>
+        <nav className={styles.links}>{linkElements}</nav>
+        {button()}
+        <LanguagePicker />
       </div>
     </>
   );

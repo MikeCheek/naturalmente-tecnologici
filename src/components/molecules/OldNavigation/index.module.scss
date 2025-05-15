@@ -1,17 +1,46 @@
 @use 'src/styles/styled';
 
-.wrap {
+.wrapMobile {
   position: absolute;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  min-height: 520px;
   top: 0;
   z-index: -1;
-  background-color: var(--nt-green);
+  background-color: var(--nt-white);
   will-change: transform;
   transition: transform 200ms ease-in-out;
-  transform: translate(-100%, 0);
+  transform: translate(0, -100%);
   opacity: 0;
   box-shadow: 0 0 20px 0 rgb(0, 0, 0, 0.25);
+
+  @media screen and (min-width: '992px') {
+    display: none;
+  }
+
+  a,
+  p {
+    text-decoration: none;
+    color: var(--nt-green);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  svg {
+    fill: var(--nt-green);
+  }
+}
+
+.wrapDesktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 35px;
+
+  @media screen and (max-width: '991px') {
+    display: none;
+  }
 
   a,
   p {
@@ -22,12 +51,7 @@
   }
 
   svg {
-    fill: var(--nt-green);
-  }
-
-  @media screen and (min-width: 768px) {
-    width: auto;
-    min-width: 450px;
+    fill: var(--nt-white);
   }
 }
 
@@ -55,26 +79,28 @@
   }
 }
 
-.links {
+.linksMobile {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 70px;
-  margin-left: 20px;
-    margin-right: 20px;
   > * {
-    margin: 20px 0;
-  }
-
-  @media screen and (min-width: 768px) {
-    align-items: flex-start;
-    margin-top: 100px;
+    margin: 20px 10px;
   }
 }
 
-.button {
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: -10px;
+}
+
+.buttonMobile {
   @include styled.buttonFull;
   color: var(--nt-green) !important;
   display: flex;
@@ -82,4 +108,16 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
+}
+
+.button {
+  @include styled.buttonFull;
+  // margin-top: -10px;
+  color: var(--nt-green) !important;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
 }
