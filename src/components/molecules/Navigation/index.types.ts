@@ -1,4 +1,1 @@
-export interface NavigationProps {
-  opened: boolean;
-  onClick: () => void;
-}
+export interface NavigationProps {}

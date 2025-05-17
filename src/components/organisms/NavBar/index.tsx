@@ -8,11 +8,12 @@ import { Link } from 'gatsby';
 import { isBrowser } from '../../../utilities/browser';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 import SocialLinks from '../../molecules/SocialLinks';
+import { useNavigationContext } from '../../../utilities/navigation';
 
 const Index = () => {
-  const [opened, setOpened] = useState<boolean>(false);
-  const [show, setShow] = useState<boolean>(true);
   const [on, setOn] = useState<boolean>(false);
+  const { isOpen, open, close, toggle } = useNavigationContext();
+  const [show, setShow] = useState<boolean>(true);
   const { language } = useI18next();
   const removeLang = (text: string) => (language != 'it' ? text.substring(3) : text);
 
@@ -21,11 +22,11 @@ const Index = () => {
   const handleScroll = () => {
     const current = window.scrollY;
 
-    if (opened) {
+    if (isOpen) {
       setShow(true);
     }
 
-    if (!opened) {
+    if (!isOpen) {
       if (current < 50) {
         setShow(true);
       } else if (current < prev) {
@@ -49,21 +50,21 @@ const Index = () => {
 
   return (
     <header
-      className={`${styles.wrap} ${show || opened ? styles.show : styles.hide}`}
+      className={`${styles.wrap} ${show || isOpen ? styles.show : styles.hide}`}
       style={{ boxShadow: '0 0 20px 0 rgb(0, 0, 0, 0.25)' }
       }
     >
-      <Navigation opened={opened} onClick={() => setOpened(false)} />
+      <Navigation />
       <div className={styles.menuLang}>
-        <span onClick={() => setOpened(curr => !curr)} className={styles.menuIcon}>
-          {opened ? (
+        <span onClick={() => toggle()} className={styles.menuIcon}>
+          {isOpen ? (
             <X width="25" height="25" fill='var(--nt-white)' />
           ) : (
             <Hamburger width="28" height="20" />
           )}
         </span>
       </div>
-      <Link to="/" className={styles.logoNT} title="Vai alla home" onClick={() => setOpened(false)}>
+      <Link to="/" className={styles.logoNT} title="Vai alla home" onClick={close}>
         <LogoNT
           width="195"
           height="64.45"

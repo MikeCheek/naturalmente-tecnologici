@@ -12,6 +12,7 @@ import NavBar from '../NavBar';
 import { ModalContext } from '../../../utilities/useModalContext';
 import Modal from '../../atoms/Modal';
 import MakeEditable from '../../atoms/MakeEditable';
+import { NavigationProvider } from '../../../utilities/navigation';
 
 const Index = ({ children, insects = true }: LayoutProps) => {
   const [banner, setBanner] = useState<boolean>(false);
@@ -40,33 +41,35 @@ const Index = ({ children, insects = true }: LayoutProps) => {
   }, []);
 
   return (
-    <ModalContext.Provider
-      value={{
-        setText: (title, price, description, badges) => {
-          setText({ name: title, description: description });
-          setBadges(badges);
-          setPrice(price);
-          setOpened(true);
-        },
-      }}
-    >
-      <MakeEditable />
-      <div id="top">
-        <NavBar />
-        {banner ? <CookieBanner close={() => setBanner(false)} /> : <></>}
-        {insects ? <FlyingInsects /> : <></>}
-        <Modal
-          opened={opened}
-          close={() => setOpened(false)}
-          title={text.name}
-          price={price}
-          description={text.description}
-          badges={badges}
-        />
-        <main className={styles.wrap}>{children}</main>
-        <Footer />
-      </div>
-    </ModalContext.Provider>
+    <NavigationProvider>
+      <ModalContext.Provider
+        value={{
+          setText: (title, price, description, badges) => {
+            setText({ name: title, description: description });
+            setBadges(badges);
+            setPrice(price);
+            setOpened(true);
+          },
+        }}
+      >
+        <MakeEditable />
+        <div id="top">
+          <NavBar />
+          {banner ? <CookieBanner close={() => setBanner(false)} /> : <></>}
+          {insects ? <FlyingInsects /> : <></>}
+          <Modal
+            opened={opened}
+            close={() => setOpened(false)}
+            title={text.name}
+            price={price}
+            description={text.description}
+            badges={badges}
+          />
+          <main className={styles.wrap}>{children}</main>
+          <Footer />
+        </div>
+      </ModalContext.Provider>
+    </NavigationProvider>
   );
 };
 

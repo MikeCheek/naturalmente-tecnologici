@@ -18,13 +18,14 @@
   padding: 30px 10px;
   align-items: center;
   justify-content: space-between;
-  width: 30vw;
-  max-width: 160px;
+  width: 80vw;
+  max-width: 200px;
   min-width: 150px;
   height: 100%;
+  min-height: 200px;
   text-align: center;
   margin: 10px;
-  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  transition: transform 0.2s ease-in, opacity 0.2s ease-in;
   will-change: transform, opacity;
   opacity: 1;
   transform: scale(1);
@@ -37,10 +38,10 @@
     border-width: 3px;
     padding: 30px 15px;
     margin: 25px;
-    width: 250px;
-    max-width: 250px;
-    min-width: 140px;
-    min-height: 200px;
+  width: 25vw;
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 400px;
   }
 
   p {
@@ -63,6 +64,25 @@
     min-height: 360px;
     max-width: 330px;
     min-width: 190px;
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: brightness(0.4);
+  border-radius: inherit;
+  overflow: hidden;
+
+  img,
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
   }
 }
 
