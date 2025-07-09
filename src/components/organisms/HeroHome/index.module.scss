@@ -9,7 +9,7 @@
 }
 
 .backgroundVideo {
-  height: 0;
+  height: 0 !important;
   video{
     position: absolute;
     top: 0;
