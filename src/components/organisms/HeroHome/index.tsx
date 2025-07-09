@@ -7,7 +7,8 @@ import WindShovel from '../../atoms/WindShovel';
 import { useTranslation } from 'react-i18next';
 import Flower from '../../atoms/Flower';
 import { useI18next } from 'gatsby-plugin-react-i18next';
-import BoscoCoste from '../../../assets/video/webm/bosco_coste_forward.webm';
+// import BoscoCoste from '../../../assets/video/webm/bosco_coste_forward.webm';
+import Aftermovie from '../../../assets/video/webm/aftermovie.webm';
 
 
 const Index = () => {
@@ -18,7 +19,7 @@ const Index = () => {
     <div className={styles.wrap}>
       <video
         className={styles.backgroundVideo}
-        src={BoscoCoste}
+        src={Aftermovie}
         autoPlay
         loop
         muted
