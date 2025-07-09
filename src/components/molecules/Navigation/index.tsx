@@ -71,13 +71,10 @@ const Index = ({ }: NavigationProps) => {
 
   return (
     <>
-      <div
-        className={styles.wrap}
-        style={isOpen ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(-100%, 0)', opacity: 0 }}
-      >
+      <div className={isOpen ? styles.wrapOpen : styles.wrapClosed}>
         <nav className={styles.links}>
           {linkElements}
-          {button()}
+          {/* {button()} */}
           <LanguagePicker />
         </nav>
       </div>

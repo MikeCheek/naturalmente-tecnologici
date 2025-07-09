@@ -26,7 +26,7 @@ const Index = () => {
           <VideoMasked />
           <p dangerouslySetInnerHTML={{ __html: t('EventDescription') }}></p>
         </div> */}
-        <FastActions />
+        {/* <FastActions /> */}
         <div style={{ width: '100%', height: '200px' }}> </div>
         <BigPictureSection
           images={music}

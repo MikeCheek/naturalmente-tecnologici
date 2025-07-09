@@ -41,9 +41,7 @@ const Index = () => {
 
   const draw = (p5: p5Types) => {
     p5.background(
-      2,
-      83,
-      0 //, 110
+      33, 73, 33
     );
 
     for (let boid of flock) {

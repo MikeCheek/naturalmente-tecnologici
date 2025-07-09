@@ -42,9 +42,31 @@
         transparent
       );
       opacity: 0.7;
+      transform-origin: left;
     }
   }
 }
+
+.wrapOpen {
+  @extend .wrap;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.wrapClosed {
+  @extend .wrap;
+  transform: translate(-100%, 0);
+  opacity: 0;
+
+  @media screen and (min-width: 768px) {
+
+    &::after{
+      transform: scaleX(0);
+    }
+  }
+}
+
+
 
 .link {
   position: relative;

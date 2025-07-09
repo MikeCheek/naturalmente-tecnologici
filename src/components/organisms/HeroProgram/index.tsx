@@ -16,7 +16,7 @@ const Index = () => {
         <span>
           <Link className={styles.date} to="/#quando-e-dove" title="Quando e dove">
             Bosco Coste, Grottole(MT)
-            <br /> 09 &gt; 11 Agosto 2024
+            <br /> 07 &gt; 10 Agosto 2025
           </Link>
           <h1 className={language === 'en' ? styles.headingEn : styles.heading}>
             {t('Title')} <br />
