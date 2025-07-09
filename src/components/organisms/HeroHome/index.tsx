@@ -9,15 +9,28 @@ import Flower from '../../atoms/Flower';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 // import BoscoCoste from '../../../assets/video/webm/bosco_coste_forward.webm';
 import Aftermovie from '../../../assets/video/webm/aftermovie.webm';
-
+import Player from 'react-player/lazy';
+import { ReactComponent as NT24 } from '../../../assets/nt24.svg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Index = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
+  const PlaceHolder = (
+    <StaticImage
+      layout="constrained"
+      src="../../../images/aftermovie_placeholder.png"
+      className={styles.backgroundVideo}
+      alt="Aftermovie"
+      placeholder='blurred'
+    // width={150}
+    />
+  )
+
   return (
     <div className={styles.wrap}>
-      <video
+      {/* <video
         className={styles.backgroundVideo}
         src={Aftermovie}
         autoPlay
@@ -25,6 +38,18 @@ const Index = () => {
         muted
         playsInline
         preload="auto"
+      /> */}
+
+      <Player
+        fallback={PlaceHolder}
+        url={Aftermovie}
+        muted
+        autoPlay
+        playing
+        controls={false}
+        loop
+        playsInline
+        className={styles.backgroundVideo}
       />
       {/* <BigBranch width="555" height="282" className={styles.bigBranch} /> */}
       <div className={styles.headWrap}>
