@@ -7,12 +7,13 @@ import Navigation from '../../molecules/Navigation';
 import { Link } from 'gatsby';
 import { isBrowser } from '../../../utilities/browser';
 import { useI18next } from 'gatsby-plugin-react-i18next';
+import SocialLinks from '../../molecules/SocialLinks';
+import { useNavigationContext } from '../../../utilities/navigation';
 
 const Index = () => {
-  const [opened, setOpened] = useState<boolean>(false);
-  const [show, setShow] = useState<boolean>(true);
-  const [shadow, setShadow] = useState<boolean>(false);
   const [on, setOn] = useState<boolean>(false);
+  const { isOpen, open, close, toggle } = useNavigationContext();
+  const [show, setShow] = useState<boolean>(true);
   const { language } = useI18next();
   const removeLang = (text: string) => (language != 'it' ? text.substring(3) : text);
 
@@ -21,21 +22,17 @@ const Index = () => {
   const handleScroll = () => {
     const current = window.scrollY;
 
-    if (opened) {
+    if (isOpen) {
       setShow(true);
-      setShadow(true);
     }
 
-    if (!opened) {
+    if (!isOpen) {
       if (current < 50) {
         setShow(true);
-        setShadow(false);
       } else if (current < prev) {
         setShow(true);
-        setShadow(true);
       } else if (current >= prev) {
         setShow(false);
-        setShadow(true);
       }
     }
 
@@ -44,7 +41,7 @@ const Index = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return window.removeEventListener('scroll', () => {});
+    return window.removeEventListener('scroll', () => { });
   }, []);
 
   useEffect(() => {
@@ -53,29 +50,31 @@ const Index = () => {
 
   return (
     <header
-      className={`${styles.wrap} ${show || opened ? styles.show : styles.hide}`}
-      style={shadow ? { boxShadow: '0 0 20px 0 rgb(0, 0, 0, 0.25)' } : {}}
+      className={`${styles.wrap} ${show || isOpen ? styles.show : styles.hide}`}
+      style={{ boxShadow: '0 0 20px 0 rgb(0, 0, 0, 0.25)' }
+      }
     >
-      <Link to="/" className={styles.logoNT} title="Vai alla home" onClick={() => setOpened(false)}>
+      <Navigation />
+      <div className={styles.menuLang}>
+        <span onClick={() => toggle()} className={styles.menuIcon}>
+          {isOpen ? (
+            <X width="25" height="25" fill='var(--nt-white)' />
+          ) : (
+            <Hamburger width="28" height="20" />
+          )}
+        </span>
+      </div>
+      <Link to="/" className={styles.logoNT} title="Vai alla home" onClick={close}>
         <LogoNT
           width="195"
           height="64.45"
           style={{
-            fill: on ? 'var(--nt-orange)' : opened ? 'var(--nt-green)' : 'var(--nt-white)',
+            fill: on ? 'var(--nt-orange)' : 'var(--nt-white)',
           }}
         />
       </Link>
-      <Navigation opened={opened} onClick={() => setOpened(false)} />
-      {opened ? (
-        <span onClick={() => setOpened(false)} className={styles.menuIcon}>
-          <X width="25" height="25" fill="var(--nt-green)" />
-        </span>
-      ) : (
-        <span onClick={() => setOpened(true)} className={styles.menuIcon}>
-          <Hamburger width="28" height="20" />
-        </span>
-      )}
-    </header>
+      <SocialLinks menu />
+    </header >
   );
 };
 

@@ -53,7 +53,7 @@ const Index = () => {
         <p>
           Created with ❤ by{' '}
           <a
-            href="https://michelepulvirenti.vercel.app/?r=nt23"
+            href="https://michelepulvirenti.vercel.app/?r=nt"
             title="Michele Pulvirenti Website"
             rel="noopener noreferrer"
             className={styles.link}

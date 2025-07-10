@@ -1,18 +1,18 @@
 import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import * as styles from './index.module.scss';
-import { links, useNavigationContext } from '../../../utilities/navigation';
+import { links } from '../../../utilities/navigation';
 import { isBrowser } from '../../../utilities/browser';
 import { NavigationProps } from './index.types';
 import { ReactComponent as Play } from '../../../assets/play.svg';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
-import { DefaultTicketProps } from '../../../utilities/tickets';
 import LanguagePicker from '../../atoms/LanguagePicker';
+import MultipleLinks from '../../atoms/MultipleLinks';
+import { DefaultTicketProps } from '../../../utilities/tickets';
 
-const Index = ({ }: NavigationProps) => {
+const Index = ({ opened, onClick }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
   const { language, languages } = useI18next();
-  const { isOpen, close } = useNavigationContext();
   const removeSlashes = (text?: string) => (text ? text.replace(/\//g, '') : '');
   const removeLang = (text?: string) => (text ? (language != 'it' ? text.substring(2) : text) : '');
   const { t } = useTranslation();
@@ -48,7 +48,7 @@ const Index = ({ }: NavigationProps) => {
         className={styles.link}
         style={pathname === removeSlashes(link.to) ? { color: 'var(--nt-orange)' } : {}}
         to={link.to ?? ''}
-        onClick={close}
+        onClick={onClick}
         title={link.name}
       >
         {link.name}
@@ -56,14 +56,14 @@ const Index = ({ }: NavigationProps) => {
     );
   });
 
-  const button = () => (
+  const button = (mobile?: boolean) => (
     <a
       title={t('NavCta') + ' PASS'}
       target="_blank"
       rel="noopener noreferrer"
       href={DefaultTicketProps.url}
-      className={styles.button}
-      onClick={close}
+      className={mobile ? styles.buttonMobile : styles.button}
+      onClick={onClick}
     >
       <Play width={20} height={20} fill="var(--nt-green)" /> {t('NavCta') + ' PASS'}
     </a>
@@ -71,12 +71,20 @@ const Index = ({ }: NavigationProps) => {
 
   return (
     <>
-      <div className={isOpen ? styles.wrapOpen : styles.wrapClosed}>
-        <nav className={styles.links}>
+      <div
+        className={styles.wrapMobile}
+        style={opened ? { transform: 'translate(0, 0)', opacity: 1 } : { transform: 'translate(0, -100%)', opacity: 0 }}
+      >
+        <nav className={styles.linksMobile}>
           {linkElements}
-          {/* {button()} */}
+          {button(true)}
           <LanguagePicker />
         </nav>
+      </div>
+      <div className={styles.wrapDesktop}>
+        <nav className={styles.links}>{linkElements}</nav>
+        {button()}
+        <LanguagePicker />
       </div>
     </>
   );

@@ -1,16 +1,16 @@
-import type { GatsbyConfig } from 'gatsby';
+import type { GatsbyConfig } from 'gatsby'
 
-const siteUrl = `https://nt.syskrack.org`;
+const siteUrl = `https://nt.syskrack.org`
 
 const config: GatsbyConfig = {
   flags: {
-    DEV_SSR: true,
+    DEV_SSR: true
   },
   siteMetadata: {
     title: `Naturalmente Tecnologici - NT`,
     siteUrl: siteUrl,
     description: `L'evento si propone di essere occasione di ritrovo della community di Syskrack nonché strumento di disseminazione culturale sul territorio.`,
-    keywords: 'naturalmente, tecnologici, evento, futuro',
+    keywords: 'naturalmente, tecnologici, evento, futuro'
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -25,7 +25,7 @@ const config: GatsbyConfig = {
         name: 'Naturalmente Tecnologici',
         short_name: 'NT',
         lang: 'it',
-        background_color: '#025300',
+        background_color: '#214921',
         theme_color: '#e98a15',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
@@ -35,29 +35,29 @@ const config: GatsbyConfig = {
           {
             src: `src/images/favicon/android-chrome-192x192.png`,
             sizes: `192x192`,
-            type: `image/png`,
+            type: `image/png`
           },
           {
             src: `src/images/favicon/android-chrome-512x512.png`,
             sizes: `512x512`,
-            type: `image/png`,
+            type: `image/png`
           },
           {
             src: `src/images/favicon/favicon-32x32.png`,
             sizes: `32x32`,
-            type: `image/png`,
+            type: `image/png`
           },
           {
             src: `src/images/favicon/favicon-16x16.png`,
             sizes: `16x16`,
-            type: `image/png`,
-          },
+            type: `image/png`
+          }
         ],
         // An optional attribute which provides support for CORS check.
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
         // Any invalid keyword or empty string defaults to `anonymous`
-        crossOrigin: `use-credentials`,
-      },
+        crossOrigin: `use-credentials`
+      }
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -67,30 +67,30 @@ const config: GatsbyConfig = {
       options: {
         host: siteUrl,
         policy: [{ userAgent: '*', allow: '/' }],
-        sitemap: siteUrl + '/sitemap-index.xml',
-      },
+        sitemap: siteUrl + '/sitemap-index.xml'
+      }
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: siteUrl,
-      },
+        siteUrl: siteUrl
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: './src/images/'
       },
-      __key: 'images',
+      __key: 'images'
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'assets',
-        path: './src/assets/',
+        path: './src/assets/'
       },
-      __key: 'assets',
+      __key: 'assets'
     },
     {
       resolve: 'gatsby-plugin-svgr',
@@ -104,23 +104,23 @@ const config: GatsbyConfig = {
               name: 'preset-default',
               params: {
                 overrides: {
-                  removeViewBox: false,
-                },
-              },
+                  removeViewBox: false
+                }
+              }
             },
             'cleanupIds',
-            'removeXMLNS',
+            'removeXMLNS'
             // { name: 'removeAttrs', params: { attrs: 'xmlns*' } },
-          ],
-        },
-      },
+          ]
+        }
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/locales`,
-        name: `locale`,
-      },
+        name: `locale`
+      }
     },
     {
       resolve: `gatsby-plugin-react-i18next`,
@@ -134,10 +134,10 @@ const config: GatsbyConfig = {
         // you can pass any i18next options
         i18nextOptions: {
           interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
+            escapeValue: false // not needed for react as it escapes by default
           },
           keySeparator: false,
-          nsSeparator: false,
+          nsSeparator: false
         },
         pages: [
           // {
@@ -149,8 +149,8 @@ const config: GatsbyConfig = {
           //   matchPath: '/preview',
           //   languages: ['en'],
           // },
-        ],
-      },
+        ]
+      }
     },
     {
       resolve: 'gatsby-plugin-google-tagmanager',
@@ -158,8 +158,8 @@ const config: GatsbyConfig = {
         id: 'GTM-KLQBPFW',
         includeInDevelopment: false,
         routeChangeEventName: 'ROUTE_CHANGE_EVENT',
-        enableWebVitalsTracking: true,
-      },
+        enableWebVitalsTracking: true
+      }
     },
     {
       resolve: 'gatsby-plugin-sitemap',
@@ -189,32 +189,32 @@ const config: GatsbyConfig = {
         serialize: (node: {
           context: {
             i18n: {
-              defaultLanguage: string;
-              languages: string[];
-              originalPath: string;
-            };
-          };
+              defaultLanguage: string
+              languages: string[]
+              originalPath: string
+            }
+          }
         }) => {
-          const { languages, originalPath, defaultLanguage } = node.context.i18n;
-          const url = siteUrl + originalPath;
+          const { languages, originalPath, defaultLanguage } = node.context.i18n
+          const url = siteUrl + originalPath
           const links = [
             { lang: defaultLanguage, url },
-            { lang: 'x-default', url },
-          ];
+            { lang: 'x-default', url }
+          ]
           languages.forEach((lang: string) => {
-            if (lang === defaultLanguage) return;
-            links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
-          });
+            if (lang === defaultLanguage) return
+            links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` })
+          })
           return {
             url,
             changefreq: 'daily',
             priority: originalPath === '/' ? 1.0 : 0.7,
-            links,
-          };
-        },
-      },
-    },
-  ],
-};
+            links
+          }
+        }
+      }
+    }
+  ]
+}
 
-export default config;
+export default config

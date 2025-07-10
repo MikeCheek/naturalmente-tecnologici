@@ -8,9 +8,24 @@
   width: 100vw;
 }
 
+.backgroundVideo {
+  height: 0 !important;
+  video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
 .headWrap {
   margin-left: 8%;
   padding-top: 75px;
+  text-shadow: 0 0 20px black;
 
   height: calc(100vh - 75px - 60px);
   @media screen and (min-width: '768px') {
@@ -29,7 +44,7 @@
   height: auto;
   z-index: 1;
   filter: drop-shadow(-58px 5px 5px rgba(0, 0, 0, 0.25));
-  fill: var(--nt-soft-green);
+  fill: var(--nt-green);
 }
 
 .white {
@@ -40,6 +55,11 @@
   height: 100px;
   z-index: 1;
   background-color: var(--nt-soft-green);
+}
+
+.subGreen{
+  @extend .white;
+  background-color: var(--nt-green);
 }
 
 .windShovels {

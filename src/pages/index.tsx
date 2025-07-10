@@ -3,17 +3,12 @@ import Layout from '../components/organisms/Layout';
 import NaturalmenteTecnologici from '../components/molecules/NaturalmenteTecnologici';
 import HeroHome from '../components/organisms/HeroHome';
 import Seo from '../components/atoms/Seo';
-import Theme from '../components/organisms/Theme';
-import LastEdition from '../components/molecules/LastEdition';
 import 'react-circular-progressbar/dist/styles.css';
-import FastActions from '../components/molecules/FastActions';
-import Thanks from '../components/molecules/Thanks';
 import { HeadProps, graphql } from 'gatsby';
-import WindShovel from '../components/atoms/WindShovel';
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout insects={false}>
       <HeroHome />
       {/* <Thanks /> */}
       {/* <Theme /> */}

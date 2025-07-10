@@ -1,46 +1,17 @@
 @use 'src/styles/styled';
 
-.wrapMobile {
+.wrap {
   position: absolute;
-  width: 100%;
-  min-height: 520px;
+  height: 100vh;
+  width: 100vw;
   top: 0;
   z-index: -1;
-  background-color: var(--nt-white);
-  will-change: transform;
-  transition: transform 200ms ease-in-out;
-  transform: translate(0, -100%);
+  background-color: var(--nt-green);
+  will-change: transform, opacity;
+  transition: transform 200ms ease-in-out, opacity 150ms ease-in-out;
+  transform: translate(-100%, 0);
   opacity: 0;
   box-shadow: 0 0 20px 0 rgb(0, 0, 0, 0.25);
-
-  @media screen and (min-width: '992px') {
-    display: none;
-  }
-
-  a,
-  p {
-    text-decoration: none;
-    color: var(--nt-green);
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  svg {
-    fill: var(--nt-green);
-  }
-}
-
-.wrapDesktop {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-right: 35px;
-
-  @media screen and (max-width: '991px') {
-    display: none;
-  }
 
   a,
   p {
@@ -51,9 +22,51 @@
   }
 
   svg {
-    fill: var(--nt-white);
+    fill: var(--nt-green);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+    min-width: 450px;
+
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      top: 0;
+      left: 100%;
+      background: linear-gradient(
+        to right,
+        var(--nt-very-dark-green),
+        transparent
+      );
+      opacity: 0.7;
+      transform-origin: left;
+    }
   }
 }
+
+.wrapOpen {
+  @extend .wrap;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.wrapClosed {
+  @extend .wrap;
+  transform: translate(-100%, 0);
+  opacity: 0;
+
+  @media screen and (min-width: 768px) {
+
+    &::after{
+      transform: scaleX(0);
+    }
+  }
+}
+
+
 
 .link {
   position: relative;
@@ -79,7 +92,7 @@
   }
 }
 
-.linksMobile {
+.links {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -87,37 +100,23 @@
   justify-content: space-evenly;
   margin-top: 70px;
   > * {
-    margin: 20px 10px;
+    margin: 20px 0;
   }
-}
 
-.links {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: -10px;
-}
-
-.buttonMobile {
-  @include styled.buttonFull;
-  color: var(--nt-green) !important;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+    margin-top: 100px;
+     margin-left: 20px;
+  margin-right: 20px;
+  }
 }
 
 .button {
   @include styled.buttonFull;
-  // margin-top: -10px;
   color: var(--nt-green) !important;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
   justify-content: center;
-  margin-right: 30px;
 }

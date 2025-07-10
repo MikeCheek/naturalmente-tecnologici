@@ -32,7 +32,8 @@ const Index = () => {
               key={key}
               glowing={ticket.bigger}
               primary={ticket.bigger}
-              icon={<ticket.icon className={styles.icon} width={70} />}
+              image={ticket.image}
+              //icon={<ticket.icon className={styles.icon} width={70} />}
               // special={[
               //   ticket.price.toFixed(2) + DefaultTicketProps.priceSymbol,
               //   timer && ticket.priceDiscount
