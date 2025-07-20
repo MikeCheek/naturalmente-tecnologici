@@ -23,7 +23,7 @@ const Index = ({ data }: TimelineProps) => {
     <div className={styles.wrap}>
       <Heading text={data.day} smaller showOnView={false} />
       {data.name && data.name.trim().length > 0 ? <h4>{data.name}</h4> : <></>}
-      <p className={styles.desc}>{data.description}</p>
+      {/* <p className={styles.desc}>{data.description}</p> */}
       <div className={styles.colWrap}>
         {bar}
         {data.timeline.map((item, key) => (
