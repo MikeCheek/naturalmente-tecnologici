@@ -94,8 +94,8 @@ const program = [
       },
       {
         time: '11:00 - 13:00',
-        title: 'P. Calluso'
-        // starring: [findStar('P. Calluso')],
+        title: 'Pasquale Calluso',
+        starring: [findStar('Pasquale Calluso')]
       },
       {
         time: '13:00 - 15:30',
@@ -112,8 +112,8 @@ const program = [
       },
       {
         time: '17:45 - 18:15',
-        title: 'Talk di Benvenuto Syskrack'
-        // starring: [findStar('Syskrack')],
+        title: 'Talk di Benvenuto Syskrack',
+        starring: [findStar('Syskrack')]
       },
       // {
       //   time: '18:15 - 18:30',
@@ -139,8 +139,8 @@ const program = [
       // },
       {
         time: '19:45 - 20:15',
-        title: 'Talk Guido Gioioso'
-        // starring: [findStar('Guido Gioioso')],
+        title: 'Talk Guido Gioioso',
+        starring: [findStar('Guido Gioioso')]
       },
       {
         time: '20:15 - 22:00',
@@ -149,8 +149,8 @@ const program = [
       },
       {
         time: '22:00 - 23:30',
-        title: 'Guido Gioioso'
-        // starring: [findStar('Guido Gioioso')],
+        title: 'Guido Gioioso',
+        starring: [findStar('Guido Gioioso')]
       },
       // {
       //   time: '23:30 - 23:45',
@@ -158,8 +158,8 @@ const program = [
       // },
       {
         time: '23:45 - 01:15',
-        title: 'Acid Pepper'
-        // starring: [findStar('Acid Pepper')],
+        title: 'Acid Pepper',
+        starring: [findStar('Acid Pepper')]
       }
     ] as Event[]
   },
@@ -300,7 +300,8 @@ const program = [
       },
       {
         time: '21:30 - 23:20',
-        title: 'SFINGE'
+        title: 'SFINGE',
+        starring: [findStar('SFINGE SOUND')]
       },
       {
         time: '23:00 - 01:40',
@@ -369,7 +370,7 @@ const program = [
       {
         time: '19:30 - 20:30',
         title: 'Talk Giandomenico',
-        // starring: [findStar('Giandomenico Mercadante')],
+        starring: [findStar('Giandomenico Mercadante')],
         note: '60 min'
       },
       {
