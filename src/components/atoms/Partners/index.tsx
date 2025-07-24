@@ -3,7 +3,7 @@ import React from 'react';
 import * as styles from './index.module.scss';
 import Heading from '../Heading';
 import { ReactComponent as Syskrack } from '../../../assets/syskrack.svg';
-import { ReactComponent as IBM } from '../../../assets/partner/IBM.svg';
+// import { ReactComponent as IBM } from '../../../assets/partner/IBM.svg';
 import { ReactComponent as Podus } from '../../../assets/partner/podus.svg';
 import { ReactComponent as Basilicata } from '../../../assets/partner/basilicata.svg';
 import { ReactComponent as OfficineFuturiste } from '../../../assets/partner/officine-futuriste.svg';
@@ -77,7 +77,7 @@ const Index = () => {
             width={450}
           />
         </a>
-        <OfficineFuturiste className={styles.logoLong} width={350}/>
+        <OfficineFuturiste className={styles.logoLong} width={350} />
         <a href="" title="Verre Gioielli" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
@@ -158,7 +158,7 @@ const Index = () => {
             width={150}
           />
         </a>
-        <a
+        {/* <a
           href="https://skillsbuild.org/"
           style={{ width: '100%', marginTop: '20px' }}
           title="IBM"
@@ -166,12 +166,12 @@ const Index = () => {
           target="_blank"
         >
           <IBM className={styles.logoHorizontal} height={40} />
-        </a>
+        </a> */}
       </ShowOnView>
-      <Heading text="Mobility Partner" />
+      {/* <Heading text="Mobility Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="https://marinobus.it/" title="Marino Bus" rel="noopener noreferrer" target="_blank">
-          {/* <MarinoBus className={styles.logoLong} width={200} style={{ maxHeight: '100px' }} /> */}
+          {/ <MarinoBus className={styles.logoLong} width={200} style={{ maxHeight: '100px' }} /> /}
           <StaticImage
             layout="constrained"
             src="../../../images/partners/marino-bus.png"
@@ -181,11 +181,12 @@ const Index = () => {
             alt="MarinoBus"
           />
         </a>
-      </ShowOnView>
+      </ShowOnView> 
+      */}
       {/* <Heading text="Hospitality Partner" /> */}
       <Heading text="Technical Partner" />
       <ShowOnView className={styles.wrap}>
-      <a href="" title="New Wave Service" rel="noopener noreferrer" target="_blank">
+        <a href="" title="New Wave Service" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
             src="../../../images/partners/new-wave.jpeg"
@@ -234,7 +235,7 @@ const Index = () => {
             width={200}
           />
         </a>
-        </ShowOnView>
+      </ShowOnView>
       <Heading text="Community Partner" />
       <ShowOnView className={styles.wrap}>
         {/*<a href="http://www.hackability.it/" rel="noopener noreferrer" target="_blank">

@@ -1,23 +1,35 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby'
 
 export enum GUEST_TYPE {
   TALK,
   MUSIC,
   ACTIVITY,
-  COMMUNITY,
+  COMMUNITY
 }
 
 interface Guest {
-  name: string;
-  field?: string[];
-  description?: string;
-  type: GUEST_TYPE;
-  mentor?: string[];
-  image: string;
-  imagePosition?: string;
+  name: string
+  field?: string[]
+  description?: string
+  type: GUEST_TYPE
+  mentor?: string[]
+  image: string
+  imagePosition?: string
 }
 
 const guests = [
+  {
+    name: 'Syskrack',
+    type: GUEST_TYPE.COMMUNITY,
+    description: `L'associazione Syskrack Giuseppe Porsia è un'associazione senza scopo di lucro con sede a Grassano nata in memoria del nostro Peps, scomparso prematuramente il 5 Luglio 2013.
+Syskrack è una community glocale
+(globale + locale), connessa tramite internet, tramite che agisce localmente attraverso luoghi fisici, i laboratori.
+
+Syskrack era il nickname di Giuseppe Porsia e significa:
+System + Kracking = "Rompere il sistema". Come? trovando i bug della società per riuscire ad hackerarla, modificarne il comportamento, riportandolo alla consapevolezza, all'umanità, alla scienza e alla natura.
+
+Crediamo fortemente che chi, in un modo o nell'altro, abbia un privilegio debba metterlo a disposizione di chi non lo ha per per far sì che possa acquisirlo.`
+  },
   // {
   //   name: 'Donato Montesano',
   //   field: ['Chi ha polvere spara'],
@@ -42,15 +54,15 @@ const guests = [
   //   type: GUEST_TYPE.TALK,
   //   field: ['Meme'],
   // },
-  // {
-  //   name: 'Guido Gioioso',
-  //   description: `Guido Gioioso ha conseguito la <strong>laurea in Ingegneria Informatica</strong> e un <strong>dottorato</strong> di ricerca in <strong>Robotica e Automazione</strong> all'Università di Siena.<br/>
-  //   Autore di <strong>più di 20 articoli</strong> scientifici pubblicati sulle più quotate riviste di settore, libri e conferenze internazionali, ha focalizzato la sua attività di ricerca sullo <strong>sviluppo di algoritmi di controllo</strong> per mani robotiche e dispositivi per la digitalizzazione del <strong>senso del tatto</strong>.<br/><br/>
-  //   Oggi è uno dei fondatori e business leader di <strong>WEART</strong>, una startup che sviluppa device rivoluzionari pensati per aggiungere <strong>sensazioni tattili</strong> ad esperienze digitali.<br/>
-  //   Ha intrapreso questa avventura imprenditoriale con l'obiettivo di portare sul mercato i risultati di <strong>anni di ricerca accademica</strong>, perché questi avessero un <strong>impatto reale e tangibile</strong> nelle vite delle persone, guidato dalla sua passione per i nuovi paradigmi di interazione digitale.<br/><br/>
-  //   Crede fortemente nel motto di <strong>Alan Key</strong>, uno dei pionieri della Silicon Valley, che recita: <strong>“Il miglior modo di predire il futuro è inventarlo”</strong>`,
-  //   type: GUEST_TYPE.TALK,
-  // },
+  {
+    name: 'Guido Gioioso',
+    description: `Guido Gioioso ha conseguito la <strong>laurea in Ingegneria Informatica</strong> e un <strong>dottorato</strong> di ricerca in <strong>Robotica e Automazione</strong> all'Università di Siena.<br/>
+    Autore di <strong>più di 20 articoli</strong> scientifici pubblicati sulle più quotate riviste di settore, libri e conferenze internazionali, ha focalizzato la sua attività di ricerca sullo <strong>sviluppo di algoritmi di controllo</strong> per mani robotiche e dispositivi per la digitalizzazione del <strong>senso del tatto</strong>.<br/><br/>
+    Oggi è uno dei fondatori e business leader di <strong>WEART</strong>, una startup che sviluppa device rivoluzionari pensati per aggiungere <strong>sensazioni tattili</strong> ad esperienze digitali.<br/>
+    Ha intrapreso questa avventura imprenditoriale con l'obiettivo di portare sul mercato i risultati di <strong>anni di ricerca accademica</strong>, perché questi avessero un <strong>impatto reale e tangibile</strong> nelle vite delle persone, guidato dalla sua passione per i nuovi paradigmi di interazione digitale.<br/><br/>
+    Crede fortemente nel motto di <strong>Alan Key</strong>, uno dei pionieri della Silicon Valley, che recita: <strong>“Il miglior modo di predire il futuro è inventarlo”</strong>`,
+    type: GUEST_TYPE.TALK
+  },
   // {
   //   name: 'Domenico Lostrangio',
   //   type: GUEST_TYPE.TALK,
@@ -76,7 +88,7 @@ const guests = [
     Accompagnatore nelle visite guidate, nel 2017/2018 è stata Tutor Fai responsabile per ITC Carlo Levi di Grassano.
     Nel febbraio 2021 è una delle due curatrici del libro: Michele Mulieri: una stanchezza da meditare, pubblicata da Cisu nella collana Antropologia del patrimonio.`,
     type: GUEST_TYPE.TALK,
-    field: ['Alla scoperta di Grassano'],
+    field: ['Alla scoperta di Grassano']
   },
   // {
   //   name: 'Mauro Acito',
@@ -106,7 +118,7 @@ const guests = [
   {
     name: 'Pisilli Rocco',
     type: GUEST_TYPE.ACTIVITY,
-    imagePosition: 'center 80%',
+    imagePosition: 'center 80%'
   },
   // {
   //   name: 'Giuliana Bianchini',
@@ -302,19 +314,13 @@ const guests = [
   // },
   {
     name: 'SFINGE SOUND',
-    description: `SFINGE è un progetto tosco-lucano nato a Pisa nel corso del 2023 con l'obbiettivo di prendere parte e sostenere la scena ricreativa e culturale locale. In questo primo anno di attività il gruppo ha preso parte ad eventi di intrattenimento indipendenti e popolari iniziando a collaborare con locali, collettivi universitari e realtà di quartiere. 
-
+    description: `SFINGE è un progetto nato a Pisa nel corso del 2023 con l'obbiettivo di prendere parte e sostenere la scena ricreativa e culturale locale. In questi due primi anni di attività il gruppo ha preso parte ad eventi di intrattenimento iniziando a collaborare con associazioni, collettivi, club e realtà di quartiere, in toscana e non solo.
  
-
-A livello musicale il progetto si è fino ad ora focalizzato su due aspetti principali. Il primo è stato la costruzione di un impianto hifi, realizzato integrando casse di risonanze provenienti da varie correnti, sia da quella più classica della musica giamaicana, sia dalle più recenti tendenze nella progettazione e sperimentazione audio. 
-
-Il secondo aspetto riguarda la strutturazione di una selezione musicale in vinile di vari stile della musica reggae, dalla roots alla dub più contemporanea da riprodurre sull'impianto nel classico stile “one by one” con la consueta presenza di delay, echi e sirene analogiche.
-
- 
-
- In occasione del festival Naturalmente Tecnologici il gruppo proporrà due sessioni principali, una pomeridiana ed una serale, durante le quali intratterrà e farà ballare con dischi dello scenario nazionale e internazionale: dalla Jamaica alla UK, dalla Francia alle produzioni più nostrane.`,
+Il progetto si è fino ad ora focalizzato su due aspetti principali.
+Il primo, la costruzione del soundsystem, ovvero un impianto hifi, totalmente fatto a mano mettendo assieme, testando e portando in session vari design di casse di risonanza.
+Il secondo riguarda la selezione musicale di dischi in vinile, tracce digitali e dubplate. collezionando dischi, dalla roots alla dnb e iniziando a collaborare con artisti nazionali e internazionali.`,
     type: GUEST_TYPE.MUSIC,
-    imagePosition: 'center center',
+    imagePosition: 'center center'
   },
   // {
   //   name: 'Shark Emcee',
@@ -395,7 +401,7 @@ pregiudizio di “arretratezza” imposto dall'esterno, riappropriandosi con org
 elementi che caratterizzano l'autenticità della cultura meridionale.
 Attualmente vive e concentra la sua professione ad Altamura, continuando però a
 intrattenere rapporti lavorativi in tutta Italia per stimolare uno scambio di linguaggi e risorse
-tra le diverse realtà economiche e subregioni che caratterizzano il nostro territorio.`,
+tra le diverse realtà economiche e subregioni che caratterizzano il nostro territorio.`
   },
   {
     name: 'Marina Berardi',
@@ -429,14 +435,14 @@ internazionale tra cui Nikon Talents, Sony World Award, Metropolis 2017, nel 201
 vincitrici del concorso fotografico MAVI (Museo Antropologico Visivo Irpino) e sono state
 esposte nell'ambito di mostre e festival. Nel 2024 riceve il premio speciale alla 25esima
 edizione del Premio letterario Carlo Levi.
-www.marinaberardi.net`,
+www.marinaberardi.net`
   },
   {
     name: 'Stefania Dubla',
     type: GUEST_TYPE.TALK,
     field: ['MAAP'],
     description: `Stefania Dubla (Matera, 1990), curatrice d'arte pubblica.
-Laureata a Siena in Storia dell'Arte e dell'Architettura Contemporanea, ha lavorato come assistente curatrice per il Musée d'Orsay a Parigi e curato mostre e azioni artistiche nello spazio pubblico di tutta Italia, tra cui il progetto della Silent Academy di Matera Capitale Europea della Cultura 2019. È stata direttrice artistica di MAAP Fiera di Arte Pubblica, promossa e sostenuta dalla DGCC del Ministero della Cultura, e curatrice delle residenze artistiche di Paratissima a Torino. Con il collettivo curatoriale MAAP - Atelier d'Arte Pubblica è oggi impegnata nella formulazione e sperimentazione nei paesi lucani della città empatica, un progetto che coniuga metodologie artistiche a pratiche transfemministe di riconfigurazione e fruizione dello spazio pubblico.`,
+Laureata a Siena in Storia dell'Arte e dell'Architettura Contemporanea, ha lavorato come assistente curatrice per il Musée d'Orsay a Parigi e curato mostre e azioni artistiche nello spazio pubblico di tutta Italia, tra cui il progetto della Silent Academy di Matera Capitale Europea della Cultura 2019. È stata direttrice artistica di MAAP Fiera di Arte Pubblica, promossa e sostenuta dalla DGCC del Ministero della Cultura, e curatrice delle residenze artistiche di Paratissima a Torino. Con il collettivo curatoriale MAAP - Atelier d'Arte Pubblica è oggi impegnata nella formulazione e sperimentazione nei paesi lucani della città empatica, un progetto che coniuga metodologie artistiche a pratiche transfemministe di riconfigurazione e fruizione dello spazio pubblico.`
   },
   {
     name: 'Mattone su mattone',
@@ -452,7 +458,7 @@ Grazie a questa esperienza ho avuto la possibilità di partecipare a diversi fes
 importanti e di condividere il palco anche con artisti di calibro internazionale.
 Dal 2018, faccio parte della formazione percussiva di Ago Trance, con cui
 portiamo avanti l'idea di musica del Maestro Infantino, combinando poliritmia e
-istinto ritmico.`,
+istinto ritmico.`
   },
   {
     name: 'Kalura - Meridionalismo',
@@ -475,7 +481,7 @@ Per concludere non poteva mancare certo un tema molto caro alla cultura del Sud 
 preferisce la "terra della rinascita", cioè a quell'approccio di molti studiosi che dissentono dalle teorie demartiniane sul tarantismo per individuare nel rito
 della taranta elementi orfico-pitagorici e che ritroviamo anche nel pensiero e nella musica di Antonio Infantino.
 Tarantismo calabrese e tarantelle come momento di purificazione e rigenerazione energetica. Suono, danza e colore per ritrovare l'armonia dell'individo nella comunità e nel cosmo.
-L'azione teatrale di Kalura sarà tutto questo, un vero e proprio rito di passaggio, un viaggio emozionale, interattivo e coinvolgente.`,
+L'azione teatrale di Kalura sarà tutto questo, un vero e proprio rito di passaggio, un viaggio emozionale, interattivo e coinvolgente.`
   },
   {
     name: 'LINBO',
@@ -496,11 +502,11 @@ panorama italiano di musica elettronica indipendente. CALESOLE RMX è volutament
 circoscrivibile in un unico genere musicale in cui le sonorità elettroniche miscelate con strumenti acustici e
 campionamenti vocali dell'album originale sono state dematerializzate e ricostruite.
 Nell'estate 2024 il duo presenta al pubblico il nuovo live che anticipa la prossima uscita discografica in uscita in
-autunno: JUMP MUSIC.`,
+autunno: JUMP MUSIC.`
   },
   {
-    name: 'Noi ortadini',
-    type: GUEST_TYPE.ACTIVITY,
+    name: 'Noi Ortadini',
+    type: GUEST_TYPE.ACTIVITY
   },
   {
     name: 'Simone Ritunnano',
@@ -508,7 +514,7 @@ autunno: JUMP MUSIC.`,
     description: `Laureato in Storia all'Alma Mater, frequenta attualmente la facoltà di Archeologia e Culture del Mondo Antico.
 Ha partecipato ad alcuni scavi: al castello di Rontana nella zona ravennate e al sito della città romana di Suasa.
 Sta cercando si specializzarsi nello studio della landscape achaeology o archeologia del paesaggio, una disciplina delle scienze storiche e archeologiche che documenta e analizza la complessa fenomenologia del rapporto tra ambiente, territorio e mobilità umana. 
-Scopo della sua ricerca è quello di comprendere chi abitava la Lucania antica, nello specifico la regione tra Basento e Bradano, e come queste popolazioni hanno abitato il territorio nel corso dei secoli: come si spostavano, come costruivano, che materiali utilizzavano, che tipo di alimentazione avevano, come commerciavano ecc.  ma anche come passavano il tempo libero, come comunicavano, in cosa credevano.`,
+Scopo della sua ricerca è quello di comprendere chi abitava la Lucania antica, nello specifico la regione tra Basento e Bradano, e come queste popolazioni hanno abitato il territorio nel corso dei secoli: come si spostavano, come costruivano, che materiali utilizzavano, che tipo di alimentazione avevano, come commerciavano ecc.  ma anche come passavano il tempo libero, come comunicavano, in cosa credevano.`
   },
   {
     name: 'OBERDAN',
@@ -552,7 +558,7 @@ Il nuovo album, “Forever Noi”, scritto, suonato e registrato tra la fine del
 l'inizio del 2021 in pieno periodo di coprifuoco, si immerge in territori più tenebrosi e
 legati a una forte spiritualità. Influenzato particolarmente da “What's your pleasure”
 di Jessie Ware, “Róisín Machine” di Róisín Murphy e “Outrun” di Kavisnky, l'album
-vede la luce a ottobre 2022 per FLUIDOSTUDIO.`,
+vede la luce a ottobre 2022 per FLUIDOSTUDIO.`
   },
   {
     name: 'Avemarianne',
@@ -572,15 +578,15 @@ Nel 2023 la mappa di Avemarianne segna almeno due tappe da menzionare mentre col
 
 Da poco ha rilasciato il suo EP HyperVrnzl, un tentativo di narrazione fedele della Napoli contemporanea in unione al gusto per la musica elettronica, in collaborazione con Angelo Ferlaino (Bologna).
 
-`,
+`
   },
   {
     name: 'Dj Bomberone',
-    type: GUEST_TYPE.MUSIC,
+    type: GUEST_TYPE.MUSIC
   },
   {
     name: 'Giandomenico Mercadante',
-    type: GUEST_TYPE.ACTIVITY,
+    type: GUEST_TYPE.ACTIVITY
   },
   {
     name: 'MAS',
@@ -599,36 +605,65 @@ Rifiutiamo, però, il pensiero del Sud come “non ancora Nord” e vogliamo cos
 Pensiamo al Sud come concetto rivoluzionario, tenendo l'autocoscienza come centro e motore della nostra metodologia.
 
 
-Vogliamo intraprendere un percorso condiviso di scoperta e rivendicazione della lotta meridionalista all'interno di uno spazio più ampio, affinché possa accendere una luce sulla questione, intrecciarsi e rafforzare le altre lotte che sentiamo vicine, collaborando con le realtà che le portano avanti.`,
+Vogliamo intraprendere un percorso condiviso di scoperta e rivendicazione della lotta meridionalista all'interno di uno spazio più ampio, affinché possa accendere una luce sulla questione, intrecciarsi e rafforzare le altre lotte che sentiamo vicine, collaborando con le realtà che le portano avanti.`
   },
   {
     name: 'Pupa Antezz',
-    type: GUEST_TYPE.MUSIC,
+    type: GUEST_TYPE.MUSIC
   },
   {
     name: 'Terra Terra Sound',
-    type: GUEST_TYPE.MUSIC,
+    type: GUEST_TYPE.MUSIC
   },
   {
     name: 'Atomico',
     imagePosition: 'center center',
     description: `Atomico è una rete aperta di persone che hanno deciso di immaginare e vivere il  margine come spazio di possibilità, creando sinergie, prendendosi cura dei territori attraverso pratiche artistiche, culturali e sociali.`,
-    type: GUEST_TYPE.COMMUNITY,
+    type: GUEST_TYPE.COMMUNITY
   },
-] as const;
+  {
+    name: 'Pasquale Calluso',
+    type: GUEST_TYPE.TALK,
+    description: `Pasquale Calluso porta avanti una ricerca che intreccia queerness e Basilicata, dopo un percorso dedicato alla storia dei movimenti omosessuali in Italia. 
+    Ha conseguito una laurea magistrale in Studi di Genere e Letteratura Postcoloniale all'interno del programma GEMMA Erasmus Mundus, studiando tra l'Università di Granada e l'Università di Bologna. 
+    In precedenza ha studiato Storia all'Università di Torino, con un minor in Diversity Studies svolto durante un periodo all'Università di Maastricht. 
+    Ha collaborato con l'ONG IASIS ad Atene, dove si è occupato di workshop su tematiche di genere con pratiche di educazione non formale.`
+  },
+  {
+    name: 'Acid Pepper',
+    type: GUEST_TYPE.MUSIC,
+    description: `Acid Pepper è il progetto musicale di Giuseppe Palazzo, graphic designer e docente di grafica. 
+    Come producer, propone live set con campionatore e sintetizzatori, mescolando sonorità elettroniche ispirate a techno, dub e trance. 
+    Il suo approccio è ibrido e artigianale, orientato alla sperimentazione ritmica e timbrica.`
+  },
+  {
+    name: 'Bagworm Studio',
+    type: GUEST_TYPE.ACTIVITY,
+    description: `Bagworm Studio è un progetto di design di Alessia Nobile e Giuseppe Palazzo. 
+    Realizzano oggetti con materiali ecosostenibili e di recupero, tra cui agende in carta riciclata, accessori cuciti, stampe linoleografiche e giochi di carte. 
+    Negli eventi portano anche giochi in legno autocostruiti pensati per l'interazione e il gioco condiviso.`
+  }
+] as const
 
-export type GuestNames = (typeof guests)[number]['name'];
+export type GuestNames = typeof guests[number]['name']
 
-const guestsOut = guests.map((e) => {
-  const splitted = e.name.toLowerCase().split(' ');
-  return { ...e, image: splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0] };
-});
+const guestsOut = guests.map(e => {
+  const splitted = e.name.toLowerCase().split(' ')
+  return {
+    ...e,
+    image:
+      splitted.length > 1 ? [splitted[0], splitted[1]].join('_') : splitted[0]
+  }
+})
 
 export const images = () => {
   const guestsPhotos: Data = useStaticQuery(graphql`
     query GuestPhotos {
       allFile(
-        filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, dir: { regex: "src/images/guests/" } }
+        filter: {
+          extension: { regex: "/(jpg)|(jpeg)|(png)/" }
+          dir: { regex: "src/images/guests/" }
+        }
         sort: { name: ASC }
       ) {
         edges {
@@ -636,15 +671,20 @@ export const images = () => {
             id
             name
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 300, quality: 80)
+              gatsbyImageData(
+                layout: CONSTRAINED
+                placeholder: BLURRED
+                width: 300
+                quality: 80
+              )
             }
           }
         }
       }
     }
-  `);
+  `)
 
-  return guestsPhotos;
-};
+  return guestsPhotos
+}
 
-export default guestsOut as Guest[];
+export default guestsOut as Guest[]

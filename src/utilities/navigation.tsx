@@ -7,7 +7,7 @@ export const links = (lang = 'it') => [
     to: '/chi-siamo',
     position: 2
   },
-  { name: 'Line Up', to: '/programma', position: 2, hide: true },
+  // { name: 'Line Up', to: '/programma', position: 2 },
   { name: lang === 'it' ? 'Partner' : 'Partner', to: '/partner', position: 2 },
   { name: lang === 'it' ? 'Info' : 'Info', to: '/info', position: 2 },
   {

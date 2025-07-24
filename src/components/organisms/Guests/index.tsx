@@ -6,12 +6,24 @@ import GuestCard from '../../atoms/GuestCard';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ImageTemp from '../../atoms/ImageTemp';
 import Banner from '../../atoms/Banner';
+import { timelineGuests } from '../../../utilities/program';
 
 const Index = () => {
-  const talkGuests = guests.filter((e) => e.type === GUEST_TYPE.TALK);
-  const musicGuests = guests.filter((e) => e.type === GUEST_TYPE.MUSIC);
-  const activityGuests = guests.filter((e) => e.type === GUEST_TYPE.ACTIVITY);
-  const communityGuests = guests.filter((e) => e.type === GUEST_TYPE.COMMUNITY);
+  // const talkGuests = guests.filter((e) => e.type === GUEST_TYPE.TALK);
+  // const musicGuests = guests.filter((e) => e.type === GUEST_TYPE.MUSIC);
+  // const activityGuests = guests.filter((e) => e.type === GUEST_TYPE.ACTIVITY);
+  // const communityGuests = guests.filter((e) => e.type === GUEST_TYPE.COMMUNITY);
+
+  // Remove duplicates by guest name
+  const uniqueGuests = timelineGuests.filter(
+    (guest, index, self) =>
+      index === self.findIndex((g) => g.name === guest.name)
+  );
+
+  const talkGuests = uniqueGuests.filter((e) => e.type === GUEST_TYPE.TALK);
+  const musicGuests = uniqueGuests.filter((e) => e.type === GUEST_TYPE.MUSIC);
+  const activityGuests = uniqueGuests.filter((e) => e.type === GUEST_TYPE.ACTIVITY);
+  const communityGuests = uniqueGuests.filter((e) => e.type === GUEST_TYPE.COMMUNITY);
 
   const guestsPhotos = images();
 

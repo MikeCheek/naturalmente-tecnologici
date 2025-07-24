@@ -23,7 +23,7 @@ const Index = ({ data }: TimelineProps) => {
     <div className={styles.wrap}>
       <Heading text={data.day} smaller showOnView={false} />
       {data.name && data.name.trim().length > 0 ? <h4>{data.name}</h4> : <></>}
-      <p className={styles.desc}>{data.description}</p>
+      {/* <p className={styles.desc}>{data.description}</p> */}
       <div className={styles.colWrap}>
         {bar}
         {data.timeline.map((item, key) => (
@@ -37,8 +37,11 @@ const Index = ({ data }: TimelineProps) => {
               {circle}
               <span className={styles.info}>
                 <p className={styles.time}>{item.time}</p>
-                {/* {item.type ? <p>{item.type}</p> : <></>} */}
-                {/* {item.location ? (
+                {item.type ?
+                  <p className={styles.type}
+                    style={key % 2 == 0 ? { marginRight: 'auto' } : { marginLeft: 'auto' }}
+                  >{item.type}</p> : <></>}
+                {item.location ? (
                   <p
                     className={styles.location}
                     style={key % 2 == 0 ? { marginRight: 'auto' } : { marginLeft: 'auto' }}
@@ -47,7 +50,7 @@ const Index = ({ data }: TimelineProps) => {
                   </p>
                 ) : (
                   <></>
-                )} */}
+                )}
                 {item.starring ? (
                   <div
                     className={styles.badges}

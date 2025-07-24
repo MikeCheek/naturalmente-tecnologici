@@ -37,12 +37,12 @@ interface Ticket {
 export const info: Ticket[] = [
   {
     //icon: Camping,
-    name: 'Community Pass 3 giorni/notti (Camping incluso)',
+    name: 'Community Pass 4 giorni/notti (Camping incluso)',
     price: 67,
     priceDiscount: 37.0,
     bigger: false,
     description:
-      'Accesso completo al festival e al camping incluso per 3 giorni e 3 notti o 2 giorni e 2 notti. Goditi ogni momento di questo evento unico sotto le stelle ✨. <br/> La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
+      'Accesso completo al festival e al camping incluso per 4 giorni e 4 notti o 2 giorni e 2 notti. Goditi ogni momento di questo evento unico sotto le stelle ✨. <br/> La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
     date: '2/3 giorni',
     badges: [
       'camping',
@@ -57,7 +57,7 @@ export const info: Ticket[] = [
   },
   {
     //icon: TicketSvg,
-    name: 'Community Pass 3 giorni/notti (Camping incluso)',
+    name: 'Community Pass 4 giorni/notti (Camping incluso)',
     description:
       "Goditi la musica autentica e l'intrattenimento.<br/>Accesso al festival per una singola giornata (9, 10 o 11 agosto) ad ORARIO.<br/><b>- Dalle 9 alle 18</b> <br/><b>- Dalle 18 fino alla chiusura</b><br/><br/> Immergiti nella cultura, nei dibattiti e lasciati coinvolgere dai workshop di #nt24 oppure lasciati trasportare dalla magia della notte, tra musica 🎶 e nuove amicizie 🤝 (*campeggio escluso).<br/> La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.",
     price: 17.0,

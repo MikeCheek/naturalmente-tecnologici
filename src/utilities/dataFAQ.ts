@@ -119,7 +119,7 @@ export const faqIT = [
       },
       //       {
       //         title: 'Cosa copre il mio PASS?',
-      //         text: `Intero 3 giorni (Welcome to Tijuana Camp incluso):<br/>
+      //         text: `Intero 4 giorni (Welcome to Tijuana Camp incluso):<br/>
       //     <ul>
       // 		  <li>Ingresso al festival per tutti e 3 i giorni</li>
       //         <ul><li>Laboratori, conferenza, workshop, stage musicale, servizi igienici</li></ul>
@@ -284,11 +284,11 @@ export const faqEN = [
       },
       //       {
       //         title: 'What does my PASS cover?',
-      //         text: `Full 3 days (Welcome to Tijuana Camp included):<br/>
+      //         text: `Full 4 days (Welcome to Tijuana Camp included):<br/>
       //     <ul>
-      // 		  <li>Access to the festival for all 3 days</li>
+      // 		  <li>Access to the festival for all 4 days</li>
       //         <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
-      //       <li>Use of camping area for all 3 days</li>
+      //       <li>Use of camping area for all 4 days</li>
       //         <ul><li>Smartphone charging stations, showers, reserved toilets</li></ul>
       //       <li>Use of camping area for the entire duration of the festival</li>
       //     </ul>
