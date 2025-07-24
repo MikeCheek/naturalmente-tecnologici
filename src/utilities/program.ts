@@ -51,7 +51,7 @@ export const nowActive = () => {
 
 export enum EVENT_TYPE {
   MORNING_ROUTINE = 'Morning Routine',
-  CONFERENZA = 'Conferenza',
+  CONFERENZA = 'Talk',
   LABORATORIO = 'Laboratorio',
   DIALOGO = 'Dialogo',
   PERFORMANCE = 'Performance',
@@ -68,97 +68,112 @@ export type Event = {
   starring?: any[]
 }
 
+// PRE-FESTIVAL - MERCOLEDÌ 6 AGOSTO
+const preFestival = [
+  {
+    numberDay: 6,
+    day: 'Mercoledì 6 Agosto',
+    name: 'Pre-Festival',
+    timeline: [
+      {
+        time: '19:00 - 20:00',
+        title: 'Conferenza Inaugurale',
+        description:
+          'Il festival esce dal Bosco: presentazione della nuova edizione e incontro con la popolazione',
+        type: EVENT_TYPE.CONFERENZA,
+        location: 'Castello Sichinulfo, Grottole',
+        starring: []
+      },
+      {
+        time: '20:00 - 21:00',
+        title: 'Giro Turistico di Grottole',
+        type: EVENT_TYPE.LABORATORIO,
+        location: 'Grottole',
+        starring: []
+      },
+      {
+        time: '21:30 - 23:00',
+        title: 'Cena da Podus',
+        type: EVENT_TYPE.PERFORMANCE,
+        location: 'Podus',
+        starring: []
+      }
+    ] as Event[]
+  }
+]
+
+// You can prepend this to your program array if you want to include pre-festival events:
 const program = [
+  ...preFestival,
+  // rest of your program as before...
   {
     numberDay: 7,
     day: 'Giovedì 7 Agosto',
     name: '',
     timeline: [
-      // {
-      //   time: '09:15 - 09:30',
-      //   title: 'SOLO CREW',
-      //   note: 'Arrivo CREW'
-      // },
-      // {
-      //   time: '09:30 - 09:45',
-      //   title: 'Caffè CREW',
-      //   note: 'Brief per la giornata'
-      // },
-      // {
-      //   time: '10:00 - 02:00',
-      //   title: 'APERTURA INFO POINT'
-      // },
       {
         time: '10:00 - 10:30',
         title: 'Buongiorno, caffè tuttx insieme'
       },
       {
         time: '11:00 - 13:00',
-        title: 'Pasquale Calluso',
+        title: 'Come rendere Sexy la Protesta in Basilicata',
+        description:
+          'Riflessione e pratica su come immaginare futuri queer dai territori marginalizzati, con metodologie non convenzionali come il cruising.',
+        type: EVENT_TYPE.LABORATORIO,
         starring: [findStar('Pasquale Calluso')]
       },
       {
         time: '13:00 - 15:30',
-        title: 'Pausa Pranzo',
-        note: '150 min'
+        title: '🍽️ Pausa Pranzo'
       },
       {
         time: '15:30 - 16:30',
-        title: 'Momenti ricreativi'
+        title: 'Torneo Acid Pepper',
+        description: 'Gioco/torneo musicale interattivo community',
+        type: EVENT_TYPE.PERFORMANCE,
+        starring: [findStar('Acid Pepper')]
       },
       {
         time: '16:30 - 17:30',
-        title: 'Metti i tuoi dischi'
+        title: 'Metti i tuoi dischi!',
+        description: 'Condivisione musicale aperta tutti',
+        type: EVENT_TYPE.PERFORMANCE
       },
       {
         time: '17:45 - 18:15',
-        title: 'Talk di Benvenuto Syskrack',
+        title: 'Talk di Benvenuto: "Tra Natura e Tecnologia" Syskrack',
+        description: 'Apertura ufficiale, manifesto comunità',
+        type: EVENT_TYPE.CONFERENZA,
         starring: [findStar('Syskrack')]
       },
-      // {
-      //   time: '18:15 - 18:30',
-      //   title: 'Cambio palco'
-      // },
       {
         time: '18:30 - 19:00',
-        title: 'Merlot'
-        // starring: [findStar('Merlot')],
+        title: 'Tradire la tradizione - Guido Gioso',
+        description: 'Innovazione come ribellione costruttiva',
+        type: EVENT_TYPE.CONFERENZA
+        // starring: [findStar('Guido Gioso')]
       },
-      // {
-      //   time: '19:00 - 19:10',
-      //   title: 'Cambio Palco'
-      // },
       {
-        time: '19:10 - 19:40',
-        title: 'Circolo Infantino'
-        // starring: [findStar('Circolo Infantino')],
-      },
-      // {
-      //   time: '19:40 - 19:45',
-      //   title: 'Cambio Palco'
-      // },
-      {
-        time: '19:45 - 20:15',
-        title: 'Talk Guido Gioioso',
-        starring: [findStar('Guido Gioioso')]
+        time: '19:00 - 19:30',
+        title: 'I Denti Cariati e la Patria – Circolo Antonio Infantino',
+        type: EVENT_TYPE.CONFERENZA
+        // starring: [findStar('Circolo Infantino')]
       },
       {
         time: '20:15 - 22:00',
-        title: 'Pausa Cena',
-        note: 'Qui sound Check + CENA SOCIALE?'
+        title: '🍽️ Pausa Cena'
       },
       {
         time: '22:00 - 23:30',
-        title: 'Guido Gioioso',
-        starring: [findStar('Guido Gioioso')]
+        title: 'MUSIC | Performance',
+        type: EVENT_TYPE.PERFORMANCE
+        // starring: [findStar('Guido Gioso')]
       },
-      // {
-      //   time: '23:30 - 23:45',
-      //   title: 'Cambio Palco'
-      // },
       {
-        time: '23:45 - 01:15',
-        title: 'Acid Pepper',
+        time: '23:30 - 01:15',
+        title: 'MUSIC Performance',
+        type: EVENT_TYPE.PERFORMANCE,
         starring: [findStar('Acid Pepper')]
       }
     ] as Event[]
@@ -168,62 +183,49 @@ const program = [
     day: 'Venerdì 8 Agosto',
     name: '',
     timeline: [
-      // {
-      //   time: '09:15 - 09:30',
-      //   title: 'SOLO CREW',
-      //   note: 'Arrivo CREW'
-      // },
-      // {
-      //   time: '09:30 - 09:45',
-      //   title: 'Caffè CREW',
-      //   note: 'Brief per la giornata'
-      // },
       {
-        time: '10:00 - 10:30',
-        title: 'Buongiorno, caffè tuttx insieme e Presenta:'
+        time: '10:30 - 13:00',
+        title: 'Fanzine - TAM',
+        description: 'Autoproduzione editoriale, narrazione dal basso',
+        type: EVENT_TYPE.LABORATORIO
       },
       {
-        time: '10:30 - 12:30',
-        title: 'LAB FANZINE'
+        time: '13:00 - 15:30',
+        title: '🍽️ Pausa Pranzo'
       },
       {
-        time: '12:30 - 16:00',
-        title: 'Pausa Pranzo',
-        note: '3h'
+        time: '15:30 - 16:30',
+        title: 'Torneo Acid Pepper',
+        description: 'Gioco/torneo musicale interattivo community',
+        type: EVENT_TYPE.PERFORMANCE,
+        starring: [findStar('Acid Pepper')]
       },
       {
-        time: '15:30 - 17:30',
-        title: 'Metti i tuoi dischi'
+        time: '16:30 - 17:30',
+        title: 'Metti i tuoi dischi!',
+        description: 'Condivisione musicale aperta tutti',
+        type: EVENT_TYPE.PERFORMANCE
       },
       {
-        time: '17:30 - 18:15',
-        title: 'Talk assemblea Lucana',
-        note: '45 min'
+        time: '16:00 - 18:15',
+        title: 'No CPR - Assemblea Lucana',
+        description: 'Diritti, migrazione, resistenza sociale',
+        type: EVENT_TYPE.CONFERENZA
       },
       {
-        time: '18:15 - 20:15',
-        title: 'Giro a Bosco Coste',
-        note: 'Sound Check'
+        time: '18:00 - 20:00',
+        title: 'Passeggiata nel Bosco "Esplorazione & Scoperta"',
+        type: EVENT_TYPE.LABORATORIO
       },
       {
-        time: '20:15 - 21:45',
-        title: 'Pausa Cena',
-        note: '90 min'
+        time: '20:00 - 21:45',
+        title: '🍽️ Pausa Cena'
       },
       {
         time: '21:45 - 00:15',
-        title: 'Jam',
-        note: '150 min'
-      },
-      {
-        time: '23:00 - 00:30',
-        title: '',
-        note: '60 min'
-      },
-      {
-        time: '00:30 - 01:30',
-        title: '',
-        note: '60 min'
+        title: 'Jam Session - Tributo a Franco Varanzano',
+        description: 'Musica collettiva, omaggio musicista',
+        type: EVENT_TYPE.PERFORMANCE
       }
     ] as Event[]
   },
@@ -232,80 +234,49 @@ const program = [
     day: 'Sabato 9 Agosto',
     name: '',
     timeline: [
-      // {
-      //   time: '09:15 - 09:30',
-      //   title: 'SOLO CREW',
-      //   note: 'Arrivo CREW'
-      // },
-      // {
-      //   time: '09:30 - 09:45',
-      //   title: 'Caffè CREW',
-      //   note: 'Brief per la giornata'
-      // },
-      // {
-      //   time: '09:45 - 10:00',
-      //   title: 'APERTURA INFO POINT'
-      // },
-      {
-        time: '10:00 - 10:30',
-        title: 'Buongiorno, caffè tuttx insieme'
-      },
       {
         time: '10:30 - 12:30',
-        title: 'Lab SkillsPage'
+        title: 'SkillPage "Il Problema del Mismatching nel Mercato del Lavoro"',
+        type: EVENT_TYPE.CONFERENZA
       },
       {
-        time: '12:30 - 15:30',
-        title: 'Pausa Pranzo'
+        time: '13:00 - 15:30',
+        title: '🍽️ Pausa Pranzo'
       },
       {
-        time: '14:30 - 15:30',
-        title: 'Giochi e networking',
-        note: 'Lab serigrafia?'
+        time: '15:30 - 16:30',
+        title: 'Torneo Acid Pepper',
+        description: 'Gioco/torneo musicale interattivo community',
+        type: EVENT_TYPE.PERFORMANCE
       },
       {
-        time: '15:30 - 17:00',
-        title: 'Lab serigrafia'
+        time: '16:30 - 17:30',
+        title: 'Metti i tuoi dischi!',
+        description: 'Condivisione musicale aperta tutti',
+        type: EVENT_TYPE.PERFORMANCE
       },
       {
         time: '17:30 - 18:15',
-        title: 'Apertura Talk',
-        note: 'Presenta:'
+        title: 'Lazy Farm "TALK - Rurali Digitali" con Vittoria Elena Simone',
+        description: 'Permacultura, tecnologie appropriate rurali',
+        type: EVENT_TYPE.CONFERENZA,
+        starring: [findStar('Vittoria Elena Simone')]
       },
       {
-        time: '18:15 - 18:45',
-        title: 'Talk'
-      },
-      // {
-      //   time: '18:45 - 18:55',
-      //   title: 'Pausa Cambio Palco'
-      // },
-      {
-        time: '18:55 - 19:25',
-        title: 'Passeggiata nel Bosco',
-        note: '???'
+        time: '18:15 - 20:00',
+        title: "Escursione nell'Azienda Agricola Montemurro",
+        type: EVENT_TYPE.CONFERENZA
       },
       {
-        time: '19:25 - 19:35',
-        title: ''
+        time: '20:00 - 22:00',
+        title: '🍽️ Pausa Cena'
       },
       {
-        time: '19:35 - 20:05',
-        title: ''
-      },
-      {
-        time: '19:30 - 22:30',
-        title: 'Pausa Cena',
-        note: 'Qui sound Check'
-      },
-      {
-        time: '21:30 - 23:20',
-        title: 'SFINGE',
+        time: '22:00 - 23:20',
+        title: 'MUSIC | Sfinge (& Friends)',
+        description: 'Sfinge Sound System',
+        type: EVENT_TYPE.PERFORMANCE,
         starring: [findStar('SFINGE SOUND')]
-      },
-      {
-        time: '23:00 - 01:40',
-        title: 'StarGazing'
       }
     ] as Event[]
   },
@@ -314,76 +285,48 @@ const program = [
     day: 'Domenica 10 Agosto',
     name: '',
     timeline: [
-      // {
-      //   time: '09:15 - 09:30',
-      //   title: 'SOLO CREW',
-      //   note: 'Arrivo CREW'
-      // },
-      // {
-      //   time: '09:30 - 09:45',
-      //   title: 'Caffè CREW',
-      //   note: 'Brief per la giornata'
-      // },
-      // {
-      //   time: '09:45 - 10:00',
-      //   title: 'APERTURA INFO POINT'
-      // },
-      {
-        time: '10:00 - 10:30',
-        title: 'Buongiorno, caffè tuttx insieme e Presenta:'
-      },
       {
         time: '11:30 - 12:30',
-        title: 'Laboratorio Modellazione Argilla'
+        title: "Laboratorio di Modellazione dell'Argilla con Michele Schiavone",
+        type: EVENT_TYPE.LABORATORIO
       },
       {
-        time: '10:30 - 12:30',
-        title: 'Metti i tuoi dischi',
-        note: '120 min'
+        time: '15:30 - 16:30',
+        title: 'Torneo Acid Pepper',
+        description: 'Gioco/torneo musicale interattivo community',
+        type: EVENT_TYPE.PERFORMANCE
       },
       {
-        time: '12:30 - 15:30',
-        title: 'Pausa Pranzo',
-        note: '150 min'
+        time: '16:30 - 17:30',
+        title: 'Metti i tuoi dischi!',
+        description: 'Condivisione musicale aperta tutti',
+        type: EVENT_TYPE.PERFORMANCE
       },
       {
-        time: '14:30 - 16:00',
-        title: 'Making pasta',
-        note: '90 min'
-      },
-      {
-        time: '16:30 - 18:00',
-        title: 'TIPO',
-        note: 'Chiedere a TAM “Quando vi dicono NT voi a che pensate? consigliare free book da leggere e di cui disquisire”'
+        time: '17:30 - 19:30',
+        title: 'Pasta Making - Noi Ortadini',
+        description:
+          "Esploreremo l'affascinante viaggio del grano, dalle sue antiche origini alla selezione delle varietà più innovative scoprendo come la scienza e la tecnologia influenzano la qualità e la lavorazione...Con le mani in pasta!",
+        type: EVENT_TYPE.LABORATORIO,
+        starring: [findStar('Noi Ortadini')]
       },
       {
         time: '18:30 - 19:15',
-        title: 'Talk Manuel Schiavone',
-        // starring: [findStar('Manuel Schiavone')],
-        note: '45 min'
+        title: 'Tra nostalgia e Arte',
+        type: EVENT_TYPE.CONFERENZA
+        // starring: [findStar('Merlot - Manuel Schiavone')]
       },
-      // {
-      //   time: '19:15 - 19:30',
-      //   title: 'Cambio Palco',
-      //   note: '30 min'
-      // },
       {
         time: '19:30 - 20:30',
-        title: 'Talk Giandomenico',
-        starring: [findStar('Giandomenico Mercadante')],
-        note: '60 min'
+        title: '"Perchè non si vedono più le stelle?"',
+        description: 'Astronomia e orientamento celeste',
+        type: EVENT_TYPE.CONFERENZA,
+        starring: [findStar('Giandomenico Mercadante')]
       },
       {
-        time: '20:30 - 22:30',
-        title: ''
-      },
-      {
-        time: '22:30',
-        title: 'Apertura Stargazing'
-      },
-      {
-        time: '22:30',
-        title: 'Apertura Performance'
+        time: '22:00 - 02:30',
+        title: 'EXPERIENCE | Stargazing & Soundscaping',
+        type: EVENT_TYPE.LABORATORIO
       }
     ] as Event[]
   }
@@ -402,5 +345,11 @@ export type TimelineItem = typeof program[number]
 //     starring?: typeof guests;
 //   }[];
 // }
+
+export const timelineGuests: any[] = program
+  .flatMap(e => e.timeline)
+  .filter(e => e.starring && e.starring.length > 0)
+  .map(e => e.starring)
+  .flat()
 
 export default program

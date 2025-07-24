@@ -505,7 +505,7 @@ Nell'estate 2024 il duo presenta al pubblico il nuovo live che anticipa la pross
 autunno: JUMP MUSIC.`
   },
   {
-    name: 'Noi ortadini',
+    name: 'Noi Ortadini',
     type: GUEST_TYPE.ACTIVITY
   },
   {

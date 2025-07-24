@@ -37,8 +37,11 @@ const Index = ({ data }: TimelineProps) => {
               {circle}
               <span className={styles.info}>
                 <p className={styles.time}>{item.time}</p>
-                {/* {item.type ? <p>{item.type}</p> : <></>} */}
-                {/* {item.location ? (
+                {item.type ?
+                  <p className={styles.type}
+                    style={key % 2 == 0 ? { marginRight: 'auto' } : { marginLeft: 'auto' }}
+                  >{item.type}</p> : <></>}
+                {item.location ? (
                   <p
                     className={styles.location}
                     style={key % 2 == 0 ? { marginRight: 'auto' } : { marginLeft: 'auto' }}
@@ -47,7 +50,7 @@ const Index = ({ data }: TimelineProps) => {
                   </p>
                 ) : (
                   <></>
-                )} */}
+                )}
                 {item.starring ? (
                   <div
                     className={styles.badges}
