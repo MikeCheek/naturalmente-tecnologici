@@ -642,6 +642,10 @@ Vogliamo intraprendere un percorso condiviso di scoperta e rivendicazione della 
     description: `Bagworm Studio è un progetto di design di Alessia Nobile e Giuseppe Palazzo. 
     Realizzano oggetti con materiali ecosostenibili e di recupero, tra cui agende in carta riciclata, accessori cuciti, stampe linoleografiche e giochi di carte. 
     Negli eventi portano anche giochi in legno autocostruiti pensati per l'interazione e il gioco condiviso.`
+  },
+  {
+    name: 'M.E.R.L.O.T. - Manuel Schiavone',
+    type: GUEST_TYPE.MUSIC
   }
 ] as const
 

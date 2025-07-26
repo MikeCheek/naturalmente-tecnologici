@@ -88,7 +88,7 @@ const Index = () => {
           />
         </a>
       </ShowOnView>
-      <Heading text="Media Partner" />
+      {/* <Heading text="Media Partner" />
       <ShowOnView className={styles.wrap}>
         <span style={{ width: '100%' }}>
           <StaticImage
@@ -124,8 +124,8 @@ const Index = () => {
           alt="Turbo Studio - Sky"
           width={150}
         />
-      </ShowOnView>
-      <Heading text="Activity Partner" />
+      </ShowOnView> */}
+      {/* <Heading text="Activity Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="" title="MAS" rel="noopener noreferrer" target="_blank">
           <StaticImage
@@ -158,7 +158,7 @@ const Index = () => {
             width={150}
           />
         </a>
-        {/* <a
+        <a
           href="https://skillsbuild.org/"
           style={{ width: '100%', marginTop: '20px' }}
           title="IBM"
@@ -166,8 +166,8 @@ const Index = () => {
           target="_blank"
         >
           <IBM className={styles.logoHorizontal} height={40} />
-        </a> */}
-      </ShowOnView>
+        </a>
+      </ShowOnView> */}
       {/* <Heading text="Mobility Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="https://marinobus.it/" title="Marino Bus" rel="noopener noreferrer" target="_blank">
@@ -184,7 +184,7 @@ const Index = () => {
       </ShowOnView> 
       */}
       {/* <Heading text="Hospitality Partner" /> */}
-      <Heading text="Technical Partner" />
+      {/* <Heading text="Technical Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="" title="New Wave Service" rel="noopener noreferrer" target="_blank">
           <StaticImage
@@ -204,7 +204,7 @@ const Index = () => {
             width={200}
           />
         </a>
-      </ShowOnView>
+      </ShowOnView> */}
       <Heading text="Music Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="" title="Katzuma" rel="noopener noreferrer" target="_blank">

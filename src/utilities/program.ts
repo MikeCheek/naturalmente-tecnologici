@@ -149,10 +149,10 @@ const program = [
       },
       {
         time: '18:30 - 19:00',
-        title: 'Tradire la tradizione - Guido Gioso',
+        title: 'Tradire la tradizione - Guido Gioioso',
         description: 'Innovazione come ribellione costruttiva',
-        type: EVENT_TYPE.CONFERENZA
-        // starring: [findStar('Guido Gioso')]
+        type: EVENT_TYPE.CONFERENZA,
+        starring: [findStar('Guido Gioioso')]
       },
       {
         time: '19:00 - 19:30',
@@ -167,8 +167,8 @@ const program = [
       {
         time: '22:00 - 23:30',
         title: 'MUSIC | Performance',
-        type: EVENT_TYPE.PERFORMANCE
-        // starring: [findStar('Guido Gioso')]
+        type: EVENT_TYPE.PERFORMANCE,
+        starring: [findStar('Guido Gioioso')]
       },
       {
         time: '23:30 - 01:15',
@@ -313,8 +313,8 @@ const program = [
       {
         time: '18:30 - 19:15',
         title: 'Tra nostalgia e Arte',
-        type: EVENT_TYPE.CONFERENZA
-        // starring: [findStar('Merlot - Manuel Schiavone')]
+        type: EVENT_TYPE.CONFERENZA,
+        starring: [findStar('M.E.R.L.O.T. - Manuel Schiavone')]
       },
       {
         time: '19:30 - 20:30',

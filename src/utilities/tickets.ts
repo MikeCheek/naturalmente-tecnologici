@@ -4,29 +4,24 @@
 // import {ReactComponent as Vip} from '../assets/vip.svg';
 
 export const PassUrl =
-  'https://syskracklab.cc/eventi/categoria/naturalmente-tecnologici/'
+  'https://syskracklab.cc/evento/naturalmente-tecnologici-2025/'
 
 export const DefaultTicketProps = {
   url: PassUrl,
   offer: true,
   priceCurrency: 'EUR',
   priceSymbol: ' €',
-  endOffer: '2024-07-10T00:00:00.000+02:00'
+  endOffer: '2024-07-19T23:59:59.000+02:00'
 }
 
-export type Price = number //| number[];
+export type Price = number
 interface Ticket {
-  //icon: SVG
   name: string
   price: Price
   priceDiscount?: Price
   bigger?: boolean
   offer?: boolean
   description: string
-  // availabilityStarts: string;
-  // availabilityEnds: string;
-  // validFrom: string;
-  // validThrough: string;
   badges?: string[]
   date?: string
   url: string
@@ -36,14 +31,13 @@ interface Ticket {
 
 export const info: Ticket[] = [
   {
-    //icon: Camping,
-    name: 'Community Pass 4 giorni/notti (Camping incluso)',
-    price: 67,
-    priceDiscount: 37.0,
-    bigger: false,
+    name: 'Community Pass (4 giorni di campeggio) 🏕️',
+    price: 40,
+    priceDiscount: 30,
+    bigger: true,
     description:
-      'Accesso completo al festival e al camping incluso per 4 giorni e 4 notti o 2 giorni e 2 notti. Goditi ogni momento di questo evento unico sotto le stelle ✨. <br/> La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
-    date: '2/3 giorni',
+      'Vivi l’esperienza completa di #NT25 con 4 giorni e 4 notti di campeggio incluso! <br/>Accesso a tutte le attività, workshop, talk, spettacoli e area camping. <br/><b>NB:</b> Per accedere è necessario essere soci Syskrack (tessera annuale 10€).',
+    date: '4 giorni / 4 notti',
     badges: [
       'camping',
       'conferenze',
@@ -56,25 +50,30 @@ export const info: Ticket[] = [
     ...DefaultTicketProps
   },
   {
-    //icon: TicketSvg,
-    name: 'Community Pass 4 giorni/notti (Camping incluso)',
+    name: '2 Days Pass (2 giorni e 2 notti) 🌅',
+    price: 20,
+    priceDiscount: 15,
     description:
-      "Goditi la musica autentica e l'intrattenimento.<br/>Accesso al festival per una singola giornata (9, 10 o 11 agosto) ad ORARIO.<br/><b>- Dalle 9 alle 18</b> <br/><b>- Dalle 18 fino alla chiusura</b><br/><br/> Immergiti nella cultura, nei dibattiti e lasciati coinvolgere dai workshop di #nt24 oppure lasciati trasportare dalla magia della notte, tra musica 🎶 e nuove amicizie 🤝 (*campeggio escluso).<br/> La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.",
-    price: 17.0,
-    priceDiscount: 5.0,
-    date: 'mezza giornata',
-    badges: ['spettacoli', 'conferenze', 'workshop', 'docce', 'bagni'],
+      'Partecipa a 2 giorni e 2 notti di festival con accesso completo a tutte le attività e al campeggio. <br/><b>NB:</b> Per accedere è necessario essere soci Syskrack (tessera annuale 10€).',
+    date: '2 giorni / 2 notti',
+    badges: [
+      'camping',
+      'conferenze',
+      'workshop',
+      'spettacoli',
+      'docce',
+      'bagni'
+    ],
     image: 'DSC_0870',
     ...DefaultTicketProps
   },
   {
-    //icon: Tickets,
-    name: 'Community Pass giornaliero (Camping incluso)',
+    name: '1 Day Pass (24 ore di esperienza completa) ⏰',
+    price: 12,
+    priceDiscount: 8,
     description:
-      'Accesso al festival per una giornata fino a chiusura, incluso il camping. Vivi una giornata piena di scoperte e connessioni 🌟. <br/>La quota non copre i pasti e le bevande. Per poter acquistare il pass e partecipare al festival, è obbligatorio diventare associati tramite il tesseramento, che può essere completato sul sito web https://syskrack.org/associati.',
-    price: 30.0,
-    priceDiscount: 13.0,
-    date: 'Un solo giorno',
+      'Vivi una giornata piena di scoperte, connessioni e campeggio! <br/>Accesso a tutte le attività e area camping per 24 ore. <br/><b>NB:</b> Per accedere è necessario essere soci Syskrack (tessera annuale 10€).',
+    date: '1 giorno / 1 notte',
     badges: [
       'camping',
       'conferenze',
@@ -88,4 +87,4 @@ export const info: Ticket[] = [
   }
 ]
 
-export const allBadges = info[1].badges
+export const allBadges = info[0].badges

@@ -53,10 +53,17 @@ const Index = () => {
       />
       {/* <BigBranch width="555" height="282" className={styles.bigBranch} /> */}
       <div className={styles.headWrap}>
-        <h1 className={language === 'en' ? styles.headingEn : styles.heading}>
-          {t('Title')} <br />
-          {t('Subtitle')}
-        </h1>
+        <a
+          href="https://syskracklab.cc/desidera-il-manifesto-di-naturalmente-tecnologici/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title='Desidera - Il Manifesto di Naturalmente Tecnologici'
+        >
+          <h1 className={language === 'en' ? styles.headingEn : styles.heading}>
+            {t('Title')} <br />
+            {t('Subtitle')}
+          </h1>
+        </a>
         <a className={styles.date} href="#quando-e-dove" title={t('WhenWhere')}>
           Bosco Coste, Grottole(MT)
           <br /> <span>{t('Date')}</span>
