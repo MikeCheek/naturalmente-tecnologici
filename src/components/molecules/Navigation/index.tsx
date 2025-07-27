@@ -74,7 +74,7 @@ const Index = ({ }: NavigationProps) => {
       <div className={isOpen ? styles.wrapOpen : styles.wrapClosed}>
         <nav className={styles.links}>
           {linkElements}
-          {/* {button()} */}
+          {button()}
           <LanguagePicker />
         </nav>
       </div>

@@ -26,8 +26,8 @@ const Index = () => {
           <VideoMasked />
           <p dangerouslySetInnerHTML={{ __html: t('EventDescription') }}></p>
         </div> */}
-        {/* <FastActions /> */}
-        <div style={{ width: '100%', height: '200px' }}> </div>
+        <FastActions />
+        <div className={styles.preSections}> </div>
         <BigPictureSection
           images={music}
           videos={[Shorty, Moddilugitrix, Baldini, Millenium]}
@@ -36,6 +36,7 @@ const Index = () => {
         />
         <BigPictureSection images={activities} title={t('Value2')} text={t('ValueText2')} reverse />
         <BigPictureSection images={nature} title={t('Value3')} text={t('ValueText3')} />
+        <div className={styles.postSections}></div>
       </div>
       <HeardOn />
 

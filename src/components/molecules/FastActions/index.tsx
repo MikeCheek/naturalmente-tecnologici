@@ -49,10 +49,9 @@ const Index = () => {
               infoClick={() =>
                 setText(
                   ticket.name.join('<br/>'),
-                  // Array.isArray(currentPrice)
-                  //   ? currentPrice.map((t) => t.toFixed(2) + DefaultTicketProps.priceSymbol).join(' / ')
-                  //   : currentPrice.toFixed(2) + DefaultTicketProps.priceSymbol
-                  '',
+                  Array.isArray(currentPrice)
+                    ? currentPrice.map((t) => t.toFixed(2) + DefaultTicketProps.priceSymbol).join(' / ')
+                    : currentPrice.toFixed(2) + DefaultTicketProps.priceSymbol,
                   ticket.description,
                   ticket.date ? [ticket.date, ...(ticket.badges ?? [])] : ticket.badges
                 )
@@ -61,28 +60,33 @@ const Index = () => {
           );
         })}
       </div>
-      {/* <ShowOnView>
-        <h3>
-          I biglietti saranno disponibili anche in loco al botteghino ma a un prezzo maggiorato.
+      <ShowOnView className={styles.info}>
+        <h3>Non campeggi? Per te L’EVENTO È COMPLETAMENTE GRATUITO!</h3>
+        <p>
+          Puoi partecipare gratuitamente a talk, performance e molte attività (i pass danno priorità agli eventi a numero chiuso).
           <br />
-          <br />
-          Riserva ora il tuo posto al prezzo più basso!
-        </h3>
-      </ShowOnView> */}
-      {timer ? (
-        <ShowOnView className={styles.timerWrap}>
-          <h3 dangerouslySetInnerHTML={{ __html: t('Offer') }}></h3>
-          <Timer date={new Date(DefaultTicketProps.endOffer)} shutOffTimer={() => setTimer(false)} />
-        </ShowOnView>
-      ) : (
-        <></>
-      )}
+          Crediamo che cultura e innovazione debbano essere accessibili a tutti!
+        </p>
+        <p>
+          Se vuoi sostenere #NT25, puoi fare una donazione libera a Syskrack per supportare i nostri progetti.
+        </p>
+      </ShowOnView>
+      {
+        timer ? (
+          <ShowOnView className={styles.timerWrap}>
+            <h3 dangerouslySetInnerHTML={{ __html: t('Offer') }}></h3>
+            <Timer date={new Date(DefaultTicketProps.endOffer)} shutOffTimer={() => setTimer(false)} />
+          </ShowOnView>
+        ) : (
+          <></>
+        )
+      }
 
       {/* <ShowOnView>
         <h3 dangerouslySetInnerHTML={{ __html: t('FaqCtaDesc') }}></h3>
         <Button bigger internal href="/info/#faq" title={t('FaqCta')} text={t('FaqCta')} />
       </ShowOnView> */}
-    </div>
+    </div >
   );
 };
 

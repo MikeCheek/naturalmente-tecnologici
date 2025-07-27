@@ -16,7 +16,8 @@ const GuestCard = ({ children, name, description, field, id, mentor }: GuestCard
         day.timeline.filter((e) => e.starring).filter((event) => event.starring?.find((star) => star?.name === name))
           .length > 0
     )
-    .map((d) => ({ name: d.day, day: d.numberDay }));
+    .map((d) => ({ name: d.day, day: d.numberDay }))
+    .filter((d) => d.day !== 6)
 
   return (
     <ShowOnView>
@@ -38,6 +39,7 @@ const GuestCard = ({ children, name, description, field, id, mentor }: GuestCard
               <div className={styles.badges}>
                 {program
                   .map((p) => p.numberDay)
+                  .filter((day) => day !== 6)
                   .map((day, key) => (
                     <Badge
                       key={key}
