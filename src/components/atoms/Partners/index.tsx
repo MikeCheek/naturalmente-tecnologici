@@ -68,7 +68,7 @@ const Index = () => {
       </ShowOnView>
       <Heading text="Sponsor" />
       <ShowOnView className={styles.wrap}>
-        <a href="" title="Basilicata Creativa" rel="noopener noreferrer" target="_blank">
+        {/* <a href="" title="Basilicata Creativa" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
             src="../../../images/partners/basilicata_creativa.png"
@@ -77,7 +77,7 @@ const Index = () => {
             width={450}
           />
         </a>
-        <OfficineFuturiste className={styles.logoLong} width={350} />
+        <OfficineFuturiste className={styles.logoLong} width={350} /> */}
         <a href="" title="Verre Gioielli" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
@@ -205,10 +205,9 @@ const Index = () => {
           />
         </a>
       </ShowOnView> */}
-      <Heading text="Music Partner" />
+      {/* <Heading text="Music Partner" />
       <ShowOnView className={styles.wrap}>
         <a href="" title="Katzuma" rel="noopener noreferrer" target="_blank">
-          {/* <Katzuma className={styles.logoLong} width={200} /> */}
           <StaticImage
             layout="constrained"
             src="../../../images/partners/katzuma.png"
@@ -235,10 +234,10 @@ const Index = () => {
             width={200}
           />
         </a>
-      </ShowOnView>
-      <Heading text="Community Partner" />
+      </ShowOnView> */}
+      {/* <Heading text="Community Partner" />
       <ShowOnView className={styles.wrap}>
-        {/*<a href="http://www.hackability.it/" rel="noopener noreferrer" target="_blank">
+        <a href="http://www.hackability.it/" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
             src="../../../images/partners/hackability.jpg"
@@ -246,8 +245,7 @@ const Index = () => {
             alt="Hackability"
             width={150}
           />
-        </a>*/}
-        {/* <a href="" rel="noopener noreferrer" title="Potenza Urban Art" target="_blank"> */}
+        </a>
         <LaPotenzaDellArte className={styles.logoHorizontal} height={200} />
         <StaticImage
           layout="constrained"
@@ -257,7 +255,6 @@ const Index = () => {
           alt="Potenza Urban Art"
           width={150}
         />
-        {/* </a> */}
         <a href="https://www.ashoka.org" title="Ashoka" rel="noopener noreferrer" target="_blank">
           <StaticImage
             layout="constrained"
@@ -268,7 +265,7 @@ const Index = () => {
           />
         </a>
         <Basilicata className={styles.logo} width={150} />
-      </ShowOnView>
+      </ShowOnView> */}
       <Heading text="Si ringrazia" />
       <ShowOnView>
         <a href="" title="Comune di Grassano" rel="noopener noreferrer" target="_blank">

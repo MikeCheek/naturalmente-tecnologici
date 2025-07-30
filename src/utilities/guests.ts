@@ -340,7 +340,7 @@ Il secondo riguarda la selezione musicale di dischi in vinile, tracce digitali e
   //   L'attività di Shark Emcee lo vede sempre più spesso protagonista di battles lungo lo stivale, che con
   //   il tempo forgiano la sua personalità ed il suo stile. Riesce a guadagnare il titolo di campione
   //   nazionale al prestigioso contest “Microphone masta”
-  //   Nel 2011 arriva il secondo singolo “Ad ogni signorina” , il clip con – regia di Valerio Vestoso –
+  //   Nel 2011 arriva il secondo singolo “Ad ogni signorina” , il clip con - regia di Valerio Vestoso -
   //   conquista il secondo posto al più importante concorso per videoclip italiani “PIVI”. Grazie a tale
   //   risultato il videoclip va in rotazione sui monitor delle metro di Roma e Milano, sui voli nazionali
   //   Alitalia e in vari cinema del Paese.
@@ -645,7 +645,43 @@ Vogliamo intraprendere un percorso condiviso di scoperta e rivendicazione della 
   },
   {
     name: 'M.E.R.L.O.T. - Manuel Schiavone',
-    type: GUEST_TYPE.MUSIC
+    imagePosition: 'center center',
+    type: GUEST_TYPE.TALK,
+    description: `M.E.R.L.O.T, classe 1998, cresce a Grassano in Basilicata e nel 2017 si trasferisce a Bologna per proseguire gli studi e inizia a muovere i primi passi nella musica passando dalle sonorità acustiche a quelle elettroniche con l'aiuto del suo primo produttore Eyem.
+Il suo singolo d'esordio “Ventitrè” (Disco D'Oro da ottobre 2024) raggiunge in poco tempo quasi 6 milioni di streams, consacrando M.E.R.L.O.T artista rivelazione Spotify a fine 2019 (il singolo ad oggi ha oltre 19 milioni di stream). Si convince così a seguire definitivamente il suo talento.
+Nel 2020 debutta in Virgin Records con il brano “Sparami nel Petto”, che raggiunge oltre 3 milioni e mezzo di streams su Spotify. Nel 2020 viene selezionato dalla Commissione Artistica delle Nuove Proposte guidata da Amadeus per la finale di Sanremo Giovani con il brano “Sette Volte”.
+Dopo il tour estivo, nel 2021, pubblica il suo primo album "Gocce" nel 2022 che raggiunge 30 milioni di stream. Tra le sue uscite più recenti troviamo  "Aroma" (2023), "Forse Forse", "Piccole Cose", “Trasparente”, “Lily" (ft. piazzabologna) e “Sex and Cocaine” (2024), brani che anticipano il suo ultimo EP “OFIUCO” confermano il suo stile malinconico e introspettivo e lo rendono uno dei nomi più promettenti della scena musicale italiana.
+2025 torna con i singoli “Amato Male” e “Petrolio” iniziando cosi un nuovo capitolo che lo porterà in tour nella primavera/estate del 2025.
+`
+  },
+  {
+    name: 'Museo TAM',
+    type: GUEST_TYPE.ACTIVITY,
+    description: `La proposta educativa del TAM - Tower Art Museum nasce dalla volontà di creare esperienze attive per i partecipanti di tutte le età. Le esperienze laboratoriali di cui il TAM si fa portatore nascono all'interno degli spazi espositivi con la consapevolezza che l'arte contemporanea, seppur convenzionalmente ritenuta elitaria e indecifrabile, è in grado di attrarre visitatori di tutte le età attraverso le sue forme e i suoi colori; il significato e il messaggio di cui le opere sono portatrici è mediato da esperienze sensoriali e partecipative che nel bambino, quanto nell'adulto, rievocano il gioco.
+
+    Il TAM con le sue opere, attraverso l'esperienza ludica e della relazione, diviene uno spazio familiare, un luogo in cui sentirsi a proprio agio, abbandonando l'idea ormai obsoleta del museo inteso come spazio sacro e quasi inviolabile.
+
+    Queste stesse esperienze si adattano ai contesti più variegati, portando il partecipante a uscire dai confini degli spazi museali ed esplorare la natura e la bellezza che la anima, esplorandola con una nuova consapevolezza.
+
+    Da qui nasce il laboratorio di realizzazione di una fanzine ispirato a Bosco Coste e al festival Naturalmente Tecnologici.
+    Durante il laboratorio i partecipanti guidati da Debora e Dario, educatori del TAM - Tower Art Museum, potranno, a seconda della propria età e dimestichezza con gli strumenti di lavoro, lavorare alla realizzazione di un piccolo libretto, cimentandosi nel disegno dal vero, nella scrittura e nella composizione di un erbario personale come primissimo approccio alla micro editoria.
+    Prima del laboratorio, che si svolgerà nei luoghi del festival, i partecipanti compieranno un'esplorazione del territorio circostante andando a catturare immagini attraverso la fotografia, o il disegno, lasciandosi ispirare dalla natura di Bosco Coste, il luogo che ospita il festival Naturalmente Tecnologici.
+
+    Disegni, fotografie, testi saranno il materiale collezionato dai partecipanti che andranno a comporre la fanzine.`
+  },
+  {
+    name: 'SolaMC',
+    type: GUEST_TYPE.MUSIC,
+    description: `Leonardo, Sola, classe 96, MC, Singer e selecta da anni mostra il suo fervore per la musica in levare. Inizialmente come membro di Mente Caustica, giovane duo musicale che unisce la reggae music allo stile dub, mixando live e in studio, dove cura la parte delle liriche e quella degli arrangiamenti. Nel 2020 esce il suo primo EP con Mente Caustica prodotto insieme a Jambassa per Rupa Rupa records, etichetta discografica italiana. Nel 2024 esce il suo primo singolo con le sue liriche in "Chant Against Evil" con la produzione di Mr.Zebre per Bass Pirates. Da qualche anno partecipa attivamente all’organizzazione di eventi e attività musicali insieme al collettivo Astarbene di cui è Mc in molti eventi e con cui condivide palchi e yard importanti in Italia e non solo. Intraprende quindi un percorso come MC e cantante affacciandosi e approfondendo la cultura reggae soundsystem. Promotore di questa cultura anche in Irpinia ha partecipato insieme ad Astarbene e I Sciamina Soundsystem alla realizzazione di eventi per il territorio. Amante della Roots music e dello stile Dub non mancano le sue incursioni liriche anche in produzioni steppa style.`
+  },
+  {
+    name: 'CHINÒA',
+    type: GUEST_TYPE.MUSIC,
+    imagePosition: 'center left',
+    description: `CHINÒA è un artista multidisciplinare che fonde live electronic music, IDM e visual art in performance ipnotiche e sperimentali.
+  Attivo dal 2023, il suo linguaggio sonoro si muove tra synth ambient e arpeggiatori, ritmiche spezzate, spesso accompagnate da visual audioreattive e auto generative. 
+  Porta il suo live in spazi dal valore sociale e occasioni di attivismo politico e culturale, da alcuni festival indipendenti (come Sagra futura in Molise e Àprile festival a Torino), autogestioni a feste dell’underground, soprattutto quello bolognese,
+  spingendo i limiti tra suono, corpo e immagine a trovare nuove forme di connessioni sinestetiche.`
   }
 ] as const
 
