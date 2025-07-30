@@ -185,9 +185,10 @@ const program = [
     timeline: [
       {
         time: '10:30 - 13:00',
-        title: 'Fanzine - TAM',
+        title: 'Fanzine',
         description: 'Autoproduzione editoriale, narrazione dal basso',
-        type: EVENT_TYPE.LABORATORIO
+        type: EVENT_TYPE.LABORATORIO,
+        starring: [findStar('Museo TAM')]
       },
       {
         time: '13:00 - 15:30',
@@ -276,7 +277,7 @@ const program = [
         title: 'MUSIC | Sfinge (& Friends)',
         description: 'Sfinge Sound System',
         type: EVENT_TYPE.PERFORMANCE,
-        starring: [findStar('SFINGE SOUND')]
+        starring: [findStar('SFINGE SOUND'), findStar('SolaMC')]
       }
     ] as Event[]
   },
