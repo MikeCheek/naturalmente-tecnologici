@@ -15,7 +15,10 @@ const Index = () => {
   // const communityGuests = guests.filter((e) => e.type === GUEST_TYPE.COMMUNITY);
 
   // Remove duplicates by guest name
-  const uniqueGuests = timelineGuests.filter(
+
+  const presentGuests = guests.filter(guest => guest.present)
+
+  const uniqueGuests = [...timelineGuests, ...presentGuests].filter(
     (guest, index, self) =>
       index === self.findIndex((g) => g.name === guest.name)
   );

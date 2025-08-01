@@ -13,6 +13,7 @@ import Baldini from '../../../assets/video/webm/baldini_10s_low.webm';
 import Millenium from '../../../assets/video/webm/millenium_10s_low.webm';
 import VideoMasked from '../../atoms/VideoMasked';
 import FastActions from '../FastActions';
+import News from '../News';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -27,6 +28,7 @@ const Index = () => {
           <p dangerouslySetInnerHTML={{ __html: t('EventDescription') }}></p>
         </div> */}
         <FastActions />
+        <News />
         <div className={styles.preSections}> </div>
         <BigPictureSection
           images={music}

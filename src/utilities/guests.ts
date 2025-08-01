@@ -14,6 +14,7 @@ interface Guest {
   type: GUEST_TYPE
   mentor?: string[]
   image: string
+  present?: boolean // just to add guests if they're not added yet or present in the timeline
   imagePosition?: string
 }
 
@@ -586,7 +587,8 @@ Da poco ha rilasciato il suo EP HyperVrnzl, un tentativo di narrazione fedele de
   },
   {
     name: 'Giandomenico Mercadante',
-    type: GUEST_TYPE.ACTIVITY
+    type: GUEST_TYPE.ACTIVITY,
+    present: true
   },
   {
     name: 'MAS',
@@ -639,6 +641,7 @@ Vogliamo intraprendere un percorso condiviso di scoperta e rivendicazione della 
   {
     name: 'Bagworm Studio',
     type: GUEST_TYPE.ACTIVITY,
+    present: true,
     description: `Bagworm Studio è un progetto di design di Alessia Nobile e Giuseppe Palazzo. 
     Realizzano oggetti con materiali ecosostenibili e di recupero, tra cui agende in carta riciclata, accessori cuciti, stampe linoleografiche e giochi di carte. 
     Negli eventi portano anche giochi in legno autocostruiti pensati per l'interazione e il gioco condiviso.`
@@ -677,11 +680,52 @@ Dopo il tour estivo, nel 2021, pubblica il suo primo album "Gocce" nel 2022 che 
   {
     name: 'CHINÒA',
     type: GUEST_TYPE.MUSIC,
+    present: true,
     imagePosition: 'center left',
     description: `CHINÒA è un artista multidisciplinare che fonde live electronic music, IDM e visual art in performance ipnotiche e sperimentali.
   Attivo dal 2023, il suo linguaggio sonoro si muove tra synth ambient e arpeggiatori, ritmiche spezzate, spesso accompagnate da visual audioreattive e auto generative. 
   Porta il suo live in spazi dal valore sociale e occasioni di attivismo politico e culturale, da alcuni festival indipendenti (come Sagra futura in Molise e Àprile festival a Torino), autogestioni a feste dell’underground, soprattutto quello bolognese,
   spingendo i limiti tra suono, corpo e immagine a trovare nuove forme di connessioni sinestetiche.`
+  },
+  {
+    name: 'Giuseppe Becci',
+    type: GUEST_TYPE.TALK,
+    present: true
+  },
+  {
+    name: 'Giuseppe Liuzzi',
+    type: GUEST_TYPE.TALK,
+    present: true
+  },
+  {
+    name: 'Circolo Infantino',
+    type: GUEST_TYPE.TALK,
+    present: true
+  },
+  {
+    name: 'Assemblea Lucana No CPR',
+    type: GUEST_TYPE.TALK,
+    present: true
+  },
+  {
+    name: 'Paolo Montemurro',
+    type: GUEST_TYPE.ACTIVITY,
+    present: true
+  },
+  {
+    name: 'Lazy Farm',
+    type: GUEST_TYPE.TALK,
+    present: true
+  },
+  {
+    name: 'Michele Schiavone',
+    type: GUEST_TYPE.ACTIVITY,
+    present: true
+  },
+  {
+    name: 'Andrea Tamburini Nova Visual',
+    type: GUEST_TYPE.MUSIC,
+    present: true
   }
 ] as const
 
