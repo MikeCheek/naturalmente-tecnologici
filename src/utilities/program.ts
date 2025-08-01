@@ -105,11 +105,10 @@ const preFestival = [
 // You can prepend this to your program array if you want to include pre-festival events:
 const program = [
   ...preFestival,
-  // rest of your program as before...
   {
     numberDay: 7,
     day: 'Giovedì 7 Agosto',
-    name: '',
+    name: 'Il desiderio di cambiare',
     timeline: [
       {
         time: '10:00 - 10:30',
@@ -181,7 +180,7 @@ const program = [
   {
     numberDay: 8,
     day: 'Venerdì 8 Agosto',
-    name: '',
+    name: 'Il desiderio di raccontare',
     timeline: [
       {
         time: '10:30 - 13:00',
@@ -196,10 +195,10 @@ const program = [
       },
       {
         time: '15:30 - 16:30',
-        title: 'Torneo Acid Pepper',
+        title: 'Torneo Pucket',
         description: 'Gioco/torneo musicale interattivo community',
-        type: EVENT_TYPE.PERFORMANCE,
-        starring: [findStar('Acid Pepper')]
+        type: EVENT_TYPE.LABORATORIO,
+        starring: [findStar('Bagworm Studio')]
       },
       {
         time: '16:30 - 17:30',
@@ -211,12 +210,14 @@ const program = [
         time: '16:00 - 18:15',
         title: 'No CPR - Assemblea Lucana',
         description: 'Diritti, migrazione, resistenza sociale',
-        type: EVENT_TYPE.CONFERENZA
+        type: EVENT_TYPE.CONFERENZA,
+        starring: [findStar('Assemblea Lucana No CPR')]
       },
       {
         time: '18:00 - 20:00',
         title: 'Passeggiata nel Bosco "Esplorazione & Scoperta"',
-        type: EVENT_TYPE.LABORATORIO
+        type: EVENT_TYPE.LABORATORIO,
+        starring: [findStar('Paolo Montemurro')]
       },
       {
         time: '20:00 - 21:45',
@@ -233,7 +234,7 @@ const program = [
   {
     numberDay: 9,
     day: 'Sabato 9 Agosto',
-    name: '',
+    name: 'Il desiderio di coltivare',
     timeline: [
       {
         time: '10:30 - 12:30',
@@ -258,10 +259,10 @@ const program = [
       },
       {
         time: '17:30 - 18:15',
-        title: 'Lazy Farm "TALK - Rurali Digitali" con Vittoria Elena Simone',
+        title: '"TALK - Rurali Digitali" con Vittoria Elena Simone',
         description: 'Permacultura, tecnologie appropriate rurali',
         type: EVENT_TYPE.CONFERENZA,
-        starring: [findStar('Vittoria Elena Simone')]
+        starring: [findStar('Lazy Farm'), findStar('Vittoria Elena Simone')]
       },
       {
         time: '18:15 - 20:00',
@@ -284,12 +285,13 @@ const program = [
   {
     numberDay: 10,
     day: 'Domenica 10 Agosto',
-    name: '',
+    name: 'Il desiderio di guardare oltre',
     timeline: [
       {
         time: '11:30 - 12:30',
-        title: "Laboratorio di Modellazione dell'Argilla con Michele Schiavone",
-        type: EVENT_TYPE.LABORATORIO
+        title: "Laboratorio di Modellazione dell'Argilla",
+        type: EVENT_TYPE.LABORATORIO,
+        starring: [findStar('Michele Schiavone')]
       },
       {
         time: '15:30 - 16:30',
@@ -327,7 +329,8 @@ const program = [
       {
         time: '22:00 - 02:30',
         title: 'EXPERIENCE | Stargazing & Soundscaping',
-        type: EVENT_TYPE.LABORATORIO
+        type: EVENT_TYPE.LABORATORIO,
+        starring: [findStar('CHINÒA'), findStar('Andrea Tamburini Nova Visual')]
       }
     ] as Event[]
   }

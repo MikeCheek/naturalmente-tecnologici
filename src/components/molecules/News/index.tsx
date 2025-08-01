@@ -3,6 +3,7 @@ import Heading from '../../atoms/Heading';
 import * as styles from './index.module.scss';
 import { Post, Media } from './index.types'; // Adjust the import path as necessary
 import { useTranslation } from 'react-i18next';
+import Button from '../../atoms/Button';
 
 const Index = () => {
   const [posts, setPosts] = useState<
@@ -18,13 +19,14 @@ const Index = () => {
           const data: Post[] = await res.json();
 
           // Filter posts about "naturalmente tecnologici" or "NT"
-          const filtered = data.filter(
-            post =>
-              post.title.rendered.toLowerCase().includes('naturalmente tecnologici') ||
-              post.title.rendered.toLowerCase().includes('nt') ||
-              post.excerpt.rendered.toLowerCase().includes('naturalmente tecnologici') ||
-              post.excerpt.rendered.toLowerCase().includes('nt')
-          ).slice(0, 4);
+          const keywords = ['naturalmente tecnologici', 'nt', 'bosco coste'];
+          const filtered = data.filter(post => {
+            const title = post.title.rendered.toLowerCase();
+            const excerpt = post.excerpt.rendered.toLowerCase();
+            return keywords.some(
+              keyword => title.includes(keyword) && excerpt.includes(keyword)
+            );
+          }).slice(0, 3);
 
           // Fetch images for filtered posts
           const mediaIds = filtered.map(post => post.featured_media).filter(Boolean);
@@ -81,16 +83,15 @@ const Index = () => {
                   <div className={styles.cardContent}>
                     <div className={styles.cardTitle} dangerouslySetInnerHTML={{ __html: post.title }}>
                     </div>
-                    <span dangerouslySetInnerHTML={{ __html: post.excerpt }}></span>
+                    <span dangerouslySetInnerHTML={{ __html: post.excerpt }} className={styles.cardExcerpt}></span>
                   </div>
-                  <a
+                  <Button
+                    text={t("ReadMore")}
                     href={post.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.cardLink}
-                  >
-                    Read more...
-                  </a>
+                    title={post.title}
+                    simple
+                    hoverOrange
+                  />
                 </div>
               ))}
       </div>

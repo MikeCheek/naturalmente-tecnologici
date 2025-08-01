@@ -57,7 +57,7 @@ const Index = () => {
 
   return (
     <div className={styles.wrap}>
-      <Banner text="IL PROGRAMMA È ANCORA IN AGGIORNAMENTO" />
+      {/* <Banner text="IL PROGRAMMA È ANCORA IN AGGIORNAMENTO" /> */}
 
       <Heading text="Performers" />
       <div className={styles.guests}>{musicGuests.map((guest, key) => Card(guest, key))}</div>

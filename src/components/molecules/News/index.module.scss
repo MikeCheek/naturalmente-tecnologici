@@ -1,6 +1,7 @@
 .container {
   padding: 50px;
   margin-bottom: 50px;
+  min-height: 30vh;
   width: 90vw;
   display: flex;
   flex-direction: column;
@@ -21,11 +22,17 @@
 
 .card {
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  width: 340px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  width: 60vw;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  
+
+  @media screen and (min-width: '768px') {
+    width: 20vw;
+  }
 }
 
 .cardImage {
@@ -40,17 +47,18 @@
 
 .cardTitle {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3rem;
   margin-bottom: 8px;
 }
 
 .cardExcerpt {
-  font-size: 15px;
   margin-bottom: 8px;
+  font-size: 1rem;
 }
 
 .cardLink {
   color: #FFA726;
-  font-size: 14px;
+  font-size: 0.8rem;
+  padding:10px ;
   text-decoration: none;
 }

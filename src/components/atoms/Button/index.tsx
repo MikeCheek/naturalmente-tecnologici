@@ -9,13 +9,14 @@ const Index = ({
   href,
   title,
   hoverWhite = false,
+  hoverOrange = false,
   internal = false,
   bigger = false,
   children,
   simple = false,
 }: ButtonProps) => {
-  const className = `${bigger ? styles.bigButton : styles.button} ${hoverWhite ? styles.hoverWhite : ''}`;
-  const classNameSimple = styles.buttonSimple;
+  const className = `${bigger ? styles.bigButton : styles.button} ${hoverWhite ? styles.hoverWhite : ''} ${hoverOrange ? styles.hoverOrange : ''}`;
+  const classNameSimple = `${styles.buttonSimple} ${hoverWhite ? styles.hoverWhite : ''} ${hoverOrange ? styles.hoverOrange : ''}`;
   const style: React.CSSProperties = children ? { paddingRight: '40px' } : {};
 
   const child = simple ? (
