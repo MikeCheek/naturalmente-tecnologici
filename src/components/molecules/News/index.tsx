@@ -4,6 +4,7 @@ import * as styles from './index.module.scss';
 import { Post, Media } from './index.types'; // Adjust the import path as necessary
 import { useTranslation } from 'react-i18next';
 import Button from '../../atoms/Button';
+import ShowOnView from '../../atoms/ShowOnView';
 
 const Index = () => {
   const [posts, setPosts] = useState<
@@ -71,8 +72,7 @@ const Index = () => {
             : posts.length == 0 ?
               <p>{t("NoNews")}</p> :
               posts.map(post => (
-                <div
-                  key={post.id}
+                <ShowOnView key={post.id}
                   className={styles.card}
                 >
                   <img
@@ -92,7 +92,7 @@ const Index = () => {
                     simple
                     hoverOrange
                   />
-                </div>
+                </ShowOnView>
               ))}
       </div>
     </div >
