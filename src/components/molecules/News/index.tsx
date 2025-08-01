@@ -68,9 +68,13 @@ const Index = () => {
       <div className={styles.cards}>
         {
           posts == null ?
-            <p>{t("LoadingNews")}</p>
+            <ShowOnView>
+              <p>{t("LoadingNews")}</p>
+            </ShowOnView>
             : posts.length == 0 ?
-              <p>{t("NoNews")}</p> :
+              <ShowOnView>
+                <p>{t("NoNews")}</p>
+              </ShowOnView> :
               posts.map(post => (
                 <ShowOnView key={post.id}
                   className={styles.card}
