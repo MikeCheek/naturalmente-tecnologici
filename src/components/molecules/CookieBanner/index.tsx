@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as styles from './index.module.scss';
 import { ReactComponent as X } from '../../../assets/x.svg';
 import CookieBannerProps from './index.types';

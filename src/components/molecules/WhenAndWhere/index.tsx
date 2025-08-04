@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import Heading from '../../atoms/Heading';
 import * as styles from './index.module.scss';
 import SectionImageCTA from '../SectionImageCTA';
 import ShowOnView from '../../atoms/ShowOnView';
-import Button from '../../atoms/Button';
 import { useTranslation } from 'react-i18next';
 import LocationMap from '../../atoms/LocationMap';
 import Badge from '../../atoms/Badge';

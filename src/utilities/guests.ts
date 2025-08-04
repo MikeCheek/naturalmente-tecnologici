@@ -723,8 +723,11 @@ Dopo il tour estivo, nel 2021, pubblica il suo primo album "Gocce" nel 2022 che 
     present: true
   },
   {
-    name: 'Andrea Tamburini Nova Visual',
+    name: 'Andrea Tamburini',
     type: GUEST_TYPE.MUSIC,
+    description: `Andrea Tamburrini, in arte Nova, è un artigiano audiovisivo che ricerca costantemente la relazione che gli esseri umani vivono con il suono, la luce e il mondo che li circonda. Ispirato dalla dimensione onirica e dalla continua ricerca di significato, impiega tecnologie naturali e artificiali nelle sue opere.
+Trapiantato a Bologna si occupa di diverse realtà socio-culturali in cui è resident VJ. Perno centrale della sua ricerca è la musica e attualmente sono attivi diversi progetti, a stretto contatto con band e musicisti, per portare sul palco la visione degli stessi.
+`,
     present: true
   }
 ] as const

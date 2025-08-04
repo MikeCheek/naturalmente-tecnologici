@@ -1,8 +1,6 @@
 import React, { Suspense, lazy, useEffect, useState } from 'react';
-import FlyingInsect from '../../atoms/FlyingInsect';
 import * as styles from './index.module.scss';
 import Flocking from '../../atoms/Flocking';
-import detectBrowser from '../../../utilities/detectBrowser';
 
 // const isBrowser = typeof window !== 'undefined';
 

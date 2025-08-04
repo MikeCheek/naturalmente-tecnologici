@@ -1,7 +1,6 @@
 import { useI18next, Link } from 'gatsby-plugin-react-i18next';
 import React, { useState } from 'react';
 import * as styles from './index.module.scss';
-import { ReactComponent as Down } from '../../../assets/down.svg';
 import { ReactComponent as Italy } from '../../../assets/flags/italy.svg';
 import { ReactComponent as UK } from '../../../assets/flags/united-kingdom.svg';
 

@@ -5,7 +5,6 @@ import Heading from '../Heading';
 import { images } from '../../../utilities/guests';
 import { images as orgImages } from '../../../utilities/organizers';
 import GuestBadge from '../GuestBadge';
-import ShowOnView from '../ShowOnView';
 import { textToId } from '../../../utilities/sanitizer';
 
 const Index = ({ data }: TimelineProps) => {

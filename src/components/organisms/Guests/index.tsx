@@ -5,7 +5,6 @@ import Heading from '../../atoms/Heading';
 import GuestCard from '../../atoms/GuestCard';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ImageTemp from '../../atoms/ImageTemp';
-import Banner from '../../atoms/Banner';
 import { timelineGuests } from '../../../utilities/program';
 
 const Index = () => {
