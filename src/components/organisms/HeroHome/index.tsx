@@ -2,15 +2,11 @@ import React from 'react';
 
 import * as styles from './index.module.scss';
 import { ReactComponent as Colli } from '../../../assets/colli.svg';
-import { ReactComponent as Collina } from '../../../assets/collina.svg';
 import WindShovel from '../../atoms/WindShovel';
 import { useTranslation } from 'react-i18next';
-import Flower from '../../atoms/Flower';
 import { useI18next } from 'gatsby-plugin-react-i18next';
-// import BoscoCoste from '../../../assets/video/webm/bosco_coste_forward.webm';
 import Aftermovie from '../../../assets/video/webm/aftermovie.webm';
 import Player from 'react-player/lazy';
-import { ReactComponent as NT24 } from '../../../assets/nt24.svg';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Index = () => {

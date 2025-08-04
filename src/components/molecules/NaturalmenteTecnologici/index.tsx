@@ -1,7 +1,6 @@
 import React from 'react';
 
 import * as styles from './index.module.scss';
-import Heading from '../../atoms/Heading';
 import HeardOn from '../../atoms/HeardOn';
 import WhenAndWhere from '../WhenAndWhere';
 import { useTranslation } from 'react-i18next';
@@ -11,7 +10,6 @@ import Shorty from '../../../assets/video/webm/shorty_10s_low.webm';
 import Moddilugitrix from '../../../assets/video/webm/moddilugitrix_10s_low.webm';
 import Baldini from '../../../assets/video/webm/baldini_10s_low.webm';
 import Millenium from '../../../assets/video/webm/millenium_10s_low.webm';
-import VideoMasked from '../../atoms/VideoMasked';
 import FastActions from '../FastActions';
 
 const Index = () => {
@@ -27,6 +25,7 @@ const Index = () => {
           <p dangerouslySetInnerHTML={{ __html: t('EventDescription') }}></p>
         </div> */}
         <FastActions />
+        {/* <News /> */}
         <div className={styles.preSections}> </div>
         <BigPictureSection
           images={music}

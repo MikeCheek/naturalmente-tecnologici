@@ -7,7 +7,6 @@ import { DefaultTicketProps, info } from '../../../utilities/tickets';
 import ShowOnView from '../../atoms/ShowOnView';
 import { ReactComponent as Info } from '../../../assets/info.svg';
 import useModalContext from '../../../utilities/useModalContext';
-import Button from '../../atoms/Button';
 import { useTranslation } from 'react-i18next';
 
 const Index = () => {

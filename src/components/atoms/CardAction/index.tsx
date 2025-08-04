@@ -29,7 +29,7 @@ const Index = ({
   });
 
   const { activities } = ntImages()
-  console.log(activities)
+  // console.log(activities)
 
   return (
     <div

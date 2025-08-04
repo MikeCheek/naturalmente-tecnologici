@@ -5,7 +5,6 @@ import Heading from '../Heading';
 import { images } from '../../../utilities/guests';
 import { images as orgImages } from '../../../utilities/organizers';
 import GuestBadge from '../GuestBadge';
-import ShowOnView from '../ShowOnView';
 import { textToId } from '../../../utilities/sanitizer';
 
 const Index = ({ data }: TimelineProps) => {
@@ -22,7 +21,7 @@ const Index = ({ data }: TimelineProps) => {
   return (
     <div className={styles.wrap}>
       <Heading text={data.day} smaller showOnView={false} />
-      {data.name && data.name.trim().length > 0 ? <h4>{data.name}</h4> : <></>}
+      {data.name && data.name.trim().length > 0 ? <h4>"{data.name}"</h4> : <></>}
       {/* <p className={styles.desc}>{data.description}</p> */}
       <div className={styles.colWrap}>
         {bar}

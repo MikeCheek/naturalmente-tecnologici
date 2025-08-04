@@ -51,5 +51,8 @@
   "TicketsTitle": "RISERVA IL TUO PASS <br/>PER L'EVENTO",
   "FaqCtaDesc": "Hai qualche dubbio?<br />Dai un'occhiata alle nostre FAQ o contattaci!",
   "FaqCta": "Vai alle FAQ",
-  "Offer": "Affrettati!<br/>L'early bird scade tra"
+  "Offer": "Affrettati!<br/>L'early bird scade tra",
+  "News": "Ultime news",
+  "LoadingNews": "Sto caricando le ultime notizie...",
+  "NoNews": "Non ho trovato notizie al momento, torna più tardi!"
 }

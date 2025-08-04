@@ -4,7 +4,6 @@ import * as styles from './index.module.scss';
 import ShowOnView from '../ShowOnView';
 import { mapsLink } from '../../../utilities/howToReach';
 import Button from '../Button';
-import useModalContext from '../../../utilities/useModalContext';
 import { useTranslation } from 'react-i18next';
 import { ReactComponent as Car } from '../../../assets/infoUtili/car.svg';
 import { ReactComponent as Bus } from '../../../assets/infoUtili/bus.svg';

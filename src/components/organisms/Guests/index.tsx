@@ -5,7 +5,6 @@ import Heading from '../../atoms/Heading';
 import GuestCard from '../../atoms/GuestCard';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ImageTemp from '../../atoms/ImageTemp';
-import Banner from '../../atoms/Banner';
 import { timelineGuests } from '../../../utilities/program';
 
 const Index = () => {
@@ -15,7 +14,10 @@ const Index = () => {
   // const communityGuests = guests.filter((e) => e.type === GUEST_TYPE.COMMUNITY);
 
   // Remove duplicates by guest name
-  const uniqueGuests = timelineGuests.filter(
+
+  const presentGuests = guests.filter(guest => guest.present)
+
+  const uniqueGuests = [...timelineGuests, ...presentGuests].filter(
     (guest, index, self) =>
       index === self.findIndex((g) => g.name === guest.name)
   );
@@ -54,7 +56,7 @@ const Index = () => {
 
   return (
     <div className={styles.wrap}>
-      <Banner text="IL PROGRAMMA È ANCORA IN AGGIORNAMENTO" />
+      {/* <Banner text="IL PROGRAMMA È ANCORA IN AGGIORNAMENTO" /> */}
 
       <Heading text="Performers" />
       <div className={styles.guests}>{musicGuests.map((guest, key) => Card(guest, key))}</div>

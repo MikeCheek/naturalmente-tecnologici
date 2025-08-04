@@ -67,3 +67,9 @@
     color: var(--nt-white) !important;
   }
 }
+
+.hoverOrange {
+  &:hover {
+    color: var(--nt-orange) !important;
+  }
+}
