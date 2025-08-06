@@ -330,7 +330,7 @@ const program = [
         time: '22:00 - 02:30',
         title: 'EXPERIENCE | Stargazing & Soundscaping',
         type: EVENT_TYPE.LABORATORIO,
-        starring: [findStar('CHINÒA'), findStar('Andrea Tamburini')]
+        starring: [findStar('CHINÒA'), findStar('Andrea Tamburrini')]
       }
     ] as Event[]
   }
