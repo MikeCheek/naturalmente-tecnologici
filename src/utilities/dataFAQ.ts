@@ -1,4 +1,4 @@
-import { info } from './tickets'
+import { info, TICKETS_ENABLED } from './tickets'
 
 export const mail = ({
   subject,
@@ -109,47 +109,51 @@ export const faqIT = [
       //   },
     ]
   },
-  {
-    title: 'PASS festival',
-    data: [
-      {
-        title: 'Quali tipologie di PASS ci sono?',
-        text: `Ci sono ${tickets.length} tipologie di PASS:<br/>
+  ...(TICKETS_ENABLED
+    ? [
+        {
+          title: 'PASS festival',
+          data: [
+            {
+              title: 'Quali tipologie di PASS ci sono?',
+              text: `Ci sono ${tickets.length} tipologie di PASS:<br/>
         ${tickets.map(t => ` - <b>${t.name}</b><br/>`).join('')}`
-      },
-      //       {
-      //         title: 'Cosa copre il mio PASS?',
-      //         text: `Intero 4 giorni (Welcome to Tijuana Camp incluso):<br/>
-      //     <ul>
-      // 		  <li>Ingresso al festival per tutti e 3 i giorni</li>
-      //         <ul><li>Laboratori, conferenza, workshop, stage musicale, servizi igienici</li></ul>
-      //       <li>Utilizzo area camping per tutti e 3 i giorni</li>
-      //         <ul><li>Postazioni ricarica smartphone, docce e servizi igienici riservati</li></ul>
-      //       <li>Utilizzo area camping per tutta la durata del festival</li>
-      //     </ul>
-      // 	        Giornaliero
-      //     <ul>
-      // 	    <li>Ingresso al festival dalle ore 10 a chiusura</li>
-      //         <ul><li>Laboratori, conferenza, workshop, stage musicale, servizi igienici</li></ul>
-      //     </ul>
-      // `,
-      //       },
-      {
-        title: 'Posso partecipare se sono minorenne?',
-        text: `Si, dovrai essere accompagnato da un genitore.`
-      },
-      {
-        title: 'Devo comprare un biglietto per il mio bambino?',
-        text: `No, i bambini sotto i 14 anni non pagano`
-      }
-      // {
-      //   title: 'Posso avere accesso a degli sconti?',
-      //   text: `Se sei di Grassano puoi avere accesso allo sconto speciale.<br/>
-      // Dovrai portare con te un documento di riconoscimento in corso di validità che sia rilasciato dal comune di Grassano.<br/><br/>
-      // Le persone con ridotta mobilità pagano il prezzo dimezzato e gli accompagnatori non pagano.`,
-      // },
-    ]
-  },
+            },
+            //       {
+            //         title: 'Cosa copre il mio PASS?',
+            //         text: `Intero 4 giorni (Welcome to Tijuana Camp incluso):<br/>
+            //     <ul>
+            // 		  <li>Ingresso al festival per tutti e 3 i giorni</li>
+            //         <ul><li>Laboratori, conferenza, workshop, stage musicale, servizi igienici</li></ul>
+            //       <li>Utilizzo area camping per tutti e 3 i giorni</li>
+            //         <ul><li>Postazioni ricarica smartphone, docce e servizi igienici riservati</li></ul>
+            //       <li>Utilizzo area camping per tutta la durata del festival</li>
+            //     </ul>
+            // 	        Giornaliero
+            //     <ul>
+            // 	    <li>Ingresso al festival dalle ore 10 a chiusura</li>
+            //         <ul><li>Laboratori, conferenza, workshop, stage musicale, servizi igienici</li></ul>
+            //     </ul>
+            // `,
+            //       },
+            {
+              title: 'Posso partecipare se sono minorenne?',
+              text: `Si, dovrai essere accompagnato da un genitore.`
+            },
+            {
+              title: 'Devo comprare un biglietto per il mio bambino?',
+              text: `No, i bambini sotto i 14 anni non pagano`
+            }
+            // {
+            //   title: 'Posso avere accesso a degli sconti?',
+            //   text: `Se sei di Grassano puoi avere accesso allo sconto speciale.<br/>
+            // Dovrai portare con te un documento di riconoscimento in corso di validità che sia rilasciato dal comune di Grassano.<br/><br/>
+            // Le persone con ridotta mobilità pagano il prezzo dimezzato e gli accompagnatori non pagano.`,
+            // },
+          ]
+        }
+      ]
+    : []),
   {
     title: 'Il Welcome to Tijuana Camp',
     data: [
@@ -167,7 +171,7 @@ export const faqIT = [
       {
         title: 'Posso noleggiare una tenda da voi?',
         text: `Si, tuttavia il numero di tende noleggiabili è molto limitato.<br/>
-    Per noleggiare la tenda è necessario farlo presente entro giorno <b><u>1 Agosto 2025</u></b>.<br/>
+    Per noleggiare la tenda è necessario farlo presente entro giorno <b><u>1 Agosto 2026</u></b>.<br/>
     Se hai intenzione di noleggiare  una tenda scrivi a ${mail({
       subject: 'NOLEGGIO TENDA'
     })} con oggetto: NOLEGGIO TENDA
@@ -274,47 +278,51 @@ export const faqEN = [
       }
     ]
   },
-  {
-    title: 'PASS festival',
-    data: [
-      {
-        title: 'What types of PASS are available?',
-        text: `There are ${tickets.length} types of PASS:<br/>
+  ...(TICKETS_ENABLED
+    ? [
+        {
+          title: 'PASS festival',
+          data: [
+            {
+              title: 'What types of PASS are available?',
+              text: `There are ${tickets.length} types of PASS:<br/>
         ${tickets.map(t => ` - <b>${t.name}</b><br/>`).join('')}`
-      },
-      //       {
-      //         title: 'What does my PASS cover?',
-      //         text: `Full 4 days (Welcome to Tijuana Camp included):<br/>
-      //     <ul>
-      // 		  <li>Access to the festival for all 4 days</li>
-      //         <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
-      //       <li>Use of camping area for all 4 days</li>
-      //         <ul><li>Smartphone charging stations, showers, reserved toilets</li></ul>
-      //       <li>Use of camping area for the entire duration of the festival</li>
-      //     </ul>
-      // 	        Daily
-      //     <ul>
-      // 	    <li>Access to the festival from 10 am until closing</li>
-      //         <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
-      //     </ul>
-      // `,
-      //       },
-      {
-        title: 'Can minors participate?',
-        text: `Yes, you will need to be accompanied by a parent.`
-      },
-      {
-        title: 'Do I need to buy a ticket for my child?',
-        text: `No, children under 14 do not pay`
-      }
-      // {
-      //   title: 'Can I access discounts?',
-      //   text: `If you are from Grassano, you can access a special discount.<br/>
-      // You will need to bring a valid identification document issued by the municipality of Grassano.<br/><br/>
-      // People with reduced mobility pay half price and accompanying persons do not pay.`,
-      // },
-    ]
-  },
+            },
+            //       {
+            //         title: 'What does my PASS cover?',
+            //         text: `Full 4 days (Welcome to Tijuana Camp included):<br/>
+            //     <ul>
+            // 		  <li>Access to the festival for all 4 days</li>
+            //         <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
+            //       <li>Use of camping area for all 4 days</li>
+            //         <ul><li>Smartphone charging stations, showers, reserved toilets</li></ul>
+            //       <li>Use of camping area for the entire duration of the festival</li>
+            //     </ul>
+            // 	        Daily
+            //     <ul>
+            // 	    <li>Access to the festival from 10 am until closing</li>
+            //         <ul><li>Workshops, conferences, workshops, music stage, toilets</li></ul>
+            //     </ul>
+            // `,
+            //       },
+            {
+              title: 'Can minors participate?',
+              text: `Yes, you will need to be accompanied by a parent.`
+            },
+            {
+              title: 'Do I need to buy a ticket for my child?',
+              text: `No, children under 14 do not pay`
+            }
+            // {
+            //   title: 'Can I access discounts?',
+            //   text: `If you are from Grassano, you can access a special discount.<br/>
+            // You will need to bring a valid identification document issued by the municipality of Grassano.<br/><br/>
+            // People with reduced mobility pay half price and accompanying persons do not pay.`,
+            // },
+          ]
+        }
+      ]
+    : []),
   {
     title: 'Welcome to Tijuana Camp',
     data: [
@@ -332,7 +340,7 @@ export const faqEN = [
       {
         title: 'Can I rent a tent from you?',
         text: `Yes, however the number of tents available for rent is very limited.<br/>
-    To rent the tent you must do so by <b><u>August 1, 2025</u></b>.<br/>
+    To rent the tent you must do so by <b><u>August 1, 2026</u></b>.<br/>
     If you intend to rent a tent write to ${mail({
       subject: 'TENT RENTAL'
     })} with the subject: TENT RENTAL

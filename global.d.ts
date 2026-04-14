@@ -24,6 +24,8 @@ declare type Edge = {
   node: {
     childImageSharp: { gatsbyImageData: IGatsbyImageData }
     name?: string
+    publicURL?: string
+    extension?: string
   }
 }
 

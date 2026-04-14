@@ -53,7 +53,7 @@ const Index = () => {
           href="https://syskracklab.cc/desidera-il-manifesto-di-naturalmente-tecnologici/"
           target="_blank"
           rel="noopener noreferrer"
-          title='Desidera - Il Manifesto di Naturalmente Tecnologici'
+          title='COMUNITÀ - Il Manifesto di Naturalmente Tecnologici'
         >
           <h1 className={language === 'en' ? styles.headingEn : styles.heading}>
             {t('Title')} <br />

@@ -1,29 +1,29 @@
 @mixin show {
-  transform: translateY(-150%);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: 0 0px 40px 0 rgb(0, 0, 0, 0.2);
-  padding: 20px 46px 0 46px;
   overflow: unset;
+  padding: 20px 46px 0 46px;
+  transform: translateY(-150%);
   @media screen and (min-width: '992px') {
-    transform: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     box-shadow: none;
     padding: initial;
+    transform: none;
   }
 }
 
 .wrap {
+  align-items: center;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  overflow: hidden;
   position: relative;
   transition: transform 200ms ease;
   will-change: transform;
-  background-color: var(--nt-white);
-  overflow: hidden;
   @media screen and (min-width: '992px') {
     background-color: transparent;
   }
@@ -32,9 +32,9 @@
     &:hover {
       @include show;
       .links {
-        transform: translate(0, 0);
         opacity: 1;
         pointer-events: auto;
+        transform: translate(0, 0);
       }
     }
   }
@@ -46,23 +46,23 @@
 }
 
 .links {
-  transition: transform 200ms ease-in-out;
-  will-change: transform;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 100%;
-  z-index: -1;
-  background-color: var(--nt-white);
+  background-color: var(--nt-green);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 0 20px 20px 0 rgb(0, 0, 0, 0.2);
-  padding: 5px 10px;
-  transform: translate(0, -20%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   opacity: 0;
+  padding: 5px 10px;
   pointer-events: none;
+  position: absolute;
+  top: 100%;
+  transform: translate(0, -20%);
+  transition: transform 200ms ease-in-out;
+  will-change: transform;
+  z-index: 1;
 
   a {
     margin: 10px 5px;
@@ -78,14 +78,14 @@
 }
 
 .name {
-  z-index: 1;
+  align-items: center;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   gap: 5px;
+  justify-content: center;
   margin-top: 0;
-  cursor: pointer;
+  z-index: 1;
 
   svg {
     transition: transform 200ms ease;

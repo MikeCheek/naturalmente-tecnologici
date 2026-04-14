@@ -40,11 +40,15 @@ export const query = graphql`
         }
       }
     }
-    allFile(filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, dir: { regex: $imagesPath } }, sort: { id: ASC }) {
+    allFile(
+      filter: { extension: { regex: "/(jpg)|(jpeg)|(png)|(webm)|(mp4)|(mov)/" }, dir: { regex: $imagesPath } }
+      sort: { id: ASC }
+    ) {
       edges {
         node {
           id
           name
+          publicURL
           childImageSharp {
             gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 800, quality: 80)
           }

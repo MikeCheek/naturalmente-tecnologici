@@ -6,8 +6,9 @@ import { isBrowser } from '../../../utilities/browser';
 import { NavigationProps } from './index.types';
 import { ReactComponent as Play } from '../../../assets/play.svg';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
-import { DefaultTicketProps } from '../../../utilities/tickets';
+import { DefaultTicketProps, TICKETS_ENABLED } from '../../../utilities/tickets';
 import LanguagePicker from '../../atoms/LanguagePicker';
+import MultipleLinks from '../../atoms/MultipleLinks';
 
 const Index = ({ }: NavigationProps) => {
   const [pathname, setPathname] = useState<string>();
@@ -25,23 +26,36 @@ const Index = ({ }: NavigationProps) => {
 
   const linkElements = links(language).map((link, key) => {
     if (link.hide) return;
-    if (link.multiple) return;
-    // return (
-    //   <MultipleLinks name={link.name} key={key} active={pathname?.startsWith(link.name.toLowerCase())}>
-    //     {link.links.map((l, key) => (
-    //       <Link
-    //         key={key}
-    //         className={styles.link}
-    //         style={removeSlashes(pathname) === removeSlashes(l.to) ? { color: 'var(--nt-orange)' } : {}}
-    //         to={l.to}
-    //         onClick={onClick}
-    //         // title={l.name}
-    //       >
-    //         {l.name}
-    //       </Link>
-    //     ))}
-    //   </MultipleLinks>
-    // );
+    if (link.multiple) {
+      return (
+        <MultipleLinks name={link.name} key={key} active={pathname?.startsWith('edizioni')}>
+          {link.links?.map((l, childKey) => (
+            l.disabled ? (
+              <span
+                key={childKey}
+                className={styles.link}
+                style={{ opacity: 0.8, cursor: 'default' }}
+                title={l.name}
+                aria-disabled="true"
+              >
+                {l.name}
+              </span>
+            ) : (
+              <Link
+                key={childKey}
+                className={styles.link}
+                style={removeSlashes(pathname) === removeSlashes(l.to) ? { color: 'var(--nt-orange)' } : {}}
+                to={l.to ?? ''}
+                onClick={close}
+                title={l.name}
+              >
+                {l.name}
+              </Link>
+            )
+          ))}
+        </MultipleLinks>
+      );
+    }
     return (
       <Link
         key={key}
@@ -74,7 +88,7 @@ const Index = ({ }: NavigationProps) => {
       <div className={isOpen ? styles.wrapOpen : styles.wrapClosed}>
         <nav className={styles.links}>
           {linkElements}
-          {button()}
+          {TICKETS_ENABLED ? button() : <></>}
           <LanguagePicker />
         </nav>
       </div>
