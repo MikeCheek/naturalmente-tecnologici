@@ -2,7 +2,7 @@ import React from 'react';
 import ModalProps from './index.types';
 import { ReactComponent as X } from '../../../assets/x.svg';
 import * as styles from './index.module.scss';
-import { PassUrl, allBadges } from '../../../utilities/tickets';
+import { PassUrl, TICKETS_ENABLED, allBadges } from '../../../utilities/tickets';
 import Button from '../Button';
 import Badge from '../Badge';
 import { useTranslation } from 'react-i18next';
@@ -13,7 +13,7 @@ const Index = ({ title, description, opened, close, price, badges }: ModalProps)
 
   const desc = isForATicket
     ? description.replace('https://syskrack.org/associati.', '').split('.').join('.<br/>') +
-      `<a href="https://syskrack.org/associati" rel="noopener noreferrer" title"Associati" target="_blank">https://syskrack.org/associati</a>`
+    `<a href="https://syskrack.org/associati" rel="noopener noreferrer" title"Associati" target="_blank">https://syskrack.org/associati</a>`
     : description;
 
   return (
@@ -40,7 +40,7 @@ const Index = ({ title, description, opened, close, price, badges }: ModalProps)
       <p className={styles.content} dangerouslySetInnerHTML={{ __html: desc }}></p>
       <div className={styles.shadow}></div>
       <div className={styles.buttonWrap}>
-        {isForATicket ? <Button text={t('ModalCta')} title={t('ModalCta')} href={PassUrl} internal={false} /> : <></>}
+        {isForATicket && TICKETS_ENABLED ? <Button text={t('ModalCta')} title={t('ModalCta')} href={PassUrl} internal={false} /> : <></>}
       </div>
     </div>
   );

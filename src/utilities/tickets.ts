@@ -3,12 +3,14 @@
 // import { ReactComponent as Camping } from '../assets/reviews/camping.svg'
 // import {ReactComponent as Vip} from '../assets/vip.svg';
 
+export const TICKETS_ENABLED = false
+
 export const PassUrl =
-  'https://syskracklab.cc/evento/naturalmente-tecnologici-2025/'
+  'https://syskracklab.cc/evento/naturalmente-tecnologici-2026/'
 
 export const DefaultTicketProps = {
   url: PassUrl,
-  offer: true,
+  offer: TICKETS_ENABLED,
   priceCurrency: 'EUR',
   priceSymbol: ' €',
   endOffer: '2024-07-19T23:59:59.000+02:00'

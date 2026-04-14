@@ -2,7 +2,7 @@ import React from 'react';
 import { SeoProps } from './index.types';
 import useSiteMetadata from '../../../utilities/useSiteMetadata';
 import { links } from '../../../utilities/navigation';
-import { DefaultTicketProps, info as tickets } from '../../../utilities/tickets';
+import { DefaultTicketProps, info as tickets, TICKETS_ENABLED } from '../../../utilities/tickets';
 import { faqIT as dataFAQ } from '../../../utilities/dataFAQ';
 import guests from '../../../utilities/guests';
 import { removeHTMLTags } from '../../../utilities/sanitizer';
@@ -30,6 +30,41 @@ const Index = ({
     keywords: keywords || metadata.keywords,
   };
 
+  const ticketOffers = TICKETS_ENABLED ? tickets : [];
+  const ticketOfferSchema = TICKETS_ENABLED && ticketOffers.length > 0
+    ? {
+      offers: {
+        '@type': 'AggregateOffer',
+        url: 'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
+        availabilityStarts: '2023-06-1T00:00:00.000Z',
+        availabilityEnds: '2023-08-13T23:59:59.999Z',
+        validFrom: '2023-08-10T18:00:00.000Z',
+        validThrough: '2023-08-14T10:59:59.999Z',
+        highPrice: Math.max(...ticketOffers.map((ticket) => ticket.price)),
+        lowPrice: Math.min(...ticketOffers.map((ticket) => ticket.price)),
+        offerCount: ticketOffers.length,
+        priceCurrency: DefaultTicketProps.priceCurrency,
+        availability: 'https://schema.org/InStock',
+        sameAs: [
+          'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
+        ],
+        offers: ticketOffers.map((ticket) => ({
+          '@type': 'Offer',
+          url: DefaultTicketProps.url,
+          name: ticket.name,
+          availability: 'https://schema.org/InStock',
+          availabilityStarts: ticket.availabilityStarts,
+          availabilityEnds: ticket.availabilityEnds,
+          validFrom: ticket.validFrom,
+          validThrough: ticket.validThrough,
+          description: ticket.description,
+          price: ticket.price,
+          priceCurrency: DefaultTicketProps.priceCurrency,
+        })),
+      },
+    }
+    : {};
+
   const microData = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -48,18 +83,20 @@ const Index = ({
         itemListElement: links(lang)
           .map((link) =>
             link.multiple
-              ? link.links.map((l) => ({
-                  '@type': 'ListItem',
-                  position: l.position,
-                  name: l.name,
-                  item: metadata.siteUrl + l.to,
-                }))
+              ? link.links
+                  .filter((l) => !l.disabled)
+                  .map((l) => ({
+                    '@type': 'ListItem',
+                    position: l.position,
+                    name: l.name,
+                    item: metadata.siteUrl + l.to,
+                  }))
               : {
-                  '@type': 'ListItem',
-                  position: link.position,
-                  name: link.name,
-                  item: metadata.siteUrl + link.to,
-                }
+                '@type': 'ListItem',
+                position: link.position,
+                name: link.name,
+                item: metadata.siteUrl + link.to,
+              }
           )
           .flat(),
       },
@@ -104,41 +141,13 @@ const Index = ({
           description: guest.description ? removeHTMLTags(guest.description) : undefined,
           member: guest.mentor
             ? guest.mentor.map((mentor) => ({
-                '@type': 'Person',
-                name: mentor,
-              }))
+              '@type': 'Person',
+              name: mentor,
+            }))
             : undefined,
         })),
         typicalAgeRange: '18-',
-        offers: {
-          '@type': 'AggregateOffer',
-          url: 'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
-          availabilityStarts: '2023-06-1T00:00:00.000Z',
-          availabilityEnds: '2023-08-13T23:59:59.999Z',
-          validFrom: '2023-08-10T18:00:00.000Z',
-          validThrough: '2023-08-14T10:59:59.999Z',
-          highPrice: Math.max(...tickets.map((ticket) => ticket.price)),
-          lowPrice: Math.min(...tickets.map((ticket) => ticket.price)),
-          offerCount: tickets.length,
-          priceCurrency: DefaultTicketProps.priceCurrency,
-          availability: 'https://schema.org/InStock',
-          sameAs: [
-            'https://www.eventbrite.com/e/registrazione-naturalmente-tecnologici-23-ri-prendiamoci-il-futuro-640095231067',
-          ],
-          offers: tickets.map((ticket) => ({
-            '@type': 'Offer',
-            url: DefaultTicketProps.url,
-            name: ticket.name,
-            availability: 'https://schema.org/InStock',
-            availabilityStarts: ticket.availabilityStarts,
-            availabilityEnds: ticket.availabilityEnds,
-            validFrom: ticket.validFrom,
-            validThrough: ticket.validThrough,
-            description: ticket.description,
-            price: ticket.price,
-            priceCurrency: DefaultTicketProps.priceCurrency,
-          })),
-        },
+        ...ticketOfferSchema,
         sameAs: [
           'https://www.wikidata.org/wiki/Q117883453', // INFO: (Link evento [2023] aggiunto su Wikidata)
           'https://www.wikidata.org/wiki/Q117881465', // INFO: (Link evento aggiunto su Wikidata)

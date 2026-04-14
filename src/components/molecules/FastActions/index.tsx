@@ -3,7 +3,7 @@ import * as styles from './index.module.scss';
 import CardAction from '../../atoms/CardAction';
 import Timer from '../Timer';
 import Heading from '../../atoms/Heading';
-import { DefaultTicketProps, info } from '../../../utilities/tickets';
+import { DefaultTicketProps, info, TICKETS_ENABLED } from '../../../utilities/tickets';
 import ShowOnView from '../../atoms/ShowOnView';
 import { ReactComponent as Info } from '../../../assets/info.svg';
 import useModalContext from '../../../utilities/useModalContext';
@@ -14,6 +14,16 @@ const Index = () => {
   const { t } = useTranslation();
 
   const [timer, setTimer] = useState<boolean>(true);
+
+  if (!TICKETS_ENABLED) {
+    return (
+      <div className={styles.wrap}>
+        <ShowOnView className={styles.info}>
+          <h3>Non perderti i pass per la prossima edizione!</h3>
+        </ShowOnView>
+      </div>
+    );
+  }
 
   const tickets = info.map((value) => ({
     ...value,

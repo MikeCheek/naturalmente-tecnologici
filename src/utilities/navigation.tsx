@@ -7,7 +7,7 @@ export const links = (lang = 'it') => [
     to: '/chi-siamo',
     position: 2
   },
-  { name: 'Line Up', to: '/programma', position: 2 },
+  // { name: 'Line Up', to: '/programma', position: 2 },
   { name: lang === 'it' ? 'Partner' : 'Partner', to: '/partner', position: 2 },
   { name: lang === 'it' ? 'Info' : 'Info', to: '/info', position: 2 },
   {
@@ -16,14 +16,15 @@ export const links = (lang = 'it') => [
     position: 2
   },
   {
-    name: lang === 'it' ? 'Edizioni' : 'Editions',
+    name: lang === 'it' ? 'Edizioni passate' : 'Past editions',
     multiple: true,
     links: edizioniData
       .sort((a, b) => (a.year > b.year ? -1 : 1))
       .map(ed => ({
         name: ed.year,
         to: `/edizioni/${ed.year}`,
-        position: 3
+        position: 3,
+        disabled: ed.enabled === false
       }))
   }
   // {

@@ -1,12 +1,18 @@
-import { GatsbyNode } from 'gatsby';
-import edizioniData from './src/utilities/edizioniData';
-import { resolve } from 'path';
+import { GatsbyNode } from 'gatsby'
+import edizioniData from './src/utilities/edizioniData'
+import { resolve } from 'path'
 
-export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions;
+export const createPages: GatsbyNode['createPages'] = async ({
+  graphql,
+  actions,
+  reporter
+}) => {
+  const { createPage } = actions
 
   // you'll call `createPage` for each result
-  edizioniData.forEach((data) => {
+  edizioniData.forEach(data => {
+    if (data.enabled === false) return
+
     createPage({
       // As mentioned above you could also query something else like frontmatter.title above and use a helper function
       // like slugify to create a slug
@@ -15,14 +21,15 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
       component: resolve(__dirname, 'src/templates/Edizioni/index.tsx'),
       // You can use the values in this context in
       // our page layout component
-      context: { ...data },
-    });
-  });
-};
+      context: { ...data }
+    })
+  })
+}
 
-export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ stage, loaders, actions }) => {
-  const { createTypes } = actions;
-  createTypes(`
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] =
+  ({ stage, loaders, actions }) => {
+    const { createTypes } = actions
+    createTypes(`
     type SitePage implements Node {
       context: SitePageContext
     }
@@ -36,17 +43,17 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
         originalPath: String
         routed: Boolean
     }
-  `);
-  // if (stage === 'build-html' || stage === 'develop-html') {
-  //   actions.setWebpackConfig({
-  //     module: {
-  //       rules: [
-  //         {
-  //           test: /react-p5/,
-  //           use: (loaders as any).null(),
-  //         },
-  //       ],
-  //     },
-  //   });
-  // }
-};
+  `)
+    // if (stage === 'build-html' || stage === 'develop-html') {
+    //   actions.setWebpackConfig({
+    //     module: {
+    //       rules: [
+    //         {
+    //           test: /react-p5/,
+    //           use: (loaders as any).null(),
+    //         },
+    //       ],
+    //     },
+    //   });
+    // }
+  }
