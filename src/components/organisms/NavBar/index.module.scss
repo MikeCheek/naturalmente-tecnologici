@@ -1,79 +1,80 @@
 .wrap {
-  width: 100vw;
+  align-items: center;
+  background-color: var(--nt-green);
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  padding-bottom: 15px;
+  padding-top: 15px;
   position: fixed;
   top: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  z-index: 9999;
-  background-color: var(--nt-green);
   transition: transform 200ms ease, opacity 200ms ease;
+  width: 100vw;
   will-change: transform, opacity;
+  z-index: 9999;
 
   @media screen and (min-width: '992px') {
-    padding-top: 20px;
     margin-top: 0px;
+    padding-top: 20px;
   }
 
   &:-webkit-full-screen {
-    transform: translateY(-100%) scaleY(0) !important;
     opacity: 0 !important;
+    transform: translateY(-100%) scaleY(0) !important;
   }
 
   @media (display-mode: fullscreen) {
-    transform: translateY(-100%) scaleY(0) !important;
     opacity: 0 !important;
+    transform: translateY(-100%) scaleY(0) !important;
   }
 }
 
 .menuLang{
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
+  justify-content: center;
+  margin-left: auto;
 }
 
 .show {
-  transform: none;
   opacity: 1;
+  transform: none;
 }
 
 .hide {
-  transform: translateY(-100%) scaleY(0);
   opacity: 0;
+  transform: translateY(-100%) scaleY(0);
 }
 
 .menuIcon {
-  margin: 0 15px;
-  z-index: 999;
-  display: flex;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
-  width: 30px;
+  display: flex;
   height: 30px;
+  justify-content: center;
+  margin: 0 15px;
+  width: 30px;
+  z-index: 999;
 }
 
 .logoNT {
+  align-items: center;
+  display: flex;
+  fill: var(--nt-white);
+  justify-content: center;
+  left: 50%;
+  margin: 15px 0;
   position: absolute;
   top: 0;
-  left: 50%;
   transform: translateX(-50%);
-  margin: 15px 0;
   width: 100px;
-  fill: var(--nt-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   svg {
-    width: inherit;
     height: auto;
     transition: fill 0.5s ease;
+    width: inherit;
     will-change: fill;
   }
   @media screen and (min-width: '768px') {
