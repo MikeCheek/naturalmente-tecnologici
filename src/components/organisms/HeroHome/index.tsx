@@ -63,7 +63,7 @@ const Index = () => {
           Bosco Coste, Grottole(MT)
           <br /> <span>{t('Date')}</span>
         </a>
-        <div className={styles.windShovels}>
+        {/* <div className={styles.windShovels}>
           <div className={styles.firstWind}>
             <WindShovel color="var(--nt-orange)" />
           </div>
@@ -73,7 +73,7 @@ const Index = () => {
             <WindShovel color="var(--nt-orange)" slower />
           </div>
         </div>
-        <Colli width="1440" className={styles.colli} />
+        <Colli width="1440" className={styles.colli} /> */}
         <div className={styles.subGreen}></div>
       </div>
     </div>

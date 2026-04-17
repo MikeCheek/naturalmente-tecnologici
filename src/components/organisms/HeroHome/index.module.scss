@@ -50,7 +50,7 @@
 
 .white {
   background-color: var(--nt-soft-green);
-  bottom: -99px;
+  bottom: -1px;
   height: 100px;
   left: 0;
   position: absolute;
@@ -60,7 +60,8 @@
 
 .subGreen{
   @extend .white;
-  background-color: var(--nt-green);
+  background: linear-gradient(to bottom, transparent, var(--nt-green));
+  height: 20px;
 }
 
 .windShovels {
