@@ -29,9 +29,15 @@ const Index = () => {
             {links(language)
               .filter((l) => !l.multiple)
               .map((link, key) => (
-                <Link key={key} to={link.to ?? ''} title={`Vai alla pagina ${link.name}`}>
-                  {link.name}
-                </Link>
+                link.disabled ? (
+                  <span key={key} className={styles.disabledLink} title={`${link.name} (coming soon)`} aria-disabled="true">
+                    {link.name}
+                  </span>
+                ) : (
+                  <Link key={key} to={link.to ?? ''} title={`Vai alla pagina ${link.name}`}>
+                    {link.name}
+                  </Link>
+                )
               ))}
           </div>
           {/* <div className={styles.links}>

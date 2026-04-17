@@ -9,12 +9,11 @@ import { images as ntImages } from '../../../utilities/ntPhotos';
 import Shorty from '../../../assets/video/webm/shorty_10s_low.webm';
 import Moddilugitrix from '../../../assets/video/webm/moddilugitrix_10s_low.webm';
 import Baldini from '../../../assets/video/webm/baldini_10s_low.webm';
-import Millenium from '../../../assets/video/webm/millenium_10s_low.webm';
 import FastActions from '../FastActions';
 
 const Index = () => {
   const { t } = useTranslation();
-  const { music, activities, nature } = ntImages();
+  const { activities, nature } = ntImages();
 
   return (
     <div className={styles.wrap}>
@@ -28,8 +27,7 @@ const Index = () => {
         {/* <News /> */}
         <div className={styles.preSections}> </div>
         <BigPictureSection
-          images={music}
-          videos={[Shorty, Moddilugitrix, Baldini, Millenium]}
+          videos={[Shorty, Moddilugitrix, Baldini]}
           title={t('Value1')}
           text={t('ValueText1')}
         />

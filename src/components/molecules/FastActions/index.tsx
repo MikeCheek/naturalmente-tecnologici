@@ -15,16 +15,6 @@ const Index = () => {
 
   const [timer, setTimer] = useState<boolean>(true);
 
-  if (!TICKETS_ENABLED) {
-    return (
-      <div className={styles.wrap}>
-        <ShowOnView className={styles.info}>
-          <h3>Non perderti i pass per la prossima edizione!</h3>
-        </ShowOnView>
-      </div>
-    );
-  }
-
   const tickets = info.map((value) => ({
     ...value,
     name: value.name.replace(')', '').split('('),
@@ -37,49 +27,61 @@ const Index = () => {
         {tickets.map((ticket, key) => {
           const currentPrice = timer && ticket.priceDiscount ? ticket.priceDiscount : ticket.price;
           return (
-            <CardAction
-              key={key}
-              glowing={ticket.bigger}
-              primary={ticket.bigger}
-              image={ticket.image}
-              //icon={<ticket.icon className={styles.icon} width={70} />}
-              // special={[
-              //   ticket.price.toFixed(2) + DefaultTicketProps.priceSymbol,
-              //   timer && ticket.priceDiscount
-              //     ? ticket.priceDiscount.toFixed(2) + DefaultTicketProps.priceSymbol
-              //     : undefined,
-              // ]}
-              text={ticket.name[0]}
-              description={ticket.name[1]}
-              buttonText={t('NavCta')}
-              buttonHref={ticket.url}
-              tag={timer && ticket.offer ? 'EARLY BIRD' : undefined}
-              Info={Info}
-              infoClick={() =>
-                setText(
-                  ticket.name.join('<br/>'),
-                  Array.isArray(currentPrice)
-                    ? currentPrice.map((t) => t.toFixed(2) + DefaultTicketProps.priceSymbol).join(' / ')
-                    : currentPrice.toFixed(2) + DefaultTicketProps.priceSymbol,
-                  ticket.description,
-                  ticket.date ? [ticket.date, ...(ticket.badges ?? [])] : ticket.badges
-                )
-              }
-            />
+            <div key={key} className={!TICKETS_ENABLED ? styles.disabledCard : undefined}>
+              <CardAction
+                glowing={ticket.bigger}
+                primary={ticket.bigger}
+                image={ticket.image}
+                //icon={<ticket.icon className={styles.icon} width={70} />}
+                // special={[
+                //   ticket.price.toFixed(2) + DefaultTicketProps.priceSymbol,
+                //   timer && ticket.priceDiscount
+                //     ? ticket.priceDiscount.toFixed(2) + DefaultTicketProps.priceSymbol
+                //     : undefined,
+                // ]}
+                text={ticket.name[0]}
+                description={ticket.name[1]}
+                buttonText={t('NavCta')}
+                buttonHref={ticket.url}
+                tag={timer && ticket.offer && TICKETS_ENABLED ? 'EARLY BIRD' : undefined}
+                Info={Info}
+                infoClick={
+                  TICKETS_ENABLED
+                    ? () =>
+                      setText(
+                        ticket.name.join('<br/>'),
+                        Array.isArray(currentPrice)
+                          ? currentPrice.map((t) => t.toFixed(2) + DefaultTicketProps.priceSymbol).join(' / ')
+                          : currentPrice.toFixed(2) + DefaultTicketProps.priceSymbol,
+                        ticket.description,
+                        ticket.date ? [ticket.date, ...(ticket.badges ?? [])] : ticket.badges
+                      )
+                    : undefined
+                }
+              />
+              {!TICKETS_ENABLED ? <span className={styles.disabledLabel}>I pass usciranno presto!</span> : <></>}
+            </div>
           );
         })}
       </div>
-      <ShowOnView className={styles.info}>
-        <h3>Non campeggi? Per te L’EVENTO È COMPLETAMENTE GRATUITO!</h3>
-        <p>
-          Puoi partecipare gratuitamente a talk, performance e molte attività (i pass danno priorità agli eventi a numero chiuso).
-          <br />
-          Crediamo che cultura e innovazione debbano essere accessibili a tutti!
-        </p>
-        <p>
-          Se vuoi sostenere #NT25, puoi fare una donazione libera a Syskrack per supportare i nostri progetti.
-        </p>
-      </ShowOnView>
+      {TICKETS_ENABLED ? (
+        <ShowOnView className={styles.info}>
+          <h3>Non campeggi? Per te L’EVENTO È COMPLETAMENTE GRATUITO!</h3>
+          <p>
+            Puoi partecipare gratuitamente a talk, performance e molte attività (i pass danno priorità agli eventi a numero chiuso).
+            <br />
+            Crediamo che cultura e innovazione debbano essere accessibili a tutti!
+          </p>
+          <p>
+            Se vuoi sostenere #NT26, puoi fare una donazione libera a Syskrack per supportare i nostri progetti.
+          </p>
+        </ShowOnView>
+      ) : (
+        // <ShowOnView className={styles.info}>
+        //   <h3>Non perderti i pass per la prossima edizione!</h3>
+        // </ShowOnView>
+        <></>
+      )}
       {
         timer ? (
           <ShowOnView className={styles.timerWrap}>

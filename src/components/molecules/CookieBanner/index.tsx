@@ -28,6 +28,10 @@ const Index = ({ close }: CookieBannerProps) => {
     close();
   };
 
+  const handleRejectOptionalCookies = () => {
+    handleAcceptCookie(true);
+  };
+
   const openOptions = () => {
     setMarketing('deny');
     setStatistics('deny');
@@ -111,7 +115,13 @@ const Index = ({ close }: CookieBannerProps) => {
         </div>
 
         <div className={styles.buttons}>
-          <button className={styles.acceptButton} onClick={() => handleAcceptCookie()}>
+          <button className={styles.acceptButton} onClick={handleRejectOptionalCookies}>
+            {t('CookiesRejectOptional')}
+          </button>
+          <button
+            className={showOptions ? styles.acceptButton : styles.acceptAllButton}
+            onClick={() => handleAcceptCookie()}
+          >
             {showOptions ? t('CookiesSave') : t('CookiesAccept')}
           </button>
         </div>

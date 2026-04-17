@@ -1,5 +1,4 @@
 import React from 'react';
-
 import * as styles from './index.module.scss';
 import { ReactComponent as Colli } from '../../../assets/colli.svg';
 import WindShovel from '../../atoms/WindShovel';

@@ -1,38 +1,38 @@
 @use 'src/styles/styled';
 
 .shadow {
-  width: 100%;
-  height: 100%;
   background: rgb(0, 0, 0, 0.25);
+  height: 100%;
   position: fixed;
+  width: 100%;
   z-index: 99998;
 }
 
 .banner {
+  align-items: center;
   background-color: var(--nt-dark-green) !important;
   bottom: 0;
-  left: 0;
   color: var(--nt-white);
   display: flex;
-  align-items: center;
   flex-direction: column;
+  font-weight: 100;
   justify-content: space-evenly;
+  left: 0;
+  padding: 10px 0;
   position: fixed;
   width: 100%;
-  font-weight: 100;
   z-index: 99999;
-  padding: 10px 0;
 }
 
 .content {
-  margin: 0 40px;
-  text-align: center;
-  overflow-y: hidden;
-  font-size: 0.7rem;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  font-size: 0.7rem;
+  justify-content: center;
+  margin: 0 40px;
+  overflow-y: hidden;
+  text-align: center;
   p {
     overflow-y: scroll;
   }
@@ -53,61 +53,66 @@
   font-weight: 600;
 }
 
+.acceptAllButton {
+  @include styled.buttonFull;
+  font-weight: 600;
+}
+
 .link {
   color: var(--nt-orange);
-  width: max-content;
   cursor: pointer;
+  width: max-content;
 }
 
 .links {
   display: flex;
   flex-direction: row;
-  gap: 20px;
   font-size: 0.7rem;
+  gap: 20px;
 }
 
 .close {
+  cursor: pointer;
   fill: var(--nt-orange);
   position: absolute;
-  top: 20px;
   right: 20px;
-  cursor: pointer;
+  top: 20px;
 }
 
 .options {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding-top: 20px;
-  width: 80%;
   max-height: 50vh;
   overflow-y: scroll;
+  padding-top: 20px;
+  width: 80%;
   @media screen and (min-width: '768px') {
     width: 50%;
   }
 }
 
 .option {
+  align-items: center;
+  box-sizing: content-box;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  box-sizing: content-box;
+  width: 100%;
 }
 
 .checkbox {
   background-color: var(--nt-white);
-  width: 20px;
-  height: 20px;
-  color: var(--nt-dark-green);
-  font-size: 1.1rem;
   border-radius: 5px;
-  font-weight: 800;
+  color: var(--nt-dark-green);
   cursor: pointer;
   display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  height: 20px;
+  width: 20px;
 }
 
 .checkboxChecked {
@@ -117,24 +122,24 @@
 
   &::after {
     content: ''+\2713;
+    left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    left: 50%;
   }
 }
 
 .functional {
+  align-items: center;
   display: flex;
   flex-direction: row;
   font-size: 0.6rem;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
+  justify-content: center;
   p,
   span {
-    opacity: 0.8;
     cursor: auto;
+    opacity: 0.8;
   }
 
   p {
@@ -152,10 +157,10 @@
 }
 
 .down {
+  cursor: pointer;
   fill: var(--nt-orange);
   transition: transform 150ms ease-in;
   will-change: transform;
-  cursor: pointer;
 }
 
 .info {

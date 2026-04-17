@@ -7,42 +7,27 @@ import Navigation from '../../molecules/Navigation';
 import { Link } from 'gatsby';
 import { isBrowser } from '../../../utilities/browser';
 import { useI18next } from 'gatsby-plugin-react-i18next';
-import SocialLinks from '../../molecules/SocialLinks';
 import { useNavigationContext } from '../../../utilities/navigation';
 
 const Index = () => {
   const [on, setOn] = useState<boolean>(false);
-  const { isOpen, open, close, toggle } = useNavigationContext();
+  const { isOpen, close, toggle } = useNavigationContext();
   const [show, setShow] = useState<boolean>(true);
   const { language } = useI18next();
   const removeLang = (text: string) => (language != 'it' ? text.substring(3) : text);
 
-  let prev = 0;
-
-  const handleScroll = () => {
-    const current = window.scrollY;
-
-    if (isOpen) {
-      setShow(true);
-    }
-
-    if (!isOpen) {
-      if (current < 50) {
-        setShow(true);
-      } else if (current < prev) {
-        setShow(true);
-      } else if (current >= prev) {
-        setShow(false);
-      }
-    }
-
-    prev = current;
-  };
-
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return window.removeEventListener('scroll', () => { });
-  }, []);
+    let prev = window.scrollY;
+    const onScroll = () => {
+      const current = window.scrollY;
+      const nextShow = isOpen || current < 50 || current < prev;
+      prev = current;
+      setShow((curr) => (curr === nextShow ? curr : nextShow));
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [isOpen]);
 
   useEffect(() => {
     if (isBrowser() && removeLang(window.location.pathname) === '/') setOn(true);
@@ -73,7 +58,6 @@ const Index = () => {
           }}
         />
       </Link>
-      <SocialLinks menu />
     </header >
   );
 };

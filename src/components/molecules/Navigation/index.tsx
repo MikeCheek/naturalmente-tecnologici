@@ -33,7 +33,7 @@ const Index = ({ }: NavigationProps) => {
             l.disabled ? (
               <span
                 key={childKey}
-                className={styles.link}
+                className={styles.disabledLink}
                 style={{ opacity: 0.8, cursor: 'default' }}
                 title={l.name}
                 aria-disabled="true"
@@ -57,16 +57,27 @@ const Index = ({ }: NavigationProps) => {
       );
     }
     return (
-      <Link
-        key={key}
-        className={styles.link}
-        style={pathname === removeSlashes(link.to) ? { color: 'var(--nt-orange)' } : {}}
-        to={link.to ?? ''}
-        onClick={close}
-        title={link.name}
-      >
-        {link.name}
-      </Link>
+      link.disabled ? (
+        <span
+          key={key}
+          className={`${styles.link} ${styles.disabledLink}`}
+          title={`${link.name} (coming soon)`}
+          aria-disabled="true"
+        >
+          {link.name}
+        </span>
+      ) : (
+        <Link
+          key={key}
+          className={styles.link}
+          style={pathname === removeSlashes(link.to) ? { color: 'var(--nt-orange)' } : {}}
+          to={link.to ?? ''}
+          onClick={close}
+          title={link.name}
+        >
+          {link.name}
+        </Link>
+      )
     );
   });
 

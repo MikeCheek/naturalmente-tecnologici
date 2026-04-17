@@ -1,32 +1,49 @@
 import edizioniData from './edizioniData'
 
-export const links = (lang = 'it') => [
+export type NavigationChildLink = {
+  name: string
+  to?: string
+  position: number
+  disabled?: boolean
+}
+
+export type NavigationLink = {
+  name: string
+  to?: string
+  position: number
+  hide?: boolean
+  disabled?: boolean
+  multiple?: boolean
+  links?: NavigationChildLink[]
+}
+
+export const links = (lang = 'it'): NavigationLink[] => [
   { name: lang === 'it' ? 'Home' : 'Home', to: '/', position: 1, hide: false },
   {
     name: lang === 'it' ? 'Chi siamo' : 'About',
     to: '/chi-siamo',
     position: 2
   },
-  // { name: 'Line Up', to: '/programma', position: 2 },
+  { name: 'Line Up', to: '/programma', position: 2, disabled: true },
   { name: lang === 'it' ? 'Partner' : 'Partner', to: '/partner', position: 2 },
-  { name: lang === 'it' ? 'Info' : 'Info', to: '/info', position: 2 },
+  { name: lang === 'it' ? 'Info e contatti' : 'Info and contacts', to: '/info-e-contatti', position: 2 },
   {
     name: lang === 'it' ? 'Contattaci' : 'Contact us',
     to: '/contattaci',
     position: 2
   },
-  {
-    name: lang === 'it' ? 'Edizioni passate' : 'Past editions',
-    multiple: true,
-    links: edizioniData
-      .sort((a, b) => (a.year > b.year ? -1 : 1))
-      .map(ed => ({
-        name: ed.year,
-        to: `/edizioni/${ed.year}`,
-        position: 3,
-        disabled: ed.enabled === false
-      }))
-  }
+  // {
+  //   name: lang === 'it' ? 'Edizioni passate' : 'Past editions',
+  //   multiple: true,
+  //   links: edizioniData
+  //     .sort((a, b) => (a.year > b.year ? -1 : 1))
+  //     .map(ed => ({
+  //       name: ed.year,
+  //       to: `/edizioni/${ed.year}`,
+  //       position: 3,
+  //       disabled: ed.enabled === false
+  //     }))
+  // }
   // {
   //   name: 'Esempio',
   //   multiple: true,

@@ -13,7 +13,8 @@ const Index = ({ title, text, reverse = false, images, videos }: BigPictureSecti
         key={key}
         url={v}
         className={styles.video}
-        height={500}
+        width="100vw !important"
+        height="100vh !important"
         muted
         autoPlay
         playing

@@ -1,17 +1,19 @@
 import React from 'react';
 import Layout from '../components/organisms/Layout';
 import HeroContattaci from '../components/organisms/HeroContattaci';
-import ContattaciBody from '../components/molecules/ContattaciBody';
 import { HeadProps, graphql } from 'gatsby';
 import Seo from '../components/atoms/Seo';
 import Faq from '../components/organisms/Faq';
+import Contacts from '../components/molecules/Contacts';
+import HowToReach from '../components/atoms/HowToReach';
 
 const Contattaci = () => {
   return (
     <Layout>
       <HeroContattaci />
-      <ContattaciBody />
-      {/* <Faq /> */}
+      <HowToReach />
+      <Faq />
+      <Contacts />
     </Layout>
   );
 };
@@ -37,7 +39,7 @@ export const Head = ({ location, data, pageContext }: HeadProps) => {
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { ns: { in: ["common", "contactUs"] }, language: { eq: $language } }) {
+    locales: allLocale(filter: { ns: { in: ["common", "info-e-contatti"] }, language: { eq: $language } }) {
       edges {
         node {
           ns

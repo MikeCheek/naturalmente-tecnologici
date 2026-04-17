@@ -5,6 +5,7 @@ import { showPopUp } from '../../../utilities/newsletter';
 import Button from '../../atoms/Button';
 import ShowOnView from '../../atoms/ShowOnView';
 import { useTranslation } from 'react-i18next';
+import ContattaciBody from '../ContattaciBody';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -12,6 +13,8 @@ const Index = () => {
     <div className={styles.wrap}>
       <div className={styles.section}>
         <Heading text={t('ContactsHeading1')} />
+        <ContattaciBody />
+
         <ShowOnView>
           <p dangerouslySetInnerHTML={{ __html: t('ContactsLetUsKnow') }}></p>
           <iframe

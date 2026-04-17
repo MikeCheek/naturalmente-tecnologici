@@ -27,7 +27,7 @@ const Index = ({
     description: description || metadata.description,
     url: `${metadata.siteUrl}${pathname || ``}`,
     image: featuredImage?.childImageSharp?.gatsbyImageData as unknown as ImageDataType,
-    keywords: keywords || metadata.keywords,
+    keywords: keywords,
   };
 
   const ticketOffers = TICKETS_ENABLED ? tickets : [];
@@ -84,13 +84,13 @@ const Index = ({
           .map((link) =>
             link.multiple
               ? link.links
-                  .filter((l) => !l.disabled)
-                  .map((l) => ({
-                    '@type': 'ListItem',
-                    position: l.position,
-                    name: l.name,
-                    item: metadata.siteUrl + l.to,
-                  }))
+                .filter((l) => !l.disabled)
+                .map((l) => ({
+                  '@type': 'ListItem',
+                  position: l.position,
+                  name: l.name,
+                  item: metadata.siteUrl + l.to,
+                }))
               : {
                 '@type': 'ListItem',
                 position: link.position,

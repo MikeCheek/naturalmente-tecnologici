@@ -10,7 +10,6 @@ import Badge from '../../atoms/Badge';
 import { servicesEN, servicesIT } from '../../../utilities/location';
 import { mapsLink } from '../../../utilities/howToReach';
 import { StaticImage } from 'gatsby-plugin-image';
-import Player from 'react-player/lazy';
 import Bench from '../../../assets/video/webm/big_bench.webm';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 
@@ -75,15 +74,16 @@ const Index = () => {
           buttonHref={mapsLink}
           imageOrVideo={
             inView ? (
-              <Player
+              <video
                 width={700}
-                url={Bench}
+                className={styles.benchVideo}
+                src={Bench}
                 muted
                 autoPlay
-                playing
                 controls={false}
                 loop
                 playsInline
+                preload="none"
               />
             ) : (
               // Placeholder div with the same dimensions to maintain layout
