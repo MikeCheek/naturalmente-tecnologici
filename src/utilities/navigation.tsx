@@ -27,11 +27,6 @@ export const links = (lang = 'it'): NavigationLink[] => [
   { name: 'Line Up', to: '/programma', position: 2, disabled: true },
   { name: lang === 'it' ? 'Partner' : 'Partner', to: '/partner', position: 2 },
   { name: lang === 'it' ? 'Info e contatti' : 'Info and contacts', to: '/info-e-contatti', position: 2 },
-  {
-    name: lang === 'it' ? 'Contattaci' : 'Contact us',
-    to: '/contattaci',
-    position: 2
-  },
   // {
   //   name: lang === 'it' ? 'Edizioni passate' : 'Past editions',
   //   multiple: true,
