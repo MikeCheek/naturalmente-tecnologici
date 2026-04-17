@@ -49,7 +49,7 @@ export default ChiSiamo;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { ns: { in: ["common", "who"] }, language: { eq: $language } }) {
+    locales: allLocale(filter: { ns: { in: ["common", "chi-siamo"] }, language: { eq: $language } }) {
       edges {
         node {
           ns
