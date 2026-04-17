@@ -43,16 +43,27 @@ const Index = ({ opened, onClick }: NavigationProps) => {
     //   </MultipleLinks>
     // );
     return (
-      <Link
-        key={key}
-        className={styles.link}
-        style={pathname === removeSlashes(link.to) ? { color: 'var(--nt-orange)' } : {}}
-        to={link.to ?? ''}
-        onClick={onClick}
-        title={link.name}
-      >
-        {link.name}
-      </Link>
+      link.disabled ? (
+        <span
+          key={key}
+          className={`${styles.link} ${styles.disabledLink}`}
+          title={`${link.name} (coming soon)`}
+          aria-disabled="true"
+        >
+          {link.name}
+        </span>
+      ) : (
+        <Link
+          key={key}
+          className={styles.link}
+          style={pathname === removeSlashes(link.to) ? { color: 'var(--nt-orange)' } : {}}
+          to={link.to ?? ''}
+          onClick={onClick}
+          title={link.name}
+        >
+          {link.name}
+        </Link>
+      )
     );
   });
 

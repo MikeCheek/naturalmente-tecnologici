@@ -38,7 +38,7 @@ export const info: Ticket[] = [
     priceDiscount: 30,
     bigger: true,
     description:
-      'Vivi l’esperienza completa di #NT25 con 4 giorni e 4 notti di campeggio incluso! <br/>Accesso a tutte le attività, workshop, talk, spettacoli e area camping. <br/><b>NB:</b> Per accedere è necessario essere soci Syskrack (tessera annuale 10€).',
+      'Vivi l’esperienza completa di #NT26 con 4 giorni e 4 notti di campeggio incluso! <br/>Accesso a tutte le attività, workshop, talk, spettacoli e area camping. <br/><b>NB:</b> Per accedere è necessario essere soci Syskrack (tessera annuale 10€).',
     date: '4 giorni / 4 notti',
     badges: [
       'camping',

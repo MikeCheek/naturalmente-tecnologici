@@ -1,15 +1,27 @@
 import React from 'react';
-
 import * as styles from './index.module.scss';
 import { ReactComponent as Colli } from '../../../assets/colli.svg';
 import WindShovel from '../../atoms/WindShovel';
 import { useTranslation } from 'react-i18next';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 import Aftermovie from '../../../assets/video/webm/aftermovie.webm';
+import Player from 'react-player/lazy';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Index = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
+
+  const PlaceHolder = (
+    <StaticImage
+      layout="constrained"
+      src="../../../images/aftermovie_placeholder.png"
+      className={styles.backgroundVideo}
+      alt="Aftermovie"
+      placeholder='blurred'
+    // width={150}
+    />
+  )
 
   return (
     <div className={styles.wrap}>
@@ -23,15 +35,16 @@ const Index = () => {
         preload="auto"
       /> */}
 
-      <video
-        src={Aftermovie}
-        className={styles.backgroundVideo}
+      <Player
+        fallback={PlaceHolder}
+        url={Aftermovie}
         muted
         autoPlay
+        playing
+        controls={false}
         loop
         playsInline
-        preload="metadata"
-        poster="/images/aftermovie_placeholder.png"
+        className={styles.backgroundVideo}
       />
       {/* <BigBranch width="555" height="282" className={styles.bigBranch} /> */}
       <div className={styles.headWrap}>

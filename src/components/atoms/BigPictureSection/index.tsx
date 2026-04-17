@@ -4,18 +4,24 @@ import * as styles from './index.module.scss';
 import ShowOnView from '../ShowOnView';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Carousel from '../Carousel';
+import Player from 'react-player/lazy';
 
 const Index = ({ title, text, reverse = false, images, videos }: BigPictureSectionProps) => {
   const slides = [
     videos?.map((v, key) => (
-      <video
+      <Player
         key={key}
-        src={v}
+        url={v}
         className={styles.video}
+        width="100vw !important"
+        height="100vh !important"
         muted
+        autoPlay
+        playing
         controls={false}
+        loop
         playsInline
-        preload="none"
+        config={{ file: { forceVideo: true } }}
       />
     )),
     images?.edges.map((e, index) => (

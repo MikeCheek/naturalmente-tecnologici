@@ -10,14 +10,17 @@
 }
 
 .backgroundVideo {
-  height: 100vh;
+  height: 100vh !important;
   left: 0;
-  object-fit: cover;
   pointer-events: none;
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100vw !important;
   z-index: 0;
+
+  video {
+    object-fit: cover !important;
+  }
 }
 
 .headWrap {
@@ -222,11 +225,11 @@
     left: -5px;
     position: absolute;
     transform: rotate(-2deg); // translateY(100%);
-    width: 165px;
+    width: 175px;
     z-index: -1;
     @media screen and (min-width: '768px') {
       height: 60px;
-      width: 260px;
+      width: 270px;
     }
   }
 }
