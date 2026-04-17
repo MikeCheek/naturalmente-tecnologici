@@ -108,8 +108,7 @@
 }
 
 .disabledLink {
-  color: var(--nt-white);
+  color: var(--nt-orange);
   cursor: not-allowed;
-  opacity: 0.65;
-  text-transform: uppercase;
+  opacity: 0.5;
 }

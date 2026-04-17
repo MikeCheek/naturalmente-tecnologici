@@ -77,9 +77,10 @@ const Index = () => {
           </p>
         </ShowOnView>
       ) : (
-        <ShowOnView className={styles.info}>
-          <h3>Non perderti i pass per la prossima edizione!</h3>
-        </ShowOnView>
+        // <ShowOnView className={styles.info}>
+        //   <h3>Non perderti i pass per la prossima edizione!</h3>
+        // </ShowOnView>
+        <></>
       )}
       {
         timer ? (
