@@ -20,6 +20,7 @@ const Index = ({
   glowing,
   special,
   primary,
+  children,
 }: FastActionProps) => {
   const [ref, inView, _entry] = useInView({
     threshold: 0.5,
@@ -86,6 +87,10 @@ const Index = ({
         <></>
       )}
       {description ? <p dangerouslySetInnerHTML={{ __html: description }}></p> : <></>}
+
+      {/* render any passed children (e.g., info overlays) inside the card */}
+      {children}
+
       <Button text={buttonText} title={buttonText} href={buttonHref} internal={linkType == 'internal'} />
     </div>
   );
