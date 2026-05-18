@@ -52,6 +52,19 @@
   }
 }
 
+/* when CardAction is used inside the standalone wrapper, hide the built-in name (we render our own) */
+.standaloneWrapper .wrap .name,
+.standaloneWrapper .wrap .bigText {
+  display: none;
+}
+
+/* Ensure native buttons/links inside the card sit above internal info overlays */
+.wrap button,
+.wrap a {
+  position: relative;
+  z-index: 6;
+}
+
 .wrapBig {
   @extend .wrap;
   // width: 40vw;
@@ -130,6 +143,8 @@
   min-width: 90px;
   font-size: 14px;
   padding: 5px 5px;
+  position: relative;
+  z-index: 5;
   @media screen and (min-width: '768px') {
     width: 150px;
     font-size: inherit;

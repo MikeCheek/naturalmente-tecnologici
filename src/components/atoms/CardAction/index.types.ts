@@ -12,4 +12,6 @@ export interface FastActionProps {
   glowing?: boolean
   primary?: boolean
   special?: [string, string | undefined]
+  children?: React.ReactNode
+  hideName?: boolean
 }
