@@ -1,34 +1,34 @@
 @use 'src/styles/styled';
 
 .wrap {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  border: solid 2px var(--nt-orange);
-  border-radius: 20px;
-  padding: 10px 20px;
+  align-items: center;
   background: linear-gradient(
     -30deg,
     var(--nt-orange) -10%,
     var(--nt-transparent-orange) 20%,
     var(--nt-light-green) 60%
   );
+  border: solid 2px var(--nt-orange);
+  border-radius: 20px;
 
   box-sizing: border-box;
-  padding: 30px 10px;
-  align-items: center;
-  justify-content: space-between;
-  width: 80vw;
-  max-width: 220px;
-  min-width: 150px;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  min-height: 200px;
-  text-align: center;
+  justify-content: space-between;
   margin: 10px;
-  transition: transform 0.2s ease-in, opacity 0.2s ease-in;
-  will-change: transform, opacity;
+  max-width: 220px;
+  min-height: 200px;
+  min-width: 150px;
   opacity: 1;
+  padding: 10px 20px;
+  padding: 30px 10px;
+  position: relative;
+  text-align: center;
   transform: scale(1);
+  transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+  width: 80vw;
+  will-change: transform, opacity;
 
   &:hover {
     transform: scale(1.05);
@@ -36,12 +36,12 @@
 
   @media screen and (min-width: '768px') {
     border-width: 3px;
-    padding: 30px 15px;
     margin: 25px;
-  width: 25vw;
     max-width: 400px;
-    min-width: 300px;
     min-height: 400px;
+    min-width: 300px;
+    padding: 30px 15px;
+  width: 25vw;
   }
 
   p {
@@ -81,52 +81,52 @@
 }
 
 .backgroundImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  filter: brightness(0.4);
   border-radius: inherit;
+  filter: brightness(0.4);
+  height: 100%;
+  inset: 0;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 
   img,
   .gatsby-image-wrapper {
-    width: 100%;
+    border-radius: inherit;
     height: 100%;
     object-fit: cover;
-    border-radius: inherit;
+    width: 100%;
   }
 }
 
 .tag {
-  position: absolute;
-  top: -10px;
-  left: -20px;
-  transform: rotate(-25deg);
-  border-radius: 5px;
-  padding: 5px 10px;
   background-color: var(--nt-orange);
+  border-radius: 5px;
   color: var(--nt-green);
   font-weight: 400;
+  left: -20px;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  transform: rotate(-25deg);
 }
 
 .bigText {
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 10px 0 !important;
   color: var(--nt-orange);
   font-size: 19px;
+  font-weight: 700;
+  margin: 10px 0 !important;
+  text-transform: uppercase;
   @media screen and (min-width: '768px') {
     font-size: 29px;
   }
 }
 
 .name {
-  font-weight: 600;
-  text-transform: uppercase;
   font-size: 20px;
+  font-weight: 600;
   margin-bottom: 0;
+  text-transform: uppercase;
   @media screen and (min-width: '768px') {
     font-size: 25px !important;
   }
@@ -140,43 +140,43 @@
 
 .button {
   @include styled.button;
-  min-width: 90px;
   font-size: 14px;
+  min-width: 90px;
   padding: 5px 5px;
   position: relative;
   z-index: 5;
   @media screen and (min-width: '768px') {
-    width: 150px;
     font-size: inherit;
+    width: 150px;
   }
 }
 
 .info {
-  position: absolute;
-  top: 10px;
-  right: 15px;
   cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
 
   svg {
-    transition: fill 200ms ease, background-color 200ms ease, border-width 200ms ease;
-    border-radius: 50%;
-    will-change: fill, background-color;
-    fill: var(--nt-orange);
     background-color: transparent;
     border: 0px var(--nt-orange) solid;
+    border-radius: 50%;
     box-sizing: border-box;
-    width: 25px;
+    fill: var(--nt-orange);
     height: 25px;
+    transition: fill 200ms ease, background-color 200ms ease, border-width 200ms ease;
+    width: 25px;
+    will-change: fill, background-color;
 
     &:hover {
-      fill: var(--nt-green);
       background-color: var(--nt-orange);
       border-width: 2px;
+      fill: var(--nt-green);
     }
 
     @media screen and (min-width: '768px') {
-      width: 35px;
       height: 35px;
+      width: 35px;
     }
   }
 }
@@ -194,20 +194,20 @@
 .cutted {
   position: relative;
   &::before {
-    content: '';
     background-color: var(--nt-orange);
-    width: 100%;
+    content: '';
     height: 4px;
+    left: 0;
     opacity: 0.7;
     position: absolute;
-    left: 0;
     top: 50%;
     transform: rotate(-25deg) translateY(-50%);
+    width: 100%;
   }
 }
 
 .primary {
   color: var(--nt-orange);
-  transform: scale(1.8);
   font-weight: bolder;
+  transform: scale(1.8);
 }

@@ -113,7 +113,7 @@ const TicketCardStandalone = ({
       </div>
 
       <div className={styles.buttonWrap}>
-        <Button text="Get Tickets" title="Get Tickets" href={ticket.url} internal={false} bigger />
+        <Button text="SCOPRI" title="SCOPRI" href={ticket.url} internal={false} bigger />
       </div>
 
       {/* {isDisabled && (

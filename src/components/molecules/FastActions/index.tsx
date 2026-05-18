@@ -38,7 +38,7 @@ const Index = () => {
   return (
     <div className={styles.wrap}>
       <Heading text={t('TicketsTitle')} id="biglietti" simple />
-      
+
       <div className={styles.cards}>
         {tickets.map((ticket, key) => (
           <TicketCardStandalone
